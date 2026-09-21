@@ -67,11 +67,14 @@ ESCOLHA = {
     "zenotravel": ("2002", "zenotravel-strips-automatic", "confirmado_pelo_autor",
                    "autor confirmou 'strips' (21/09/2026). 'automatic' é inferência: todos os domínios de 2002 do acervo "
                    "usam a variante automatic e os planejadores são independentes de domínio; o domínio é igual ao "
-                   "hand-coded, só mudam as instâncias. Instâncias usadas: conjunto de 20, a confirmar"),
+                   "hand-coded, só mudam as instâncias. N = 20 confirmado pelo autor (21/09/2026): o conjunto inteiro"),
     "elevator": ("2000", "elevator-strips-simple-typed", "confirmado_pelo_autor",
                  "autor confirmou 'strips-simple' (21/09/2026). 'typed' é inferência: Blocks World e Logistics de 2000 "
-                 "usam a variante typed e o modelo itSIMPLE é tipado. Subconjunto de instâncias (de 150): a confirmar"),
+                 "usam a variante typed e o modelo itSIMPLE é tipado. N = 20 confirmado pelo autor (21/09/2026); "
+                 "interpretado como as 20 primeiras instâncias (originais s1-0 a s4-4), como nos demais domínios"),
 }
+# Faixas de instâncias confirmadas pelo autor para os domínios sem PDDL no acervo
+FAIXA_AUTOR = {"zenotravel": "1-20", "elevator": "1-20"}
 # prefixo do nome da variante no repositório -> domínio
 PREFIXOS = {"blocks": "blocksworld", "depots": "depots", "driverlog": "driverlog", "gripper": "gripper",
             "logistics": "logistics", "mystery": "mystery", "pathways": "pathways", "pipesworld": "pipesworld",
@@ -206,7 +209,7 @@ def main(repo):
         for dom, (ano, var, base, obs) in ESCOLHA.items():
             assert (dom, ano, var) in tam, f"variante inexistente no repositório: {dom} {ano} {var}"
             u = sorted(usadas.get(dom, ()))
-            faixa = f"{u[0]}-{u[-1]}" if u else "a confirmar"
+            faixa = f"{u[0]}-{u[-1]}" if u else FAIXA_AUTOR.get(dom, "a confirmar")
             w.writerow([dom, ano, var, faixa, tam[(dom, ano, var)], base, obs])
 
     print(f"{'entrada':18} {'acervo':>6}  id = idêntico, eq = equivalente, sem = sem correspondência")

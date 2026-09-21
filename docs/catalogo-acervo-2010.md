@@ -145,6 +145,5 @@ Nada foi apagado do disco. O Git ignora: metadados `.svn` (32 diretórios), obje
 ## Pendências que restam (Fase 0)
 
 - [ ] **Conferência manual amostral** do dataset pelo autor (Tabelas 8–9, 26, 32, 38 têm uma só fonte).
-- [ ] **Zeno-travel** e **Elevator**: os PDDL existem no repositório das IPCs (ver [benchmarks-ipc-ate-2008.md](benchmarks-ipc-ate-2008.md)); falta o autor **confirmar a variante** usada em 2010.
 - [ ] Reconstruir o que ainda falta das condições de execução: ver `auditoria/condicoes-de-execucao-2010.md`.
 - [ ] Converter as abas de `Análise dos resultados.xls` e `caracteristicas_tecnicas.xls` quando a Fase 3 precisar reproduzir o método de 2010.

@@ -8,7 +8,7 @@ Verificação feita em 21/09/2026 a pedido do autor: os domínios e problemas us
 
 - **Sim, os 13 domínios existem** no repositório com edições de 1998 a 2008. Foram procurados os anos de 2008 e anteriores, que é o período da primeira versão da dissertação.
 - **Os 11 domínios com PDDL no acervo foram localizados por conteúdo.** Dez têm todos os problemas **idênticos** aos do repositório (após normalizar comentários e espaços); o Gripper tem 19 de 20 **equivalentes** (só muda a ordem dos objetos) e 1 problema que não existe na IPC.
-- **Zeno-travel e Elevator**, sem PDDL no acervo, existem no repositório (IPC 2002 e IPC 2000). O autor confirmou em 21/09/2026 que as variantes usadas são as identificadas aqui: **`zenotravel-strips-automatic`** e **`elevator-strips-simple-typed`**. O nível `strips` foi confirmado; `automatic` e `typed` são desempate por consistência (ver a seção própria). O subconjunto de instâncias de cada um continua `[A CONFIRMAR]`.
+- **Zeno-travel e Elevator**, sem PDDL no acervo, existem no repositório (IPC 2002 e IPC 2000). O autor confirmou em 21/09/2026 que as variantes usadas são as identificadas aqui: **`zenotravel-strips-automatic`** e **`elevator-strips-simple-typed`**. O nível `strips` foi confirmado; `automatic` e `typed` são desempate por consistência (ver a seção própria). O autor também definiu **N = 20** para os dois.
 - O **mapa final** dos 13 domínios está em `data/2010/benchmarks_ipc_mapa_final.csv`.
 
 ## Como foi feito
@@ -37,8 +37,8 @@ Repositório analisado: commit `cf19edf7c53d1540ddbb396c642595e0926ee552` (28/11
 | Satellite | 2004 (domínio); problemas também em 2002 | `satellite-strips` | 1–20 | 36 | 20/20 idênticos | idêntico ao de **2004**; o de 2002 difere |
 | TPP | 2006 | `tpp-propositional` (e `-strips` em `Strips/`) | 1–30 | 30 | 30/30 idênticos | idêntico |
 | Storage | 2006 | `storage-propositional` | 1–30 | 30 | 30/30 idênticos | idêntico |
-| Zeno-travel | 2002 | `zenotravel-strips-automatic` (confirmada pelo autor) | conjunto de 20, a confirmar | 20 | sem PDDL no acervo | — |
-| Elevator | 2000 (Miconic-10) | `elevator-strips-simple-typed` (confirmada pelo autor) | subconjunto de 150, a confirmar | 150 | sem PDDL no acervo | — |
+| Zeno-travel | 2002 | `zenotravel-strips-automatic` (confirmada pelo autor) | 1–20 (conjunto inteiro; N confirmado pelo autor) | 20 | sem PDDL no acervo | — |
+| Elevator | 2000 (Miconic-10) | `elevator-strips-simple-typed` (confirmada pelo autor) | 1–20 (N confirmado pelo autor; originais `s1-0` a `s4-4`) | 150 | sem PDDL no acervo | — |
 
 Todos os totais coincidem com a coluna "Número Problemas" da planilha `contabilizacao_problemas.ods` (35, 22, 20, 20, 28, 30, 30, 50, 20, 30, 30). `[FATO]`
 
@@ -70,7 +70,7 @@ Sem PDDL no acervo, a identificação vem do texto da dissertação, dos modelos
 - O nível `strips-simple` foi confirmado pelo autor. A IPC 2008 também tem um domínio "elevator", mas o README dele diz que foi "projetado do zero" (inspirado no Miconic da IPC 2), com elevadores rápidos e lentos e capacidade, o que não corresponde à descrição da dissertação (Miconic-10 da Schindler). `[FATO]` para a diferença entre os dois domínios. O modelo `ElevatorDomainv1.xml` tem `Passenger` com `origin`, `destin`, `boarded`, `served`, que corresponde ao Miconic **simples**, não ao *full*.
 - `typed` (e não `untyped`) é **inferência por consistência**: Blocks World e Logistics, também da IPC 2000, foram usados na versão `typed` (`:requirements :strips :typing`), e o modelo do itSIMPLE é tipado. `[HIPÓTESE]`
 
-**Ainda a confirmar:** quais instâncias foram usadas. O acervo usa sempre as primeiras N de cada conjunto (achado 1). Para o Zeno-travel, é provável o conjunto inteiro (20); para o Elevator (150 instâncias), não há como estimar N.
+**Instâncias usadas (confirmado pelo autor em 21/09/2026): N = 20 nos dois.** No Zeno-travel são as 20 do conjunto inteiro. No Elevator (150 instâncias na IPC 2000), N = 20 foi interpretado como as **20 primeiras** (instâncias 1 a 20 do repositório, originais `s1-0` a `s4-4`), de acordo com o padrão do acervo em todos os outros domínios (achado 1). `[HIPÓTESE]` para a leitura "20 primeiras", já que o autor informou só o N.
 
 ## Alcance do repositório
 
@@ -88,5 +88,5 @@ O repositório de instâncias **não é versionado aqui** (62 MB e sem licença 
 
 ## Implicações
 
-- **Fase 0:** a pendência "localizar os PDDL de Zeno-travel e Elevator" está resolvida: existem, e as variantes foram confirmadas pelo autor. Resta apenas confirmar o subconjunto de instâncias.
+- **Fase 0:** a pendência "localizar os PDDL de Zeno-travel e Elevator" está resolvida: existem, e as variantes foram confirmadas pelo autor. O subconjunto também está definido (N = 20).
 - **Fase 3:** o repositório é candidato a fonte dos benchmarks (decisão a registrar no plano). Para replicar 2010 com o mesmo material, os subconjuntos estão em `benchmarks_ipc_instancias.csv`. Para uma replicação ampla, vale usar os conjuntos completos, mantendo a comparação separada por origem dos dados.

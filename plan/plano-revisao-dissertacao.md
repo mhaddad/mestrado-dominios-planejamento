@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 21/09/2026 |
-| Versão deste documento | 0.6 |
+| Versão deste documento | 0.7 |
 | Status geral | 🟡 Fase 0 quase concluída (restam itens que dependem do autor) |
 
 ---
@@ -156,7 +156,7 @@ Desdobramentos possíveis, não obrigatórios:
 - 21/09/2026 — **Condições de execução (F6)** respondidas em `auditoria/condicoes-de-execucao-2010.md`: 8 máquinas Core 2 Duo 2,5 GHz / 4 GB / Ubuntu 9.04, timeout de 20 min, ~2.000 execuções. 38 dos 100 pares de treino vêm de competição e 62 de execução própria.
 - 21/09/2026 — **Modelos itSIMPLE:** 11 de 13 batem 4/4 nas métricas comparáveis (com exclusão das classes auxiliares `Utility`/`Global`). Pathways e TPP foram identificados comparando as Figuras 26 e 27 da dissertação com o XML: figura e XML concordam entre si e discordam da tabela (Pathways: 4 associações contra 2; TPP: 2 generalizações contra 4).
 - 21/09/2026 — 10 achados para a auditoria em `auditoria/achados-fase0.md` (rótulo invertido de "casos de uso por atores", exclusão de classes auxiliares, Elevator inconsistente, entre outros).
-- 21/09/2026 — **Benchmarks:** os PDDL do acervo foram identificados nas IPCs 1998–2008 (`potassco/pddl-instances`, commit `cf19edf`): 10 domínios 100% idênticos, Gripper 19/20 equivalentes (gerado localmente). Zeno-travel (IPC 2002) e Elevator (IPC 2000) existem no repositório; **variantes confirmadas pelo autor** (`zenotravel-strips-automatic`, `elevator-strips-simple-typed`; `automatic` e `typed` por consistência); **subconjunto de instâncias a confirmar**. Ver `docs/benchmarks-ipc-ate-2008.md` e `data/2010/benchmarks_ipc_mapa_final.csv`.
+- 21/09/2026 — **Benchmarks:** os PDDL do acervo foram identificados nas IPCs 1998–2008 (`potassco/pddl-instances`, commit `cf19edf`): 10 domínios 100% idênticos, Gripper 19/20 equivalentes (gerado localmente). Zeno-travel (IPC 2002) e Elevator (IPC 2000) existem no repositório; **variantes confirmadas pelo autor** (`zenotravel-strips-automatic`, `elevator-strips-simple-typed`; `automatic` e `typed` por consistência); **N = 20 nos dois, definido pelo autor** (Elevator: as 20 primeiras, por analogia com os demais). Ver `docs/benchmarks-ipc-ate-2008.md` e `data/2010/benchmarks_ipc_mapa_final.csv`.
 - 21/09/2026 — **Correções aprovadas pelo autor** (Pathways/Associações 4→2; TPP/Generalização 2→4), em `data/2010/correcoes_2010.csv`. As classes Alto/Médio/Baixo devem ser recalculadas na Fase 3.
 - Zeno-travel e Elevator não têm PDDL no acervo, só modelos UML.
 
@@ -418,6 +418,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | Benchmarks das IPCs e saídas brutas de execução não serão versionados (baixados/gerados por script) | Grandes e reproduzíveis | 0 |
 | 21/09/2026 | Estrutura no vault do Obsidian adiada; o autor fará depois | Definição do autor | 0 |
 | 21/09/2026 | Variantes de 2010: Zeno-travel = IPC 2002 `zenotravel-strips-automatic`; Elevator = IPC 2000 `elevator-strips-simple-typed` (mais os 11 domínios identificados por conteúdo) | Autor confirmou as variantes identificadas; `automatic` e `typed` por consistência com os demais domínios | 0, 3 |
+| 21/09/2026 | Zeno-travel e Elevator: N = 20 instâncias cada (Zeno: conjunto inteiro; Elevator: as 20 primeiras de 150) | Definição do autor; leitura "20 primeiras" por analogia com o padrão do acervo | 0, 3 |
 | 21/09/2026 | Usar as contagens tiradas das figuras (Pathways/Associações = 2; TPP/Generalização = 4) como valores corrigidos, preservando o publicado | Autor conferiu as figuras e aprovou | 0 |
 | 21/09/2026 | O repositório `potassco/pddl-instances` (commit `cf19edf`) é a fonte dos benchmarks das IPCs até 2014; edições posteriores a definir | Indicado pelo autor; cobre os domínios da dissertação | 0, 3 |
 | 21/09/2026 | Manter memória de execução em `MEMORY.md` na raiz, para retomada entre sessões e entre agentes | Fases 1–6 serão executadas em sessões separadas | 0 |
@@ -491,3 +492,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.4 | 21/09/2026 | Modelos itSIMPLE de Pathways e TPP identificados pelas figuras da dissertação (13 de 13); achados G11–G13; mapa `modelos_itsimple_2010.csv` |
 | 0.5 | 21/09/2026 | Benchmarks das IPCs até 2008 mapeados (repositório `potassco/pddl-instances`); correções das métricas de Pathways e TPP aprovadas; achados G14–G17 |
 | 0.6 | 21/09/2026 | Variantes de Zeno-travel e Elevator confirmadas pelo autor; mapa final de benchmarks (`benchmarks_ipc_mapa_final.csv`) |
+| 0.7 | 21/09/2026 | N = 20 definido para Zeno-travel e Elevator; benchmarks totalmente mapeados |
