@@ -1,0 +1,27 @@
+#!/local/bin/tclsh
+#for AIPS-2000 planning competition
+#deterministic version
+#format: r.execute dir-name prob1 ... probk, where there must be a domain.pddl
+#under dir-name, and all problems are in this directory as well
+
+#set PL /h/29/fl/pl-3.2.9/src/pl
+set PL /usr/local/bin/pl
+set AIPS consult('strips.pl')
+set BIN /home/matheus/mestrado/comp/planners/r/bin
+#set BIN /h/29/fl/aips00/dist/bin
+set GO1 create\_one\_domain(domain)
+set GO2 {solvep(problem,0)}
+
+set D [lindex $argv 0]
+
+exec $BIN/pddl2lower $D/domain.pddl domain
+exec $PL -g $AIPS -t $GO1 2> message
+#puts stdout  [exec $PL -g $AIPS -t $GO1 2> message | $BIN/pl2pddl]
+#puts stdout ""
+
+for {set i 1} {$i < $argc} { incr i 1} {
+	exec $BIN/pddl2lower $D/[lindex $argv $i] problem
+    catch {puts stdout [exec $PL -G0 -L0 -T0 -g $AIPS -t $GO2 2> message | $BIN/pl2pddl]}
+#	puts stdout ""
+}
+

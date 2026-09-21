@@ -1,0 +1,1657 @@
+Estado 35 conflitos: 1 de deslocamento/redução
+Estado 112 conflitos: 1 de deslocamento/redução
+
+
+Gramática
+
+    0 $accept: file $end
+
+    1 $@1: /* vazio */
+
+    2 file: $@1 domain_definition
+
+    3 $@2: /* vazio */
+
+    4 domain_definition: '(' DEFINE_TOK domain_name $@2 optional_domain_defs
+
+    5 domain_name: '(' DOMAIN_TOK NAME ')'
+
+    6 optional_domain_defs: ')'
+    7                     | require_def optional_domain_defs
+    8                     | constants_def optional_domain_defs
+    9                     | types_def optional_domain_defs
+   10                     | axiom_def optional_domain_defs
+   11                     | action_def optional_domain_defs
+
+   12 $@3: /* vazio */
+
+   13 $@4: /* vazio */
+
+   14 require_def: '(' REQUIREMENTS_TOK $@3 NAME $@4 require_key_star ')'
+
+   15 require_key_star: /* vazio */
+
+   16 $@5: /* vazio */
+
+   17 require_key_star: NAME $@5 require_key_star
+
+   18 $@6: /* vazio */
+
+   19 types_def: '(' TYPES_TOK $@6 typed_list_name ')'
+
+   20 $@7: /* vazio */
+
+   21 constants_def: '(' CONSTANTS_TOK $@7 typed_list_name ')'
+
+   22 $@8: /* vazio */
+
+   23 $@9: /* vazio */
+
+   24 action_def: '(' ACTION_TOK $@8 NAME $@9 param_def action_def_body ')'
+
+   25 param_def: /* vazio */
+   26          | PARAMETERS_TOK '(' typed_list_variable ')'
+
+   27 action_def_body: /* vazio */
+   28                | VARS_TOK '(' typed_list_variable ')' action_def_body
+
+   29 $@10: /* vazio */
+
+   30 action_def_body: PRECONDITION_TOK adl_goal_description $@10 action_def_body
+
+   31 $@11: /* vazio */
+
+   32 action_def_body: EFFECT_TOK adl_effect $@11 action_def_body
+
+   33 $@12: /* vazio */
+
+   34 $@13: /* vazio */
+
+   35 axiom_def: '(' AXIOM_TOK $@12 axiom_vars_def $@13 action_def_body ')'
+
+   36 axiom_vars_def: /* vazio */
+   37               | VARS_TOK '(' typed_list_variable ')'
+
+   38 adl_goal_description: literal_term
+   39                     | '(' AND_TOK adl_goal_description_star ')'
+   40                     | '(' OR_TOK adl_goal_description_star ')'
+   41                     | '(' NOT_TOK adl_goal_description ')'
+   42                     | '(' IMPLY_TOK adl_goal_description adl_goal_description ')'
+   43                     | '(' EXISTS_TOK '(' typed_list_variable ')' adl_goal_description ')'
+   44                     | '(' FORALL_TOK '(' typed_list_variable ')' adl_goal_description ')'
+
+   45 adl_goal_description_star: /* vazio */
+   46                          | adl_goal_description adl_goal_description_star
+
+   47 adl_effect: literal_term
+   48           | '(' AND_TOK adl_effect_star ')'
+   49           | '(' FORALL_TOK '(' typed_list_variable ')' adl_effect ')'
+   50           | '(' WHEN_TOK adl_goal_description adl_effect ')'
+
+   51 adl_effect_star: /* vazio */
+   52                | adl_effect adl_effect_star
+
+   53 literal_term: '(' NOT_TOK atomic_formula_term ')'
+   54             | atomic_formula_term
+
+   55 atomic_formula_term: '(' predicate term_star ')'
+
+   56 term_star: /* vazio */
+   57          | term term_star
+
+   58 term: NAME
+   59     | VARIABLE
+
+   60 name_plus: NAME
+   61          | NAME name_plus
+
+   62 typed_list_name: /* vazio */
+   63                | NAME EITHER_TOK name_plus ')' typed_list_name
+   64                | NAME TYPE typed_list_name
+   65                | NAME typed_list_name
+
+   66 typed_list_variable: /* vazio */
+   67                    | VARIABLE EITHER_TOK name_plus ')' typed_list_variable
+   68                    | VARIABLE TYPE typed_list_variable
+   69                    | VARIABLE typed_list_variable
+
+   70 predicate: NAME
+   71          | EQUAL_TOK
+
+
+Terminais, com as regras onde eles aparecem
+
+$end (0) 0
+'(' (40) 4 5 14 19 21 24 26 28 35 37 39 40 41 42 43 44 48 49 50 53
+    55
+')' (41) 5 6 14 19 21 24 26 28 35 37 39 40 41 42 43 44 48 49 50 53
+    55 63 67
+error (256)
+DEFINE_TOK (258) 4
+DOMAIN_TOK (259) 5
+REQUIREMENTS_TOK (260) 14
+TYPES_TOK (261) 19
+EITHER_TOK (262) 63 67
+CONSTANTS_TOK (263) 21
+ACTION_TOK (264) 24
+AXIOM_TOK (265) 35
+VARS_TOK (266) 28 37
+PRECONDITION_TOK (267) 30
+PARAMETERS_TOK (268) 26
+EFFECT_TOK (269) 32
+AND_TOK (270) 39 48
+NOT_TOK (271) 41 53
+WHEN_TOK (272) 50
+FORALL_TOK (273) 44 49
+IMPLY_TOK (274) 42
+OR_TOK (275) 40
+EXISTS_TOK (276) 43
+EQUAL_TOK (277) 71
+NAME (278) 5 14 17 24 58 60 61 63 64 65 70
+VARIABLE (279) 59 67 68 69
+TYPE (280) 64 68
+
+
+Não-terminais com as regras onde eles aparecem
+
+$accept (28)
+    à esquerda: 0
+file (29)
+    à esquerda: 2, à direita: 0
+$@1 (30)
+    à esquerda: 1, à direita: 2
+domain_definition (31)
+    à esquerda: 4, à direita: 2
+$@2 (32)
+    à esquerda: 3, à direita: 4
+domain_name (33)
+    à esquerda: 5, à direita: 4
+optional_domain_defs (34)
+    à esquerda: 6 7 8 9 10 11, à direita: 4 7 8 9 10 11
+require_def (35)
+    à esquerda: 14, à direita: 7
+$@3 (36)
+    à esquerda: 12, à direita: 14
+$@4 (37)
+    à esquerda: 13, à direita: 14
+require_key_star (38)
+    à esquerda: 15 17, à direita: 14 17
+$@5 (39)
+    à esquerda: 16, à direita: 17
+types_def (40)
+    à esquerda: 19, à direita: 9
+$@6 (41)
+    à esquerda: 18, à direita: 19
+constants_def (42)
+    à esquerda: 21, à direita: 8
+$@7 (43)
+    à esquerda: 20, à direita: 21
+action_def (44)
+    à esquerda: 24, à direita: 11
+$@8 (45)
+    à esquerda: 22, à direita: 24
+$@9 (46)
+    à esquerda: 23, à direita: 24
+param_def (47)
+    à esquerda: 25 26, à direita: 24
+action_def_body (48)
+    à esquerda: 27 28 30 32, à direita: 24 28 30 32 35
+$@10 (49)
+    à esquerda: 29, à direita: 30
+$@11 (50)
+    à esquerda: 31, à direita: 32
+axiom_def (51)
+    à esquerda: 35, à direita: 10
+$@12 (52)
+    à esquerda: 33, à direita: 35
+$@13 (53)
+    à esquerda: 34, à direita: 35
+axiom_vars_def (54)
+    à esquerda: 36 37, à direita: 35
+adl_goal_description (55)
+    à esquerda: 38 39 40 41 42 43 44, à direita: 30 41 42 43 44 46
+    50
+adl_goal_description_star (56)
+    à esquerda: 45 46, à direita: 39 40 46
+adl_effect (57)
+    à esquerda: 47 48 49 50, à direita: 32 49 50 52
+adl_effect_star (58)
+    à esquerda: 51 52, à direita: 48 52
+literal_term (59)
+    à esquerda: 53 54, à direita: 38 47
+atomic_formula_term (60)
+    à esquerda: 55, à direita: 53 54
+term_star (61)
+    à esquerda: 56 57, à direita: 55 57
+term (62)
+    à esquerda: 58 59, à direita: 57
+name_plus (63)
+    à esquerda: 60 61, à direita: 61 63 67
+typed_list_name (64)
+    à esquerda: 62 63 64 65, à direita: 19 21 63 64 65
+typed_list_variable (65)
+    à esquerda: 66 67 68 69, à direita: 26 28 37 43 44 49 67 68 69
+predicate (66)
+    à esquerda: 70 71, à direita: 55
+
+
+estado 0
+
+    0 $accept: . file $end
+
+    $padrão  reduzir usando a regra 1 ($@1)
+
+    file  ir ao estado 1
+    $@1   ir ao estado 2
+
+
+estado 1
+
+    0 $accept: file . $end
+
+    $end  deslocar, e ir ao estado 3
+
+
+estado 2
+
+    2 file: $@1 . domain_definition
+
+    '('  deslocar, e ir ao estado 4
+
+    domain_definition  ir ao estado 5
+
+
+estado 3
+
+    0 $accept: file $end .
+
+    $padrão  aceitar
+
+
+estado 4
+
+    4 domain_definition: '(' . DEFINE_TOK domain_name $@2 optional_domain_defs
+
+    DEFINE_TOK  deslocar, e ir ao estado 6
+
+
+estado 5
+
+    2 file: $@1 domain_definition .
+
+    $padrão  reduzir usando a regra 2 (file)
+
+
+estado 6
+
+    4 domain_definition: '(' DEFINE_TOK . domain_name $@2 optional_domain_defs
+
+    '('  deslocar, e ir ao estado 7
+
+    domain_name  ir ao estado 8
+
+
+estado 7
+
+    5 domain_name: '(' . DOMAIN_TOK NAME ')'
+
+    DOMAIN_TOK  deslocar, e ir ao estado 9
+
+
+estado 8
+
+    4 domain_definition: '(' DEFINE_TOK domain_name . $@2 optional_domain_defs
+
+    $padrão  reduzir usando a regra 3 ($@2)
+
+    $@2  ir ao estado 10
+
+
+estado 9
+
+    5 domain_name: '(' DOMAIN_TOK . NAME ')'
+
+    NAME  deslocar, e ir ao estado 11
+
+
+estado 10
+
+    4 domain_definition: '(' DEFINE_TOK domain_name $@2 . optional_domain_defs
+
+    '('  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 13
+
+    optional_domain_defs  ir ao estado 14
+    require_def           ir ao estado 15
+    types_def             ir ao estado 16
+    constants_def         ir ao estado 17
+    action_def            ir ao estado 18
+    axiom_def             ir ao estado 19
+
+
+estado 11
+
+    5 domain_name: '(' DOMAIN_TOK NAME . ')'
+
+    ')'  deslocar, e ir ao estado 20
+
+
+estado 12
+
+   14 require_def: '(' . REQUIREMENTS_TOK $@3 NAME $@4 require_key_star ')'
+   19 types_def: '(' . TYPES_TOK $@6 typed_list_name ')'
+   21 constants_def: '(' . CONSTANTS_TOK $@7 typed_list_name ')'
+   24 action_def: '(' . ACTION_TOK $@8 NAME $@9 param_def action_def_body ')'
+   35 axiom_def: '(' . AXIOM_TOK $@12 axiom_vars_def $@13 action_def_body ')'
+
+    REQUIREMENTS_TOK  deslocar, e ir ao estado 21
+    TYPES_TOK         deslocar, e ir ao estado 22
+    CONSTANTS_TOK     deslocar, e ir ao estado 23
+    ACTION_TOK        deslocar, e ir ao estado 24
+    AXIOM_TOK         deslocar, e ir ao estado 25
+
+
+estado 13
+
+    6 optional_domain_defs: ')' .
+
+    $padrão  reduzir usando a regra 6 (optional_domain_defs)
+
+
+estado 14
+
+    4 domain_definition: '(' DEFINE_TOK domain_name $@2 optional_domain_defs .
+
+    $padrão  reduzir usando a regra 4 (domain_definition)
+
+
+estado 15
+
+    7 optional_domain_defs: require_def . optional_domain_defs
+
+    '('  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 13
+
+    optional_domain_defs  ir ao estado 26
+    require_def           ir ao estado 15
+    types_def             ir ao estado 16
+    constants_def         ir ao estado 17
+    action_def            ir ao estado 18
+    axiom_def             ir ao estado 19
+
+
+estado 16
+
+    9 optional_domain_defs: types_def . optional_domain_defs
+
+    '('  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 13
+
+    optional_domain_defs  ir ao estado 27
+    require_def           ir ao estado 15
+    types_def             ir ao estado 16
+    constants_def         ir ao estado 17
+    action_def            ir ao estado 18
+    axiom_def             ir ao estado 19
+
+
+estado 17
+
+    8 optional_domain_defs: constants_def . optional_domain_defs
+
+    '('  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 13
+
+    optional_domain_defs  ir ao estado 28
+    require_def           ir ao estado 15
+    types_def             ir ao estado 16
+    constants_def         ir ao estado 17
+    action_def            ir ao estado 18
+    axiom_def             ir ao estado 19
+
+
+estado 18
+
+   11 optional_domain_defs: action_def . optional_domain_defs
+
+    '('  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 13
+
+    optional_domain_defs  ir ao estado 29
+    require_def           ir ao estado 15
+    types_def             ir ao estado 16
+    constants_def         ir ao estado 17
+    action_def            ir ao estado 18
+    axiom_def             ir ao estado 19
+
+
+estado 19
+
+   10 optional_domain_defs: axiom_def . optional_domain_defs
+
+    '('  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 13
+
+    optional_domain_defs  ir ao estado 30
+    require_def           ir ao estado 15
+    types_def             ir ao estado 16
+    constants_def         ir ao estado 17
+    action_def            ir ao estado 18
+    axiom_def             ir ao estado 19
+
+
+estado 20
+
+    5 domain_name: '(' DOMAIN_TOK NAME ')' .
+
+    $padrão  reduzir usando a regra 5 (domain_name)
+
+
+estado 21
+
+   14 require_def: '(' REQUIREMENTS_TOK . $@3 NAME $@4 require_key_star ')'
+
+    $padrão  reduzir usando a regra 12 ($@3)
+
+    $@3  ir ao estado 31
+
+
+estado 22
+
+   19 types_def: '(' TYPES_TOK . $@6 typed_list_name ')'
+
+    $padrão  reduzir usando a regra 18 ($@6)
+
+    $@6  ir ao estado 32
+
+
+estado 23
+
+   21 constants_def: '(' CONSTANTS_TOK . $@7 typed_list_name ')'
+
+    $padrão  reduzir usando a regra 20 ($@7)
+
+    $@7  ir ao estado 33
+
+
+estado 24
+
+   24 action_def: '(' ACTION_TOK . $@8 NAME $@9 param_def action_def_body ')'
+
+    $padrão  reduzir usando a regra 22 ($@8)
+
+    $@8  ir ao estado 34
+
+
+estado 25
+
+   35 axiom_def: '(' AXIOM_TOK . $@12 axiom_vars_def $@13 action_def_body ')'
+
+    $padrão  reduzir usando a regra 33 ($@12)
+
+    $@12  ir ao estado 35
+
+
+estado 26
+
+    7 optional_domain_defs: require_def optional_domain_defs .
+
+    $padrão  reduzir usando a regra 7 (optional_domain_defs)
+
+
+estado 27
+
+    9 optional_domain_defs: types_def optional_domain_defs .
+
+    $padrão  reduzir usando a regra 9 (optional_domain_defs)
+
+
+estado 28
+
+    8 optional_domain_defs: constants_def optional_domain_defs .
+
+    $padrão  reduzir usando a regra 8 (optional_domain_defs)
+
+
+estado 29
+
+   11 optional_domain_defs: action_def optional_domain_defs .
+
+    $padrão  reduzir usando a regra 11 (optional_domain_defs)
+
+
+estado 30
+
+   10 optional_domain_defs: axiom_def optional_domain_defs .
+
+    $padrão  reduzir usando a regra 10 (optional_domain_defs)
+
+
+estado 31
+
+   14 require_def: '(' REQUIREMENTS_TOK $@3 . NAME $@4 require_key_star ')'
+
+    NAME  deslocar, e ir ao estado 36
+
+
+estado 32
+
+   19 types_def: '(' TYPES_TOK $@6 . typed_list_name ')'
+
+    NAME  deslocar, e ir ao estado 37
+
+    $padrão  reduzir usando a regra 62 (typed_list_name)
+
+    typed_list_name  ir ao estado 38
+
+
+estado 33
+
+   21 constants_def: '(' CONSTANTS_TOK $@7 . typed_list_name ')'
+
+    NAME  deslocar, e ir ao estado 37
+
+    $padrão  reduzir usando a regra 62 (typed_list_name)
+
+    typed_list_name  ir ao estado 39
+
+
+estado 34
+
+   24 action_def: '(' ACTION_TOK $@8 . NAME $@9 param_def action_def_body ')'
+
+    NAME  deslocar, e ir ao estado 40
+
+
+estado 35
+
+   35 axiom_def: '(' AXIOM_TOK $@12 . axiom_vars_def $@13 action_def_body ')'
+
+    VARS_TOK  deslocar, e ir ao estado 41
+
+    VARS_TOK  [reduzir usando a regra 36 (axiom_vars_def)]
+    $padrão  reduzir usando a regra 36 (axiom_vars_def)
+
+    axiom_vars_def  ir ao estado 42
+
+
+estado 36
+
+   14 require_def: '(' REQUIREMENTS_TOK $@3 NAME . $@4 require_key_star ')'
+
+    $padrão  reduzir usando a regra 13 ($@4)
+
+    $@4  ir ao estado 43
+
+
+estado 37
+
+   63 typed_list_name: NAME . EITHER_TOK name_plus ')' typed_list_name
+   64                | NAME . TYPE typed_list_name
+   65                | NAME . typed_list_name
+
+    EITHER_TOK  deslocar, e ir ao estado 44
+    NAME        deslocar, e ir ao estado 37
+    TYPE        deslocar, e ir ao estado 45
+
+    $padrão  reduzir usando a regra 62 (typed_list_name)
+
+    typed_list_name  ir ao estado 46
+
+
+estado 38
+
+   19 types_def: '(' TYPES_TOK $@6 typed_list_name . ')'
+
+    ')'  deslocar, e ir ao estado 47
+
+
+estado 39
+
+   21 constants_def: '(' CONSTANTS_TOK $@7 typed_list_name . ')'
+
+    ')'  deslocar, e ir ao estado 48
+
+
+estado 40
+
+   24 action_def: '(' ACTION_TOK $@8 NAME . $@9 param_def action_def_body ')'
+
+    $padrão  reduzir usando a regra 23 ($@9)
+
+    $@9  ir ao estado 49
+
+
+estado 41
+
+   37 axiom_vars_def: VARS_TOK . '(' typed_list_variable ')'
+
+    '('  deslocar, e ir ao estado 50
+
+
+estado 42
+
+   35 axiom_def: '(' AXIOM_TOK $@12 axiom_vars_def . $@13 action_def_body ')'
+
+    $padrão  reduzir usando a regra 34 ($@13)
+
+    $@13  ir ao estado 51
+
+
+estado 43
+
+   14 require_def: '(' REQUIREMENTS_TOK $@3 NAME $@4 . require_key_star ')'
+
+    NAME  deslocar, e ir ao estado 52
+
+    $padrão  reduzir usando a regra 15 (require_key_star)
+
+    require_key_star  ir ao estado 53
+
+
+estado 44
+
+   63 typed_list_name: NAME EITHER_TOK . name_plus ')' typed_list_name
+
+    NAME  deslocar, e ir ao estado 54
+
+    name_plus  ir ao estado 55
+
+
+estado 45
+
+   64 typed_list_name: NAME TYPE . typed_list_name
+
+    NAME  deslocar, e ir ao estado 37
+
+    $padrão  reduzir usando a regra 62 (typed_list_name)
+
+    typed_list_name  ir ao estado 56
+
+
+estado 46
+
+   65 typed_list_name: NAME typed_list_name .
+
+    $padrão  reduzir usando a regra 65 (typed_list_name)
+
+
+estado 47
+
+   19 types_def: '(' TYPES_TOK $@6 typed_list_name ')' .
+
+    $padrão  reduzir usando a regra 19 (types_def)
+
+
+estado 48
+
+   21 constants_def: '(' CONSTANTS_TOK $@7 typed_list_name ')' .
+
+    $padrão  reduzir usando a regra 21 (constants_def)
+
+
+estado 49
+
+   24 action_def: '(' ACTION_TOK $@8 NAME $@9 . param_def action_def_body ')'
+
+    PARAMETERS_TOK  deslocar, e ir ao estado 57
+
+    $padrão  reduzir usando a regra 25 (param_def)
+
+    param_def  ir ao estado 58
+
+
+estado 50
+
+   37 axiom_vars_def: VARS_TOK '(' . typed_list_variable ')'
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 60
+
+
+estado 51
+
+   35 axiom_def: '(' AXIOM_TOK $@12 axiom_vars_def $@13 . action_def_body ')'
+
+    VARS_TOK          deslocar, e ir ao estado 61
+    PRECONDITION_TOK  deslocar, e ir ao estado 62
+    EFFECT_TOK        deslocar, e ir ao estado 63
+
+    $padrão  reduzir usando a regra 27 (action_def_body)
+
+    action_def_body  ir ao estado 64
+
+
+estado 52
+
+   17 require_key_star: NAME . $@5 require_key_star
+
+    $padrão  reduzir usando a regra 16 ($@5)
+
+    $@5  ir ao estado 65
+
+
+estado 53
+
+   14 require_def: '(' REQUIREMENTS_TOK $@3 NAME $@4 require_key_star . ')'
+
+    ')'  deslocar, e ir ao estado 66
+
+
+estado 54
+
+   60 name_plus: NAME .
+   61          | NAME . name_plus
+
+    NAME  deslocar, e ir ao estado 54
+
+    $padrão  reduzir usando a regra 60 (name_plus)
+
+    name_plus  ir ao estado 67
+
+
+estado 55
+
+   63 typed_list_name: NAME EITHER_TOK name_plus . ')' typed_list_name
+
+    ')'  deslocar, e ir ao estado 68
+
+
+estado 56
+
+   64 typed_list_name: NAME TYPE typed_list_name .
+
+    $padrão  reduzir usando a regra 64 (typed_list_name)
+
+
+estado 57
+
+   26 param_def: PARAMETERS_TOK . '(' typed_list_variable ')'
+
+    '('  deslocar, e ir ao estado 69
+
+
+estado 58
+
+   24 action_def: '(' ACTION_TOK $@8 NAME $@9 param_def . action_def_body ')'
+
+    VARS_TOK          deslocar, e ir ao estado 61
+    PRECONDITION_TOK  deslocar, e ir ao estado 62
+    EFFECT_TOK        deslocar, e ir ao estado 63
+
+    $padrão  reduzir usando a regra 27 (action_def_body)
+
+    action_def_body  ir ao estado 70
+
+
+estado 59
+
+   67 typed_list_variable: VARIABLE . EITHER_TOK name_plus ')' typed_list_variable
+   68                    | VARIABLE . TYPE typed_list_variable
+   69                    | VARIABLE . typed_list_variable
+
+    EITHER_TOK  deslocar, e ir ao estado 71
+    VARIABLE    deslocar, e ir ao estado 59
+    TYPE        deslocar, e ir ao estado 72
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 73
+
+
+estado 60
+
+   37 axiom_vars_def: VARS_TOK '(' typed_list_variable . ')'
+
+    ')'  deslocar, e ir ao estado 74
+
+
+estado 61
+
+   28 action_def_body: VARS_TOK . '(' typed_list_variable ')' action_def_body
+
+    '('  deslocar, e ir ao estado 75
+
+
+estado 62
+
+   30 action_def_body: PRECONDITION_TOK . adl_goal_description $@10 action_def_body
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 77
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 79
+
+
+estado 63
+
+   32 action_def_body: EFFECT_TOK . adl_effect $@11 action_def_body
+
+    '('  deslocar, e ir ao estado 80
+
+    adl_effect           ir ao estado 81
+    literal_term         ir ao estado 82
+    atomic_formula_term  ir ao estado 79
+
+
+estado 64
+
+   35 axiom_def: '(' AXIOM_TOK $@12 axiom_vars_def $@13 action_def_body . ')'
+
+    ')'  deslocar, e ir ao estado 83
+
+
+estado 65
+
+   17 require_key_star: NAME $@5 . require_key_star
+
+    NAME  deslocar, e ir ao estado 52
+
+    $padrão  reduzir usando a regra 15 (require_key_star)
+
+    require_key_star  ir ao estado 84
+
+
+estado 66
+
+   14 require_def: '(' REQUIREMENTS_TOK $@3 NAME $@4 require_key_star ')' .
+
+    $padrão  reduzir usando a regra 14 (require_def)
+
+
+estado 67
+
+   61 name_plus: NAME name_plus .
+
+    $padrão  reduzir usando a regra 61 (name_plus)
+
+
+estado 68
+
+   63 typed_list_name: NAME EITHER_TOK name_plus ')' . typed_list_name
+
+    NAME  deslocar, e ir ao estado 37
+
+    $padrão  reduzir usando a regra 62 (typed_list_name)
+
+    typed_list_name  ir ao estado 85
+
+
+estado 69
+
+   26 param_def: PARAMETERS_TOK '(' . typed_list_variable ')'
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 86
+
+
+estado 70
+
+   24 action_def: '(' ACTION_TOK $@8 NAME $@9 param_def action_def_body . ')'
+
+    ')'  deslocar, e ir ao estado 87
+
+
+estado 71
+
+   67 typed_list_variable: VARIABLE EITHER_TOK . name_plus ')' typed_list_variable
+
+    NAME  deslocar, e ir ao estado 54
+
+    name_plus  ir ao estado 88
+
+
+estado 72
+
+   68 typed_list_variable: VARIABLE TYPE . typed_list_variable
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 89
+
+
+estado 73
+
+   69 typed_list_variable: VARIABLE typed_list_variable .
+
+    $padrão  reduzir usando a regra 69 (typed_list_variable)
+
+
+estado 74
+
+   37 axiom_vars_def: VARS_TOK '(' typed_list_variable ')' .
+
+    $padrão  reduzir usando a regra 37 (axiom_vars_def)
+
+
+estado 75
+
+   28 action_def_body: VARS_TOK '(' . typed_list_variable ')' action_def_body
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 90
+
+
+estado 76
+
+   39 adl_goal_description: '(' . AND_TOK adl_goal_description_star ')'
+   40                     | '(' . OR_TOK adl_goal_description_star ')'
+   41                     | '(' . NOT_TOK adl_goal_description ')'
+   42                     | '(' . IMPLY_TOK adl_goal_description adl_goal_description ')'
+   43                     | '(' . EXISTS_TOK '(' typed_list_variable ')' adl_goal_description ')'
+   44                     | '(' . FORALL_TOK '(' typed_list_variable ')' adl_goal_description ')'
+   53 literal_term: '(' . NOT_TOK atomic_formula_term ')'
+   55 atomic_formula_term: '(' . predicate term_star ')'
+
+    AND_TOK     deslocar, e ir ao estado 91
+    NOT_TOK     deslocar, e ir ao estado 92
+    FORALL_TOK  deslocar, e ir ao estado 93
+    IMPLY_TOK   deslocar, e ir ao estado 94
+    OR_TOK      deslocar, e ir ao estado 95
+    EXISTS_TOK  deslocar, e ir ao estado 96
+    EQUAL_TOK   deslocar, e ir ao estado 97
+    NAME        deslocar, e ir ao estado 98
+
+    predicate  ir ao estado 99
+
+
+estado 77
+
+   30 action_def_body: PRECONDITION_TOK adl_goal_description . $@10 action_def_body
+
+    $padrão  reduzir usando a regra 29 ($@10)
+
+    $@10  ir ao estado 100
+
+
+estado 78
+
+   38 adl_goal_description: literal_term .
+
+    $padrão  reduzir usando a regra 38 (adl_goal_description)
+
+
+estado 79
+
+   54 literal_term: atomic_formula_term .
+
+    $padrão  reduzir usando a regra 54 (literal_term)
+
+
+estado 80
+
+   48 adl_effect: '(' . AND_TOK adl_effect_star ')'
+   49           | '(' . FORALL_TOK '(' typed_list_variable ')' adl_effect ')'
+   50           | '(' . WHEN_TOK adl_goal_description adl_effect ')'
+   53 literal_term: '(' . NOT_TOK atomic_formula_term ')'
+   55 atomic_formula_term: '(' . predicate term_star ')'
+
+    AND_TOK     deslocar, e ir ao estado 101
+    NOT_TOK     deslocar, e ir ao estado 102
+    WHEN_TOK    deslocar, e ir ao estado 103
+    FORALL_TOK  deslocar, e ir ao estado 104
+    EQUAL_TOK   deslocar, e ir ao estado 97
+    NAME        deslocar, e ir ao estado 98
+
+    predicate  ir ao estado 99
+
+
+estado 81
+
+   32 action_def_body: EFFECT_TOK adl_effect . $@11 action_def_body
+
+    $padrão  reduzir usando a regra 31 ($@11)
+
+    $@11  ir ao estado 105
+
+
+estado 82
+
+   47 adl_effect: literal_term .
+
+    $padrão  reduzir usando a regra 47 (adl_effect)
+
+
+estado 83
+
+   35 axiom_def: '(' AXIOM_TOK $@12 axiom_vars_def $@13 action_def_body ')' .
+
+    $padrão  reduzir usando a regra 35 (axiom_def)
+
+
+estado 84
+
+   17 require_key_star: NAME $@5 require_key_star .
+
+    $padrão  reduzir usando a regra 17 (require_key_star)
+
+
+estado 85
+
+   63 typed_list_name: NAME EITHER_TOK name_plus ')' typed_list_name .
+
+    $padrão  reduzir usando a regra 63 (typed_list_name)
+
+
+estado 86
+
+   26 param_def: PARAMETERS_TOK '(' typed_list_variable . ')'
+
+    ')'  deslocar, e ir ao estado 106
+
+
+estado 87
+
+   24 action_def: '(' ACTION_TOK $@8 NAME $@9 param_def action_def_body ')' .
+
+    $padrão  reduzir usando a regra 24 (action_def)
+
+
+estado 88
+
+   67 typed_list_variable: VARIABLE EITHER_TOK name_plus . ')' typed_list_variable
+
+    ')'  deslocar, e ir ao estado 107
+
+
+estado 89
+
+   68 typed_list_variable: VARIABLE TYPE typed_list_variable .
+
+    $padrão  reduzir usando a regra 68 (typed_list_variable)
+
+
+estado 90
+
+   28 action_def_body: VARS_TOK '(' typed_list_variable . ')' action_def_body
+
+    ')'  deslocar, e ir ao estado 108
+
+
+estado 91
+
+   39 adl_goal_description: '(' AND_TOK . adl_goal_description_star ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    $padrão  reduzir usando a regra 45 (adl_goal_description_star)
+
+    adl_goal_description       ir ao estado 109
+    adl_goal_description_star  ir ao estado 110
+    literal_term               ir ao estado 78
+    atomic_formula_term        ir ao estado 79
+
+
+estado 92
+
+   41 adl_goal_description: '(' NOT_TOK . adl_goal_description ')'
+   53 literal_term: '(' NOT_TOK . atomic_formula_term ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 111
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 112
+
+
+estado 93
+
+   44 adl_goal_description: '(' FORALL_TOK . '(' typed_list_variable ')' adl_goal_description ')'
+
+    '('  deslocar, e ir ao estado 113
+
+
+estado 94
+
+   42 adl_goal_description: '(' IMPLY_TOK . adl_goal_description adl_goal_description ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 114
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 79
+
+
+estado 95
+
+   40 adl_goal_description: '(' OR_TOK . adl_goal_description_star ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    $padrão  reduzir usando a regra 45 (adl_goal_description_star)
+
+    adl_goal_description       ir ao estado 109
+    adl_goal_description_star  ir ao estado 115
+    literal_term               ir ao estado 78
+    atomic_formula_term        ir ao estado 79
+
+
+estado 96
+
+   43 adl_goal_description: '(' EXISTS_TOK . '(' typed_list_variable ')' adl_goal_description ')'
+
+    '('  deslocar, e ir ao estado 116
+
+
+estado 97
+
+   71 predicate: EQUAL_TOK .
+
+    $padrão  reduzir usando a regra 71 (predicate)
+
+
+estado 98
+
+   70 predicate: NAME .
+
+    $padrão  reduzir usando a regra 70 (predicate)
+
+
+estado 99
+
+   55 atomic_formula_term: '(' predicate . term_star ')'
+
+    NAME      deslocar, e ir ao estado 117
+    VARIABLE  deslocar, e ir ao estado 118
+
+    $padrão  reduzir usando a regra 56 (term_star)
+
+    term_star  ir ao estado 119
+    term       ir ao estado 120
+
+
+estado 100
+
+   30 action_def_body: PRECONDITION_TOK adl_goal_description $@10 . action_def_body
+
+    VARS_TOK          deslocar, e ir ao estado 61
+    PRECONDITION_TOK  deslocar, e ir ao estado 62
+    EFFECT_TOK        deslocar, e ir ao estado 63
+
+    $padrão  reduzir usando a regra 27 (action_def_body)
+
+    action_def_body  ir ao estado 121
+
+
+estado 101
+
+   48 adl_effect: '(' AND_TOK . adl_effect_star ')'
+
+    '('  deslocar, e ir ao estado 80
+
+    $padrão  reduzir usando a regra 51 (adl_effect_star)
+
+    adl_effect           ir ao estado 122
+    adl_effect_star      ir ao estado 123
+    literal_term         ir ao estado 82
+    atomic_formula_term  ir ao estado 79
+
+
+estado 102
+
+   53 literal_term: '(' NOT_TOK . atomic_formula_term ')'
+
+    '('  deslocar, e ir ao estado 124
+
+    atomic_formula_term  ir ao estado 125
+
+
+estado 103
+
+   50 adl_effect: '(' WHEN_TOK . adl_goal_description adl_effect ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 126
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 79
+
+
+estado 104
+
+   49 adl_effect: '(' FORALL_TOK . '(' typed_list_variable ')' adl_effect ')'
+
+    '('  deslocar, e ir ao estado 127
+
+
+estado 105
+
+   32 action_def_body: EFFECT_TOK adl_effect $@11 . action_def_body
+
+    VARS_TOK          deslocar, e ir ao estado 61
+    PRECONDITION_TOK  deslocar, e ir ao estado 62
+    EFFECT_TOK        deslocar, e ir ao estado 63
+
+    $padrão  reduzir usando a regra 27 (action_def_body)
+
+    action_def_body  ir ao estado 128
+
+
+estado 106
+
+   26 param_def: PARAMETERS_TOK '(' typed_list_variable ')' .
+
+    $padrão  reduzir usando a regra 26 (param_def)
+
+
+estado 107
+
+   67 typed_list_variable: VARIABLE EITHER_TOK name_plus ')' . typed_list_variable
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 129
+
+
+estado 108
+
+   28 action_def_body: VARS_TOK '(' typed_list_variable ')' . action_def_body
+
+    VARS_TOK          deslocar, e ir ao estado 61
+    PRECONDITION_TOK  deslocar, e ir ao estado 62
+    EFFECT_TOK        deslocar, e ir ao estado 63
+
+    $padrão  reduzir usando a regra 27 (action_def_body)
+
+    action_def_body  ir ao estado 130
+
+
+estado 109
+
+   46 adl_goal_description_star: adl_goal_description . adl_goal_description_star
+
+    '('  deslocar, e ir ao estado 76
+
+    $padrão  reduzir usando a regra 45 (adl_goal_description_star)
+
+    adl_goal_description       ir ao estado 109
+    adl_goal_description_star  ir ao estado 131
+    literal_term               ir ao estado 78
+    atomic_formula_term        ir ao estado 79
+
+
+estado 110
+
+   39 adl_goal_description: '(' AND_TOK adl_goal_description_star . ')'
+
+    ')'  deslocar, e ir ao estado 132
+
+
+estado 111
+
+   41 adl_goal_description: '(' NOT_TOK adl_goal_description . ')'
+
+    ')'  deslocar, e ir ao estado 133
+
+
+estado 112
+
+   53 literal_term: '(' NOT_TOK atomic_formula_term . ')'
+   54             | atomic_formula_term .
+
+    ')'  deslocar, e ir ao estado 134
+
+    ')'  [reduzir usando a regra 54 (literal_term)]
+
+
+estado 113
+
+   44 adl_goal_description: '(' FORALL_TOK '(' . typed_list_variable ')' adl_goal_description ')'
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 135
+
+
+estado 114
+
+   42 adl_goal_description: '(' IMPLY_TOK adl_goal_description . adl_goal_description ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 136
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 79
+
+
+estado 115
+
+   40 adl_goal_description: '(' OR_TOK adl_goal_description_star . ')'
+
+    ')'  deslocar, e ir ao estado 137
+
+
+estado 116
+
+   43 adl_goal_description: '(' EXISTS_TOK '(' . typed_list_variable ')' adl_goal_description ')'
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 138
+
+
+estado 117
+
+   58 term: NAME .
+
+    $padrão  reduzir usando a regra 58 (term)
+
+
+estado 118
+
+   59 term: VARIABLE .
+
+    $padrão  reduzir usando a regra 59 (term)
+
+
+estado 119
+
+   55 atomic_formula_term: '(' predicate term_star . ')'
+
+    ')'  deslocar, e ir ao estado 139
+
+
+estado 120
+
+   57 term_star: term . term_star
+
+    NAME      deslocar, e ir ao estado 117
+    VARIABLE  deslocar, e ir ao estado 118
+
+    $padrão  reduzir usando a regra 56 (term_star)
+
+    term_star  ir ao estado 140
+    term       ir ao estado 120
+
+
+estado 121
+
+   30 action_def_body: PRECONDITION_TOK adl_goal_description $@10 action_def_body .
+
+    $padrão  reduzir usando a regra 30 (action_def_body)
+
+
+estado 122
+
+   52 adl_effect_star: adl_effect . adl_effect_star
+
+    '('  deslocar, e ir ao estado 80
+
+    $padrão  reduzir usando a regra 51 (adl_effect_star)
+
+    adl_effect           ir ao estado 122
+    adl_effect_star      ir ao estado 141
+    literal_term         ir ao estado 82
+    atomic_formula_term  ir ao estado 79
+
+
+estado 123
+
+   48 adl_effect: '(' AND_TOK adl_effect_star . ')'
+
+    ')'  deslocar, e ir ao estado 142
+
+
+estado 124
+
+   55 atomic_formula_term: '(' . predicate term_star ')'
+
+    EQUAL_TOK  deslocar, e ir ao estado 97
+    NAME       deslocar, e ir ao estado 98
+
+    predicate  ir ao estado 99
+
+
+estado 125
+
+   53 literal_term: '(' NOT_TOK atomic_formula_term . ')'
+
+    ')'  deslocar, e ir ao estado 134
+
+
+estado 126
+
+   50 adl_effect: '(' WHEN_TOK adl_goal_description . adl_effect ')'
+
+    '('  deslocar, e ir ao estado 80
+
+    adl_effect           ir ao estado 143
+    literal_term         ir ao estado 82
+    atomic_formula_term  ir ao estado 79
+
+
+estado 127
+
+   49 adl_effect: '(' FORALL_TOK '(' . typed_list_variable ')' adl_effect ')'
+
+    VARIABLE  deslocar, e ir ao estado 59
+
+    $padrão  reduzir usando a regra 66 (typed_list_variable)
+
+    typed_list_variable  ir ao estado 144
+
+
+estado 128
+
+   32 action_def_body: EFFECT_TOK adl_effect $@11 action_def_body .
+
+    $padrão  reduzir usando a regra 32 (action_def_body)
+
+
+estado 129
+
+   67 typed_list_variable: VARIABLE EITHER_TOK name_plus ')' typed_list_variable .
+
+    $padrão  reduzir usando a regra 67 (typed_list_variable)
+
+
+estado 130
+
+   28 action_def_body: VARS_TOK '(' typed_list_variable ')' action_def_body .
+
+    $padrão  reduzir usando a regra 28 (action_def_body)
+
+
+estado 131
+
+   46 adl_goal_description_star: adl_goal_description adl_goal_description_star .
+
+    $padrão  reduzir usando a regra 46 (adl_goal_description_star)
+
+
+estado 132
+
+   39 adl_goal_description: '(' AND_TOK adl_goal_description_star ')' .
+
+    $padrão  reduzir usando a regra 39 (adl_goal_description)
+
+
+estado 133
+
+   41 adl_goal_description: '(' NOT_TOK adl_goal_description ')' .
+
+    $padrão  reduzir usando a regra 41 (adl_goal_description)
+
+
+estado 134
+
+   53 literal_term: '(' NOT_TOK atomic_formula_term ')' .
+
+    $padrão  reduzir usando a regra 53 (literal_term)
+
+
+estado 135
+
+   44 adl_goal_description: '(' FORALL_TOK '(' typed_list_variable . ')' adl_goal_description ')'
+
+    ')'  deslocar, e ir ao estado 145
+
+
+estado 136
+
+   42 adl_goal_description: '(' IMPLY_TOK adl_goal_description adl_goal_description . ')'
+
+    ')'  deslocar, e ir ao estado 146
+
+
+estado 137
+
+   40 adl_goal_description: '(' OR_TOK adl_goal_description_star ')' .
+
+    $padrão  reduzir usando a regra 40 (adl_goal_description)
+
+
+estado 138
+
+   43 adl_goal_description: '(' EXISTS_TOK '(' typed_list_variable . ')' adl_goal_description ')'
+
+    ')'  deslocar, e ir ao estado 147
+
+
+estado 139
+
+   55 atomic_formula_term: '(' predicate term_star ')' .
+
+    $padrão  reduzir usando a regra 55 (atomic_formula_term)
+
+
+estado 140
+
+   57 term_star: term term_star .
+
+    $padrão  reduzir usando a regra 57 (term_star)
+
+
+estado 141
+
+   52 adl_effect_star: adl_effect adl_effect_star .
+
+    $padrão  reduzir usando a regra 52 (adl_effect_star)
+
+
+estado 142
+
+   48 adl_effect: '(' AND_TOK adl_effect_star ')' .
+
+    $padrão  reduzir usando a regra 48 (adl_effect)
+
+
+estado 143
+
+   50 adl_effect: '(' WHEN_TOK adl_goal_description adl_effect . ')'
+
+    ')'  deslocar, e ir ao estado 148
+
+
+estado 144
+
+   49 adl_effect: '(' FORALL_TOK '(' typed_list_variable . ')' adl_effect ')'
+
+    ')'  deslocar, e ir ao estado 149
+
+
+estado 145
+
+   44 adl_goal_description: '(' FORALL_TOK '(' typed_list_variable ')' . adl_goal_description ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 150
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 79
+
+
+estado 146
+
+   42 adl_goal_description: '(' IMPLY_TOK adl_goal_description adl_goal_description ')' .
+
+    $padrão  reduzir usando a regra 42 (adl_goal_description)
+
+
+estado 147
+
+   43 adl_goal_description: '(' EXISTS_TOK '(' typed_list_variable ')' . adl_goal_description ')'
+
+    '('  deslocar, e ir ao estado 76
+
+    adl_goal_description  ir ao estado 151
+    literal_term          ir ao estado 78
+    atomic_formula_term   ir ao estado 79
+
+
+estado 148
+
+   50 adl_effect: '(' WHEN_TOK adl_goal_description adl_effect ')' .
+
+    $padrão  reduzir usando a regra 50 (adl_effect)
+
+
+estado 149
+
+   49 adl_effect: '(' FORALL_TOK '(' typed_list_variable ')' . adl_effect ')'
+
+    '('  deslocar, e ir ao estado 80
+
+    adl_effect           ir ao estado 152
+    literal_term         ir ao estado 82
+    atomic_formula_term  ir ao estado 79
+
+
+estado 150
+
+   44 adl_goal_description: '(' FORALL_TOK '(' typed_list_variable ')' adl_goal_description . ')'
+
+    ')'  deslocar, e ir ao estado 153
+
+
+estado 151
+
+   43 adl_goal_description: '(' EXISTS_TOK '(' typed_list_variable ')' adl_goal_description . ')'
+
+    ')'  deslocar, e ir ao estado 154
+
+
+estado 152
+
+   49 adl_effect: '(' FORALL_TOK '(' typed_list_variable ')' adl_effect . ')'
+
+    ')'  deslocar, e ir ao estado 155
+
+
+estado 153
+
+   44 adl_goal_description: '(' FORALL_TOK '(' typed_list_variable ')' adl_goal_description ')' .
+
+    $padrão  reduzir usando a regra 44 (adl_goal_description)
+
+
+estado 154
+
+   43 adl_goal_description: '(' EXISTS_TOK '(' typed_list_variable ')' adl_goal_description ')' .
+
+    $padrão  reduzir usando a regra 43 (adl_goal_description)
+
+
+estado 155
+
+   49 adl_effect: '(' FORALL_TOK '(' typed_list_variable ')' adl_effect ')' .
+
+    $padrão  reduzir usando a regra 49 (adl_effect)

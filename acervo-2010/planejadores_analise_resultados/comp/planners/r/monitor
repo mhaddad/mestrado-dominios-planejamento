@@ -1,0 +1,18 @@
+#!/usr/bin/tclsh
+#for AIPS-2000 planning competition
+#deterministic version
+#format: r2 dir-name prob1 ... probk, where there must be a domain.pddl
+#under dir-name, and all problems are in this directory as well
+
+set PL /nobackup/contest/flin/pl-3.2.9/src/pl
+set AIPS consult('t.pl')
+set BIN /nobackup/contest/flin/bin
+set GO2 mygo
+
+for {set i 1} {$i < 10000} {incr i 1} {
+  exec sleep 60
+    catch { exec  rm ps}
+    catch { exec  ps -C pl > ps }
+    catch { [exec $PL -G0 -L0 -T0 -g $AIPS -t $GO2 2> message ]}
+}
+

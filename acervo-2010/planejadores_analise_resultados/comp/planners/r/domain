@@ -1,0 +1,49 @@
+
+
+
+(define (domain storageUpropositional)
+(:requirements :typing)
+(:types hoist surface place area - object
+	container depot - place
+	storearea transitarea - area
+	area crate - surface)
+
+(:predicates (clear vars - storearea)
+	     (in varx - (either storearea crate) varp - place)
+	     (available varh - hoist) 
+	     (lifting varh - hoist varc - crate) 
+	     (at varh - hoist vara - area)
+	     (on varc - crate vars - storearea) 
+	     (connected vara1 vara2 - area)
+             (compatible varc1 varc2 - crate)) 
+
+(:action lift
+ :parameters (varh - hoist varc - crate vara1 - storearea vara2 - area varp - place)
+ :precondition (and (connected vara1 vara2) (at varh vara2) (available varh) 
+		    (on varc vara1) (in vara1 varp))
+ :effect (and (not (on varc vara1)) (clear vara1)
+	      (not (available varh)) (lifting varh varc) (not (in varc varp))))
+				
+(:action drop
+ :parameters (varh - hoist varc - crate vara1 - storearea vara2 - area varp - place)
+ :precondition (and (connected vara1 vara2) (at varh vara2) (lifting varh varc) 
+		    (clear vara1) (in vara1 varp))
+ :effect (and (not (lifting varh varc)) (available varh)
+	      (not (clear vara1)) (on varc vara1) (in varc varp)))
+
+(:action move
+ :parameters (varh - hoist varfrom varto - storearea)
+ :precondition (and (at varh varfrom) (clear varto) (connected varfrom varto))
+ :effect (and (not (at varh varfrom)) (at varh varto) (not (clear varto)) (clear varfrom)))
+
+(:action goUout
+ :parameters (varh - hoist varfrom - storearea varto - transitarea)
+ :precondition (and (at varh varfrom) (connected varfrom varto))
+ :effect (and (not (at varh varfrom)) (at varh varto) (clear varfrom)))
+
+(:action goUin
+ :parameters (varh - hoist varfrom - transitarea varto - storearea)
+ :precondition (and (at varh varfrom) (connected varfrom varto) (clear varto))
+ :effect (and (not (at varh varfrom)) (at varh varto) (not (clear varto))))
+)
+

@@ -1,0 +1,13 @@
+#!/local/bin/tclsh
+if {$argc != 2 } { error "Usage pddl2forward pddlfilename prologfilename" }
+set f [open [lindex $argv 0] r]
+set o [open [lindex $argv 1] w]
+while { [gets $f line] >= 0 } {
+    regsub -all {\?} [string tolower $line] {var} line
+    regsub -all {([^ \r])(\-)} $line {\1U} line
+    regsub -all {([^ \r])(\_)} $line {\1V} line
+    regsub {([^;]*)(;.*)} $line {\1} line
+    puts $o $line
+}
+close $f
+close $o

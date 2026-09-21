@@ -1,0 +1,1561 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile1
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile1
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 12 facts and 1 exclusive pairs.
+time: 2, 13 facts and 2 exclusive pairs.
+time: 3, 20 facts and 8 exclusive pairs.
+Goals first reachable in 3 steps.
+220 nodes created.
+
+####################################################
+goals at time 4:
+  have-image_phenomenon4_thermograph0 have-image_star5_thermograph0 have-image_phenomenon6_thermograph0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 21
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite0 groundstation2 phenomenon3)
+1 (turn-to satellite0 phenomenon4 phenomenon3)
+1 (turn-to satellite0 star5 phenomenon3)
+2 (calibrate satellite0 instrument0 groundstation2)
+3 (take-image satellite0 phenomenon6 instrument0 thermograph0)
+3 (take-image satellite0 phenomenon4 instrument0 thermograph0)
+3 (take-image satellite0 star5 instrument0 thermograph0)
+End plan
+----------------------------------------------------
+
+8 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+8 actions tried
+
+####################################################
+Total elapsed time:   0.00 seconds
+Time in milliseconds: 3
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile2
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile2
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 20 facts and 3 exclusive pairs.
+time: 2, 22 facts and 8 exclusive pairs.
+time: 3, 46 facts and 46 exclusive pairs.
+Goals first reachable in 3 steps.
+374 nodes created.
+
+####################################################
+goals at time 4:
+  have-image_planet3_infrared0 have-image_planet4_infrared0 have-image_phenomenon5_image2 have-image_phenomenon6_infrared0 have-image_star7_infrared0 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 29
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite0 star7 star0)
+1 (turn-to satellite0 groundstation2 star0)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite0 phenomenon6 star0)
+1 (turn-to satellite0 phenomenon5 star0)
+1 (turn-to satellite0 planet3 star0)
+2 (calibrate satellite0 instrument1 groundstation2)
+3 (take-image satellite0 phenomenon6 instrument1 infrared0)
+3 (take-image satellite0 planet4 instrument1 infrared0)
+3 (take-image satellite0 phenomenon5 instrument1 image2)
+3 (take-image satellite0 star7 instrument1 infrared0)
+3 (take-image satellite0 planet3 instrument1 infrared0)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+12 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 6
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile3
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile3
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 38 facts and 7 exclusive pairs.
+time: 2, 42 facts and 20 exclusive pairs.
+time: 3, 66 facts and 16 exclusive pairs.
+Goals first reachable in 3 steps.
+694 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_phenomenon5 have-image_star3_infrared0 have-image_star4_spectrograph2 have-image_phenomenon5_spectrograph2 have-image_phenomenon7_spectrograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 27
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite0 phenomenon7 phenomenon6)
+1 (turn-to satellite0 star3 phenomenon6)
+1 (turn-to satellite0 star1 phenomenon6)
+1 (turn-to satellite0 phenomenon5 phenomenon6)
+2 (calibrate satellite0 instrument0 star1)
+3 (take-image satellite0 phenomenon5 instrument0 spectrograph2)
+3 (take-image satellite0 star3 instrument0 infrared0)
+3 (take-image satellite0 phenomenon7 instrument0 spectrograph2)
+3 (take-image satellite0 star4 instrument0 spectrograph2)
+End plan
+----------------------------------------------------
+
+10 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+10 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 12
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile4
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile4
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 38 facts and 4 exclusive pairs.
+time: 2, 41 facts and 10 exclusive pairs.
+time: 3, 71 facts and 17 exclusive pairs.
+Goals first reachable in 3 steps.
+894 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite1_planet5 have-image_planet3_infrared1 have-image_star4_infrared1 have-image_planet5_thermograph2 have-image_star6_infrared1 
+have-image_star7_infrared0 have-image_phenomenon8_thermograph2 have-image_phenomenon9_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 47
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite1 star6 phenomenon9)
+1 (turn-to satellite1 planet5 phenomenon9)
+1 (turn-to satellite0 star7 star6)
+1 (turn-to satellite1 planet3 phenomenon9)
+1 (switch-on instrument0 satellite0)
+1 (switch-on instrument1 satellite1)
+1 (turn-to satellite0 star0 star6)
+1 (turn-to satellite1 star4 phenomenon9)
+1 (turn-to satellite0 planet5 star6)
+1 (turn-to satellite0 phenomenon8 star6)
+1 (turn-to satellite1 star2 phenomenon9)
+1 (turn-to satellite0 phenomenon9 star6)
+2 (calibrate satellite0 instrument0 star0)
+2 (calibrate satellite1 instrument1 star2)
+3 (take-image satellite0 phenomenon8 instrument0 thermograph2)
+3 (take-image satellite0 star7 instrument0 infrared0)
+3 (take-image satellite1 star6 instrument1 infrared1)
+3 (take-image satellite1 star4 instrument1 infrared1)
+3 (take-image satellite1 planet3 instrument1 infrared1)
+3 (take-image satellite0 phenomenon9 instrument0 infrared0)
+3 (take-image satellite0 planet5 instrument0 thermograph2)
+End plan
+----------------------------------------------------
+
+21 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+21 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 14
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile5
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile5
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 80 facts and 18 exclusive pairs.
+time: 2, 89 facts and 54 exclusive pairs.
+time: 3, 119 facts and 45 exclusive pairs.
+Goals first reachable in 3 steps.
+1618 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_phenomenon5 pointing_satellite1_groundstation2 have-image_star3_thermograph0 have-image_phenomenon5_image2 have-image_phenomenon6_image2 
+have-image_star7_thermograph0 have-image_phenomenon8_image2 have-image_planet9_spectrograph1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 38
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite0 star7 star4)
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite0 groundstation2 star4)
+1 (turn-to satellite0 planet9 star4)
+1 (turn-to satellite0 phenomenon6 star4)
+1 (turn-to satellite0 star3 star4)
+1 (turn-to satellite0 phenomenon5 star4)
+2 (calibrate satellite0 instrument0 groundstation2)
+3 (take-image satellite0 phenomenon6 instrument0 image2)
+3 (take-image satellite0 planet9 instrument0 spectrograph1)
+3 (take-image satellite0 phenomenon8 instrument0 image2)
+3 (take-image satellite0 star3 instrument0 thermograph0)
+3 (take-image satellite0 phenomenon5 instrument0 image2)
+3 (take-image satellite0 star7 instrument0 thermograph0)
+End plan
+----------------------------------------------------
+
+14 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+14 actions tried
+
+####################################################
+Total elapsed time:   0.03 seconds
+Time in milliseconds: 30
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile6
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile6
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 61 facts and 8 exclusive pairs.
+time: 2, 66 facts and 22 exclusive pairs.
+time: 3, 110 facts and 72 exclusive pairs.
+Goals first reachable in 3 steps.
+1551 nodes created.
+
+####################################################
+goals at time 4:
+  have-image_planet4_thermograph2 have-image_planet5_spectrograph0 have-image_star6_thermograph2 have-image_star7_infrared3 have-image_phenomenon8_spectrograph0 
+have-image_star9_infrared1 have-image_star10_infrared3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 46
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite0 star1 star10)
+1 (switch-on instrument2 satellite1)
+1 (turn-to satellite1 star2 star9)
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite1 planet4 star9)
+1 (turn-to satellite1 star7 star9)
+1 (turn-to satellite0 star9 star10)
+1 (turn-to satellite0 planet5 star10)
+1 (turn-to satellite1 star10 star9)
+2 (calibrate satellite0 instrument0 star1)
+2 (calibrate satellite1 instrument2 star2)
+3 (take-image satellite0 phenomenon8 instrument0 spectrograph0)
+3 (take-image satellite1 star7 instrument2 infrared3)
+3 (take-image satellite1 planet4 instrument2 thermograph2)
+3 (take-image satellite0 planet5 instrument0 spectrograph0)
+3 (take-image satellite0 star9 instrument0 infrared1)
+3 (take-image satellite1 star6 instrument2 thermograph2)
+3 (take-image satellite1 star10 instrument2 infrared3)
+End plan
+----------------------------------------------------
+
+18 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+18 actions tried
+
+####################################################
+Total elapsed time:   0.03 seconds
+Time in milliseconds: 25
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile7
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile7
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 93 facts and 13 exclusive pairs.
+time: 2, 101 facts and 36 exclusive pairs.
+time: 3, 149 facts and 28 exclusive pairs.
+Goals first reachable in 3 steps.
+2463 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite1_star1 pointing_satellite2_phenomenon5 have-image_phenomenon5_image0 have-image_star6_image1 have-image_star7_image0 
+have-image_planet8_image0 have-image_planet9_image3 have-image_planet10_image0 have-image_planet11_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 66
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite1 planet11 planet10)
+1 (turn-to satellite3 planet9 planet11)
+1 (switch-on instrument4 satellite2)
+1 (switch-on instrument2 satellite0)
+1 (turn-to satellite1 star1 planet10)
+1 (turn-to satellite0 planet10 planet11)
+1 (turn-to satellite0 star7 planet11)
+1 (turn-to satellite2 star1 planet11)
+1 (switch-on instrument3 satellite1)
+1 (turn-to satellite3 groundstation0 planet11)
+1 (turn-to satellite2 phenomenon5 planet11)
+1 (turn-to satellite0 phenomenon5 planet11)
+1 (switch-on instrument7 satellite3)
+1 (turn-to satellite0 planet8 planet11)
+1 (turn-to satellite0 groundstation2 planet11)
+1 (turn-to satellite1 groundstation4 planet10)
+2 (calibrate satellite1 instrument3 groundstation4)
+2 (calibrate satellite3 instrument7 groundstation0)
+2 (calibrate satellite0 instrument2 groundstation2)
+2 (calibrate satellite2 instrument4 star1)
+3 (take-image satellite2 star6 instrument4 image1)
+3 (take-image satellite0 planet10 instrument2 image0)
+3 (take-image satellite0 phenomenon5 instrument2 image0)
+3 (take-image satellite1 planet11 instrument3 image2)
+3 (take-image satellite0 planet8 instrument2 image0)
+3 (take-image satellite3 planet9 instrument7 image3)
+3 (take-image satellite0 star7 instrument2 image0)
+End plan
+----------------------------------------------------
+
+27 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+27 actions tried
+
+####################################################
+Total elapsed time:   0.04 seconds
+Time in milliseconds: 41
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile8
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile8
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 115 facts and 18 exclusive pairs.
+time: 2, 125 facts and 52 exclusive pairs.
+time: 3, 185 facts and 42 exclusive pairs.
+Goals first reachable in 3 steps.
+3668 nodes created.
+
+####################################################
+goals at time 4:
+  have-image_phenomenon5_thermograph1 have-image_star6_thermograph1 have-image_star7_spectrograph3 have-image_phenomenon8_image0 have-image_phenomenon9_image0 
+have-image_star10_spectrograph3 have-image_planet11_thermograph2 have-image_phenomenon12_image0 have-image_phenomenon13_thermograph1 have-image_phenomenon14_thermograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 55
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite0 star10 phenomenon12)
+1 (turn-to satellite0 planet11 phenomenon12)
+1 (turn-to satellite1 phenomenon9 phenomenon14)
+1 (turn-to satellite1 phenomenon12 phenomenon14)
+1 (turn-to satellite1 phenomenon8 phenomenon14)
+1 (switch-on instrument3 satellite1)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite0 star7 phenomenon12)
+1 (turn-to satellite0 star2 phenomenon12)
+1 (turn-to satellite0 star6 phenomenon12)
+1 (turn-to satellite1 groundstation1 phenomenon14)
+1 (turn-to satellite0 phenomenon13 phenomenon12)
+1 (turn-to satellite0 phenomenon5 phenomenon12)
+2 (calibrate satellite1 instrument3 groundstation1)
+2 (calibrate satellite0 instrument1 star2)
+3 (take-image satellite0 star10 instrument1 spectrograph3)
+3 (take-image satellite1 phenomenon12 instrument3 image0)
+3 (take-image satellite0 planet11 instrument1 thermograph2)
+3 (take-image satellite1 phenomenon9 instrument3 image0)
+3 (take-image satellite0 phenomenon5 instrument1 thermograph1)
+3 (take-image satellite1 phenomenon8 instrument3 image0)
+3 (take-image satellite0 phenomenon14 instrument1 thermograph2)
+3 (take-image satellite0 star6 instrument1 thermograph1)
+3 (take-image satellite0 phenomenon13 instrument1 thermograph1)
+3 (take-image satellite0 star7 instrument1 spectrograph3)
+End plan
+----------------------------------------------------
+
+25 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+25 actions tried
+
+####################################################
+Total elapsed time:   0.07 seconds
+Time in milliseconds: 66
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile9
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile9
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 139 facts and 20 exclusive pairs.
+time: 2, 150 facts and 58 exclusive pairs.
+time: 3, 225 facts and 47 exclusive pairs.
+Goals first reachable in 3 steps.
+4536 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_phenomenon7 pointing_satellite3_star9 pointing_satellite4_planet5 have-image_planet5_image2 have-image_phenomenon6_image3 
+have-image_phenomenon7_infrared1 have-image_phenomenon8_image2 have-image_star9_image3 have-image_planet10_image4 have-image_planet11_spectrograph0 
+have-image_phenomenon12_image3 have-image_phenomenon13_spectrograph0 have-image_star14_image4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 71
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite1 star2 star14)
+1 (turn-to satellite3 star9 star14)
+1 (turn-to satellite0 planet11 star14)
+1 (turn-to satellite1 phenomenon6 star14)
+1 (turn-to satellite4 phenomenon8 phenomenon13)
+1 (turn-to satellite1 star9 star14)
+1 (turn-to satellite0 star4 star14)
+1 (switch-on instrument3 satellite1)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite1 phenomenon12 star14)
+1 (turn-to satellite0 phenomenon7 star14)
+1 (turn-to satellite4 planet10 phenomenon13)
+1 (switch-on instrument10 satellite4)
+1 (turn-to satellite0 phenomenon13 star14)
+1 (turn-to satellite4 star14 phenomenon13)
+1 (turn-to satellite4 star2 phenomenon13)
+1 (turn-to satellite4 phenomenon7 phenomenon13)
+1 (turn-to satellite4 planet5 phenomenon13)
+2 (calibrate satellite0 instrument1 star4)
+2 (calibrate satellite4 instrument10 star2)
+2 (calibrate satellite1 instrument3 star2)
+3 (take-image satellite1 phenomenon12 instrument3 image3)
+3 (take-image satellite4 planet10 instrument10 image4)
+3 (take-image satellite0 planet11 instrument1 spectrograph0)
+3 (take-image satellite4 star14 instrument10 image4)
+3 (take-image satellite0 phenomenon13 instrument1 spectrograph0)
+3 (take-image satellite4 phenomenon8 instrument10 image2)
+3 (take-image satellite4 planet5 instrument10 image2)
+3 (take-image satellite1 star9 instrument3 image3)
+3 (take-image satellite4 phenomenon7 instrument10 infrared1)
+3 (take-image satellite1 phenomenon6 instrument3 image3)
+End plan
+----------------------------------------------------
+
+31 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+31 actions tried
+
+####################################################
+Total elapsed time:   0.08 seconds
+Time in milliseconds: 82
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile10
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile10
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 146 facts and 18 exclusive pairs.
+time: 2, 157 facts and 50 exclusive pairs.
+time: 3, 242 facts and 39 exclusive pairs.
+Goals first reachable in 3 steps.
+5506 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite4_planet9 have-image_planet5_image4 have-image_star6_infrared3 have-image_star7_image4 have-image_phenomenon8_image4 
+have-image_planet9_infrared0 have-image_planet10_infrared3 have-image_star12_image4 have-image_phenomenon13_image4 have-image_phenomenon14_spectrograph1 
+have-image_star15_spectrograph1 have-image_star16_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 70
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite0 groundstation3 star16)
+1 (turn-to satellite4 planet5 star15)
+1 (switch-on instrument3 satellite1)
+1 (turn-to satellite4 phenomenon13 star15)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite4 planet9 star15)
+1 (turn-to satellite1 planet10 star16)
+1 (turn-to satellite4 star0 star15)
+1 (turn-to satellite0 phenomenon14 star16)
+1 (turn-to satellite4 star12 star15)
+1 (switch-on instrument10 satellite4)
+1 (turn-to satellite4 phenomenon8 star15)
+1 (turn-to satellite0 planet9 star16)
+1 (turn-to satellite4 star7 star15)
+1 (turn-to satellite1 star6 star16)
+1 (turn-to satellite4 star16 star15)
+1 (turn-to satellite0 star15 star16)
+2 (calibrate satellite0 instrument1 groundstation3)
+2 (calibrate satellite4 instrument10 star0)
+2 (calibrate satellite1 instrument3 star4)
+3 (take-image satellite1 star6 instrument3 infrared3)
+3 (take-image satellite0 planet9 instrument1 infrared0)
+3 (take-image satellite4 phenomenon13 instrument10 image4)
+3 (take-image satellite0 star15 instrument1 spectrograph1)
+3 (take-image satellite4 phenomenon8 instrument10 image4)
+3 (take-image satellite1 planet10 instrument3 infrared3)
+3 (take-image satellite4 planet5 instrument10 image4)
+3 (take-image satellite4 star7 instrument10 image4)
+3 (take-image satellite0 phenomenon14 instrument1 spectrograph1)
+3 (take-image satellite4 star12 instrument10 image4)
+3 (take-image satellite4 star16 instrument10 image2)
+End plan
+----------------------------------------------------
+
+31 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+31 actions tried
+
+####################################################
+Total elapsed time:   0.10 seconds
+Time in milliseconds: 98
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile11
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile11
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 150 facts and 15 exclusive pairs.
+time: 2, 159 facts and 42 exclusive pairs.
+time: 3, 259 facts and 33 exclusive pairs.
+Goals first reachable in 3 steps.
+7092 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_phenomenon9 pointing_satellite1_star4 pointing_satellite4_star11 have-image_star5_image3 have-image_planet6_infrared1 
+have-image_phenomenon7_infrared1 have-image_star8_image3 have-image_star10_thermograph2 have-image_star11_infrared1 have-image_planet13_spectrograph4 
+have-image_planet14_thermograph2 have-image_phenomenon15_infrared0 have-image_planet16_image3 have-image_star17_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 83
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite4 star11 planet19)
+1 (turn-to satellite1 phenomenon7 planet19)
+1 (turn-to satellite2 star10 planet19)
+1 (turn-to satellite3 star5 planet19)
+1 (turn-to satellite0 star0 planet19)
+1 (turn-to satellite0 planet13 planet19)
+1 (turn-to satellite1 star4 planet19)
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite2 star0 planet19)
+1 (switch-on instrument1 satellite1)
+1 (turn-to satellite2 planet14 planet19)
+1 (turn-to satellite3 planet16 planet19)
+1 (turn-to satellite1 star11 planet19)
+1 (turn-to satellite1 planet6 planet19)
+1 (turn-to satellite1 star17 planet19)
+1 (turn-to satellite3 star2 planet19)
+1 (turn-to satellite0 phenomenon9 planet19)
+1 (switch-on instrument7 satellite3)
+1 (turn-to satellite3 star8 planet19)
+1 (switch-on instrument5 satellite2)
+1 (turn-to satellite1 phenomenon15 planet19)
+2 (calibrate satellite0 instrument0 star0)
+2 (calibrate satellite1 instrument1 groundstation3)
+2 (calibrate satellite2 instrument5 star0)
+2 (calibrate satellite3 instrument7 star2)
+3 (take-image satellite1 phenomenon15 instrument1 infrared0)
+3 (take-image satellite1 phenomenon7 instrument1 infrared1)
+3 (take-image satellite3 planet16 instrument7 image3)
+3 (take-image satellite1 star11 instrument1 infrared1)
+3 (take-image satellite1 planet6 instrument1 infrared1)
+3 (take-image satellite3 star8 instrument7 image3)
+3 (take-image satellite2 star10 instrument5 thermograph2)
+3 (take-image satellite0 planet13 instrument0 spectrograph4)
+3 (take-image satellite3 star5 instrument7 image3)
+3 (take-image satellite1 star17 instrument1 infrared0)
+3 (take-image satellite2 planet14 instrument5 thermograph2)
+End plan
+----------------------------------------------------
+
+36 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+36 actions tried
+
+####################################################
+Total elapsed time:   0.13 seconds
+Time in milliseconds: 131
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile12
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile12
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 181 facts and 17 exclusive pairs.
+time: 2, 191 facts and 48 exclusive pairs.
+time: 3, 316 facts and 113 exclusive pairs.
+Goals first reachable in 3 steps.
+10757 nodes created.
+
+####################################################
+goals at time 4:
+  have-image_planet5_infrared0 have-image_phenomenon6_spectrograph4 have-image_star7_infrared0 have-image_planet8_infrared1 have-image_star9_spectrograph4 
+have-image_planet10_thermograph2 have-image_planet11_infrared3 have-image_phenomenon13_spectrograph4 have-image_star14_thermograph2 have-image_star15_infrared3 
+have-image_planet16_infrared1 have-image_phenomenon17_spectrograph4 have-image_star18_spectrograph4 have-image_star19_thermograph2 have-image_planet20_thermograph2 
+have-image_phenomenon21_thermograph2 have-image_star22_infrared1 have-image_star23_spectrograph4 have-image_phenomenon24_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 91
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite4 phenomenon13 phenomenon24)
+1 (turn-to satellite4 star2 phenomenon24)
+1 (turn-to satellite4 phenomenon17 phenomenon24)
+1 (turn-to satellite0 planet8 star23)
+1 (turn-to satellite0 planet5 star23)
+1 (turn-to satellite4 star18 phenomenon24)
+1 (turn-to satellite0 phenomenon24 star23)
+1 (switch-on instrument8 satellite4)
+1 (turn-to satellite4 phenomenon6 phenomenon24)
+1 (switch-on instrument4 satellite1)
+1 (turn-to satellite1 planet20 phenomenon24)
+1 (turn-to satellite0 star2 star23)
+1 (turn-to satellite1 planet10 phenomenon24)
+1 (turn-to satellite4 star23 phenomenon24)
+1 (turn-to satellite0 star22 star23)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite1 planet11 phenomenon24)
+1 (turn-to satellite4 star9 phenomenon24)
+1 (turn-to satellite1 star15 phenomenon24)
+1 (turn-to satellite1 star19 phenomenon24)
+1 (turn-to satellite0 star7 star23)
+1 (turn-to satellite1 star14 phenomenon24)
+1 (turn-to satellite1 phenomenon21 phenomenon24)
+2 (calibrate satellite1 instrument4 star4)
+2 (calibrate satellite0 instrument1 star2)
+2 (calibrate satellite4 instrument8 star2)
+3 (take-image satellite4 phenomenon6 instrument8 spectrograph4)
+3 (take-image satellite1 phenomenon21 instrument4 thermograph2)
+3 (take-image satellite0 phenomenon24 instrument1 infrared0)
+3 (take-image satellite0 star22 instrument1 infrared1)
+3 (take-image satellite4 star18 instrument8 spectrograph4)
+3 (take-image satellite1 planet10 instrument4 thermograph2)
+3 (take-image satellite0 planet8 instrument1 infrared1)
+3 (take-image satellite0 planet5 instrument1 infrared0)
+3 (take-image satellite1 planet11 instrument4 infrared3)
+3 (take-image satellite4 phenomenon17 instrument8 spectrograph4)
+3 (take-image satellite1 star19 instrument4 thermograph2)
+3 (take-image satellite4 phenomenon13 instrument8 spectrograph4)
+3 (take-image satellite1 star14 instrument4 thermograph2)
+3 (take-image satellite1 planet20 instrument4 thermograph2)
+3 (take-image satellite0 planet16 instrument1 infrared1)
+3 (take-image satellite4 star9 instrument8 spectrograph4)
+3 (take-image satellite4 star23 instrument8 spectrograph4)
+3 (take-image satellite1 star15 instrument4 infrared3)
+3 (take-image satellite0 star7 instrument1 infrared0)
+End plan
+----------------------------------------------------
+
+45 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+45 actions tried
+
+####################################################
+Total elapsed time:   0.23 seconds
+Time in milliseconds: 225
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile13
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile13
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 200 facts and 14 exclusive pairs.
+time: 2, 209 facts and 38 exclusive pairs.
+time: 3, 359 facts and 29 exclusive pairs.
+Goals first reachable in 3 steps.
+14922 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite1_phenomenon5 pointing_satellite2_planet11 pointing_satellite4_planet11 have-image_phenomenon5_thermograph1 have-image_planet6_image4 
+have-image_planet7_image3 have-image_planet8_image3 have-image_planet9_thermograph0 have-image_planet10_thermograph1 have-image_planet11_thermograph2 
+have-image_phenomenon12_image3 have-image_planet13_thermograph1 have-image_star14_image3 have-image_planet15_thermograph0 have-image_planet16_image3 
+have-image_planet17_image4 have-image_phenomenon18_image3 have-image_star19_thermograph0 have-image_star21_thermograph1 have-image_star22_image4 
+have-image_planet23_thermograph1 have-image_planet24_thermograph2 have-image_planet25_thermograph1 have-image_star26_thermograph0 have-image_phenomenon27_thermograph1 
+have-image_planet28_thermograph2 have-image_planet29_thermograph0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 115
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite2 planet8 planet29)
+1 (turn-to satellite0 star21 planet29)
+1 (turn-to satellite0 planet23 planet29)
+1 (turn-to satellite0 planet25 planet29)
+1 (turn-to satellite0 planet6 planet29)
+1 (switch-on instrument2 satellite1)
+1 (turn-to satellite1 planet29 phenomenon27)
+1 (turn-to satellite1 planet24 phenomenon27)
+1 (turn-to satellite2 phenomenon12 planet29)
+1 (turn-to satellite0 planet13 planet29)
+1 (turn-to satellite1 planet15 phenomenon27)
+1 (turn-to satellite1 phenomenon5 phenomenon27)
+1 (turn-to satellite0 phenomenon27 planet29)
+1 (switch-on instrument3 satellite2)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite4 planet11 planet29)
+1 (turn-to satellite1 star26 phenomenon27)
+1 (turn-to satellite1 planet9 phenomenon27)
+1 (turn-to satellite0 planet10 planet29)
+1 (turn-to satellite2 planet16 planet29)
+1 (turn-to satellite2 star1 planet29)
+1 (turn-to satellite2 star14 planet29)
+1 (turn-to satellite1 groundstation3 phenomenon27)
+1 (turn-to satellite1 planet11 phenomenon27)
+1 (turn-to satellite0 star22 planet29)
+1 (turn-to satellite2 phenomenon18 planet29)
+1 (turn-to satellite0 planet17 planet29)
+1 (turn-to satellite1 planet28 phenomenon27)
+1 (turn-to satellite1 star19 phenomenon27)
+1 (turn-to satellite2 planet11 planet29)
+1 (turn-to satellite0 phenomenon5 planet29)
+1 (turn-to satellite0 groundstation3 planet29)
+2 (calibrate satellite0 instrument1 groundstation3)
+2 (calibrate satellite1 instrument2 groundstation3)
+2 (calibrate satellite2 instrument3 star1)
+3 (take-image satellite1 planet28 instrument2 thermograph2)
+3 (take-image satellite0 planet6 instrument1 image4)
+3 (take-image satellite0 planet25 instrument1 thermograph1)
+3 (take-image satellite1 star26 instrument2 thermograph0)
+3 (take-image satellite2 planet8 instrument3 image3)
+3 (take-image satellite0 planet17 instrument1 image4)
+3 (take-image satellite2 planet7 instrument3 image3)
+3 (take-image satellite0 phenomenon5 instrument1 thermograph1)
+3 (take-image satellite1 star19 instrument2 thermograph0)
+3 (take-image satellite0 planet13 instrument1 thermograph1)
+3 (take-image satellite2 planet16 instrument3 image3)
+3 (take-image satellite1 planet9 instrument2 thermograph0)
+3 (take-image satellite2 phenomenon18 instrument3 image3)
+3 (take-image satellite0 star22 instrument1 image4)
+3 (take-image satellite0 planet10 instrument1 thermograph1)
+3 (take-image satellite0 star21 instrument1 thermograph1)
+3 (take-image satellite0 phenomenon27 instrument1 thermograph1)
+3 (take-image satellite2 star14 instrument3 image3)
+3 (take-image satellite0 planet23 instrument1 thermograph1)
+3 (take-image satellite2 phenomenon12 instrument3 image3)
+3 (take-image satellite1 planet11 instrument2 thermograph2)
+3 (take-image satellite1 planet15 instrument2 thermograph0)
+3 (take-image satellite1 planet29 instrument2 thermograph0)
+3 (take-image satellite1 planet24 instrument2 thermograph2)
+End plan
+----------------------------------------------------
+
+59 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+59 actions tried
+
+####################################################
+Total elapsed time:   0.35 seconds
+Time in milliseconds: 348
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile14
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile14
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 219 facts and 20 exclusive pairs.
+time: 2, 231 facts and 56 exclusive pairs.
+time: 3, 356 facts and 44 exclusive pairs.
+Goals first reachable in 3 steps.
+12941 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_planet21 pointing_satellite2_star14 pointing_satellite5_planet17 have-image_phenomenon5_image1 have-image_phenomenon7_thermograph0 
+have-image_planet8_image2 have-image_star9_thermograph0 have-image_star10_thermograph3 have-image_phenomenon12_thermograph0 have-image_phenomenon13_image1 
+have-image_star14_thermograph4 have-image_planet15_image2 have-image_planet17_image2 have-image_phenomenon18_image1 have-image_star19_thermograph4 
+have-image_star20_thermograph4 have-image_planet21_thermograph0 have-image_star22_thermograph3 have-image_planet23_image1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 89
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite5 planet15 star24)
+1 (turn-to satellite4 star10 star24)
+1 (turn-to satellite4 planet23 star24)
+1 (turn-to satellite4 groundstation0 star24)
+1 (turn-to satellite4 phenomenon18 star24)
+1 (switch-on instrument2 satellite0)
+1 (turn-to satellite0 planet21 star24)
+1 (turn-to satellite0 star14 star24)
+1 (turn-to satellite5 planet8 star24)
+1 (turn-to satellite2 star14 star24)
+1 (turn-to satellite0 star19 star24)
+1 (turn-to satellite4 phenomenon5 star24)
+1 (turn-to satellite0 groundstation2 star24)
+1 (turn-to satellite5 phenomenon7 star24)
+1 (turn-to satellite5 star9 star24)
+1 (turn-to satellite4 phenomenon13 star24)
+1 (turn-to satellite5 planet21 star24)
+1 (turn-to satellite5 planet17 star24)
+1 (turn-to satellite4 star22 star24)
+1 (switch-on instrument10 satellite4)
+1 (turn-to satellite5 phenomenon12 star24)
+1 (turn-to satellite0 star20 star24)
+1 (switch-on instrument11 satellite5)
+1 (turn-to satellite5 groundstation1 star24)
+2 (calibrate satellite5 instrument11 groundstation1)
+2 (calibrate satellite0 instrument2 groundstation2)
+2 (calibrate satellite4 instrument10 groundstation0)
+3 (take-image satellite0 star20 instrument2 thermograph4)
+3 (take-image satellite5 phenomenon7 instrument11 thermograph0)
+3 (take-image satellite4 phenomenon13 instrument10 image1)
+3 (take-image satellite5 planet15 instrument11 image2)
+3 (take-image satellite4 phenomenon5 instrument10 image1)
+3 (take-image satellite5 planet21 instrument11 thermograph0)
+3 (take-image satellite5 phenomenon12 instrument11 thermograph0)
+3 (take-image satellite4 star10 instrument10 thermograph3)
+3 (take-image satellite5 planet17 instrument11 image2)
+3 (take-image satellite4 planet23 instrument10 image1)
+3 (take-image satellite4 star22 instrument10 thermograph3)
+3 (take-image satellite5 star9 instrument11 thermograph0)
+3 (take-image satellite0 star19 instrument2 thermograph4)
+3 (take-image satellite5 planet8 instrument11 image2)
+3 (take-image satellite0 star14 instrument2 thermograph4)
+3 (take-image satellite4 phenomenon18 instrument10 image1)
+End plan
+----------------------------------------------------
+
+43 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+43 actions tried
+
+####################################################
+Total elapsed time:   0.28 seconds
+Time in milliseconds: 284
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile15
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile15
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 296 facts and 34 exclusive pairs.
+time: 2, 315 facts and 98 exclusive pairs.
+time: 3, 440 facts and 79 exclusive pairs.
+Goals first reachable in 3 steps.
+17140 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_star19 pointing_satellite1_planet22 pointing_satellite2_star13 pointing_satellite3_planet14 pointing_satellite5_planet24 
+pointing_satellite7_star3 have-image_phenomenon5_spectrograph2 have-image_planet6_spectrograph2 have-image_planet7_infrared0 have-image_phenomenon9_infrared0 
+have-image_phenomenon10_image1 have-image_planet11_image1 have-image_star12_thermograph3 have-image_star13_thermograph3 have-image_planet14_thermograph4 
+have-image_star15_thermograph4 have-image_phenomenon16_image1 have-image_planet17_thermograph3 have-image_star18_image1 have-image_planet20_image1 
+have-image_planet21_infrared0 have-image_planet22_image1 have-image_planet23_thermograph3 have-image_planet24_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 104
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite5 planet7 planet23)
+1 (turn-to satellite0 groundstation0 planet24)
+1 (turn-to satellite5 planet21 planet23)
+1 (turn-to satellite6 star13 planet24)
+1 (turn-to satellite5 planet14 planet23)
+1 (turn-to satellite0 planet20 planet24)
+1 (turn-to satellite0 planet11 planet24)
+1 (turn-to satellite0 planet22 planet24)
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite6 planet23 planet24)
+1 (turn-to satellite5 groundstation0 planet23)
+1 (turn-to satellite0 phenomenon16 planet24)
+1 (turn-to satellite6 star3 planet24)
+1 (turn-to satellite5 planet24 planet23)
+1 (turn-to satellite5 phenomenon5 planet23)
+1 (turn-to satellite0 star18 planet24)
+1 (turn-to satellite5 star15 planet23)
+1 (turn-to satellite3 planet14 planet24)
+1 (switch-on instrument10 satellite5)
+1 (turn-to satellite1 planet22 planet24)
+1 (turn-to satellite0 phenomenon10 planet24)
+1 (turn-to satellite7 star3 planet24)
+1 (switch-on instrument13 satellite6)
+1 (turn-to satellite2 star13 planet24)
+1 (turn-to satellite6 star12 planet24)
+1 (turn-to satellite5 phenomenon9 planet23)
+2 (calibrate satellite6 instrument13 star3)
+2 (calibrate satellite5 instrument10 groundstation0)
+2 (calibrate satellite0 instrument0 groundstation0)
+3 (take-image satellite0 planet11 instrument0 image1)
+3 (take-image satellite0 planet22 instrument0 image1)
+3 (take-image satellite6 planet17 instrument13 thermograph3)
+3 (take-image satellite6 planet23 instrument13 thermograph3)
+3 (take-image satellite6 star13 instrument13 thermograph3)
+3 (take-image satellite5 phenomenon9 instrument10 infrared0)
+3 (take-image satellite5 planet6 instrument10 spectrograph2)
+3 (take-image satellite0 star18 instrument0 image1)
+3 (take-image satellite0 planet20 instrument0 image1)
+3 (take-image satellite5 star15 instrument10 thermograph4)
+3 (take-image satellite5 planet7 instrument10 infrared0)
+3 (take-image satellite5 phenomenon5 instrument10 spectrograph2)
+3 (take-image satellite5 planet24 instrument10 infrared0)
+3 (take-image satellite0 phenomenon16 instrument0 image1)
+3 (take-image satellite5 planet21 instrument10 infrared0)
+3 (take-image satellite5 planet14 instrument10 thermograph4)
+3 (take-image satellite0 phenomenon10 instrument0 image1)
+3 (take-image satellite6 star12 instrument13 thermograph3)
+End plan
+----------------------------------------------------
+
+47 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+47 actions tried
+
+####################################################
+Total elapsed time:   0.39 seconds
+Time in milliseconds: 391
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile16
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile16
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 374 facts and 42 exclusive pairs.
+time: 2, 397 facts and 122 exclusive pairs.
+time: 3, 522 facts and 99 exclusive pairs.
+Goals first reachable in 3 steps.
+21572 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite5_planet6 pointing_satellite7_star3 pointing_satellite8_star15 pointing_satellite9_star16 have-image_phenomenon5_thermograph1 
+have-image_planet6_infrared4 have-image_planet7_image0 have-image_planet8_thermograph1 have-image_phenomenon9_image2 have-image_planet10_image0 
+have-image_planet11_infrared4 have-image_star12_image0 have-image_star13_image0 have-image_star14_thermograph1 have-image_star15_image0 
+have-image_star16_thermograph1 have-image_phenomenon17_infrared4 have-image_phenomenon18_spectrograph3 have-image_star20_image0 have-image_planet21_thermograph1 
+have-image_planet22_image2 have-image_phenomenon23_image0 have-image_star24_infrared4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 101
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite4 star20 star24)
+1 (turn-to satellite9 star16 star24)
+1 (turn-to satellite5 planet6 phenomenon23)
+1 (turn-to satellite4 phenomenon18 star24)
+1 (turn-to satellite4 star15 star24)
+1 (turn-to satellite4 planet10 star24)
+1 (turn-to satellite5 star24 phenomenon23)
+1 (turn-to satellite4 planet22 star24)
+1 (turn-to satellite6 planet8 star24)
+1 (turn-to satellite5 phenomenon17 phenomenon23)
+1 (turn-to satellite4 phenomenon23 star24)
+1 (turn-to satellite5 groundstation4 phenomenon23)
+1 (turn-to satellite6 star14 star24)
+1 (turn-to satellite4 star13 star24)
+1 (switch-on instrument14 satellite6)
+1 (switch-on instrument12 satellite5)
+1 (turn-to satellite5 planet11 phenomenon23)
+1 (turn-to satellite4 phenomenon9 star24)
+1 (switch-on instrument10 satellite4)
+1 (turn-to satellite6 planet21 star24)
+1 (turn-to satellite6 star16 star24)
+1 (turn-to satellite4 star12 star24)
+1 (turn-to satellite6 phenomenon5 star24)
+1 (turn-to satellite7 star3 star24)
+1 (turn-to satellite4 star2 star24)
+1 (turn-to satellite6 star3 star24)
+1 (turn-to satellite4 planet7 star24)
+1 (turn-to satellite8 star15 star24)
+2 (calibrate satellite5 instrument12 groundstation4)
+2 (calibrate satellite6 instrument14 star3)
+2 (calibrate satellite4 instrument10 star2)
+3 (take-image satellite5 planet11 instrument12 infrared4)
+3 (take-image satellite4 planet10 instrument10 image0)
+3 (take-image satellite6 phenomenon5 instrument14 thermograph1)
+3 (take-image satellite6 planet21 instrument14 thermograph1)
+3 (take-image satellite4 planet7 instrument10 image0)
+3 (take-image satellite5 planet6 instrument12 infrared4)
+3 (take-image satellite6 planet8 instrument14 thermograph1)
+3 (take-image satellite4 star20 instrument10 image0)
+3 (take-image satellite4 phenomenon23 instrument10 image0)
+3 (take-image satellite4 phenomenon9 instrument10 image2)
+3 (take-image satellite4 planet22 instrument10 image2)
+3 (take-image satellite5 star24 instrument12 infrared4)
+3 (take-image satellite5 phenomenon17 instrument12 infrared4)
+3 (take-image satellite6 star16 instrument14 thermograph1)
+3 (take-image satellite4 phenomenon18 instrument10 spectrograph3)
+3 (take-image satellite4 star12 instrument10 image0)
+3 (take-image satellite4 star13 instrument10 image0)
+3 (take-image satellite6 star14 instrument14 thermograph1)
+3 (take-image satellite4 star15 instrument10 image0)
+End plan
+----------------------------------------------------
+
+50 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+50 actions tried
+
+####################################################
+Total elapsed time:   0.55 seconds
+Time in milliseconds: 550
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile17
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile17
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 426 facts and 40 exclusive pairs.
+time: 2, 450 facts and 112 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile18
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile18
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 191 facts and 26 exclusive pairs.
+time: 2, 204 facts and 78 exclusive pairs.
+time: 3, 329 facts and 65 exclusive pairs.
+Goals first reachable in 3 steps.
+10876 nodes created.
+
+####################################################
+goals at time 4:
+  have-image_phenomenon5_thermograph4 have-image_planet7_image1 have-image_star8_thermograph3 have-image_star9_image1 have-image_star10_image1 
+have-image_phenomenon13_thermograph2 have-image_star15_thermograph2 have-image_phenomenon17_thermograph4 have-image_phenomenon18_image1 have-image_planet19_thermograph2 
+have-image_planet20_thermograph4 have-image_phenomenon21_image1 have-image_star22_thermograph3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 71
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite3 planet20 phenomenon24)
+1 (switch-on instrument4 satellite1)
+1 (turn-to satellite1 star1 phenomenon24)
+1 (turn-to satellite3 star15 phenomenon24)
+1 (turn-to satellite1 phenomenon18 phenomenon24)
+1 (turn-to satellite3 phenomenon5 phenomenon24)
+1 (switch-on instrument1 satellite0)
+1 (turn-to satellite3 phenomenon13 phenomenon24)
+1 (turn-to satellite3 phenomenon17 phenomenon24)
+1 (turn-to satellite3 star1 phenomenon24)
+1 (turn-to satellite1 planet7 phenomenon24)
+1 (turn-to satellite1 star10 phenomenon24)
+1 (turn-to satellite3 planet19 phenomenon24)
+1 (turn-to satellite0 star22 phenomenon24)
+1 (switch-on instrument11 satellite3)
+1 (turn-to satellite1 star9 phenomenon24)
+1 (turn-to satellite0 star0 phenomenon24)
+2 (calibrate satellite1 instrument4 star1)
+2 (calibrate satellite0 instrument1 star0)
+2 (calibrate satellite3 instrument11 star1)
+3 (take-image satellite3 phenomenon13 instrument11 thermograph2)
+3 (take-image satellite3 planet19 instrument11 thermograph2)
+3 (take-image satellite3 phenomenon17 instrument11 thermograph4)
+3 (take-image satellite0 star22 instrument1 thermograph3)
+3 (take-image satellite0 star8 instrument1 thermograph3)
+3 (take-image satellite1 phenomenon21 instrument4 image1)
+3 (take-image satellite1 planet7 instrument4 image1)
+3 (take-image satellite1 star9 instrument4 image1)
+3 (take-image satellite3 star15 instrument11 thermograph2)
+3 (take-image satellite1 phenomenon18 instrument4 image1)
+3 (take-image satellite3 phenomenon5 instrument11 thermograph4)
+3 (take-image satellite1 star10 instrument4 image1)
+3 (take-image satellite3 planet20 instrument11 thermograph4)
+End plan
+----------------------------------------------------
+
+33 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+33 actions tried
+
+####################################################
+Total elapsed time:   0.23 seconds
+Time in milliseconds: 231
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile19
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile19
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 254 facts and 84 exclusive pairs.
+time: 2, 279 facts and 286 exclusive pairs.
+time: 3, 479 facts and 261 exclusive pairs.
+Goals first reachable in 3 steps.
+12163 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite0_planet17 have-image_phenomenon5_infrared7 have-image_phenomenon5_image4 have-image_phenomenon7_thermograph1 have-image_planet9_spectrograph0 
+have-image_planet9_spectrograph6 have-image_star10_infrared3 have-image_star10_spectrograph6 have-image_phenomenon11_infrared2 have-image_star12_spectrograph6 
+have-image_star12_thermograph1 have-image_phenomenon13_infrared7 have-image_phenomenon13_infrared2 have-image_star14_infrared2 have-image_planet15_infrared2 
+have-image_star16_image4 have-image_planet17_image5 have-image_planet17_image4 have-image_star18_infrared2 have-image_star19_infrared3 
+have-image_star19_thermograph1 have-image_phenomenon20_spectrograph0 have-image_planet21_infrared3 have-image_planet21_image5 have-image_planet22_infrared2 
+have-image_star23_infrared2 have-image_phenomenon24_spectrograph6 have-image_phenomenon24_image5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 134
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite0 planet22 phenomenon24)
+1 (switch-on instrument24 satellite4)
+1 (turn-to satellite2 groundstation4 star23)
+1 (turn-to satellite0 phenomenon13 phenomenon24)
+1 (turn-to satellite3 planet9 star23)
+1 (turn-to satellite1 star12 phenomenon24)
+1 (turn-to satellite4 planet9 phenomenon24)
+1 (turn-to satellite0 phenomenon11 phenomenon24)
+1 (turn-to satellite3 phenomenon24 star23)
+1 (turn-to satellite1 star1 phenomenon24)
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite0 star14 phenomenon24)
+1 (turn-to satellite2 planet21 star23)
+1 (turn-to satellite0 star18 phenomenon24)
+1 (turn-to satellite0 planet15 phenomenon24)
+1 (switch-on instrument3 satellite1)
+1 (turn-to satellite3 star12 star23)
+1 (turn-to satellite4 planet21 phenomenon24)
+1 (switch-on instrument16 satellite3)
+1 (turn-to satellite4 phenomenon20 phenomenon24)
+1 (turn-to satellite1 phenomenon7 phenomenon24)
+1 (turn-to satellite0 planet17 phenomenon24)
+1 (switch-on instrument10 satellite2)
+1 (turn-to satellite2 phenomenon24 star23)
+1 (turn-to satellite4 groundstation0 phenomenon24)
+1 (turn-to satellite0 star23 phenomenon24)
+1 (turn-to satellite3 star10 star23)
+1 (turn-to satellite1 star19 phenomenon24)
+1 (turn-to satellite0 groundstation0 phenomenon24)
+1 (turn-to satellite3 star2 star23)
+1 (turn-to satellite2 planet17 star23)
+1 (turn-to satellite2 star16 star23)
+1 (turn-to satellite4 star10 phenomenon24)
+1 (turn-to satellite2 phenomenon13 star23)
+1 (turn-to satellite4 star19 phenomenon24)
+2 (calibrate satellite2 instrument10 groundstation4)
+2 (calibrate satellite4 instrument24 groundstation0)
+2 (calibrate satellite3 instrument16 star2)
+2 (calibrate satellite1 instrument3 star1)
+2 (calibrate satellite0 instrument0 groundstation0)
+3 (take-image satellite4 star10 instrument24 infrared3)
+3 (take-image satellite2 star16 instrument10 image4)
+3 (take-image satellite1 star12 instrument3 thermograph1)
+3 (take-image satellite0 planet22 instrument0 infrared2)
+3 (take-image satellite3 phenomenon24 instrument16 spectrograph6)
+3 (take-image satellite1 star19 instrument3 thermograph1)
+3 (take-image satellite0 star14 instrument0 infrared2)
+3 (take-image satellite3 planet9 instrument16 spectrograph6)
+3 (take-image satellite4 phenomenon20 instrument24 spectrograph0)
+3 (take-image satellite0 phenomenon13 instrument0 infrared2)
+3 (take-image satellite0 phenomenon11 instrument0 infrared2)
+3 (take-image satellite2 planet21 instrument10 image5)
+3 (take-image satellite2 planet17 instrument10 image4)
+3 (take-image satellite4 planet21 instrument24 infrared3)
+3 (take-image satellite2 planet17 instrument10 image5)
+3 (take-image satellite2 phenomenon5 instrument10 image4)
+3 (take-image satellite1 phenomenon7 instrument3 thermograph1)
+3 (take-image satellite2 phenomenon5 instrument10 infrared7)
+3 (take-image satellite0 star18 instrument0 infrared2)
+3 (take-image satellite2 phenomenon24 instrument10 image5)
+3 (take-image satellite4 planet9 instrument24 spectrograph0)
+3 (take-image satellite0 star23 instrument0 infrared2)
+3 (take-image satellite3 star12 instrument16 spectrograph6)
+3 (take-image satellite2 phenomenon13 instrument10 infrared7)
+3 (take-image satellite3 star10 instrument16 spectrograph6)
+3 (take-image satellite4 star19 instrument24 infrared3)
+3 (take-image satellite0 planet15 instrument0 infrared2)
+End plan
+----------------------------------------------------
+
+67 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+67 actions tried
+
+####################################################
+Total elapsed time:   0.35 seconds
+Time in milliseconds: 346
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/mestrado/comp/sattelite/domain.pddl -f /home/matheus/mestrado/comp/sattelite/pfile20
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/sattelite/pfile20
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 271 facts and 117 exclusive pairs.
+time: 2, 300 facts and 410 exclusive pairs.
+time: 3, 550 facts and 381 exclusive pairs.
+Goals first reachable in 3 steps.
+12489 nodes created.
+
+####################################################
+goals at time 4:
+  pointing_satellite1_phenomenon19 have-image_phenomenon5_thermograph8 have-image_phenomenon5_spectrograph0 have-image_phenomenon5_image3 have-image_star6_spectrograph0 
+have-image_star6_spectrograph6 have-image_star6_image3 have-image_planet7_spectrograph6 have-image_planet7_infrared5 have-image_planet7_image2 
+have-image_phenomenon8_spectrograph6 have-image_phenomenon8_infrared5 have-image_phenomenon8_thermograph7 have-image_planet9_spectrograph6 have-image_star10_spectrograph6 
+have-image_star11_thermograph7 have-image_star11_image4 have-image_star11_image3 have-image_phenomenon12_image4 have-image_planet13_infrared5 
+have-image_planet13_spectrograph6 have-image_planet13_image2 have-image_phenomenon14_thermograph7 have-image_planet15_image3 have-image_star16_image3 
+have-image_star16_image4 have-image_planet18_infrared9 have-image_planet18_infrared5 have-image_planet18_thermograph7 have-image_phenomenon19_image2 
+have-image_phenomenon19_image4 have-image_star20_spectrograph0 have-image_phenomenon21_image4 have-image_phenomenon21_image2 have-image_phenomenon21_thermograph7 
+have-image_planet22_image2 have-image_planet22_spectrograph6 have-image_star23_image2 have-image_star23_infrared9 have-image_star24_spectrograph6 
+have-image_star24_infrared5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 162
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite4 groundstation1 star24)
+1 (turn-to satellite3 groundstation1 star24)
+1 (turn-to satellite4 star20 star24)
+1 (turn-to satellite1 star23 planet22)
+1 (turn-to satellite0 star6 star23)
+1 (turn-to satellite0 star24 star23)
+1 (switch-on instrument20 satellite3)
+1 (turn-to satellite4 star6 star24)
+1 (turn-to satellite3 phenomenon12 star24)
+1 (turn-to satellite3 planet13 star24)
+1 (turn-to satellite3 star6 star24)
+1 (turn-to satellite3 phenomenon21 star24)
+1 (turn-to satellite3 planet22 star24)
+1 (turn-to satellite3 star16 star24)
+1 (turn-to satellite1 phenomenon8 planet22)
+1 (turn-to satellite4 planet18 star24)
+1 (turn-to satellite4 phenomenon14 star24)
+1 (turn-to satellite4 phenomenon5 star24)
+1 (turn-to satellite0 star10 star23)
+1 (turn-to satellite3 phenomenon5 star24)
+1 (turn-to satellite1 groundstation3 planet22)
+1 (switch-on instrument28 satellite4)
+1 (turn-to satellite3 phenomenon19 star24)
+1 (turn-to satellite1 planet7 planet22)
+1 (turn-to satellite1 planet18 planet22)
+1 (turn-to satellite0 phenomenon8 star23)
+1 (turn-to satellite0 planet22 star23)
+1 (switch-on instrument12 satellite1)
+1 (turn-to satellite1 phenomenon5 planet22)
+1 (turn-to satellite3 star11 star24)
+1 (turn-to satellite0 planet7 star23)
+1 (turn-to satellite3 star23 star24)
+1 (turn-to satellite1 planet13 planet22)
+1 (turn-to satellite1 star24 planet22)
+1 (turn-to satellite4 phenomenon21 star24)
+1 (switch-on instrument7 satellite0)
+1 (turn-to satellite4 phenomenon8 star24)
+1 (turn-to satellite3 planet15 star24)
+1 (turn-to satellite3 planet7 star24)
+1 (turn-to satellite0 planet9 star23)
+1 (turn-to satellite0 planet13 star23)
+1 (turn-to satellite4 star11 star24)
+2 (calibrate satellite0 instrument7 groundstation1)
+2 (calibrate satellite3 instrument20 groundstation1)
+2 (calibrate satellite1 instrument12 groundstation3)
+2 (calibrate satellite4 instrument28 groundstation1)
+3 (take-image satellite3 phenomenon19 instrument20 image2)
+3 (take-image satellite0 phenomenon8 instrument7 spectrograph6)
+3 (take-image satellite1 planet18 instrument12 infrared9)
+3 (take-image satellite3 phenomenon19 instrument20 image4)
+3 (take-image satellite4 planet18 instrument28 thermograph7)
+3 (take-image satellite4 phenomenon21 instrument28 thermograph7)
+3 (take-image satellite3 planet13 instrument20 image2)
+3 (take-image satellite4 phenomenon5 instrument28 spectrograph0)
+3 (take-image satellite0 planet9 instrument7 spectrograph6)
+3 (take-image satellite3 star11 instrument20 image3)
+3 (take-image satellite3 phenomenon12 instrument20 image4)
+3 (take-image satellite3 star11 instrument20 image4)
+3 (take-image satellite3 planet15 instrument20 image3)
+3 (take-image satellite1 planet7 instrument12 infrared5)
+3 (take-image satellite4 star11 instrument28 thermograph7)
+3 (take-image satellite1 star23 instrument12 infrared9)
+3 (take-image satellite3 planet22 instrument20 image2)
+3 (take-image satellite3 star6 instrument20 image3)
+3 (take-image satellite4 star20 instrument28 spectrograph0)
+3 (take-image satellite4 star6 instrument28 spectrograph0)
+3 (take-image satellite3 phenomenon21 instrument20 image2)
+3 (take-image satellite3 phenomenon21 instrument20 image4)
+3 (take-image satellite1 planet13 instrument12 infrared5)
+3 (take-image satellite0 star6 instrument7 spectrograph6)
+3 (take-image satellite3 star16 instrument20 image3)
+3 (take-image satellite3 star16 instrument20 image4)
+3 (take-image satellite3 star23 instrument20 image2)
+3 (take-image satellite1 phenomenon8 instrument12 infrared5)
+3 (take-image satellite4 phenomenon8 instrument28 thermograph7)
+3 (take-image satellite0 planet22 instrument7 spectrograph6)
+3 (take-image satellite4 phenomenon14 instrument28 thermograph7)
+3 (take-image satellite3 phenomenon5 instrument20 image3)
+3 (take-image satellite1 star24 instrument12 infrared5)
+3 (take-image satellite0 star24 instrument7 spectrograph6)
+3 (take-image satellite1 phenomenon5 instrument12 thermograph8)
+3 (take-image satellite1 planet18 instrument12 infrared5)
+3 (take-image satellite0 star10 instrument7 spectrograph6)
+3 (take-image satellite0 planet7 instrument7 spectrograph6)
+3 (take-image satellite3 planet7 instrument20 image2)
+3 (take-image satellite0 planet13 instrument7 spectrograph6)
+End plan
+----------------------------------------------------
+
+86 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+86 actions tried
+
+####################################################
+Total elapsed time:   0.37 seconds
+Time in milliseconds: 366
+
+####################################################

@@ -1,0 +1,113 @@
+:- style_check(-singleton).
+:- style_check(-discontiguous).
+type(object, object).
+type(pipe, object).
+type(area, object).
+type(product, object).
+type(batchUatom, object).
+type(tankUslot, object).
+constant(lco, product).
+constant(gasoleo, product).
+constant(ratUa, product).
+constant(oca1, product).
+constant(oc1b, product).
+fluent_name(connect, [varfrom, varto, varpipe], [area, area, pipe]).
+fluent_name(unitary, [varpipe], [pipe]).
+fluent_name(notUunitary, [varpipe], [pipe]).
+fluent_name(last, [varbatchUatom, varpipe], [batchUatom, pipe]).
+fluent_name(first, [varbatchUatom, varpipe], [batchUatom, pipe]).
+fluent_name(follow, [varnext, varprevious], [batchUatom, batchUatom]).
+fluent_name(isUproduct, [varbatchUatom, varproduct], [batchUatom, product]).
+fluent_name(on, [varbatchUatom, vararea], [batchUatom, area]).
+fluent_name(mayUinterface, [varproductUa, varproductUb], [product, product]).
+fluent_name(normal, [varpipe], [pipe]).
+fluent_name(pushUupdating, [varpipe], [pipe]).
+fluent_name(popUupdating, [varpipe], [pipe]).
+fluent_name(tankUslotUproductUlocation, [vartankUslot, varproduct, vararea], [tankUslot, product, area]).
+fluent_name(occupied, [vartankUslot], [tankUslot]).
+fluent_name(notUoccupied, [vartankUslot], [tankUslot]).
+action_name(pushUstart, [avarpipe, avarbatchUatomUin, avarfromUarea, avartoUarea, avarfirstUbatchUatom, avarproductUbatchUatomUin, avarproductUfirstUbatch, avartankUslot], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]).
+action_name(pushUend, [avarpipe, avarfromUarea, avartoUarea, avarlastUbatchUatom, avarnextUlastUbatchUatom, avarproductUlastUbatch, avartankUslot], [pipe, area, area, batchUatom, batchUatom, product, tankUslot]).
+action_name(popUstart, [avarpipe, avarbatchUatomUin, avarfromUarea, avartoUarea, avarlastUbatchUatom, avarproductUbatchUatomUin, avarproductUlastUbatch, avartankUslot], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]).
+action_name(popUend, [avarpipe, avarfromUarea, avartoUarea, avarfirstUbatchUatom, avarnextUfirstUbatchUatom, avarproductUfirstUbatch, avartankUslot], [pipe, area, area, batchUatom, batchUatom, product, tankUslot]).
+action_name(pushUunitarypipe, [avarpipe, avarbatchUatomUin, avarfromUarea, avartoUarea, avarfirstUbatchUatom, avarproductUbatchUatomUin, avarproductUfirstUbatch, avarfromUtankUslot, avartoUtankUslot], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot, tankUslot]).
+action_name(popUunitarypipe, [avarpipe, avarbatchUatomUin, avarfromUarea, avartoUarea, avarfirstUbatchUatom, avarproductUbatchUatomUin, avarproductUfirstUbatch, avarfromUtankUslot, avartoUtankUslot], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot, tankUslot]).
+fluent_name1(connect, [x0, x1, x2], [area, area, pipe]).
+fluent_name1(unitary, [x2], [pipe]).
+fluent_name1(notUunitary, [x2], [pipe]).
+fluent_name1(last, [x3, x2], [batchUatom, pipe]).
+fluent_name1(first, [x3, x2], [batchUatom, pipe]).
+fluent_name1(follow, [x3, x4], [batchUatom, batchUatom]).
+fluent_name1(isUproduct, [x3, x5], [batchUatom, product]).
+fluent_name1(on, [x3, x0], [batchUatom, area]).
+fluent_name1(mayUinterface, [x5, x6], [product, product]).
+fluent_name1(normal, [x2], [pipe]).
+fluent_name1(pushUupdating, [x2], [pipe]).
+fluent_name1(popUupdating, [x2], [pipe]).
+fluent_name1(tankUslotUproductUlocation, [x7, x5, x0], [tankUslot, product, area]).
+fluent_name1(occupied, [x7], [tankUslot]).
+fluent_name1(notUoccupied, [x7], [tankUslot]).
+domain(object, [object]).
+domain(pipe, [pipe, x2]).
+domain(area, [area, x0, x1]).
+domain(product, [product, x5, x6, lco, gasoleo, ratUa, oca1, oc1b]).
+domain(batchUatom, [batchUatom, x3, x4]).
+domain(tankUslot, [tankUslot, x7]).
+poss(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), [normal(_G91380), notUunitary(_G91380), connect(_G91382, _G91383, _G91380), first(_G91384, _G91380), on(_G91381, _G91382), isUproduct(_G91381, _G91385), isUproduct(_G91384, _G91386), mayUinterface(_G91385, _G91386), tankUslotUproductUlocation(_G91387, _G91385, _G91382), occupied(_G91387)], []).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), pushUupdating(_G91380), [], [], [[_G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387], [batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), -normal(_G91380), [], [], [[_G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387], [batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), first(_G91381, _G91380), [], [], [[_G91382, _G91383, _G91384, _G91385, _G91386, _G91387], [area, area, batchUatom, product, product, tankUslot]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), -first(_G91384, _G91380), [], [], [[_G91381, _G91382, _G91383, _G91385, _G91386, _G91387], [batchUatom, area, area, product, product, tankUslot]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), follow(_G91384, _G91381), [], [], [[_G91380, _G91382, _G91383, _G91385, _G91386, _G91387], [pipe, area, area, product, product, tankUslot]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), -on(_G91381, _G91382), [], [], [[_G91380, _G91383, _G91384, _G91385, _G91386, _G91387], [pipe, area, batchUatom, product, product, tankUslot]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), -occupied(_G91387), [], [], [[_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386], [pipe, batchUatom, area, area, batchUatom, product, product]]).
+effect(pushUstart(_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386, _G91387), notUoccupied(_G91387), [], [], [[_G91380, _G91381, _G91382, _G91383, _G91384, _G91385, _G91386], [pipe, batchUatom, area, area, batchUatom, product, product]]).
+poss(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), [pushUupdating(_G77582), notUunitary(_G77582), connect(_G77583, _G77584, _G77582), last(_G77585, _G77582), follow(_G77585, _G77586), isUproduct(_G77585, _G77587), tankUslotUproductUlocation(_G77588, _G77587, _G77584), notUoccupied(_G77588)], []).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), -pushUupdating(_G77582), [], [], [[_G77583, _G77584, _G77585, _G77586, _G77587, _G77588], [area, area, batchUatom, batchUatom, product, tankUslot]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), normal(_G77582), [], [], [[_G77583, _G77584, _G77585, _G77586, _G77587, _G77588], [area, area, batchUatom, batchUatom, product, tankUslot]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), -follow(_G77585, _G77586), [], [], [[_G77582, _G77583, _G77584, _G77587, _G77588], [pipe, area, area, product, tankUslot]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), last(_G77586, _G77582), [], [], [[_G77583, _G77584, _G77585, _G77587, _G77588], [area, area, batchUatom, product, tankUslot]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), -last(_G77585, _G77582), [], [], [[_G77583, _G77584, _G77586, _G77587, _G77588], [area, area, batchUatom, product, tankUslot]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), on(_G77585, _G77584), [], [], [[_G77582, _G77583, _G77586, _G77587, _G77588], [pipe, area, batchUatom, product, tankUslot]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), occupied(_G77588), [], [], [[_G77582, _G77583, _G77584, _G77585, _G77586, _G77587], [pipe, area, area, batchUatom, batchUatom, product]]).
+effect(pushUend(_G77582, _G77583, _G77584, _G77585, _G77586, _G77587, _G77588), -notUoccupied(_G77588), [], [], [[_G77582, _G77583, _G77584, _G77585, _G77586, _G77587], [pipe, area, area, batchUatom, batchUatom, product]]).
+poss(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), [normal(_G34867), notUunitary(_G34867), connect(_G34869, _G34870, _G34867), last(_G34871, _G34867), on(_G34868, _G34870), isUproduct(_G34868, _G34872), isUproduct(_G34871, _G34873), mayUinterface(_G34872, _G34873), tankUslotUproductUlocation(_G34874, _G34872, _G34870), occupied(_G34874)], []).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), popUupdating(_G34867), [], [], [[_G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874], [batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), -normal(_G34867), [], [], [[_G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874], [batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), last(_G34868, _G34867), [], [], [[_G34869, _G34870, _G34871, _G34872, _G34873, _G34874], [area, area, batchUatom, product, product, tankUslot]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), -last(_G34871, _G34867), [], [], [[_G34868, _G34869, _G34870, _G34872, _G34873, _G34874], [batchUatom, area, area, product, product, tankUslot]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), follow(_G34868, _G34871), [], [], [[_G34867, _G34869, _G34870, _G34872, _G34873, _G34874], [pipe, area, area, product, product, tankUslot]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), -on(_G34868, _G34870), [], [], [[_G34867, _G34869, _G34871, _G34872, _G34873, _G34874], [pipe, area, batchUatom, product, product, tankUslot]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), -occupied(_G34874), [], [], [[_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873], [pipe, batchUatom, area, area, batchUatom, product, product]]).
+effect(popUstart(_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873, _G34874), notUoccupied(_G34874), [], [], [[_G34867, _G34868, _G34869, _G34870, _G34871, _G34872, _G34873], [pipe, batchUatom, area, area, batchUatom, product, product]]).
+poss(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), [popUupdating(_G49174), notUunitary(_G49174), connect(_G49175, _G49176, _G49174), first(_G49177, _G49174), follow(_G49178, _G49177), tankUslotUproductUlocation(_G49180, _G49179, _G49175), notUoccupied(_G49180)], []).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), -popUupdating(_G49174), [], [], [[_G49175, _G49176, _G49177, _G49178, _G49179, _G49180], [area, area, batchUatom, batchUatom, product, tankUslot]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), normal(_G49174), [], [], [[_G49175, _G49176, _G49177, _G49178, _G49179, _G49180], [area, area, batchUatom, batchUatom, product, tankUslot]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), -follow(_G49178, _G49177), [], [], [[_G49174, _G49175, _G49176, _G49179, _G49180], [pipe, area, area, product, tankUslot]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), first(_G49178, _G49174), [], [], [[_G49175, _G49176, _G49177, _G49179, _G49180], [area, area, batchUatom, product, tankUslot]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), -first(_G49177, _G49174), [], [], [[_G49175, _G49176, _G49178, _G49179, _G49180], [area, area, batchUatom, product, tankUslot]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), on(_G49177, _G49175), [], [], [[_G49174, _G49176, _G49178, _G49179, _G49180], [pipe, area, batchUatom, product, tankUslot]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), occupied(_G49180), [], [], [[_G49174, _G49175, _G49176, _G49177, _G49178, _G49179], [pipe, area, area, batchUatom, batchUatom, product]]).
+effect(popUend(_G49174, _G49175, _G49176, _G49177, _G49178, _G49179, _G49180), -notUoccupied(_G49180), [], [], [[_G49174, _G49175, _G49176, _G49177, _G49178, _G49179], [pipe, area, area, batchUatom, batchUatom, product]]).
+poss(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), [first(_G143743, _G143739), connect(_G143741, _G143742, _G143739), on(_G143740, _G143741), unitary(_G143739), isUproduct(_G143740, _G143744), isUproduct(_G143743, _G143745), mayUinterface(_G143744, _G143745), tankUslotUproductUlocation(_G143746, _G143744, _G143741), occupied(_G143746), tankUslotUproductUlocation(_G143747, _G143745, _G143742), notUoccupied(_G143747)], []).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), first(_G143740, _G143739), [], [], [[_G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747], [area, area, batchUatom, product, product, tankUslot, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), -first(_G143743, _G143739), [], [], [[_G143740, _G143741, _G143742, _G143744, _G143745, _G143746, _G143747], [batchUatom, area, area, product, product, tankUslot, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), last(_G143740, _G143739), [], [], [[_G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747], [area, area, batchUatom, product, product, tankUslot, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), -last(_G143743, _G143739), [], [], [[_G143740, _G143741, _G143742, _G143744, _G143745, _G143746, _G143747], [batchUatom, area, area, product, product, tankUslot, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), -on(_G143740, _G143741), [], [], [[_G143739, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747], [pipe, area, batchUatom, product, product, tankUslot, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), -occupied(_G143746), [], [], [[_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143747], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), notUoccupied(_G143746), [], [], [[_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143747], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), on(_G143743, _G143742), [], [], [[_G143739, _G143740, _G143741, _G143744, _G143745, _G143746, _G143747], [pipe, batchUatom, area, product, product, tankUslot, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), occupied(_G143747), [], [], [[_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(pushUunitarypipe(_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746, _G143747), -notUoccupied(_G143747), [], [], [[_G143739, _G143740, _G143741, _G143742, _G143743, _G143744, _G143745, _G143746], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+poss(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), [first(_G49449, _G49445), connect(_G49447, _G49448, _G49445), on(_G49446, _G49448), unitary(_G49445), isUproduct(_G49446, _G49450), isUproduct(_G49449, _G49451), mayUinterface(_G49450, _G49451), tankUslotUproductUlocation(_G49453, _G49450, _G49448), occupied(_G49453), tankUslotUproductUlocation(_G49452, _G49451, _G49447), notUoccupied(_G49452)], []).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), last(_G49446, _G49445), [], [], [[_G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453], [area, area, batchUatom, product, product, tankUslot, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), -last(_G49449, _G49445), [], [], [[_G49446, _G49447, _G49448, _G49450, _G49451, _G49452, _G49453], [batchUatom, area, area, product, product, tankUslot, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), first(_G49446, _G49445), [], [], [[_G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453], [area, area, batchUatom, product, product, tankUslot, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), -first(_G49449, _G49445), [], [], [[_G49446, _G49447, _G49448, _G49450, _G49451, _G49452, _G49453], [batchUatom, area, area, product, product, tankUslot, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), -on(_G49446, _G49448), [], [], [[_G49445, _G49447, _G49449, _G49450, _G49451, _G49452, _G49453], [pipe, area, batchUatom, product, product, tankUslot, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), -occupied(_G49453), [], [], [[_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), notUoccupied(_G49453), [], [], [[_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), on(_G49449, _G49447), [], [], [[_G49445, _G49446, _G49448, _G49450, _G49451, _G49452, _G49453], [pipe, batchUatom, area, product, product, tankUslot, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), occupied(_G49452), [], [], [[_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49453], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).
+effect(popUunitarypipe(_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49452, _G49453), -notUoccupied(_G49452), [], [], [[_G49445, _G49446, _G49447, _G49448, _G49449, _G49450, _G49451, _G49453], [pipe, batchUatom, area, area, batchUatom, product, product, tankUslot]]).

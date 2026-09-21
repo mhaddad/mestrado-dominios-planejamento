@@ -1,0 +1,5 @@
+echo "problema 1"
+./translate/translate.py /home/matheus/mestrado/comp/blocksworld/domain.pddl /home/matheus/mestrado/comp/blocksworld/probBLOCKS-4-0.pddl
+./preprocess/preprocess < output.sas 
+./search/search cCfF < output 
+echo "problema 2"

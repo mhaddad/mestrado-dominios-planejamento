@@ -1,0 +1,2625 @@
+/***
+* itSIMPLE: Integrated Tool Software Interface for Modeling PLanning Environments
+*
+* Copyright (C) 2007-2009 Universidade de Sao Paulo
+*
+*
+* This file is part of itSIMPLE.
+*
+* itSIMPLE is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version. Other licenses might be available
+* upon written agreement.
+*
+* itSIMPLE is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with itSIMPLE.  If not, see <http://www.gnu.org/licenses/>.
+*
+* Authors:	Tiago S. Vaquero
+*               Matheus Haddad
+*
+**/
+
+
+package planning;
+
+import itSIMPLE.ItSIMPLE;
+import java.awt.Color;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import javax.swing.JLabel;
+import languages.xml.XMLUtilities;
+import org.jaxen.JaxenException;
+import org.jaxen.XPath;
+import org.jaxen.jdom.JDOMXPath;
+import org.jdom.Element;
+import org.nfunk.jep.JEP;
+
+/**
+ * This class is responsible for all plan analysis processes including plan evaluation, plan comparison.
+ * @author Tiago
+ */
+public class PlanAnalyzer {
+
+
+    /**
+     * This method evaluates a plan based on the metrics preferences
+     * @param metrics
+     * @return
+     */
+    public static double evaluatePlan(Element metrics){
+
+        double overallGrade = 0;
+
+        double upExpression = 0;
+        double weights = 0;
+
+        for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+            Element qualityMetric = it.next();
+            String metricWeight = qualityMetric.getChildText("weight");
+
+            double weight = 1;
+            if (!metricWeight.trim().equals("")){
+                try {
+                    weight = Double.parseDouble(metricWeight);
+                } catch (Exception e) {
+                    weight = 1;
+                }
+            }
+			//evaluate the metric
+            double metricGrade = evaluateMetric(qualityMetric);
+            
+            upExpression += metricGrade*weight;
+            weights += weight;
+        }
+
+
+        if (weights > 0){
+            overallGrade = upExpression/weights;
+        }
+
+        return overallGrade;
+    }
+
+
+    /**
+     * This method evalutes a single metric based on its preferences
+     * @param metric
+     * @return
+     */
+    public static double evaluateMetric(Element metric){
+
+        double metricGrade = 0;
+
+        String metricname = metric.getChildText("name");
+        String metrictype = metric.getChildText("type");
+        String metricID = metric.getAttributeValue("id");
+        String metricLevel = metric.getAttributeValue("level");
+
+        
+
+
+        float finalValue = getMetricValue(metric);
+
+                     
+        //calculate grade
+        List<Element> preferenceFunctions = metric.getChild("preferenceFunction").getChildren("function");
+        for (int i = 0; i < preferenceFunctions.size(); i++) {
+            Element afunction = preferenceFunctions.get(i);
+
+            Element lower = afunction.getChild("domain").getChild("lowerbound");
+            Element upper = afunction.getChild("domain").getChild("upperbound");
+            String func = afunction.getChildText("rule");
+
+            String lowerbound = lower.getAttributeValue("value");
+            String lowerIncluded = lower.getAttributeValue("included");
+            String upperbound = upper.getAttributeValue("value");
+            String upperIncluded = upper.getAttributeValue("included");
+
+            boolean lowerOk = false;
+            boolean upperOk = false;
+            float lowerlimit = 0;
+            float upperlimit = 0;
+
+
+            //checking lower limit
+            if (lowerbound.equals("-inf")){
+                lowerOk = true;
+            }
+            else{
+                if (!lowerbound.contains(".")){//integer case
+                    lowerlimit = Integer.parseInt(lowerbound);
+                }
+                else{//float case
+                    lowerlimit = Float.parseFloat(lowerbound);
+                }
+
+                if (lowerIncluded.toLowerCase().equals("true")){
+                    if (lowerlimit <= finalValue){
+                        lowerOk = true;
+                    }
+                }
+                else{
+                    if (lowerlimit < finalValue){
+                        lowerOk = true;
+                    }
+                }
+            }
+
+            //checking upper limit
+            if (upperbound.equals("+inf")){
+                upperOk = true;
+            }
+            else{
+                if (!upperbound.contains(".")){//integer case
+                    upperlimit = Integer.parseInt(upperbound);
+                }
+                else{//float case
+                    upperlimit = Float.parseFloat(upperbound);
+                }
+
+                if (upperIncluded.toLowerCase().equals("true")){
+                    if (finalValue <= upperlimit){
+                        upperOk = true;
+                    }
+                }
+                else{
+                    if (finalValue < upperlimit){
+                        upperOk = true;
+                    }
+                }
+
+            }
+
+            if (lowerOk && upperOk){
+                JEP myParser = new JEP();
+                myParser.addStandardFunctions();
+                myParser.addStandardConstants();
+                myParser.addVariable("x", finalValue);
+                myParser.parseExpression(func);
+                metricGrade = myParser.getValue();
+                //System.out.println(metricGrade);
+            }
+
+        }
+
+        return metricGrade;
+    }
+
+
+
+    /**
+     * This method evaluate the cost or award of a given metric (SUM (value*weight))
+     * @param metrics
+     * @return
+     */
+    public static double evaluateCostAward(Element metrics){
+
+        double overallCostAward = 0;
+
+
+        for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+            Element qualityMetric = it.next();
+            String metricWeight = qualityMetric.getChildText("weight");
+
+            double weight = 1;
+            if (!metricWeight.trim().equals("")){
+                try {
+                    weight = Double.parseDouble(metricWeight);
+                } catch (Exception e) {
+                    weight = 1;
+                }
+            }
+			//evaluate the metric
+            double metricValue = getMetricValue(qualityMetric);
+
+            overallCostAward += metricValue*weight;
+        }
+
+        return overallCostAward;
+    }
+
+
+    /**
+     * This method returns the value of the metric after a given plan being executed
+     * It shoud considered the final/last value, average, min, max (but it restricted to
+     * final/last value so far)
+     * @param metric
+     * @return
+     */
+    public static float getMetricValue(Element metric){
+
+        float value = 0;
+
+        Element dataset = metric.getChild("dataset");
+
+        if (dataset.getChildren().size() > 0){
+            
+            //Case: FINAL VALUE
+            int lastIndex = dataset.getChildren().size()-1;
+            Element finalSet = (Element)dataset.getChildren().get(lastIndex);
+
+            try {
+                value = Float.parseFloat(finalSet.getAttributeValue("value"));
+            } catch (Exception e) {
+                System.out.println("System could not parse the last value");
+                return 0;
+            }
+
+            //TODO: CASE min
+
+            //TODO: CASE max
+
+            //TODO: CASE average
+            
+        }
+
+        return value;
+    }
+
+
+
+
+    /**
+     * This method generated a fuul html report of a given plan. It shows the basic data such as
+     * the planner that solved the problem, its statistics, the Gantt chart and the charts representing
+     * metric values (if defined) with a initial evaluation of the plan.
+     * @param domain
+     * @param problem
+     * @param xmlPlan
+     * @param metrics
+     * @return
+     */
+    public static String generateFullPlanReport(Element domain, Element problem, Element xmlPlan, Element metrics){
+        String html = "";
+
+        //Get the main elements
+        Element project = domain.getDocument().getRootElement();
+        Element planner = xmlPlan.getChild("planner");
+        Element statistics = xmlPlan.getChild("statistics");
+        Element plan = xmlPlan.getChild("plan");
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        String dateTime = dateFormat.format(date);
+        //String dateTime = xmlPlan.getChildText("datetime");
+
+
+
+        String domainName = project.getChildText("name") + " - " + domain.getChildText("name");
+        String domainDescription = domain.getChildText("description");
+        String problemName = problem.getChildText("name");
+        String problemDescription = problem.getChildText("description");
+        String plannerName = planner.getChildText("name");
+
+
+        //HTML
+        //1. HEAD
+        html = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> \n";
+        html += "<html xmlns=\"http://www.w3.org/1999/xhtml\"> \n";
+        html += "<head> \n";
+        html += "	<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /> \n";
+        html += "	<title>postDAM - Plan Analysis</title> \n";
+        html += "	<meta name=\"keywords\" content=\"\" /> \n";
+        html += "	<meta name=\"description\" content=\"\" /> \n";
+        html += "	<link href=\"default.css\" rel=\"stylesheet\" type=\"text/css\" /> \n";
+        html += "	<script language=\"JavaScript\" src=\"JSClass/FusionCharts.js\"></script> \n";
+        html += "</head> \n";
+
+        //2. BODY
+        html += "<body> \n";
+
+        String htmlhead = "	<div id=\"header\"> \n";
+        htmlhead += "		<div id=\"logo\"> \n";
+        htmlhead += "			<h1><span><a href=\"#\">plan</a></span><a href=\"#\">Report</a></h1> \n";
+        htmlhead += "			<h2><a href=\"http://dlab.poli.usp.br\">by itSIMPLE</a></h2> \n";
+        htmlhead += "		</div> \n";
+        htmlhead += "		<div id=\"menu\"> \n";
+        htmlhead += "			<ul> \n";
+        htmlhead += "				<li class=\"first\"><a href=\"#\" accesskey=\"1\" title=\"\">Home</a></li> \n";
+        htmlhead += "				<li><a href=\"#metrics\" accesskey=\"2\" title=\"\">Metrics</a></li> \n";
+        htmlhead += "				<li><a href=\"#jointview\" accesskey=\"3\" title=\"\">Joint View</a></li> \n";
+        htmlhead += "				<li><a href=\"#evaluation\" accesskey=\"3\" title=\"\">Evaluation</a></li>  \n";
+        htmlhead += "				<li><a href=\"#about\" accesskey=\"4\" title=\"\">About</a></li> \n";
+        htmlhead += "			</ul> \n";
+        htmlhead += "		</div> \n";
+        htmlhead += "	</div> \n";
+        htmlhead += "	<div id=\"splash\"><a href=\"#\"><img src=\"images/img4.jpg\" alt=\"\" width=\"877\" height=\"140\" /></a></div> \n";
+
+
+        //Content
+
+        //2.1 Introduction
+        String htmlcontent = "	<div id=\"content\"> \n";
+        htmlcontent += "		<div id=\"colOne\"> \n";
+        htmlcontent += "		<h2>Introduction</h2> \n";
+        htmlcontent += "		<p><strong>PlanReport</strong> is a plan analysis interface for helping designers investigate solutions provided by automated planners.<br> \n";
+        htmlcontent += "		This report was generted based on the information that follows:</p> \n";
+        htmlcontent += "		<ul> \n";
+        htmlcontent += "			<li><strong>. Domain: </strong>"+domainName +"</li> \n";
+        htmlcontent += "			<li><strong>. Planning problem: </strong>"+problemName+"</li> \n";
+        htmlcontent += "			<li><strong>. Solution provided by: </strong>"+plannerName+"</li> \n";
+        htmlcontent += "		<ul> <br>\n";
+        htmlcontent += "		<p>Planner's info:</p> \n";
+        htmlcontent += "		<ul> \n";
+        htmlcontent += "			<li><strong>. Name: </strong>"+plannerName+"</li> \n";
+        htmlcontent += "			<li><strong>. Version: </strong>"+planner.getChildText("version")+"</li> \n";
+        htmlcontent += "			<li><strong>. Date: </strong>"+planner.getChildText("date")+"</li> \n";
+        htmlcontent += "			<li><strong>. Institution: </strong>"+planner.getChildText("institution")+"</li> \n";
+        htmlcontent += "			<li><strong>. Author(s): </strong>"+planner.getChildText("author")+"</li> \n";
+        String link = planner.getChildText("link");
+        if (!link.trim().equals("")){
+            htmlcontent += "			<li><strong>. Website: </strong><a href='"+link+"' target='_blank'>"+link+"</a></li> \n";
+        }
+        else{
+            htmlcontent += "			<li><strong>. Website: </strong>not available</li> \n";
+        }
+        htmlcontent += "			<li><strong>. Description: </strong>"+planner.getChildText("description") +"</li> \n";
+        htmlcontent += "		<ul> <br> \n";
+        htmlcontent += "		<p>Planner's statistics:</p> \n";
+        htmlcontent += "		<ul> \n";
+        htmlcontent += "			<li><strong>. Plan size: </strong>"+Integer.toString(plan.getChildren().size())+"</li> \n";
+        htmlcontent += "			<li><strong>. Time seen by itSIMPLE: </strong>"+statistics.getChildText("toolTime")+" seconds</li> \n";
+        htmlcontent += "			<li><strong>. Time: </strong>"+statistics.getChildText("time")+"</li> \n";
+        htmlcontent += "			<li><strong>. Parsing time: </strong>"+statistics.getChildText("parsingTime")+"</li> \n";
+        htmlcontent += "			<li><strong>. Number of actions: </strong>"+ xmlPlan.getChild("plan").getChildren().size()+"</li> \n";
+        htmlcontent += "			<li><strong>. Makespan: </strong>"+statistics.getChildText("makeSpan")+"</li> \n";
+        htmlcontent += "			<li><strong>. Metric value (given by the planner): </strong>"+statistics.getChildText("metricValue")+"</li> \n";
+        htmlcontent += "			<li><strong>. Planning Technique: </strong>"+statistics.getChildText("planningTechnique")+"</li> \n";
+        htmlcontent += "			<li><strong>. Additional: </strong>"+statistics.getChildText("additional")+"</li> \n";
+        htmlcontent += "		<ul> <br>\n";
+
+        int chartIndex = 0;
+
+
+
+        //2.2 Gantt chart
+
+        //find out total duratrion
+        float totalDuration = 0;
+        List<Element> theactions = plan.getChildren();
+        for (Iterator<Element> it = theactions.iterator(); it.hasNext();) {
+            Element eaction = it.next();
+            String starttime = eaction.getChildText("startTime");
+            String duration = eaction.getChildText("duration");
+            float endtime = Float.parseFloat(starttime) + Float.parseFloat(duration);
+            if (totalDuration < endtime){totalDuration = endtime;}
+        }
+
+        Date todayDate = new Date();
+        //System.out.println(todayDate);
+        DateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        String todayStr = sdf.format(todayDate);
+
+        int totalDurationInt = (int) totalDuration;
+
+        Calendar now = Calendar.getInstance();
+        now.setTime(todayDate);
+        now.add(Calendar.DAY_OF_MONTH, totalDurationInt);
+        Date finalDay = now.getTime();
+        String finalDayStr = sdf.format(finalDay);
+        //System.out.println(finalDay);
+        //System.out.println(totalDuration);
+
+        String dataXML = "<graph dateFormat='mm/dd/yyyy'>";
+        dataXML += "<categories>";
+        dataXML += "<category start='"+ todayStr + "' end='"+finalDayStr+"' name='Plan' />";
+        dataXML += "</categories>";
+        dataXML += "<categories>";
+        dataXML += "<category start='"+ todayStr + "' end='"+finalDayStr+"' name='period' />" ;
+        dataXML += "</categories>";
+
+        String dataXMLprocesses = "<processes fontSize='9' isBold='1' align='left' headerText='Actions' headerFontSize='16' headerVAlign='bottom' headerAlign='right'>";
+        String dataXMLtasks = "<tasks showname='1'>";
+
+        int actionid = 1;
+
+        for (Iterator<Element> it = theactions.iterator(); it.hasNext();) {
+            Element eaction = it.next();
+
+            String actionName = eaction.getAttributeValue("id");
+            //params = eaction.findall("parameters/parameter")
+            for (Iterator<Element> it1 = eaction.getChild("parameters").getChildren().iterator(); it1.hasNext();) {
+                Element par = it1.next();
+                String parameterName = par.getAttributeValue("id");
+                actionName += " " + parameterName;
+            }
+            String starttime = eaction.getChildText("startTime");
+            String duration = eaction.getChildText("duration");
+
+            dataXMLprocesses += "<process name='"+ actionName +"' id='"+Integer.toString(actionid)+"'/>";
+
+            float fstarttime = Float.parseFloat(starttime);
+            float fduration = Float.parseFloat(duration)-1;
+
+            int fstarttimeInt = (int) fstarttime;
+            int fdurationInt = (int) fduration;
+
+            //get start time
+            Calendar nowS = Calendar.getInstance();
+            nowS.setTime(todayDate);
+            nowS.add(Calendar.DAY_OF_MONTH, fstarttimeInt);
+            Date stday = nowS.getTime();
+            String startDay = sdf.format(stday);
+            //get end time
+            Calendar nowE = Calendar.getInstance();
+            nowE.setTime(stday);
+            nowE.add(Calendar.DAY_OF_MONTH, fdurationInt);
+            Date enday = nowE.getTime();
+            String endDay = sdf.format(enday);
+            //System.out.println(startDay);
+            //System.out.println(endDay);
+
+            dataXMLtasks += "<task start='"+startDay+"' end='"+endDay+"' processId='"+Integer.toString(actionid)+"' name='' showName='1' />";
+
+            actionid += 1;
+        }
+
+        dataXMLprocesses += "</processes>";
+        dataXMLtasks += "</tasks>";
+
+        dataXML += dataXMLprocesses;
+        dataXML += dataXMLtasks;
+        dataXML += "</graph>";
+
+
+        int gheight = plan.getChildren().size()*20 + 50;
+
+        String htmlgantt = "		<h2><a name=\"gantt\">Gantt chart</a></h2> \n";
+        htmlgantt +="		<p>The following Gantt chart ilustrates the plan given by the planner.\n";
+        htmlgantt += "		<table width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"3\" align=\"center\"> \n";
+        htmlgantt += "			<tr> \n";
+        htmlgantt += "				<td valign=\"top\" class=\"text\" align=\"center\"> \n";
+        htmlgantt += "					<div id=\"chartdiv" + Integer.toString(chartIndex) + "\" align=\"center\">Gantt Chart</div> \n";
+        htmlgantt += "					<script type=\"text/javascript\"> \n";
+        htmlgantt += "						var chart"+Integer.toString(chartIndex)+" = new FusionCharts(\"charts/FCF_Gantt.swf\", \"ChartId\", \"700\", \""+Integer.toString(gheight)+"\"); \n";
+        htmlgantt += "						chart"+Integer.toString(chartIndex)+".setDataXML(\"" + dataXML + "\"); \n";
+        htmlgantt += "						chart"+Integer.toString(chartIndex)+".render(\"chartdiv" + Integer.toString(chartIndex) + "\"); \n";
+        htmlgantt += "					</script> \n";
+        htmlgantt += "				</td> \n";
+        htmlgantt += "			</tr> \n";
+        htmlgantt += "		</table> \n";
+        htmlgantt += "		<div class=\"posted\"> \n";
+        htmlgantt += "			<p>generated by <a href=\"#\">postDAM</a> on " + todayStr + "</p> \n";
+        htmlgantt += "			<p class=\"comments\"><a href=\"#\">comments</a></p> \n";
+        htmlgantt += "		</div> \n";
+
+        htmlcontent += htmlgantt;
+
+
+
+        chartIndex += 1;
+
+        //If there are metrics build the charts
+        if (metrics!=null && metrics.getChildren().size() > 0){
+
+            //2.3 Metrics
+            String htmlmetrics = "		<h2><a name=\"metrics\">Metrics</a></h2> \n";
+            htmlmetrics +="		<p>The following metrics were chosen to be analyzed.\n";
+
+
+            for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+                Element metric = it.next();
+
+                String metricname = metric.getChildText("name");
+                String metrictype = metric.getChildText("type");
+                String metricID = metric.getAttributeValue("id");
+                String metricLevel = metric.getAttributeValue("level");
+
+                //TODO: select the name of the chart. Variable, expression, actionCounter.
+                String chartTitle = metricname;
+
+
+                htmlmetrics +=  "		<h3><strong>.: " + metricname + "</strong></h3> \n";
+                htmlmetrics +=  "       	<p>The following chart presents the metric <strong>" + chartTitle + "</strong></p> \n";
+
+
+                //TODO:Lets suppose all of them are numeric/integer
+
+                //Preparing Fusion Chart Instance
+                dataXML = "<graph caption='Attribute " + chartTitle + "' subcaption='' ";
+                dataXML += "xAxisName='Steps' yAxisMinValue='0' yAxisName='Value' ";
+                dataXML += "decimalPrecision='0' formatNumberScale='0' showNames='1' ";
+                dataXML += "showValues='0' showAlternateHGridColor='1' AlternateHGridColor='ff5904' ";
+                dataXML += "divLineColor='ff5904' divLineAlpha='20' alternateHGridAlpha='5' >";
+
+
+                //additional info: minimum, maximum, avetage (when applied)
+                Element dataset = metric.getChild("dataset");
+                Element firstValue = (Element)dataset.getChildren().get(0);
+                Element lastValue = (Element)dataset.getChildren().get(dataset.getChildren().size()-1);
+
+                float minimum = Float.parseFloat(firstValue.getAttributeValue("value")); //get first record, value y (0 -> x, 1 ->, 2 -> comments)
+                float maximum = Float.parseFloat(lastValue.getAttributeValue("value"));
+
+                //read each value (X,Y) and creat each set of the graph
+                for (Iterator<Element> it1 = dataset.getChildren().iterator(); it1.hasNext();) {
+                    Element set = it1.next();
+                    String x = set.getAttributeValue("name");
+                    String y = set.getAttributeValue("value");
+
+                    dataXML += "<set name='" + x + "' value='" + y + "' hoverText='" + x + "'/>";
+
+                    float yValue = Float.parseFloat(y.trim());
+                    //additional info
+                    if (yValue < minimum){
+                        minimum = yValue;
+                    }
+                    if (yValue > maximum){
+                        maximum = yValue;
+                    }
+
+                    //TODO: extend the X Axis by one unit for convinience when viewing the last points
+
+                }
+
+
+
+                dataXML +="</graph>";
+
+                //Create the html chart component with the dataXML
+                htmlmetrics += "		<table width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"3\" align=\"center\"> \n";
+                htmlmetrics += "			<tr> \n";
+                htmlmetrics += "				<td valign=\"top\" class=\"text\" align=\"center\"> \n";
+                htmlmetrics += "					<div id=\"chartdiv" + Integer.toString(chartIndex) + "\" align=\"center\">" + chartTitle + "</div> \n";
+                htmlmetrics += "					<script type=\"text/javascript\"> \n";
+                htmlmetrics += "						var chart"+Integer.toString(chartIndex)+" = new FusionCharts(\"charts/FCF_Line.swf\", \"ChartId\", \"700\", \"360\"); \n";
+                htmlmetrics += "						chart"+Integer.toString(chartIndex)+".setDataXML(\"" + dataXML + "\"); \n";
+                htmlmetrics += "						chart"+Integer.toString(chartIndex)+".render(\"chartdiv" + Integer.toString(chartIndex) + "\"); \n";
+                htmlmetrics += "                    </script> \n";
+                htmlmetrics += "				</td> \n";
+                htmlmetrics += "			</tr> \n";
+                htmlmetrics += "			<tr> \n";
+                htmlmetrics += "				<td valign=\"top\" class=\"text\"> \n";
+                htmlmetrics += "					<p><strong>Minimum:</strong> "+ Float.toString(minimum)+"<br> \n";
+                htmlmetrics += "					<strong>Maximum:</strong> "+ Float.toString(maximum)+"<br> </p>\n";
+                htmlmetrics += "				</td> \n";
+                htmlmetrics += "			</tr> \n";
+                htmlmetrics += "		</table> \n";
+                htmlmetrics += "		<div class=\"posted\"> \n";
+                htmlmetrics += "			<p>generated by <a href=\"#\">postDAM</a> on "+todayStr+"</p> \n";
+                htmlmetrics += "			<p class=\"comments\"><a href=\"#\">comments</a></p> \n";
+                htmlmetrics += "		</div> \n";
+
+                //Numeric/Integer Attributes type ends here
+
+                chartIndex += 1;
+
+
+            }
+
+            htmlcontent += htmlmetrics;
+
+
+
+            //2.4 A joint view of all metrics
+            String htmljointview =  "		<h2><a name=\"jointview\">Joint View</a></h2> \n";
+            htmljointview +=  "		<p>The following chart presents a combination of all metric charts.</p> \n";
+
+
+            dataXML = "<graph caption='Joint view of metrics' xAxisName='Steps' yAxisName='Value' decimalPrecision='2' ";
+            dataXML += "formatNumberScale='0' showValues='0'>";
+
+            //Get the x values
+            dataXML += "<categories>";
+            //get the first metric as a base
+            Element fistMetric = (Element)metrics.getChildren().get(0);
+            Element firstDataset = fistMetric.getChild("dataset");
+            for (Iterator<Element> it = firstDataset.getChildren().iterator(); it.hasNext();) {
+                Element set = it.next();
+                String x = set.getAttributeValue("name");
+                dataXML += "<category name='" + x + "' />";
+
+            }
+            dataXML += "</categories>";
+
+
+            //get data set
+            for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+                Element metric = it.next();
+
+                String metricname = metric.getChildText("name");
+                String metrictype = metric.getChildText("type");
+                String metricID = metric.getAttributeValue("id");
+                String metricLevel = metric.getAttributeValue("level");
+
+                //TODO: put the appropriate name
+                String chartTitle = metricname;
+
+                String color = randomColor();
+
+                String dataset =  "<dataset seriesName='"+chartTitle+"' color='"+color+"' anchorBorderColor='"+color+"' anchorBgColor='"+color+"' >";
+
+
+                //TODO: need to check the attr type in roder to choose the correct 2d Graph
+                // 	Lets suppose all of them are numeric/integer
+
+                //read each value (X,Y) and creat each set of the graph
+                for (Iterator<Element> it1 = metric.getChild("dataset").getChildren().iterator(); it1.hasNext();) {
+                    Element set = it1.next();
+                    String y = set.getAttributeValue("value");
+                    dataset += "<set value='" + y + "' />";
+
+                    //TODO: extend the X Axis by one unit for convinience when viewing the last points
+
+                }
+                dataset += "</dataset>";
+
+                //TODO: Numeric/Integer Attributes type ends here
+
+                dataXML += dataset;
+            }
+
+            dataXML += "</graph>";
+
+            //Create the html for joint view with the dataXML
+            htmljointview += "		<table width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"3\" align=\"center\"> \n";
+            htmljointview += "			<tr> \n";
+            htmljointview += "				<td valign=\"top\" class=\"text\" align=\"center\"> \n";
+            htmljointview += "					<div id=\"chartdiv" + Integer.toString(chartIndex) + "\" align=\"center\">Joint view</div> \n";
+            htmljointview += "					<script type=\"text/javascript\"> \n";
+            htmljointview += "						var chart"+Integer.toString(chartIndex)+" = new FusionCharts(\"charts/FCF_MSLine.swf\", \"ChartId\", \"700\", \"360\"); \n";
+            htmljointview += "						chart"+Integer.toString(chartIndex)+".setDataXML(\"" + dataXML + "\"); \n";
+            htmljointview += "						chart"+Integer.toString(chartIndex)+".render(\"chartdiv" + Integer.toString(chartIndex) + "\"); \n";
+            htmljointview += "					</script> \n";
+            htmljointview += "				</td> \n";
+            htmljointview += "			</tr> \n";
+            htmljointview += "		</table> \n";
+            htmljointview += "		<div class=\"posted\"> \n";
+            htmljointview += "			<p>generated by <a href=\"#\">postDAM</a> on "+ todayStr + "</p> \n";
+            htmljointview += "			<p class=\"comments\"><a href=\"#\">comments</a></p> \n";
+            htmljointview += "		</div> \n";
+
+
+            htmlcontent += htmljointview;
+
+            chartIndex += 1;
+
+
+
+
+            //2.5 Plan Evaluation
+
+            String htmlevaluation = "		<h2><a name=\"evaluation\">Initial Plan Evaluation</a></h2> \n"	;
+            htmlevaluation += "		<p>The following plan evaluation is based on quality preferences described in itSIMPLE.</p> \n";
+
+
+            //Gathering the final values
+            dataXML = "<graph caption='Initial PlanEvaluation' xAxisName='Metrics' yAxisName='Preference Grades' decimalPrecision='2' ";
+            dataXML += "formatNumberScale='0'>";
+
+            for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+                Element metric = it.next();
+
+                String metricname = metric.getChildText("name");
+                String metrictype = metric.getChildText("type");
+                String metricID = metric.getAttributeValue("id");
+                String metricLevel = metric.getAttributeValue("level");
+                String metricWeight = metric.getChildText("weight");
+
+                //TODO: put the appropriate name
+                String name = metricname;
+
+
+                float weight = 1;
+                if (!metricWeight.trim().equals("")){
+                    weight = Float.parseFloat(metricWeight);
+                }
+
+                String value = Double.toString(evaluateMetric(metric));
+
+                dataXML += "<set name='" + name + "' value='"+ value +"' color='008ED6' hoverText='"+ name +" (weight " + Float.toString(weight) + ")' />";
+            }
+
+
+            //2.6 Overall evaluation (plan grade)
+            double overallgrade = evaluatePlan(metrics);
+
+            DecimalFormat overall = new DecimalFormat("0.00");
+
+            dataXML += "<set name='Final' value='"+ Double.toString(overallgrade) +"' color='9D080D' />";
+            dataXML += "</graph>";
+
+            //Create the html evaluation chart component with the dataXML
+            htmlevaluation += "		<table width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"3\" align=\"center\"> \n";
+            htmlevaluation += "			<tr> \n";
+            htmlevaluation += "				<td valign=\"top\" class=\"text\" align=\"center\"> \n";
+            htmlevaluation += "					<div id=\"chartdiv" + Integer.toString(chartIndex) + "\" align=\"center\">Initial Plan Evaluation</div> \n";
+            htmlevaluation += "					<script type=\"text/javascript\"> \n";
+            htmlevaluation += "						var chart"+Integer.toString(chartIndex)+" = new FusionCharts(\"charts/FCF_Column3D.swf\", \"ChartId\", \"700\", \"360\"); \n";
+            htmlevaluation += "						chart"+Integer.toString(chartIndex)+".setDataXML(\"" + dataXML + "\"); \n";
+            htmlevaluation += "						chart"+Integer.toString(chartIndex)+".render(\"chartdiv" + Integer.toString(chartIndex) + "\"); \n";
+            htmlevaluation += "					</script> \n";
+            htmlevaluation += "				</td> \n";
+            htmlevaluation += "			</tr> \n";
+            htmlevaluation += "           		<tr> \n";
+            htmlevaluation += "               		<td valign=\"top\" class=\"text\">  \n";
+            htmlevaluation += "               			<p><strong>Plan Quality: <a name=\"planquality\">"+overall.format(overallgrade)+"</a></strong></p>  \n";
+            htmlevaluation += "               		</td> \n";
+            htmlevaluation += "          		</tr> \n";
+            htmlevaluation += "		</table> \n";
+            htmlevaluation += "		<div class=\"posted\"> \n";
+            htmlevaluation += "			<p>generated by <a href=\"#\">postDAM</a> on "+todayStr+"</p> \n";
+            htmlevaluation += "			<p class=\"comments\"><a href=\"#\">comments</a></p> \n";
+            htmlevaluation += "		</div> \n";
+
+            htmlcontent += htmlevaluation;
+
+
+        }
+        //If no metrics were specified
+        else{
+            String nometrics = "		<h2><a name=\"metrics\">Metrics</a></h2> \n";
+            nometrics +="		<p>No metrics were used.\n";
+            nometrics +=  "		<h2><a name=\"jointview\">Joint View</a></h2> \n";
+            nometrics +=  "		<p>No metrics were used.</p> \n";
+            nometrics += "		<h2><a name=\"evaluation\">Initial Plan Evaluation</a></h2> \n"	;
+            nometrics += "		<p>No metrics were used.</p> \n";
+            htmlcontent += nometrics;
+
+        }
+
+       
+
+
+
+        //2.7 second column
+        htmlcontent += "	</div> \n";
+        htmlcontent += "	<div id=\"colTwo\"> \n"; //Second column
+        htmlcontent += "		<h3>Links</h3> \n";
+        htmlcontent += "		<ul> \n";
+        htmlcontent += "			<li><a href=\"#metrics\">Metrics</a></li> \n";
+        htmlcontent += "			<li><a href=\"#jointview\">Joint View</a></li> \n";
+        htmlcontent += "			<li><a href=\"#evaluation\">Plan Evaluation</a></li> \n";
+        htmlcontent += "		</ul> \n";
+        htmlcontent += "	</div> \n";
+        htmlcontent += "	<div style=\"clear: both;\">&nbsp;</div> \n";
+        htmlcontent += "</div> \n";
+
+
+        //2.8 footer
+        String htmlfooter = "<div id=\"footer\"> \n";
+        htmlfooter += "	<p>(c) 2009 itSIMPLE. Design by <a href=\"http://dlab.poli.usp.br/\">itSIMPLE team</a>.</p> \n";
+        htmlfooter += "</div> \n";
+
+
+
+        //complete html
+        html += htmlhead;
+        html += htmlcontent;
+        html += htmlfooter;
+
+        html += " </body> \n";
+        html += "</html>" ;
+
+
+        return html;
+    }
+
+    /**
+     * This method generates a short html report for set of plans.
+     * @param generalXml
+     * @return
+     */
+    public static String generatePlannersComparisonReport(Element generalXml){
+        StringBuilder html = new StringBuilder();
+        html.append("<html>\n");
+        html.append("<head>\n");
+        html.append("<title>Plan Report</title>\n");
+        html.append("<style type=\"text/css\">\n");
+        html.append("th{padding:0 2em;}");
+        html.append("</style>");
+        html.append("</head>\n");
+        html.append("<body>\n");
+
+        List<Element> projects = generalXml.getChildren("project");
+        if (projects.size()==1){html.append("<h3>" + projects.get(0).getChildText("name") + "</h3>");}
+
+
+        //main table with main information (Project | Domain | Problem | planner | Time (s) | Steps
+
+        html.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+        html.append("<tr style=\"background-color:#000066; color:#FFFFFF; height:35px;\" >\n");
+        if (projects.size()>1){html.append("<th>Projects</th>\n");}
+        html.append("<th>Domains</th>\n");
+        html.append("<th>Problems</th>\n");
+        html.append("<th>Planners</th>\n");
+        html.append("<th width=\"50px\">Time (s)</th>\n");
+        html.append("<th width=\"50px\">Steps</th>\n");
+        html.append("</tr>\n");
+
+        for(int p=0;p<projects.size();p++){
+            List<Element> domains = projects.get(p).getChild("domains").getChildren("domain");
+            for(int d=0;d<domains.size();d++){
+                List<Element> problems = domains.get(d).getChild("problems").getChildren("problem");
+                for(int pb=0;pb<problems.size();pb++){
+                    List<Element> plans = problems.get(pb).getChild("plans").getChildren("xmlPlan");
+                    for(int pl=0;pl<plans.size();pl++){
+                         Element plan = (Element)plans.get(pl);
+
+                         html.append("<tr>\n");
+                         if (projects.size()>1){
+                             if (pl==0){
+                                html.append("<td bgcolor=\"#CCCCCC\"><b>" + projects.get(p).getChildText("name") + "</b></td>\n");
+                                html.append("<td bgcolor=\"#DDDDDD\"><b>" + domains.get(d).getChildText("name") + "<b></td>\n");
+                                html.append("<td bgcolor=\"#EEEEEE\">" + problems.get(pb).getChildText("name") + "</td>\n");
+                             }
+                             else{
+                                  html.append("<td bgcolor=\"#FFFFFF\"></td>\n");
+                                  html.append("<td bgcolor=\"#FFFFFF\"></td>\n");
+                                  html.append("<td bgcolor=\"#FFFFFF\"></td>\n");
+                             }
+                         }
+                         else{
+                             if (pl==0){
+                                html.append("<td bgcolor=\"#DDDDDD\"><b>" + domains.get(d).getChildText("name") + "<b></td>\n");
+                                html.append("<td bgcolor=\"#EEEEEE\">" + problems.get(pb).getChildText("name") + "</td>\n");
+                             }
+                             else{
+                                  html.append("<td bgcolor=\"#FFFFFF\"></td>\n");
+                                  html.append("<td bgcolor=\"#FFFFFF\"></td>\n");
+                             }
+
+                         }
+                         html.append("<td bgcolor=\"#FFFFFF\">" + plan.getChild("planner").getChildText("name") + " - " + plan.getChild("planner").getChildText("version") + "</td>\n");
+
+                         int planLength = plan.getChild("plan").getChildren().size();
+                         boolean isValid = true;
+
+                         //check the validity of the plan
+                         Element validity = plan.getChild("validity");
+                         if (validity != null && !validity.getAttributeValue("isValid").equals("true")){
+                             planLength = 0;
+                             isValid = false;
+                         }
+
+                         if(planLength < 1){
+                             String reason = "no plan found";
+                             //check if there any reason to that
+                             Element status = plan.getChild("statistics").getChild("forcedQuit");
+                             if(!status.getText().trim().equals("")){
+                                reason = status.getText().trim();
+                             }
+                             //Check if it was a invalid plan
+                             if(!isValid){
+                                 reason = "invalid plan";
+                             }
+
+                             html.append("<td bgcolor=\"#FFFFFF\" align=\"center\">" + plan.getChild("statistics").getChildText("toolTime") + "</td>\n");
+                             html.append("<td bgcolor=\"#FFFFFF\" align=\"center\"><em>"+reason+"</em></td>\n");
+                         }
+                         else{
+                            html.append("<td bgcolor=\"#FFFFFF\" align=\"center\">" + plan.getChild("statistics").getChildText("toolTime") + "</td>\n");
+                            html.append("<td bgcolor=\"#FFFFFF\" align=\"center\">" + plan.getChild("plan").getChildren().size() + "</td>\n");
+                         }
+
+                         html.append("</tr>\n");
+
+
+
+                     }
+
+                }
+
+            }
+
+        }
+        html.append("</table>\n");
+
+        html.append("<br><br><br> \n");
+
+
+        
+        //metrics tables
+
+        /*   it can be uncomment in case we want to show it rightaway
+
+        StringBuilder metricTable = new StringBuilder();
+        for(int p=0;p<projects.size();p++){
+            List<Element> domains = projects.get(p).getChild("domains").getChildren("domain");
+            for(int d=0;d<domains.size();d++){
+                Element eaDomain = domains.get(d);
+                List<Element> problems = eaDomain.getChild("problems").getChildren("problem");
+                for(int pb=0;pb<problems.size();pb++){
+                    Element eaProblem = problems.get(pb);
+                    
+                    // for each problem show the metrics info (Problem | metrics | Time (s) | # actions | Cost/Award | Evaluation
+                    Element metrics = eaProblem.getChild("metrics");
+
+                    if (metrics !=null && metrics.getChildren().size() > 0){
+
+                        
+                        metricTable.append("<h3>"+eaDomain.getChildText("name")+" - "+eaProblem.getChildText("name")+"</h3> \n");
+                        //metricTable.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+
+                        metricTable.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+
+                        //Header
+                        metricTable.append(getHtmlMetricTableHeader(metrics));
+
+                        //table body
+                        List<Element> plans = eaProblem.getChild("plans").getChildren("xmlPlan");
+                        for(int pl=0;pl<plans.size();pl++){
+                            Element plan = (Element)plans.get(pl);
+                            Element planMetrics = plan.getChild("metrics");
+                            if (planMetrics != null && planMetrics.getChildren().size() > 0){
+                                metricTable.append(getHtmlMetricTableRow(planMetrics, plan));
+                            }
+                        }
+
+                        metricTable.append("</table>");
+                        metricTable.append("<br><br>");
+
+                       
+                        //System.out.print(metricTable.toString());
+                    }
+
+                }
+
+            }
+
+        }
+        String metricsSummary = metricTable.toString();
+        if (!metricsSummary.trim().equals("")){
+
+            html.append("<h3>Metrics Summary</h3> \n");
+            html.append("<br> \n");
+            html.append(metricTable);
+        }
+
+        */
+
+
+
+        html.append("</body>\n");
+        html.append("</html>");
+
+        return html.toString();
+    }
+
+
+
+    /**
+     * This method generate a full html report that shows a table comparing all executed planners,
+     * charts such as Time vs. Problems and Number of Action Vs. Problems. If metrics are defined in the
+     * domain tables will be created showing each planner evaluation.
+     * @param generalXml
+     * @return
+     */
+    public static String generateFullPlannersComparisonReport(Element generalXml){
+
+        StringBuilder html = new StringBuilder();
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        String dateTime = dateFormat.format(date);
+
+        //HTML
+        //1. HEAD
+        html.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> \n");
+        html.append("<html xmlns=\"http://www.w3.org/1999/xhtml\"> \n");
+        html.append("<head> \n");
+        html.append("	<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /> \n");
+        html.append("	<title>Planners Comparison Report</title> \n");
+        html.append("	<link href=\"default.css\" rel=\"stylesheet\" type=\"text/css\" /> \n");
+        html.append("	<script type=\"text/javascript\" src=\"http://www.google.com/jsapi\"></script> \n");
+        html.append("</head> \n");
+
+        //2. BODY
+        html.append("<body> \n");
+
+        html.append("	<div id=\"header\"> \n");
+        html.append("		<div id=\"logo\"> \n");
+        html.append("			<h1><span><a href=\"#\">plan</a></span><a href=\"#\"> Comparison Report</a></h1>\n");
+        html.append("			<h2><a href=\"#\">By itSIMPLE</a></h2>  \n");
+        html.append("		</div> \n");
+        html.append("		<div id=\"menu\"> \n");
+        html.append("			<ul> \n");
+        html.append("				<li class=\"first\"><a href=\"#table\" accesskey=\"1\" title=\"\">Comparison Table</a></li> \n");
+        html.append("				<li><a href=\"#graphs\" accesskey=\"2\" title=\"\">Comparison Graphs</a></li> \n");
+        html.append("				<li><a href=\"#about\" accesskey=\"4\" title=\"\">About</a></li> \n");
+        html.append("			</ul> \n");
+        html.append("		</div> \n");
+        html.append("	</div> \n");
+        html.append("	<div id=\"splash\"><a href=\"#\"><img src=\"images/img4.jpg\" alt=\"\" width=\"877\" height=\"140\" /></a></div> \n");
+
+
+
+        //2.1 Scripts
+
+
+        //2.1.1 Main script (google tables and charts
+        StringBuilder script = new StringBuilder();
+
+        script.append("           <script type='text/javascript'>\n");
+        script.append("               google.load('visualization', '1', {packages:['table','linechart','columnchart']})\n");
+        script.append("               google.setOnLoadCallback(buildComponents)\n\n");
+        script.append("               function buildComponents() {\n");
+
+
+        //2.1.2 Comparison Table
+        StringBuilder comparisonTable = new StringBuilder();
+        comparisonTable.append("                   var data = new google.visualization.DataTable();\n");
+        comparisonTable.append("                   data.addColumn('string', 'Projects');\n");
+        comparisonTable.append("                   data.addColumn('string', 'Domains');\n");
+        comparisonTable.append("                   data.addColumn('string', 'Problems');\n");
+        comparisonTable.append("                   data.addColumn('string', 'Planners');\n");
+        comparisonTable.append("                   data.addColumn('number', 'Time');\n");
+        comparisonTable.append("                   data.addColumn('number', 'Steps');\n");
+
+        StringBuilder cells = new StringBuilder();
+        int number_of_rows = 0;
+        List<Element> projects = generalXml.getChildren("project");
+        for(int p=0;p<projects.size();p++){
+            int problemId = 0;
+            List<Element> domains = projects.get(p).getChild("domains").getChildren("domain");
+            for(int d=0;d<domains.size();d++){
+                List<Element> problems = domains.get(d).getChild("problems").getChildren("problem");
+                for(int pb=0;pb<problems.size();pb++){
+                    List<Element> plans = problems.get(pb).getChild("plans").getChildren("xmlPlan");
+                    for(int pl=0;pl<plans.size();pl++){
+                         Element plan = (Element)plans.get(pl);
+                         cells.append("data.setCell(" + number_of_rows + ",0,'" + projects.get(p).getChildText("name") + "');\n");
+                         cells.append("data.setCell(" + number_of_rows + ",1,'" + domains.get(d).getChildText("name") + "');\n");
+                         //cells.append("data.setCell(" + number_of_rows + ",2,'" + problems.get(pb).getChildText("name") + "(P"+pb+")');\n");
+                         cells.append("data.setCell(" + number_of_rows + ",2,'" + problems.get(pb).getChildText("name") + "(P"+problemId+")');\n");
+                         cells.append("data.setCell(" + number_of_rows + ",3,'" + plan.getChild("planner").getChildText("name") + " - " + plan.getChild("planner").getChildText("version") + "');\n");
+                         cells.append("data.setCell(" + number_of_rows + ",4," + plan.getChild("statistics").getChildText("toolTime") + ");\n");
+                         if(plan.getChild("plan").getChildren().size() < 1) {
+                            cells.append("data.setCell(" + number_of_rows + ",5,-1,' ');\n");
+                         }
+                         else{
+                            cells.append("data.setCell(" + number_of_rows + ",5," + plan.getChild("plan").getChildren().size() + ");\n");
+                         }
+                         number_of_rows++;
+                     }
+                    problemId++;
+                }
+            }
+        }
+
+        comparisonTable.append("data.addRows(" + number_of_rows + "); \n");
+        comparisonTable.append(cells.toString());
+        comparisonTable.append("               var table = new google.visualization.Table(document.getElementById('comparison-table'));\n");
+        comparisonTable.append("               table.draw(data, {showRowNumber: true,width:'100%'});\n");
+        //script.append("               drawChart();\n");
+        //script.append("}\n");
+        comparisonTable.append("\n");
+
+        script.append(comparisonTable);
+
+
+
+
+        //2.1.3 Comparison Graphs/Charts
+        StringBuilder comparisonGraphs = new StringBuilder();
+        
+        //html.append("function drawChart(){\n");
+        int data = 0;
+        StringBuilder graphs_div = new StringBuilder();
+
+        /* Grouping graphs by project (project->domain->problems) */
+
+        for(int p=0;p<projects.size();p++){
+            Element project = projects.get(p);
+
+            graphs_div.append("<h3>"+project.getChildText("name")+"</h3> \n");
+
+            List<Element> domains = project.getChild("domains").getChildren("domain");
+
+            //get the fist problem as a reference for creating the graph
+            Element firstProblemAsReference = (Element)domains.get(0).getChild("problems").getChildren("problem").get(0);            
+            List<Element> plans =firstProblemAsReference.getChild("plans").getChildren("xmlPlan");
+
+            //get the amount of problems in the project
+            List<?> totalProblems = null;
+            try {
+                    XPath path = new JDOMXPath("domains/domain/problems/problem");
+                    totalProblems = path.selectNodes(project);
+            } catch (JaxenException e) {
+                    e.printStackTrace();
+            }
+
+            //Graph: Number of actions x Planners
+            comparisonGraphs.append("var data" + data + "S= new google.visualization.DataTable();\n");
+            comparisonGraphs.append("data" + data + "S.addColumn('string', 'Problems');\n");
+            for(int pl=0;pl<plans.size();pl++){
+                 Element plan = (Element)plans.get(pl);
+                 comparisonGraphs.append("data" + data + "S.addColumn('number', '"+ plan.getChild("planner").getChildText("name") + " - " + plan.getChild("planner").getChildText("version") +"');\n");
+            }
+            comparisonGraphs.append("data" + data + "S.addRows("+totalProblems.size()+");\n");
+            int probleId = 0;
+            for(int d=0;d<domains.size();d++){
+
+                List<Element> problems = domains.get(d).getChild("problems").getChildren("problem");
+                for(int pb=0;pb<problems.size();pb++){
+                   plans = problems.get(pb).getChild("plans").getChildren("xmlPlan");
+
+                   //comparisonGraphs.append("data" + data + "S.setValue("+pb+",0,'P"+pb+"');\n");
+                   comparisonGraphs.append("data" + data + "S.setValue("+probleId+",0,'P"+probleId+"');\n");
+                   for(int pl=0;pl<plans.size();pl++){
+                        Element plan = (Element)plans.get(pl);
+                        //comparisonGraphs.append("data" + data + "S.setValue("+pb+","+(pl+1)+","+ plan.getChild("plan").getChildren().size() +");\n");
+                        comparisonGraphs.append("data" + data + "S.setValue("+probleId+","+(pl+1)+","+ plan.getChild("plan").getChildren().size() +");\n");
+                   }
+                   probleId++;
+                }
+
+            }
+            if (totalProblems.size()==1){
+                comparisonGraphs.append("var chart" + data + "S = new google.visualization.ColumnChart(document.getElementById('comparison-graph-" + data + "S'));\n");
+                comparisonGraphs.append("chart" + data + "S.draw(data" + data + "S, {width: 840, height: 300,is3D: true,title:'Number of Actions x Planners'});\n\n");
+            }
+            else{
+                comparisonGraphs.append("var chart" + data + "S = new google.visualization.LineChart(document.getElementById('comparison-graph-" + data + "S'));\n");
+                comparisonGraphs.append("chart" + data + "S.draw(data" + data + "S, {width: 840, height: 300, min: 0,title:'Number of Actions x Planners'});\n\n");
+            }
+            graphs_div.append("<div id=\"comparison-graph-" + data + "S\"></div> \n");
+
+
+
+            //Graph: Time(speed) x Planners
+            comparisonGraphs.append("var data" + data + "T= new google.visualization.DataTable();\n");
+            comparisonGraphs.append("data" + data + "T.addColumn('string', 'Problems');\n");
+            plans = firstProblemAsReference.getChild("plans").getChildren("xmlPlan");
+            for(int pl=0;pl<plans.size();pl++){
+                 Element plan = (Element)plans.get(pl);
+                 comparisonGraphs.append("data" + data + "T.addColumn('number', '"+ plan.getChild("planner").getChildText("name") + " - " + plan.getChild("planner").getChildText("version") +"');\n");
+            }
+            comparisonGraphs.append("data" + data + "T.addRows("+totalProblems.size()+");\n");
+            probleId = 0;
+            for(int d=0;d<domains.size();d++){
+
+                List<Element> problems = domains.get(d).getChild("problems").getChildren("problem");
+                for(int pb=0;pb<problems.size();pb++){
+                   plans = problems.get(pb).getChild("plans").getChildren("xmlPlan");
+                   //comparisonGraphs.append("data" + data + "T.setValue("+pb+",0,'P"+pb+"');\n");
+                   comparisonGraphs.append("data" + data + "T.setValue("+probleId+",0,'P"+probleId+"');\n");
+                   for(int pl=0;pl<plans.size();pl++){
+                        Element plan = (Element)plans.get(pl);
+                        //comparisonGraphs.append("data" + data + "T.setValue("+pb+","+(pl+1)+","+ (plan.getChild("plan").getChildren().size()>0?plan.getChild("statistics").getChildText("toolTime"):0) +");\n");
+                        //comparisonGraphs.append("data" + data + "T.setValue("+probleId+","+(pl+1)+","+ (plan.getChild("plan").getChildren().size()>0?plan.getChild("statistics").getChildText("toolTime"):0) +");\n");
+                        if (!plan.getChild("statistics").getChildText("toolTime").trim().equals("")){
+                            comparisonGraphs.append("data" + data + "T.setValue("+probleId+","+(pl+1)+","+ plan.getChild("statistics").getChildText("toolTime") +");\n");
+                        }else{
+                            comparisonGraphs.append("data" + data + "T.setValue("+probleId+","+(pl+1)+","+ (plan.getChild("plan").getChildren().size()>0?plan.getChild("statistics").getChildText("toolTime"):0) +");\n");
+                        }
+                   }
+                   probleId++;
+                }
+
+            }
+            if (totalProblems.size()==1){
+               comparisonGraphs.append("var chart" + data + "T = new google.visualization.ColumnChart(document.getElementById('comparison-graph-" + data + "T'));\n");
+               comparisonGraphs.append("chart" + data + "T.draw(data" + data + "T, {width: 840, height: 300, is3D: true,title:'Time(seconds) x Planners'});\n\n");
+            }
+            else{
+                comparisonGraphs.append("var chart" + data + "T = new google.visualization.LineChart(document.getElementById('comparison-graph-" + data + "T'));\n");
+                comparisonGraphs.append("chart" + data + "T.draw(data" + data + "T, {width: 840, height: 300, min: 0,title:'Time(seconds) x Planners'});\n\n");
+            }
+
+
+            graphs_div.append("<div id=\"comparison-graph-" + data + "T\"></div> \n");
+
+            data++;
+        }
+        comparisonGraphs.append("\n");
+
+        script.append(comparisonGraphs);
+
+        /*
+         * Grouping graphs by domain (project->domain->problems). It is an alternative
+         *
+        for(int p=0;p<projects.size();p++){
+            List<Element> domains = projects.get(p).getChild("domains").getChildren("domain");
+            for(int d=0;d<domains.size();d++){
+
+                graphs_div.append("<h3>"+domains.get(d).getChildText("name")+"</h3>");
+
+                List<Element> problems = domains.get(d).getChild("problems").getChildren("problem");
+
+                //Graph: Number of actions x Planners
+                html.append("var data" + data + "S= new google.visualization.DataTable();\n");
+                html.append("data" + data + "S.addColumn('string', 'Problems')metrics;\n");
+
+                List<Element> plans = problems.get(0).getChild("plans").getChildren("xmlPlan");
+                for(int pl=0;pl<plans.size();pl++){
+                     Element plan = (Element)plans.get(pl);
+                     html.append("data" + data + "S.addColumn('number', '"+ plan.getChild("planner").getChildText("name") + " - " + plan.getChild("planner").getChildText("version") +"');\n");
+                }
+                html.append("data" + data + "S.addRows("+problems.size()+");\n");
+                for(int pb=0;pb<problems.size();pb++){
+                   plans = problems.get(pb).getChild("plans").getChildren("xmlPlan");
+                   html.append("data" + data + "S.setValue("+pb+",0,'P"+pb+"');\n");
+                   for(int pl=0;pl<plans.size();pl++){
+                        Element plan = (Element)plans.get(pl);
+                        html.append("data" + data + "S.setValue("+pb+","+(pl+1)+","+ plan.getChild("plan").getChildren().size() +");\n");
+                   }
+                }
+
+                if (problems.size()==1){
+                    html.append("var chart" + data + "S = new google.visualization.ColumnChart(document.getElementById('comparison-graph-" + data + "S'));\n");
+                    html.append("chart" + data + "S.draw(data" + data + "S, {width: 840, height: 300,is3D: true,title:'Number of Actions x Planners'});\n\n");
+                }
+                else{
+                    html.append("var chart" + data + "S = new google.visualization.LineChart(document.getElementById('comparison-graph-" + data + "S'));\n");
+                    html.append("chart" + data + "S.draw(data" + data + "S, {width: 840, height: 300, min: 0,title:'Number of Actions x Planners'});\n\n");
+                }
+                
+                graphs_div.append("<div id=\"comparison-graph-" + data + "S\"></div>\n");
+
+
+                //Graph: Time(speed) x Planners
+                html.append("var data" + data + "T= new google.visualization.DataTable();\n");
+                html.append("data" + data + "T.addColumn('string', 'Problems');\n");
+
+                plans = problems.get(0).getChild("plans").getChildren("xmlPlan");
+                for(int pl=0;pl<plans.size();pl++){
+                     Element plan = (Element)plans.get(pl);
+                     html.append("data" + data + "T.addColumn('number', '"+ plan.getChild("planner").getChildText("name") + " - " + plan.getChild("planner").getChildText("version") +"');\n");
+                }
+                html.append("data" + data + "T.addRows("+problems.size()+");\n");
+                for(int pb=0;pb<problems.size();pb++){
+                   plans = problems.get(pb).getChild("plans").getChildren("xmlPlan");
+                   html.append("data" + data + "T.setValue("+pb+",0,'P"+pb+"');\n");
+                   for(int pl=0;pl<plans.size();pl++){
+                        Element plan = (Element)plans.get(pl);
+                        html.append("data" + data + "T.setValue("+pb+","+(pl+1)+","+ (plan.getChild("plan").getChildren().size()>0?plan.getChild("statistics").getChildText("toolTime"):0) +");\n");
+                   }
+                }
+
+                if (problems.size()==1){
+                   html.append("var chart" + data + "T = new google.visualization.ColumnChart(document.getElementById('comparison-graph-" + data + "T'));\n");
+                   html.append("chart" + data + "T.draw(data" + data + "T, {width: 840, height: 300, is3D: true,title:'Time(seconds) x Planners'});\n\n");
+                }
+                else{
+                    html.append("var chart" + data + "T = new google.visualization.LineChart(document.getElementById('comparison-graph-" + data + "T'));\n");
+                    html.append("chart" + data + "T.draw(data" + data + "T, {width: 840, height: 300, min: 0,title:'Time(seconds) x Planners'});\n\n");
+                }
+                
+                graphs_div.append("<div id=\"comparison-graph-" + data + "T\"></div>\n");
+
+                data++;
+            }
+        }
+        */
+
+
+        //2.1.4 Metrics
+
+        //TODO: metrics graphs
+
+
+
+        //end of function and script
+        script.append("           }\n");
+        script.append("           </script>\n");
+
+  
+
+
+        //Content
+        //2.2 Introduction
+        //add script that contains all tables and graphs
+        html.append(script);
+        html.append("	<div id=\"content\"> \n");
+        html.append("		<div id=\"colOne\" style=\"width:100%\"> \n");
+        html.append("		<h2 style=\"margin-top:0\">Introduction</h2> \n");
+        html.append("		<p>This <strong>plan comparison report</strong> is a plan analysis interface for helping designers investigate solutions provided by automated planners.</p> \n");
+
+        //2.3 Comparison Table
+        html.append("       <h2><a name=\"table\">Comparison Table</a></h2>\n");
+        //Add Comparison table
+        html.append("       <div id=\"comparison-table\"></div>\n");
+        
+        // Add Comparison Graphs
+        html.append("       <h2><a name=\"graphs\">Comparison Graphs</a></h2>\n");
+        html.append(graphs_div.toString());
+
+
+
+        //2.4 Metrics (tables and graphs)
+
+
+        //TODO: google table for metrics for each problems
+        //TODO: google chart for the set of problems (as in the Time and # of action charts)
+        StringBuilder metricTable = new StringBuilder();
+        for(int p=0;p<projects.size();p++){
+            List<Element> domains = projects.get(p).getChild("domains").getChildren("domain");
+            for(int d=0;d<domains.size();d++){
+                Element eaDomain = domains.get(d);
+                List<Element> problems = eaDomain.getChild("problems").getChildren("problem");
+                for(int pb=0;pb<problems.size();pb++){
+                    Element eaProblem = problems.get(pb);
+
+                    // for each problem show the metrics info (Problem | metrics | Time (s) | # actions | Cost/Award | Evaluation
+                    Element metrics = eaProblem.getChild("metrics");
+
+                    if (metrics !=null && metrics.getChildren().size() > 0){
+
+
+                        //metricTable.append("<h3>"+eaDomain.getChildText("name")+" - "+eaProblem.getChildText("name")+"</h3> \n");
+                        metricTable.append("<h3>"+eaProblem.getChildText("name")+"</h3> \n");
+
+                        //metricTable.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+                        metricTable.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+
+                        //Header
+                        metricTable.append(getHtmlMetricTableHeader(metrics));
+
+                        //table body
+                        List<Element> plans = eaProblem.getChild("plans").getChildren("xmlPlan");
+                        for(int pl=0;pl<plans.size();pl++){
+                            Element plan = (Element)plans.get(pl);
+                            Element planMetrics = plan.getChild("metrics");
+                            if (planMetrics != null && planMetrics.getChildren().size() > 0){
+                                metricTable.append(getHtmlMetricTableRow(planMetrics, plan));
+                            }
+                        }
+
+                        metricTable.append("</table>");
+                        metricTable.append("<br><br>");
+
+
+                        //System.out.print(metricTable.toString());
+                    }
+
+                }
+
+            }
+
+        }
+        String metricsSummary = metricTable.toString();
+        if (!metricsSummary.trim().equals("")){
+            html.append("       <h2><a name=\"table\">Metrics Summary</a></h2>\n");  
+            html.append(metricTable);
+        }
+
+
+        //End of Content
+        html.append("   </div> \n");
+
+
+
+
+        //2.5 footer
+        html.append("<div id=\"footer\"> \n");
+        html.append("	<p>(c) 2009 itSIMPLE. Design by <a href=\"http://dlab.poli.usp.br/\">itSIMPLE team</a>.</p> \n");
+        html.append("</div> \n");
+
+        html.append("</body> \n");
+        html.append("</html>") ;
+
+        return html.toString();
+    }
+
+
+
+
+    /**
+     * This method creates a HTML version of the information contained in the xmlPlan
+     * @param xmlPlan
+     * @return a html string containing a simple plan report (basic info). In fact,itSIMPLE class also has
+     * such function (is is duplicated, use itSIMPLE's one) .
+     */
+    public static String generateHTMLSinglePlanReport(Element xmlPlan){
+
+
+    	/*
+        // get the date
+        DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        Date date = new Date();
+        String dateTime = dateFormat.format(date);
+    	*/
+
+        String dateTime = xmlPlan.getChildText("datetime");
+        // head
+
+        String info = "<html> \n";
+        info += "<html>\n";
+        info += "<head>\n";
+        info += "<title>Plan Report</title>\n";
+        info +="<style type=\"text/css\">\n";
+        //info +="th{padding:0 2em;}\n";
+        info +="</style>\n";
+        info += "</head>\n";
+        info += "<body>\n";
+        info += "<h2>Plan Report</h2>\n";
+
+        info += "<TABLE width='100%' BORDER='0' align='center'>"+
+                                "<TR><TD bgcolor='333399'><font size=4 face=arial color='FFFFFF'>" +
+                                "<b>Introduction</b></font></TD></TR>";
+
+        Element projectName = xmlPlan.getChild("project");
+        Element domainName = xmlPlan.getChild("domain");
+        Element problemName = xmlPlan.getChild("problem");
+
+        String toolMessage = xmlPlan.getChild("toolInformation").getChildText("message");
+
+        // project, domain and problem
+        if(domainName != null && problemName != null){
+                String projectNameStr = "";
+                if (projectName!=null){
+                    projectNameStr = projectName.getText();
+                }
+
+                info += "<TR><TD><font size=3 face=arial><b>Project: </b>"+projectNameStr+
+                                "</font></TD></TR>"+
+                                "<TR><TD><font size=3 face=arial><b>Domain: </b>"+ domainName.getText()+
+                                "</font></TD></TR>" +
+                                "<TR><TD><font size=3 face=arial><b>Problem: </b>"+ problemName.getText()+
+                                "</font></TD></TR>" +
+                                "<TR><TD><font size=3 face=arial><b>Date/Time: </b>"+ dateTime+
+                                "</font></TD></TR>";
+        }
+
+        info += "<TR><TD bgcolor='FFFFFF'><font size=3 face=arial><b>itSIMPLE message:<br></b>"+
+                        toolMessage.replaceAll("\n", "<br>") +"<p></TD></TR>";
+
+        // planner
+        Element planner = xmlPlan.getChild("planner");
+        Element settingsPlanner = null;
+        try {
+                XPath path = new JDOMXPath("planners/planner[@id='"+ planner.getAttributeValue("id") +"']");
+                settingsPlanner = (Element)path.selectSingleNode(ItSIMPLE.getItPlanners());
+        } catch (JaxenException e) {
+                e.printStackTrace();
+        }
+
+        if(settingsPlanner != null){
+                info += "<TR><TD bgcolor='gray'><font size=4 face=arial color='FFFFFF'><b>Planner</b></TD></TR>" +
+                                "<TR><TD><font size=3 face=arial><b>Name: </b>"+ settingsPlanner.getChildText("name")+
+                                "</font></TD></TR>"+
+                                "<TR><TD><font size=3 face=arial><b>Version: </b>"+ settingsPlanner.getChildText("version")+
+                                "</font></TD></TR>"+
+                                "<TR><TD><font size=3 face=arial><b>Author(s): </b>"+ settingsPlanner.getChildText("author")+
+                                "</font></TD></TR>"+
+                                "<TR><TD><font size=3 face=arial><b>Institution(s): </b>"+ settingsPlanner.getChildText("institution")+
+                                "</font></TD></TR>"+
+                                "<TR><TD><font size=3 face=arial><b>Link: </b>"+ settingsPlanner.getChildText("link")+
+                                "</font></TD></TR>"+
+                                "<TR><TD><font size=3 face=arial><b>Description: </b>"+ settingsPlanner.getChildText("description")+
+                                "</font><p></TD></TR>";
+        }
+
+        // statistics
+        Element statistics = xmlPlan.getChild("statistics");
+        info += "<TR><TD bgcolor='gray'><font size=4 face=arial color='FFFFFF'><b>Statistics</b>" +
+                        "</TD></TR>"+
+                        "<TR><TD><font size=3 face=arial><b>Tool total time: </b>"+ statistics.getChildText("toolTime")+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Planner time: </b>"+ statistics.getChildText("time")+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Parsing time: </b>"+ statistics.getChildText("parsingTime")+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Number of actions: </b>"+  xmlPlan.getChild("plan").getChildren().size()+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Make Span: </b>"+ statistics.getChildText("makeSpan")+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Metric value: </b>"+ statistics.getChildText("metricValue")+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Planning technique: </b>"+ statistics.getChildText("planningTechnique")+
+                        "</font></TD></TR>" +
+                        "<TR><TD><font size=3 face=arial><b>Additional: </b>"+ statistics.getChildText("additional").replaceAll("\n", "<br>")+
+                        "</font><p></TD></TR>";
+
+
+        // plan
+        info += "<TR><TD bgcolor='gray'><font size=4 face=arial color='FFFFFF'><b>Plan</b></TD></TR>";
+
+
+        List<?> actions = xmlPlan.getChild("plan").getChildren("action");
+        if (actions.size() > 0) {
+                for (Iterator<?> iter = actions.iterator(); iter.hasNext();) {
+                        Element action = (Element) iter.next();
+                        // build up the action string
+                        // start time
+                        String actionStr = action.getChildText("startTime") + ": ";
+
+                        // action name
+                        actionStr += "(" + action.getAttributeValue("id") + " ";
+
+                        // action parameters
+                        List<?> parameters = action.getChild("parameters")
+                                        .getChildren("parameter");
+                        for (Iterator<?> iterator = parameters.iterator(); iterator
+                                        .hasNext();) {
+                                Element parameter = (Element) iterator.next();
+                                actionStr += parameter.getAttributeValue("id");
+                                if (iterator.hasNext()) {
+                                        actionStr += " ";
+                                }
+                        }
+                        actionStr += ")";
+
+                        // action duration
+                        String duration = action.getChildText("duration");
+                        if (!duration.equals("")) {
+                                actionStr += " [" + duration + "]";
+                        }
+
+                        if(iter.hasNext()){
+                                info += "<TR><TD><font size=3 face=arial>"+ actionStr +"</font></TD></TR>";
+                        }
+                        else{
+                                info += "<TR><TD><font size=3 face=arial>"+ actionStr +"</font><p></TD></TR>";
+                        }
+                }
+        }
+        else{
+                info += "<TR><TD><font size=3 face=arial>No plan found.</font><p></TD></TR>";
+        }
+
+
+        // planner console output
+        info += "<TR><TD bgcolor='gray'><font size=3 face=arial color='FFFFFF'>" +
+                        "<b>Planner Console Output</b></TD></TR>"+
+                        "<TR><TD><font size=4 face=courier>" +
+                        planner.getChildText("consoleOutput").replaceAll("\n", "<br>")+"</font><p></TD></TR>";
+
+
+        info += "</TABLE>";
+
+        info += "</body>\n";
+        info += "</html>\n";
+
+
+     	return info;
+    }
+
+
+
+    /**
+     * This method creates an table containing the metric values and evaluations of a plan
+     * @param xmlPlan
+     * @param metrics
+     * @return
+     */
+    public static String generatePlanMetricsSummary(Element xmlPlan, Element metrics){
+
+        StringBuilder html = new StringBuilder();
+
+         //If there are metrics build the charts
+        if (metrics!=null && metrics.getChildren().size() > 0){
+            html.append("<h3>Metrics Summary</h3>");
+
+            html.append("<table cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+
+            //Header
+            html.append(getHtmlMetricTableHeader(metrics));
+
+            //table body                        
+            html.append(getHtmlMetricTableRow(metrics, xmlPlan));
+            
+            html.append("</table>");
+        }
+
+
+        return html.toString();
+    }
+
+
+    /**
+     * This methos generates the header of a html table for a set of metrics
+     * @param metrics the xml node that holds the metrics
+     * @return
+     */
+    public static String getHtmlMetricTableHeader(Element metrics){
+
+        //Header
+        StringBuilder tableHeader = new StringBuilder();
+        //Firstline
+        // Planner(s) | Metric 1 ... Metric N | Time (s) | # actions | Evaluation
+        StringBuilder firstLine = new StringBuilder();
+        firstLine.append("<tr style=\"background-color:#000066; color:#FFFFFF; height:35px;\" >\n");
+        firstLine.append("  <th rowspan=\"2\" valign=\"top\">Planner(s)</th>\n");
+
+        StringBuilder secondLine = new StringBuilder();
+        secondLine.append("<tr style=\"background-color:#000066; color:#FFFFFF; height:35px;\" >\n");
+
+        //table body
+        for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+            Element metric = it.next();
+            String metricname = metric.getChildText("name");
+
+            firstLine.append("   <th colspan=\"3\">"+ metricname +"</th> \n");
+
+            secondLine.append(" <th>Value</th> \n");
+            secondLine.append(" <th>Grade</th> \n");
+            secondLine.append(" <th>Weight</th> \n");
+
+        }
+
+        //Finishing first line
+        //Time (in seconds)
+        firstLine.append("<th rowspan=\"2\" valign=\"top\">Time (s)</th>\n");
+        //Number of actions
+        firstLine.append("<th rowspan=\"2\" valign=\"top\">Steps</th>\n");
+        //Cost/awars
+        firstLine.append("<th rowspan=\"2\" valign=\"top\">Cost</th>\n");
+        //Evaluation of the plan [0,1]
+        firstLine.append("<th rowspan=\"2\" valign=\"top\">Evaluation</th>\n");
+        
+        firstLine.append("</tr>\n");
+        
+        //Finishing second line
+        secondLine.append("</tr>\n");
+
+
+        tableHeader.append(firstLine);
+        tableHeader.append(secondLine);
+
+        return tableHeader.toString();
+    }
+
+
+    /**
+     * This method generates a single html table row for a given plan showing 
+     * the metric data that the node 'metrics' holds
+     * @param metrics
+     * @param xmlPlan
+     * @return an String containing a html row
+     */
+    public static String getHtmlMetricTableRow(Element metrics, Element xmlPlan){
+
+        StringBuilder tableRow = new StringBuilder();
+
+        tableRow.append("<tr> \n");
+
+        //Planner's name
+        Element planner = xmlPlan.getChild("planner");
+        String plannerName = planner.getChildText("name") + "- " + planner.getChildText("version");
+        tableRow.append("   <td bgcolor=\"#FFFFFF\">"+plannerName+"</td> \n");
+
+        DecimalFormat indgrade = new DecimalFormat("0.00");
+
+        //metric values (value, individual evaluation, weight)
+        for (Iterator<Element> it = metrics.getChildren().iterator(); it.hasNext();) {
+            Element metric = it.next();
+
+            String value = "-";
+            String individualEval = "-";
+            //String metricname = metric.getChildText("name");
+            String metricWeight = metric.getChildText("weight");
+
+            Element dataset = metric.getChild("dataset");
+            if (dataset.getChildren().size() > 0){
+                //Getting metric value
+                value = Float.toString(getMetricValue(metric));
+
+                //individual evaluation
+                individualEval = indgrade.format(evaluateMetric(metric));
+            }
+
+            tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+value+"</td> \n");
+            tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+individualEval+"</td> \n");
+            tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+metricWeight+"</td> \n");
+        }
+
+
+        //Time (seconds)
+        Element statistics = xmlPlan.getChild("statistics");
+        String time = statistics.getChildText("toolTime");
+
+        //Number of actions
+        Element plan = xmlPlan.getChild("plan");
+        int planlength = plan.getChildren().size();
+
+        //check the validity of the plan
+        Element theValidity = xmlPlan.getChild("validity");
+        boolean isValid = true;
+        if (theValidity != null && !theValidity.getAttributeValue("isValid").equals("true")){
+            planlength = 0;
+            isValid = false;
+         }
+
+        String numberOfActions = Integer.toString(planlength);
+
+
+        //check if it was timeout or skipped
+        boolean timeoutOrSkipped = false;
+        if (planlength < 1){
+            Element reason = xmlPlan.getChild("statistics").getChild("forcedQuit");
+            if (reason != null && !reason.getText().trim().equals("")){
+                time += " ("+ reason.getText().trim() + ")";
+                timeoutOrSkipped = true;
+            }
+            if (!isValid){
+                numberOfActions += " (invalid)";
+                
+            }
+
+        }
+
+        //Overall evaluation (plan grade)
+        double overallgrade = 0;
+        double overallCostAward = 0;
+        if (!timeoutOrSkipped && isValid && planlength > 0){
+            overallgrade = evaluatePlan(metrics);
+            overallCostAward = evaluateCostAward(metrics);
+        }
+
+        DecimalFormat overall = new DecimalFormat("0.00");
+
+        tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+time+"</td> \n");
+
+        tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+numberOfActions+"</td> \n");
+
+        tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+Double.toString(overallCostAward)+"</td> \n");
+      
+        tableRow.append("   <td align=\"center\" bgcolor=\"#FFFFFF\">"+overall.format(overallgrade)+"</td> \n");
+
+        tableRow.append("</tr> \n");
+
+        return tableRow.toString();
+    }
+
+
+
+
+    public static String generateProjectComparisonReport(Element baseProject, List<Element> projects){
+
+
+        //Calculating the progress status
+        double numberOfProblems = 0;
+        try {
+                XPath path = new JDOMXPath("count(descendant::problems/problem)");
+                numberOfProblems = (Double) path.selectSingleNode(baseProject);
+        } catch (JaxenException e) {
+                e.printStackTrace();
+        }
+
+        JLabel status = ItSIMPLE.getInstance().getPlanSimStatusBar();
+        status.setText("Status: Generating report... (0%)");
+        int progressIndex = 0;
+
+
+        StringBuilder html = new StringBuilder();
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        String dateTime = dateFormat.format(date);
+
+
+
+
+        
+
+        //GATHERING BODY DATA
+
+         //2.1.1 Main script (google tables and charts)
+        StringBuilder script = new StringBuilder();
+
+        script.append("           <script type='text/javascript'>\n");
+        script.append("               google.load('visualization', '1', {packages:['piechart', 'columnchart']}); \n");
+        script.append("               google.setOnLoadCallback(buildComponents); \n\n");
+        script.append("               function buildComponents() {\n");
+
+
+
+
+
+        //2.3 Metrics & Planner comparison
+
+        //Set the overall statistics variable to compare the projects (how many
+        // time they were better in time, plan length, evaluation, etc.
+
+        //Analysis data (time, plan length, cost, quality)
+        List<Element> OverAllProjectsStatistics = new ArrayList<Element>();
+
+        //prepare statistcs support nodes
+        Element overAllBaseProjStat = (Element)ItSIMPLE.getCommonData().getChild("planAnalysis").getChild("statisticSupport").clone();
+        overAllBaseProjStat.setAttribute("id", "base");
+        overAllBaseProjStat.getChild("name").setText(baseProject.getChildText("name"));
+        Element overAllBaseTimeStat = overAllBaseProjStat.getChild("time");
+        Element overAllBasePlanLengthStat = overAllBaseProjStat.getChild("planlength");
+        Element overAllBaseEvaluationStat = overAllBaseProjStat.getChild("evaluation");
+
+        //Add it to the projectsStaticts
+        OverAllProjectsStatistics.add(overAllBaseProjStat);
+
+        int projectIndex = 1;
+        for (Iterator<Element> it2 = projects.iterator(); it2.hasNext();) {
+            Element eaComparableProject = it2.next();
+            //prepare statistcs support nodes
+            Element eaProjStat = (Element)ItSIMPLE.getCommonData().getChild("planAnalysis").getChild("statisticSupport").clone();
+            eaProjStat.setAttribute("id", Integer.toString(projectIndex));
+            eaProjStat.getChild("name").setText(eaComparableProject.getChildText("name"));
+
+            //Add it to the projectsStaticts
+            OverAllProjectsStatistics.add(eaProjStat);
+            projectIndex++;
+        }
+
+
+
+
+        //TODO: google table for metrics for each problems
+        //TODO: google chart for the set of problems (as in the Time and # of action charts)
+        StringBuilder metricTable = new StringBuilder();
+        List<Element> domains = baseProject.getChild("domains").getChildren("domain");
+        for(int d=0;d<domains.size();d++){
+            Element eaDomain = domains.get(d);
+            List<Element> problems = eaDomain.getChild("problems").getChildren("problem");
+            for(int pb=0;pb<problems.size();pb++){
+                Element eaProblem = problems.get(pb);
+
+                // for each problem show the metrics info (Problem | metrics | Time (s) | # actions | Cost/Award | Evaluation
+                Element metrics = eaProblem.getChild("metrics");
+
+                if (metrics !=null && metrics.getChildren().size() > 0){
+
+                    //metricTable.append("<h3>"+eaDomain.getChildText("name")+" - "+eaProblem.getChildText("name")+"</h3> \n");
+                    metricTable.append("<h3>"+eaProblem.getChildText("name")+"</h3> \n");
+
+                    //metricTable.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+                    metricTable.append("<table bgcolor=\"#EEEEEE\" cellpadding=\"5\" cellspacing=\"1\" width=\"100%\">\n");
+
+                    //Header
+                    metricTable.append(getHtmlMetricTableHeader(metrics));
+
+                    //table body
+
+
+                    //STATISTICS
+                    //Analysis data (time, plan length, cost, quality)
+                    List<Element> projectsStatistics = new ArrayList<Element>();
+
+                    //prepare statistcs support nodes
+                    Element baseProjStat = (Element)ItSIMPLE.getCommonData().getChild("planAnalysis").getChild("statisticSupport").clone();
+                    baseProjStat.setAttribute("id", "base");
+                    baseProjStat.getChild("name").setText(baseProject.getChildText("name"));
+                    Element timeStat = baseProjStat.getChild("time");
+                    Element planLengthStat = baseProjStat.getChild("planlength");
+                    Element evaluationStat = baseProjStat.getChild("evaluation");
+
+                    //Add it to the projectsStaticts
+                    projectsStatistics.add(baseProjStat);
+
+                    int index = 1;
+                    for (Iterator<Element> it2 = projects.iterator(); it2.hasNext();) {
+                        Element eaComparableProject = it2.next();
+                        //prepare statistcs support nodes
+                        Element eaProjStat = (Element)ItSIMPLE.getCommonData().getChild("planAnalysis").getChild("statisticSupport").clone();
+                        eaProjStat.setAttribute("id", Integer.toString(index));
+                        eaProjStat.getChild("name").setText(eaComparableProject.getChildText("name"));
+
+                        //Add it to the projectsStaticts
+                        projectsStatistics.add(eaProjStat);
+                        index++;
+                    }
+
+
+
+                    //Check each plan and its caparable plans
+                    List<Element> plans = eaProblem.getChild("plans").getChildren("xmlPlan");
+                    for(int pl=0;pl<plans.size();pl++){
+                        Element basePlan = (Element)plans.get(pl);
+
+                        //HTML
+                        //Base (referencial) planner in the comparison
+                        //put the html row of the base planner
+                        Element basePlanner = basePlan.getChild("planner");
+                        Element basePlanMetrics = basePlan.getChild("metrics");
+                        if (basePlanMetrics != null && basePlanMetrics.getChildren().size() > 0){
+                            String baseRow = getHtmlMetricTableRow(basePlanMetrics, basePlan);
+                            //changing the color of the first/base row
+                            baseRow = baseRow.replaceAll("FFFFFF", "CCCCCC");
+                            metricTable.append(baseRow);
+                        }
+
+
+                        //STATISTICS
+                        //it start in each base plan
+                        float bestTime = -1;
+                        float bestPlanLength = -1;
+                        double bestEvaluation = 0.0;
+
+                        //Collect analysis data
+                        Element baseStatistics = basePlan.getChild("statistics");
+                        timeStat.setAttribute("temp", "");
+                        planLengthStat.setAttribute("temp", "");
+                        evaluationStat.setAttribute("temp", "");
+
+                        int baselength = basePlan.getChild("plan").getChildren().size();
+                                                
+                        //check the validity of the plan
+                        Element validity = basePlan.getChild("validity");
+                        if (validity != null && !validity.getAttributeValue("isValid").equals("true")){
+                            baselength = 0;
+                        }
+
+
+                        if (baselength > 0){
+                            //1.Time (min) - starting with the base solution/plan
+                            float baseTime = -1;
+                            try {
+                                baseTime = Float.parseFloat(baseStatistics.getChildText("toolTime"));
+                            } catch (Exception e) {
+                            }
+                            if (baseTime > -1) {
+                                timeStat.setAttribute("temp", Float.toString(baseTime));
+                                bestTime = baseTime;                                
+                            }
+                            
+                            //2.Plan length (min) - starting with the base solution/plan
+                            bestPlanLength = baselength;
+                            planLengthStat.setAttribute("temp", Integer.toString(baselength));
+
+                            //3.Evaluation (max) -  starting with the base solution/plan
+                            double eval = evaluatePlan(basePlanMetrics);
+                            bestEvaluation = eval;
+                            evaluationStat.setAttribute("temp", Double.toString(eval));
+
+                        }
+
+
+                        //for each planner get its performnce from the other projects for the same domain and problem
+                        for(int i=0;i<projects.size();i++){
+                            Element eaComparableProject = projects.get(i);
+
+                            Element comparablePlan = null;
+                            try {
+                                    XPath path = new JDOMXPath("domains/domain[name='"+eaDomain.getChildText("name")+
+                                            "']/problems/problem[name='"+eaProblem.getChildText("name")+"']/plans/xmlPlan[planner/name='"+
+                                            basePlanner.getChildText("name") +"' and planner/version='"+ basePlanner.getChildText("version") +"']");
+                                    comparablePlan = (Element)path.selectSingleNode(eaComparableProject);
+                            } catch (JaxenException e) {
+                                    e.printStackTrace();
+                            }
+
+                            if (comparablePlan != null){
+                                //comparable plan found
+
+                                //Get data analysis nodes - Statistcs
+                                Element eaProjStat = projectsStatistics.get(i+1);
+                                Element compStatistics = comparablePlan.getChild("statistics");
+                                Element eaTimeStat = eaProjStat.getChild("time");
+                                Element eaPlanLengthStat = eaProjStat.getChild("planlength");
+                                Element eaEvaluationStat = eaProjStat.getChild("evaluation");
+                                //clear temp values
+                                eaTimeStat.setAttribute("temp", "");
+                                eaPlanLengthStat.setAttribute("temp", "");
+                                eaEvaluationStat.setAttribute("temp", "");
+
+
+                                //Insert row in the table
+                                Element planMetrics = comparablePlan.getChild("metrics");
+                                if (planMetrics != null && planMetrics.getChildren().size() > 0){
+
+                                    //HTML
+                                    String row = getHtmlMetricTableRow(planMetrics, comparablePlan);
+                                    //Insert new row
+                                    metricTable.append(row);
+
+                                    //STATISTICS
+                                    //Collect data analysis
+                                    int theLength = comparablePlan.getChild("plan").getChildren().size();
+
+                                    //check the validity of the plan
+                                    Element theValidity = basePlan.getChild("validity");
+                                    if (theValidity != null && !theValidity.getAttributeValue("isValid").equals("true")){
+                                        theLength = 0;
+                                    }
+
+                                    if (theLength > 0){
+                                        //1.Time (min)
+                                        float theTime = -1;
+                                        try {
+                                            theTime = Float.parseFloat(compStatistics.getChildText("toolTime"));
+                                        } catch (Exception e) {
+                                        }
+
+                                        if (theTime > -1) {
+                                            eaTimeStat.setAttribute("temp", Float.toString(theTime));
+                                            if(bestTime == -1){
+                                                bestTime = theTime;
+                                            }else{
+                                                if (theTime < bestTime){bestTime = theTime;}
+                                            }
+                                            
+                                        }
+
+                                        //2.Plan length (min)
+                                        eaPlanLengthStat.setAttribute("temp", Integer.toString(theLength));
+                                        if (bestPlanLength == -1) {
+                                            bestPlanLength = theLength;
+                                        }else{
+                                            if (theLength < bestPlanLength){bestPlanLength = theLength;}
+                                        }
+
+                                        //3.Evaluation (max)
+                                        double eval = evaluatePlan(planMetrics);
+                                        eaEvaluationStat.setAttribute("temp", Double.toString(eval));
+                                        if (eval > bestEvaluation){bestEvaluation = eval;}
+                                        
+                                    }
+
+
+                                }
+
+                            }
+
+                        }
+
+                        //Check who (the model) was the best (time, plan length, evaluation, etc) for this planner
+                        for (Iterator<Element> itp = projectsStatistics.iterator(); itp.hasNext();) {
+                            Element eaStat = itp.next();
+
+                            //1.time
+                            Element eaTimeStat = eaStat.getChild("time");                            
+                            String timeStr = eaTimeStat.getAttributeValue("temp");
+                            if (!timeStr.trim().equals("")){
+                                float theTime = -1;
+                                try {
+                                    theTime = Float.parseFloat(timeStr);
+                                } catch (Exception e) {
+                                }
+                                //if this model/project reached the best time then score it
+                                if (theTime == bestTime) {
+                                    int timeCounter = Integer.parseInt(eaTimeStat.getAttributeValue("counter"));
+                                    timeCounter++;
+                                    eaTimeStat.setAttribute("counter", Integer.toString(timeCounter));
+                                }
+
+
+                            }
+                            //2.plan length
+                            Element eaPlanLengthStat = eaStat.getChild("planlength");
+                            String planLengthStr = eaPlanLengthStat.getAttributeValue("temp");
+                            if (!planLengthStr.trim().equals("")){
+                                //if this model/project reached the best planLength then score it
+                                int theLength = Integer.parseInt(planLengthStr);
+                                if (theLength == bestPlanLength) {
+                                    int planLengthCounter = Integer.parseInt(eaPlanLengthStat.getAttributeValue("counter"));
+                                    planLengthCounter++;
+                                    eaPlanLengthStat.setAttribute("counter", Integer.toString(planLengthCounter));
+                                }
+                            }
+                            //2.evaluation
+                            Element eaEvaluationStat = eaStat.getChild("evaluation");
+                            String planEvaluationStr = eaEvaluationStat.getAttributeValue("temp");
+                            if (!planEvaluationStr.trim().equals("")){
+                                //if this model/project reached the best evaluation then score it
+                                double theEvaluation = Double.parseDouble(planEvaluationStr);
+                                if (theEvaluation == bestEvaluation) {
+                                    int evaluationCounter = Integer.parseInt(eaEvaluationStat.getAttributeValue("counter"));
+                                    evaluationCounter++;
+                                    eaEvaluationStat.setAttribute("counter", Integer.toString(evaluationCounter));
+                                }
+                            }
+
+
+
+                        }
+
+                    }
+
+
+                    metricTable.append("</table>");
+                    metricTable.append("<br>");
+                    //System.out.print(metricTable.toString());
+
+
+                    //Analyis of the collected data
+                    if (projectsStatistics.size() > 0){
+
+
+                        //CHART FOR THE PROBLEM
+
+                        /*
+                        //time alone - Pie graph (google)
+                        StringBuilder timeChart = new StringBuilder();
+                        String dataName = "timeDataD"+d+"P"+pb;
+                        timeChart.append("  var "+dataName+" = new google.visualization.DataTable(); \n");
+                        timeChart.append(dataName+".addColumn('string', 'Project'); \n");
+                        timeChart.append(dataName+".addColumn('number', 'Times better'); \n");
+                        timeChart.append(dataName+".addRows(" + projectsStatistics.size() + "); \n");
+
+                        int sIndex = 0;
+                        for (Iterator<Element> it = projectsStatistics.iterator(); it.hasNext();) {
+                            Element element = it.next();
+
+                            //time
+                            //String pieceName = element.getChildText("name") + " ("+ element.getAttributeValue("id")+ ")";
+                            String pieceName = "project "+ element.getAttributeValue("id");
+                            timeChart.append(dataName+".setValue("+sIndex+", 0, '"+pieceName+"'); \n");
+                            timeChart.append(dataName+".setValue("+sIndex+", 1, "+element.getChild("time").getAttributeValue("counter")+"); \n");
+                            sIndex++;
+                        }
+                        String chartName = "timeChartD"+d+"P"+pb;
+                        timeChart.append("var " + chartName + " = new google.visualization.PieChart(document.getElementById('time-graph-" + chartName + "'));\n");
+                        timeChart.append(chartName + ".draw("+  dataName + ", {width: 400, height: 240, is3D: true, title:'Best Time Performance'});\n\n");
+                        script.append(timeChart);
+                        */
+
+
+
+                        //Overview - Column Chart (google)
+                        StringBuilder overviewChart = new StringBuilder();
+                        String odataName = "dataD"+d+"P"+pb;
+                        overviewChart.append("  var "+odataName+" = new google.visualization.DataTable(); \n");
+                        overviewChart.append(odataName+".addColumn('string', 'Criteria'); \n");
+
+                        StringBuilder overAllTimeData = new StringBuilder();
+                        StringBuilder overAllPlanLengthData = new StringBuilder();
+                        StringBuilder overAllEvaluationData = new StringBuilder();
+                        int oIndex = 1;
+                        for (Iterator<Element> it = projectsStatistics.iterator(); it.hasNext();) {
+                            Element element = it.next();
+
+                            //columns
+                            //String pieceName = element.getChildText("name") + " ("+ element.getAttributeValue("id")+ ")";
+                            String colName = "project "+ element.getAttributeValue("id");
+                            overviewChart.append(odataName+".addColumn('number', '"+colName+"'); \n");
+
+
+                            //Gathering data
+                            overAllTimeData.append(odataName+".setValue(0, "+oIndex+", "+element.getChild("time").getAttributeValue("counter")+"); \n");
+                            overAllPlanLengthData.append(odataName+".setValue(1, "+oIndex+", "+element.getChild("planlength").getAttributeValue("counter")+"); \n");
+                            overAllEvaluationData.append(odataName+".setValue(2, "+oIndex+", "+element.getChild("evaluation").getAttributeValue("counter")+"); \n");
+
+                            //TODO: other criteria
+
+                            oIndex++;
+                        }
+
+                        //Row is equals to the number of criteria (time, plan length, evaluation,...)
+                        overviewChart.append(odataName+".addRows(3); \n");
+
+                        //1.Time
+                        overviewChart.append(odataName+".setValue(0, 0, 'Time'); \n");
+                        overviewChart.append(overAllTimeData);
+
+                        //2.Time
+                        overviewChart.append(odataName+".setValue(1, 0, 'Plan Length'); \n");
+                        overviewChart.append(overAllPlanLengthData);
+
+                        //3.Evaluation
+                        overviewChart.append(odataName+".setValue(2, 0, 'Quality'); \n");
+                        overviewChart.append(overAllEvaluationData);
+
+                        //TODO: other criteria
+
+
+                        String ochartName = "chartD"+d+"P"+pb;
+                        overviewChart.append("var " + ochartName + " = new google.visualization.ColumnChart(document.getElementById('analysis-graph-" + ochartName + "'));\n");
+                        overviewChart.append(ochartName + ".draw("+  odataName + ", {width: 750, height: 240, is3D: true, title:'Project Performance'});\n\n");
+
+                        script.append(overviewChart);
+
+
+
+                        //Addin the content below the table
+                        //metricTable.append("<div id=\"time-graph-" + chartName + "\"></div> \n");
+                        metricTable.append("<div id=\"analysis-graph-" + ochartName + "\"></div> \n");
+                        metricTable.append("<br><br>");
+
+
+
+
+                        //OVERALL STATISTICS - GATHERING DATA
+
+                        //Check which project had the highest score in each criteria
+                        
+                        int bestTimeCounter = 0;
+                        int bestPlanLengthCounter = 0;
+                        int bestEvaluationCounter = 0;
+
+                        //Clear overall temp values
+                        for (int i = 0; i < OverAllProjectsStatistics.size(); i++) {
+                             Element eaOverAllPrjSt = OverAllProjectsStatistics.get(i);
+                             eaOverAllPrjSt.getChild("time").setAttribute("temp","");
+                             eaOverAllPrjSt.getChild("planlength").setAttribute("temp","");
+                             eaOverAllPrjSt.getChild("evaluation").setAttribute("temp","");
+                        }
+                                
+                        //Check the highest values (counters)
+                        for (int i = 0; i < projectsStatistics.size(); i++) {
+                            Element eaPrjSt = projectsStatistics.get(i);
+                            Element eaOverAllPrjSt = OverAllProjectsStatistics.get(i);
+
+                            //1.Time
+                            int timeCounter = Integer.parseInt(eaPrjSt.getChild("time").getAttributeValue("counter"));
+                            eaOverAllPrjSt.getChild("time").setAttribute("temp", Integer.toString(timeCounter));
+                            if (timeCounter > bestTimeCounter){bestTimeCounter = timeCounter;}
+
+                            //1.Plan length
+                            int planLengthCounter = Integer.parseInt(eaPrjSt.getChild("planlength").getAttributeValue("counter"));
+                            eaOverAllPrjSt.getChild("planlength").setAttribute("temp", Integer.toString(planLengthCounter));
+                            if (planLengthCounter > bestPlanLengthCounter){bestPlanLengthCounter = planLengthCounter;}
+
+                            //1.Evaluation
+                            int evaluationCounter = Integer.parseInt(eaPrjSt.getChild("evaluation").getAttributeValue("counter"));
+                            eaOverAllPrjSt.getChild("evaluation").setAttribute("temp", Integer.toString(evaluationCounter));
+                            if (evaluationCounter > bestEvaluationCounter){bestEvaluationCounter = evaluationCounter;}
+                        }
+                        
+                        //Score the best project concerning the criteria
+                        for (int i = 0; i < OverAllProjectsStatistics.size(); i++) {
+                             Element eaOverAllPrjSt = OverAllProjectsStatistics.get(i);
+
+                             //1.Time
+                             int theTimeCounter = Integer.parseInt(eaOverAllPrjSt.getChild("time").getAttributeValue("temp"));
+                             if (theTimeCounter == bestTimeCounter) {
+                                int timeCounter = Integer.parseInt(eaOverAllPrjSt.getChild("time").getAttributeValue("counter"));
+                                timeCounter++;
+                                eaOverAllPrjSt.getChild("time").setAttribute("counter", Integer.toString(timeCounter));
+                             }
+
+                             //2.Plan length
+                             int thePlanLengthCounter = Integer.parseInt(eaOverAllPrjSt.getChild("planlength").getAttributeValue("temp"));
+                             if (thePlanLengthCounter == bestPlanLengthCounter) {
+                                int planlengthCounter = Integer.parseInt(eaOverAllPrjSt.getChild("planlength").getAttributeValue("counter"));
+                                planlengthCounter++;
+                                eaOverAllPrjSt.getChild("planlength").setAttribute("counter", Integer.toString(planlengthCounter));
+                             }
+
+                             //3.Evaluation
+                             int theEvaluationCounter = Integer.parseInt(eaOverAllPrjSt.getChild("evaluation").getAttributeValue("temp"));
+                             if (theEvaluationCounter == bestEvaluationCounter) {
+                                int evaluationCounter = Integer.parseInt(eaOverAllPrjSt.getChild("evaluation").getAttributeValue("counter"));
+                                evaluationCounter++;
+                                eaOverAllPrjSt.getChild("evaluation").setAttribute("counter", Integer.toString(evaluationCounter));
+                             }
+
+                        }
+
+
+
+                    }
+
+
+
+
+                    
+                }
+
+                // refresh the status bar
+                int progressPercentage = (int)((double)++progressIndex/(double)numberOfProblems * 100);
+                status.setText("Status: Generating report... ("+ progressPercentage +"%)");
+
+            }
+
+        }
+
+
+
+        //Adding overall analysis to the scripts
+
+        //OverAll Analysis - Column Chart (google)
+        StringBuilder overAllChart = new StringBuilder();
+
+        if (OverAllProjectsStatistics.size() > 1){
+            
+            //Overall Analysis as :          
+            //Column Bar (google)
+            String dataName = "dataOverAll";
+            overAllChart.append("  var "+dataName+" = new google.visualization.DataTable(); \n");
+            overAllChart.append(dataName+".addColumn('string', 'Criteria'); \n");
+
+            StringBuilder overAllTimeData = new StringBuilder();
+            StringBuilder overAllPlanLengthData = new StringBuilder();
+            StringBuilder overAllEvaluationData = new StringBuilder();
+            int oIndex = 1;
+            for (int i = 0; i < OverAllProjectsStatistics.size(); i++) {
+                Element element = OverAllProjectsStatistics.get(i);
+
+                //columns
+                //String pieceName = element.getChildText("name") + " ("+ element.getAttributeValue("id")+ ")";
+                String colName = "project "+ element.getAttributeValue("id");
+                overAllChart.append(dataName+".addColumn('number', '"+colName+"'); \n");
+
+
+                //Gathering data
+                overAllTimeData.append(dataName+".setValue(0, "+oIndex+", "+element.getChild("time").getAttributeValue("counter")+"); \n");
+                overAllPlanLengthData.append(dataName+".setValue(1, "+oIndex+", "+element.getChild("planlength").getAttributeValue("counter")+"); \n");
+                overAllEvaluationData.append(dataName+".setValue(2, "+oIndex+", "+element.getChild("evaluation").getAttributeValue("counter")+"); \n");
+
+                //TODO: other criteria
+
+                oIndex++;
+
+            }
+
+            //Row is equals to the number of criteria (time, plan length, evaluation,...)
+            overAllChart.append(dataName+".addRows(3); \n");
+
+            //1.Time
+            overAllChart.append(dataName+".setValue(0, 0, 'Time'); \n");
+            overAllChart.append(overAllTimeData);
+
+            //2.Time
+            overAllChart.append(dataName+".setValue(1, 0, 'Plan Length'); \n");
+            overAllChart.append(overAllPlanLengthData);
+
+            //3.Evaluation
+            overAllChart.append(dataName+".setValue(2, 0, 'Quality'); \n");
+            overAllChart.append(overAllEvaluationData);
+
+            //TODO: other criteria
+
+
+            String chartName = "chartOverAll";
+            overAllChart.append("var " + chartName + " = new google.visualization.ColumnChart(document.getElementById('analysis-graph-overall'));\n");
+            overAllChart.append(chartName + ".draw("+  dataName + ", {width: 750, height: 300, is3D: true, title:'Overall Project Performance'});\n\n");
+
+            script.append(overAllChart);
+        }
+
+
+
+
+
+        
+        //finishing script (google)
+        script.append("} \n");
+        script.append("           </script>\n");
+
+
+
+        //HTML
+        //1. HEAD
+        html.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> \n");
+        html.append("<html xmlns=\"http://www.w3.org/1999/xhtml\"> \n");
+        html.append("<head> \n");
+        html.append("	<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /> \n");
+        html.append("	<title>Planners Comparison Report</title> \n");
+        html.append("	<link href=\"default.css\" rel=\"stylesheet\" type=\"text/css\" /> \n");
+        html.append("	<script type=\"text/javascript\" src=\"http://www.google.com/jsapi\"></script> \n");
+
+        html.append(script);
+        html.append("</head> \n");
+
+
+        //2. BODY
+        html.append("<body> \n");
+
+        html.append("	<div id=\"header\"> \n");
+        html.append("		<div id=\"logo\"> \n");
+        html.append("			<h1><span><a href=\"#\">project</a></span><a href=\"#\"> Comparison Report</a></h1>\n");
+        html.append("			<h2><a href=\"#\">By itSIMPLE</a></h2>  \n");
+        html.append("		</div> \n");
+        html.append("		<div id=\"menu\"> \n");
+        html.append("			<ul> \n");
+        html.append("				<li class=\"first\"><a href=\"#metrics\" accesskey=\"1\" title=\"\">Metrics Anaysis</a></li> \n");
+        //html.append("				<li><a href=\"#metrics\" accesskey=\"2\" title=\"\">Metrics Anaysis</a></li> \n");
+        html.append("				<li><a href=\"#about\" accesskey=\"4\" title=\"\">About</a></li> \n");
+        html.append("			</ul> \n");
+        html.append("		</div> \n");
+        html.append("	</div> \n");
+        html.append("	<div id=\"splash\"><a href=\"#\"><img src=\"images/img4.jpg\" alt=\"\" width=\"877\" height=\"140\" /></a></div> \n");
+
+
+        //Content
+        //2.2 Introduction
+        //add script that contains all tables and graphs
+        html.append("	<div id=\"content\"> \n");
+        html.append("		<div id=\"colOne\" style=\"width:100%\"> \n");
+        html.append("		<h2 style=\"margin-top:0\"><a name=\"#\">Introduction</a></h2> \n");
+        html.append("		<p>This <strong>project comparison report</strong> is a analysis interface for helping designers investigate the difference between models of the same domain.</p> \n");
+
+        //2.2 Overall Analysis/Comparison
+        if (OverAllProjectsStatistics.size() > 1){
+            html.append("		<h2 style=\"margin-top:0\"><a name=\"#\">Overall Metric Analysis</a></h2> \n");
+            html.append("<div id=\"analysis-graph-overall\"></div> \n");
+            html.append("<br><br>");
+        }
+
+        //Metrics
+        html.append("       <h2><a name=\"metrics\">Detailed Metrics Analysis</a></h2>\n");
+        String metricsSummary = metricTable.toString();
+        if (!metricsSummary.trim().equals("")){            
+            html.append(metricTable);
+        }
+        else{
+            html.append("		<p>No metrics were defined for the base/reference project.</p> \n");
+            
+        }
+
+
+        //End of Content
+        html.append("   </div> \n");
+
+
+
+        //2.5 footer
+        html.append("<div id=\"footer\"> \n");
+        html.append("	<p>(c) 2009 itSIMPLE. Design by <a href=\"http://dlab.poli.usp.br/\">itSIMPLE team</a>.</p> \n");
+        html.append("</div> \n");
+
+        html.append("</body> \n");
+        html.append("</html>");
+        
+        
+
+        status.setText("Status: Done generating report!");
+
+        return html.toString();
+    }
+
+
+
+
+
+
+    /**
+     * This method generates a random color hex code
+     * @return
+     */
+    public static String randomColor(){
+        Random random = new Random();
+        String color = "";
+        for (int i = 0; i < 7; i++) {
+            String current = Integer.toHexString(random.nextInt(256));
+            color += current.substring(0, 1);
+
+        }
+        return color.toUpperCase();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /**
+     * This is a provisory methos for counting the actions move, firelaser, and detonate bomb of the GoldMiner domain
+     */
+    public static String myAnalysis(Element planners, Element dataSet){
+
+        String result ="";
+
+//        List<String> plannersName = new ArrayList<String>();
+//        List<String> plannersVersion = new ArrayList<String>();
+//              
+//        plannersName.add("SGPlan 5");
+//        plannersVersion.add("5.2.2 Linux");
+//        
+//        plannersName.add("SGPlan 5");
+//        plannersVersion.add("5.2.2 Linux");
+        
+        System.out.println("Planner - Version, Time, # Solved");
+        
+      
+        
+        for (Iterator it = planners.getChildren().iterator(); it.hasNext();) {
+            Element planner = (Element)it.next();
+            
+            float totalTime = 0;
+            int problemsSolved = 0;
+            
+            List<Element> plannerData = null;
+            try {
+                    XPath path = new JDOMXPath("project/domains/domain/problems/problem/plans/xmlPlan[planner/name='"+planner.getChildText("name")+"' and planner/version='"+planner.getChildText("version")+"']");
+                    plannerData = path.selectNodes(dataSet);
+            } catch (JaxenException e) {
+                    e.printStackTrace();
+            } 
+            
+            if (plannerData != null && plannerData.size() > 0){
+                
+                for (Iterator<Element> it1 = plannerData.iterator(); it1.hasNext();) {
+                    Element plan = it1.next();
+                                       
+                    
+                    int planLength = plan.getChild("plan").getChildren().size();
+                    boolean isValid = true;
+
+                    //check the validity of the plan
+                    Element validity = plan.getChild("validity");
+                    if (validity != null && !validity.getAttributeValue("isValid").equals("true")){
+                        planLength = 0;
+                        isValid = false;
+                    }
+
+                    //Counting problems solved
+                    if(planLength > 0 && isValid){
+                        problemsSolved++;
+                    }                    
+
+                    //Couting time (for all cases - solving a proble, timeout, invalid plan, etc,
+                    String toolTimeStr = plan.getChild("statistics").getChildText("toolTime");
+                    float toolTime = Float.parseFloat(toolTimeStr);
+                    totalTime += toolTime;
+                    
+                }
+
+                //Print data
+                System.out.println(planner.getChildText("name") + " - " + planner.getChildText("version") + ", "+ Float.toString(totalTime) + ", "+ problemsSolved);
+                
+            }
+            
+            
+            
+            
+        }
+        
+        
+ 
+       
+        return result;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * This is a provisory methos for counting the actions move, firelaser, and detonate bomb of the GoldMiner domain
+     */
+    public static String actionCounterGoldMiner(Element xmlPlan){
+        String actionCounter = "";
+        //1. Count move action
+        List<?> moveActions = null;
+        try {
+                XPath path = new JDOMXPath("plan/action[@id='MOVE' or @id='move']");
+                moveActions = path.selectNodes(xmlPlan);
+        } catch (JaxenException e) {
+                e.printStackTrace();
+        }
+
+        actionCounter = "Move: " + Integer.toString(moveActions.size()) + "\n";
+        System.out.println("Move: "+ Integer.toString(moveActions.size()));
+        
+        //2. Count firelaser action
+        List<?> fireActions = null;
+        try {
+                XPath path = new JDOMXPath("plan/action[@id='FIRELASER' or @id='firelaser']");
+                fireActions = path.selectNodes(xmlPlan);
+        } catch (JaxenException e) {
+                e.printStackTrace();
+        }
+
+        actionCounter += "Laser: "+ Integer.toString(fireActions.size()) + "\n";
+        System.out.println("Laser: "+ Integer.toString(fireActions.size()));
+        
+        //2. Count firelaser action
+        List<?> detonateActions = null;
+        try {
+                XPath path = new JDOMXPath("plan/action[@id='DETONATEBOMB' or @id='detonatebomb']");
+                detonateActions = path.selectNodes(xmlPlan);
+        } catch (JaxenException e) {
+                e.printStackTrace();
+        }
+        
+        System.out.println("Bomb: "+ Integer.toString(detonateActions.size()));
+        System.out.println("");
+
+        actionCounter += "Bomb: "+ Integer.toString(detonateActions.size()) + "\n \n";
+       
+        return actionCounter;
+
+    }
+
+
+
+
+}

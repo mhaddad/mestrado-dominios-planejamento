@@ -1,0 +1,39 @@
+This package contains the following files:
+
+1. strips.pl - version 1.1 of planner R in SWI-PROLOG. It works for
+   STRIPS domains only.
+2. bin/pddl2lower - tcl script that converts all upper case letters
+   to lower case ones, and replaces "-" by "U" and "_" by "V" in the input
+   file. Usage: pddl2lower inputfile outputfile
+3. bin/pl2pddl - the almost reverse of pddl2lower. It replaces "U" by "-"
+   and "V" by "_". It reads from standard input and writes to the standard
+   output.
+4. r.execute - tcl script for running the planner. Usage:
+   r.execute path prob1 prob2 ... probk
+   where "path" is the directory where there is a "domain.pddl" file that
+   specifies the action domain in PDDL format, and "prob1",..., "probk" are
+   files in the directory "path" that are problem descriptions in PDDL
+   format.
+5. examples/blocks/ - the blocks world domain at AIPS-2000 competition.
+6. examples/log/ - the logistics world domain at AIPS-2000 competition.
+7. run-blocks - sample tcl script for solving all the problems in
+   examples/blocks
+8. t.pl - SWI-Prolog program used by monitor.
+9. monitor - tcl script for monitoring the time spent on solving a problem.
+   The max time is set to be 10000 seconds. For this program to work, there
+   should be no other SWI-Prolog processes running by the user except that
+   started by r.execute.
+10. block-control.pl - control information for the blocks world.
+11. run-blocks-control - tcl script for solving the blocks world problem
+    using control information in blocks-control.pl.
+12. log-control.pl - control information for the logistics domain.
+13. log-control2.pl - another version of control information for the
+    logistics domain.
+14. logistics - logistics domain specification automatically generated
+    from corresponding typed PDDL specifications.
+15. r-present.ps - PostScript file of the slides of a talk given at the 
+    University of Toronto in June 2000.
+
+The Prolog programs require SWI-Prolog 3.2.9 which can be downloaded
+from SWI-Prolog's home page: 
+http://www.swi.psy.uva.nl/projects/SWI-Prolog/download.html

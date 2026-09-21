@@ -1,0 +1,92 @@
+(define (domain TPP-Propositional_Domain_v1)
+    (:requirements :strips :typing)
+    (:types
+      Place - object
+      Market - Place
+      Depot - Place
+      Locatable - object
+      Good - Locatable
+      Truck - Locatable
+      Level - object
+    )
+    (:predicates
+      (at ?tru - Truck ?pla - Place)
+      (connected ?pla - Place ?pla1 - Place)
+      (next ?lev - Level ?lev1 - Level)
+      (readyToLoad ?mar - Market ?good - Good ?lev - Level)
+      (onSale ?mar - Market ?good - Good ?lev - Level)
+      (loaded ?tru - Truck ?good - Good ?lev - Level)
+      (stored ?good - Good ?lev - Level)
+    )
+    (:action load
+     :parameters (?g - Good ?t - Truck ?m - Market ?l1 - Level ?l2 - Level ?l3 - Level ?l4 - Level)
+     :precondition 
+       (and
+         (at ?t ?m)
+         (loaded ?t ?g ?l3)
+         (readyToLoad ?m ?g ?l2)
+         (next ?l2 ?l1)
+         (next ?l4 ?l3)
+       )
+     :effect
+       (and
+         (loaded ?t ?g ?l4)
+         (readyToLoad ?m ?g ?l1)
+         (not (loaded ?t ?g ?l3))
+         (not (readyToLoad ?m ?g ?l2))
+       )
+    )
+
+    (:action unload
+     :parameters (?g - Good ?t - Truck ?d - Depot ?l1 - Level ?l2 - Level ?l3 - Level ?l4 - Level)
+     :precondition 
+       (and
+         (at ?t ?d)
+         (loaded ?t ?g ?l2)
+         (stored ?g ?l3)
+         (next ?l2 ?l1)
+         (next ?l4 ?l3)
+       )
+     :effect
+       (and
+         (loaded ?t ?g ?l1)
+         (stored ?g ?l4)
+         (not (loaded ?t ?g ?l2))
+         (not (stored ?g ?l3))
+       )
+    )
+
+    (:action drive
+     :parameters (?t - Truck ?from - Place ?to - Place)
+     :precondition 
+       (and
+         (at ?t ?from)
+         (connected ?from ?to)
+       )
+     :effect
+       (and
+         (at ?t ?to)
+         (not (at ?t ?from))
+       )
+    )
+
+    (:action buy
+     :parameters (?t - Truck ?g - Good ?m - Market ?l1 - Level ?l2 - Level ?l3 - Level ?l4 - Level)
+     :precondition 
+       (and
+         (at ?t ?m)
+         (onSale ?m ?g ?l2)
+         (readyToLoad ?m ?g ?l3)
+         (next ?l2 ?l1)
+         (next ?l4 ?l3)
+       )
+     :effect
+       (and
+         (onSale ?m ?g ?l1)
+         (readyToLoad ?m ?g ?l4)
+         (not (onSale ?m ?g ?l2))
+         (not (readyToLoad ?m ?g ?l3))
+       )
+    )
+
+)

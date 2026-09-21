@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Controle de versão legado (o acervo de 2010 veio de checkouts SVN)
+**/.svn/
+
+# Artefatos de compilação regeneráveis
+*.o
+*.pyc
+__pycache__/
+
+# Ambientes e notebooks
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+
+# Editores
+*.swp
+.idea/
+.vscode/
+
+# Experimentos (Fase 3 em diante): o que é grande e reproduzível não é versionado.
+# Benchmarks são baixados por script; saídas brutas ficam fora do Git.
+# Resultados agregados (CSV) em experimentos/execucoes/ ou data/processed/ são versionados.
+*.sif
+experimentos/benchmarks/ipc/
+experimentos/execucoes/brutos/

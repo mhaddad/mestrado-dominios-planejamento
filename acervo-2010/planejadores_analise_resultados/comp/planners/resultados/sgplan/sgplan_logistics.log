@@ -1,0 +1,2172 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-4-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+; Time 0.03
+; ParsingTime 0.03
+; NrActions 20
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+2.003: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+3.004: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+4.005: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+5.006: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+6.007: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+7.008: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+8.009: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+9.010: (UNLOAD-AIRPLANE OBJ21 APN1 APT1) [1]
+10.011: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+11.012: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+12.013: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+13.014: (LOAD-TRUCK OBJ23 TRU1 APT1) [1]
+14.015: (LOAD-TRUCK OBJ21 TRU1 APT1) [1]
+15.016: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+16.017: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+17.018: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+18.019: (UNLOAD-TRUCK OBJ23 TRU1 POS1) [1]
+19.020: (UNLOAD-TRUCK OBJ21 TRU1 POS1) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-4-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+; Time 0.03
+; ParsingTime 0.03
+; NrActions 19
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+1.002: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+2.003: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+3.004: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+4.005: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+5.006: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+6.007: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+7.008: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+8.009: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+9.010: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+10.011: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+11.012: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+12.013: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+13.014: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+14.015: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+15.016: (LOAD-TRUCK OBJ11 TRU2 APT2) [1]
+16.017: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+17.018: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+18.019: (UNLOAD-TRUCK OBJ11 TRU2 POS2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-4-2' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+; Time 0.04
+; ParsingTime 0.03
+; NrActions 15
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+1.002: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+2.003: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+3.004: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+4.005: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+5.006: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+6.007: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+7.008: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+8.009: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+9.010: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+10.011: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+11.012: (LOAD-TRUCK OBJ11 TRU2 APT2) [1]
+12.013: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+13.014: (UNLOAD-AIRPLANE OBJ21 APN1 APT1) [1]
+14.015: (UNLOAD-TRUCK OBJ11 TRU2 POS2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-5-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+; Time 0.03
+; ParsingTime 0.03
+; NrActions 27
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+1.002: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+2.003: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+3.004: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+4.005: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+5.006: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+6.007: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+7.008: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+8.009: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+9.010: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+10.011: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+11.012: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+12.013: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+13.014: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+14.015: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+15.016: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+16.017: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+17.018: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+18.019: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+19.020: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+20.021: (LOAD-TRUCK OBJ12 TRU2 APT2) [1]
+21.022: (LOAD-TRUCK OBJ11 TRU2 APT2) [1]
+22.023: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+23.024: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+24.025: (UNLOAD-AIRPLANE OBJ22 APN1 APT1) [1]
+25.026: (UNLOAD-TRUCK OBJ12 TRU2 POS2) [1]
+26.027: (UNLOAD-TRUCK OBJ11 TRU2 POS2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-5-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+; Time 0.03
+; ParsingTime 0.03
+; NrActions 17
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+2.003: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+3.004: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+4.005: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+5.006: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+6.007: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+7.008: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+8.009: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+9.010: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+10.011: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+11.012: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+12.013: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+13.014: (LOAD-TRUCK OBJ23 TRU1 APT1) [1]
+14.015: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+15.016: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+16.017: (UNLOAD-TRUCK OBJ23 TRU1 POS1) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-5-2' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+; Time 0.03
+; ParsingTime 0.03
+; NrActions 8
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+2.003: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+3.004: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+4.005: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+5.006: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+6.007: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+7.008: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-6-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 29
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+1.002: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+2.003: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+3.004: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+4.005: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+5.006: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+6.007: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+7.008: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+8.009: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+9.010: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+10.011: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+11.012: (LOAD-TRUCK OBJ13 TRU2 APT2) [1]
+12.013: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+13.014: (UNLOAD-TRUCK OBJ13 TRU2 POS2) [1]
+14.015: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+15.016: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+16.017: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+17.018: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+18.019: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+19.020: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+20.021: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+21.022: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+22.023: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+23.024: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+24.025: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+25.026: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+26.027: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+27.028: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+28.029: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-6-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 15
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+1.002: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+2.003: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+3.004: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+4.005: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+5.006: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+6.007: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+7.008: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+8.009: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+9.010: (LOAD-TRUCK OBJ13 TRU2 APT2) [1]
+10.011: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+11.012: (UNLOAD-TRUCK OBJ13 TRU2 POS2) [1]
+12.013: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+13.014: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+14.015: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-6-2' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.03
+; NrActions 30
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+1.002: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+2.003: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+3.004: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+4.005: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+5.006: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+6.007: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+7.008: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+8.009: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+9.010: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+10.011: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+11.012: (UNLOAD-AIRPLANE OBJ22 APN1 APT1) [1]
+12.013: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+13.014: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+14.015: (LOAD-TRUCK OBJ11 TRU2 APT2) [1]
+15.016: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+16.017: (UNLOAD-TRUCK OBJ11 TRU2 POS2) [1]
+17.018: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+18.019: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+19.020: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+20.021: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+21.022: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+22.023: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+23.024: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+24.025: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+25.026: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+26.027: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+27.028: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+28.029: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+29.030: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-6-3' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 27
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+1.002: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+2.003: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+3.004: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+4.005: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+5.006: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+6.007: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+7.008: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+8.009: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+9.010: (UNLOAD-AIRPLANE OBJ22 APN1 APT1) [1]
+10.011: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+11.012: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+12.013: (LOAD-TRUCK OBJ13 TRU2 APT2) [1]
+13.014: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+14.015: (UNLOAD-TRUCK OBJ13 TRU2 POS2) [1]
+15.016: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+16.017: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+17.018: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+18.019: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+19.020: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+20.021: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+21.022: (LOAD-TRUCK OBJ23 TRU1 APT1) [1]
+22.023: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+23.024: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+24.025: (UNLOAD-TRUCK OBJ23 TRU1 POS1) [1]
+25.026: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+26.027: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-7-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 44
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+1.002: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+2.003: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+3.004: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+4.005: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+5.006: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+6.007: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+7.008: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+8.009: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+9.010: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+10.011: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+11.012: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+12.013: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+13.014: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+14.015: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+15.016: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+16.017: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+17.018: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+18.019: (LOAD-AIRPLANE OBJ31 APN1 APT3) [1]
+19.020: (UNLOAD-AIRPLANE OBJ13 APN1 APT3) [1]
+20.021: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+21.022: (UNLOAD-AIRPLANE OBJ32 APN1 APT1) [1]
+22.023: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+23.024: (LOAD-TRUCK OBJ32 TRU1 APT1) [1]
+24.025: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+25.026: (UNLOAD-AIRPLANE OBJ31 APN1 APT2) [1]
+26.027: (UNLOAD-TRUCK OBJ32 TRU1 POS1) [1]
+27.028: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+28.029: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+29.030: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+30.031: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+31.032: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+32.033: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+33.034: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+34.035: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+35.036: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+36.037: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+37.038: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+38.039: (UNLOAD-AIRPLANE OBJ33 APN1 APT1) [1]
+39.040: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+40.041: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+41.042: (LOAD-TRUCK OBJ12 TRU2 APT2) [1]
+42.043: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+43.044: (UNLOAD-TRUCK OBJ12 TRU2 POS2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-7-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 51
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+1.002: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+2.003: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+3.004: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+4.005: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+5.006: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+6.007: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+7.008: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+8.009: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+9.010: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+10.011: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+11.012: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+12.013: (UNLOAD-AIRPLANE OBJ32 APN1 APT1) [1]
+13.014: (LOAD-TRUCK OBJ32 TRU1 APT1) [1]
+14.015: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+15.016: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+16.017: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+17.018: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+18.019: (UNLOAD-TRUCK OBJ32 TRU1 POS1) [1]
+19.020: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+20.021: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+21.022: (LOAD-TRUCK OBJ13 TRU2 APT2) [1]
+22.023: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+23.024: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+24.025: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+25.026: (UNLOAD-TRUCK OBJ13 TRU2 POS2) [1]
+26.027: (UNLOAD-AIRPLANE OBJ21 APN1 APT3) [1]
+27.028: (UNLOAD-AIRPLANE OBJ12 APN1 APT3) [1]
+28.029: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+29.030: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+30.031: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+31.032: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+32.033: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+33.034: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+34.035: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+35.036: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+36.037: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+37.038: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+38.039: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+39.040: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+40.041: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+41.042: (UNLOAD-AIRPLANE OBJ11 APN1 APT3) [1]
+42.043: (LOAD-TRUCK OBJ11 TRU3 APT3) [1]
+43.044: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+44.045: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+45.046: (UNLOAD-TRUCK OBJ11 TRU3 POS3) [1]
+46.047: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+47.048: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+48.049: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+49.050: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+50.051: (UNLOAD-AIRPLANE OBJ33 APN1 APT1) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-8-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 38
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+1.002: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+2.003: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+3.004: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+4.005: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+5.006: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+6.007: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+7.008: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+8.009: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+9.010: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+10.011: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+11.012: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+12.013: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+13.014: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+14.015: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+15.016: (UNLOAD-AIRPLANE OBJ32 APN1 APT1) [1]
+16.017: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+17.018: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+18.019: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+19.020: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+20.021: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+21.022: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+22.023: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+23.024: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+24.025: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+25.026: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+26.027: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+27.028: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+28.029: (UNLOAD-AIRPLANE OBJ11 APN1 APT3) [1]
+29.030: (UNLOAD-AIRPLANE OBJ22 APN1 APT3) [1]
+30.031: (LOAD-TRUCK OBJ11 TRU3 APT3) [1]
+31.032: (LOAD-TRUCK OBJ22 TRU3 APT3) [1]
+32.033: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+33.034: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+34.035: (UNLOAD-TRUCK OBJ11 TRU3 POS3) [1]
+35.036: (UNLOAD-TRUCK OBJ22 TRU3 POS3) [1]
+36.037: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+37.038: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-8-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 54
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+2.003: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+3.004: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+4.005: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+5.006: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+6.007: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+7.008: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+8.009: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+9.010: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+10.011: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+11.012: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+12.013: (UNLOAD-AIRPLANE OBJ21 APN1 APT3) [1]
+13.014: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+14.015: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+15.016: (LOAD-AIRPLANE OBJ31 APN1 APT3) [1]
+16.017: (LOAD-TRUCK OBJ21 TRU3 APT3) [1]
+17.018: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+18.019: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+19.020: (UNLOAD-AIRPLANE OBJ31 APN1 APT1) [1]
+20.021: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+21.022: (UNLOAD-AIRPLANE OBJ12 APN1 APT3) [1]
+22.023: (LOAD-TRUCK OBJ12 TRU3 APT3) [1]
+23.024: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+24.025: (UNLOAD-TRUCK OBJ21 TRU3 POS3) [1]
+25.026: (UNLOAD-TRUCK OBJ12 TRU3 POS3) [1]
+26.027: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+27.028: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+28.029: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+29.030: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+30.031: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+31.032: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+32.033: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+33.034: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+34.035: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+35.036: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+36.037: (LOAD-TRUCK OBJ13 TRU2 APT2) [1]
+37.038: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+38.039: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+39.040: (UNLOAD-TRUCK OBJ13 TRU2 POS2) [1]
+40.041: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+41.042: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+42.043: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+43.044: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+44.045: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+45.046: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+46.047: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+47.048: (UNLOAD-AIRPLANE OBJ22 APN1 APT3) [1]
+48.049: (LOAD-TRUCK OBJ22 TRU3 APT3) [1]
+49.050: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+50.051: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+51.052: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+52.053: (UNLOAD-TRUCK OBJ22 TRU3 POS3) [1]
+53.054: (UNLOAD-AIRPLANE OBJ32 APN1 APT2) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-9-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 40
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+1.002: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+2.003: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+3.004: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+4.005: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+5.006: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+6.007: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+7.008: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+8.009: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+9.010: (UNLOAD-AIRPLANE OBJ21 APN1 APT1) [1]
+10.011: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+11.012: (UNLOAD-AIRPLANE OBJ13 APN1 APT3) [1]
+12.013: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+13.014: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+14.015: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+15.016: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+16.017: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+17.018: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+18.019: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+19.020: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+20.021: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+21.022: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+22.023: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+23.024: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+24.025: (UNLOAD-AIRPLANE OBJ23 APN1 APT3) [1]
+25.026: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+26.027: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+27.028: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+28.029: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+29.030: (UNLOAD-AIRPLANE OBJ32 APN1 APT1) [1]
+30.031: (UNLOAD-AIRPLANE OBJ22 APN1 APT1) [1]
+31.032: (LOAD-TRUCK OBJ23 TRU3 APT3) [1]
+32.033: (LOAD-TRUCK OBJ32 TRU1 APT1) [1]
+33.034: (LOAD-TRUCK OBJ22 TRU1 APT1) [1]
+34.035: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+35.036: (UNLOAD-TRUCK OBJ32 TRU1 POS1) [1]
+36.037: (UNLOAD-TRUCK OBJ22 TRU1 POS1) [1]
+37.038: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+38.039: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+39.040: (UNLOAD-TRUCK OBJ23 TRU3 POS3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-9-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 36
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+1.002: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+2.003: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+3.004: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+4.005: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+5.006: (UNLOAD-AIRPLANE OBJ12 APN1 APT3) [1]
+6.007: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+7.008: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+8.009: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+9.010: (LOAD-TRUCK OBJ12 TRU3 APT3) [1]
+10.011: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+11.012: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+12.013: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+13.014: (UNLOAD-TRUCK OBJ12 TRU3 POS3) [1]
+14.015: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+15.016: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+16.017: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+17.018: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+18.019: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+19.020: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+20.021: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+21.022: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+22.023: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+23.024: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+24.025: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+25.026: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+26.027: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+27.028: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+28.029: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+29.030: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+30.031: (UNLOAD-AIRPLANE OBJ13 APN1 APT3) [1]
+31.032: (UNLOAD-AIRPLANE OBJ23 APN1 APT3) [1]
+32.033: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+33.034: (LOAD-TRUCK OBJ13 TRU3 APT3) [1]
+34.035: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+35.036: (UNLOAD-TRUCK OBJ13 TRU3 POS3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-10-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.04
+; ParsingTime 0.04
+; NrActions 54
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+2.003: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+3.004: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+4.005: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+5.006: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+6.007: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+7.008: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+8.009: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+9.010: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+10.011: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+11.012: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+12.013: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+13.014: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+14.015: (UNLOAD-AIRPLANE OBJ21 APN1 APT4) [1]
+15.016: (FLY-AIRPLANE APN1 APT4 APT1) [1]
+16.017: (UNLOAD-AIRPLANE OBJ32 APN1 APT1) [1]
+17.018: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+18.019: (LOAD-TRUCK OBJ21 TRU4 APT4) [1]
+19.020: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+20.021: (UNLOAD-TRUCK OBJ21 TRU4 POS4) [1]
+21.022: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+22.023: (LOAD-TRUCK OBJ32 TRU1 APT1) [1]
+23.024: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+24.025: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+25.026: (UNLOAD-TRUCK OBJ32 TRU1 POS1) [1]
+26.027: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+27.028: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+28.029: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+29.030: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+30.031: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+31.032: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+32.033: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+33.034: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+34.035: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+35.036: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+36.037: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+37.038: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+38.039: (UNLOAD-AIRPLANE OBJ23 APN1 APT4) [1]
+39.040: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+40.041: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+41.042: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+42.043: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+43.044: (UNLOAD-AIRPLANE OBJ11 APN1 APT3) [1]
+44.045: (LOAD-TRUCK OBJ23 TRU4 APT4) [1]
+45.046: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+46.047: (LOAD-TRUCK OBJ11 TRU3 APT3) [1]
+47.048: (UNLOAD-AIRPLANE OBJ41 APN1 APT3) [1]
+48.049: (UNLOAD-TRUCK OBJ23 TRU4 POS4) [1]
+49.050: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+50.051: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+51.052: (UNLOAD-TRUCK OBJ11 TRU3 POS3) [1]
+52.053: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+53.054: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-10-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.05
+; NrActions 43
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+2.003: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+3.004: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+4.005: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+5.006: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+6.007: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+7.008: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+8.009: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+9.010: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+10.011: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+11.012: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+12.013: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+13.014: (UNLOAD-AIRPLANE OBJ23 APN1 APT3) [1]
+14.015: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+15.016: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+16.017: (LOAD-TRUCK OBJ23 TRU3 APT3) [1]
+17.018: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+18.019: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+19.020: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+20.021: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+21.022: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+22.023: (UNLOAD-TRUCK OBJ23 TRU3 POS3) [1]
+23.024: (UNLOAD-AIRPLANE OBJ33 APN1 APT1) [1]
+24.025: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+25.026: (UNLOAD-AIRPLANE OBJ22 APN1 APT4) [1]
+26.027: (UNLOAD-AIRPLANE OBJ13 APN1 APT4) [1]
+27.028: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+28.029: (LOAD-TRUCK OBJ22 TRU4 APT4) [1]
+29.030: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+30.031: (UNLOAD-TRUCK OBJ22 TRU4 POS4) [1]
+31.032: (LOAD-TRUCK OBJ42 TRU4 POS4) [1]
+32.033: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+33.034: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+34.035: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+35.036: (UNLOAD-TRUCK OBJ42 TRU4 APT4) [1]
+36.037: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+37.038: (LOAD-AIRPLANE OBJ42 APN1 APT4) [1]
+38.039: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+39.040: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+40.041: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+41.042: (UNLOAD-AIRPLANE OBJ42 APN1 APT3) [1]
+42.043: (UNLOAD-AIRPLANE OBJ41 APN1 APT3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-11-0' defined
+
+
+create ff: goal can be simplified to dis_FALSE. No plan will solve it
+
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-11-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 75
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+1.002: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+2.003: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+3.004: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+4.005: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+5.006: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+6.007: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+7.008: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+8.009: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+9.010: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+10.011: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+11.012: (LOAD-AIRPLANE OBJ43 APN1 APT4) [1]
+12.013: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+13.014: (UNLOAD-AIRPLANE OBJ33 APN1 APT2) [1]
+14.015: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+15.016: (UNLOAD-AIRPLANE OBJ43 APN1 APT1) [1]
+16.017: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+17.018: (LOAD-TRUCK OBJ33 TRU2 APT2) [1]
+18.019: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+19.020: (UNLOAD-TRUCK OBJ33 TRU2 POS2) [1]
+20.021: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+21.022: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+22.023: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+23.024: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+24.025: (LOAD-TRUCK OBJ43 TRU1 APT1) [1]
+25.026: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+26.027: (UNLOAD-AIRPLANE OBJ12 APN1 APT3) [1]
+27.028: (UNLOAD-TRUCK OBJ43 TRU1 POS1) [1]
+28.029: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+29.030: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+30.031: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+31.032: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+32.033: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+33.034: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+34.035: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+35.036: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+36.037: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+37.038: (UNLOAD-AIRPLANE OBJ11 APN1 APT2) [1]
+38.039: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+39.040: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+40.041: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+41.042: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+42.043: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+43.044: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+44.045: (UNLOAD-AIRPLANE OBJ22 APN1 APT4) [1]
+45.046: (LOAD-TRUCK OBJ22 TRU4 APT4) [1]
+46.047: (UNLOAD-AIRPLANE OBJ23 APN1 APT4) [1]
+47.048: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+48.049: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+49.050: (UNLOAD-TRUCK OBJ22 TRU4 POS4) [1]
+50.051: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+51.052: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+52.053: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+53.054: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+54.055: (UNLOAD-AIRPLANE OBJ41 APN1 APT2) [1]
+55.056: (LOAD-TRUCK OBJ41 TRU2 APT2) [1]
+56.057: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+57.058: (UNLOAD-TRUCK OBJ41 TRU2 POS2) [1]
+58.059: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+59.060: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+60.061: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+61.062: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+62.063: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+63.064: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+64.065: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+65.066: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+66.067: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+67.068: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+68.069: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+69.070: (LOAD-TRUCK OBJ13 TRU2 APT2) [1]
+70.071: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+71.072: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+72.073: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+73.074: (UNLOAD-TRUCK OBJ13 TRU2 POS2) [1]
+74.075: (UNLOAD-AIRPLANE OBJ21 APN1 APT3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-12-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 53
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+1.002: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+2.003: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+3.004: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+4.005: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+5.006: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+6.007: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+7.008: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+8.009: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+9.010: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+10.011: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+11.012: (UNLOAD-AIRPLANE OBJ23 APN1 APT4) [1]
+12.013: (UNLOAD-AIRPLANE OBJ12 APN1 APT4) [1]
+13.014: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+14.015: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+15.016: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+16.017: (FLY-AIRPLANE APN1 APT4 APT1) [1]
+17.018: (LOAD-TRUCK OBJ23 TRU4 APT4) [1]
+18.019: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+19.020: (UNLOAD-AIRPLANE OBJ41 APN1 APT1) [1]
+20.021: (UNLOAD-TRUCK OBJ23 TRU4 POS4) [1]
+21.022: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+22.023: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+23.024: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+24.025: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+25.026: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+26.027: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+27.028: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+28.029: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+29.030: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+30.031: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+31.032: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+32.033: (UNLOAD-AIRPLANE OBJ32 APN1 APT4) [1]
+33.034: (UNLOAD-AIRPLANE OBJ11 APN1 APT4) [1]
+34.035: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+35.036: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+36.037: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+37.038: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+38.039: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+39.040: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+40.041: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+41.042: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+42.043: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+43.044: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+44.045: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+45.046: (UNLOAD-AIRPLANE OBJ33 APN1 APT2) [1]
+46.047: (LOAD-TRUCK OBJ33 TRU2 APT2) [1]
+47.048: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+48.049: (UNLOAD-TRUCK OBJ33 TRU2 POS2) [1]
+49.050: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+50.051: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+51.052: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+52.053: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-12-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 82
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ42 TRU4 POS4) [1]
+1.002: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+2.003: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+3.004: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+4.005: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+5.006: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+6.007: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+7.008: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+8.009: (UNLOAD-TRUCK OBJ42 TRU4 APT4) [1]
+9.010: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+10.011: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+11.012: (LOAD-AIRPLANE OBJ42 APN1 APT4) [1]
+12.013: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+13.014: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+14.015: (UNLOAD-AIRPLANE OBJ42 APN1 APT2) [1]
+15.016: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+16.017: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+17.018: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+18.019: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+19.020: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+20.021: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+21.022: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+22.023: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+23.024: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+24.025: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+25.026: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+26.027: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+27.028: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+28.029: (UNLOAD-AIRPLANE OBJ22 APN1 APT3) [1]
+29.030: (LOAD-TRUCK OBJ22 TRU3 APT3) [1]
+30.031: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+31.032: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+32.033: (UNLOAD-TRUCK OBJ22 TRU3 POS3) [1]
+33.034: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+34.035: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+35.036: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+36.037: (FLY-AIRPLANE APN1 APT3 APT1) [1]
+37.038: (UNLOAD-AIRPLANE OBJ41 APN1 APT1) [1]
+38.039: (UNLOAD-AIRPLANE OBJ33 APN1 APT1) [1]
+39.040: (LOAD-TRUCK OBJ41 TRU1 APT1) [1]
+40.041: (LOAD-TRUCK OBJ33 TRU1 APT1) [1]
+41.042: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+42.043: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+43.044: (UNLOAD-TRUCK OBJ41 TRU1 POS1) [1]
+44.045: (UNLOAD-TRUCK OBJ33 TRU1 POS1) [1]
+45.046: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+46.047: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+47.048: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+48.049: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+49.050: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+50.051: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+51.052: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+52.053: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+53.054: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+54.055: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+55.056: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+56.057: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+57.058: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+58.059: (LOAD-AIRPLANE OBJ31 APN1 APT3) [1]
+59.060: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+60.061: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+61.062: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+62.063: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+63.064: (UNLOAD-AIRPLANE OBJ31 APN1 APT1) [1]
+64.065: (UNLOAD-AIRPLANE OBJ21 APN1 APT1) [1]
+65.066: (LOAD-TRUCK OBJ31 TRU1 APT1) [1]
+66.067: (LOAD-TRUCK OBJ21 TRU1 APT1) [1]
+67.068: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+68.069: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+69.070: (UNLOAD-TRUCK OBJ31 TRU1 POS1) [1]
+70.071: (UNLOAD-TRUCK OBJ21 TRU1 POS1) [1]
+71.072: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+72.073: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+73.074: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+74.075: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+75.076: (UNLOAD-AIRPLANE OBJ23 APN1 APT4) [1]
+76.077: (UNLOAD-AIRPLANE OBJ12 APN1 APT4) [1]
+77.078: (LOAD-TRUCK OBJ23 TRU4 APT4) [1]
+78.079: (LOAD-TRUCK OBJ12 TRU4 APT4) [1]
+79.080: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+80.081: (UNLOAD-TRUCK OBJ23 TRU4 POS4) [1]
+81.082: (UNLOAD-TRUCK OBJ12 TRU4 POS4) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-13-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.06
+; ParsingTime 0.04
+; NrActions 88
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+1.002: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+2.003: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+3.004: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+4.005: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+5.006: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+6.007: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+7.008: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+8.009: (LOAD-TRUCK OBJ51 TRU5 POS5) [1]
+9.010: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+10.011: (UNLOAD-TRUCK OBJ51 TRU5 APT5) [1]
+11.012: (FLY-AIRPLANE APN2 APT1 APT3) [1]
+12.013: (LOAD-AIRPLANE OBJ33 APN2 APT3) [1]
+13.014: (FLY-AIRPLANE APN2 APT3 APT1) [1]
+14.015: (UNLOAD-AIRPLANE OBJ33 APN2 APT1) [1]
+15.016: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+16.017: (LOAD-TRUCK OBJ33 TRU1 APT1) [1]
+17.018: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+18.019: (UNLOAD-TRUCK OBJ33 TRU1 POS1) [1]
+19.020: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+20.021: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+21.022: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+22.023: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+23.024: (UNLOAD-AIRPLANE OBJ41 APN1 APT3) [1]
+24.025: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+25.026: (UNLOAD-AIRPLANE OBJ32 APN1 APT2) [1]
+26.027: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+27.028: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+28.029: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+29.030: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+30.031: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+31.032: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+32.033: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+33.034: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+34.035: (FLY-AIRPLANE APN1 APT1 APT5) [1]
+35.036: (UNLOAD-AIRPLANE OBJ11 APN1 APT5) [1]
+36.037: (LOAD-TRUCK OBJ11 TRU5 APT5) [1]
+37.038: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+38.039: (LOAD-TRUCK OBJ53 TRU5 POS5) [1]
+39.040: (LOAD-TRUCK OBJ52 TRU5 POS5) [1]
+40.041: (UNLOAD-TRUCK OBJ11 TRU5 POS5) [1]
+41.042: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+42.043: (UNLOAD-TRUCK OBJ53 TRU5 APT5) [1]
+43.044: (LOAD-AIRPLANE OBJ53 APN1 APT5) [1]
+44.045: (UNLOAD-TRUCK OBJ52 TRU5 APT5) [1]
+45.046: (LOAD-AIRPLANE OBJ52 APN1 APT5) [1]
+46.047: (FLY-AIRPLANE APN1 APT5 APT1) [1]
+47.048: (UNLOAD-AIRPLANE OBJ53 APN1 APT1) [1]
+48.049: (LOAD-TRUCK OBJ53 TRU1 APT1) [1]
+49.050: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+50.051: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+51.052: (UNLOAD-AIRPLANE OBJ13 APN1 APT4) [1]
+52.053: (LOAD-TRUCK OBJ13 TRU4 APT4) [1]
+53.054: (UNLOAD-AIRPLANE OBJ52 APN1 APT4) [1]
+54.055: (UNLOAD-TRUCK OBJ53 TRU1 POS1) [1]
+55.056: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+56.057: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+57.058: (UNLOAD-TRUCK OBJ13 TRU4 POS4) [1]
+58.059: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+59.060: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+60.061: (LOAD-AIRPLANE OBJ43 APN1 APT4) [1]
+61.062: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+62.063: (UNLOAD-AIRPLANE OBJ43 APN1 APT2) [1]
+63.064: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+64.065: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+65.066: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+66.067: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+67.068: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+68.069: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+69.070: (LOAD-AIRPLANE OBJ12 APN2 APT1) [1]
+70.071: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+71.072: (FLY-AIRPLANE APN1 APT2 APT5) [1]
+72.073: (UNLOAD-AIRPLANE OBJ23 APN1 APT5) [1]
+73.074: (LOAD-TRUCK OBJ23 TRU5 APT5) [1]
+74.075: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+75.076: (UNLOAD-TRUCK OBJ23 TRU5 POS5) [1]
+76.077: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+77.078: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+78.079: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+79.080: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+80.081: (FLY-AIRPLANE APN2 APT1 APT3) [1]
+81.082: (UNLOAD-AIRPLANE OBJ12 APN2 APT3) [1]
+82.083: (LOAD-AIRPLANE OBJ31 APN2 APT3) [1]
+83.084: (FLY-AIRPLANE APN2 APT3 APT1) [1]
+84.085: (LOAD-TRUCK OBJ12 TRU3 APT3) [1]
+85.086: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+86.087: (UNLOAD-AIRPLANE OBJ31 APN2 APT1) [1]
+87.088: (UNLOAD-TRUCK OBJ12 TRU3 POS3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-13-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 77
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+2.003: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+3.004: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+4.005: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+5.006: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+6.007: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+7.008: (LOAD-AIRPLANE OBJ22 APN2 APT2) [1]
+8.009: (FLY-AIRPLANE APN2 APT2 APT1) [1]
+9.010: (UNLOAD-AIRPLANE OBJ22 APN2 APT1) [1]
+10.011: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+11.012: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+12.013: (LOAD-TRUCK OBJ22 TRU1 APT1) [1]
+13.014: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+14.015: (UNLOAD-TRUCK OBJ22 TRU1 POS1) [1]
+15.016: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+16.017: (LOAD-AIRPLANE OBJ33 APN1 APT3) [1]
+17.018: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+18.019: (UNLOAD-AIRPLANE OBJ33 APN1 APT4) [1]
+19.020: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+20.021: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+21.022: (LOAD-TRUCK OBJ42 TRU4 POS4) [1]
+22.023: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+23.024: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+24.025: (UNLOAD-TRUCK OBJ42 TRU4 APT4) [1]
+25.026: (LOAD-AIRPLANE OBJ13 APN2 APT1) [1]
+26.027: (LOAD-TRUCK OBJ52 TRU5 POS5) [1]
+27.028: (LOAD-AIRPLANE OBJ42 APN1 APT4) [1]
+28.029: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+29.030: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+30.031: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+31.032: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+32.033: (FLY-AIRPLANE APN2 APT1 APT5) [1]
+33.034: (UNLOAD-AIRPLANE OBJ13 APN2 APT5) [1]
+34.035: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+35.036: (UNLOAD-AIRPLANE OBJ42 APN1 APT3) [1]
+36.037: (FLY-AIRPLANE APN1 APT3 APT2) [1]
+37.038: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+38.039: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+39.040: (LOAD-TRUCK OBJ42 TRU3 APT3) [1]
+40.041: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+41.042: (UNLOAD-AIRPLANE OBJ23 APN1 APT1) [1]
+42.043: (FLY-AIRPLANE APN1 APT1 APT5) [1]
+43.044: (UNLOAD-TRUCK OBJ42 TRU3 POS3) [1]
+44.045: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+45.046: (UNLOAD-TRUCK OBJ52 TRU5 APT5) [1]
+46.047: (LOAD-TRUCK OBJ13 TRU5 APT5) [1]
+47.048: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+48.049: (LOAD-AIRPLANE OBJ52 APN1 APT5) [1]
+49.050: (FLY-AIRPLANE APN1 APT5 APT4) [1]
+50.051: (UNLOAD-TRUCK OBJ13 TRU5 POS5) [1]
+51.052: (UNLOAD-AIRPLANE OBJ52 APN1 APT4) [1]
+52.053: (LOAD-TRUCK OBJ51 TRU5 POS5) [1]
+53.054: (LOAD-TRUCK OBJ53 TRU5 POS5) [1]
+54.055: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+55.056: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+56.057: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+57.058: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+58.059: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+59.060: (FLY-AIRPLANE APN1 APT4 APT1) [1]
+60.061: (UNLOAD-TRUCK OBJ51 TRU5 APT5) [1]
+61.062: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+62.063: (LOAD-AIRPLANE OBJ51 APN2 APT5) [1]
+63.064: (FLY-AIRPLANE APN2 APT5 APT4) [1]
+64.065: (UNLOAD-TRUCK OBJ53 TRU5 APT5) [1]
+65.066: (FLY-AIRPLANE APN1 APT1 APT5) [1]
+66.067: (UNLOAD-AIRPLANE OBJ51 APN2 APT4) [1]
+67.068: (LOAD-AIRPLANE OBJ53 APN1 APT5) [1]
+68.069: (FLY-AIRPLANE APN1 APT5 APT2) [1]
+69.070: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+70.071: (LOAD-TRUCK OBJ12 TRU2 APT2) [1]
+71.072: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+72.073: (LOAD-TRUCK OBJ51 TRU4 APT4) [1]
+73.074: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+74.075: (UNLOAD-TRUCK OBJ12 TRU2 POS2) [1]
+75.076: (UNLOAD-AIRPLANE OBJ53 APN1 APT2) [1]
+76.077: (UNLOAD-TRUCK OBJ51 TRU4 POS4) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-14-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 71
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+1.002: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+2.003: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+3.004: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+4.005: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+5.006: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+6.007: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+7.008: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+8.009: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+9.010: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+10.011: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+11.012: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+12.013: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+13.014: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+14.015: (UNLOAD-AIRPLANE OBJ22 APN1 APT4) [1]
+15.016: (UNLOAD-AIRPLANE OBJ11 APN1 APT4) [1]
+16.017: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+17.018: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+18.019: (LOAD-TRUCK OBJ22 TRU4 APT4) [1]
+19.020: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+20.021: (LOAD-AIRPLANE OBJ43 APN1 APT4) [1]
+21.022: (FLY-AIRPLANE APN1 APT4 APT5) [1]
+22.023: (UNLOAD-AIRPLANE OBJ21 APN1 APT5) [1]
+23.024: (UNLOAD-TRUCK OBJ22 TRU4 POS4) [1]
+24.025: (UNLOAD-AIRPLANE OBJ43 APN1 APT5) [1]
+25.026: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+26.027: (LOAD-TRUCK OBJ21 TRU5 APT5) [1]
+27.028: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+28.029: (UNLOAD-TRUCK OBJ21 TRU5 POS5) [1]
+29.030: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+30.031: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+31.032: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+32.033: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+33.034: (FLY-AIRPLANE APN1 APT5 APT4) [1]
+34.035: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+35.036: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+36.037: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+37.038: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+38.039: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+39.040: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+40.041: (FLY-AIRPLANE APN1 APT4 APT1) [1]
+41.042: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+42.043: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+43.044: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+44.045: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+45.046: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+46.047: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+47.048: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+48.049: (UNLOAD-AIRPLANE OBJ12 APN1 APT3) [1]
+49.050: (UNLOAD-AIRPLANE OBJ41 APN1 APT3) [1]
+50.051: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+51.052: (UNLOAD-AIRPLANE OBJ32 APN1 APT4) [1]
+52.053: (LOAD-TRUCK OBJ32 TRU4 APT4) [1]
+53.054: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+54.055: (UNLOAD-TRUCK OBJ32 TRU4 POS4) [1]
+55.056: (LOAD-TRUCK OBJ51 TRU5 POS5) [1]
+56.057: (LOAD-TRUCK OBJ53 TRU5 POS5) [1]
+57.058: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+58.059: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+59.060: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+60.061: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+61.062: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+62.063: (LOAD-AIRPLANE OBJ31 APN1 APT3) [1]
+63.064: (FLY-AIRPLANE APN1 APT3 APT5) [1]
+64.065: (UNLOAD-AIRPLANE OBJ31 APN1 APT5) [1]
+65.066: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+66.067: (LOAD-TRUCK OBJ31 TRU5 APT5) [1]
+67.068: (UNLOAD-TRUCK OBJ51 TRU5 APT5) [1]
+68.069: (UNLOAD-TRUCK OBJ53 TRU5 APT5) [1]
+69.070: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+70.071: (UNLOAD-TRUCK OBJ31 TRU5 POS5) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-14-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.06
+; ParsingTime 0.04
+; NrActions 89
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ42 TRU4 POS4) [1]
+1.002: (LOAD-TRUCK OBJ52 TRU5 POS5) [1]
+2.003: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+3.004: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+4.005: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+5.006: (UNLOAD-TRUCK OBJ52 TRU5 APT5) [1]
+6.007: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+7.008: (LOAD-AIRPLANE OBJ52 APN2 APT5) [1]
+8.009: (FLY-AIRPLANE APN2 APT5 APT1) [1]
+9.010: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+10.011: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+11.012: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+12.013: (UNLOAD-AIRPLANE OBJ52 APN2 APT1) [1]
+13.014: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+14.015: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+15.016: (UNLOAD-TRUCK OBJ42 TRU4 APT4) [1]
+16.017: (FLY-AIRPLANE APN1 APT1 APT4) [1]
+17.018: (LOAD-AIRPLANE OBJ42 APN1 APT4) [1]
+18.019: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+19.020: (LOAD-AIRPLANE OBJ21 APN1 APT2) [1]
+20.021: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+21.022: (UNLOAD-AIRPLANE OBJ42 APN1 APT1) [1]
+22.023: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+23.024: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+24.025: (LOAD-TRUCK OBJ42 TRU1 APT1) [1]
+25.026: (LOAD-TRUCK OBJ52 TRU1 APT1) [1]
+26.027: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+27.028: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+28.029: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+29.030: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+30.031: (UNLOAD-TRUCK OBJ42 TRU1 POS1) [1]
+31.032: (UNLOAD-TRUCK OBJ52 TRU1 POS1) [1]
+32.033: (UNLOAD-AIRPLANE OBJ12 APN1 APT3) [1]
+33.034: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+34.035: (UNLOAD-AIRPLANE OBJ21 APN1 APT4) [1]
+35.036: (LOAD-TRUCK OBJ21 TRU4 APT4) [1]
+36.037: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+37.038: (UNLOAD-AIRPLANE OBJ32 APN1 APT4) [1]
+38.039: (UNLOAD-TRUCK OBJ21 TRU4 POS4) [1]
+39.040: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+40.041: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+41.042: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+42.043: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+43.044: (LOAD-AIRPLANE OBJ11 APN2 APT1) [1]
+44.045: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+45.046: (LOAD-TRUCK OBJ51 TRU5 POS5) [1]
+46.047: (LOAD-TRUCK OBJ53 TRU5 POS5) [1]
+47.048: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+48.049: (UNLOAD-TRUCK OBJ51 TRU5 APT5) [1]
+49.050: (UNLOAD-TRUCK OBJ53 TRU5 APT5) [1]
+50.051: (FLY-AIRPLANE APN1 APT4 APT5) [1]
+51.052: (LOAD-AIRPLANE OBJ51 APN1 APT5) [1]
+52.053: (FLY-AIRPLANE APN1 APT5 APT4) [1]
+53.054: (UNLOAD-AIRPLANE OBJ51 APN1 APT4) [1]
+54.055: (FLY-AIRPLANE APN2 APT1 APT4) [1]
+55.056: (UNLOAD-AIRPLANE OBJ11 APN2 APT4) [1]
+56.057: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+57.058: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+58.059: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+59.060: (FLY-AIRPLANE APN1 APT4 APT1) [1]
+60.061: (LOAD-TRUCK OBJ51 TRU4 APT4) [1]
+61.062: (LOAD-TRUCK OBJ11 TRU4 APT4) [1]
+62.063: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+63.064: (UNLOAD-AIRPLANE OBJ41 APN1 APT1) [1]
+64.065: (UNLOAD-TRUCK OBJ51 TRU4 POS4) [1]
+65.066: (UNLOAD-TRUCK OBJ11 TRU4 POS4) [1]
+66.067: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+67.068: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+68.069: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+69.070: (LOAD-AIRPLANE OBJ43 APN2 APT4) [1]
+70.071: (FLY-AIRPLANE APN2 APT4 APT1) [1]
+71.072: (UNLOAD-AIRPLANE OBJ43 APN2 APT1) [1]
+72.073: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+73.074: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+74.075: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+75.076: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+76.077: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+77.078: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+78.079: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+79.080: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+80.081: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+81.082: (FLY-AIRPLANE APN1 APT1 APT2) [1]
+82.083: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+83.084: (UNLOAD-AIRPLANE OBJ13 APN1 APT2) [1]
+84.085: (FLY-AIRPLANE APN1 APT2 APT3) [1]
+85.086: (UNLOAD-AIRPLANE OBJ22 APN1 APT3) [1]
+86.087: (LOAD-TRUCK OBJ22 TRU3 APT3) [1]
+87.088: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+88.089: (UNLOAD-TRUCK OBJ22 TRU3 POS3) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-15-0' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 94
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+1.002: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+2.003: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+3.004: (LOAD-TRUCK OBJ52 TRU5 POS5) [1]
+4.005: (LOAD-AIRPLANE OBJ21 APN2 APT2) [1]
+5.006: (FLY-AIRPLANE APN2 APT2 APT3) [1]
+6.007: (LOAD-TRUCK OBJ53 TRU5 POS5) [1]
+7.008: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+8.009: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+9.010: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+10.011: (UNLOAD-TRUCK OBJ52 TRU5 APT5) [1]
+11.012: (UNLOAD-AIRPLANE OBJ21 APN2 APT3) [1]
+12.013: (UNLOAD-TRUCK OBJ53 TRU5 APT5) [1]
+13.014: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+14.015: (LOAD-AIRPLANE OBJ52 APN1 APT5) [1]
+15.016: (LOAD-TRUCK OBJ33 TRU3 POS3) [1]
+16.017: (LOAD-AIRPLANE OBJ53 APN1 APT5) [1]
+17.018: (FLY-AIRPLANE APN1 APT5 APT4) [1]
+18.019: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+19.020: (UNLOAD-AIRPLANE OBJ52 APN1 APT4) [1]
+20.021: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+21.022: (UNLOAD-AIRPLANE OBJ53 APN1 APT2) [1]
+22.023: (FLY-AIRPLANE APN1 APT2 APT1) [1]
+23.024: (UNLOAD-AIRPLANE OBJ41 APN1 APT1) [1]
+24.025: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+25.026: (LOAD-TRUCK OBJ21 TRU3 APT3) [1]
+26.027: (UNLOAD-TRUCK OBJ33 TRU3 APT3) [1]
+27.028: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+28.029: (UNLOAD-TRUCK OBJ21 TRU3 POS3) [1]
+29.030: (LOAD-TRUCK OBJ12 TRU1 POS1) [1]
+30.031: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+31.032: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+32.033: (UNLOAD-TRUCK OBJ12 TRU1 APT1) [1]
+33.034: (LOAD-AIRPLANE OBJ12 APN1 APT1) [1]
+34.035: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+35.036: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+36.037: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+37.038: (UNLOAD-AIRPLANE OBJ11 APN1 APT3) [1]
+38.039: (FLY-AIRPLANE APN1 APT3 APT4) [1]
+39.040: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+40.041: (LOAD-TRUCK OBJ51 TRU5 POS5) [1]
+41.042: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+42.043: (UNLOAD-TRUCK OBJ51 TRU5 APT5) [1]
+43.044: (FLY-AIRPLANE APN2 APT3 APT5) [1]
+44.045: (LOAD-AIRPLANE OBJ51 APN2 APT5) [1]
+45.046: (FLY-AIRPLANE APN2 APT5 APT3) [1]
+46.047: (UNLOAD-AIRPLANE OBJ51 APN2 APT3) [1]
+47.048: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+48.049: (LOAD-TRUCK OBJ42 TRU4 POS4) [1]
+49.050: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+50.051: (UNLOAD-TRUCK OBJ42 TRU4 APT4) [1]
+51.052: (LOAD-AIRPLANE OBJ42 APN1 APT4) [1]
+52.053: (FLY-AIRPLANE APN1 APT4 APT2) [1]
+53.054: (UNLOAD-AIRPLANE OBJ12 APN1 APT2) [1]
+54.055: (LOAD-TRUCK OBJ12 TRU2 APT2) [1]
+55.056: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+56.057: (UNLOAD-TRUCK OBJ12 TRU2 POS2) [1]
+57.058: (UNLOAD-AIRPLANE OBJ42 APN1 APT2) [1]
+58.059: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+59.060: (LOAD-TRUCK OBJ51 TRU3 APT3) [1]
+60.061: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+61.062: (UNLOAD-TRUCK OBJ51 TRU3 POS3) [1]
+62.063: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+63.064: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+64.065: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+65.066: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+66.067: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+67.068: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+68.069: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+69.070: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+70.071: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+71.072: (LOAD-AIRPLANE OBJ22 APN1 APT2) [1]
+72.073: (LOAD-AIRPLANE OBJ31 APN2 APT3) [1]
+73.074: (FLY-AIRPLANE APN2 APT3 APT4) [1]
+74.075: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+75.076: (UNLOAD-AIRPLANE OBJ23 APN1 APT4) [1]
+76.077: (LOAD-TRUCK OBJ23 TRU4 APT4) [1]
+77.078: (UNLOAD-AIRPLANE OBJ22 APN1 APT4) [1]
+78.079: (UNLOAD-AIRPLANE OBJ31 APN2 APT4) [1]
+79.080: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+80.081: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+81.082: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+82.083: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+83.084: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+84.085: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+85.086: (UNLOAD-TRUCK OBJ23 TRU4 POS4) [1]
+86.087: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+87.088: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+88.089: (LOAD-AIRPLANE OBJ43 APN1 APT4) [1]
+89.090: (FLY-AIRPLANE APN1 APT4 APT5) [1]
+90.091: (UNLOAD-AIRPLANE OBJ43 APN1 APT5) [1]
+91.092: (LOAD-TRUCK OBJ43 TRU5 APT5) [1]
+92.093: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+93.094: (UNLOAD-TRUCK OBJ43 TRU5 POS5) [1]
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'LOGISTICS' defined
+Parsing problem file
+ problem 'LOGISTICS-15-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+
+
+
+
+
+
+
+; Time 0.05
+; ParsingTime 0.04
+; NrActions 87
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LOAD-TRUCK OBJ11 TRU1 POS1) [1]
+1.002: (LOAD-TRUCK OBJ23 TRU2 POS2) [1]
+2.003: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+3.004: (LOAD-TRUCK OBJ41 TRU4 POS4) [1]
+4.005: (UNLOAD-TRUCK OBJ23 TRU2 APT2) [1]
+5.006: (LOAD-AIRPLANE OBJ23 APN1 APT2) [1]
+6.007: (FLY-AIRPLANE APN1 APT2 APT4) [1]
+7.008: (LOAD-TRUCK OBJ13 TRU1 POS1) [1]
+8.009: (UNLOAD-AIRPLANE OBJ23 APN1 APT4) [1]
+9.010: (FLY-AIRPLANE APN2 APT1 APT4) [1]
+10.011: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+11.012: (UNLOAD-TRUCK OBJ41 TRU4 APT4) [1]
+12.013: (LOAD-AIRPLANE OBJ41 APN1 APT4) [1]
+13.014: (LOAD-TRUCK OBJ23 TRU4 APT4) [1]
+14.015: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+15.016: (FLY-AIRPLANE APN1 APT4 APT1) [1]
+16.017: (UNLOAD-AIRPLANE OBJ41 APN1 APT1) [1]
+17.018: (UNLOAD-TRUCK OBJ23 TRU4 POS4) [1]
+18.019: (DRIVE-TRUCK TRU1 POS1 APT1 CIT1) [1]
+19.020: (UNLOAD-TRUCK OBJ11 TRU1 APT1) [1]
+20.021: (LOAD-AIRPLANE OBJ11 APN1 APT1) [1]
+21.022: (UNLOAD-TRUCK OBJ13 TRU1 APT1) [1]
+22.023: (LOAD-AIRPLANE OBJ13 APN1 APT1) [1]
+23.024: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+24.025: (UNLOAD-AIRPLANE OBJ11 APN1 APT3) [1]
+25.026: (LOAD-TRUCK OBJ41 TRU1 APT1) [1]
+26.027: (DRIVE-TRUCK TRU1 APT1 POS1 CIT1) [1]
+27.028: (UNLOAD-AIRPLANE OBJ13 APN1 APT3) [1]
+28.029: (UNLOAD-TRUCK OBJ41 TRU1 POS1) [1]
+29.030: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+30.031: (LOAD-TRUCK OBJ11 TRU3 APT3) [1]
+31.032: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+32.033: (UNLOAD-TRUCK OBJ11 TRU3 POS3) [1]
+33.034: (LOAD-TRUCK OBJ32 TRU3 POS3) [1]
+34.035: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+35.036: (LOAD-TRUCK OBJ43 TRU4 POS4) [1]
+36.037: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+37.038: (LOAD-TRUCK OBJ52 TRU5 POS5) [1]
+38.039: (LOAD-TRUCK OBJ51 TRU5 POS5) [1]
+39.040: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+40.041: (UNLOAD-TRUCK OBJ32 TRU3 APT3) [1]
+41.042: (UNLOAD-TRUCK OBJ43 TRU4 APT4) [1]
+42.043: (UNLOAD-TRUCK OBJ52 TRU5 APT5) [1]
+43.044: (UNLOAD-TRUCK OBJ51 TRU5 APT5) [1]
+44.045: (LOAD-AIRPLANE OBJ32 APN1 APT3) [1]
+45.046: (LOAD-AIRPLANE OBJ43 APN2 APT4) [1]
+46.047: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+47.048: (LOAD-TRUCK OBJ21 TRU2 POS2) [1]
+48.049: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+49.050: (UNLOAD-TRUCK OBJ21 TRU2 APT2) [1]
+50.051: (FLY-AIRPLANE APN1 APT3 APT5) [1]
+51.052: (LOAD-AIRPLANE OBJ52 APN1 APT5) [1]
+52.053: (LOAD-AIRPLANE OBJ51 APN1 APT5) [1]
+53.054: (FLY-AIRPLANE APN1 APT5 APT1) [1]
+54.055: (UNLOAD-AIRPLANE OBJ32 APN1 APT1) [1]
+55.056: (UNLOAD-AIRPLANE OBJ52 APN1 APT1) [1]
+56.057: (FLY-AIRPLANE APN1 APT1 APT3) [1]
+57.058: (UNLOAD-AIRPLANE OBJ51 APN1 APT3) [1]
+58.059: (FLY-AIRPLANE APN2 APT4 APT2) [1]
+59.060: (LOAD-AIRPLANE OBJ21 APN2 APT2) [1]
+60.061: (FLY-AIRPLANE APN2 APT2 APT3) [1]
+61.062: (UNLOAD-AIRPLANE OBJ43 APN2 APT3) [1]
+62.063: (FLY-AIRPLANE APN2 APT3 APT4) [1]
+63.064: (UNLOAD-AIRPLANE OBJ21 APN2 APT4) [1]
+64.065: (DRIVE-TRUCK TRU3 APT3 POS3 CIT3) [1]
+65.066: (LOAD-TRUCK OBJ31 TRU3 POS3) [1]
+66.067: (DRIVE-TRUCK TRU3 POS3 APT3 CIT3) [1]
+67.068: (UNLOAD-TRUCK OBJ31 TRU3 APT3) [1]
+68.069: (LOAD-AIRPLANE OBJ31 APN1 APT3) [1]
+69.070: (DRIVE-TRUCK TRU5 APT5 POS5 CIT5) [1]
+70.071: (LOAD-TRUCK OBJ53 TRU5 POS5) [1]
+71.072: (DRIVE-TRUCK TRU5 POS5 APT5 CIT5) [1]
+72.073: (UNLOAD-TRUCK OBJ53 TRU5 APT5) [1]
+73.074: (DRIVE-TRUCK TRU2 APT2 POS2 CIT2) [1]
+74.075: (LOAD-TRUCK OBJ22 TRU2 POS2) [1]
+75.076: (DRIVE-TRUCK TRU2 POS2 APT2 CIT2) [1]
+76.077: (UNLOAD-TRUCK OBJ22 TRU2 APT2) [1]
+77.078: (DRIVE-TRUCK TRU4 APT4 POS4 CIT4) [1]
+78.079: (LOAD-TRUCK OBJ42 TRU4 POS4) [1]
+79.080: (DRIVE-TRUCK TRU4 POS4 APT4 CIT4) [1]
+80.081: (UNLOAD-TRUCK OBJ42 TRU4 APT4) [1]
+81.082: (FLY-AIRPLANE APN1 APT3 APT5) [1]
+82.083: (LOAD-AIRPLANE OBJ53 APN1 APT5) [1]
+83.084: (FLY-AIRPLANE APN1 APT5 APT4) [1]
+84.085: (UNLOAD-AIRPLANE OBJ31 APN1 APT4) [1]
+85.086: (FLY-AIRPLANE APN1 APT4 APT3) [1]
+86.087: (UNLOAD-AIRPLANE OBJ53 APN1 APT3) [1]

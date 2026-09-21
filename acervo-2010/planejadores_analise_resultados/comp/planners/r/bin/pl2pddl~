@@ -1,0 +1,12 @@
+#!/usr/bin/tclsh
+#read from the standand input
+while { [gets stdin line] >= 0 } {
+#    regsub -all {([a-zA-Z0-9]+)(\()} $line {\2\1 } line
+#    regsub -all {,} $line {} line
+#    regsub -all {\[} $line {} line
+#    regsub -all {\]} $line {} line
+    regsub -all {([^ \r])(U)} $line {\1-} line
+    regsub -all {([^ \r])(V)} $line {\1_} line
+    puts $line
+}
+

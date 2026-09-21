@@ -1,0 +1,1067 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p01.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p01.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p01.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p01.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 6 facts and 1 exclusive pairs.
+time: 2, 8 facts and 7 exclusive pairs.
+time: 3, 9 facts and 8 exclusive pairs.
+time: 4, 9 facts and 7 exclusive pairs.
+time: 5, 10 facts and 12 exclusive pairs.
+Goals first reachable in 5 steps.
+102 nodes created.
+
+####################################################
+goals at time 6:
+  stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 21
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market1)
+2 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (load-goods1-truck1-market1-level0-level1-level0-level1)
+4 (drive-truck1-market1-depot1)
+5 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+5 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+5 actions tried
+
+####################################################
+Total elapsed time:   0.00 seconds
+Time in milliseconds: 3
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p02.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p02.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p02.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p02.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 10 facts and 1 exclusive pairs.
+time: 2, 14 facts and 13 exclusive pairs.
+time: 3, 16 facts and 15 exclusive pairs.
+time: 4, 16 facts and 13 exclusive pairs.
+time: 5, 18 facts and 23 exclusive pairs.
+Goals first reachable in 5 steps.
+175 nodes created.
+
+####################################################
+goals at time 6:
+  stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 33
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market1)
+2 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+3 (load-goods1-truck1-market1-level0-level1-level0-level1)
+3 (load-goods2-truck1-market1-level0-level1-level0-level1)
+4 (drive-truck1-market1-depot1)
+5 (unload-goods2-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+8 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+8 actions tried
+
+####################################################
+Total elapsed time:   0.00 seconds
+Time in milliseconds: 4
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p03.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p03.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p03.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p03.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 14 facts and 1 exclusive pairs.
+time: 2, 20 facts and 19 exclusive pairs.
+time: 3, 23 facts and 22 exclusive pairs.
+time: 4, 23 facts and 19 exclusive pairs.
+time: 5, 26 facts and 34 exclusive pairs.
+Goals first reachable in 5 steps.
+248 nodes created.
+
+####################################################
+goals at time 6:
+  stored-goods3-level1 stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 45
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market1)
+2 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+3 (load-goods1-truck1-market1-level0-level1-level0-level1)
+3 (load-goods2-truck1-market1-level0-level1-level0-level1)
+3 (load-goods3-truck1-market1-level0-level1-level0-level1)
+4 (drive-truck1-market1-depot1)
+5 (unload-goods3-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods2-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+11 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+11 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 6
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p04.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p04.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p04.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p04.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 18 facts and 1 exclusive pairs.
+time: 2, 26 facts and 25 exclusive pairs.
+time: 3, 30 facts and 29 exclusive pairs.
+time: 4, 30 facts and 25 exclusive pairs.
+time: 5, 34 facts and 45 exclusive pairs.
+Goals first reachable in 5 steps.
+321 nodes created.
+
+####################################################
+goals at time 6:
+  stored-goods4-level1 stored-goods3-level1 stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 57
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market1)
+2 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods4-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+3 (load-goods1-truck1-market1-level0-level1-level0-level1)
+3 (load-goods2-truck1-market1-level0-level1-level0-level1)
+3 (load-goods3-truck1-market1-level0-level1-level0-level1)
+3 (load-goods4-truck1-market1-level0-level1-level0-level1)
+4 (drive-truck1-market1-depot1)
+5 (unload-goods4-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods3-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods2-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+14 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+14 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 9
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p05.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p05.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p05.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p05.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 29 facts and 2 exclusive pairs.
+time: 2, 31 facts and 6 exclusive pairs.
+time: 3, 41 facts and 26 exclusive pairs.
+time: 4, 51 facts and 76 exclusive pairs.
+time: 5, 51 facts and 66 exclusive pairs.
+time: 6, 51 facts and 56 exclusive pairs.
+time: 7, 56 facts and 81 exclusive pairs.
+Goals first reachable in 7 steps.
+786 nodes created.
+
+####################################################
+goals at time 8:
+  stored-goods5-level1 stored-goods4-level1 stored-goods3-level1 stored-goods2-level1 stored-goods1-level1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 103
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market2)
+2 (drive-truck1-market2-market1)
+3 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods4-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods5-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+4 (load-goods1-truck1-market1-level0-level1-level0-level1)
+4 (load-goods5-truck1-market1-level0-level1-level0-level1)
+4 (load-goods2-truck1-market1-level0-level1-level0-level1)
+4 (load-goods3-truck1-market1-level0-level1-level0-level1)
+4 (load-goods4-truck1-market1-level0-level1-level0-level1)
+5 (drive-truck1-market1-market2)
+6 (drive-truck1-market2-depot1)
+7 (unload-goods5-truck1-depot1-level0-level1-level0-level1)
+7 (unload-goods4-truck1-depot1-level0-level1-level0-level1)
+7 (unload-goods3-truck1-depot1-level0-level1-level0-level1)
+7 (unload-goods2-truck1-depot1-level0-level1-level0-level1)
+7 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+19 total actions in plan
+0 entries in hash table, 
+6 total set-creation steps (entries + hits + plan length - 1)
+19 actions tried
+
+####################################################
+Total elapsed time:   0.02 seconds
+Time in milliseconds: 15
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p06.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p06.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p06.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p06.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 36 facts and 2 exclusive pairs.
+time: 2, 40 facts and 10 exclusive pairs.
+time: 3, 54 facts and 44 exclusive pairs.
+time: 4, 72 facts and 132 exclusive pairs.
+time: 5, 75 facts and 109 exclusive pairs.
+time: 6, 84 facts and 151 exclusive pairs.
+time: 7, 89 facts and 140 exclusive pairs.
+time: 8, 93 facts and 132 exclusive pairs.
+Goals first reachable in 8 steps.
+1653 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods6-level1 stored-goods5-level1 stored-goods4-level1 stored-goods3-level1 stored-goods2-level2 
+stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 38832
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 93 facts and 132 exclusive pairs.
+326 new nodes added.
+
+####################################################
+goals at time 10:
+  stored-goods6-level1 stored-goods5-level1 stored-goods4-level1 stored-goods3-level1 stored-goods2-level2 
+stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 77433
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market2)
+1 (drive-truck2-depot1-market2)
+2 (drive-truck1-market2-market1)
+2 (drive-truck2-market2-market1)
+3 (buy-truck1-goods6-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods5-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods2-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods4-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+4 (load-goods5-truck2-market1-level0-level1-level0-level1)
+4 (load-goods2-truck2-market1-level0-level1-level0-level1)
+4 (load-goods6-truck2-market1-level0-level1-level0-level1)
+4 (load-goods3-truck2-market1-level0-level1-level0-level1)
+4 (load-goods4-truck2-market1-level0-level1-level0-level1)
+4 (load-goods1-truck2-market1-level0-level1-level0-level1)
+5 (drive-truck2-market1-market2)
+5 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+6 (drive-truck2-market2-depot1)
+6 (load-goods2-truck1-market1-level0-level1-level0-level1)
+7 (drive-truck1-market1-market2)
+7 (unload-goods6-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods5-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods4-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods3-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods2-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods1-truck2-depot1-level0-level1-level0-level1)
+8 (drive-truck1-market2-depot1)
+9 (unload-goods2-truck1-depot1-level0-level1-level1-level2)
+End plan
+----------------------------------------------------
+
+29 total actions in plan
+7759 entries in hash table, 17668 hash hits, avg set size 13
+25435 total set-creation steps (entries + hits + plan length - 1)
+42770 actions tried
+
+####################################################
+Total elapsed time:   0.13 seconds
+Time in milliseconds: 129
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p07.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p07.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p07.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p07.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 41 facts and 2 exclusive pairs.
+time: 2, 45 facts and 10 exclusive pairs.
+time: 3, 61 facts and 48 exclusive pairs.
+time: 4, 83 facts and 158 exclusive pairs.
+time: 5, 86 facts and 128 exclusive pairs.
+time: 6, 97 facts and 181 exclusive pairs.
+time: 7, 103 facts and 166 exclusive pairs.
+time: 8, 108 facts and 156 exclusive pairs.
+Goals first reachable in 8 steps.
+1902 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level2 stored-goods3-level1 
+stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 36960
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 108 facts and 156 exclusive pairs.
+380 new nodes added.
+
+####################################################
+goals at time 10:
+  stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level2 stored-goods3-level1 
+stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 285982
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market2)
+1 (drive-truck2-depot1-market2)
+2 (drive-truck1-market2-market1)
+2 (drive-truck2-market2-market1)
+3 (buy-truck1-goods6-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods5-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods2-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods4-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods7-market1-level1-level2-level0-level1)
+4 (load-goods5-truck2-market1-level0-level1-level0-level1)
+4 (load-goods2-truck2-market1-level0-level1-level0-level1)
+4 (load-goods6-truck2-market1-level0-level1-level0-level1)
+4 (load-goods3-truck2-market1-level0-level1-level0-level1)
+4 (load-goods7-truck2-market1-level0-level1-level0-level1)
+4 (load-goods4-truck2-market1-level0-level1-level0-level1)
+4 (load-goods1-truck2-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods7-market1-level0-level1-level0-level1)
+5 (drive-truck2-market1-market2)
+5 (buy-truck1-goods4-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods5-market1-level0-level1-level0-level1)
+6 (load-goods5-truck1-market1-level0-level1-level0-level1)
+6 (drive-truck2-market2-depot1)
+6 (load-goods7-truck1-market1-level0-level1-level0-level1)
+6 (load-goods4-truck1-market1-level0-level1-level0-level1)
+7 (drive-truck1-market1-market2)
+7 (unload-goods7-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods6-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods5-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods4-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods3-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods2-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods1-truck2-depot1-level0-level1-level0-level1)
+8 (drive-truck1-market2-depot1)
+9 (unload-goods7-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods5-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods4-truck1-depot1-level0-level1-level1-level2)
+End plan
+----------------------------------------------------
+
+38 total actions in plan
+13136 entries in hash table, 44018 hash hits, avg set size 16
+57162 total set-creation steps (entries + hits + plan length - 1)
+113085 actions tried
+
+####################################################
+Total elapsed time:   0.30 seconds
+Time in milliseconds: 303
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p08.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p08.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p08.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p08.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 46 facts and 2 exclusive pairs.
+time: 2, 50 facts and 10 exclusive pairs.
+time: 3, 68 facts and 52 exclusive pairs.
+time: 4, 94 facts and 184 exclusive pairs.
+time: 5, 97 facts and 147 exclusive pairs.
+time: 6, 110 facts and 211 exclusive pairs.
+time: 7, 117 facts and 192 exclusive pairs.
+time: 8, 123 facts and 180 exclusive pairs.
+Goals first reachable in 8 steps.
+2151 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods8-level1 stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level2 
+stored-goods3-level1 stored-goods2-level2 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 88728
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 123 facts and 180 exclusive pairs.
+434 new nodes added.
+
+####################################################
+goals at time 10:
+  stored-goods8-level1 stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level2 
+stored-goods3-level1 stored-goods2-level2 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 4246843
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market2)
+1 (drive-truck2-depot1-market2)
+2 (drive-truck1-market2-market1)
+2 (drive-truck2-market2-market1)
+3 (buy-truck1-goods6-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods5-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods2-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods4-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods8-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods7-market1-level1-level2-level0-level1)
+4 (load-goods5-truck2-market1-level0-level1-level0-level1)
+4 (load-goods2-truck2-market1-level0-level1-level0-level1)
+4 (load-goods6-truck2-market1-level0-level1-level0-level1)
+4 (load-goods3-truck2-market1-level0-level1-level0-level1)
+4 (load-goods8-truck2-market1-level0-level1-level0-level1)
+4 (load-goods7-truck2-market1-level0-level1-level0-level1)
+4 (load-goods4-truck2-market1-level0-level1-level0-level1)
+4 (load-goods1-truck2-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods7-market1-level0-level1-level0-level1)
+5 (drive-truck2-market1-market2)
+5 (buy-truck1-goods4-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods5-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+6 (load-goods5-truck1-market1-level0-level1-level0-level1)
+6 (drive-truck2-market2-depot1)
+6 (load-goods2-truck1-market1-level0-level1-level0-level1)
+6 (load-goods7-truck1-market1-level0-level1-level0-level1)
+6 (load-goods4-truck1-market1-level0-level1-level0-level1)
+7 (drive-truck1-market1-market2)
+7 (unload-goods8-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods7-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods6-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods5-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods4-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods3-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods2-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods1-truck2-depot1-level0-level1-level0-level1)
+8 (drive-truck1-market2-depot1)
+9 (unload-goods7-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods5-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods4-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods2-truck1-depot1-level0-level1-level1-level2)
+End plan
+----------------------------------------------------
+
+44 total actions in plan
+217847 entries in hash table, 782296 hash hits, avg set size 18
+1000151 total set-creation steps (entries + hits + plan length - 1)
+1684443 actions tried
+
+####################################################
+Total elapsed time:   4.93 seconds
+Time in milliseconds: 4929
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p09.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p09.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p09.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p09.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 66 facts and 3 exclusive pairs.
+time: 2, 83 facts and 37 exclusive pairs.
+time: 3, 111 facts and 214 exclusive pairs.
+time: 4, 121 facts and 178 exclusive pairs.
+time: 5, 144 facts and 314 exclusive pairs.
+time: 6, 158 facts and 282 exclusive pairs.
+time: 7, 164 facts and 298 exclusive pairs.
+time: 8, 164 facts and 256 exclusive pairs.
+time: 9, 166 facts and 230 exclusive pairs.
+time: 10, 168 facts and 230 exclusive pairs.
+Goals first reachable in 10 steps.
+4598 nodes created.
+
+####################################################
+goals at time 11:
+  stored-goods9-level1 stored-goods8-level2 stored-goods7-level1 stored-goods6-level1 stored-goods5-level2 
+stored-goods4-level2 stored-goods3-level2 stored-goods2-level2 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p10.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p10.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p10.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p10.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 74 facts and 3 exclusive pairs.
+time: 2, 93 facts and 41 exclusive pairs.
+time: 3, 126 facts and 242 exclusive pairs.
+time: 4, 136 facts and 190 exclusive pairs.
+time: 5, 163 facts and 348 exclusive pairs.
+time: 6, 178 facts and 306 exclusive pairs.
+time: 7, 184 facts and 322 exclusive pairs.
+time: 8, 184 facts and 274 exclusive pairs.
+time: 9, 186 facts and 248 exclusive pairs.
+time: 10, 188 facts and 248 exclusive pairs.
+Goals first reachable in 10 steps.
+5177 nodes created.
+
+####################################################
+goals at time 11:
+  stored-goods10-level1 stored-goods9-level1 stored-goods8-level2 stored-goods7-level2 stored-goods6-level1 
+stored-goods5-level2 stored-goods4-level2 stored-goods3-level2 stored-goods2-level1 stored-goods1-level2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p11.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p11.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p11.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p11.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 48 facts and 3 exclusive pairs.
+time: 2, 58 facts and 26 exclusive pairs.
+time: 3, 69 facts and 88 exclusive pairs.
+time: 4, 81 facts and 84 exclusive pairs.
+time: 5, 108 facts and 254 exclusive pairs.
+time: 6, 122 facts and 295 exclusive pairs.
+time: 7, 139 facts and 398 exclusive pairs.
+time: 8, 139 facts and 294 exclusive pairs.
+time: 9, 155 facts and 428 exclusive pairs.
+time: 10, 159 facts and 359 exclusive pairs.
+time: 11, 163 facts and 339 exclusive pairs.
+Goals first reachable in 11 steps.
+5601 nodes created.
+
+####################################################
+goals at time 12:
+  stored-goods6-level1 stored-goods5-level2 stored-goods4-level3 stored-goods3-level3 stored-goods2-level3 
+stored-goods1-level3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p12.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p12.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p12.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p12.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 56 facts and 3 exclusive pairs.
+time: 2, 66 facts and 26 exclusive pairs.
+time: 3, 79 facts and 92 exclusive pairs.
+time: 4, 98 facts and 132 exclusive pairs.
+time: 5, 125 facts and 276 exclusive pairs.
+time: 6, 142 facts and 325 exclusive pairs.
+time: 7, 163 facts and 444 exclusive pairs.
+time: 8, 164 facts and 333 exclusive pairs.
+time: 9, 181 facts and 464 exclusive pairs.
+time: 10, 185 facts and 395 exclusive pairs.
+time: 11, 189 facts and 375 exclusive pairs.
+Goals first reachable in 11 steps.
+6587 nodes created.
+
+####################################################
+goals at time 12:
+  stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level3 stored-goods3-level2 
+stored-goods2-level2 stored-goods1-level3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p13.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p13.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p13.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p13.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 80 facts and 4 exclusive pairs.
+time: 2, 108 facts and 68 exclusive pairs.
+time: 3, 160 facts and 337 exclusive pairs.
+time: 4, 186 facts and 378 exclusive pairs.
+time: 5, 220 facts and 497 exclusive pairs.
+time: 6, 246 facts and 570 exclusive pairs.
+time: 7, 254 facts and 451 exclusive pairs.
+time: 8, 260 facts and 464 exclusive pairs.
+Goals first reachable in 8 steps.
+7200 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods8-level2 stored-goods7-level1 stored-goods6-level1 stored-goods5-level3 stored-goods4-level2 
+stored-goods3-level1 stored-goods2-level1 stored-goods1-level2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p14.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p14.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p14.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p14.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 89 facts and 4 exclusive pairs.
+time: 2, 119 facts and 72 exclusive pairs.
+time: 3, 177 facts and 382 exclusive pairs.
+time: 4, 205 facts and 404 exclusive pairs.
+time: 5, 244 facts and 543 exclusive pairs.
+time: 6, 275 facts and 641 exclusive pairs.
+time: 7, 284 facts and 501 exclusive pairs.
+time: 8, 290 facts and 510 exclusive pairs.
+Goals first reachable in 8 steps.
+8034 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods9-level3 stored-goods8-level2 stored-goods7-level3 stored-goods6-level3 stored-goods5-level3 
+stored-goods4-level1 stored-goods3-level1 stored-goods2-level2 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p15.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p15.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p15.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p15.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 98 facts and 4 exclusive pairs.
+time: 2, 132 facts and 80 exclusive pairs.
+time: 3, 196 facts and 416 exclusive pairs.
+time: 4, 228 facts and 461 exclusive pairs.
+time: 5, 272 facts and 624 exclusive pairs.
+time: 6, 304 facts and 716 exclusive pairs.
+time: 7, 314 facts and 559 exclusive pairs.
+time: 8, 320 facts and 560 exclusive pairs.
+Goals first reachable in 8 steps.
+8964 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods10-level3 stored-goods9-level2 stored-goods8-level1 stored-goods7-level2 stored-goods6-level3 
+stored-goods5-level2 stored-goods4-level2 stored-goods3-level2 stored-goods2-level3 stored-goods1-level3 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p16.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p16.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p16.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p16.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 117 facts and 4 exclusive pairs.
+time: 2, 152 facts and 108 exclusive pairs.
+time: 3, 239 facts and 676 exclusive pairs.
+time: 4, 269 facts and 403 exclusive pairs.
+time: 5, 323 facts and 594 exclusive pairs.
+time: 6, 377 facts and 785 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p17.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p17.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p17.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p17.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 140 facts and 5 exclusive pairs.
+time: 2, 170 facts and 70 exclusive pairs.
+time: 3, 253 facts and 791 exclusive pairs.
+time: 4, 294 facts and 706 exclusive pairs.
+time: 5, 362 facts and 870 exclusive pairs.
+time: 6, 412 facts and 863 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p18.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p18.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p18.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p18.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 152 facts and 5 exclusive pairs.
+time: 2, 184 facts and 74 exclusive pairs.
+time: 3, 274 facts and 853 exclusive pairs.
+time: 4, 319 facts and 744 exclusive pairs.
+time: 5, 393 facts and 932 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p19.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p19.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p19.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p19.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 166 facts and 5 exclusive pairs.
+time: 2, 200 facts and 78 exclusive pairs.
+time: 3, 297 facts and 915 exclusive pairs.
+time: 4, 346 facts and 778 exclusive pairs.
+time: 5, 426 facts and 990 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p20.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p20.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p20.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p20.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 178 facts and 5 exclusive pairs.
+time: 2, 214 facts and 82 exclusive pairs.
+time: 3, 320 facts and 995 exclusive pairs.
+time: 4, 371 facts and 815 exclusive pairs.
+time: 5, 457 facts and 1051 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p21.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p21.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p21.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p21.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 151 facts and 6 exclusive pairs.
+time: 2, 188 facts and 161 exclusive pairs.
+time: 3, 270 facts and 1822 exclusive pairs.
+time: 4, 357 facts and 2039 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p22.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p22.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p22.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p22.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 164 facts and 6 exclusive pairs.
+time: 2, 190 facts and 76 exclusive pairs.
+time: 3, 238 facts and 454 exclusive pairs.
+time: 4, 322 facts and 1159 exclusive pairs.
+time: 5, 388 facts and 1047 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p23.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p23.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p23.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p23.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 175 facts and 6 exclusive pairs.
+time: 2, 216 facts and 115 exclusive pairs.
+time: 3, 315 facts and 616 exclusive pairs.
+time: 4, 407 facts and 969 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p24.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p24.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p24.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p24.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 186 facts and 6 exclusive pairs.
+time: 2, 228 facts and 114 exclusive pairs.
+time: 3, 330 facts and 620 exclusive pairs.
+time: 4, 430 facts and 1042 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p25.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p25.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p25.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p25.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 220 facts and 7 exclusive pairs.
+time: 2, 269 facts and 111 exclusive pairs.
+time: 3, 383 facts and 762 exclusive pairs.
+time: 4, 489 facts and 1823 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p26.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p26.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p26.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p26.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 250 facts and 7 exclusive pairs.
+time: 2, 303 facts and 115 exclusive pairs.
+time: 3, 434 facts and 807 exclusive pairs.
+time: 4, 549 facts and 1630 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p27.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p27.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p27.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p27.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 262 facts and 7 exclusive pairs.
+time: 2, 318 facts and 222 exclusive pairs.
+time: 3, 445 facts and 3001 exclusive pairs.
+time: 4, 573 facts and 4325 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p28.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p28.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p28.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p28.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 278 facts and 7 exclusive pairs.
+time: 2, 333 facts and 119 exclusive pairs.
+time: 3, 481 facts and 980 exclusive pairs.
+time: 4, 607 facts and 1962 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p29.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p29.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p29.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p29.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 321 facts and 8 exclusive pairs.
+time: 2, 375 facts and 140 exclusive pairs.
+time: 3, 549 facts and 1175 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/tpp/Strips/domain_p30.pddl -f /home/matheus/mestrado/comp/tpp/Strips/p30.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/tpp/Strips/domain_p30.pddl
+Loading fact file: /home/matheus/mestrado/comp/tpp/Strips/p30.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 340 facts and 8 exclusive pairs.
+time: 2, 394 facts and 164 exclusive pairs.
+time: 3, 603 facts and 3443 exclusive pairs.
+Too many ops. Need to increase MAXNODES

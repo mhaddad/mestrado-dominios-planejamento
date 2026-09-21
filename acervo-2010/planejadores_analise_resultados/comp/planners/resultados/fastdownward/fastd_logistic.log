@@ -1,0 +1,4297 @@
+---------------Problema 1---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+7 variables of 9 necessary
+54 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 54 to 54)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 54 unary operators... done! [54 unary operators]
+Best heuristic value: 26/19 [expanded 1 state(s)]
+Best heuristic value: 25/18 [expanded 3 state(s)]
+Best heuristic value: 23/18 [expanded 4 state(s)]
+Best heuristic value: 22/17 [expanded 5 state(s)]
+Best heuristic value: 21/16 [expanded 9 state(s)]
+Best heuristic value: 20/15 [expanded 13 state(s)]
+Best heuristic value: 18/14 [expanded 15 state(s)]
+Best heuristic value: 17/13 [expanded 18 state(s)]
+Best heuristic value: 16/12 [expanded 21 state(s)]
+Best heuristic value: 15/11 [expanded 24 state(s)]
+Best heuristic value: 14/10 [expanded 27 state(s)]
+Best heuristic value: 12/9 [expanded 29 state(s)]
+Best heuristic value: 11/8 [expanded 31 state(s)]
+Best heuristic value: 10/7 [expanded 33 state(s)]
+Best heuristic value: 9/7 [expanded 34 state(s)]
+Best heuristic value: 8/6 [expanded 35 state(s)]
+Best heuristic value: 7/5 [expanded 37 state(s)]
+Best heuristic value: 5/5 [expanded 38 state(s)]
+Best heuristic value: 4/4 [expanded 39 state(s)]
+Best heuristic value: 3/3 [expanded 41 state(s)]
+Best heuristic value: 2/2 [expanded 43 state(s)]
+Best heuristic value: 1/1 [expanded 44 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj23 apn1 apt1
+load-truck obj23 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj23 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+unload-airplane obj21 apn1 apt1
+load-truck obj21 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj21 tru1 pos1
+Plan length: 22 step(s).
+Expanded 45 state(s).
+Generated 292 state(s).
+Cache hits: 265
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 2---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+7 variables of 9 necessary
+54 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 54 to 54)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 54 unary operators... done! [54 unary operators]
+Best heuristic value: 24/17 [expanded 1 state(s)]
+Best heuristic value: 23/16 [expanded 3 state(s)]
+Best heuristic value: 21/16 [expanded 6 state(s)]
+Best heuristic value: 21/15 [expanded 8 state(s)]
+Best heuristic value: 20/15 [expanded 12 state(s)]
+Best heuristic value: 19/15 [expanded 13 state(s)]
+Best heuristic value: 19/14 [expanded 14 state(s)]
+Best heuristic value: 18/14 [expanded 15 state(s)]
+Best heuristic value: 17/13 [expanded 21 state(s)]
+Best heuristic value: 16/13 [expanded 22 state(s)]
+Best heuristic value: 15/12 [expanded 27 state(s)]
+Best heuristic value: 14/11 [expanded 30 state(s)]
+Best heuristic value: 12/11 [expanded 32 state(s)]
+Best heuristic value: 11/10 [expanded 34 state(s)]
+Best heuristic value: 10/9 [expanded 38 state(s)]
+Best heuristic value: 9/8 [expanded 40 state(s)]
+Best heuristic value: 8/7 [expanded 43 state(s)]
+Best heuristic value: 7/6 [expanded 46 state(s)]
+Best heuristic value: 5/5 [expanded 47 state(s)]
+Best heuristic value: 4/4 [expanded 48 state(s)]
+Best heuristic value: 3/3 [expanded 50 state(s)]
+Best heuristic value: 2/2 [expanded 52 state(s)]
+Best heuristic value: 1/1 [expanded 53 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+fly-airplane apn1 apt2 apt1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+unload-truck obj11 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+load-airplane obj11 apn1 apt1
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj12 apn1 apt2
+unload-airplane obj11 apn1 apt2
+load-truck obj11 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj11 tru2 pos2
+Plan length: 21 step(s).
+Expanded 54 state(s).
+Generated 363 state(s).
+Cache hits: 355
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 3---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+7 variables of 9 necessary
+54 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 54 to 54)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 54 unary operators... done! [54 unary operators]
+Best heuristic value: 17/13 [expanded 1 state(s)]
+Best heuristic value: 16/12 [expanded 5 state(s)]
+Best heuristic value: 15/11 [expanded 6 state(s)]
+Best heuristic value: 14/10 [expanded 9 state(s)]
+Best heuristic value: 13/9 [expanded 12 state(s)]
+Best heuristic value: 11/9 [expanded 13 state(s)]
+Best heuristic value: 10/8 [expanded 16 state(s)]
+Best heuristic value: 9/7 [expanded 19 state(s)]
+Best heuristic value: 7/7 [expanded 20 state(s)]
+Best heuristic value: 6/6 [expanded 21 state(s)]
+Best heuristic value: 5/5 [expanded 24 state(s)]
+Best heuristic value: 4/4 [expanded 25 state(s)]
+Best heuristic value: 3/3 [expanded 26 state(s)]
+Best heuristic value: 2/2 [expanded 28 state(s)]
+Best heuristic value: 1/1 [expanded 29 state(s)]
+Solution found!
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj11 apn1 apt2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+load-truck obj11 tru2 apt2
+unload-truck obj21 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj11 tru2 pos2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj21 apn1 apt1
+Plan length: 15 step(s).
+Expanded 30 state(s).
+Generated 164 state(s).
+Cache hits: 154
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 4---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+8 variables of 9 necessary
+66 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 66 to 66)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 66 unary operators... done! [66 unary operators]
+Best heuristic value: 36/25 [expanded 1 state(s)]
+Best heuristic value: 35/24 [expanded 4 state(s)]
+Best heuristic value: 34/23 [expanded 8 state(s)]
+Best heuristic value: 33/23 [expanded 9 state(s)]
+Best heuristic value: 32/22 [expanded 12 state(s)]
+Best heuristic value: 31/21 [expanded 15 state(s)]
+Best heuristic value: 30/20 [expanded 19 state(s)]
+Best heuristic value: 29/20 [expanded 21 state(s)]
+Best heuristic value: 29/19 [expanded 25 state(s)]
+Best heuristic value: 28/19 [expanded 26 state(s)]
+Best heuristic value: 27/19 [expanded 27 state(s)]
+Best heuristic value: 26/18 [expanded 28 state(s)]
+Best heuristic value: 25/18 [expanded 29 state(s)]
+Best heuristic value: 24/17 [expanded 32 state(s)]
+Best heuristic value: 23/16 [expanded 34 state(s)]
+Best heuristic value: 21/16 [expanded 35 state(s)]
+Best heuristic value: 20/15 [expanded 36 state(s)]
+Best heuristic value: 19/14 [expanded 38 state(s)]
+Best heuristic value: 18/14 [expanded 39 state(s)]
+Best heuristic value: 17/13 [expanded 40 state(s)]
+Best heuristic value: 16/12 [expanded 44 state(s)]
+Best heuristic value: 15/11 [expanded 45 state(s)]
+Best heuristic value: 14/10 [expanded 48 state(s)]
+Best heuristic value: 13/9 [expanded 51 state(s)]
+Best heuristic value: 11/9 [expanded 53 state(s)]
+Best heuristic value: 10/8 [expanded 55 state(s)]
+Best heuristic value: 9/7 [expanded 58 state(s)]
+Best heuristic value: 7/7 [expanded 59 state(s)]
+Best heuristic value: 6/6 [expanded 60 state(s)]
+Best heuristic value: 5/5 [expanded 63 state(s)]
+Best heuristic value: 4/4 [expanded 64 state(s)]
+Best heuristic value: 3/3 [expanded 66 state(s)]
+Best heuristic value: 2/2 [expanded 68 state(s)]
+Best heuristic value: 1/1 [expanded 69 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+drive-truck tru1 apt1 pos1 cit1
+unload-airplane obj11 apn1 apt2
+load-truck obj23 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-truck obj11 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj11 tru2 pos2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj22 apn1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj12 apn1 apt2
+load-truck obj12 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj12 tru2 pos2
+Plan length: 32 step(s).
+Expanded 70 state(s).
+Generated 532 state(s).
+Cache hits: 516
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 5---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+8 variables of 9 necessary
+66 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 66 to 66)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 66 unary operators... done! [66 unary operators]
+Best heuristic value: 20/15 [expanded 1 state(s)]
+Best heuristic value: 19/15 [expanded 3 state(s)]
+Best heuristic value: 19/14 [expanded 6 state(s)]
+Best heuristic value: 18/14 [expanded 9 state(s)]
+Best heuristic value: 18/13 [expanded 13 state(s)]
+Best heuristic value: 17/13 [expanded 14 state(s)]
+Best heuristic value: 16/12 [expanded 15 state(s)]
+Best heuristic value: 15/12 [expanded 18 state(s)]
+Best heuristic value: 15/11 [expanded 20 state(s)]
+Best heuristic value: 14/11 [expanded 22 state(s)]
+Best heuristic value: 13/11 [expanded 23 state(s)]
+Best heuristic value: 12/10 [expanded 27 state(s)]
+Best heuristic value: 11/9 [expanded 28 state(s)]
+Best heuristic value: 10/8 [expanded 30 state(s)]
+Best heuristic value: 9/7 [expanded 32 state(s)]
+Best heuristic value: 7/7 [expanded 33 state(s)]
+Best heuristic value: 6/6 [expanded 34 state(s)]
+Best heuristic value: 5/5 [expanded 36 state(s)]
+Best heuristic value: 4/4 [expanded 37 state(s)]
+Best heuristic value: 3/3 [expanded 38 state(s)]
+Best heuristic value: 2/2 [expanded 40 state(s)]
+Best heuristic value: 1/1 [expanded 41 state(s)]
+Solution found!
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+unload-truck obj23 tru2 apt2
+fly-airplane apn1 apt1 apt2
+drive-truck tru2 apt2 pos2 cit2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj23 apn1 apt1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-truck obj23 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj23 tru1 pos1
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+Plan length: 19 step(s).
+Expanded 42 state(s).
+Generated 280 state(s).
+Cache hits: 309
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 6---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+8 variables of 9 necessary
+66 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 66 to 66)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 66 unary operators... done! [66 unary operators]
+Best heuristic value: 9/8 [expanded 1 state(s)]
+Best heuristic value: 8/7 [expanded 3 state(s)]
+Best heuristic value: 7/6 [expanded 5 state(s)]
+Best heuristic value: 5/5 [expanded 6 state(s)]
+Best heuristic value: 4/4 [expanded 7 state(s)]
+Best heuristic value: 3/3 [expanded 8 state(s)]
+Best heuristic value: 2/2 [expanded 10 state(s)]
+Best heuristic value: 1/1 [expanded 11 state(s)]
+Solution found!
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+unload-truck obj21 tru2 apt2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+Plan length: 8 step(s).
+Expanded 12 state(s).
+Generated 83 state(s).
+Cache hits: 61
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 7---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 9 necessary
+78 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 78 to 78)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 78 unary operators... done! [78 unary operators]
+Best heuristic value: 32/23 [expanded 1 state(s)]
+Best heuristic value: 31/22 [expanded 5 state(s)]
+Best heuristic value: 30/21 [expanded 9 state(s)]
+Best heuristic value: 29/21 [expanded 10 state(s)]
+Best heuristic value: 28/20 [expanded 15 state(s)]
+Best heuristic value: 27/19 [expanded 19 state(s)]
+Best heuristic value: 26/18 [expanded 23 state(s)]
+Best heuristic value: 25/18 [expanded 25 state(s)]
+Best heuristic value: 25/17 [expanded 29 state(s)]
+Best heuristic value: 24/17 [expanded 30 state(s)]
+Best heuristic value: 23/17 [expanded 31 state(s)]
+Best heuristic value: 22/16 [expanded 32 state(s)]
+Best heuristic value: 21/16 [expanded 33 state(s)]
+Best heuristic value: 20/15 [expanded 36 state(s)]
+Best heuristic value: 19/14 [expanded 39 state(s)]
+Best heuristic value: 18/14 [expanded 40 state(s)]
+Best heuristic value: 17/13 [expanded 42 state(s)]
+Best heuristic value: 16/13 [expanded 43 state(s)]
+Best heuristic value: 15/12 [expanded 44 state(s)]
+Best heuristic value: 14/11 [expanded 47 state(s)]
+Best heuristic value: 12/10 [expanded 48 state(s)]
+Best heuristic value: 11/9 [expanded 49 state(s)]
+Best heuristic value: 10/8 [expanded 51 state(s)]
+Best heuristic value: 9/7 [expanded 53 state(s)]
+Best heuristic value: 7/7 [expanded 54 state(s)]
+Best heuristic value: 6/6 [expanded 55 state(s)]
+Best heuristic value: 5/5 [expanded 58 state(s)]
+Best heuristic value: 4/4 [expanded 59 state(s)]
+Best heuristic value: 3/3 [expanded 61 state(s)]
+Best heuristic value: 2/2 [expanded 63 state(s)]
+Best heuristic value: 1/1 [expanded 64 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj11 apn1 apt2
+drive-truck tru1 apt1 pos1 cit1
+unload-airplane obj13 apn1 apt2
+load-truck obj23 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+load-truck obj13 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj23 apn1 apt1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj12 apn1 apt2
+Plan length: 29 step(s).
+Expanded 65 state(s).
+Generated 506 state(s).
+Cache hits: 515
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.01 seconds
+---------------Problema 8---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 9 necessary
+78 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 78 to 78)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 78 unary operators... done! [78 unary operators]
+Best heuristic value: 16/13 [expanded 1 state(s)]
+Best heuristic value: 15/12 [expanded 5 state(s)]
+Best heuristic value: 14/11 [expanded 9 state(s)]
+Best heuristic value: 12/10 [expanded 10 state(s)]
+Best heuristic value: 11/9 [expanded 11 state(s)]
+Best heuristic value: 10/8 [expanded 14 state(s)]
+Best heuristic value: 9/7 [expanded 17 state(s)]
+Best heuristic value: 8/6 [expanded 18 state(s)]
+Best heuristic value: 7/5 [expanded 20 state(s)]
+Best heuristic value: 6/4 [expanded 22 state(s)]
+Best heuristic value: 4/4 [expanded 23 state(s)]
+Best heuristic value: 3/3 [expanded 24 state(s)]
+Best heuristic value: 2/2 [expanded 26 state(s)]
+Best heuristic value: 1/1 [expanded 27 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+load-truck obj13 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+Plan length: 14 step(s).
+Expanded 28 state(s).
+Generated 208 state(s).
+Cache hits: 158
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 9---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 9 necessary
+78 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 78 to 78)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 78 unary operators... done! [78 unary operators]
+Best heuristic value: 33/23 [expanded 1 state(s)]
+Best heuristic value: 32/22 [expanded 3 state(s)]
+Best heuristic value: 31/21 [expanded 7 state(s)]
+Best heuristic value: 30/21 [expanded 8 state(s)]
+Best heuristic value: 29/20 [expanded 9 state(s)]
+Best heuristic value: 28/19 [expanded 13 state(s)]
+Best heuristic value: 27/19 [expanded 15 state(s)]
+Best heuristic value: 27/18 [expanded 19 state(s)]
+Best heuristic value: 26/18 [expanded 20 state(s)]
+Best heuristic value: 25/18 [expanded 24 state(s)]
+Best heuristic value: 25/17 [expanded 26 state(s)]
+Best heuristic value: 24/17 [expanded 27 state(s)]
+Best heuristic value: 23/17 [expanded 30 state(s)]
+Best heuristic value: 22/17 [expanded 33 state(s)]
+Best heuristic value: 21/16 [expanded 35 state(s)]
+Best heuristic value: 20/15 [expanded 38 state(s)]
+Best heuristic value: 18/15 [expanded 39 state(s)]
+Best heuristic value: 17/14 [expanded 40 state(s)]
+Best heuristic value: 16/13 [expanded 43 state(s)]
+Best heuristic value: 15/13 [expanded 44 state(s)]
+Best heuristic value: 14/12 [expanded 47 state(s)]
+Best heuristic value: 13/11 [expanded 49 state(s)]
+Best heuristic value: 12/10 [expanded 53 state(s)]
+Best heuristic value: 11/9 [expanded 55 state(s)]
+Best heuristic value: 10/8 [expanded 58 state(s)]
+Best heuristic value: 9/7 [expanded 61 state(s)]
+Best heuristic value: 8/6 [expanded 62 state(s)]
+Best heuristic value: 7/5 [expanded 63 state(s)]
+Best heuristic value: 6/4 [expanded 65 state(s)]
+Best heuristic value: 4/4 [expanded 66 state(s)]
+Best heuristic value: 3/3 [expanded 67 state(s)]
+Best heuristic value: 2/2 [expanded 69 state(s)]
+Best heuristic value: 1/1 [expanded 70 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+unload-truck obj11 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj23 apn1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj11 apn1 apt2
+load-truck obj11 tru2 apt2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+unload-truck obj22 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj11 tru2 pos2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj22 apn1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj12 apn1 apt2
+Plan length: 29 step(s).
+Expanded 71 state(s).
+Generated 556 state(s).
+Cache hits: 542
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.01 seconds
+---------------Problema 10---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 9 necessary
+78 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 78 to 78)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 78 unary operators... done! [78 unary operators]
+Best heuristic value: 30/21 [expanded 1 state(s)]
+Best heuristic value: 29/20 [expanded 5 state(s)]
+Best heuristic value: 28/20 [expanded 6 state(s)]
+Best heuristic value: 27/19 [expanded 11 state(s)]
+Best heuristic value: 26/18 [expanded 15 state(s)]
+Best heuristic value: 25/18 [expanded 18 state(s)]
+Best heuristic value: 25/17 [expanded 21 state(s)]
+Best heuristic value: 24/17 [expanded 24 state(s)]
+Best heuristic value: 22/17 [expanded 25 state(s)]
+Best heuristic value: 21/16 [expanded 29 state(s)]
+Best heuristic value: 20/15 [expanded 33 state(s)]
+Best heuristic value: 19/15 [expanded 34 state(s)]
+Best heuristic value: 18/14 [expanded 39 state(s)]
+Best heuristic value: 17/14 [expanded 40 state(s)]
+Best heuristic value: 16/13 [expanded 45 state(s)]
+Best heuristic value: 15/12 [expanded 49 state(s)]
+Best heuristic value: 14/11 [expanded 53 state(s)]
+Best heuristic value: 13/10 [expanded 54 state(s)]
+Best heuristic value: 12/9 [expanded 55 state(s)]
+Best heuristic value: 11/8 [expanded 58 state(s)]
+Best heuristic value: 9/7 [expanded 60 state(s)]
+Best heuristic value: 8/6 [expanded 62 state(s)]
+Best heuristic value: 7/5 [expanded 64 state(s)]
+Best heuristic value: 6/4 [expanded 66 state(s)]
+Best heuristic value: 4/4 [expanded 67 state(s)]
+Best heuristic value: 3/3 [expanded 68 state(s)]
+Best heuristic value: 2/2 [expanded 70 state(s)]
+Best heuristic value: 1/1 [expanded 71 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj13 tru2 apt2
+unload-truck obj22 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj22 apn1 apt1
+unload-airplane obj23 apn1 apt1
+load-truck obj23 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj23 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+Plan length: 26 step(s).
+Expanded 72 state(s).
+Generated 520 state(s).
+Cache hits: 542
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 11---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+11 variables of 13 necessary
+138 of 174 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 138 to 138)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 138 unary operators... done! [138 unary operators]
+Best heuristic value: 48/33 [expanded 1 state(s)]
+Best heuristic value: 47/33 [expanded 3 state(s)]
+Best heuristic value: 47/32 [expanded 6 state(s)]
+Best heuristic value: 46/32 [expanded 7 state(s)]
+Best heuristic value: 46/31 [expanded 11 state(s)]
+Best heuristic value: 45/31 [expanded 12 state(s)]
+Best heuristic value: 44/31 [expanded 14 state(s)]
+Best heuristic value: 43/30 [expanded 17 state(s)]
+Best heuristic value: 42/29 [expanded 20 state(s)]
+Best heuristic value: 41/28 [expanded 24 state(s)]
+Best heuristic value: 40/28 [expanded 26 state(s)]
+Best heuristic value: 40/27 [expanded 30 state(s)]
+Best heuristic value: 39/27 [expanded 31 state(s)]
+Best heuristic value: 38/27 [expanded 33 state(s)]
+Best heuristic value: 37/26 [expanded 34 state(s)]
+Best heuristic value: 35/26 [expanded 35 state(s)]
+Best heuristic value: 34/25 [expanded 36 state(s)]
+Best heuristic value: 33/24 [expanded 39 state(s)]
+Best heuristic value: 32/24 [expanded 40 state(s)]
+Best heuristic value: 31/23 [expanded 43 state(s)]
+Best heuristic value: 30/22 [expanded 46 state(s)]
+Best heuristic value: 29/22 [expanded 47 state(s)]
+Best heuristic value: 28/21 [expanded 48 state(s)]
+Best heuristic value: 27/20 [expanded 53 state(s)]
+Best heuristic value: 25/20 [expanded 54 state(s)]
+Best heuristic value: 24/19 [expanded 61 state(s)]
+Best heuristic value: 23/18 [expanded 66 state(s)]
+Best heuristic value: 22/17 [expanded 68 state(s)]
+Best heuristic value: 21/16 [expanded 72 state(s)]
+Best heuristic value: 20/15 [expanded 76 state(s)]
+Best heuristic value: 19/14 [expanded 77 state(s)]
+Best heuristic value: 18/14 [expanded 78 state(s)]
+Best heuristic value: 18/13 [expanded 81 state(s)]
+Best heuristic value: 15/13 [expanded 82 state(s)]
+Best heuristic value: 14/12 [expanded 83 state(s)]
+Best heuristic value: 13/11 [expanded 85 state(s)]
+Best heuristic value: 12/10 [expanded 87 state(s)]
+Best heuristic value: 10/10 [expanded 88 state(s)]
+Best heuristic value: 9/9 [expanded 89 state(s)]
+Best heuristic value: 8/8 [expanded 93 state(s)]
+Best heuristic value: 7/7 [expanded 94 state(s)]
+Best heuristic value: 6/6 [expanded 97 state(s)]
+Best heuristic value: 5/5 [expanded 100 state(s)]
+Best heuristic value: 4/4 [expanded 101 state(s)]
+Best heuristic value: 3/3 [expanded 103 state(s)]
+Best heuristic value: 2/2 [expanded 105 state(s)]
+Best heuristic value: 1/1 [expanded 106 state(s)]
+Solution found!
+fly-airplane apn1 apt1 apt3
+load-truck obj31 tru3 pos3
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+load-airplane obj31 apn1 apt3
+unload-truck obj33 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+load-airplane obj33 apn1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj31 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj33 apn1 apt1
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj13 apn1 apt3
+load-truck obj23 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj23 apn1 apt1
+unload-airplane obj32 apn1 apt1
+load-truck obj32 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj32 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj12 apn1 apt2
+load-truck obj12 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj12 tru2 pos2
+Plan length: 43 step(s).
+Expanded 107 state(s).
+Generated 1170 state(s).
+Cache hits: 1287
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.02 seconds
+---------------Problema 12---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+11 variables of 13 necessary
+138 of 174 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 138 to 138)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 138 unary operators... done! [138 unary operators]
+Best heuristic value: 59/39 [expanded 1 state(s)]
+Best heuristic value: 58/39 [expanded 2 state(s)]
+Best heuristic value: 58/38 [expanded 5 state(s)]
+Best heuristic value: 57/38 [expanded 6 state(s)]
+Best heuristic value: 56/38 [expanded 8 state(s)]
+Best heuristic value: 55/37 [expanded 10 state(s)]
+Best heuristic value: 54/36 [expanded 16 state(s)]
+Best heuristic value: 53/35 [expanded 22 state(s)]
+Best heuristic value: 51/35 [expanded 24 state(s)]
+Best heuristic value: 50/34 [expanded 32 state(s)]
+Best heuristic value: 49/33 [expanded 38 state(s)]
+Best heuristic value: 48/33 [expanded 43 state(s)]
+Best heuristic value: 48/32 [expanded 45 state(s)]
+Best heuristic value: 47/32 [expanded 51 state(s)]
+Best heuristic value: 47/31 [expanded 57 state(s)]
+Best heuristic value: 45/31 [expanded 59 state(s)]
+Best heuristic value: 44/30 [expanded 66 state(s)]
+Best heuristic value: 43/30 [expanded 71 state(s)]
+Best heuristic value: 43/29 [expanded 73 state(s)]
+Best heuristic value: 42/29 [expanded 75 state(s)]
+Best heuristic value: 41/28 [expanded 76 state(s)]
+Best heuristic value: 39/28 [expanded 77 state(s)]
+Best heuristic value: 38/27 [expanded 84 state(s)]
+Best heuristic value: 37/26 [expanded 88 state(s)]
+Best heuristic value: 35/26 [expanded 90 state(s)]
+Best heuristic value: 34/25 [expanded 93 state(s)]
+Best heuristic value: 33/24 [expanded 97 state(s)]
+Best heuristic value: 32/24 [expanded 98 state(s)]
+Best heuristic value: 31/23 [expanded 102 state(s)]
+Best heuristic value: 30/23 [expanded 103 state(s)]
+Best heuristic value: 29/22 [expanded 104 state(s)]
+Best heuristic value: 28/21 [expanded 109 state(s)]
+Best heuristic value: 26/20 [expanded 110 state(s)]
+Best heuristic value: 25/19 [expanded 113 state(s)]
+Best heuristic value: 24/18 [expanded 116 state(s)]
+Best heuristic value: 23/18 [expanded 117 state(s)]
+Best heuristic value: 22/17 [expanded 118 state(s)]
+Best heuristic value: 21/16 [expanded 122 state(s)]
+Best heuristic value: 20/15 [expanded 127 state(s)]
+Best heuristic value: 19/14 [expanded 129 state(s)]
+Best heuristic value: 18/13 [expanded 133 state(s)]
+Best heuristic value: 17/12 [expanded 138 state(s)]
+Best heuristic value: 15/11 [expanded 139 state(s)]
+Best heuristic value: 14/10 [expanded 140 state(s)]
+Best heuristic value: 13/9 [expanded 143 state(s)]
+Best heuristic value: 11/9 [expanded 144 state(s)]
+Best heuristic value: 10/8 [expanded 147 state(s)]
+Best heuristic value: 9/7 [expanded 149 state(s)]
+Best heuristic value: 7/7 [expanded 150 state(s)]
+Best heuristic value: 6/6 [expanded 151 state(s)]
+Best heuristic value: 5/5 [expanded 154 state(s)]
+Best heuristic value: 4/4 [expanded 155 state(s)]
+Best heuristic value: 3/3 [expanded 157 state(s)]
+Best heuristic value: 2/2 [expanded 159 state(s)]
+Best heuristic value: 1/1 [expanded 160 state(s)]
+Solution found!
+fly-airplane apn1 apt3 apt1
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt3
+load-airplane obj33 apn1 apt3
+unload-airplane obj11 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj33 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj11 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj11 tru3 pos3
+load-truck obj23 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+load-truck obj13 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj23 apn1 apt1
+unload-truck obj21 tru2 apt2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+fly-airplane apn1 apt1 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj21 apn1 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj32 apn1 apt1
+load-truck obj32 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj32 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj12 apn1 apt3
+Plan length: 52 step(s).
+Expanded 161 state(s).
+Generated 1664 state(s).
+Cache hits: 2340
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.02 seconds
+---------------Problema 13---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+12 variables of 13 necessary
+156 of 174 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 156 to 156)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 156 unary operators... done! [156 unary operators]
+Best heuristic value: 40/29 [expanded 1 state(s)]
+Best heuristic value: 39/28 [expanded 3 state(s)]
+Best heuristic value: 37/28 [expanded 4 state(s)]
+Best heuristic value: 36/27 [expanded 5 state(s)]
+Best heuristic value: 35/26 [expanded 9 state(s)]
+Best heuristic value: 34/25 [expanded 14 state(s)]
+Best heuristic value: 32/24 [expanded 15 state(s)]
+Best heuristic value: 31/23 [expanded 18 state(s)]
+Best heuristic value: 30/22 [expanded 21 state(s)]
+Best heuristic value: 29/22 [expanded 22 state(s)]
+Best heuristic value: 28/21 [expanded 23 state(s)]
+Best heuristic value: 27/20 [expanded 27 state(s)]
+Best heuristic value: 26/19 [expanded 32 state(s)]
+Best heuristic value: 25/18 [expanded 37 state(s)]
+Best heuristic value: 23/17 [expanded 39 state(s)]
+Best heuristic value: 22/16 [expanded 41 state(s)]
+Best heuristic value: 21/15 [expanded 45 state(s)]
+Best heuristic value: 20/14 [expanded 49 state(s)]
+Best heuristic value: 19/13 [expanded 50 state(s)]
+Best heuristic value: 18/13 [expanded 52 state(s)]
+Best heuristic value: 18/12 [expanded 54 state(s)]
+Best heuristic value: 15/12 [expanded 55 state(s)]
+Best heuristic value: 14/11 [expanded 58 state(s)]
+Best heuristic value: 13/10 [expanded 60 state(s)]
+Best heuristic value: 12/10 [expanded 61 state(s)]
+Best heuristic value: 11/9 [expanded 62 state(s)]
+Best heuristic value: 10/8 [expanded 65 state(s)]
+Best heuristic value: 8/8 [expanded 66 state(s)]
+Best heuristic value: 7/7 [expanded 69 state(s)]
+Best heuristic value: 6/6 [expanded 71 state(s)]
+Best heuristic value: 5/5 [expanded 74 state(s)]
+Best heuristic value: 4/4 [expanded 75 state(s)]
+Best heuristic value: 3/3 [expanded 76 state(s)]
+Best heuristic value: 2/2 [expanded 78 state(s)]
+Best heuristic value: 1/1 [expanded 79 state(s)]
+Solution found!
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+unload-truck obj11 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+unload-truck obj22 tru2 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj11 apn1 apt3
+load-truck obj11 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj11 tru3 pos3
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-airplane obj32 apn1 apt3
+unload-airplane obj22 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj32 apn1 apt1
+load-truck obj22 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj22 tru3 pos3
+Plan length: 34 step(s).
+Expanded 80 state(s).
+Generated 878 state(s).
+Cache hits: 905
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.02 seconds
+---------------Problema 14---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+12 variables of 13 necessary
+156 of 174 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 156 to 156)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 156 unary operators... done! [156 unary operators]
+Best heuristic value: 62/41 [expanded 1 state(s)]
+Best heuristic value: 61/40 [expanded 4 state(s)]
+Best heuristic value: 59/40 [expanded 5 state(s)]
+Best heuristic value: 58/39 [expanded 8 state(s)]
+Best heuristic value: 57/38 [expanded 11 state(s)]
+Best heuristic value: 55/38 [expanded 12 state(s)]
+Best heuristic value: 54/37 [expanded 13 state(s)]
+Best heuristic value: 53/36 [expanded 18 state(s)]
+Best heuristic value: 52/35 [expanded 23 state(s)]
+Best heuristic value: 51/34 [expanded 29 state(s)]
+Best heuristic value: 49/34 [expanded 32 state(s)]
+Best heuristic value: 48/33 [expanded 35 state(s)]
+Best heuristic value: 47/32 [expanded 41 state(s)]
+Best heuristic value: 46/31 [expanded 47 state(s)]
+Best heuristic value: 44/30 [expanded 49 state(s)]
+Best heuristic value: 43/29 [expanded 53 state(s)]
+Best heuristic value: 42/28 [expanded 57 state(s)]
+Best heuristic value: 40/28 [expanded 59 state(s)]
+Best heuristic value: 39/27 [expanded 63 state(s)]
+Best heuristic value: 38/26 [expanded 66 state(s)]
+Best heuristic value: 36/26 [expanded 68 state(s)]
+Best heuristic value: 35/25 [expanded 70 state(s)]
+Best heuristic value: 34/24 [expanded 73 state(s)]
+Best heuristic value: 33/24 [expanded 75 state(s)]
+Best heuristic value: 32/23 [expanded 77 state(s)]
+Best heuristic value: 31/22 [expanded 79 state(s)]
+Best heuristic value: 30/22 [expanded 80 state(s)]
+Best heuristic value: 29/21 [expanded 81 state(s)]
+Best heuristic value: 28/20 [expanded 83 state(s)]
+Best heuristic value: 26/20 [expanded 84 state(s)]
+Best heuristic value: 25/19 [expanded 85 state(s)]
+Best heuristic value: 24/18 [expanded 89 state(s)]
+Best heuristic value: 23/17 [expanded 94 state(s)]
+Best heuristic value: 22/16 [expanded 97 state(s)]
+Best heuristic value: 21/15 [expanded 101 state(s)]
+Best heuristic value: 21/14 [expanded 107 state(s)]
+Best heuristic value: 18/14 [expanded 108 state(s)]
+Best heuristic value: 17/13 [expanded 113 state(s)]
+Best heuristic value: 16/12 [expanded 116 state(s)]
+Best heuristic value: 14/12 [expanded 117 state(s)]
+Best heuristic value: 13/11 [expanded 118 state(s)]
+Best heuristic value: 12/10 [expanded 122 state(s)]
+Best heuristic value: 11/9 [expanded 123 state(s)]
+Best heuristic value: 10/8 [expanded 126 state(s)]
+Best heuristic value: 8/7 [expanded 127 state(s)]
+Best heuristic value: 7/6 [expanded 129 state(s)]
+Best heuristic value: 6/5 [expanded 131 state(s)]
+Best heuristic value: 5/4 [expanded 133 state(s)]
+Best heuristic value: 4/3 [expanded 135 state(s)]
+Best heuristic value: 2/2 [expanded 136 state(s)]
+Best heuristic value: 1/1 [expanded 137 state(s)]
+Solution found!
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+load-airplane obj31 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj31 apn1 apt1
+load-truck obj13 tru1 pos1
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+unload-truck obj21 tru2 apt2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj13 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj21 apn1 apt3
+load-truck obj21 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj21 tru3 pos3
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+unload-truck obj12 tru1 apt1
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+drive-truck tru3 apt3 pos3 cit3
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj32 apn1 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj12 apn1 apt3
+load-truck obj12 tru3 apt3
+unload-airplane obj22 apn1 apt3
+load-truck obj22 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj12 tru3 pos3
+unload-truck obj22 tru3 pos3
+Plan length: 52 step(s).
+Expanded 138 state(s).
+Generated 1589 state(s).
+Cache hits: 1936
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.02 seconds
+---------------Problema 15---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+13 variables of 13 necessary
+174 of 174 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 174 to 174)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 174 unary operators... done! [174 unary operators]
+Best heuristic value: 47/33 [expanded 1 state(s)]
+Best heuristic value: 46/32 [expanded 3 state(s)]
+Best heuristic value: 45/32 [expanded 4 state(s)]
+Best heuristic value: 44/31 [expanded 5 state(s)]
+Best heuristic value: 43/31 [expanded 9 state(s)]
+Best heuristic value: 43/30 [expanded 10 state(s)]
+Best heuristic value: 40/30 [expanded 12 state(s)]
+Best heuristic value: 39/29 [expanded 19 state(s)]
+Best heuristic value: 38/28 [expanded 24 state(s)]
+Best heuristic value: 37/27 [expanded 29 state(s)]
+Best heuristic value: 36/27 [expanded 31 state(s)]
+Best heuristic value: 35/26 [expanded 38 state(s)]
+Best heuristic value: 34/25 [expanded 43 state(s)]
+Best heuristic value: 33/24 [expanded 48 state(s)]
+Best heuristic value: 32/24 [expanded 51 state(s)]
+Best heuristic value: 32/23 [expanded 56 state(s)]
+Best heuristic value: 31/23 [expanded 57 state(s)]
+Best heuristic value: 30/22 [expanded 60 state(s)]
+Best heuristic value: 29/22 [expanded 61 state(s)]
+Best heuristic value: 28/22 [expanded 65 state(s)]
+Best heuristic value: 28/21 [expanded 66 state(s)]
+Best heuristic value: 26/21 [expanded 68 state(s)]
+Best heuristic value: 25/20 [expanded 69 state(s)]
+Best heuristic value: 24/20 [expanded 71 state(s)]
+Best heuristic value: 24/19 [expanded 73 state(s)]
+Best heuristic value: 23/19 [expanded 74 state(s)]
+Best heuristic value: 22/18 [expanded 77 state(s)]
+Best heuristic value: 20/18 [expanded 78 state(s)]
+Best heuristic value: 19/17 [expanded 79 state(s)]
+Best heuristic value: 18/16 [expanded 83 state(s)]
+Best heuristic value: 17/15 [expanded 84 state(s)]
+Best heuristic value: 16/14 [expanded 87 state(s)]
+Best heuristic value: 15/13 [expanded 90 state(s)]
+Best heuristic value: 14/12 [expanded 91 state(s)]
+Best heuristic value: 13/11 [expanded 93 state(s)]
+Best heuristic value: 12/10 [expanded 95 state(s)]
+Best heuristic value: 11/10 [expanded 97 state(s)]
+Best heuristic value: 11/9 [expanded 100 state(s)]
+Best heuristic value: 10/8 [expanded 103 state(s)]
+Best heuristic value: 9/8 [expanded 105 state(s)]
+Best heuristic value: 9/7 [expanded 107 state(s)]
+Best heuristic value: 8/7 [expanded 109 state(s)]
+Best heuristic value: 8/6 [expanded 111 state(s)]
+Best heuristic value: 7/6 [expanded 112 state(s)]
+Best heuristic value: 6/5 [expanded 116 state(s)]
+Best heuristic value: 5/4 [expanded 118 state(s)]
+Best heuristic value: 4/3 [expanded 120 state(s)]
+Best heuristic value: 2/2 [expanded 121 state(s)]
+Best heuristic value: 1/1 [expanded 122 state(s)]
+Solution found!
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj21 apn1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj13 apn1 apt3
+drive-truck tru2 apt2 pos2 cit2
+unload-airplane obj23 apn1 apt3
+load-truck obj23 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj23 tru3 pos3
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj32 apn1 apt1
+load-truck obj32 tru1 apt1
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+fly-airplane apn1 apt1 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj22 apn1 apt1
+load-truck obj22 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj32 tru1 pos1
+unload-truck obj22 tru1 pos1
+Plan length: 41 step(s).
+Expanded 123 state(s).
+Generated 1349 state(s).
+Cache hits: 1371
+Cache misses: 0
+Search time: 0.02 seconds
+Total time: 0.02 seconds
+---------------Problema 16---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+13 variables of 13 necessary
+174 of 174 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 174 to 174)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 174 unary operators... done! [174 unary operators]
+Best heuristic value: 39/29 [expanded 1 state(s)]
+Best heuristic value: 38/28 [expanded 3 state(s)]
+Best heuristic value: 36/28 [expanded 4 state(s)]
+Best heuristic value: 35/27 [expanded 5 state(s)]
+Best heuristic value: 34/26 [expanded 9 state(s)]
+Best heuristic value: 33/25 [expanded 14 state(s)]
+Best heuristic value: 32/25 [expanded 15 state(s)]
+Best heuristic value: 31/24 [expanded 20 state(s)]
+Best heuristic value: 30/23 [expanded 24 state(s)]
+Best heuristic value: 29/22 [expanded 29 state(s)]
+Best heuristic value: 28/22 [expanded 32 state(s)]
+Best heuristic value: 28/21 [expanded 36 state(s)]
+Best heuristic value: 27/21 [expanded 39 state(s)]
+Best heuristic value: 26/21 [expanded 44 state(s)]
+Best heuristic value: 26/20 [expanded 46 state(s)]
+Best heuristic value: 25/20 [expanded 47 state(s)]
+Best heuristic value: 25/19 [expanded 50 state(s)]
+Best heuristic value: 24/19 [expanded 56 state(s)]
+Best heuristic value: 23/18 [expanded 59 state(s)]
+Best heuristic value: 22/17 [expanded 62 state(s)]
+Best heuristic value: 21/16 [expanded 65 state(s)]
+Best heuristic value: 19/15 [expanded 66 state(s)]
+Best heuristic value: 18/14 [expanded 67 state(s)]
+Best heuristic value: 17/13 [expanded 69 state(s)]
+Best heuristic value: 16/12 [expanded 71 state(s)]
+Best heuristic value: 15/12 [expanded 72 state(s)]
+Best heuristic value: 14/11 [expanded 73 state(s)]
+Best heuristic value: 13/10 [expanded 75 state(s)]
+Best heuristic value: 11/10 [expanded 76 state(s)]
+Best heuristic value: 10/9 [expanded 77 state(s)]
+Best heuristic value: 9/9 [expanded 79 state(s)]
+Best heuristic value: 9/8 [expanded 82 state(s)]
+Best heuristic value: 8/7 [expanded 84 state(s)]
+Best heuristic value: 7/7 [expanded 86 state(s)]
+Best heuristic value: 7/6 [expanded 88 state(s)]
+Best heuristic value: 6/6 [expanded 89 state(s)]
+Best heuristic value: 5/5 [expanded 92 state(s)]
+Best heuristic value: 4/4 [expanded 93 state(s)]
+Best heuristic value: 3/3 [expanded 95 state(s)]
+Best heuristic value: 2/2 [expanded 97 state(s)]
+Best heuristic value: 1/1 [expanded 98 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+unload-truck obj11 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj11 apn1 apt2
+load-truck obj23 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj23 apn1 apt3
+unload-airplane obj13 apn1 apt3
+load-truck obj13 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj13 tru3 pos3
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+fly-airplane apn1 apt3 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj12 apn1 apt3
+load-truck obj12 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj12 tru3 pos3
+Plan length: 36 step(s).
+Expanded 99 state(s).
+Generated 1146 state(s).
+Cache hits: 1241
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.02 seconds
+---------------Problema 17---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+15 variables of 17 necessary
+260 of 308 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 260 to 260)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 260 unary operators... done! [260 unary operators]
+Best heuristic value: 59/41 [expanded 1 state(s)]
+Best heuristic value: 58/40 [expanded 3 state(s)]
+Best heuristic value: 57/40 [expanded 4 state(s)]
+Best heuristic value: 56/39 [expanded 5 state(s)]
+Best heuristic value: 55/38 [expanded 9 state(s)]
+Best heuristic value: 54/38 [expanded 10 state(s)]
+Best heuristic value: 53/37 [expanded 15 state(s)]
+Best heuristic value: 52/36 [expanded 19 state(s)]
+Best heuristic value: 50/36 [expanded 20 state(s)]
+Best heuristic value: 49/35 [expanded 25 state(s)]
+Best heuristic value: 48/34 [expanded 28 state(s)]
+Best heuristic value: 46/34 [expanded 29 state(s)]
+Best heuristic value: 45/33 [expanded 30 state(s)]
+Best heuristic value: 44/33 [expanded 32 state(s)]
+Best heuristic value: 44/32 [expanded 38 state(s)]
+Best heuristic value: 43/32 [expanded 39 state(s)]
+Best heuristic value: 42/32 [expanded 47 state(s)]
+Best heuristic value: 42/31 [expanded 48 state(s)]
+Best heuristic value: 41/31 [expanded 57 state(s)]
+Best heuristic value: 40/31 [expanded 58 state(s)]
+Best heuristic value: 40/30 [expanded 62 state(s)]
+Best heuristic value: 40/29 [expanded 65 state(s)]
+Best heuristic value: 39/29 [expanded 68 state(s)]
+Best heuristic value: 38/29 [expanded 77 state(s)]
+Best heuristic value: 37/29 [expanded 79 state(s)]
+Best heuristic value: 37/28 [expanded 80 state(s)]
+Best heuristic value: 36/28 [expanded 88 state(s)]
+Best heuristic value: 36/27 [expanded 94 state(s)]
+Best heuristic value: 35/27 [expanded 95 state(s)]
+Best heuristic value: 34/27 [expanded 97 state(s)]
+Best heuristic value: 33/26 [expanded 99 state(s)]
+Best heuristic value: 32/25 [expanded 104 state(s)]
+Best heuristic value: 31/25 [expanded 107 state(s)]
+Best heuristic value: 31/24 [expanded 117 state(s)]
+Best heuristic value: 30/24 [expanded 120 state(s)]
+Best heuristic value: 30/23 [expanded 121 state(s)]
+Best heuristic value: 29/23 [expanded 124 state(s)]
+Best heuristic value: 29/22 [expanded 134 state(s)]
+Best heuristic value: 28/22 [expanded 135 state(s)]
+Best heuristic value: 27/21 [expanded 146 state(s)]
+Best heuristic value: 26/20 [expanded 149 state(s)]
+Best heuristic value: 25/19 [expanded 152 state(s)]
+Best heuristic value: 24/18 [expanded 158 state(s)]
+Best heuristic value: 22/18 [expanded 161 state(s)]
+Best heuristic value: 21/17 [expanded 169 state(s)]
+Best heuristic value: 20/16 [expanded 175 state(s)]
+Best heuristic value: 19/16 [expanded 176 state(s)]
+Best heuristic value: 18/16 [expanded 177 state(s)]
+Best heuristic value: 17/15 [expanded 181 state(s)]
+Best heuristic value: 16/14 [expanded 187 state(s)]
+Best heuristic value: 15/13 [expanded 188 state(s)]
+Best heuristic value: 14/12 [expanded 193 state(s)]
+Best heuristic value: 13/11 [expanded 194 state(s)]
+Best heuristic value: 12/10 [expanded 198 state(s)]
+Best heuristic value: 11/9 [expanded 199 state(s)]
+Best heuristic value: 10/8 [expanded 202 state(s)]
+Best heuristic value: 9/7 [expanded 203 state(s)]
+Best heuristic value: 8/6 [expanded 204 state(s)]
+Best heuristic value: 7/5 [expanded 206 state(s)]
+Best heuristic value: 6/4 [expanded 208 state(s)]
+Best heuristic value: 4/4 [expanded 209 state(s)]
+Best heuristic value: 3/3 [expanded 210 state(s)]
+Best heuristic value: 2/2 [expanded 212 state(s)]
+Best heuristic value: 1/1 [expanded 213 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj11 apn1 apt3
+load-truck obj11 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj11 tru3 pos3
+drive-truck tru4 pos4 apt4 cit4
+fly-airplane apn1 apt3 apt2
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj23 apn1 apt4
+load-truck obj23 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj23 tru4 pos4
+unload-truck obj21 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj41 tru4 apt4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj41 apn1 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj21 apn1 apt4
+fly-airplane apn1 apt4 apt1
+load-truck obj21 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj21 tru4 pos4
+unload-airplane obj32 apn1 apt1
+load-truck obj32 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj32 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+Plan length: 55 step(s).
+Expanded 214 state(s).
+Generated 2997 state(s).
+Cache hits: 4364
+Cache misses: 0
+Search time: 0.02 seconds
+Total time: 0.04 seconds
+---------------Problema 18---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+15 variables of 17 necessary
+260 of 308 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 260 to 260)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 260 unary operators... done! [260 unary operators]
+Best heuristic value: 54/39 [expanded 1 state(s)]
+Best heuristic value: 53/38 [expanded 3 state(s)]
+Best heuristic value: 52/38 [expanded 4 state(s)]
+Best heuristic value: 51/37 [expanded 5 state(s)]
+Best heuristic value: 50/36 [expanded 8 state(s)]
+Best heuristic value: 49/35 [expanded 15 state(s)]
+Best heuristic value: 48/34 [expanded 18 state(s)]
+Best heuristic value: 47/33 [expanded 24 state(s)]
+Best heuristic value: 46/32 [expanded 31 state(s)]
+Best heuristic value: 45/31 [expanded 38 state(s)]
+Best heuristic value: 43/31 [expanded 39 state(s)]
+Best heuristic value: 42/30 [expanded 40 state(s)]
+Best heuristic value: 41/29 [expanded 47 state(s)]
+Best heuristic value: 40/28 [expanded 54 state(s)]
+Best heuristic value: 38/27 [expanded 57 state(s)]
+Best heuristic value: 37/26 [expanded 63 state(s)]
+Best heuristic value: 36/25 [expanded 69 state(s)]
+Best heuristic value: 35/25 [expanded 73 state(s)]
+Best heuristic value: 35/24 [expanded 77 state(s)]
+Best heuristic value: 34/24 [expanded 80 state(s)]
+Best heuristic value: 33/24 [expanded 87 state(s)]
+Best heuristic value: 33/23 [expanded 88 state(s)]
+Best heuristic value: 33/22 [expanded 91 state(s)]
+Best heuristic value: 32/22 [expanded 94 state(s)]
+Best heuristic value: 31/22 [expanded 98 state(s)]
+Best heuristic value: 31/21 [expanded 100 state(s)]
+Best heuristic value: 28/21 [expanded 103 state(s)]
+Best heuristic value: 27/20 [expanded 106 state(s)]
+Best heuristic value: 26/19 [expanded 111 state(s)]
+Best heuristic value: 25/19 [expanded 113 state(s)]
+Best heuristic value: 24/18 [expanded 116 state(s)]
+Best heuristic value: 23/17 [expanded 121 state(s)]
+Best heuristic value: 22/17 [expanded 123 state(s)]
+Best heuristic value: 22/16 [expanded 128 state(s)]
+Best heuristic value: 20/16 [expanded 129 state(s)]
+Best heuristic value: 19/15 [expanded 130 state(s)]
+Best heuristic value: 18/15 [expanded 131 state(s)]
+Best heuristic value: 18/14 [expanded 137 state(s)]
+Best heuristic value: 17/14 [expanded 138 state(s)]
+Best heuristic value: 17/13 [expanded 139 state(s)]
+Best heuristic value: 16/13 [expanded 140 state(s)]
+Best heuristic value: 16/12 [expanded 144 state(s)]
+Best heuristic value: 15/12 [expanded 145 state(s)]
+Best heuristic value: 15/11 [expanded 149 state(s)]
+Best heuristic value: 14/11 [expanded 150 state(s)]
+Best heuristic value: 13/10 [expanded 151 state(s)]
+Best heuristic value: 11/9 [expanded 152 state(s)]
+Best heuristic value: 10/8 [expanded 154 state(s)]
+Best heuristic value: 9/7 [expanded 156 state(s)]
+Best heuristic value: 7/7 [expanded 157 state(s)]
+Best heuristic value: 6/6 [expanded 158 state(s)]
+Best heuristic value: 5/5 [expanded 161 state(s)]
+Best heuristic value: 4/4 [expanded 162 state(s)]
+Best heuristic value: 3/3 [expanded 164 state(s)]
+Best heuristic value: 2/2 [expanded 166 state(s)]
+Best heuristic value: 1/1 [expanded 167 state(s)]
+Solution found!
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+load-truck obj43 tru4 pos4
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj42 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+unload-truck obj42 tru4 apt4
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+unload-truck obj22 tru2 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj13 apn1 apt4
+load-airplane obj42 apn1 apt4
+fly-airplane apn1 apt4 apt3
+unload-airplane obj42 apn1 apt3
+unload-airplane obj23 apn1 apt3
+load-truck obj23 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj23 tru3 pos3
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-airplane obj33 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj33 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj22 apn1 apt4
+load-truck obj22 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj22 tru4 pos4
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj41 tru4 apt4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt3
+unload-airplane obj41 apn1 apt3
+Plan length: 46 step(s).
+Expanded 168 state(s).
+Generated 2380 state(s).
+Cache hits: 3149
+Cache misses: 0
+Search time: 0.02 seconds
+Total time: 0.03 seconds
+---------------Problema 19---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+No relaxed solution! Generating unsolvable task...
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+1 variables of 1 necessary
+0 of 0 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 0 to 0)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 0 unary operators... done! [0 unary operators]
+Completely explored state space -- no solution!
+Expanded 1 state(s).
+Generated 0 state(s).
+Cache hits: 0
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+---------------Problema 20---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+16 variables of 17 necessary
+284 of 308 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 284 to 284)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 284 unary operators... done! [284 unary operators]
+Best heuristic value: 85/55 [expanded 1 state(s)]
+Best heuristic value: 83/55 [expanded 3 state(s)]
+Best heuristic value: 83/54 [expanded 8 state(s)]
+Best heuristic value: 82/54 [expanded 9 state(s)]
+Best heuristic value: 81/54 [expanded 11 state(s)]
+Best heuristic value: 80/53 [expanded 16 state(s)]
+Best heuristic value: 79/52 [expanded 24 state(s)]
+Best heuristic value: 78/51 [expanded 32 state(s)]
+Best heuristic value: 77/50 [expanded 40 state(s)]
+Best heuristic value: 75/50 [expanded 43 state(s)]
+Best heuristic value: 75/49 [expanded 53 state(s)]
+Best heuristic value: 74/49 [expanded 57 state(s)]
+Best heuristic value: 74/48 [expanded 70 state(s)]
+Best heuristic value: 73/48 [expanded 72 state(s)]
+Best heuristic value: 71/48 [expanded 77 state(s)]
+Best heuristic value: 69/48 [expanded 81 state(s)]
+Best heuristic value: 69/47 [expanded 87 state(s)]
+Best heuristic value: 69/46 [expanded 89 state(s)]
+Best heuristic value: 68/46 [expanded 94 state(s)]
+Best heuristic value: 68/45 [expanded 96 state(s)]
+Best heuristic value: 66/45 [expanded 97 state(s)]
+Best heuristic value: 65/45 [expanded 101 state(s)]
+Best heuristic value: 65/44 [expanded 108 state(s)]
+Best heuristic value: 64/44 [expanded 113 state(s)]
+Best heuristic value: 64/43 [expanded 120 state(s)]
+Best heuristic value: 63/43 [expanded 125 state(s)]
+Best heuristic value: 63/42 [expanded 135 state(s)]
+Best heuristic value: 62/42 [expanded 138 state(s)]
+Best heuristic value: 60/42 [expanded 148 state(s)]
+Best heuristic value: 60/41 [expanded 155 state(s)]
+Best heuristic value: 59/41 [expanded 159 state(s)]
+Best heuristic value: 58/40 [expanded 171 state(s)]
+Best heuristic value: 57/39 [expanded 178 state(s)]
+Best heuristic value: 56/38 [expanded 185 state(s)]
+Best heuristic value: 55/37 [expanded 192 state(s)]
+Best heuristic value: 54/37 [expanded 193 state(s)]
+Best heuristic value: 53/36 [expanded 198 state(s)]
+Best heuristic value: 52/35 [expanded 204 state(s)]
+Best heuristic value: 50/35 [expanded 205 state(s)]
+Best heuristic value: 49/34 [expanded 213 state(s)]
+Best heuristic value: 48/33 [expanded 218 state(s)]
+Best heuristic value: 46/33 [expanded 219 state(s)]
+Best heuristic value: 45/32 [expanded 220 state(s)]
+Best heuristic value: 44/31 [expanded 225 state(s)]
+Best heuristic value: 42/31 [expanded 229 state(s)]
+Best heuristic value: 42/30 [expanded 231 state(s)]
+Best heuristic value: 41/30 [expanded 232 state(s)]
+Best heuristic value: 40/29 [expanded 240 state(s)]
+Best heuristic value: 39/28 [expanded 244 state(s)]
+Best heuristic value: 38/28 [expanded 245 state(s)]
+Best heuristic value: 37/27 [expanded 248 state(s)]
+Best heuristic value: 36/26 [expanded 252 state(s)]
+Best heuristic value: 34/26 [expanded 253 state(s)]
+Best heuristic value: 33/25 [expanded 258 state(s)]
+Best heuristic value: 32/24 [expanded 261 state(s)]
+Best heuristic value: 30/24 [expanded 262 state(s)]
+Best heuristic value: 29/23 [expanded 263 state(s)]
+Best heuristic value: 28/22 [expanded 264 state(s)]
+Best heuristic value: 27/21 [expanded 269 state(s)]
+Best heuristic value: 26/20 [expanded 270 state(s)]
+Best heuristic value: 25/19 [expanded 274 state(s)]
+Best heuristic value: 24/18 [expanded 280 state(s)]
+Best heuristic value: 22/18 [expanded 282 state(s)]
+Best heuristic value: 21/17 [expanded 290 state(s)]
+Best heuristic value: 20/16 [expanded 295 state(s)]
+Best heuristic value: 19/16 [expanded 296 state(s)]
+Best heuristic value: 18/16 [expanded 297 state(s)]
+Best heuristic value: 17/15 [expanded 302 state(s)]
+Best heuristic value: 16/14 [expanded 306 state(s)]
+Best heuristic value: 14/14 [expanded 308 state(s)]
+Best heuristic value: 13/13 [expanded 311 state(s)]
+Best heuristic value: 12/12 [expanded 317 state(s)]
+Best heuristic value: 11/11 [expanded 319 state(s)]
+Best heuristic value: 10/10 [expanded 324 state(s)]
+Best heuristic value: 9/9 [expanded 329 state(s)]
+Best heuristic value: 8/8 [expanded 330 state(s)]
+Best heuristic value: 7/7 [expanded 333 state(s)]
+Best heuristic value: 6/6 [expanded 334 state(s)]
+Best heuristic value: 5/5 [expanded 335 state(s)]
+Best heuristic value: 4/4 [expanded 336 state(s)]
+Best heuristic value: 3/3 [expanded 338 state(s)]
+Best heuristic value: 2/2 [expanded 340 state(s)]
+Best heuristic value: 1/1 [expanded 341 state(s)]
+Solution found!
+fly-airplane apn1 apt3 apt1
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+load-truck obj33 tru3 pos3
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+drive-truck tru2 pos2 apt2 cit2
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj32 tru3 apt3
+unload-truck obj33 tru3 apt3
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj13 tru2 apt2
+unload-truck obj11 tru1 apt1
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj23 apn1 apt4
+load-airplane obj43 apn1 apt4
+fly-airplane apn1 apt4 apt1
+unload-airplane obj43 apn1 apt1
+load-truck obj43 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj43 tru1 pos1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj11 apn1 apt2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj21 apn1 apt3
+load-airplane obj33 apn1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj33 apn1 apt2
+load-truck obj33 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj33 tru2 pos2
+unload-truck obj13 tru2 pos2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj22 apn1 apt4
+load-truck obj22 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj22 tru4 pos4
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj41 tru4 apt4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj12 apn1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj41 apn1 apt2
+load-truck obj41 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj41 tru2 pos2
+Plan length: 71 step(s).
+Expanded 342 state(s).
+Generated 5287 state(s).
+Cache hits: 8056
+Cache misses: 0
+Search time: 0.03 seconds
+Total time: 0.05 seconds
+---------------Problema 21---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+17 variables of 17 necessary
+308 of 308 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 308 to 308)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 308 unary operators... done! [308 unary operators]
+Best heuristic value: 54/39 [expanded 1 state(s)]
+Best heuristic value: 53/38 [expanded 6 state(s)]
+Best heuristic value: 52/37 [expanded 12 state(s)]
+Best heuristic value: 51/36 [expanded 19 state(s)]
+Best heuristic value: 50/36 [expanded 21 state(s)]
+Best heuristic value: 49/35 [expanded 24 state(s)]
+Best heuristic value: 48/34 [expanded 31 state(s)]
+Best heuristic value: 47/34 [expanded 33 state(s)]
+Best heuristic value: 47/33 [expanded 43 state(s)]
+Best heuristic value: 46/33 [expanded 44 state(s)]
+Best heuristic value: 45/33 [expanded 48 state(s)]
+Best heuristic value: 44/32 [expanded 51 state(s)]
+Best heuristic value: 43/32 [expanded 55 state(s)]
+Best heuristic value: 43/31 [expanded 59 state(s)]
+Best heuristic value: 42/31 [expanded 62 state(s)]
+Best heuristic value: 41/31 [expanded 67 state(s)]
+Best heuristic value: 41/30 [expanded 70 state(s)]
+Best heuristic value: 39/30 [expanded 72 state(s)]
+Best heuristic value: 38/29 [expanded 74 state(s)]
+Best heuristic value: 37/29 [expanded 78 state(s)]
+Best heuristic value: 37/28 [expanded 82 state(s)]
+Best heuristic value: 36/28 [expanded 87 state(s)]
+Best heuristic value: 36/27 [expanded 91 state(s)]
+Best heuristic value: 34/26 [expanded 92 state(s)]
+Best heuristic value: 33/26 [expanded 95 state(s)]
+Best heuristic value: 33/25 [expanded 96 state(s)]
+Best heuristic value: 32/25 [expanded 98 state(s)]
+Best heuristic value: 31/24 [expanded 102 state(s)]
+Best heuristic value: 30/24 [expanded 103 state(s)]
+Best heuristic value: 29/23 [expanded 106 state(s)]
+Best heuristic value: 28/22 [expanded 108 state(s)]
+Best heuristic value: 27/21 [expanded 109 state(s)]
+Best heuristic value: 26/20 [expanded 110 state(s)]
+Best heuristic value: 25/19 [expanded 113 state(s)]
+Best heuristic value: 23/18 [expanded 114 state(s)]
+Best heuristic value: 22/17 [expanded 116 state(s)]
+Best heuristic value: 21/16 [expanded 119 state(s)]
+Best heuristic value: 20/15 [expanded 124 state(s)]
+Best heuristic value: 19/14 [expanded 127 state(s)]
+Best heuristic value: 18/13 [expanded 131 state(s)]
+Best heuristic value: 17/12 [expanded 135 state(s)]
+Best heuristic value: 15/12 [expanded 136 state(s)]
+Best heuristic value: 14/11 [expanded 139 state(s)]
+Best heuristic value: 13/10 [expanded 143 state(s)]
+Best heuristic value: 12/9 [expanded 144 state(s)]
+Best heuristic value: 11/8 [expanded 145 state(s)]
+Best heuristic value: 10/7 [expanded 148 state(s)]
+Best heuristic value: 9/7 [expanded 149 state(s)]
+Best heuristic value: 8/7 [expanded 150 state(s)]
+Best heuristic value: 7/6 [expanded 151 state(s)]
+Best heuristic value: 6/5 [expanded 154 state(s)]
+Best heuristic value: 5/4 [expanded 155 state(s)]
+Best heuristic value: 4/3 [expanded 157 state(s)]
+Best heuristic value: 2/2 [expanded 158 state(s)]
+Best heuristic value: 1/1 [expanded 159 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+unload-truck obj11 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj11 apn1 apt4
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+unload-truck obj23 tru2 apt2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+fly-airplane apn1 apt4 apt3
+load-airplane obj33 apn1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj33 apn1 apt2
+load-truck obj33 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj33 tru2 pos2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj23 apn1 apt4
+unload-truck obj32 tru3 apt3
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+load-truck obj23 tru4 apt4
+unload-truck obj41 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj23 tru4 pos4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj41 apn1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj32 apn1 apt4
+unload-airplane obj12 apn1 apt4
+Plan length: 48 step(s).
+Expanded 160 state(s).
+Generated 2632 state(s).
+Cache hits: 3599
+Cache misses: 0
+Search time: 0.01 seconds
+Total time: 0.01 seconds
+---------------Problema 22---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+17 variables of 17 necessary
+308 of 308 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 308 to 308)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 308 unary operators... done! [308 unary operators]
+Best heuristic value: 98/63 [expanded 1 state(s)]
+Best heuristic value: 97/63 [expanded 2 state(s)]
+Best heuristic value: 97/62 [expanded 6 state(s)]
+Best heuristic value: 96/62 [expanded 9 state(s)]
+Best heuristic value: 96/61 [expanded 14 state(s)]
+Best heuristic value: 95/61 [expanded 17 state(s)]
+Best heuristic value: 94/60 [expanded 20 state(s)]
+Best heuristic value: 93/60 [expanded 23 state(s)]
+Best heuristic value: 93/59 [expanded 27 state(s)]
+Best heuristic value: 91/59 [expanded 28 state(s)]
+Best heuristic value: 90/59 [expanded 32 state(s)]
+Best heuristic value: 90/58 [expanded 36 state(s)]
+Best heuristic value: 89/58 [expanded 39 state(s)]
+Best heuristic value: 87/58 [expanded 40 state(s)]
+Best heuristic value: 87/57 [expanded 46 state(s)]
+Best heuristic value: 86/57 [expanded 47 state(s)]
+Best heuristic value: 85/56 [expanded 57 state(s)]
+Best heuristic value: 84/56 [expanded 62 state(s)]
+Best heuristic value: 84/55 [expanded 63 state(s)]
+Best heuristic value: 83/55 [expanded 71 state(s)]
+Best heuristic value: 83/54 [expanded 72 state(s)]
+Best heuristic value: 82/54 [expanded 74 state(s)]
+Best heuristic value: 80/54 [expanded 75 state(s)]
+Best heuristic value: 79/53 [expanded 78 state(s)]
+Best heuristic value: 78/52 [expanded 86 state(s)]
+Best heuristic value: 77/51 [expanded 94 state(s)]
+Best heuristic value: 76/51 [expanded 97 state(s)]
+Best heuristic value: 76/50 [expanded 108 state(s)]
+Best heuristic value: 75/50 [expanded 109 state(s)]
+Best heuristic value: 73/49 [expanded 114 state(s)]
+Best heuristic value: 72/48 [expanded 121 state(s)]
+Best heuristic value: 71/47 [expanded 128 state(s)]
+Best heuristic value: 70/47 [expanded 134 state(s)]
+Best heuristic value: 70/46 [expanded 135 state(s)]
+Best heuristic value: 69/46 [expanded 144 state(s)]
+Best heuristic value: 69/45 [expanded 148 state(s)]
+Best heuristic value: 68/45 [expanded 150 state(s)]
+Best heuristic value: 67/45 [expanded 153 state(s)]
+Best heuristic value: 67/44 [expanded 160 state(s)]
+Best heuristic value: 66/44 [expanded 161 state(s)]
+Best heuristic value: 65/43 [expanded 173 state(s)]
+Best heuristic value: 63/43 [expanded 176 state(s)]
+Best heuristic value: 62/42 [expanded 180 state(s)]
+Best heuristic value: 61/41 [expanded 187 state(s)]
+Best heuristic value: 60/41 [expanded 191 state(s)]
+Best heuristic value: 60/40 [expanded 198 state(s)]
+Best heuristic value: 59/40 [expanded 202 state(s)]
+Best heuristic value: 59/39 [expanded 212 state(s)]
+Best heuristic value: 58/39 [expanded 215 state(s)]
+Best heuristic value: 57/39 [expanded 217 state(s)]
+Best heuristic value: 56/39 [expanded 220 state(s)]
+Best heuristic value: 55/38 [expanded 229 state(s)]
+Best heuristic value: 54/37 [expanded 235 state(s)]
+Best heuristic value: 53/37 [expanded 236 state(s)]
+Best heuristic value: 52/36 [expanded 242 state(s)]
+Best heuristic value: 50/36 [expanded 243 state(s)]
+Best heuristic value: 49/35 [expanded 248 state(s)]
+Best heuristic value: 48/34 [expanded 252 state(s)]
+Best heuristic value: 47/33 [expanded 256 state(s)]
+Best heuristic value: 46/32 [expanded 260 state(s)]
+Best heuristic value: 44/32 [expanded 261 state(s)]
+Best heuristic value: 43/31 [expanded 262 state(s)]
+Best heuristic value: 42/30 [expanded 264 state(s)]
+Best heuristic value: 41/29 [expanded 268 state(s)]
+Best heuristic value: 39/29 [expanded 270 state(s)]
+Best heuristic value: 38/28 [expanded 273 state(s)]
+Best heuristic value: 37/28 [expanded 277 state(s)]
+Best heuristic value: 36/27 [expanded 281 state(s)]
+Best heuristic value: 35/26 [expanded 288 state(s)]
+Best heuristic value: 33/25 [expanded 289 state(s)]
+Best heuristic value: 32/24 [expanded 293 state(s)]
+Best heuristic value: 31/24 [expanded 294 state(s)]
+Best heuristic value: 30/23 [expanded 299 state(s)]
+Best heuristic value: 29/22 [expanded 303 state(s)]
+Best heuristic value: 28/22 [expanded 304 state(s)]
+Best heuristic value: 27/21 [expanded 305 state(s)]
+Best heuristic value: 26/20 [expanded 311 state(s)]
+Best heuristic value: 24/20 [expanded 313 state(s)]
+Best heuristic value: 23/19 [expanded 321 state(s)]
+Best heuristic value: 22/18 [expanded 326 state(s)]
+Best heuristic value: 20/18 [expanded 328 state(s)]
+Best heuristic value: 19/17 [expanded 333 state(s)]
+Best heuristic value: 18/16 [expanded 337 state(s)]
+Best heuristic value: 17/15 [expanded 343 state(s)]
+Best heuristic value: 16/14 [expanded 345 state(s)]
+Best heuristic value: 15/13 [expanded 347 state(s)]
+Best heuristic value: 14/12 [expanded 352 state(s)]
+Best heuristic value: 13/11 [expanded 354 state(s)]
+Best heuristic value: 12/10 [expanded 357 state(s)]
+Best heuristic value: 11/9 [expanded 359 state(s)]
+Best heuristic value: 10/8 [expanded 361 state(s)]
+Best heuristic value: 8/8 [expanded 362 state(s)]
+Best heuristic value: 7/7 [expanded 363 state(s)]
+Best heuristic value: 6/6 [expanded 365 state(s)]
+Best heuristic value: 5/5 [expanded 366 state(s)]
+Best heuristic value: 4/4 [expanded 367 state(s)]
+Best heuristic value: 3/3 [expanded 369 state(s)]
+Best heuristic value: 2/2 [expanded 371 state(s)]
+Best heuristic value: 1/1 [expanded 372 state(s)]
+Solution found!
+load-truck obj31 tru3 pos3
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+load-truck obj33 tru3 pos3
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+unload-truck obj33 tru3 apt3
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj23 apn1 apt4
+load-truck obj23 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj23 tru4 pos4
+load-truck obj42 tru4 pos4
+unload-truck obj22 tru2 apt2
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj42 tru4 apt4
+load-airplane obj42 apn1 apt4
+fly-airplane apn1 apt4 apt3
+load-airplane obj31 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj31 apn1 apt1
+load-truck obj31 tru1 apt1
+unload-airplane obj21 apn1 apt1
+load-truck obj21 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj31 tru1 pos1
+unload-truck obj21 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj42 apn1 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt3
+load-airplane obj33 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj33 apn1 apt1
+load-truck obj33 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj33 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj12 apn1 apt4
+load-truck obj12 tru4 apt4
+unload-truck obj41 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj12 tru4 pos4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt3
+unload-airplane obj22 apn1 apt3
+fly-airplane apn1 apt3 apt1
+load-truck obj22 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj22 tru3 pos3
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+unload-airplane obj41 apn1 apt1
+load-truck obj41 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj41 tru1 pos1
+Plan length: 82 step(s).
+Expanded 373 state(s).
+Generated 5834 state(s).
+Cache hits: 8538
+Cache misses: 0
+Search time: 0.03 seconds
+Total time: 0.03 seconds
+---------------Problema 23---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+20 variables of 22 necessary
+570 of 650 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 570 to 570)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 570 unary operators... done! [570 unary operators]
+Best heuristic value: 100/69 [expanded 1 state(s)]
+Best heuristic value: 99/68 [expanded 5 state(s)]
+Best heuristic value: 98/67 [expanded 11 state(s)]
+Best heuristic value: 97/67 [expanded 13 state(s)]
+Best heuristic value: 97/66 [expanded 20 state(s)]
+Best heuristic value: 96/66 [expanded 23 state(s)]
+Best heuristic value: 94/66 [expanded 24 state(s)]
+Best heuristic value: 93/65 [expanded 34 state(s)]
+Best heuristic value: 92/64 [expanded 40 state(s)]
+Best heuristic value: 91/64 [expanded 42 state(s)]
+Best heuristic value: 91/63 [expanded 49 state(s)]
+Best heuristic value: 90/63 [expanded 50 state(s)]
+Best heuristic value: 89/63 [expanded 59 state(s)]
+Best heuristic value: 89/62 [expanded 63 state(s)]
+Best heuristic value: 88/62 [expanded 66 state(s)]
+Best heuristic value: 87/62 [expanded 69 state(s)]
+Best heuristic value: 87/61 [expanded 76 state(s)]
+Best heuristic value: 86/61 [expanded 78 state(s)]
+Best heuristic value: 86/60 [expanded 81 state(s)]
+Best heuristic value: 85/60 [expanded 88 state(s)]
+Best heuristic value: 85/59 [expanded 93 state(s)]
+Best heuristic value: 84/59 [expanded 98 state(s)]
+Best heuristic value: 84/58 [expanded 106 state(s)]
+Best heuristic value: 83/58 [expanded 110 state(s)]
+Best heuristic value: 83/57 [expanded 121 state(s)]
+Best heuristic value: 82/57 [expanded 122 state(s)]
+Best heuristic value: 81/57 [expanded 138 state(s)]
+Best heuristic value: 79/57 [expanded 140 state(s)]
+Best heuristic value: 79/56 [expanded 141 state(s)]
+Best heuristic value: 78/56 [expanded 151 state(s)]
+Best heuristic value: 77/56 [expanded 161 state(s)]
+Best heuristic value: 77/55 [expanded 163 state(s)]
+Best heuristic value: 76/55 [expanded 176 state(s)]
+Best heuristic value: 75/55 [expanded 178 state(s)]
+Best heuristic value: 74/54 [expanded 180 state(s)]
+Best heuristic value: 74/53 [expanded 187 state(s)]
+Best heuristic value: 73/53 [expanded 192 state(s)]
+Best heuristic value: 73/52 [expanded 197 state(s)]
+Best heuristic value: 72/52 [expanded 198 state(s)]
+Best heuristic value: 72/51 [expanded 214 state(s)]
+Best heuristic value: 71/51 [expanded 215 state(s)]
+Best heuristic value: 70/51 [expanded 220 state(s)]
+Best heuristic value: 69/50 [expanded 227 state(s)]
+Best heuristic value: 68/50 [expanded 228 state(s)]
+Best heuristic value: 67/49 [expanded 235 state(s)]
+Best heuristic value: 66/49 [expanded 236 state(s)]
+Best heuristic value: 65/48 [expanded 237 state(s)]
+Best heuristic value: 64/47 [expanded 241 state(s)]
+Best heuristic value: 63/46 [expanded 245 state(s)]
+Best heuristic value: 63/45 [expanded 249 state(s)]
+Best heuristic value: 61/45 [expanded 251 state(s)]
+Best heuristic value: 60/44 [expanded 260 state(s)]
+Best heuristic value: 59/43 [expanded 267 state(s)]
+Best heuristic value: 58/43 [expanded 268 state(s)]
+Best heuristic value: 57/42 [expanded 276 state(s)]
+Best heuristic value: 56/42 [expanded 277 state(s)]
+Best heuristic value: 55/41 [expanded 278 state(s)]
+Best heuristic value: 54/40 [expanded 287 state(s)]
+Best heuristic value: 52/39 [expanded 289 state(s)]
+Best heuristic value: 51/38 [expanded 294 state(s)]
+Best heuristic value: 50/37 [expanded 299 state(s)]
+Best heuristic value: 49/37 [expanded 303 state(s)]
+Best heuristic value: 49/36 [expanded 309 state(s)]
+Best heuristic value: 48/36 [expanded 312 state(s)]
+Best heuristic value: 47/36 [expanded 320 state(s)]
+Best heuristic value: 47/35 [expanded 323 state(s)]
+Best heuristic value: 46/35 [expanded 325 state(s)]
+Best heuristic value: 45/34 [expanded 338 state(s)]
+Best heuristic value: 44/33 [expanded 345 state(s)]
+Best heuristic value: 43/32 [expanded 347 state(s)]
+Best heuristic value: 42/31 [expanded 349 state(s)]
+Best heuristic value: 40/31 [expanded 351 state(s)]
+Best heuristic value: 39/30 [expanded 354 state(s)]
+Best heuristic value: 38/29 [expanded 361 state(s)]
+Best heuristic value: 36/29 [expanded 364 state(s)]
+Best heuristic value: 36/28 [expanded 373 state(s)]
+Best heuristic value: 35/28 [expanded 374 state(s)]
+Best heuristic value: 33/28 [expanded 377 state(s)]
+Best heuristic value: 32/27 [expanded 380 state(s)]
+Best heuristic value: 31/26 [expanded 383 state(s)]
+Best heuristic value: 30/26 [expanded 384 state(s)]
+Best heuristic value: 29/25 [expanded 385 state(s)]
+Best heuristic value: 28/24 [expanded 392 state(s)]
+Best heuristic value: 28/23 [expanded 397 state(s)]
+Best heuristic value: 27/23 [expanded 401 state(s)]
+Best heuristic value: 25/22 [expanded 406 state(s)]
+Best heuristic value: 24/21 [expanded 412 state(s)]
+Best heuristic value: 23/20 [expanded 418 state(s)]
+Best heuristic value: 21/20 [expanded 420 state(s)]
+Best heuristic value: 20/19 [expanded 423 state(s)]
+Best heuristic value: 19/18 [expanded 429 state(s)]
+Best heuristic value: 18/17 [expanded 431 state(s)]
+Best heuristic value: 17/16 [expanded 436 state(s)]
+Best heuristic value: 16/15 [expanded 441 state(s)]
+Best heuristic value: 15/14 [expanded 443 state(s)]
+Best heuristic value: 14/13 [expanded 445 state(s)]
+Best heuristic value: 13/12 [expanded 450 state(s)]
+Best heuristic value: 11/11 [expanded 451 state(s)]
+Best heuristic value: 10/10 [expanded 454 state(s)]
+Best heuristic value: 9/9 [expanded 457 state(s)]
+Best heuristic value: 8/8 [expanded 461 state(s)]
+Best heuristic value: 7/7 [expanded 465 state(s)]
+Best heuristic value: 6/6 [expanded 466 state(s)]
+Best heuristic value: 5/5 [expanded 469 state(s)]
+Best heuristic value: 4/4 [expanded 470 state(s)]
+Best heuristic value: 3/3 [expanded 471 state(s)]
+Best heuristic value: 2/2 [expanded 473 state(s)]
+Best heuristic value: 1/1 [expanded 474 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+load-truck obj11 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn2 apt1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn2 apt1
+load-truck obj23 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+fly-airplane apn2 apt1 apt3
+unload-airplane obj12 apn2 apt3
+fly-airplane apn1 apt2 apt5
+unload-truck obj23 tru2 apt2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-airplane obj33 apn2 apt3
+load-truck obj12 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj12 tru3 pos3
+fly-airplane apn2 apt3 apt2
+load-airplane obj23 apn2 apt2
+load-truck obj41 tru4 pos4
+fly-airplane apn2 apt2 apt1
+drive-truck tru4 pos4 apt4 cit4
+unload-airplane obj33 apn2 apt1
+fly-airplane apn2 apt1 apt5
+load-truck obj33 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj33 tru1 pos1
+unload-airplane obj11 apn2 apt5
+unload-airplane obj23 apn2 apt5
+fly-airplane apn2 apt5 apt3
+unload-truck obj41 tru4 apt4
+load-truck obj53 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+load-truck obj11 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+unload-truck obj11 tru5 pos5
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-airplane obj32 apn2 apt3
+fly-airplane apn2 apt3 apt4
+load-airplane obj41 apn2 apt4
+fly-airplane apn2 apt4 apt3
+unload-airplane obj41 apn2 apt3
+unload-truck obj31 tru3 apt3
+load-airplane obj31 apn2 apt3
+fly-airplane apn2 apt3 apt2
+unload-airplane obj32 apn2 apt2
+fly-airplane apn2 apt2 apt1
+unload-airplane obj31 apn2 apt1
+load-truck obj13 tru1 pos1
+load-truck obj51 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj51 tru5 apt5
+load-truck obj23 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+unload-truck obj23 tru5 pos5
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn2 apt1
+fly-airplane apn2 apt1 apt4
+unload-airplane obj13 apn2 apt4
+load-truck obj13 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj13 tru4 pos4
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+load-airplane obj43 apn2 apt4
+fly-airplane apn2 apt4 apt2
+unload-airplane obj43 apn2 apt2
+load-truck obj52 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj53 tru5 apt5
+load-airplane obj53 apn1 apt5
+unload-truck obj52 tru5 apt5
+load-airplane obj52 apn1 apt5
+fly-airplane apn1 apt5 apt1
+unload-airplane obj53 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj52 apn1 apt4
+load-truck obj53 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj53 tru1 pos1
+Plan length: 88 step(s).
+Expanded 475 state(s).
+Generated 11074 state(s).
+Cache hits: 21422
+Cache misses: 0
+Search time: 0.04 seconds
+Total time: 0.06 seconds
+---------------Problema 24---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+20 variables of 22 necessary
+570 of 650 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 570 to 570)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 570 unary operators... done! [570 unary operators]
+Best heuristic value: 83/58 [expanded 1 state(s)]
+Best heuristic value: 82/57 [expanded 4 state(s)]
+Best heuristic value: 80/57 [expanded 5 state(s)]
+Best heuristic value: 79/56 [expanded 8 state(s)]
+Best heuristic value: 79/55 [expanded 12 state(s)]
+Best heuristic value: 78/55 [expanded 15 state(s)]
+Best heuristic value: 77/55 [expanded 18 state(s)]
+Best heuristic value: 77/54 [expanded 21 state(s)]
+Best heuristic value: 76/54 [expanded 27 state(s)]
+Best heuristic value: 76/53 [expanded 30 state(s)]
+Best heuristic value: 75/53 [expanded 37 state(s)]
+Best heuristic value: 75/52 [expanded 46 state(s)]
+Best heuristic value: 74/52 [expanded 51 state(s)]
+Best heuristic value: 72/52 [expanded 55 state(s)]
+Best heuristic value: 72/51 [expanded 56 state(s)]
+Best heuristic value: 71/51 [expanded 69 state(s)]
+Best heuristic value: 71/50 [expanded 72 state(s)]
+Best heuristic value: 70/50 [expanded 83 state(s)]
+Best heuristic value: 68/50 [expanded 88 state(s)]
+Best heuristic value: 68/49 [expanded 89 state(s)]
+Best heuristic value: 67/49 [expanded 97 state(s)]
+Best heuristic value: 67/48 [expanded 107 state(s)]
+Best heuristic value: 66/48 [expanded 110 state(s)]
+Best heuristic value: 65/47 [expanded 112 state(s)]
+Best heuristic value: 64/46 [expanded 113 state(s)]
+Best heuristic value: 64/45 [expanded 114 state(s)]
+Best heuristic value: 63/44 [expanded 119 state(s)]
+Best heuristic value: 61/44 [expanded 120 state(s)]
+Best heuristic value: 60/44 [expanded 125 state(s)]
+Best heuristic value: 60/43 [expanded 129 state(s)]
+Best heuristic value: 60/42 [expanded 134 state(s)]
+Best heuristic value: 59/42 [expanded 135 state(s)]
+Best heuristic value: 58/42 [expanded 139 state(s)]
+Best heuristic value: 58/41 [expanded 140 state(s)]
+Best heuristic value: 57/41 [expanded 143 state(s)]
+Best heuristic value: 57/40 [expanded 148 state(s)]
+Best heuristic value: 56/40 [expanded 150 state(s)]
+Best heuristic value: 54/40 [expanded 152 state(s)]
+Best heuristic value: 53/39 [expanded 153 state(s)]
+Best heuristic value: 52/38 [expanded 156 state(s)]
+Best heuristic value: 51/38 [expanded 157 state(s)]
+Best heuristic value: 50/37 [expanded 158 state(s)]
+Best heuristic value: 50/36 [expanded 161 state(s)]
+Best heuristic value: 49/36 [expanded 164 state(s)]
+Best heuristic value: 48/36 [expanded 167 state(s)]
+Best heuristic value: 48/35 [expanded 170 state(s)]
+Best heuristic value: 47/35 [expanded 173 state(s)]
+Best heuristic value: 46/35 [expanded 182 state(s)]
+Best heuristic value: 46/34 [expanded 185 state(s)]
+Best heuristic value: 45/34 [expanded 198 state(s)]
+Best heuristic value: 45/33 [expanded 201 state(s)]
+Best heuristic value: 43/33 [expanded 202 state(s)]
+Best heuristic value: 43/32 [expanded 203 state(s)]
+Best heuristic value: 43/31 [expanded 210 state(s)]
+Best heuristic value: 42/31 [expanded 214 state(s)]
+Best heuristic value: 41/31 [expanded 224 state(s)]
+Best heuristic value: 41/30 [expanded 225 state(s)]
+Best heuristic value: 41/29 [expanded 238 state(s)]
+Best heuristic value: 40/29 [expanded 241 state(s)]
+Best heuristic value: 39/29 [expanded 242 state(s)]
+Best heuristic value: 38/29 [expanded 243 state(s)]
+Best heuristic value: 37/29 [expanded 247 state(s)]
+Best heuristic value: 36/28 [expanded 248 state(s)]
+Best heuristic value: 35/27 [expanded 249 state(s)]
+Best heuristic value: 33/27 [expanded 252 state(s)]
+Best heuristic value: 32/27 [expanded 256 state(s)]
+Best heuristic value: 32/26 [expanded 259 state(s)]
+Best heuristic value: 31/26 [expanded 262 state(s)]
+Best heuristic value: 30/26 [expanded 268 state(s)]
+Best heuristic value: 29/25 [expanded 275 state(s)]
+Best heuristic value: 28/24 [expanded 282 state(s)]
+Best heuristic value: 27/24 [expanded 283 state(s)]
+Best heuristic value: 26/23 [expanded 284 state(s)]
+Best heuristic value: 26/22 [expanded 286 state(s)]
+Best heuristic value: 25/21 [expanded 296 state(s)]
+Best heuristic value: 24/20 [expanded 302 state(s)]
+Best heuristic value: 23/19 [expanded 304 state(s)]
+Best heuristic value: 22/18 [expanded 306 state(s)]
+Best heuristic value: 21/18 [expanded 311 state(s)]
+Best heuristic value: 21/17 [expanded 313 state(s)]
+Best heuristic value: 20/17 [expanded 319 state(s)]
+Best heuristic value: 19/16 [expanded 327 state(s)]
+Best heuristic value: 18/15 [expanded 330 state(s)]
+Best heuristic value: 17/14 [expanded 333 state(s)]
+Best heuristic value: 16/13 [expanded 341 state(s)]
+Best heuristic value: 14/13 [expanded 342 state(s)]
+Best heuristic value: 13/12 [expanded 349 state(s)]
+Best heuristic value: 12/11 [expanded 353 state(s)]
+Best heuristic value: 11/11 [expanded 354 state(s)]
+Best heuristic value: 10/10 [expanded 358 state(s)]
+Best heuristic value: 9/9 [expanded 359 state(s)]
+Best heuristic value: 8/8 [expanded 361 state(s)]
+Best heuristic value: 7/7 [expanded 362 state(s)]
+Best heuristic value: 6/6 [expanded 363 state(s)]
+Best heuristic value: 5/5 [expanded 366 state(s)]
+Best heuristic value: 4/4 [expanded 367 state(s)]
+Best heuristic value: 3/3 [expanded 369 state(s)]
+Best heuristic value: 2/2 [expanded 371 state(s)]
+Best heuristic value: 1/1 [expanded 372 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj42 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj42 tru4 apt4
+load-airplane obj42 apn1 apt4
+fly-airplane apn1 apt4 apt3
+load-airplane obj33 apn1 apt3
+unload-airplane obj42 apn1 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj33 apn1 apt4
+fly-airplane apn2 apt2 apt1
+load-airplane obj12 apn2 apt1
+fly-airplane apn2 apt1 apt2
+unload-airplane obj12 apn2 apt2
+load-truck obj42 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj42 tru3 pos3
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+load-truck obj12 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj12 tru2 pos2
+fly-airplane apn2 apt2 apt1
+load-truck obj53 tru5 pos5
+load-truck obj51 tru5 pos5
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+unload-truck obj22 tru2 apt2
+load-truck obj52 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+fly-airplane apn2 apt1 apt2
+load-airplane obj23 apn2 apt2
+fly-airplane apn2 apt2 apt1
+unload-airplane obj23 apn2 apt1
+unload-truck obj51 tru5 apt5
+fly-airplane apn1 apt4 apt5
+unload-truck obj53 tru5 apt5
+load-airplane obj53 apn1 apt5
+load-airplane obj51 apn1 apt5
+fly-airplane apn1 apt5 apt2
+unload-airplane obj53 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj51 apn1 apt4
+load-truck obj51 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj51 tru4 pos4
+unload-truck obj52 tru5 apt5
+fly-airplane apn1 apt4 apt5
+load-airplane obj52 apn1 apt5
+fly-airplane apn1 apt5 apt4
+unload-airplane obj52 apn1 apt4
+drive-truck tru1 apt1 pos1 cit1
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn2 apt1
+fly-airplane apn2 apt1 apt5
+unload-airplane obj13 apn2 apt5
+fly-airplane apn2 apt5 apt2
+load-truck obj13 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+unload-truck obj13 tru5 pos5
+load-airplane obj22 apn2 apt2
+fly-airplane apn2 apt2 apt1
+unload-airplane obj22 apn2 apt1
+load-truck obj22 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj22 tru1 pos1
+Plan length: 76 step(s).
+Expanded 373 state(s).
+Generated 8848 state(s).
+Cache hits: 14908
+Cache misses: 0
+Search time: 0.03 seconds
+Total time: 0.04 seconds
+---------------Problema 25---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+21 variables of 22 necessary
+610 of 650 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 610 to 610)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 610 unary operators... done! [610 unary operators]
+Best heuristic value: 79/59 [expanded 1 state(s)]
+Best heuristic value: 77/58 [expanded 2 state(s)]
+Best heuristic value: 77/56 [expanded 3 state(s)]
+Best heuristic value: 76/56 [expanded 6 state(s)]
+Best heuristic value: 76/55 [expanded 7 state(s)]
+Best heuristic value: 75/54 [expanded 13 state(s)]
+Best heuristic value: 74/54 [expanded 14 state(s)]
+Best heuristic value: 73/53 [expanded 17 state(s)]
+Best heuristic value: 72/52 [expanded 20 state(s)]
+Best heuristic value: 70/52 [expanded 21 state(s)]
+Best heuristic value: 69/52 [expanded 22 state(s)]
+Best heuristic value: 69/51 [expanded 28 state(s)]
+Best heuristic value: 68/51 [expanded 29 state(s)]
+Best heuristic value: 68/50 [expanded 31 state(s)]
+Best heuristic value: 67/50 [expanded 33 state(s)]
+Best heuristic value: 67/49 [expanded 35 state(s)]
+Best heuristic value: 65/48 [expanded 37 state(s)]
+Best heuristic value: 64/47 [expanded 38 state(s)]
+Best heuristic value: 63/47 [expanded 39 state(s)]
+Best heuristic value: 62/46 [expanded 46 state(s)]
+Best heuristic value: 61/45 [expanded 50 state(s)]
+Best heuristic value: 59/45 [expanded 52 state(s)]
+Best heuristic value: 58/44 [expanded 58 state(s)]
+Best heuristic value: 57/43 [expanded 66 state(s)]
+Best heuristic value: 56/42 [expanded 74 state(s)]
+Best heuristic value: 54/42 [expanded 78 state(s)]
+Best heuristic value: 53/41 [expanded 84 state(s)]
+Best heuristic value: 52/40 [expanded 93 state(s)]
+Best heuristic value: 50/39 [expanded 94 state(s)]
+Best heuristic value: 49/38 [expanded 100 state(s)]
+Best heuristic value: 48/37 [expanded 106 state(s)]
+Best heuristic value: 46/37 [expanded 107 state(s)]
+Best heuristic value: 45/36 [expanded 115 state(s)]
+Best heuristic value: 44/35 [expanded 119 state(s)]
+Best heuristic value: 43/35 [expanded 120 state(s)]
+Best heuristic value: 42/34 [expanded 121 state(s)]
+Best heuristic value: 41/33 [expanded 125 state(s)]
+Best heuristic value: 40/33 [expanded 126 state(s)]
+Best heuristic value: 39/32 [expanded 127 state(s)]
+Best heuristic value: 39/31 [expanded 130 state(s)]
+Best heuristic value: 38/31 [expanded 134 state(s)]
+Best heuristic value: 38/30 [expanded 138 state(s)]
+Best heuristic value: 37/30 [expanded 142 state(s)]
+Best heuristic value: 36/29 [expanded 144 state(s)]
+Best heuristic value: 35/28 [expanded 148 state(s)]
+Best heuristic value: 34/27 [expanded 152 state(s)]
+Best heuristic value: 33/27 [expanded 154 state(s)]
+Best heuristic value: 32/26 [expanded 156 state(s)]
+Best heuristic value: 31/25 [expanded 161 state(s)]
+Best heuristic value: 29/25 [expanded 163 state(s)]
+Best heuristic value: 28/24 [expanded 169 state(s)]
+Best heuristic value: 27/24 [expanded 171 state(s)]
+Best heuristic value: 27/23 [expanded 175 state(s)]
+Best heuristic value: 26/23 [expanded 178 state(s)]
+Best heuristic value: 25/22 [expanded 181 state(s)]
+Best heuristic value: 24/21 [expanded 183 state(s)]
+Best heuristic value: 23/20 [expanded 188 state(s)]
+Best heuristic value: 22/19 [expanded 190 state(s)]
+Best heuristic value: 21/18 [expanded 192 state(s)]
+Best heuristic value: 20/17 [expanded 196 state(s)]
+Best heuristic value: 18/17 [expanded 198 state(s)]
+Best heuristic value: 17/16 [expanded 200 state(s)]
+Best heuristic value: 16/15 [expanded 206 state(s)]
+Best heuristic value: 14/14 [expanded 207 state(s)]
+Best heuristic value: 13/13 [expanded 210 state(s)]
+Best heuristic value: 12/12 [expanded 213 state(s)]
+Best heuristic value: 11/11 [expanded 218 state(s)]
+Best heuristic value: 10/10 [expanded 223 state(s)]
+Best heuristic value: 9/9 [expanded 224 state(s)]
+Best heuristic value: 8/8 [expanded 227 state(s)]
+Best heuristic value: 7/7 [expanded 228 state(s)]
+Best heuristic value: 6/6 [expanded 230 state(s)]
+Best heuristic value: 5/5 [expanded 231 state(s)]
+Best heuristic value: 4/4 [expanded 232 state(s)]
+Best heuristic value: 3/3 [expanded 234 state(s)]
+Best heuristic value: 2/2 [expanded 236 state(s)]
+Best heuristic value: 1/1 [expanded 237 state(s)]
+Solution found!
+fly-airplane apn2 apt2 apt4
+fly-airplane apn2 apt4 apt1
+load-truck obj11 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn2 apt1
+fly-airplane apn2 apt1 apt4
+unload-airplane obj11 apn2 apt4
+unload-truck obj12 tru1 apt1
+fly-airplane apn2 apt4 apt1
+load-airplane obj12 apn2 apt1
+fly-airplane apn2 apt1 apt3
+unload-airplane obj12 apn2 apt3
+drive-truck tru1 apt1 pos1 cit1
+load-truck obj32 tru3 pos3
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj41 tru4 apt4
+load-truck obj21 tru2 pos2
+load-truck obj53 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj53 tru5 apt5
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-airplane obj32 apn2 apt3
+fly-airplane apn2 apt3 apt4
+unload-airplane obj32 apn2 apt4
+load-truck obj32 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj32 tru4 pos4
+load-airplane obj41 apn2 apt4
+fly-airplane apn2 apt4 apt3
+unload-airplane obj41 apn2 apt3
+unload-truck obj31 tru3 apt3
+load-airplane obj31 apn2 apt3
+fly-airplane apn2 apt3 apt5
+unload-airplane obj31 apn2 apt5
+load-truck obj31 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+unload-truck obj31 tru5 pos5
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+fly-airplane apn2 apt5 apt4
+load-airplane obj43 apn2 apt4
+fly-airplane apn2 apt4 apt5
+unload-airplane obj43 apn2 apt5
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj51 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj51 tru5 apt5
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+unload-truck obj22 tru2 apt2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt5
+unload-airplane obj21 apn1 apt5
+fly-airplane apn1 apt5 apt4
+load-truck obj21 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+unload-truck obj21 tru5 pos5
+unload-airplane obj22 apn1 apt4
+load-truck obj22 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj22 tru4 pos4
+Plan length: 71 step(s).
+Expanded 238 state(s).
+Generated 5923 state(s).
+Cache hits: 10331
+Cache misses: 0
+Search time: 0.02 seconds
+Total time: 0.04 seconds
+---------------Problema 26---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+21 variables of 22 necessary
+610 of 650 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 610 to 610)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 610 unary operators... done! [610 unary operators]
+Best heuristic value: 99/70 [expanded 1 state(s)]
+Best heuristic value: 98/69 [expanded 5 state(s)]
+Best heuristic value: 97/69 [expanded 6 state(s)]
+Best heuristic value: 96/68 [expanded 11 state(s)]
+Best heuristic value: 95/67 [expanded 15 state(s)]
+Best heuristic value: 93/67 [expanded 16 state(s)]
+Best heuristic value: 92/66 [expanded 21 state(s)]
+Best heuristic value: 92/65 [expanded 24 state(s)]
+Best heuristic value: 91/65 [expanded 29 state(s)]
+Best heuristic value: 89/65 [expanded 33 state(s)]
+Best heuristic value: 89/64 [expanded 34 state(s)]
+Best heuristic value: 88/64 [expanded 42 state(s)]
+Best heuristic value: 88/63 [expanded 48 state(s)]
+Best heuristic value: 87/63 [expanded 54 state(s)]
+Best heuristic value: 85/63 [expanded 55 state(s)]
+Best heuristic value: 84/62 [expanded 61 state(s)]
+Best heuristic value: 84/61 [expanded 65 state(s)]
+Best heuristic value: 83/61 [expanded 69 state(s)]
+Best heuristic value: 82/61 [expanded 70 state(s)]
+Best heuristic value: 81/60 [expanded 71 state(s)]
+Best heuristic value: 81/59 [expanded 74 state(s)]
+Best heuristic value: 80/59 [expanded 77 state(s)]
+Best heuristic value: 80/58 [expanded 80 state(s)]
+Best heuristic value: 79/58 [expanded 81 state(s)]
+Best heuristic value: 78/58 [expanded 84 state(s)]
+Best heuristic value: 77/58 [expanded 87 state(s)]
+Best heuristic value: 77/57 [expanded 89 state(s)]
+Best heuristic value: 76/57 [expanded 92 state(s)]
+Best heuristic value: 75/57 [expanded 94 state(s)]
+Best heuristic value: 75/56 [expanded 95 state(s)]
+Best heuristic value: 75/55 [expanded 98 state(s)]
+Best heuristic value: 74/55 [expanded 100 state(s)]
+Best heuristic value: 74/54 [expanded 102 state(s)]
+Best heuristic value: 73/54 [expanded 104 state(s)]
+Best heuristic value: 71/54 [expanded 105 state(s)]
+Best heuristic value: 71/53 [expanded 106 state(s)]
+Best heuristic value: 70/53 [expanded 107 state(s)]
+Best heuristic value: 70/52 [expanded 109 state(s)]
+Best heuristic value: 69/52 [expanded 112 state(s)]
+Best heuristic value: 69/51 [expanded 113 state(s)]
+Best heuristic value: 68/51 [expanded 114 state(s)]
+Best heuristic value: 67/51 [expanded 116 state(s)]
+Best heuristic value: 67/50 [expanded 120 state(s)]
+Best heuristic value: 66/50 [expanded 121 state(s)]
+Best heuristic value: 66/48 [expanded 123 state(s)]
+Best heuristic value: 65/47 [expanded 124 state(s)]
+Best heuristic value: 64/46 [expanded 129 state(s)]
+Best heuristic value: 62/46 [expanded 130 state(s)]
+Best heuristic value: 61/46 [expanded 137 state(s)]
+Best heuristic value: 61/45 [expanded 139 state(s)]
+Best heuristic value: 60/45 [expanded 145 state(s)]
+Best heuristic value: 60/44 [expanded 146 state(s)]
+Best heuristic value: 59/44 [expanded 148 state(s)]
+Best heuristic value: 58/43 [expanded 149 state(s)]
+Best heuristic value: 57/43 [expanded 153 state(s)]
+Best heuristic value: 57/42 [expanded 157 state(s)]
+Best heuristic value: 56/42 [expanded 162 state(s)]
+Best heuristic value: 56/41 [expanded 168 state(s)]
+Best heuristic value: 55/41 [expanded 172 state(s)]
+Best heuristic value: 55/40 [expanded 181 state(s)]
+Best heuristic value: 54/40 [expanded 183 state(s)]
+Best heuristic value: 53/39 [expanded 186 state(s)]
+Best heuristic value: 52/39 [expanded 192 state(s)]
+Best heuristic value: 51/39 [expanded 200 state(s)]
+Best heuristic value: 51/38 [expanded 202 state(s)]
+Best heuristic value: 50/37 [expanded 204 state(s)]
+Best heuristic value: 49/37 [expanded 209 state(s)]
+Best heuristic value: 48/36 [expanded 217 state(s)]
+Best heuristic value: 47/35 [expanded 222 state(s)]
+Best heuristic value: 46/35 [expanded 223 state(s)]
+Best heuristic value: 45/34 [expanded 230 state(s)]
+Best heuristic value: 44/33 [expanded 234 state(s)]
+Best heuristic value: 43/33 [expanded 235 state(s)]
+Best heuristic value: 42/32 [expanded 236 state(s)]
+Best heuristic value: 41/31 [expanded 241 state(s)]
+Best heuristic value: 39/31 [expanded 242 state(s)]
+Best heuristic value: 38/30 [expanded 249 state(s)]
+Best heuristic value: 37/29 [expanded 253 state(s)]
+Best heuristic value: 35/29 [expanded 254 state(s)]
+Best heuristic value: 34/28 [expanded 255 state(s)]
+Best heuristic value: 33/28 [expanded 261 state(s)]
+Best heuristic value: 33/27 [expanded 267 state(s)]
+Best heuristic value: 32/27 [expanded 270 state(s)]
+Best heuristic value: 31/27 [expanded 281 state(s)]
+Best heuristic value: 30/26 [expanded 289 state(s)]
+Best heuristic value: 29/26 [expanded 291 state(s)]
+Best heuristic value: 29/25 [expanded 299 state(s)]
+Best heuristic value: 28/25 [expanded 300 state(s)]
+Best heuristic value: 27/24 [expanded 313 state(s)]
+Best heuristic value: 26/23 [expanded 316 state(s)]
+Best heuristic value: 25/22 [expanded 323 state(s)]
+Best heuristic value: 24/21 [expanded 330 state(s)]
+Best heuristic value: 23/20 [expanded 333 state(s)]
+Best heuristic value: 22/19 [expanded 336 state(s)]
+Best heuristic value: 21/18 [expanded 343 state(s)]
+Best heuristic value: 20/17 [expanded 346 state(s)]
+Best heuristic value: 19/16 [expanded 352 state(s)]
+Best heuristic value: 18/15 [expanded 358 state(s)]
+Best heuristic value: 17/14 [expanded 360 state(s)]
+Best heuristic value: 16/14 [expanded 362 state(s)]
+Best heuristic value: 16/13 [expanded 367 state(s)]
+Best heuristic value: 15/13 [expanded 369 state(s)]
+Best heuristic value: 14/12 [expanded 370 state(s)]
+Best heuristic value: 13/11 [expanded 374 state(s)]
+Best heuristic value: 12/10 [expanded 376 state(s)]
+Best heuristic value: 11/9 [expanded 378 state(s)]
+Best heuristic value: 10/8 [expanded 381 state(s)]
+Best heuristic value: 9/7 [expanded 384 state(s)]
+Best heuristic value: 7/7 [expanded 385 state(s)]
+Best heuristic value: 6/6 [expanded 386 state(s)]
+Best heuristic value: 5/5 [expanded 388 state(s)]
+Best heuristic value: 4/4 [expanded 389 state(s)]
+Best heuristic value: 3/3 [expanded 390 state(s)]
+Best heuristic value: 2/2 [expanded 391 state(s)]
+Best heuristic value: 1/1 [expanded 392 state(s)]
+Solution found!
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj11 apn1 apt4
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+load-truck obj42 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+load-truck obj11 tru4 apt4
+unload-truck obj42 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj11 tru4 pos4
+fly-airplane apn1 apt4 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj32 apn1 apt4
+load-airplane obj42 apn1 apt4
+fly-airplane apn1 apt4 apt1
+unload-airplane obj42 apn1 apt1
+load-truck obj42 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj42 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+unload-airplane obj12 apn1 apt3
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj41 tru4 apt4
+fly-airplane apn2 apt5 apt4
+load-airplane obj41 apn2 apt4
+fly-airplane apn2 apt4 apt1
+unload-airplane obj41 apn2 apt1
+load-truck obj21 tru2 pos2
+load-truck obj53 tru5 pos5
+load-truck obj51 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj53 tru5 apt5
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+fly-airplane apn2 apt1 apt2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn2 apt2
+fly-airplane apn2 apt2 apt4
+unload-airplane obj21 apn2 apt4
+load-truck obj21 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj21 tru4 pos4
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+load-airplane obj43 apn2 apt4
+fly-airplane apn2 apt4 apt1
+unload-airplane obj43 apn2 apt1
+unload-truck obj22 tru2 apt2
+fly-airplane apn1 apt3 apt2
+fly-airplane apn2 apt1 apt5
+unload-truck obj51 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+load-airplane obj51 apn2 apt5
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj22 apn1 apt3
+load-truck obj22 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj22 tru3 pos3
+load-truck obj52 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj52 tru5 apt5
+load-airplane obj52 apn2 apt5
+fly-airplane apn2 apt5 apt4
+unload-airplane obj51 apn2 apt4
+fly-airplane apn2 apt4 apt1
+load-truck obj51 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj51 tru4 pos4
+unload-airplane obj52 apn2 apt1
+load-truck obj52 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj52 tru1 pos1
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn2 apt1
+fly-airplane apn2 apt1 apt2
+unload-airplane obj13 apn2 apt2
+Plan length: 91 step(s).
+Expanded 393 state(s).
+Generated 9072 state(s).
+Cache hits: 15824
+Cache misses: 0
+Search time: 0.03 seconds
+Total time: 0.05 seconds
+---------------Problema 27---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+22 variables of 22 necessary
+650 of 650 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 650 to 650)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 650 unary operators... done! [650 unary operators]
+Best heuristic value: 104/73 [expanded 1 state(s)]
+Best heuristic value: 103/72 [expanded 3 state(s)]
+Best heuristic value: 101/72 [expanded 4 state(s)]
+Best heuristic value: 100/71 [expanded 5 state(s)]
+Best heuristic value: 99/70 [expanded 10 state(s)]
+Best heuristic value: 98/69 [expanded 16 state(s)]
+Best heuristic value: 97/69 [expanded 17 state(s)]
+Best heuristic value: 96/69 [expanded 24 state(s)]
+Best heuristic value: 96/68 [expanded 26 state(s)]
+Best heuristic value: 96/67 [expanded 33 state(s)]
+Best heuristic value: 95/67 [expanded 35 state(s)]
+Best heuristic value: 94/67 [expanded 36 state(s)]
+Best heuristic value: 94/65 [expanded 45 state(s)]
+Best heuristic value: 93/65 [expanded 47 state(s)]
+Best heuristic value: 92/65 [expanded 52 state(s)]
+Best heuristic value: 92/64 [expanded 53 state(s)]
+Best heuristic value: 92/63 [expanded 62 state(s)]
+Best heuristic value: 90/63 [expanded 64 state(s)]
+Best heuristic value: 89/63 [expanded 67 state(s)]
+Best heuristic value: 88/63 [expanded 72 state(s)]
+Best heuristic value: 88/62 [expanded 77 state(s)]
+Best heuristic value: 87/62 [expanded 83 state(s)]
+Best heuristic value: 86/61 [expanded 92 state(s)]
+Best heuristic value: 84/61 [expanded 98 state(s)]
+Best heuristic value: 84/60 [expanded 100 state(s)]
+Best heuristic value: 83/60 [expanded 104 state(s)]
+Best heuristic value: 82/59 [expanded 112 state(s)]
+Best heuristic value: 80/59 [expanded 118 state(s)]
+Best heuristic value: 80/58 [expanded 120 state(s)]
+Best heuristic value: 79/58 [expanded 129 state(s)]
+Best heuristic value: 79/57 [expanded 131 state(s)]
+Best heuristic value: 78/57 [expanded 140 state(s)]
+Best heuristic value: 78/56 [expanded 144 state(s)]
+Best heuristic value: 77/56 [expanded 153 state(s)]
+Best heuristic value: 77/55 [expanded 162 state(s)]
+Best heuristic value: 76/55 [expanded 171 state(s)]
+Best heuristic value: 74/55 [expanded 172 state(s)]
+Best heuristic value: 73/55 [expanded 179 state(s)]
+Best heuristic value: 73/54 [expanded 184 state(s)]
+Best heuristic value: 72/54 [expanded 193 state(s)]
+Best heuristic value: 72/53 [expanded 194 state(s)]
+Best heuristic value: 71/53 [expanded 195 state(s)]
+Best heuristic value: 70/53 [expanded 197 state(s)]
+Best heuristic value: 70/52 [expanded 206 state(s)]
+Best heuristic value: 69/52 [expanded 210 state(s)]
+Best heuristic value: 69/51 [expanded 225 state(s)]
+Best heuristic value: 68/51 [expanded 226 state(s)]
+Best heuristic value: 66/51 [expanded 229 state(s)]
+Best heuristic value: 65/50 [expanded 233 state(s)]
+Best heuristic value: 65/49 [expanded 235 state(s)]
+Best heuristic value: 65/48 [expanded 238 state(s)]
+Best heuristic value: 64/48 [expanded 250 state(s)]
+Best heuristic value: 64/47 [expanded 253 state(s)]
+Best heuristic value: 63/47 [expanded 268 state(s)]
+Best heuristic value: 63/46 [expanded 274 state(s)]
+Best heuristic value: 62/45 [expanded 283 state(s)]
+Best heuristic value: 61/44 [expanded 289 state(s)]
+Best heuristic value: 60/44 [expanded 297 state(s)]
+Best heuristic value: 60/43 [expanded 301 state(s)]
+Best heuristic value: 58/43 [expanded 307 state(s)]
+Best heuristic value: 57/42 [expanded 320 state(s)]
+Best heuristic value: 57/40 [expanded 321 state(s)]
+Best heuristic value: 57/39 [expanded 330 state(s)]
+Best heuristic value: 55/39 [expanded 333 state(s)]
+Best heuristic value: 55/38 [expanded 341 state(s)]
+Best heuristic value: 54/38 [expanded 342 state(s)]
+Best heuristic value: 52/38 [expanded 344 state(s)]
+Best heuristic value: 51/38 [expanded 346 state(s)]
+Best heuristic value: 50/38 [expanded 356 state(s)]
+Best heuristic value: 49/38 [expanded 358 state(s)]
+Best heuristic value: 49/37 [expanded 359 state(s)]
+Best heuristic value: 48/37 [expanded 362 state(s)]
+Best heuristic value: 47/37 [expanded 372 state(s)]
+Best heuristic value: 47/36 [expanded 377 state(s)]
+Best heuristic value: 47/35 [expanded 380 state(s)]
+Best heuristic value: 46/35 [expanded 386 state(s)]
+Best heuristic value: 45/35 [expanded 390 state(s)]
+Best heuristic value: 45/34 [expanded 395 state(s)]
+Best heuristic value: 44/34 [expanded 404 state(s)]
+Best heuristic value: 44/33 [expanded 411 state(s)]
+Best heuristic value: 43/33 [expanded 416 state(s)]
+Best heuristic value: 40/32 [expanded 421 state(s)]
+Best heuristic value: 39/31 [expanded 427 state(s)]
+Best heuristic value: 38/30 [expanded 434 state(s)]
+Best heuristic value: 37/30 [expanded 437 state(s)]
+Best heuristic value: 36/29 [expanded 441 state(s)]
+Best heuristic value: 35/28 [expanded 449 state(s)]
+Best heuristic value: 33/27 [expanded 450 state(s)]
+Best heuristic value: 32/26 [expanded 454 state(s)]
+Best heuristic value: 31/25 [expanded 458 state(s)]
+Best heuristic value: 30/25 [expanded 459 state(s)]
+Best heuristic value: 29/24 [expanded 464 state(s)]
+Best heuristic value: 28/23 [expanded 467 state(s)]
+Best heuristic value: 27/23 [expanded 468 state(s)]
+Best heuristic value: 26/22 [expanded 469 state(s)]
+Best heuristic value: 25/21 [expanded 473 state(s)]
+Best heuristic value: 23/21 [expanded 474 state(s)]
+Best heuristic value: 22/20 [expanded 479 state(s)]
+Best heuristic value: 21/19 [expanded 482 state(s)]
+Best heuristic value: 20/18 [expanded 483 state(s)]
+Best heuristic value: 19/17 [expanded 484 state(s)]
+Best heuristic value: 18/17 [expanded 488 state(s)]
+Best heuristic value: 18/16 [expanded 490 state(s)]
+Best heuristic value: 17/16 [expanded 497 state(s)]
+Best heuristic value: 17/15 [expanded 502 state(s)]
+Best heuristic value: 15/14 [expanded 503 state(s)]
+Best heuristic value: 14/13 [expanded 507 state(s)]
+Best heuristic value: 13/12 [expanded 511 state(s)]
+Best heuristic value: 13/11 [expanded 512 state(s)]
+Best heuristic value: 12/10 [expanded 516 state(s)]
+Best heuristic value: 11/10 [expanded 517 state(s)]
+Best heuristic value: 10/9 [expanded 520 state(s)]
+Best heuristic value: 9/8 [expanded 521 state(s)]
+Best heuristic value: 8/7 [expanded 522 state(s)]
+Best heuristic value: 7/6 [expanded 524 state(s)]
+Best heuristic value: 6/5 [expanded 525 state(s)]
+Best heuristic value: 5/4 [expanded 526 state(s)]
+Best heuristic value: 4/4 [expanded 527 state(s)]
+Best heuristic value: 4/3 [expanded 528 state(s)]
+Best heuristic value: 3/3 [expanded 529 state(s)]
+Best heuristic value: 2/2 [expanded 531 state(s)]
+Best heuristic value: 1/1 [expanded 532 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+load-truck obj11 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+fly-airplane apn2 apt2 apt1
+load-airplane obj11 apn2 apt1
+fly-airplane apn2 apt1 apt3
+unload-airplane obj11 apn2 apt3
+fly-airplane apn1 apt5 apt1
+unload-truck obj12 tru1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt2
+drive-truck tru1 apt1 pos1 cit1
+unload-airplane obj12 apn1 apt2
+load-truck obj23 tru2 pos2
+load-truck obj42 tru4 pos4
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj42 tru4 apt4
+fly-airplane apn2 apt3 apt4
+load-airplane obj42 apn2 apt4
+unload-truck obj41 tru4 apt4
+load-airplane obj41 apn2 apt4
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+load-truck obj12 tru2 apt2
+unload-truck obj23 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj12 tru2 pos2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt5
+fly-airplane apn2 apt4 apt2
+unload-airplane obj42 apn2 apt2
+fly-airplane apn2 apt2 apt1
+unload-airplane obj41 apn2 apt1
+load-truck obj53 tru5 pos5
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj51 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj53 tru5 apt5
+fly-airplane apn1 apt5 apt4
+unload-airplane obj23 apn1 apt4
+fly-airplane apn1 apt4 apt5
+load-truck obj23 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj23 tru4 pos4
+load-airplane obj53 apn1 apt5
+fly-airplane apn1 apt5 apt2
+unload-airplane obj53 apn1 apt2
+fly-airplane apn2 apt1 apt4
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj43 tru4 apt4
+load-airplane obj43 apn2 apt4
+fly-airplane apn2 apt4 apt5
+unload-airplane obj43 apn2 apt5
+load-truck obj43 tru5 apt5
+drive-truck tru5 apt5 pos5 cit5
+unload-truck obj43 tru5 pos5
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+fly-airplane apn1 apt2 apt3
+unload-airplane obj21 apn1 apt3
+load-truck obj21 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj21 tru3 pos3
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj31 tru3 apt3
+load-airplane obj31 apn1 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj31 apn1 apt4
+unload-truck obj22 tru2 apt2
+load-truck obj52 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj51 tru5 apt5
+load-airplane obj51 apn2 apt5
+fly-airplane apn2 apt5 apt3
+unload-airplane obj51 apn2 apt3
+fly-airplane apn2 apt3 apt2
+load-truck obj51 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj51 tru3 pos3
+load-airplane obj22 apn2 apt2
+fly-airplane apn2 apt2 apt4
+unload-airplane obj22 apn2 apt4
+fly-airplane apn2 apt4 apt5
+unload-truck obj52 tru5 apt5
+load-airplane obj52 apn2 apt5
+fly-airplane apn2 apt5 apt4
+unload-airplane obj52 apn2 apt4
+Plan length: 98 step(s).
+Expanded 533 state(s).
+Generated 13594 state(s).
+Cache hits: 29233
+Cache misses: 0
+Search time: 0.05 seconds
+Total time: 0.07 seconds
+---------------Problema 28---------------
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+22 variables of 22 necessary
+650 of 650 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 650 to 650)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 650 unary operators... done! [650 unary operators]
+Best heuristic value: 91/65 [expanded 1 state(s)]
+Best heuristic value: 91/63 [expanded 3 state(s)]
+Best heuristic value: 90/63 [expanded 6 state(s)]
+Best heuristic value: 89/63 [expanded 8 state(s)]
+Best heuristic value: 89/62 [expanded 9 state(s)]
+Best heuristic value: 88/62 [expanded 13 state(s)]
+Best heuristic value: 88/61 [expanded 18 state(s)]
+Best heuristic value: 87/61 [expanded 19 state(s)]
+Best heuristic value: 85/60 [expanded 21 state(s)]
+Best heuristic value: 84/59 [expanded 24 state(s)]
+Best heuristic value: 83/58 [expanded 30 state(s)]
+Best heuristic value: 82/57 [expanded 37 state(s)]
+Best heuristic value: 81/57 [expanded 38 state(s)]
+Best heuristic value: 80/56 [expanded 44 state(s)]
+Best heuristic value: 79/56 [expanded 45 state(s)]
+Best heuristic value: 78/55 [expanded 46 state(s)]
+Best heuristic value: 77/54 [expanded 53 state(s)]
+Best heuristic value: 76/53 [expanded 61 state(s)]
+Best heuristic value: 74/53 [expanded 64 state(s)]
+Best heuristic value: 73/52 [expanded 68 state(s)]
+Best heuristic value: 72/52 [expanded 76 state(s)]
+Best heuristic value: 72/51 [expanded 78 state(s)]
+Best heuristic value: 71/51 [expanded 80 state(s)]
+Best heuristic value: 70/50 [expanded 89 state(s)]
+Best heuristic value: 69/49 [expanded 95 state(s)]
+Best heuristic value: 67/49 [expanded 96 state(s)]
+Best heuristic value: 66/49 [expanded 105 state(s)]
+Best heuristic value: 65/49 [expanded 113 state(s)]
+Best heuristic value: 65/48 [expanded 114 state(s)]
+Best heuristic value: 64/48 [expanded 115 state(s)]
+Best heuristic value: 63/48 [expanded 117 state(s)]
+Best heuristic value: 63/46 [expanded 130 state(s)]
+Best heuristic value: 62/46 [expanded 132 state(s)]
+Best heuristic value: 61/46 [expanded 141 state(s)]
+Best heuristic value: 61/45 [expanded 147 state(s)]
+Best heuristic value: 60/45 [expanded 155 state(s)]
+Best heuristic value: 60/44 [expanded 160 state(s)]
+Best heuristic value: 59/44 [expanded 163 state(s)]
+Best heuristic value: 58/44 [expanded 168 state(s)]
+Best heuristic value: 57/44 [expanded 174 state(s)]
+Best heuristic value: 57/43 [expanded 181 state(s)]
+Best heuristic value: 56/43 [expanded 187 state(s)]
+Best heuristic value: 56/42 [expanded 198 state(s)]
+Best heuristic value: 55/42 [expanded 199 state(s)]
+Best heuristic value: 55/41 [expanded 200 state(s)]
+Best heuristic value: 55/40 [expanded 213 state(s)]
+Best heuristic value: 54/40 [expanded 216 state(s)]
+Best heuristic value: 53/40 [expanded 219 state(s)]
+Best heuristic value: 53/39 [expanded 226 state(s)]
+Best heuristic value: 52/39 [expanded 227 state(s)]
+Best heuristic value: 51/39 [expanded 237 state(s)]
+Best heuristic value: 50/39 [expanded 239 state(s)]
+Best heuristic value: 49/38 [expanded 240 state(s)]
+Best heuristic value: 47/37 [expanded 246 state(s)]
+Best heuristic value: 46/36 [expanded 252 state(s)]
+Best heuristic value: 45/35 [expanded 259 state(s)]
+Best heuristic value: 43/34 [expanded 260 state(s)]
+Best heuristic value: 42/33 [expanded 265 state(s)]
+Best heuristic value: 41/32 [expanded 270 state(s)]
+Best heuristic value: 40/32 [expanded 271 state(s)]
+Best heuristic value: 39/31 [expanded 277 state(s)]
+Best heuristic value: 38/30 [expanded 281 state(s)]
+Best heuristic value: 36/30 [expanded 282 state(s)]
+Best heuristic value: 35/29 [expanded 283 state(s)]
+Best heuristic value: 35/28 [expanded 287 state(s)]
+Best heuristic value: 34/28 [expanded 289 state(s)]
+Best heuristic value: 34/27 [expanded 294 state(s)]
+Best heuristic value: 33/27 [expanded 299 state(s)]
+Best heuristic value: 33/26 [expanded 300 state(s)]
+Best heuristic value: 31/26 [expanded 304 state(s)]
+Best heuristic value: 30/26 [expanded 307 state(s)]
+Best heuristic value: 30/25 [expanded 312 state(s)]
+Best heuristic value: 29/25 [expanded 314 state(s)]
+Best heuristic value: 28/23 [expanded 317 state(s)]
+Best heuristic value: 27/22 [expanded 319 state(s)]
+Best heuristic value: 26/21 [expanded 324 state(s)]
+Best heuristic value: 25/20 [expanded 326 state(s)]
+Best heuristic value: 24/20 [expanded 330 state(s)]
+Best heuristic value: 24/19 [expanded 332 state(s)]
+Best heuristic value: 23/19 [expanded 334 state(s)]
+Best heuristic value: 22/18 [expanded 337 state(s)]
+Best heuristic value: 21/17 [expanded 340 state(s)]
+Best heuristic value: 20/17 [expanded 344 state(s)]
+Best heuristic value: 20/16 [expanded 345 state(s)]
+Best heuristic value: 20/15 [expanded 346 state(s)]
+Best heuristic value: 19/15 [expanded 348 state(s)]
+Best heuristic value: 18/15 [expanded 351 state(s)]
+Best heuristic value: 17/14 [expanded 353 state(s)]
+Best heuristic value: 16/13 [expanded 354 state(s)]
+Best heuristic value: 14/13 [expanded 356 state(s)]
+Best heuristic value: 14/12 [expanded 358 state(s)]
+Best heuristic value: 13/12 [expanded 359 state(s)]
+Best heuristic value: 12/12 [expanded 360 state(s)]
+Best heuristic value: 11/11 [expanded 364 state(s)]
+Best heuristic value: 10/10 [expanded 367 state(s)]
+Best heuristic value: 9/9 [expanded 369 state(s)]
+Best heuristic value: 8/8 [expanded 371 state(s)]
+Best heuristic value: 7/7 [expanded 375 state(s)]
+Best heuristic value: 6/6 [expanded 377 state(s)]
+Best heuristic value: 5/5 [expanded 380 state(s)]
+Best heuristic value: 4/4 [expanded 383 state(s)]
+Best heuristic value: 3/3 [expanded 384 state(s)]
+Best heuristic value: 2/2 [expanded 385 state(s)]
+Best heuristic value: 1/1 [expanded 386 state(s)]
+Solution found!
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+load-airplane obj11 apn2 apt1
+fly-airplane apn2 apt1 apt3
+unload-airplane obj11 apn2 apt3
+load-truck obj23 tru2 pos2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+load-truck obj11 tru3 apt3
+drive-truck tru3 apt3 pos3 cit3
+unload-truck obj11 tru3 pos3
+load-truck obj42 tru4 pos4
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj42 tru4 apt4
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj23 apn1 apt4
+load-truck obj23 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj23 tru4 pos4
+fly-airplane apn1 apt4 apt2
+unload-truck obj21 tru2 apt2
+load-airplane obj21 apn1 apt2
+load-truck obj53 tru5 pos5
+load-truck obj31 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj32 tru3 apt3
+fly-airplane apn1 apt2 apt4
+unload-airplane obj21 apn1 apt4
+drive-truck tru2 apt2 pos2 cit2
+load-airplane obj32 apn2 apt3
+fly-airplane apn2 apt3 apt1
+unload-airplane obj32 apn2 apt1
+fly-airplane apn2 apt1 apt5
+unload-truck obj31 tru3 apt3
+load-truck obj43 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+unload-truck obj41 tru4 apt4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt1
+unload-airplane obj41 apn1 apt1
+load-truck obj41 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj41 tru1 pos1
+fly-airplane apn1 apt1 apt4
+unload-truck obj43 tru4 apt4
+load-airplane obj43 apn1 apt4
+fly-airplane apn1 apt4 apt3
+unload-airplane obj43 apn1 apt3
+load-airplane obj31 apn1 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj31 apn1 apt4
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+load-truck obj51 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj53 tru5 apt5
+load-airplane obj53 apn2 apt5
+unload-truck obj13 tru1 apt1
+fly-airplane apn2 apt5 apt3
+unload-airplane obj53 apn2 apt3
+fly-airplane apn2 apt3 apt1
+load-airplane obj13 apn2 apt1
+fly-airplane apn2 apt1 apt3
+unload-airplane obj13 apn2 apt3
+unload-truck obj51 tru5 apt5
+fly-airplane apn1 apt4 apt5
+drive-truck tru5 apt5 pos5 cit5
+load-airplane obj51 apn1 apt5
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+load-truck obj52 tru5 pos5
+drive-truck tru5 pos5 apt5 cit5
+unload-truck obj52 tru5 apt5
+load-airplane obj52 apn1 apt5
+fly-airplane apn1 apt5 apt3
+unload-airplane obj51 apn1 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj52 apn1 apt1
+Plan length: 85 step(s).
+Expanded 387 state(s).
+Generated 9654 state(s).
+Cache hits: 18656
+Cache misses: 0
+Search time: 0.02 seconds
+Total time: 0.04 seconds

@@ -1,0 +1,19 @@
+# Normalização de texto
+* text=auto
+
+# Binários do acervo original: não tentar diff nem converter fim de linha
+*.docx binary
+*.xls binary
+*.ods binary
+*.odt binary
+*.zip binary
+*.tgz binary
+*.png binary
+*.gif binary
+
+# O acervo de 2010 é material histórico preservado byte a byte:
+# sem normalização de fim de linha (vários arquivos originais são CRLF)
+acervo-2010/** -text
+# e fora das estatísticas de linguagem do GitHub e do diff colapsado
+acervo-2010/** linguist-vendored
+acervo-2010/** linguist-generated

@@ -1,0 +1,66 @@
+problema 1
+Parsing...
+Instantiating...
+Starting instantiation [21 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+5 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(c, c)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(d, d)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(b, b)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(a, a)
+Removed false proposition: <none of those>
+8 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+9 variables of 9 necessary
+32 of 32 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 96 to 48)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 120 unary operators... done! [96 unary operators]
+Best heuristic value: 6/6 [expanded 1 state(s)]
+Best heuristic value: 5/5 [expanded 5 state(s)]
+Best heuristic value: 3/4 [expanded 7 state(s)]
+Best heuristic value: 3/3 [expanded 10 state(s)]
+Best heuristic value: 2/2 [expanded 14 state(s)]
+Best heuristic value: 1/1 [expanded 15 state(s)]
+Solution found!
+pick-up d
+stack d c
+pick-up b
+stack b a
+unstack d c
+put-down d
+pick-up c
+stack c b
+pick-up d
+stack d c
+Plan length: 10 step(s).
+Expanded 16 state(s).
+Generated 45 state(s).
+Cache hits: 26
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+problema 2

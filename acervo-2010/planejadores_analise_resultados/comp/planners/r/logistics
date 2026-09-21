@@ -1,0 +1,128 @@
+:- style_check(-singleton).
+:- style_check(-discontiguous).
+type(object, object).
+type(truck, vehicle).
+type(airplane, vehicle).
+type(package, physobj).
+type(vehicle, physobj).
+type(airport, place).
+type(location, place).
+type(city, object).
+type(place, object).
+type(physobj, object).
+type(truck, object).
+type(airplane, object).
+type(package, object).
+type(vehicle, object).
+type(airport, object).
+type(location, object).
+complex_predicates(inUcity, inUcity1, [airport, city]).
+complex_predicates(inUcity, inUcity2, [location, city]).
+complex_predicates(at, at3, [package, airport]).
+complex_predicates(at, at4, [package, location]).
+complex_predicates(at, at5, [truck, airport]).
+complex_predicates(at, at6, [truck, location]).
+complex_predicates(at, at7, [airplane, airport]).
+complex_predicates(at, at8, [airplane, location]).
+complex_predicates(in, in9, [package, truck]).
+complex_predicates(in, in10, [package, airplane]).
+complex_action(loadUtruck, loadUtruck11, [package, truck, airport]).
+complex_action(loadUtruck, loadUtruck12, [package, truck, location]).
+complex_action(loadUairplane, loadUairplane13, [package, airplane, airport]).
+complex_action(loadUairplane, loadUairplane14, [package, airplane, location]).
+complex_action(unloadUtruck, unloadUtruck15, [package, truck, airport]).
+complex_action(unloadUtruck, unloadUtruck16, [package, truck, location]).
+complex_action(unloadUairplane, unloadUairplane17, [package, airplane, airport]).
+complex_action(unloadUairplane, unloadUairplane18, [package, airplane, location]).
+complex_action(driveUtruck, driveUtruck19, [truck, airport, airport, city]).
+complex_action(driveUtruck, driveUtruck20, [truck, airport, location, city]).
+complex_action(driveUtruck, driveUtruck21, [truck, location, airport, city]).
+complex_action(driveUtruck, driveUtruck22, [truck, location, location, city]).
+fluent_name(inUcity1, [varloc, varcity], [airport, city]).
+fluent_name(inUcity2, [varloc, varcity], [location, city]).
+fluent_name(at3, [varobj, varloc], [package, airport]).
+fluent_name(at4, [varobj, varloc], [package, location]).
+fluent_name(at5, [varobj, varloc], [truck, airport]).
+fluent_name(at6, [varobj, varloc], [truck, location]).
+fluent_name(at7, [varobj, varloc], [airplane, airport]).
+fluent_name(at8, [varobj, varloc], [airplane, location]).
+fluent_name(in9, [varpkg, varveh], [package, truck]).
+fluent_name(in10, [varpkg, varveh], [package, airplane]).
+action_name(flyUairplane, [avarairplane, avarlocUfrom, avarlocUto], [airplane, airport, airport]).
+action_name(loadUtruck11, [avarpkg, avartruck, avarloc], [package, truck, airport]).
+action_name(loadUtruck12, [avarpkg, avartruck, avarloc], [package, truck, location]).
+action_name(loadUairplane13, [avarpkg, avarairplane, avarloc], [package, airplane, airport]).
+action_name(loadUairplane14, [avarpkg, avarairplane, avarloc], [package, airplane, location]).
+action_name(unloadUtruck15, [avarpkg, avartruck, avarloc], [package, truck, airport]).
+action_name(unloadUtruck16, [avarpkg, avartruck, avarloc], [package, truck, location]).
+action_name(unloadUairplane17, [avarpkg, avarairplane, avarloc], [package, airplane, airport]).
+action_name(unloadUairplane18, [avarpkg, avarairplane, avarloc], [package, airplane, location]).
+action_name(driveUtruck19, [avartruck, avarlocUfrom, avarlocUto, avarcity], [truck, airport, airport, city]).
+action_name(driveUtruck20, [avartruck, avarlocUfrom, avarlocUto, avarcity], [truck, airport, location, city]).
+action_name(driveUtruck21, [avartruck, avarlocUfrom, avarlocUto, avarcity], [truck, location, airport, city]).
+action_name(driveUtruck22, [avartruck, avarlocUfrom, avarlocUto, avarcity], [truck, location, location, city]).
+fluent_name1(inUcity1, [x0, x1], [airport, city]).
+fluent_name1(inUcity2, [x2, x1], [location, city]).
+fluent_name1(at3, [x3, x0], [package, airport]).
+fluent_name1(at4, [x3, x2], [package, location]).
+fluent_name1(at5, [x4, x0], [truck, airport]).
+fluent_name1(at6, [x4, x2], [truck, location]).
+fluent_name1(at7, [x5, x0], [airplane, airport]).
+fluent_name1(at8, [x5, x2], [airplane, location]).
+fluent_name1(in9, [x3, x4], [package, truck]).
+fluent_name1(in10, [x3, x5], [package, airplane]).
+domain(object, [object]).
+domain(truck, [truck, x4]).
+domain(airplane, [airplane, x5]).
+domain(package, [package, x3]).
+domain(vehicle, [vehicle]).
+domain(airport, [airport, x0]).
+domain(location, [location, x2]).
+domain(city, [city, x1]).
+domain(place, [place]).
+domain(physobj, [physobj]).
+domain(truck, [truck, x4]).
+domain(airplane, [airplane, x5]).
+domain(package, [package, x3]).
+domain(vehicle, [vehicle]).
+domain(airport, [airport, x0]).
+domain(location, [location, x2]).
+poss(flyUairplane(_G34659, _G34660, _G34661), [at7(_G34659, _G34660)], []).
+effect(flyUairplane(_G34659, _G34660, _G34661), -at7(_G34659, _G34660), [], [], [[_G34661], [airport]]).
+effect(flyUairplane(_G34659, _G34660, _G34661), at7(_G34659, _G34661), [], [], [[_G34660], [airport]]).
+poss(loadUtruck11(_G34063, _G34064, _G34065), [at5(_G34064, _G34065), at3(_G34063, _G34065)], []).
+effect(loadUtruck11(_G34063, _G34064, _G34065), -at3(_G34063, _G34065), [], [], [[_G34064], [truck]]).
+effect(loadUtruck11(_G34063, _G34064, _G34065), in9(_G34063, _G34064), [], [], [[_G34065], [airport]]).
+poss(loadUtruck12(_G34075, _G34076, _G34077), [at6(_G34076, _G34077), at4(_G34075, _G34077)], []).
+effect(loadUtruck12(_G34075, _G34076, _G34077), -at4(_G34075, _G34077), [], [], [[_G34076], [truck]]).
+effect(loadUtruck12(_G34075, _G34076, _G34077), in9(_G34075, _G34076), [], [], [[_G34077], [location]]).
+poss(loadUairplane13(_G34461, _G34462, _G34463), [at3(_G34461, _G34463), at7(_G34462, _G34463)], []).
+effect(loadUairplane13(_G34461, _G34462, _G34463), -at3(_G34461, _G34463), [], [], [[_G34462], [airplane]]).
+effect(loadUairplane13(_G34461, _G34462, _G34463), in10(_G34461, _G34462), [], [], [[_G34463], [airport]]).
+poss(loadUairplane14(_G34474, _G34475, _G34476), [at4(_G34474, _G34476), at8(_G34475, _G34476)], []).
+effect(loadUairplane14(_G34474, _G34475, _G34476), -at4(_G34474, _G34476), [], [], [[_G34475], [airplane]]).
+effect(loadUairplane14(_G34474, _G34475, _G34476), in10(_G34474, _G34475), [], [], [[_G34476], [location]]).
+poss(unloadUtruck15(_G34164, _G34165, _G34166), [at5(_G34165, _G34166), in9(_G34164, _G34165)], []).
+effect(unloadUtruck15(_G34164, _G34165, _G34166), -in9(_G34164, _G34165), [], [], [[_G34166], [airport]]).
+effect(unloadUtruck15(_G34164, _G34165, _G34166), at3(_G34164, _G34166), [], [], [[_G34165], [truck]]).
+poss(unloadUtruck16(_G34176, _G34177, _G34178), [at6(_G34177, _G34178), in9(_G34176, _G34177)], []).
+effect(unloadUtruck16(_G34176, _G34177, _G34178), -in9(_G34176, _G34177), [], [], [[_G34178], [location]]).
+effect(unloadUtruck16(_G34176, _G34177, _G34178), at4(_G34176, _G34178), [], [], [[_G34177], [truck]]).
+poss(unloadUairplane17(_G34611, _G34612, _G34613), [in10(_G34611, _G34612), at7(_G34612, _G34613)], []).
+effect(unloadUairplane17(_G34611, _G34612, _G34613), -in10(_G34611, _G34612), [], [], [[_G34613], [airport]]).
+effect(unloadUairplane17(_G34611, _G34612, _G34613), at3(_G34611, _G34613), [], [], [[_G34612], [airplane]]).
+poss(unloadUairplane18(_G34624, _G34625, _G34626), [in10(_G34624, _G34625), at8(_G34625, _G34626)], []).
+effect(unloadUairplane18(_G34624, _G34625, _G34626), -in10(_G34624, _G34625), [], [], [[_G34626], [location]]).
+effect(unloadUairplane18(_G34624, _G34625, _G34626), at4(_G34624, _G34626), [], [], [[_G34625], [airplane]]).
+poss(driveUtruck19(_G37433, _G37434, _G37435, _G37436), [at5(_G37433, _G37434), inUcity1(_G37434, _G37436), inUcity1(_G37435, _G37436)], []).
+effect(driveUtruck19(_G37433, _G37434, _G37435, _G37436), -at5(_G37433, _G37434), [], [], [[_G37435, _G37436], [airport, city]]).
+effect(driveUtruck19(_G37433, _G37434, _G37435, _G37436), at5(_G37433, _G37435), [], [], [[_G37434, _G37436], [airport, city]]).
+poss(driveUtruck20(_G37449, _G37450, _G37451, _G37452), [at5(_G37449, _G37450), inUcity1(_G37450, _G37452), inUcity2(_G37451, _G37452)], []).
+effect(driveUtruck20(_G37449, _G37450, _G37451, _G37452), -at5(_G37449, _G37450), [], [], [[_G37451, _G37452], [location, city]]).
+effect(driveUtruck20(_G37449, _G37450, _G37451, _G37452), at6(_G37449, _G37451), [], [], [[_G37450, _G37452], [airport, city]]).
+poss(driveUtruck21(_G37449, _G37450, _G37451, _G37452), [at6(_G37449, _G37450), inUcity2(_G37450, _G37452), inUcity1(_G37451, _G37452)], []).
+effect(driveUtruck21(_G37449, _G37450, _G37451, _G37452), -at6(_G37449, _G37450), [], [], [[_G37451, _G37452], [airport, city]]).
+effect(driveUtruck21(_G37449, _G37450, _G37451, _G37452), at5(_G37449, _G37451), [], [], [[_G37450, _G37452], [location, city]]).
+poss(driveUtruck22(_G37464, _G37465, _G37466, _G37467), [at6(_G37464, _G37465), inUcity2(_G37465, _G37467), inUcity2(_G37466, _G37467)], []).
+effect(driveUtruck22(_G37464, _G37465, _G37466, _G37467), -at6(_G37464, _G37465), [], [], [[_G37466, _G37467], [location, city]]).
+effect(driveUtruck22(_G37464, _G37465, _G37466, _G37467), at6(_G37464, _G37466), [], [], [[_G37465, _G37467], [location, city]]).

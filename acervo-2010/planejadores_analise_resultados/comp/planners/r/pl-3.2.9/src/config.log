@@ -1,0 +1,472 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:576: checking for gcc
+configure:653: checking whether the C compiler (gcc  ) works
+configure:667: gcc -o conftest    conftest.c  1>&5
+configure:687: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:692: checking whether we are using GNU C
+configure:701: gcc -E conftest.c
+configure:716: checking whether gcc accepts -g
+configure:746: checking for ranlib
+configure:798: checking host system type
+configure:902: checking for make
+configure:932: checking whether make is GNU-make
+configure:943: checking whether mkdir accepts -p
+configure:957: checking for ar
+configure:988: checking for etags
+configure:988: checking for ctags
+configure:1022: checking for mawk
+configure:1061: checking for a BSD compatible install
+configure:1115: checking how to run the C preprocessor
+configure:1136: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1176: checking for POSIXized ISC
+configure:1197: checking for ANSI C header files
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1277: gcc -o conftest -g -O2   conftest.c  1>&5
+configure: In function 'main':
+configure:1272: warning: incompatible implicit declaration of built-in function 'exit'
+configure:1347: checking for inline
+configure:1361: gcc -c -g -O2  conftest.c 1>&5
+configure:1389: checking for working alloca.h
+configure:1401: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1422: checking for alloca
+configure:1450: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1616: checking whether byte ordering is bigendian
+configure:1634: gcc -c -g -O2  conftest.c 1>&5
+configure:1649: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:1644: error: 'not' undeclared (first use in this function)
+configure:1644: error: (Each undeclared identifier is reported only once
+configure:1644: error: for each function it appears in.)
+configure:1644: error: expected ';' before 'big'
+configure: failed program was:
+#line 1638 "configure"
+#include "confdefs.h"
+#include <sys/types.h>
+#include <sys/param.h>
+int main() {
+
+#if BYTE_ORDER != BIG_ENDIAN
+ not big endian
+#endif
+; return 0; }
+configure:1770: checking for main in -lm
+configure:1785: gcc -o conftest -g -O2   conftest.c -lm   1>&5
+configure:1813: checking for main in -ltermcap
+configure:1828: gcc -o conftest -g -O2   conftest.c -ltermcap  -lm  1>&5
+configure:1857: checking whether -ltermcap needs -lucb
+configure:1867: gcc -o conftest -g -O2   conftest.c -ltermcap -lm  1>&5
+configure:2021: checking for main in -lreadline
+configure:2036: gcc -o conftest -g -O2   conftest.c -lreadline  -ltermcap -lm  1>&5
+configure:2205: checking for readline/readline.h
+configure:2215: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2293: checking whether to install readline.3
+configure:2320: checking for dlopen in -ldl
+configure:2339: gcc -o conftest -g -O2   conftest.c -ldl  -lreadline -ltermcap -lm  1>&5
+configure:2370: checking for dlopen
+configure:2398: gcc -o conftest -g -O2   conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2567: checking for cc -c -o
+conftest.c: In function 'main':
+conftest.c:2: warning: incompatible implicit declaration of built-in function 'exit'
+configure:2584: checking whether LDFLAGS need -export-dynamic
+configure:2598: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure: In function 'main':
+configure:2594: warning: incompatible implicit declaration of built-in function 'exit'
+configure:2665: checking for unistd.h
+configure:2675: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2665: checking for string.h
+configure:2675: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2665: checking for memory.h
+configure:2675: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2665: checking for sys/time.h
+configure:2675: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2665: checking for sys/stat.h
+configure:2675: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2665: checking for pwd.h
+configure:2675: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2705: checking for sys/select.h
+configure:2715: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2705: checking for sys/param.h
+configure:2715: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2705: checking for sys/file.h
+configure:2715: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2705: checking for sys/resource.h
+configure:2715: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2705: checking for malloc.h
+configure:2715: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2745: checking for sys/termios.h
+configure:2755: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2745: checking for sys/termio.h
+configure:2755: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2751:24: error: sys/termio.h: No such file or directory
+configure: failed program was:
+#line 2750 "configure"
+#include "confdefs.h"
+#include <sys/termio.h>
+configure:2745: checking for bstring.h
+configure:2755: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2751:21: error: bstring.h: No such file or directory
+configure: failed program was:
+#line 2750 "configure"
+#include "confdefs.h"
+#include <bstring.h>
+configure:2745: checking for sys/mman.h
+configure:2755: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2785: checking for mach-o/rld.h
+configure:2795: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2791:24: error: mach-o/rld.h: No such file or directory
+configure: failed program was:
+#line 2790 "configure"
+#include "confdefs.h"
+#include <mach-o/rld.h>
+configure:2825: checking for access
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2825: checking for chmod
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2825: checking for dossleep
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+/tmp/cc4jTzLf.o: In function `main':
+/home/matheus/mestrado/comp/planners/r/pl-3.2.9/src/configure:2847: undefined reference to `dossleep'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 2830 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char dossleep(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char dossleep();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_dossleep) || defined (__stub___dossleep)
+choke me
+#else
+dossleep();
+#endif
+
+; return 0; }
+configure:2825: checking for fstat
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2825: checking for readlink
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2825: checking for getwd
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+/tmp/ccuxemmF.o: In function `main':
+/home/matheus/mestrado/comp/planners/r/pl-3.2.9/src/configure:2847: warning: the `getwd' function is dangerous and should not be used.
+configure:2825: checking for getcwd
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2825: checking for getdtablesize
+configure:2853: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2880: checking for getpagesize
+configure:2908: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2880: checking for getpwnam
+configure:2908: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2880: checking for getrlimit
+configure:2908: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2880: checking for gettimeofday
+configure:2908: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2880: checking for opendir
+configure:2908: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2880: checking for sysconf
+configure:2908: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for popen
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for putenv
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for random
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for remove
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for rename
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for rl_insert_close
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2935: checking for select
+configure:2963: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for signal
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for sigset
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for sigprocmask
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for sleep
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for usleep
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for srand
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for srandom
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:2990: checking for stat
+configure:3018: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3045: checking for memmove
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3057: warning: conflicting types for built-in function 'memmove'
+configure:3045: checking for stricmp
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+/tmp/cci3YGhg.o: In function `main':
+/home/matheus/mestrado/comp/planners/r/pl-3.2.9/src/configure:3067: undefined reference to `stricmp'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 3050 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char stricmp(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char stricmp();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_stricmp) || defined (__stub___stricmp)
+choke me
+#else
+stricmp();
+#endif
+
+; return 0; }
+configure:3045: checking for strlwr
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+/tmp/cceoHn3o.o: In function `main':
+/home/matheus/mestrado/comp/planners/r/pl-3.2.9/src/configure:3067: undefined reference to `strlwr'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 3050 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char strlwr(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char strlwr();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_strlwr) || defined (__stub___strlwr)
+choke me
+#else
+strlwr();
+#endif
+
+; return 0; }
+configure:3045: checking for sigaction
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3045: checking for sigsetmask
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3045: checking for siggetmask
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+/tmp/ccyngZRO.o: In function `main':
+/home/matheus/mestrado/comp/planners/r/pl-3.2.9/src/configure:3067: warning: warning: `siggetmask' is obsolete; `sigprocmask' is best
+configure:3045: checking for sigblock
+configure:3073: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3100: checking for rint
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3112: warning: conflicting types for built-in function 'rint'
+configure:3100: checking for aint
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+/tmp/ccYKxpgh.o: In function `main':
+/home/matheus/mestrado/comp/planners/r/pl-3.2.9/src/configure:3122: undefined reference to `aint'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 3105 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char aint(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char aint();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_aint) || defined (__stub___aint)
+choke me
+#else
+aint();
+#endif
+
+; return 0; }
+configure:3100: checking for floor
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3112: warning: conflicting types for built-in function 'floor'
+configure:3100: checking for ceil
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3112: warning: conflicting types for built-in function 'ceil'
+configure:3100: checking for isnan
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3112: warning: conflicting types for built-in function 'isnan'
+configure:3100: checking for tcsetattr
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3100: checking for cfmakeraw
+configure:3128: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3155: checking for strerror
+configure:3183: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3155: checking for tgetent
+configure:3183: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3155: checking for times
+configure:3183: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3155: checking for mmap
+configure:3183: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure:3208: checking whether time.h and sys/time.h may both be included
+configure:3222: gcc -c -g -O2  conftest.c 1>&5
+configure:3247: checking for dirent.h that defines DIR
+configure:3260: gcc -c -g -O2  conftest.c 1>&5
+configure:3285: checking for opendir in -ldir
+configure:3304: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldir  -ldl -lreadline -ltermcap -lm  1>&5
+/usr/bin/ld: cannot find -ldir
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 3293 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char opendir();
+
+int main() {
+opendir()
+; return 0; }
+configure:3368: checking for sys/wait.h that is POSIX.1 compatible
+configure:3389: gcc -c -g -O2  conftest.c 1>&5
+configure:3410: checking for pid_t
+configure:3444: checking for vfork.h
+configure:3454: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:3450:19: error: vfork.h: No such file or directory
+configure: failed program was:
+#line 3449 "configure"
+#include "confdefs.h"
+#include <vfork.h>
+configure:3479: checking for working vfork
+configure:3629: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure: In function 'sparc_address_test':
+configure:3567: warning: ignoring return value of 'write', declared with attribute warn_unused_result
+configure: In function 'main':
+configure:3612: warning: incompatible implicit declaration of built-in function 'exit'
+configure:3655: checking Static include of __register_frame_info
+configure:3667: checking alignment restrictions on doubles
+configure:3692: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure: In function 'main':
+configure:3687: warning: incompatible implicit declaration of built-in function 'exit'
+configure:3711: checking type rlim_t
+configure:3725: gcc -c -g -O2  conftest.c 1>&5
+configure:3742: checking whether assert.h needs stdio.h
+configure:3754: gcc -c -g -O2  conftest.c 1>&5
+configure:3770: checking for including sys/ioctl.h after sys/termios.h
+configure:3789: gcc -c -g -O2 -Werror  conftest.c 1>&5
+configure:3838: checking for type uchar
+configure:3850: gcc -c -g -O2  conftest.c 1>&5
+configure:3866: checking whether we need extern int errno
+configure:3880: gcc -c -g -O2  conftest.c 1>&5
+configure:3896: checking for symbolic links
+configure:3908: checking return type of signal handlers
+configure:3930: gcc -c -g -O2  conftest.c 1>&5
+configure:3949: checking for BSD signal handlers
+configure:3976: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure: In function 'main':
+configure:3971: warning: incompatible implicit declaration of built-in function 'exit'
+configure:3994: checking for SIGPROF profiler support
+configure:4032: gcc -o conftest -g -O2  -export-dynamic  conftest.c -ldl -lreadline -ltermcap -lm  1>&5
+configure: In function 'prof':
+configure:4012: warning: incompatible implicit declaration of built-in function 'exit'
+configure: In function 'main':
+configure:4024: warning: incompatible implicit declaration of built-in function 'exit'
+configure: failed program was:
+#line 3999 "configure"
+#include "confdefs.h"
+
+#ifdef TIME_WITH_SYS_TIME
+#include <sys/time.h>
+#include <time.h>
+#else
+#ifdef HAVE_SYS_TIME_H
+#include <sys/time.h>
+#else
+#include <time.h>
+#endif
+#endif
+#include <signal.h>
+static RETSIGTYPE prof(s) int s; {exit(0);}
+main()
+{ struct itimerval value, ovalue;
+  int n;
+  value.it_interval.tv_sec  = 0;
+  value.it_interval.tv_usec = 1;
+  value.it_value.tv_sec  = 0;
+  value.it_value.tv_usec = 1;
+  
+  signal(SIGPROF, prof);
+
+  if (setitimer(ITIMER_PROF, &value, &ovalue) != 0)
+    exit(1);
+
+  for(n=0; n<10000000; n++)
+    ;
+  exit(1);
+}
+configure:4050: checking for union wait
+configure:4067: gcc -c -g -O2 -Werror  conftest.c 1>&5
+cc1: warnings being treated as errors
+configure: In function 'main':
+configure:4062: error: passing argument 2 of 'waitpid' from incompatible pointer type
+/usr/include/sys/wait.h:139: note: expected 'int *' but argument is of type 'union wait *'
+configure: failed program was:
+#line 4056 "configure"
+#include "confdefs.h"
+
+#include <sys/wait.h>
+
+int main() {
+ union wait status;
+  waitpid(1, &status, WNOHANG);
+
+; return 0; }
+configure:4084: checking for tagged lvalues
+configure:4097: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:4092: warning: incompatible implicit declaration of built-in function 'exit'
+configure:4113: checking for label addresses
+configure:4140: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:4133: warning: incompatible implicit declaration of built-in function 'exit'
+configure:4162: checking memory model
+conftest.c: In function 'sub':
+conftest.c:42: warning: function returns address of local variable
+conftest.c: In function 'main':
+conftest.c:73: warning: incompatible implicit declaration of built-in function 'exit'
+conftest.c:81: warning: incompatible implicit declaration of built-in function 'malloc'
+conftest.c:83: warning: incompatible implicit declaration of built-in function 'exit'
+conftest.c:93: warning: incompatible implicit declaration of built-in function 'exit'
+configure:4179: checking for nop
+conftest.c: In function 'main':
+conftest.c:29: warning: incompatible implicit declaration of built-in function 'exit'
+configure:4200: checking if we can use mmap for stack allocation
+conftest.c: In function 'segv_handler':
+conftest.c:120: warning: incompatible implicit declaration of built-in function 'exit'
+conftest.c: In function 'main':
+conftest.c:255: warning: incompatible implicit declaration of built-in function 'exit'
+configure:4239: checking Retrying without handling SEGV
+configure:4200: checking if we can use mmap for stack allocation
+conftest.c: In function 'expand_to':
+conftest.c:145: warning: incompatible implicit declaration of built-in function 'exit'
+conftest.c: In function 'main':
+conftest.c:255: warning: incompatible implicit declaration of built-in function 'exit'

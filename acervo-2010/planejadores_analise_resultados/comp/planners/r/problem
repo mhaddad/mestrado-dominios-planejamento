@@ -1,0 +1,365 @@
+
+(define (problem p50Unet5Ub30Ug8Vrt0Vinstance)
+  (:domain pipesworldVstrips)
+  (:objects
+
+    	b10 b21 b17 b14 b27 b22 b4 b28 b6 b15 b19 b29 b20 b13 b8 b2 b11 b24 b5 b0 b1 b25 b18 b7 b12 b9 b3 b26 b23 b16 - batchUatom
+	a1 a2 a3 a4 a5 - area
+	s12 s13 s34 s23 s15 - pipe
+	ta1U3Ulco ta1U2Ulco ta1U1Ulco - tankUslot
+	ta1U4Ugasoleo ta1U3Ugasoleo ta1U2Ugasoleo ta1U1Ugasoleo - tankUslot
+	ta1U4UratUa ta1U3UratUa ta1U2UratUa ta1U1UratUa - tankUslot
+	ta1U3Uoca1 ta1U2Uoca1 ta1U1Uoca1 - tankUslot
+	ta1U2Uoc1b ta1U1Uoc1b - tankUslot
+	ta2U3Ulco ta2U2Ulco ta2U1Ulco - tankUslot
+	ta2U4Ugasoleo ta2U3Ugasoleo ta2U2Ugasoleo ta2U1Ugasoleo - tankUslot
+	ta2U4UratUa ta2U3UratUa ta2U2UratUa ta2U1UratUa - tankUslot
+	ta2U3Uoca1 ta2U2Uoca1 ta2U1Uoca1 - tankUslot
+	ta2U2Uoc1b ta2U1Uoc1b - tankUslot
+	ta3U3Ulco ta3U2Ulco ta3U1Ulco - tankUslot
+	ta3U4Ugasoleo ta3U3Ugasoleo ta3U2Ugasoleo ta3U1Ugasoleo - tankUslot
+	ta3U4UratUa ta3U3UratUa ta3U2UratUa ta3U1UratUa - tankUslot
+	ta3U3Uoca1 ta3U2Uoca1 ta3U1Uoca1 - tankUslot
+	ta3U2Uoc1b ta3U1Uoc1b - tankUslot
+	ta4U3Ulco ta4U2Ulco ta4U1Ulco - tankUslot
+	ta4U4Ugasoleo ta4U3Ugasoleo ta4U2Ugasoleo ta4U1Ugasoleo - tankUslot
+	ta4U4UratUa ta4U3UratUa ta4U2UratUa ta4U1UratUa - tankUslot
+	ta4U3Uoca1 ta4U2Uoca1 ta4U1Uoca1 - tankUslot
+	ta4U2Uoc1b ta4U1Uoc1b - tankUslot
+	ta5U3Ulco ta5U2Ulco ta5U1Ulco - tankUslot
+	ta5U4Ugasoleo ta5U3Ugasoleo ta5U2Ugasoleo ta5U1Ugasoleo - tankUslot
+	ta5U4UratUa ta5U3UratUa ta5U2UratUa ta5U1UratUa - tankUslot
+	ta5U3Uoca1 ta5U2Uoca1 ta5U1Uoca1 - tankUslot
+	ta5U2Uoc1b ta5U1Uoc1b - tankUslot
+	
+
+  )
+  (:init
+
+    
+    		(normal s12)
+		(normal s13)
+		(normal s34)
+		(normal s23)
+		(normal s15)
+
+    
+    	(mayUinterface lco lco)
+	(mayUinterface gasoleo gasoleo)
+	(mayUinterface ratUa ratUa)
+	(mayUinterface oca1 oca1)
+	(mayUinterface oc1b oc1b)
+	(mayUinterface lco gasoleo)
+	(mayUinterface gasoleo lco)
+	(mayUinterface lco oca1)
+	(mayUinterface oca1 lco)
+	(mayUinterface lco oc1b)
+	(mayUinterface oc1b lco)
+	(mayUinterface lco ratUa)
+	(mayUinterface ratUa lco)
+	(mayUinterface gasoleo ratUa)
+	(mayUinterface ratUa gasoleo)
+	(mayUinterface gasoleo oca1)
+	(mayUinterface oca1 gasoleo)
+	(mayUinterface gasoleo oc1b)
+	(mayUinterface oc1b gasoleo)
+	(mayUinterface oca1 oc1b)
+	(mayUinterface oc1b oca1)
+	
+
+    
+    	(connect a1 a2 s12)
+	(connect a1 a3 s13)
+	(connect a3 a4 s34)
+	(connect a2 a3 s23)
+	(connect a1 a5 s15)
+	
+
+    
+    	(tankUslotUproductUlocation ta1U3Ulco lco a1)
+	(tankUslotUproductUlocation ta1U2Ulco lco a1)
+	(tankUslotUproductUlocation ta1U1Ulco lco a1)
+	(tankUslotUproductUlocation ta1U4Ugasoleo gasoleo a1)
+	(tankUslotUproductUlocation ta1U3Ugasoleo gasoleo a1)
+	(tankUslotUproductUlocation ta1U2Ugasoleo gasoleo a1)
+	(tankUslotUproductUlocation ta1U1Ugasoleo gasoleo a1)
+	(tankUslotUproductUlocation ta1U4UratUa ratUa a1)
+	(tankUslotUproductUlocation ta1U3UratUa ratUa a1)
+	(tankUslotUproductUlocation ta1U2UratUa ratUa a1)
+	(tankUslotUproductUlocation ta1U1UratUa ratUa a1)
+	(tankUslotUproductUlocation ta1U3Uoca1 oca1 a1)
+	(tankUslotUproductUlocation ta1U2Uoca1 oca1 a1)
+	(tankUslotUproductUlocation ta1U1Uoca1 oca1 a1)
+	(tankUslotUproductUlocation ta1U2Uoc1b oc1b a1)
+	(tankUslotUproductUlocation ta1U1Uoc1b oc1b a1)
+	(tankUslotUproductUlocation ta2U3Ulco lco a2)
+	(tankUslotUproductUlocation ta2U2Ulco lco a2)
+	(tankUslotUproductUlocation ta2U1Ulco lco a2)
+	(tankUslotUproductUlocation ta2U4Ugasoleo gasoleo a2)
+	(tankUslotUproductUlocation ta2U3Ugasoleo gasoleo a2)
+	(tankUslotUproductUlocation ta2U2Ugasoleo gasoleo a2)
+	(tankUslotUproductUlocation ta2U1Ugasoleo gasoleo a2)
+	(tankUslotUproductUlocation ta2U4UratUa ratUa a2)
+	(tankUslotUproductUlocation ta2U3UratUa ratUa a2)
+	(tankUslotUproductUlocation ta2U2UratUa ratUa a2)
+	(tankUslotUproductUlocation ta2U1UratUa ratUa a2)
+	(tankUslotUproductUlocation ta2U3Uoca1 oca1 a2)
+	(tankUslotUproductUlocation ta2U2Uoca1 oca1 a2)
+	(tankUslotUproductUlocation ta2U1Uoca1 oca1 a2)
+	(tankUslotUproductUlocation ta2U2Uoc1b oc1b a2)
+	(tankUslotUproductUlocation ta2U1Uoc1b oc1b a2)
+	(tankUslotUproductUlocation ta3U3Ulco lco a3)
+	(tankUslotUproductUlocation ta3U2Ulco lco a3)
+	(tankUslotUproductUlocation ta3U1Ulco lco a3)
+	(tankUslotUproductUlocation ta3U4Ugasoleo gasoleo a3)
+	(tankUslotUproductUlocation ta3U3Ugasoleo gasoleo a3)
+	(tankUslotUproductUlocation ta3U2Ugasoleo gasoleo a3)
+	(tankUslotUproductUlocation ta3U1Ugasoleo gasoleo a3)
+	(tankUslotUproductUlocation ta3U4UratUa ratUa a3)
+	(tankUslotUproductUlocation ta3U3UratUa ratUa a3)
+	(tankUslotUproductUlocation ta3U2UratUa ratUa a3)
+	(tankUslotUproductUlocation ta3U1UratUa ratUa a3)
+	(tankUslotUproductUlocation ta3U3Uoca1 oca1 a3)
+	(tankUslotUproductUlocation ta3U2Uoca1 oca1 a3)
+	(tankUslotUproductUlocation ta3U1Uoca1 oca1 a3)
+	(tankUslotUproductUlocation ta3U2Uoc1b oc1b a3)
+	(tankUslotUproductUlocation ta3U1Uoc1b oc1b a3)
+	(tankUslotUproductUlocation ta4U3Ulco lco a4)
+	(tankUslotUproductUlocation ta4U2Ulco lco a4)
+	(tankUslotUproductUlocation ta4U1Ulco lco a4)
+	(tankUslotUproductUlocation ta4U4Ugasoleo gasoleo a4)
+	(tankUslotUproductUlocation ta4U3Ugasoleo gasoleo a4)
+	(tankUslotUproductUlocation ta4U2Ugasoleo gasoleo a4)
+	(tankUslotUproductUlocation ta4U1Ugasoleo gasoleo a4)
+	(tankUslotUproductUlocation ta4U4UratUa ratUa a4)
+	(tankUslotUproductUlocation ta4U3UratUa ratUa a4)
+	(tankUslotUproductUlocation ta4U2UratUa ratUa a4)
+	(tankUslotUproductUlocation ta4U1UratUa ratUa a4)
+	(tankUslotUproductUlocation ta4U3Uoca1 oca1 a4)
+	(tankUslotUproductUlocation ta4U2Uoca1 oca1 a4)
+	(tankUslotUproductUlocation ta4U1Uoca1 oca1 a4)
+	(tankUslotUproductUlocation ta4U2Uoc1b oc1b a4)
+	(tankUslotUproductUlocation ta4U1Uoc1b oc1b a4)
+	(tankUslotUproductUlocation ta5U3Ulco lco a5)
+	(tankUslotUproductUlocation ta5U2Ulco lco a5)
+	(tankUslotUproductUlocation ta5U1Ulco lco a5)
+	(tankUslotUproductUlocation ta5U4Ugasoleo gasoleo a5)
+	(tankUslotUproductUlocation ta5U3Ugasoleo gasoleo a5)
+	(tankUslotUproductUlocation ta5U2Ugasoleo gasoleo a5)
+	(tankUslotUproductUlocation ta5U1Ugasoleo gasoleo a5)
+	(tankUslotUproductUlocation ta5U4UratUa ratUa a5)
+	(tankUslotUproductUlocation ta5U3UratUa ratUa a5)
+	(tankUslotUproductUlocation ta5U2UratUa ratUa a5)
+	(tankUslotUproductUlocation ta5U1UratUa ratUa a5)
+	(tankUslotUproductUlocation ta5U3Uoca1 oca1 a5)
+	(tankUslotUproductUlocation ta5U2Uoca1 oca1 a5)
+	(tankUslotUproductUlocation ta5U1Uoca1 oca1 a5)
+	(tankUslotUproductUlocation ta5U2Uoc1b oc1b a5)
+	(tankUslotUproductUlocation ta5U1Uoc1b oc1b a5)
+	
+
+    
+    	
+
+    
+    	
+
+    
+    	(isUproduct b10 oca1)
+	(isUproduct b21 oca1)
+	(isUproduct b17 ratUa)
+	(isUproduct b14 gasoleo)
+	(isUproduct b27 oc1b)
+	(isUproduct b22 oc1b)
+	(isUproduct b4 gasoleo)
+	(isUproduct b28 lco)
+	(isUproduct b6 gasoleo)
+	(isUproduct b15 oc1b)
+	(isUproduct b19 gasoleo)
+	(isUproduct b29 oca1)
+	(isUproduct b20 ratUa)
+	(isUproduct b13 ratUa)
+	(isUproduct b8 oca1)
+	(isUproduct b2 ratUa)
+	(isUproduct b11 lco)
+	(isUproduct b24 lco)
+	(isUproduct b5 lco)
+	(isUproduct b0 ratUa)
+	(isUproduct b1 gasoleo)
+	(isUproduct b25 oca1)
+	(isUproduct b18 gasoleo)
+	(isUproduct b7 lco)
+	(isUproduct b12 oca1)
+	(isUproduct b9 ratUa)
+	(isUproduct b3 gasoleo)
+	(isUproduct b26 ratUa)
+	(isUproduct b23 lco)
+	(isUproduct b16 oc1b)
+	
+
+    
+    	
+
+    
+    	(on b21 a3)
+	(occupied ta3U1Uoca1)
+	
+	(on b17 a2)
+	(occupied ta2U1UratUa)
+	
+	(on b14 a2)
+	(occupied ta2U1Ugasoleo)
+	
+	(on b27 a2)
+	(occupied ta2U1Uoc1b)
+	
+	(on b22 a5)
+	(occupied ta5U1Uoc1b)
+	
+	(on b4 a5)
+	(occupied ta5U1Ugasoleo)
+	
+	(on b28 a5)
+	(occupied ta5U1Ulco)
+	
+	(on b6 a3)
+	(occupied ta3U1Ugasoleo)
+	
+	(on b29 a1)
+	(occupied ta1U1Uoca1)
+	
+	(on b11 a3)
+	(occupied ta3U1Ulco)
+	
+	(on b24 a5)
+	(occupied ta5U2Ulco)
+	
+	(on b0 a5)
+	(occupied ta5U1UratUa)
+	
+	(on b1 a4)
+	(occupied ta4U1Ugasoleo)
+	
+	(on b25 a1)
+	(occupied ta1U2Uoca1)
+	
+	(on b18 a4)
+	(occupied ta4U2Ugasoleo)
+	
+	(on b12 a1)
+	(occupied ta1U3Uoca1)
+	
+	(on b23 a5)
+	(occupied ta5U3Ulco)
+	
+	(on b16 a4)
+	(occupied ta4U1Uoc1b)
+	
+	(notUoccupied ta1U1Ulco)
+	(notUoccupied ta1U2Ulco)
+	(notUoccupied ta1U3Ulco)
+	(notUoccupied ta1U1Ugasoleo)
+	(notUoccupied ta1U2Ugasoleo)
+	(notUoccupied ta1U3Ugasoleo)
+	(notUoccupied ta1U4Ugasoleo)
+	(notUoccupied ta1U1UratUa)
+	(notUoccupied ta1U2UratUa)
+	(notUoccupied ta1U3UratUa)
+	(notUoccupied ta1U4UratUa)
+	(notUoccupied ta1U1Uoc1b)
+	(notUoccupied ta1U2Uoc1b)
+	(notUoccupied ta2U1Ulco)
+	(notUoccupied ta2U2Ulco)
+	(notUoccupied ta2U3Ulco)
+	(notUoccupied ta2U2Ugasoleo)
+	(notUoccupied ta2U3Ugasoleo)
+	(notUoccupied ta2U4Ugasoleo)
+	(notUoccupied ta2U2UratUa)
+	(notUoccupied ta2U3UratUa)
+	(notUoccupied ta2U4UratUa)
+	(notUoccupied ta2U1Uoca1)
+	(notUoccupied ta2U2Uoca1)
+	(notUoccupied ta2U3Uoca1)
+	(notUoccupied ta2U2Uoc1b)
+	(notUoccupied ta3U2Ulco)
+	(notUoccupied ta3U3Ulco)
+	(notUoccupied ta3U2Ugasoleo)
+	(notUoccupied ta3U3Ugasoleo)
+	(notUoccupied ta3U4Ugasoleo)
+	(notUoccupied ta3U1UratUa)
+	(notUoccupied ta3U2UratUa)
+	(notUoccupied ta3U3UratUa)
+	(notUoccupied ta3U4UratUa)
+	(notUoccupied ta3U2Uoca1)
+	(notUoccupied ta3U3Uoca1)
+	(notUoccupied ta3U1Uoc1b)
+	(notUoccupied ta3U2Uoc1b)
+	(notUoccupied ta4U1Ulco)
+	(notUoccupied ta4U2Ulco)
+	(notUoccupied ta4U3Ulco)
+	(notUoccupied ta4U3Ugasoleo)
+	(notUoccupied ta4U4Ugasoleo)
+	(notUoccupied ta4U1UratUa)
+	(notUoccupied ta4U2UratUa)
+	(notUoccupied ta4U3UratUa)
+	(notUoccupied ta4U4UratUa)
+	(notUoccupied ta4U1Uoca1)
+	(notUoccupied ta4U2Uoca1)
+	(notUoccupied ta4U3Uoca1)
+	(notUoccupied ta4U2Uoc1b)
+	(notUoccupied ta5U2Ugasoleo)
+	(notUoccupied ta5U3Ugasoleo)
+	(notUoccupied ta5U4Ugasoleo)
+	(notUoccupied ta5U2UratUa)
+	(notUoccupied ta5U3UratUa)
+	(notUoccupied ta5U4UratUa)
+	(notUoccupied ta5U1Uoca1)
+	(notUoccupied ta5U2Uoca1)
+	(notUoccupied ta5U3Uoca1)
+	(notUoccupied ta5U2Uoc1b)
+	
+
+    
+    	(first b7 s12)
+	(follow b9 b7)
+	(last b9 s12)
+	(first b8 s13)
+	(follow b3 b8)
+	(last b3 s13)
+	(first b5 s34)
+	(last b5 s34)
+	(first b19 s23)
+	(follow b13 b19)
+	(follow b10 b13)
+	(last b10 s23)
+	(first b26 s15)
+	(follow b2 b26)
+	(follow b20 b2)
+	(follow b15 b20)
+	(last b15 s15)
+	
+    
+    		(notUunitary s12)
+		(notUunitary s13)
+		(unitary s34)
+		(notUunitary s23)
+		(notUunitary s15)
+
+  )
+  (:goal (and
+    	(on b17 a3)
+	(on b27 a4)
+	(on b6 a4)
+	(on b20 a2)
+	(on b11 a1)
+	(on b24 a4)
+	(on b18 a3)
+	(on b16 a1)
+			(normal s12)
+		(normal s13)
+		(normal s34)
+		(normal s23)
+		(normal s15)
+
+  ))
+)

@@ -1,0 +1,52 @@
+# Domínios × Técnicas de Planejamento — Revisão da dissertação de 2010
+
+Revisão e evolução da dissertação de mestrado *Relação entre características de domínios e técnicas de planejamento* (Matheus Haddad, Centro Universitário da FEI, 2010; orientador: Prof. Dr. Flavio Tonidandel).
+
+A pergunta original: nenhum planejador é o melhor em todos os domínios, e características do domínio podem indicar a técnica mais promissora. Desde 2010 a área desenvolveu essa linha sob o nome de *seleção de algoritmos* e *portfólios de planejadores*. Este projeto refaz o trabalho com o estado da arte e os recursos de hoje, verifica o que das conclusões originais se sustenta e testa se o princípio de ajuste entre problema e técnica ajuda a escolher configurações de agentes de IA no desenvolvimento de software.
+
+**Documento de trabalho:** [plan/plano-revisao-dissertacao.md](plan/plano-revisao-dissertacao.md) — fases, perguntas de pesquisa, riscos, registros de decisão e de uso de IA. Comece por ele.
+
+## Estrutura
+
+| Pasta | Fase | O que contém |
+|---|---|---|
+| [plan/](plan/) | — | Plano de trabalho vivo (painel, decisões, registro de IA, changelog) |
+| [acervo-2010/](acervo-2010/) | 0 | Material original, **somente leitura**: dissertação, planejadores, domínios, resultados, modelos itSIMPLE |
+| [docs/](docs/) | 0 | Catálogo do acervo e notas de apoio |
+| [data/](data/) | 0, 3 | Datasets: `2010/` (transcrito da dissertação), `raw/`, `processed/` |
+| [literatura/](literatura/) | 1 | Protocolo de busca, notas de leitura, sínteses por eixo, referências verificadas |
+| [auditoria/](auditoria/) | 2 | Classificação das afirmações de 2010: mantém / reformula / descarta |
+| [experimentos/](experimentos/) | 3 | Contêineres, benchmarks, planejadores, extratores de *features*, execuções, análise |
+| [llm/](llm/) | 4 | Experimentos X1–X4 (LLM como planejador, tradutor, seletor, com verificador) |
+| [ponte-software/](ponte-software/) | 5 | Piloto no Ateliê de Software: protocolo, dados, relatório |
+| [redacao/](redacao/) | 6 | Capítulos da nova versão e material para o orientador |
+| [templates/](templates/) | — | Modelos de nota de leitura, registro de experimento e de uso de IA |
+
+## Fases
+
+| # | Fase | Status |
+|---|---|---|
+| 0 | Enquadramento e artefatos | 🟡 em andamento |
+| 1 | Revisão de literatura assistida por IA | ⚪ |
+| 2 | Auditoria da versão original | ⚪ |
+| 3 | Infraestrutura e replicação experimental | ⚪ |
+| 4 | Camada LLM | ⚪ |
+| 5 | Ponte para desenvolvimento de software dirigido por IA | ⚪ |
+| 6 | Redação e compartilhamento | ⚪ |
+
+O painel completo, com datas e entregáveis, fica no plano de trabalho. Este quadro só resume.
+
+## Regras do projeto
+
+1. Nenhuma referência entra sem verificação na fonte primária.
+2. Nenhum número entra no texto sem vir de execução reprodutível (script versionado + dados + configuração).
+3. Todo uso substantivo de IA é registrado (ferramenta, modelo, versão, finalidade).
+4. A IA propõe, o autor decide. O texto final é na voz do autor.
+5. Resultado e hipótese ficam separados, marcados com `[FATO]` e `[HIPÓTESE]`.
+6. Modelos de linguagem usados em experimentos têm versão congelada e data registrada.
+
+## O que não está neste repositório
+
+- **Notas de leitura no Obsidian** e **base Zotero**: vivem fora do Git. As exportações verificadas (BibTeX, resumos) entram em [literatura/referencias/](literatura/referencias/).
+- **Benchmarks das IPCs** e **saídas brutas de execução**: grandes e reproduzíveis, ignorados pelo Git (ver `.gitignore`). Os scripts que os baixam e geram são versionados.
+- **Lixo do acervo de 2010**: metadados `.svn`, objetos compilados (`.o`, `.pyc`) e `.DS_Store`. Todo o resto foi preservado.

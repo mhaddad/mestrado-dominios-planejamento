@@ -1,0 +1,1427 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile1
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile1
+Problem name: dlog-2-2-2
+Facts loaded.
+time: 1, 28 facts and 8 exclusive pairs.
+time: 2, 30 facts and 12 exclusive pairs.
+time: 3, 32 facts and 18 exclusive pairs.
+time: 4, 34 facts and 26 exclusive pairs.
+time: 5, 38 facts and 54 exclusive pairs.
+time: 6, 42 facts and 64 exclusive pairs.
+Goals first reachable in 6 steps.
+538 nodes created.
+
+####################################################
+goals at time 7:
+  at_driver1_s1 at_truck1_s1 at_package1_s0 at_package2_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 50
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (walk driver2 s2 p1-2)
+1 (walk driver1 s2 p1-2)
+2 (walk driver2 p1-2 s1)
+2 (walk driver1 p1-2 s1)
+3 (walk driver2 s1 p1-0)
+4 (walk driver2 p1-0 s0)
+5 (board-truck driver2 truck1 s0)
+6 (drive-truck truck1 s0 s1 driver2)
+End plan
+----------------------------------------------------
+
+8 total actions in plan
+0 entries in hash table, 
+5 total set-creation steps (entries + hits + plan length - 1)
+8 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 10
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile2
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile2
+Problem name: dlog-2-2-3
+Facts loaded.
+time: 1, 35 facts and 17 exclusive pairs.
+time: 2, 41 facts and 40 exclusive pairs.
+time: 3, 48 facts and 80 exclusive pairs.
+time: 4, 50 facts and 79 exclusive pairs.
+time: 5, 57 facts and 106 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 57 facts and 98 exclusive pairs.
+Goals first reachable in 6 steps.
+931 nodes created.
+
+####################################################
+goals at time 7:
+  at_driver1_s1 at_driver2_s1 at_truck1_s2 at_truck2_s0 at_package1_s0 
+at_package2_s2 at_package3_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 57 facts and 98 exclusive pairs.
+222 new nodes added.
+
+####################################################
+goals at time 8:
+  at_driver1_s1 at_driver2_s1 at_truck1_s2 at_truck2_s0 at_package1_s0 
+at_package2_s2 at_package3_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 1902
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 57 facts and 98 exclusive pairs.
+222 new nodes added.
+
+####################################################
+goals at time 9:
+  at_driver1_s1 at_driver2_s1 at_truck1_s2 at_truck2_s0 at_package1_s0 
+at_package2_s2 at_package3_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 15408
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 57 facts and 98 exclusive pairs.
+222 new nodes added.
+
+####################################################
+goals at time 10:
+  at_driver1_s1 at_driver2_s1 at_truck1_s2 at_truck2_s0 at_package1_s0 
+at_package2_s2 at_package3_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 2833
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (board-truck driver2 truck1 s0)
+1 (load-truck package2 truck2 s1)
+1 (walk driver1 s0 p0-1)
+1 (load-truck package3 truck2 s1)
+2 (drive-truck truck1 s0 s2 driver2)
+2 (walk driver1 p0-1 s1)
+3 (board-truck driver1 truck2 s1)
+3 (disembark-truck driver2 truck1 s2)
+4 (walk driver2 s2 p2-1)
+4 (drive-truck truck2 s1 s2 driver1)
+5 (unload-truck package2 truck2 s2)
+5 (load-truck package1 truck2 s2)
+5 (walk driver2 p2-1 s1)
+6 (drive-truck truck2 s2 s0 driver1)
+7 (disembark-truck driver1 truck2 s0)
+7 (unload-truck package1 truck2 s0)
+7 (unload-truck package3 truck2 s0)
+8 (walk driver1 s0 p0-1)
+9 (walk driver1 p0-1 s1)
+End plan
+----------------------------------------------------
+
+19 total actions in plan
+544 entries in hash table, 4974 hash hits, avg set size 9
+5526 total set-creation steps (entries + hits + plan length - 1)
+7127 actions tried
+
+####################################################
+Total elapsed time:   0.04 seconds
+Time in milliseconds: 38
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile3
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile3
+Problem name: dlog-2-2-4
+Facts loaded.
+time: 1, 35 facts and 12 exclusive pairs.
+time: 2, 41 facts and 43 exclusive pairs.
+time: 3, 52 facts and 153 exclusive pairs.
+time: 4, 56 facts and 136 exclusive pairs.
+time: 5, 62 facts and 134 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 62 facts and 110 exclusive pairs.
+Goals first reachable in 6 steps.
+988 nodes created.
+
+####################################################
+goals at time 7:
+  at_driver2_s2 at_truck1_s1 at_truck2_s2 at_package1_s1 at_package2_s1 
+at_package3_s2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 569
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 62 facts and 108 exclusive pairs.
+244 new nodes added.
+
+####################################################
+goals at time 8:
+  at_driver2_s2 at_truck1_s1 at_truck2_s2 at_package1_s1 at_package2_s1 
+at_package3_s2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 2786
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (load-truck package3 truck1 s1)
+1 (walk driver2 s0 p2-0)
+1 (board-truck driver1 truck1 s1)
+2 (walk driver2 p2-0 s2)
+2 (drive-truck truck1 s1 s2 driver1)
+3 (unload-truck package3 truck1 s2)
+4 (drive-truck truck1 s2 s0 driver1)
+5 (load-truck package2 truck1 s0)
+5 (load-truck package1 truck1 s0)
+6 (drive-truck truck1 s0 s1 driver1)
+7 (unload-truck package2 truck1 s1)
+7 (unload-truck package1 truck1 s1)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+159 entries in hash table, 363 hash hits, avg set size 8
+528 total set-creation steps (entries + hits + plan length - 1)
+1191 actions tried
+
+####################################################
+Total elapsed time:   0.03 seconds
+Time in milliseconds: 30
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile4
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile4
+Problem name: dlog-3-2-4
+Facts loaded.
+time: 1, 35 facts and 21 exclusive pairs.
+time: 2, 44 facts and 58 exclusive pairs.
+time: 3, 59 facts and 196 exclusive pairs.
+time: 4, 59 facts and 122 exclusive pairs.
+time: 5, 63 facts and 121 exclusive pairs.
+Goals first reachable in 5 steps.
+898 nodes created.
+
+####################################################
+goals at time 6:
+  at_driver1_s1 at_driver2_s0 at_driver3_s1 at_truck1_s1 at_truck2_s2 
+at_package1_s1 at_package2_s2 at_package3_s2 at_package4_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 4
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 63 facts and 121 exclusive pairs.
+270 new nodes added.
+
+####################################################
+goals at time 7:
+  at_driver1_s1 at_driver2_s0 at_driver3_s1 at_truck1_s1 at_truck2_s2 
+at_package1_s1 at_package2_s2 at_package3_s2 at_package4_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 27403
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 63 facts and 121 exclusive pairs.
+270 new nodes added.
+
+####################################################
+goals at time 8:
+  at_driver1_s1 at_driver2_s0 at_driver3_s1 at_truck1_s1 at_truck2_s2 
+at_package1_s1 at_package2_s2 at_package3_s2 at_package4_s0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 35156
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (walk driver2 s1 p0-1)
+1 (load-truck package4 truck1 s1)
+1 (board-truck driver3 truck2 s0)
+1 (load-truck package3 truck2 s0)
+1 (board-truck driver1 truck1 s1)
+2 (drive-truck truck2 s0 s2 driver3)
+2 (walk driver2 p0-1 s0)
+2 (drive-truck truck1 s1 s2 driver1)
+3 (load-truck package1 truck1 s2)
+3 (disembark-truck driver3 truck2 s2)
+3 (unload-truck package3 truck2 s2)
+4 (drive-truck truck1 s2 s0 driver1)
+4 (walk driver3 s2 p1-2)
+5 (unload-truck package4 truck1 s0)
+5 (walk driver3 p1-2 s1)
+6 (drive-truck truck1 s0 s1 driver1)
+7 (disembark-truck driver1 truck1 s1)
+7 (unload-truck package1 truck1 s1)
+End plan
+----------------------------------------------------
+
+18 total actions in plan
+2657 entries in hash table, 4130 hash hits, avg set size 12
+6793 total set-creation steps (entries + hits + plan length - 1)
+18150 actions tried
+
+####################################################
+Total elapsed time:   0.08 seconds
+Time in milliseconds: 80
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile5
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile5
+Problem name: dlog-3-2-5
+Facts loaded.
+time: 1, 40 facts and 21 exclusive pairs.
+time: 2, 50 facts and 84 exclusive pairs.
+time: 3, 67 facts and 298 exclusive pairs.
+time: 4, 67 facts and 188 exclusive pairs.
+time: 5, 75 facts and 180 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 75 facts and 152 exclusive pairs.
+Goals first reachable in 6 steps.
+1327 nodes created.
+
+####################################################
+goals at time 7:
+  at_driver2_s2 at_truck1_s2 at_truck2_s2 at_package1_s1 at_package2_s1 
+at_package3_s1 at_package4_s0 at_package5_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 75 facts and 152 exclusive pairs.
+318 new nodes added.
+
+####################################################
+goals at time 8:
+  at_driver2_s2 at_truck1_s2 at_truck2_s2 at_package1_s1 at_package2_s1 
+at_package3_s1 at_package4_s0 at_package5_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 28447
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 75 facts and 152 exclusive pairs.
+318 new nodes added.
+
+####################################################
+goals at time 9:
+  at_driver2_s2 at_truck1_s2 at_truck2_s2 at_package1_s1 at_package2_s1 
+at_package3_s1 at_package4_s0 at_package5_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 1594858
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (walk driver2 s0 p0-2)
+1 (walk driver3 s0 p0-1)
+1 (board-truck driver1 truck1 s1)
+2 (drive-truck truck1 s1 s2 driver1)
+2 (walk driver2 p0-2 s2)
+2 (walk driver3 p0-1 s1)
+3 (load-truck package4 truck1 s2)
+3 (board-truck driver3 truck2 s1)
+3 (load-truck package3 truck1 s2)
+4 (drive-truck truck1 s2 s0 driver1)
+4 (drive-truck truck2 s1 s2 driver3)
+5 (load-truck package2 truck1 s0)
+5 (unload-truck package4 truck1 s0)
+5 (load-truck package1 truck1 s0)
+6 (drive-truck truck1 s0 s1 driver1)
+7 (unload-truck package2 truck1 s1)
+7 (unload-truck package1 truck1 s1)
+7 (unload-truck package3 truck1 s1)
+8 (drive-truck truck1 s1 s2 driver1)
+End plan
+----------------------------------------------------
+
+19 total actions in plan
+24784 entries in hash table, 139208 hash hits, avg set size 14
+163999 total set-creation steps (entries + hits + plan length - 1)
+425136 actions tried
+
+####################################################
+Total elapsed time:   2.06 seconds
+Time in milliseconds: 2055
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile6
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile6
+Problem name: dlog-3-3-5
+Facts loaded.
+time: 1, 44 facts and 27 exclusive pairs.
+time: 2, 53 facts and 75 exclusive pairs.
+time: 3, 71 facts and 266 exclusive pairs.
+Goals reachable at 3 steps but mutually exclusive.
+time: 4, 78 facts and 253 exclusive pairs.
+Goals first reachable in 4 steps.
+787 nodes created.
+
+####################################################
+goals at time 5:
+  at_driver1_s1 at_driver2_s0 at_truck1_s0 at_truck2_s0 at_truck3_s2 
+at_package1_s2 at_package2_s1 at_package3_s0 at_package4_s1 at_package5_s1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 17
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 80 facts and 186 exclusive pairs.
+374 new nodes added.
+
+####################################################
+goals at time 6:
+  at_driver1_s1 at_driver2_s0 at_truck1_s0 at_truck2_s0 at_truck3_s2 
+at_package1_s2 at_package2_s1 at_package3_s0 at_package4_s1 at_package5_s1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 182
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (walk driver2 s2 p1-2)
+1 (board-truck driver3 truck3 s1)
+1 (walk driver1 s2 p1-2)
+1 (load-truck package1 truck3 s1)
+2 (drive-truck truck3 s1 s2 driver3)
+2 (walk driver2 p1-2 s1)
+2 (walk driver1 p1-2 s1)
+3 (board-truck driver2 truck2 s1)
+3 (unload-truck package1 truck3 s2)
+4 (drive-truck truck2 s1 s0 driver2)
+5 (disembark-truck driver2 truck2 s0)
+End plan
+----------------------------------------------------
+
+11 total actions in plan
+6 entries in hash table, 1 hash hits, avg set size 11
+11 total set-creation steps (entries + hits + plan length - 1)
+50 actions tried
+
+####################################################
+Total elapsed time:   0.02 seconds
+Time in milliseconds: 22
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile7
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile7
+Problem name: dlog-3-3-6
+Facts loaded.
+time: 1, 51 facts and 42 exclusive pairs.
+time: 2, 63 facts and 138 exclusive pairs.
+time: 3, 87 facts and 504 exclusive pairs.
+time: 4, 87 facts and 312 exclusive pairs.
+time: 5, 93 facts and 241 exclusive pairs.
+Goals first reachable in 5 steps.
+1398 nodes created.
+
+####################################################
+goals at time 6:
+  at_driver1_s0 at_driver2_s0 at_truck1_s1 at_truck2_s0 at_package1_s0 
+at_package2_s1 at_package3_s1 at_package4_s2 at_package5_s0 at_package6_s0 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 888
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 93 facts and 225 exclusive pairs.
+438 new nodes added.
+
+####################################################
+goals at time 7:
+  at_driver1_s0 at_driver2_s0 at_truck1_s1 at_truck2_s0 at_package1_s0 
+at_package2_s1 at_package3_s1 at_package4_s2 at_package5_s0 at_package6_s0 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 41267
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (load-truck package5 truck2 s1)
+1 (walk driver2 s2 p2-1)
+1 (load-truck package4 truck1 s1)
+1 (board-truck driver1 truck1 s1)
+2 (drive-truck truck1 s1 s2 driver1)
+2 (walk driver2 p2-1 s1)
+3 (load-truck package2 truck1 s2)
+3 (unload-truck package4 truck1 s2)
+3 (disembark-truck driver1 truck1 s2)
+3 (board-truck driver2 truck2 s1)
+4 (board-truck driver3 truck1 s2)
+4 (drive-truck truck2 s1 s0 driver2)
+4 (walk driver1 s2 p0-2)
+5 (unload-truck package5 truck2 s0)
+5 (disembark-truck driver2 truck2 s0)
+5 (walk driver1 p0-2 s0)
+5 (drive-truck truck1 s2 s1 driver3)
+6 (unload-truck package2 truck1 s1)
+End plan
+----------------------------------------------------
+
+18 total actions in plan
+1434 entries in hash table, 4205 hash hits, avg set size 14
+5644 total set-creation steps (entries + hits + plan length - 1)
+15514 actions tried
+
+####################################################
+Total elapsed time:   0.11 seconds
+Time in milliseconds: 110
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile8
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile8
+Problem name: dlog-3-3-7
+Facts loaded.
+time: 1, 49 facts and 36 exclusive pairs.
+time: 2, 61 facts and 132 exclusive pairs.
+time: 3, 89 facts and 628 exclusive pairs.
+time: 4, 89 facts and 388 exclusive pairs.
+time: 5, 99 facts and 282 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 99 facts and 240 exclusive pairs.
+Goals first reachable in 6 steps.
+1871 nodes created.
+
+####################################################
+goals at time 7:
+  at_driver1_s2 at_driver2_s0 at_truck2_s1 at_truck3_s0 at_package1_s2 
+at_package2_s0 at_package3_s1 at_package4_s2 at_package5_s1 at_package6_s2 
+at_package7_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 32189
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 99 facts and 240 exclusive pairs.
+468 new nodes added.
+
+####################################################
+goals at time 8:
+  at_driver1_s2 at_driver2_s0 at_truck2_s1 at_truck3_s0 at_package1_s2 
+at_package2_s0 at_package3_s1 at_package4_s2 at_package5_s1 at_package6_s2 
+at_package7_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 1154246
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (load-truck package7 truck3 s2)
+1 (walk driver2 s0 p2-0)
+1 (walk driver3 s1 p2-1)
+1 (board-truck driver1 truck1 s2)
+2 (drive-truck truck1 s2 s0 driver1)
+2 (walk driver3 p2-1 s2)
+2 (walk driver2 p2-0 s2)
+3 (load-truck package4 truck1 s0)
+3 (board-truck driver2 truck3 s2)
+3 (board-truck driver3 truck2 s2)
+3 (load-truck package1 truck1 s0)
+4 (drive-truck truck2 s2 s0 driver3)
+4 (drive-truck truck1 s0 s2 driver1)
+4 (drive-truck truck3 s2 s1 driver2)
+5 (unload-truck package4 truck1 s2)
+5 (disembark-truck driver1 truck1 s2)
+5 (unload-truck package7 truck3 s1)
+5 (unload-truck package1 truck1 s2)
+5 (load-truck package2 truck3 s1)
+5 (load-truck package3 truck2 s0)
+6 (drive-truck truck2 s0 s1 driver3)
+6 (drive-truck truck3 s1 s0 driver2)
+7 (disembark-truck driver2 truck3 s0)
+7 (unload-truck package2 truck3 s0)
+7 (unload-truck package3 truck2 s1)
+End plan
+----------------------------------------------------
+
+25 total actions in plan
+53963 entries in hash table, 233037 hash hits, avg set size 16
+287006 total set-creation steps (entries + hits + plan length - 1)
+493525 actions tried
+
+####################################################
+Total elapsed time:   2.57 seconds
+Time in milliseconds: 2567
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile9
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile9
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 62 facts and 12 exclusive pairs.
+time: 2, 67 facts and 34 exclusive pairs.
+time: 3, 78 facts and 133 exclusive pairs.
+time: 4, 92 facts and 256 exclusive pairs.
+time: 5, 118 facts and 618 exclusive pairs.
+time: 6, 122 facts and 452 exclusive pairs.
+time: 7, 128 facts and 358 exclusive pairs.
+Goals first reachable in 7 steps.
+2334 nodes created.
+
+####################################################
+goals at time 8:
+  at_driver1_s3 at_driver2_s4 at_truck1_s3 at_truck2_s3 at_package1_s3 
+at_package2_s2 at_package3_s1 at_package4_s0 at_package5_s1 at_package6_s1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 19
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 134 facts and 389 exclusive pairs.
+628 new nodes added.
+
+####################################################
+goals at time 9:
+  at_driver1_s3 at_driver2_s4 at_truck1_s3 at_truck2_s3 at_package1_s3 
+at_package2_s2 at_package3_s1 at_package4_s0 at_package5_s1 at_package6_s1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 17076
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 134 facts and 389 exclusive pairs.
+652 new nodes added.
+
+####################################################
+goals at time 10:
+  at_driver1_s3 at_driver2_s4 at_truck1_s3 at_truck2_s3 at_package1_s3 
+at_package2_s2 at_package3_s1 at_package4_s0 at_package5_s1 at_package6_s1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 478772
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 134 facts and 389 exclusive pairs.
+652 new nodes added.
+
+####################################################
+goals at time 11:
+  at_driver1_s3 at_driver2_s4 at_truck1_s3 at_truck2_s3 at_package1_s3 
+at_package2_s2 at_package3_s1 at_package4_s0 at_package5_s1 at_package6_s1 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 6082641
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (load-truck package3 truck3 s3)
+1 (walk driver1 s4 p4-0)
+1 (load-truck package1 truck1 s2)
+1 (walk driver2 s1 p1-3)
+2 (walk driver1 p4-0 s0)
+2 (walk driver2 p1-3 s3)
+3 (board-truck driver1 truck2 s0)
+3 (board-truck driver2 truck3 s3)
+4 (drive-truck truck2 s0 s3 driver1)
+4 (drive-truck truck3 s3 s0 driver2)
+5 (drive-truck truck3 s0 s1 driver2)
+5 (disembark-truck driver1 truck2 s3)
+6 (walk driver1 s3 p3-2)
+6 (unload-truck package3 truck3 s1)
+6 (load-truck package2 truck3 s1)
+7 (drive-truck truck3 s1 s2 driver2)
+7 (walk driver1 p3-2 s2)
+8 (unload-truck package2 truck3 s2)
+8 (board-truck driver1 truck1 s2)
+9 (drive-truck truck1 s2 s3 driver1)
+9 (drive-truck truck3 s2 s4 driver2)
+10 (disembark-truck driver1 truck1 s3)
+10 (unload-truck package1 truck1 s3)
+10 (disembark-truck driver2 truck3 s4)
+End plan
+----------------------------------------------------
+
+24 total actions in plan
+76397 entries in hash table, 1325822 hash hits, avg set size 14
+1402228 total set-creation steps (entries + hits + plan length - 1)
+1982771 actions tried
+
+####################################################
+Total elapsed time:   16.69 seconds
+Time in milliseconds: 16688
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile10
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile10
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 86 facts and 18 exclusive pairs.
+time: 2, 99 facts and 115 exclusive pairs.
+time: 3, 141 facts and 956 exclusive pairs.
+time: 4, 160 facts and 1321 exclusive pairs.
+time: 5, 170 facts and 781 exclusive pairs.
+Goals first reachable in 5 steps.
+2199 nodes created.
+
+####################################################
+goals at time 6:
+  at_driver1_s1 at_driver2_s0 at_package1_s5 at_package2_s1 at_package3_s5 
+at_package4_s1 at_package5_s3 at_package6_s2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 173 facts and 590 exclusive pairs.
+847 new nodes added.
+
+####################################################
+goals at time 7:
+  at_driver1_s1 at_driver2_s0 at_package1_s5 at_package2_s1 at_package3_s5 
+at_package4_s1 at_package5_s3 at_package6_s2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 26919
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 173 facts and 576 exclusive pairs.
+862 new nodes added.
+
+####################################################
+goals at time 8:
+  at_driver1_s1 at_driver2_s0 at_package1_s5 at_package2_s1 at_package3_s5 
+at_package4_s1 at_package5_s3 at_package6_s2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 2950493
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (load-truck package2 truck1 s0)
+1 (load-truck package5 truck2 s4)
+1 (board-truck driver2 truck1 s0)
+1 (board-truck driver1 truck2 s4)
+1 (load-truck package4 truck2 s4)
+1 (load-truck package3 truck2 s4)
+2 (drive-truck truck2 s4 s5 driver1)
+2 (drive-truck truck1 s0 s1 driver2)
+3 (unload-truck package2 truck1 s1)
+3 (load-truck package1 truck1 s1)
+3 (unload-truck package3 truck2 s5)
+4 (drive-truck truck2 s5 s3 driver1)
+4 (drive-truck truck1 s1 s5 driver2)
+5 (unload-truck package5 truck2 s3)
+5 (unload-truck package1 truck1 s5)
+6 (drive-truck truck1 s5 s0 driver2)
+6 (drive-truck truck2 s3 s1 driver1)
+7 (unload-truck package4 truck2 s1)
+7 (disembark-truck driver1 truck2 s1)
+7 (disembark-truck driver2 truck1 s0)
+End plan
+----------------------------------------------------
+
+20 total actions in plan
+95282 entries in hash table, 632160 hash hits, avg set size 13
+727448 total set-creation steps (entries + hits + plan length - 1)
+805012 actions tried
+
+####################################################
+Total elapsed time:   11.88 seconds
+Time in milliseconds: 11876
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile11
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile11
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 100 facts and 23 exclusive pairs.
+time: 2, 111 facts and 125 exclusive pairs.
+time: 3, 135 facts and 581 exclusive pairs.
+time: 4, 155 facts and 1002 exclusive pairs.
+time: 5, 188 facts and 1555 exclusive pairs.
+time: 6, 198 facts and 1146 exclusive pairs.
+time: 7, 202 facts and 830 exclusive pairs.
+Goals first reachable in 7 steps.
+4070 nodes created.
+
+####################################################
+goals at time 8:
+  at_driver2_s4 at_truck2_s4 at_package1_s6 at_package2_s3 at_package3_s4 
+at_package4_s6 at_package5_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 489
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 202 facts and 768 exclusive pairs.
+1020 new nodes added.
+
+####################################################
+goals at time 9:
+  at_driver2_s4 at_truck2_s4 at_package1_s6 at_package2_s3 at_package3_s4 
+at_package4_s6 at_package5_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 83676
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 202 facts and 762 exclusive pairs.
+1020 new nodes added.
+
+####################################################
+goals at time 10:
+  at_driver2_s4 at_truck2_s4 at_package1_s6 at_package2_s3 at_package3_s4 
+at_package4_s6 at_package5_s1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 1921248
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (load-truck package4 truck1 s0)
+1 (board-truck driver2 truck1 s0)
+1 (walk driver1 s6 p2-6)
+1 (load-truck package2 truck2 s2)
+2 (drive-truck truck1 s0 s6 driver2)
+2 (walk driver1 p2-6 s2)
+3 (board-truck driver1 truck2 s2)
+3 (unload-truck package4 truck1 s6)
+4 (drive-truck truck1 s6 s5 driver2)
+4 (drive-truck truck2 s2 s1 driver1)
+5 (drive-truck truck2 s1 s3 driver1)
+5 (load-truck package5 truck1 s5)
+6 (unload-truck package2 truck2 s3)
+6 (drive-truck truck1 s5 s1 driver2)
+6 (load-truck package3 truck2 s3)
+7 (disembark-truck driver2 truck1 s1)
+7 (unload-truck package5 truck1 s1)
+7 (drive-truck truck2 s3 s1 driver1)
+8 (drive-truck truck2 s1 s4 driver1)
+8 (walk driver2 s1 p4-1)
+9 (walk driver2 p4-1 s4)
+9 (unload-truck package3 truck2 s4)
+End plan
+----------------------------------------------------
+
+22 total actions in plan
+55226 entries in hash table, 276270 hash hits, avg set size 13
+331504 total set-creation steps (entries + hits + plan length - 1)
+539345 actions tried
+
+####################################################
+Total elapsed time:   17.16 seconds
+Time in milliseconds: 17162
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile12
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile12
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 148 facts and 14 exclusive pairs.
+time: 2, 154 facts and 44 exclusive pairs.
+time: 3, 175 facts and 297 exclusive pairs.
+time: 4, 196 facts and 676 exclusive pairs.
+time: 5, 237 facts and 1892 exclusive pairs.
+time: 6, 256 facts and 2229 exclusive pairs.
+time: 7, 284 facts and 2077 exclusive pairs.
+time: 8, 299 facts and 1630 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 299 facts and 1542 exclusive pairs.
+Goals first reachable in 9 steps.
+7749 nodes created.
+
+####################################################
+goals at time 10:
+  at_driver1_s4 at_driver2_s9 at_truck2_s5 at_truck3_s0 at_package1_s2 
+at_package2_s2 at_package3_s9 at_package4_s1 at_package5_s0 at_package6_s2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9099
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 299 facts and 1542 exclusive pairs.
+1546 new nodes added.
+
+####################################################
+goals at time 11:
+  at_driver1_s4 at_driver2_s9 at_truck2_s5 at_truck3_s0 at_package1_s2 
+at_package2_s2 at_package3_s9 at_package4_s1 at_package5_s0 at_package6_s2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 133123
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 299 facts and 1542 exclusive pairs.
+1546 new nodes added.
+
+####################################################
+goals at time 12:
+  at_driver1_s4 at_driver2_s9 at_truck2_s5 at_truck3_s0 at_package1_s2 
+at_package2_s2 at_package3_s9 at_package4_s1 at_package5_s0 at_package6_s2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 2830462
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 299 facts and 1542 exclusive pairs.
+1546 new nodes added.
+
+####################################################
+goals at time 13:
+  at_driver1_s4 at_driver2_s9 at_truck2_s5 at_truck3_s0 at_package1_s2 
+at_package2_s2 at_package3_s9 at_package4_s1 at_package5_s0 at_package6_s2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 24088567
+
+----------------------------------------------------
+Can't solve in 12 steps
+time: 13, 299 facts and 1542 exclusive pairs.
+1546 new nodes added.
+
+####################################################
+goals at time 14:
+  at_driver1_s4 at_driver2_s9 at_truck2_s5 at_truck3_s0 at_package1_s2 
+at_package2_s2 at_package3_s9 at_package4_s1 at_package5_s0 at_package6_s2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile13
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile13
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 186 facts and 29 exclusive pairs.
+time: 2, 198 facts and 129 exclusive pairs.
+time: 3, 230 facts and 739 exclusive pairs.
+time: 4, 266 facts and 2132 exclusive pairs.
+time: 5, 300 facts and 3743 exclusive pairs.
+time: 6, 335 facts and 4925 exclusive pairs.
+time: 7, 369 facts and 4027 exclusive pairs.
+Goals reachable at 7 steps but mutually exclusive.
+time: 8, 371 facts and 2662 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 371 facts and 2411 exclusive pairs.
+Goals first reachable in 9 steps.
+10282 nodes created.
+
+####################################################
+goals at time 10:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 26231
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 11:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 675112
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 12:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 48662157
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 13:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 22918589
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (walk driver1 s0 p0-2)
+1 (load-truck package6 truck3 s2)
+1 (board-truck driver2 truck2 s9)
+2 (drive-truck truck2 s9 s11 driver2)
+2 (walk driver1 p0-2 s2)
+3 (board-truck driver1 truck3 s2)
+3 (drive-truck truck2 s11 s6 driver2)
+4 (drive-truck truck3 s2 s0 driver1)
+4 (load-truck package2 truck2 s6)
+4 (load-truck package4 truck2 s6)
+5 (drive-truck truck2 s6 s10 driver2)
+5 (drive-truck truck3 s0 s4 driver1)
+6 (drive-truck truck2 s10 s0 driver2)
+6 (load-truck package1 truck3 s4)
+7 (drive-truck truck3 s4 s5 driver1)
+7 (unload-truck package2 truck2 s0)
+7 (unload-truck package4 truck2 s0)
+8 (load-truck package3 truck3 s5)
+8 (drive-truck truck2 s0 s10 driver2)
+8 (unload-truck package6 truck3 s5)
+8 (unload-truck package1 truck3 s5)
+9 (drive-truck truck3 s5 s4 driver1)
+9 (drive-truck truck2 s10 s8 driver2)
+10 (unload-truck package3 truck3 s4)
+10 (disembark-truck driver1 truck3 s4)
+11 (walk driver1 s4 p11-4)
+12 (walk driver1 p11-4 s11)
+End plan
+----------------------------------------------------
+
+27 total actions in plan
+1134982 entries in hash table, 9607324 hash hits, avg set size 15
+10742317 total set-creation steps (entries + hits + plan length - 1)
+19144892 actions tried
+
+####################################################
+Total elapsed time:   33 minutes, 48 seconds
+Time in milliseconds: 2027154
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile14
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile14
+Problem name: dlog-3-3-6
+Facts loaded.
+time: 1, 134 facts and 37 exclusive pairs.
+time: 2, 146 facts and 109 exclusive pairs.
+time: 3, 174 facts and 449 exclusive pairs.
+time: 4, 196 facts and 723 exclusive pairs.
+time: 5, 229 facts and 1293 exclusive pairs.
+time: 6, 259 facts and 1713 exclusive pairs.
+time: 7, 293 facts and 2171 exclusive pairs.
+Goals first reachable in 7 steps.
+5252 nodes created.
+
+####################################################
+goals at time 8:
+  at_driver3_s1 at_truck1_s6 at_truck3_s3 at_package1_s0 at_package2_s0 
+at_package3_s4 at_package4_s4 at_package5_s3 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 297 facts and 1701 exclusive pairs.
+1734 new nodes added.
+
+####################################################
+goals at time 9:
+  at_driver3_s1 at_truck1_s6 at_truck3_s3 at_package1_s0 at_package2_s0 
+at_package3_s4 at_package4_s4 at_package5_s3 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 77914
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 298 facts and 1675 exclusive pairs.
+1750 new nodes added.
+
+####################################################
+goals at time 10:
+  at_driver3_s1 at_truck1_s6 at_truck3_s3 at_package1_s0 at_package2_s0 
+at_package3_s4 at_package4_s4 at_package5_s3 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 5271822
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 298 facts and 1674 exclusive pairs.
+1754 new nodes added.
+
+####################################################
+goals at time 11:
+  at_driver3_s1 at_truck1_s6 at_truck3_s3 at_package1_s0 at_package2_s0 
+at_package3_s4 at_package4_s4 at_package5_s3 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile15
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile15
+Problem name: dlog-4-4-8
+Facts loaded.
+time: 1, 192 facts and 34 exclusive pairs.
+time: 2, 205 facts and 111 exclusive pairs.
+time: 3, 245 facts and 612 exclusive pairs.
+time: 4, 292 facts and 1670 exclusive pairs.
+time: 5, 380 facts and 5210 exclusive pairs.
+time: 6, 410 facts and 5697 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile16
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile16
+Problem name: dlog-5-5-10
+Facts loaded.
+time: 1, 248 facts and 65 exclusive pairs.
+time: 2, 275 facts and 312 exclusive pairs.
+time: 3, 350 facts and 1891 exclusive pairs.
+time: 4, 419 facts and 4266 exclusive pairs.
+time: 5, 536 facts and 8737 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile17
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile17
+Problem name: dlog-5-5-15
+Facts loaded.
+time: 1, 278 facts and 92 exclusive pairs.
+time: 2, 313 facts and 473 exclusive pairs.
+time: 3, 442 facts and 4724 exclusive pairs.
+time: 4, 565 facts and 11788 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile18
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile18
+Problem name: dlog-5-5-20
+Facts loaded.
+time: 1, 323 facts and 52 exclusive pairs.
+time: 2, 346 facts and 240 exclusive pairs.
+time: 3, 432 facts and 2739 exclusive pairs.
+time: 4, 560 facts and 11439 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile19
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile19
+Problem name: dlog-5-5-25
+Facts loaded.
+time: 1, 349 facts and 64 exclusive pairs.
+time: 2, 374 facts and 269 exclusive pairs.
+time: 3, 460 facts and 2254 exclusive pairs.
+time: 4, 558 facts and 7414 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/driverlog/domain.pddl -f /home/matheus/mestrado/comp/driverlog/pfile20
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/driverlog/pfile20
+Problem name: dlog-8-6-25
+Facts loaded.
+time: 1, 386 facts and 159 exclusive pairs.
+time: 2, 455 facts and 993 exclusive pairs.
+time: 3, 723 facts and 13178 exclusive pairs.
+Too many ops. Need to increase MAXNODES

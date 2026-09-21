@@ -1,0 +1,1717 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1818..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 228 candidates, 72 actions
+Finalization time : 0.00 -> 38 fluents, 12 init
+
+10 7 3 
+
+0: (LIFT hoist0 crate1 pallet0 depot0) [1]
+1: (DRIVE truck0 distributor1 depot0) [1]
+2: (LOAD hoist0 crate1 truck0 depot0) [1]
+3: (LIFT hoist1 crate0 pallet1 distributor0) [1]
+4: (DRIVE truck0 depot0 distributor0) [1]
+5: (LOAD hoist1 crate0 truck0 distributor0) [1]
+6: (UNLOAD hoist1 crate1 truck0 distributor0) [1]
+7: (DROP hoist1 crate1 pallet1 distributor0) [1]
+8: (DRIVE truck0 distributor0 distributor1) [1]
+9: (UNLOAD hoist2 crate0 truck0 distributor1) [1]
+10: (DROP hoist2 crate0 pallet2 distributor1) [1]
+
+Valid plan : 11 actions.
+Computed nodes : 11
+Evaluated nodes : 4
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 55.00 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob7512..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 588 candidates, 180 actions
+Finalization time : 0.00 -> 72 fluents, 16 init
+
+14 10 3 
+
+0: (LIFT hoist2 crate2 crate1 distributor1) [1]
+1: (DRIVE truck0 depot0 distributor1) [1]
+2: (LOAD hoist2 crate2 truck0 distributor1) [1]
+3: (LIFT hoist2 crate1 pallet2 distributor1) [1]
+4: (LIFT hoist0 crate0 pallet0 depot0) [1]
+5: (LOAD hoist2 crate1 truck0 distributor1) [1]
+6: (DRIVE truck0 distributor1 distributor0) [1]
+7: (LOAD hoist0 crate0 truck1 depot0) [1]
+8: (DRIVE truck1 depot0 distributor1) [1]
+9: (UNLOAD hoist1 crate1 truck0 distributor0) [1]
+10: (UNLOAD hoist2 crate0 truck1 distributor1) [1]
+11: (DROP hoist1 crate1 crate3 distributor0) [1]
+12: (DROP hoist2 crate0 pallet2 distributor1) [1]
+13: (DRIVE truck0 distributor0 depot0) [1]
+14: (UNLOAD hoist0 crate2 truck0 depot0) [1]
+15: (DROP hoist0 crate2 pallet0 depot0) [1]
+
+Valid plan : 16 actions.
+Computed nodes : 16
+Evaluated nodes : 4
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 59.26 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1935..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.01 -> 1092 candidates, 336 actions
+Finalization time : 0.00 -> 114 fluents, 20 init
+
+27 25 24 18 16 13 12 11 10 9 7 4 2 
+
+0: (LIFT hoist2 crate5 crate2 distributor1) [1]
+1: (DRIVE truck1 distributor0 depot0) [1]
+2: (DRIVE truck0 depot0 distributor0) [1]
+3: (LIFT hoist1 crate4 crate3 distributor0) [1]
+4: (LIFT hoist0 crate1 pallet0 depot0) [1]
+5: (LOAD hoist0 crate1 truck1 depot0) [1]
+6: (UNLOAD hoist0 crate1 truck1 depot0) [1]
+7: (LOAD hoist1 crate4 truck0 distributor0) [1]
+8: (DRIVE truck1 depot0 distributor0) [1]
+9: (LIFT hoist1 crate3 crate0 distributor0) [1]
+10: (DROP hoist2 crate5 crate2 distributor1) [1]
+11: (LOAD hoist1 crate3 truck0 distributor0) [1]
+12: (DRIVE truck0 distributor0 distributor1) [1]
+13: (LIFT hoist1 crate0 pallet1 distributor0) [1]
+14: (DROP hoist0 crate1 pallet0 depot0) [1]
+15: (UNLOAD hoist2 crate3 truck0 distributor1) [1]
+16: (DROP hoist2 crate3 crate5 distributor1) [1]
+17: (DRIVE truck0 distributor1 distributor0) [1]
+18: (LOAD hoist1 crate0 truck1 distributor0) [1]
+19: (DRIVE truck1 distributor0 depot0) [1]
+20: (UNLOAD hoist1 crate4 truck0 distributor0) [1]
+21: (UNLOAD hoist0 crate0 truck1 depot0) [1]
+22: (DROP hoist1 crate4 pallet1 distributor0) [1]
+23: (DROP hoist0 crate0 crate1 depot0) [1]
+24: (DRIVE truck1 depot0 distributor0) [1]
+25: (LIFT hoist0 crate0 crate1 depot0) [1]
+26: (LIFT hoist2 crate3 crate5 distributor1) [1]
+27: (DRIVE truck0 distributor0 distributor1) [1]
+28: (LOAD hoist2 crate3 truck0 distributor1) [1]
+29: (LIFT hoist2 crate5 crate2 distributor1) [1]
+30: (LOAD hoist2 crate5 truck0 distributor1) [1]
+31: (DROP hoist0 crate0 crate1 depot0) [1]
+32: (LIFT hoist2 crate2 pallet2 distributor1) [1]
+33: (LOAD hoist2 crate2 truck0 distributor1) [1]
+34: (DRIVE truck0 distributor1 depot0) [1]
+35: (LIFT hoist0 crate0 crate1 depot0) [1]
+36: (LOAD hoist0 crate0 truck0 depot0) [1]
+37: (LIFT hoist0 crate1 pallet0 depot0) [1]
+38: (LOAD hoist0 crate1 truck0 depot0) [1]
+39: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+40: (DRIVE truck0 depot0 distributor1) [1]
+41: (UNLOAD hoist2 crate1 truck0 distributor1) [1]
+42: (DROP hoist2 crate1 pallet2 distributor1) [1]
+43: (DROP hoist0 crate3 pallet0 depot0) [1]
+44: (UNLOAD hoist2 crate0 truck0 distributor1) [1]
+45: (DRIVE truck0 distributor1 depot0) [1]
+46: (UNLOAD hoist0 crate2 truck0 depot0) [1]
+47: (DROP hoist2 crate0 crate1 distributor1) [1]
+48: (DROP hoist0 crate2 crate3 depot0) [1]
+49: (DRIVE truck0 depot0 distributor1) [1]
+50: (UNLOAD hoist2 crate5 truck0 distributor1) [1]
+51: (DROP hoist2 crate5 crate0 distributor1) [1]
+52: (DRIVE truck0 distributor1 depot0) [1]
+53: (LIFT hoist0 crate2 crate3 depot0) [1]
+54: (LOAD hoist0 crate2 truck0 depot0) [1]
+55: (DRIVE truck0 depot0 distributor0) [1]
+56: (UNLOAD hoist1 crate2 truck0 distributor0) [1]
+57: (DRIVE truck0 distributor0 depot0) [1]
+58: (LIFT hoist0 crate3 pallet0 depot0) [1]
+59: (DROP hoist1 crate2 crate4 distributor0) [1]
+60: (LIFT hoist1 crate2 crate4 distributor0) [1]
+61: (LOAD hoist0 crate3 truck0 depot0) [1]
+62: (DRIVE truck0 depot0 distributor0) [1]
+63: (LOAD hoist1 crate2 truck0 distributor0) [1]
+64: (UNLOAD hoist1 crate3 truck0 distributor0) [1]
+65: (LOAD hoist1 crate3 truck0 distributor0) [1]
+66: (DRIVE truck0 distributor0 depot0) [1]
+67: (UNLOAD hoist0 crate2 truck0 depot0) [1]
+68: (DROP hoist0 crate2 pallet0 depot0) [1]
+69: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+70: (DROP hoist0 crate3 crate2 depot0) [1]
+
+Valid plan : 71 actions.
+Computed nodes : 4303
+Evaluated nodes : 788
+Developed nodes : 151
+Useful nodes : 13
+
+Lookahead utility : 31.68 %
+Preparation time : 0.01
+Search time : 0.18
+Total time : 0.19
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob6512..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 1740 candidates, 540 actions
+Finalization time : 0.00 -> 164 fluents, 24 init
+
+19 12 10 7 6 5 3 
+
+0: (LIFT hoist2 crate6 crate5 distributor1) [1]
+1: (LOAD hoist2 crate6 truck0 distributor1) [1]
+2: (DRIVE truck0 distributor1 distributor0) [1]
+3: (LIFT hoist2 crate5 crate3 distributor1) [1]
+4: (LIFT hoist1 crate2 pallet1 distributor0) [1]
+5: (LIFT hoist0 crate7 crate4 depot0) [1]
+6: (LOAD hoist1 crate2 truck0 distributor0) [1]
+7: (UNLOAD hoist1 crate6 truck0 distributor0) [1]
+8: (DROP hoist1 crate6 pallet1 distributor0) [1]
+9: (LOAD hoist2 crate5 truck1 distributor1) [1]
+10: (UNLOAD hoist1 crate2 truck0 distributor0) [1]
+11: (LIFT hoist2 crate3 pallet2 distributor1) [1]
+12: (DROP hoist0 crate7 crate4 depot0) [1]
+13: (DROP hoist1 crate2 crate6 distributor0) [1]
+14: (LOAD hoist2 crate3 truck1 distributor1) [1]
+15: (UNLOAD hoist2 crate5 truck1 distributor1) [1]
+16: (LIFT hoist0 crate7 crate4 depot0) [1]
+17: (DROP hoist2 crate5 pallet2 distributor1) [1]
+18: (DRIVE truck0 distributor0 depot0) [1]
+19: (LOAD hoist0 crate7 truck0 depot0) [1]
+20: (LIFT hoist0 crate4 crate1 depot0) [1]
+21: (LOAD hoist0 crate4 truck0 depot0) [1]
+22: (DRIVE truck0 depot0 distributor0) [1]
+23: (UNLOAD hoist1 crate4 truck0 distributor0) [1]
+24: (LIFT hoist0 crate1 crate0 depot0) [1]
+25: (DRIVE truck0 distributor0 depot0) [1]
+26: (DROP hoist1 crate4 crate2 distributor0) [1]
+27: (LOAD hoist0 crate1 truck0 depot0) [1]
+28: (LIFT hoist0 crate0 pallet0 depot0) [1]
+29: (LOAD hoist0 crate0 truck0 depot0) [1]
+30: (DRIVE truck0 depot0 distributor0) [1]
+31: (LIFT hoist1 crate4 crate2 distributor0) [1]
+32: (DRIVE truck0 distributor0 depot0) [1]
+33: (UNLOAD hoist0 crate7 truck0 depot0) [1]
+34: (DROP hoist1 crate4 crate2 distributor0) [1]
+35: (DROP hoist0 crate7 pallet0 depot0) [1]
+36: (LIFT hoist1 crate4 crate2 distributor0) [1]
+37: (DRIVE truck0 depot0 distributor0) [1]
+38: (LOAD hoist1 crate4 truck0 distributor0) [1]
+39: (UNLOAD hoist1 crate0 truck0 distributor0) [1]
+40: (DROP hoist1 crate0 crate2 distributor0) [1]
+41: (DRIVE truck0 distributor0 depot0) [1]
+42: (UNLOAD hoist0 crate4 truck0 depot0) [1]
+43: (DROP hoist0 crate4 crate7 depot0) [1]
+44: (LIFT hoist1 crate0 crate2 distributor0) [1]
+45: (DRIVE truck0 depot0 distributor0) [1]
+46: (LOAD hoist1 crate0 truck0 distributor0) [1]
+47: (DRIVE truck0 distributor0 depot0) [1]
+48: (UNLOAD hoist0 crate0 truck0 depot0) [1]
+49: (DROP hoist0 crate0 crate4 depot0) [1]
+
+Valid plan : 50 actions.
+Computed nodes : 975
+Evaluated nodes : 261
+Developed nodes : 61
+Useful nodes : 4
+
+Lookahead utility : 24.22 %
+Preparation time : 0.00
+Search time : 0.04
+Total time : 0.04
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1212..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.01 -> 2532 candidates, 792 actions
+Finalization time : 0.00 -> 222 fluents, 28 init
+
+38 33 31 30 29 28 25 21 20 19 16 14 12 11 10 4 
+
+0: (LIFT hoist0 crate4 crate3 depot0) [1]
+1: (LIFT hoist1 crate8 crate7 distributor0) [1]
+2: (DRIVE truck0 depot0 distributor0) [1]
+3: (DRIVE truck1 distributor0 depot0) [1]
+4: (LIFT hoist2 crate9 crate5 distributor1) [1]
+5: (LOAD hoist1 crate8 truck0 distributor0) [1]
+6: (LOAD hoist0 crate4 truck1 depot0) [1]
+7: (LIFT hoist0 crate3 crate1 depot0) [1]
+8: (LIFT hoist1 crate7 crate6 distributor0) [1]
+9: (LOAD hoist1 crate7 truck0 distributor0) [1]
+10: (LIFT hoist1 crate6 pallet1 distributor0) [1]
+11: (LOAD hoist1 crate6 truck0 distributor0) [1]
+12: (DRIVE truck0 distributor0 distributor1) [1]
+13: (LOAD hoist0 crate3 truck1 depot0) [1]
+14: (DRIVE truck1 depot0 distributor1) [1]
+15: (LOAD hoist2 crate9 truck0 distributor1) [1]
+16: (UNLOAD hoist2 crate6 truck0 distributor1) [1]
+17: (DRIVE truck0 distributor1 depot0) [1]
+18: (LIFT hoist0 crate1 pallet0 depot0) [1]
+19: (LOAD hoist0 crate1 truck0 depot0) [1]
+20: (UNLOAD hoist0 crate8 truck0 depot0) [1]
+21: (DRIVE truck0 depot0 distributor0) [1]
+22: (DROP hoist0 crate8 pallet0 depot0) [1]
+23: (DRIVE truck1 distributor1 depot0) [1]
+24: (UNLOAD hoist1 crate1 truck0 distributor0) [1]
+25: (UNLOAD hoist0 crate3 truck1 depot0) [1]
+26: (DROP hoist2 crate6 crate5 distributor1) [1]
+27: (DROP hoist1 crate1 pallet1 distributor0) [1]
+28: (UNLOAD hoist1 crate7 truck0 distributor0) [1]
+29: (DRIVE truck0 distributor0 distributor1) [1]
+30: (DROP hoist1 crate7 crate1 distributor0) [1]
+31: (LOAD hoist0 crate3 truck1 depot0) [1]
+32: (DRIVE truck1 depot0 distributor1) [1]
+33: (LIFT hoist2 crate6 crate5 distributor1) [1]
+34: (LOAD hoist2 crate6 truck1 distributor1) [1]
+35: (DRIVE truck0 distributor1 depot0) [1]
+36: (LIFT hoist0 crate8 pallet0 depot0) [1]
+37: (LOAD hoist0 crate8 truck0 depot0) [1]
+38: (UNLOAD hoist0 crate9 truck0 depot0) [1]
+39: (DRIVE truck0 depot0 distributor1) [1]
+40: (DROP hoist0 crate9 pallet0 depot0) [1]
+41: (UNLOAD hoist2 crate3 truck1 distributor1) [1]
+42: (DRIVE truck1 distributor1 depot0) [1]
+43: (UNLOAD hoist0 crate6 truck1 depot0) [1]
+44: (DROP hoist0 crate6 crate9 depot0) [1]
+45: (UNLOAD hoist0 crate4 truck1 depot0) [1]
+46: (DROP hoist0 crate4 crate6 depot0) [1]
+47: (LOAD hoist2 crate3 truck0 distributor1) [1]
+48: (LIFT hoist2 crate5 crate2 distributor1) [1]
+49: (LOAD hoist2 crate5 truck0 distributor1) [1]
+50: (LIFT hoist2 crate2 crate0 distributor1) [1]
+51: (DRIVE truck0 distributor1 depot0) [1]
+52: (UNLOAD hoist0 crate5 truck0 depot0) [1]
+53: (DROP hoist0 crate5 crate4 depot0) [1]
+54: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+55: (DRIVE truck1 depot0 distributor1) [1]
+56: (LOAD hoist2 crate2 truck1 distributor1) [1]
+57: (LIFT hoist2 crate0 pallet2 distributor1) [1]
+58: (LOAD hoist0 crate3 truck0 depot0) [1]
+59: (LOAD hoist2 crate0 truck1 distributor1) [1]
+60: (DRIVE truck1 distributor1 depot0) [1]
+61: (DRIVE truck0 depot0 distributor1) [1]
+62: (UNLOAD hoist2 crate3 truck0 distributor1) [1]
+63: (UNLOAD hoist0 crate0 truck1 depot0) [1]
+64: (DROP hoist2 crate3 pallet2 distributor1) [1]
+65: (DROP hoist0 crate0 crate5 depot0) [1]
+66: (UNLOAD hoist0 crate2 truck1 depot0) [1]
+67: (UNLOAD hoist2 crate8 truck0 distributor1) [1]
+68: (DROP hoist0 crate2 crate0 depot0) [1]
+69: (DROP hoist2 crate8 crate3 distributor1) [1]
+
+Valid plan : 70 actions.
+Computed nodes : 128467
+Evaluated nodes : 17984
+Developed nodes : 3786
+Useful nodes : 27
+
+Lookahead utility : 28.64 %
+Preparation time : 0.01
+Search time : 6.33
+Total time : 6.34
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob5656..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.02 -> 5142 candidates, 1632 actions
+Finalization time : 0.00 -> 402 fluents, 38 init
+
+46 41 37 36 35 34 31 30 29 28 27 25 24 23 22 21 18 
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1234..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.01
+Instantiation time : 0.00 -> 1416 candidates, 408 actions
+Finalization time : 0.00 -> 135 fluents, 23 init
+
+20 17 12 10 9 7 6 5 4 
+
+0: (LIFT hoist1 crate4 crate0 distributor0) [1]
+1: (LIFT hoist0 crate5 pallet0 depot0) [1]
+2: (LIFT hoist2 crate3 crate2 distributor1) [1]
+3: (DRIVE truck0 distributor1 depot0) [1]
+4: (LOAD hoist0 crate5 truck0 depot0) [1]
+5: (DRIVE truck0 depot0 distributor1) [1]
+6: (LOAD hoist2 crate3 truck0 distributor1) [1]
+7: (UNLOAD hoist2 crate5 truck0 distributor1) [1]
+8: (DROP hoist1 crate4 pallet1 distributor0) [1]
+9: (LIFT hoist1 crate0 pallet4 distributor0) [1]
+10: (DROP hoist2 crate5 crate1 distributor1) [1]
+11: (DROP hoist1 crate0 pallet3 distributor0) [1]
+12: (LIFT hoist2 crate2 pallet2 distributor1) [1]
+13: (DRIVE truck0 distributor1 distributor0) [1]
+14: (DROP hoist2 crate2 crate5 distributor1) [1]
+15: (LIFT hoist1 crate4 pallet1 distributor0) [1]
+16: (LOAD hoist1 crate4 truck0 distributor0) [1]
+17: (UNLOAD hoist1 crate3 truck0 distributor0) [1]
+18: (DROP hoist1 crate3 pallet1 distributor0) [1]
+19: (LIFT hoist2 crate2 crate5 distributor1) [1]
+20: (DRIVE truck0 distributor0 distributor1) [1]
+21: (LOAD hoist2 crate2 truck0 distributor1) [1]
+22: (LIFT hoist2 crate5 crate1 distributor1) [1]
+23: (DROP hoist2 crate5 pallet2 distributor1) [1]
+24: (LIFT hoist2 crate1 pallet5 distributor1) [1]
+25: (DROP hoist2 crate1 crate5 distributor1) [1]
+26: (UNLOAD hoist2 crate4 truck0 distributor1) [1]
+27: (DROP hoist2 crate4 pallet5 distributor1) [1]
+28: (LIFT hoist2 crate1 crate5 distributor1) [1]
+29: (DROP hoist2 crate1 crate4 distributor1) [1]
+30: (LIFT hoist2 crate5 pallet2 distributor1) [1]
+31: (DROP hoist2 crate5 crate1 distributor1) [1]
+
+Valid plan : 32 actions.
+Computed nodes : 6573
+Evaluated nodes : 1533
+Developed nodes : 326
+Useful nodes : 4
+
+Lookahead utility : 34.83 %
+Preparation time : 0.01
+Search time : 0.23
+Total time : 0.24
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob4321..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.01 -> 3072 candidates, 912 actions
+Finalization time : 0.00 -> 255 fluents, 31 init
+
+27 25 18 6 3 
+
+0: (LIFT hoist1 crate8 crate3 distributor0) [1]
+1: (LIFT hoist2 crate7 crate4 distributor1) [1]
+2: (DRIVE truck0 distributor0 depot0) [1]
+3: (LIFT hoist0 crate2 pallet0 depot0) [1]
+4: (LOAD hoist1 crate8 truck1 distributor0) [1]
+5: (DRIVE truck1 distributor0 distributor1) [1]
+6: (DRIVE truck0 depot0 distributor0) [1]
+7: (LIFT hoist1 crate6 crate5 distributor0) [1]
+8: (LOAD hoist2 crate7 truck1 distributor1) [1]
+9: (LOAD hoist1 crate6 truck0 distributor0) [1]
+10: (LIFT hoist1 crate5 crate1 distributor0) [1]
+11: (LIFT hoist2 crate4 pallet3 distributor1) [1]
+12: (DRIVE truck1 distributor1 depot0) [1]
+13: (LOAD hoist1 crate5 truck0 distributor0) [1]
+14: (DRIVE truck0 distributor0 distributor1) [1]
+15: (LIFT hoist1 crate0 pallet4 distributor0) [1]
+16: (DROP hoist0 crate2 pallet0 depot0) [1]
+17: (UNLOAD hoist0 crate8 truck1 depot0) [1]
+18: (LOAD hoist2 crate4 truck0 distributor1) [1]
+19: (DRIVE truck0 distributor1 distributor0) [1]
+20: (LOAD hoist0 crate8 truck1 depot0) [1]
+21: (DRIVE truck1 depot0 distributor0) [1]
+22: (LOAD hoist1 crate0 truck0 distributor0) [1]
+23: (UNLOAD hoist1 crate8 truck1 distributor0) [1]
+24: (LIFT hoist2 crate9 pallet2 distributor1) [1]
+25: (DROP hoist1 crate8 pallet4 distributor0) [1]
+26: (LIFT hoist0 crate2 pallet0 depot0) [1]
+27: (LIFT hoist1 crate1 pallet1 distributor0) [1]
+28: (LOAD hoist1 crate1 truck0 distributor0) [1]
+29: (DRIVE truck0 distributor0 distributor1) [1]
+30: (DROP hoist0 crate2 pallet0 depot0) [1]
+31: (LOAD hoist2 crate9 truck0 distributor1) [1]
+32: (LIFT hoist1 crate3 pallet5 distributor0) [1]
+33: (UNLOAD hoist2 crate0 truck0 distributor1) [1]
+34: (DROP hoist1 crate3 crate8 distributor0) [1]
+35: (DROP hoist2 crate0 pallet3 distributor1) [1]
+36: (UNLOAD hoist2 crate6 truck0 distributor1) [1]
+37: (UNLOAD hoist1 crate7 truck1 distributor0) [1]
+38: (DROP hoist2 crate6 pallet2 distributor1) [1]
+39: (DROP hoist1 crate7 pallet1 distributor0) [1]
+40: (UNLOAD hoist2 crate1 truck0 distributor1) [1]
+41: (DRIVE truck0 distributor1 depot0) [1]
+42: (DROP hoist2 crate1 crate0 distributor1) [1]
+43: (LIFT hoist0 crate2 pallet0 depot0) [1]
+44: (LOAD hoist0 crate2 truck0 depot0) [1]
+45: (UNLOAD hoist0 crate9 truck0 depot0) [1]
+46: (DROP hoist0 crate9 pallet0 depot0) [1]
+
+Valid plan : 47 actions.
+Computed nodes : 47
+Evaluated nodes : 8
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 35.07 %
+Preparation time : 0.01
+Search time : 0.00
+Total time : 0.01
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob5451..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.02 -> 5952 candidates, 1812 actions
+Finalization time : 0.01 -> 450 fluents, 41 init
+
+44 40 36 34 32 31 30 29 26 25 24 21 18 16 15 14 13 11 9 7 3 
+
+0: (LIFT hoist2 crate13 crate4 distributor1) [1]
+1: (LIFT hoist1 crate14 crate9 distributor0) [1]
+2: (LOAD hoist1 crate14 truck0 distributor0) [1]
+3: (LIFT hoist0 crate2 crate1 depot0) [1]
+4: (LIFT hoist1 crate9 crate7 distributor0) [1]
+5: (LOAD hoist1 crate9 truck0 distributor0) [1]
+6: (LIFT hoist1 crate12 crate11 distributor0) [1]
+7: (DRIVE truck0 distributor0 distributor1) [1]
+8: (LOAD hoist2 crate13 truck0 distributor1) [1]
+9: (UNLOAD hoist2 crate14 truck0 distributor1) [1]
+10: (LOAD hoist1 crate12 truck1 distributor0) [1]
+11: (LIFT hoist1 crate11 pallet4 distributor0) [1]
+12: (LOAD hoist1 crate11 truck1 distributor0) [1]
+13: (DRIVE truck1 distributor0 distributor1) [1]
+14: (DROP hoist2 crate14 crate10 distributor1) [1]
+15: (UNLOAD hoist2 crate12 truck1 distributor1) [1]
+16: (DROP hoist0 crate2 crate1 depot0) [1]
+17: (DRIVE truck0 distributor1 distributor0) [1]
+18: (LIFT hoist1 crate7 crate6 distributor0) [1]
+19: (LIFT hoist0 crate8 pallet5 depot0) [1]
+20: (DROP hoist2 crate12 crate14 distributor1) [1]
+21: (LIFT hoist2 crate4 crate0 distributor1) [1]
+22: (LOAD hoist2 crate4 truck1 distributor1) [1]
+23: (LIFT hoist2 crate0 pallet2 distributor1) [1]
+24: (LOAD hoist1 crate7 truck0 distributor0) [1]
+25: (DRIVE truck1 distributor1 distributor0) [1]
+26: (DROP hoist2 crate0 crate12 distributor1) [1]
+27: (LIFT hoist1 crate6 crate3 distributor0) [1]
+28: (DROP hoist1 crate6 pallet4 distributor0) [1]
+29: (LIFT hoist1 crate3 pallet1 distributor0) [1]
+30: (LOAD hoist1 crate3 truck0 distributor0) [1]
+31: (DRIVE truck0 distributor0 distributor1) [1]
+32: (DROP hoist0 crate8 pallet5 depot0) [1]
+33: (LIFT hoist0 crate2 crate1 depot0) [1]
+34: (UNLOAD hoist1 crate4 truck1 distributor0) [1]
+35: (DROP hoist1 crate4 crate6 distributor0) [1]
+36: (UNLOAD hoist1 crate11 truck1 distributor0) [1]
+37: (DROP hoist1 crate11 pallet1 distributor0) [1]
+38: (LIFT hoist2 crate0 crate12 distributor1) [1]
+39: (DROP hoist0 crate2 crate8 depot0) [1]
+40: (LIFT hoist0 crate1 pallet0 depot0) [1]
+41: (DROP hoist0 crate1 crate2 depot0) [1]
+42: (DRIVE truck0 distributor1 depot0) [1]
+43: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+44: (DRIVE truck0 depot0 distributor1) [1]
+45: (DROP hoist0 crate3 pallet0 depot0) [1]
+46: (LOAD hoist2 crate0 truck0 distributor1) [1]
+47: (LIFT hoist2 crate12 crate14 distributor1) [1]
+48: (LOAD hoist2 crate12 truck0 distributor1) [1]
+49: (DRIVE truck0 distributor1 depot0) [1]
+50: (UNLOAD hoist0 crate13 truck0 depot0) [1]
+51: (DROP hoist0 crate13 crate3 depot0) [1]
+52: (LIFT hoist2 crate14 crate10 distributor1) [1]
+53: (DROP hoist2 crate14 pallet2 distributor1) [1]
+54: (LIFT hoist2 crate10 crate5 distributor1) [1]
+55: (LIFT hoist0 crate1 crate2 depot0) [1]
+56: (DRIVE truck0 depot0 distributor1) [1]
+57: (DROP hoist0 crate1 crate2 depot0) [1]
+58: (LOAD hoist2 crate10 truck0 distributor1) [1]
+59: (LIFT hoist2 crate5 pallet3 distributor1) [1]
+60: (LOAD hoist2 crate5 truck0 distributor1) [1]
+61: (DRIVE truck0 distributor1 depot0) [1]
+62: (UNLOAD hoist0 crate5 truck0 depot0) [1]
+63: (LIFT hoist2 crate14 pallet2 distributor1) [1]
+64: (DROP hoist2 crate14 pallet3 distributor1) [1]
+65: (DRIVE truck1 distributor0 distributor1) [1]
+66: (DRIVE truck0 depot0 distributor1) [1]
+67: (UNLOAD hoist2 crate10 truck0 distributor1) [1]
+68: (DROP hoist0 crate5 crate13 depot0) [1]
+69: (LIFT hoist0 crate1 crate2 depot0) [1]
+70: (DROP hoist2 crate10 pallet2 distributor1) [1]
+71: (UNLOAD hoist2 crate12 truck0 distributor1) [1]
+72: (DROP hoist2 crate12 crate14 distributor1) [1]
+73: (DROP hoist0 crate1 crate5 depot0) [1]
+74: (DRIVE truck0 distributor1 depot0) [1]
+75: (DRIVE truck1 distributor1 depot0) [1]
+76: (LIFT hoist0 crate2 crate8 depot0) [1]
+77: (LOAD hoist0 crate2 truck0 depot0) [1]
+78: (DRIVE truck0 depot0 distributor1) [1]
+79: (LIFT hoist0 crate8 pallet5 depot0) [1]
+80: (UNLOAD hoist2 crate2 truck0 distributor1) [1]
+81: (DROP hoist2 crate2 crate10 distributor1) [1]
+82: (LOAD hoist0 crate8 truck1 depot0) [1]
+83: (DRIVE truck0 distributor1 depot0) [1]
+84: (LIFT hoist0 crate1 crate5 depot0) [1]
+85: (LOAD hoist0 crate1 truck0 depot0) [1]
+86: (LIFT hoist0 crate5 crate13 depot0) [1]
+87: (DROP hoist0 crate5 pallet5 depot0) [1]
+88: (UNLOAD hoist0 crate9 truck0 depot0) [1]
+89: (DROP hoist0 crate9 crate5 depot0) [1]
+90: (DRIVE truck0 depot0 distributor1) [1]
+91: (UNLOAD hoist2 crate1 truck0 distributor1) [1]
+92: (DROP hoist2 crate1 crate2 distributor1) [1]
+93: (DRIVE truck0 distributor1 depot0) [1]
+94: (LIFT hoist0 crate9 crate5 depot0) [1]
+95: (LOAD hoist0 crate9 truck0 depot0) [1]
+96: (UNLOAD hoist0 crate0 truck0 depot0) [1]
+97: (DROP hoist0 crate0 crate5 depot0) [1]
+98: (DRIVE truck0 depot0 distributor1) [1]
+99: (UNLOAD hoist2 crate9 truck0 distributor1) [1]
+100: (DROP hoist2 crate9 crate1 distributor1) [1]
+
+Valid plan : 101 actions.
+Computed nodes : 369421
+Evaluated nodes : 62057
+Developed nodes : 5465
+Useful nodes : 25
+
+Lookahead utility : 21.00 %
+Preparation time : 0.03
+Search time : 48.72
+Total time : 48.75
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob7654..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.01 -> 5676 candidates, 816 actions
+Finalization time : 0.01 -> 180 fluents, 26 init
+
+23 19 14 13 10 9 7 6 2 
+
+0: (LIFT hoist5 crate3 crate2 distributor2) [1]
+1: (LIFT hoist2 crate4 pallet2 depot2) [1]
+2: (DRIVE truck0 depot1 depot2) [1]
+3: (LIFT hoist1 crate0 pallet1 depot1) [1]
+4: (DRIVE truck1 depot2 depot1) [1]
+5: (LOAD hoist1 crate0 truck1 depot1) [1]
+6: (LOAD hoist2 crate4 truck0 depot2) [1]
+7: (LIFT hoist0 crate1 pallet0 depot0) [1]
+8: (LIFT hoist3 crate5 pallet3 distributor0) [1]
+9: (DRIVE truck1 depot1 depot2) [1]
+10: (UNLOAD hoist2 crate4 truck0 depot2) [1]
+11: (DRIVE truck0 depot2 distributor2) [1]
+12: (DROP hoist0 crate1 pallet0 depot0) [1]
+13: (LOAD hoist5 crate3 truck0 distributor2) [1]
+14: (DROP hoist2 crate4 pallet2 depot2) [1]
+15: (DROP hoist3 crate5 pallet3 distributor0) [1]
+16: (LIFT hoist5 crate2 pallet5 distributor2) [1]
+17: (UNLOAD hoist2 crate0 truck1 depot2) [1]
+18: (LOAD hoist5 crate2 truck0 distributor2) [1]
+19: (DROP hoist2 crate0 crate4 depot2) [1]
+20: (DRIVE truck1 depot2 depot0) [1]
+21: (DRIVE truck0 distributor2 distributor0) [1]
+22: (LIFT hoist2 crate0 crate4 depot2) [1]
+23: (LIFT hoist3 crate5 pallet3 distributor0) [1]
+24: (LIFT hoist0 crate1 pallet0 depot0) [1]
+25: (LOAD hoist3 crate5 truck0 distributor0) [1]
+26: (LOAD hoist0 crate1 truck1 depot0) [1]
+27: (DRIVE truck0 distributor0 depot0) [1]
+28: (DROP hoist2 crate0 crate4 depot2) [1]
+29: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+30: (DROP hoist0 crate3 pallet0 depot0) [1]
+31: (DRIVE truck0 depot0 distributor0) [1]
+32: (LIFT hoist2 crate0 crate4 depot2) [1]
+33: (UNLOAD hoist3 crate2 truck0 distributor0) [1]
+34: (DROP hoist3 crate2 pallet3 distributor0) [1]
+35: (DROP hoist2 crate0 crate4 depot2) [1]
+36: (DRIVE truck0 distributor0 depot2) [1]
+37: (LIFT hoist2 crate0 crate4 depot2) [1]
+38: (LOAD hoist2 crate0 truck0 depot2) [1]
+39: (LIFT hoist2 crate4 pallet2 depot2) [1]
+40: (LOAD hoist2 crate4 truck0 depot2) [1]
+41: (DRIVE truck0 depot2 distributor2) [1]
+42: (UNLOAD hoist5 crate4 truck0 distributor2) [1]
+43: (DROP hoist5 crate4 pallet5 distributor2) [1]
+44: (UNLOAD hoist5 crate0 truck0 distributor2) [1]
+45: (DROP hoist5 crate0 crate4 distributor2) [1]
+
+Valid plan : 46 actions.
+Computed nodes : 872
+Evaluated nodes : 241
+Developed nodes : 12
+Useful nodes : 3
+
+Lookahead utility : 34.96 %
+Preparation time : 0.02
+Search time : 0.05
+Total time : 0.07
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob8765..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.04 -> 12300 candidates, 1800 actions
+Finalization time : 0.00 -> 324 fluents, 34 init
+
+41 37 34 30 29 28 27 26 24 22 19 17 15 14 13 11 10 9 7 
+
+0: (LIFT hoist1 crate3 crate0 depot1) [1]
+1: (DRIVE truck1 distributor0 distributor2) [1]
+2: (DRIVE truck0 depot2 depot1) [1]
+3: (LOAD hoist1 crate3 truck0 depot1) [1]
+4: (LIFT hoist5 crate8 crate7 distributor2) [1]
+5: (LIFT hoist2 crate9 crate5 depot2) [1]
+6: (LIFT hoist0 crate1 pallet0 depot0) [1]
+7: (LIFT hoist1 crate0 pallet1 depot1) [1]
+8: (LOAD hoist5 crate8 truck1 distributor2) [1]
+9: (LOAD hoist1 crate0 truck0 depot1) [1]
+10: (LIFT hoist5 crate7 crate6 distributor2) [1]
+11: (LOAD hoist5 crate7 truck1 distributor2) [1]
+12: (DRIVE truck1 distributor2 depot0) [1]
+13: (DRIVE truck0 depot1 distributor2) [1]
+14: (UNLOAD hoist5 crate0 truck0 distributor2) [1]
+15: (DROP hoist2 crate9 crate5 depot2) [1]
+16: (DROP hoist0 crate1 pallet0 depot0) [1]
+17: (UNLOAD hoist0 crate7 truck1 depot0) [1]
+18: (DROP hoist0 crate7 crate1 depot0) [1]
+19: (DROP hoist5 crate0 crate6 distributor2) [1]
+20: (LIFT hoist0 crate7 crate1 depot0) [1]
+21: (DRIVE truck1 depot0 distributor0) [1]
+22: (DRIVE truck0 distributor2 depot0) [1]
+23: (UNLOAD hoist3 crate8 truck1 distributor0) [1]
+24: (LIFT hoist2 crate9 crate5 depot2) [1]
+25: (DROP hoist3 crate8 pallet3 distributor0) [1]
+26: (DRIVE truck0 depot0 depot2) [1]
+27: (LIFT hoist5 crate0 crate6 distributor2) [1]
+28: (LOAD hoist2 crate9 truck0 depot2) [1]
+29: (LIFT hoist2 crate5 crate4 depot2) [1]
+30: (LOAD hoist2 crate5 truck0 depot2) [1]
+31: (LIFT hoist2 crate4 crate2 depot2) [1]
+32: (LOAD hoist2 crate4 truck0 depot2) [1]
+33: (DRIVE truck0 depot2 depot0) [1]
+34: (LIFT hoist2 crate2 pallet2 depot2) [1]
+35: (DROP hoist0 crate7 crate1 depot0) [1]
+36: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+37: (DROP hoist0 crate3 crate7 depot0) [1]
+38: (DRIVE truck0 depot0 depot2) [1]
+39: (LOAD hoist2 crate2 truck0 depot2) [1]
+40: (UNLOAD hoist2 crate5 truck0 depot2) [1]
+41: (DROP hoist2 crate5 pallet2 depot2) [1]
+42: (UNLOAD hoist2 crate9 truck0 depot2) [1]
+43: (DRIVE truck0 depot2 distributor2) [1]
+44: (LOAD hoist5 crate0 truck0 distributor2) [1]
+45: (LIFT hoist5 crate6 pallet5 distributor2) [1]
+46: (LOAD hoist5 crate6 truck0 distributor2) [1]
+47: (LIFT hoist0 crate3 crate7 depot0) [1]
+48: (DROP hoist2 crate9 crate5 depot2) [1]
+49: (UNLOAD hoist5 crate2 truck0 distributor2) [1]
+50: (DROP hoist5 crate2 pallet5 distributor2) [1]
+51: (DRIVE truck0 distributor2 depot2) [1]
+52: (LIFT hoist2 crate9 crate5 depot2) [1]
+53: (LOAD hoist2 crate9 truck0 depot2) [1]
+54: (DRIVE truck0 depot2 distributor2) [1]
+55: (UNLOAD hoist5 crate9 truck0 distributor2) [1]
+56: (DROP hoist5 crate9 crate2 distributor2) [1]
+57: (DRIVE truck0 distributor2 depot2) [1]
+58: (UNLOAD hoist2 crate6 truck0 depot2) [1]
+59: (DROP hoist2 crate6 crate5 depot2) [1]
+60: (DRIVE truck0 depot2 distributor2) [1]
+61: (DRIVE truck0 distributor2 depot0) [1]
+62: (LOAD hoist0 crate3 truck0 depot0) [1]
+63: (LIFT hoist0 crate7 crate1 depot0) [1]
+64: (DRIVE truck0 depot0 distributor2) [1]
+65: (DROP hoist0 crate7 crate1 depot0) [1]
+66: (UNLOAD hoist5 crate3 truck0 distributor2) [1]
+67: (DROP hoist5 crate3 crate9 distributor2) [1]
+68: (LIFT hoist0 crate7 crate1 depot0) [1]
+69: (DRIVE truck0 distributor2 depot0) [1]
+70: (DRIVE truck1 distributor0 depot0) [1]
+71: (LOAD hoist0 crate7 truck0 depot0) [1]
+72: (LIFT hoist0 crate1 pallet0 depot0) [1]
+73: (LOAD hoist0 crate1 truck0 depot0) [1]
+74: (UNLOAD hoist0 crate0 truck0 depot0) [1]
+75: (DRIVE truck0 depot0 distributor1) [1]
+76: (UNLOAD hoist4 crate1 truck0 distributor1) [1]
+77: (DROP hoist4 crate1 pallet4 distributor1) [1]
+78: (LOAD hoist0 crate0 truck1 depot0) [1]
+79: (DRIVE truck1 depot0 distributor1) [1]
+80: (UNLOAD hoist4 crate7 truck0 distributor1) [1]
+81: (DRIVE truck0 distributor1 depot0) [1]
+82: (DROP hoist4 crate7 crate1 distributor1) [1]
+83: (UNLOAD hoist4 crate0 truck1 distributor1) [1]
+84: (UNLOAD hoist0 crate4 truck0 depot0) [1]
+85: (DROP hoist4 crate0 crate7 distributor1) [1]
+86: (DROP hoist0 crate4 pallet0 depot0) [1]
+
+Valid plan : 87 actions.
+Computed nodes : 57398
+Evaluated nodes : 7563
+Developed nodes : 1395
+Useful nodes : 7
+
+Lookahead utility : 18.05 %
+Preparation time : 0.04
+Search time : 5.32
+Total time : 5.36
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob9876..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.08 -> 23820 candidates, 3570 actions
+Finalization time : 0.01 -> 549 fluents, 44 init
+
+50 47 44 42 39 37 34 33 30 29 28 25 23 22 20 18 17 16 13 10 7 6 5 3 
+
+0: (LIFT hoist4 crate14 crate11 distributor1) [1]
+1: (DRIVE truck1 depot1 distributor1) [1]
+2: (DRIVE truck0 distributor1 distributor0) [1]
+3: (LOAD hoist4 crate14 truck1 distributor1) [1]
+4: (LIFT hoist1 crate12 crate10 depot1) [1]
+5: (LIFT hoist3 crate4 crate2 distributor0) [1]
+6: (LIFT hoist5 crate13 crate9 distributor2) [1]
+7: (LIFT hoist4 crate11 pallet4 distributor1) [1]
+8: (DRIVE truck1 distributor1 depot1) [1]
+9: (LOAD hoist3 crate4 truck0 distributor0) [1]
+10: (DRIVE truck0 distributor0 depot1) [1]
+11: (LIFT hoist3 crate2 pallet3 distributor0) [1]
+12: (LOAD hoist1 crate12 truck0 depot1) [1]
+13: (UNLOAD hoist1 crate14 truck1 depot1) [1]
+14: (DROP hoist5 crate13 crate9 distributor2) [1]
+15: (DROP hoist1 crate14 crate10 depot1) [1]
+16: (DRIVE truck0 depot1 distributor0) [1]
+17: (LIFT hoist1 crate14 crate10 depot1) [1]
+18: (LOAD hoist3 crate2 truck0 distributor0) [1]
+19: (DRIVE truck1 depot1 distributor2) [1]
+20: (DRIVE truck0 distributor0 depot1) [1]
+21: (LIFT hoist5 crate13 crate9 distributor2) [1]
+22: (DROP hoist4 crate11 pallet4 distributor1) [1]
+23: (LOAD hoist5 crate13 truck1 distributor2) [1]
+24: (LIFT hoist5 crate9 crate8 distributor2) [1]
+25: (DRIVE truck1 distributor2 depot1) [1]
+26: (DRIVE truck0 depot1 distributor2) [1]
+27: (DROP hoist1 crate14 crate10 depot1) [1]
+28: (UNLOAD hoist1 crate13 truck1 depot1) [1]
+29: (LOAD hoist5 crate9 truck0 distributor2) [1]
+30: (LIFT hoist5 crate8 crate7 distributor2) [1]
+31: (LOAD hoist5 crate8 truck0 distributor2) [1]
+32: (LIFT hoist5 crate7 crate6 distributor2) [1]
+33: (LOAD hoist5 crate7 truck0 distributor2) [1]
+34: (DRIVE truck0 distributor2 depot2) [1]
+35: (UNLOAD hoist2 crate9 truck0 depot2) [1]
+36: (DRIVE truck0 depot2 distributor2) [1]
+37: (DROP hoist1 crate13 crate14 depot1) [1]
+38: (LIFT hoist5 crate6 crate3 distributor2) [1]
+39: (DROP hoist2 crate9 pallet2 depot2) [1]
+40: (LIFT hoist4 crate11 pallet4 distributor1) [1]
+41: (DRIVE truck1 depot1 distributor1) [1]
+42: (LOAD hoist4 crate11 truck1 distributor1) [1]
+43: (DRIVE truck1 distributor1 distributor2) [1]
+44: (LOAD hoist5 crate6 truck1 distributor2) [1]
+45: (LIFT hoist5 crate3 crate0 distributor2) [1]
+46: (LOAD hoist5 crate3 truck0 distributor2) [1]
+47: (DRIVE truck0 distributor2 depot2) [1]
+48: (LIFT hoist5 crate0 pallet5 distributor2) [1]
+49: (UNLOAD hoist2 crate3 truck0 depot2) [1]
+50: (LIFT hoist1 crate13 crate14 depot1) [1]
+51: (DROP hoist2 crate3 crate9 depot2) [1]
+52: (LOAD hoist5 crate0 truck1 distributor2) [1]
+53: (UNLOAD hoist2 crate2 truck0 depot2) [1]
+54: (DRIVE truck0 depot2 distributor2) [1]
+55: (DRIVE truck1 distributor2 depot2) [1]
+56: (DROP hoist2 crate2 crate3 depot2) [1]
+57: (UNLOAD hoist2 crate6 truck1 depot2) [1]
+58: (UNLOAD hoist5 crate12 truck0 distributor2) [1]
+59: (DROP hoist1 crate13 crate14 depot1) [1]
+60: (DROP hoist2 crate6 crate2 depot2) [1]
+61: (DROP hoist5 crate12 pallet5 distributor2) [1]
+62: (DRIVE truck1 depot2 distributor1) [1]
+63: (UNLOAD hoist4 crate0 truck1 distributor1) [1]
+64: (DROP hoist4 crate0 pallet4 distributor1) [1]
+65: (LIFT hoist5 crate12 pallet5 distributor2) [1]
+66: (LIFT hoist2 crate6 crate2 depot2) [1]
+67: (DRIVE truck0 distributor2 depot2) [1]
+68: (DRIVE truck1 distributor1 depot1) [1]
+69: (LOAD hoist2 crate6 truck0 depot2) [1]
+70: (LIFT hoist2 crate2 crate3 depot2) [1]
+71: (DRIVE truck1 depot1 distributor2) [1]
+72: (LOAD hoist2 crate2 truck0 depot2) [1]
+73: (DRIVE truck0 depot2 distributor1) [1]
+74: (LOAD hoist5 crate12 truck1 distributor2) [1]
+75: (UNLOAD hoist4 crate2 truck0 distributor1) [1]
+76: (LIFT hoist1 crate13 crate14 depot1) [1]
+77: (DROP hoist4 crate2 crate0 distributor1) [1]
+78: (UNLOAD hoist5 crate12 truck1 distributor2) [1]
+79: (UNLOAD hoist4 crate6 truck0 distributor1) [1]
+80: (DRIVE truck0 distributor1 depot2) [1]
+81: (UNLOAD hoist2 crate4 truck0 depot2) [1]
+82: (DRIVE truck0 depot2 depot1) [1]
+83: (DROP hoist2 crate4 crate3 depot2) [1]
+84: (DROP hoist4 crate6 crate2 distributor1) [1]
+85: (LOAD hoist1 crate13 truck0 depot1) [1]
+86: (LIFT hoist1 crate14 crate10 depot1) [1]
+87: (DROP hoist5 crate12 pallet5 distributor2) [1]
+88: (DRIVE truck1 distributor2 depot1) [1]
+89: (LOAD hoist1 crate14 truck0 depot1) [1]
+90: (DRIVE truck0 depot1 depot0) [1]
+91: (UNLOAD hoist0 crate13 truck0 depot0) [1]
+92: (DRIVE truck0 depot0 depot1) [1]
+93: (LIFT hoist1 crate10 crate5 depot1) [1]
+94: (DROP hoist0 crate13 pallet0 depot0) [1]
+95: (LOAD hoist1 crate10 truck0 depot1) [1]
+96: (LIFT hoist1 crate5 crate1 depot1) [1]
+97: (LOAD hoist1 crate5 truck0 depot1) [1]
+98: (DRIVE truck0 depot1 depot0) [1]
+99: (LIFT hoist1 crate1 pallet1 depot1) [1]
+100: (LIFT hoist0 crate13 pallet0 depot0) [1]
+101: (LOAD hoist0 crate13 truck0 depot0) [1]
+102: (UNLOAD hoist0 crate10 truck0 depot0) [1]
+103: (DRIVE truck0 depot0 depot1) [1]
+104: (LOAD hoist1 crate1 truck1 depot1) [1]
+105: (DRIVE truck1 depot1 distributor2) [1]
+106: (UNLOAD hoist5 crate1 truck1 distributor2) [1]
+107: (UNLOAD hoist1 crate13 truck0 depot1) [1]
+108: (DROP hoist0 crate10 pallet0 depot0) [1]
+109: (DROP hoist5 crate1 crate12 distributor2) [1]
+110: (DROP hoist1 crate13 pallet1 depot1) [1]
+111: (DRIVE truck0 depot1 depot0) [1]
+112: (LIFT hoist0 crate10 pallet0 depot0) [1]
+113: (LOAD hoist0 crate10 truck0 depot0) [1]
+114: (UNLOAD hoist0 crate5 truck0 depot0) [1]
+115: (DROP hoist0 crate5 pallet0 depot0) [1]
+116: (UNLOAD hoist0 crate14 truck0 depot0) [1]
+117: (DROP hoist0 crate14 crate5 depot0) [1]
+118: (DRIVE truck0 depot0 depot1) [1]
+119: (UNLOAD hoist1 crate10 truck0 depot1) [1]
+120: (DROP hoist1 crate10 crate13 depot1) [1]
+121: (LIFT hoist0 crate14 crate5 depot0) [1]
+122: (DRIVE truck0 depot1 depot0) [1]
+123: (LOAD hoist0 crate14 truck0 depot0) [1]
+124: (DRIVE truck0 depot0 depot1) [1]
+125: (UNLOAD hoist1 crate14 truck0 depot1) [1]
+126: (DROP hoist1 crate14 crate10 depot1) [1]
+
+Valid plan : 127 actions.
+Computed nodes : 3543964
+Evaluated nodes : 578774
+Developed nodes : 63345
+Useful nodes : 36
+
+Lookahead utility : 23.57 %
+Preparation time : 0.09
+Search time : 1161.83
+Total time : 1161.92
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob5646..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.02 -> 7404 candidates, 984 actions
+Finalization time : 0.00 -> 208 fluents, 30 init
+
+25 17 10 9 6 3 
+
+0: (LIFT hoist2 crate5 crate1 depot2) [1]
+1: (DRIVE truck0 distributor1 depot0) [1]
+2: (LIFT hoist0 crate3 pallet8 depot0) [1]
+3: (LIFT hoist3 crate4 pallet3 distributor0) [1]
+4: (DRIVE truck1 depot0 depot2) [1]
+5: (DROP hoist0 crate3 pallet7 depot0) [1]
+6: (DROP hoist3 crate4 pallet9 distributor0) [1]
+7: (LIFT hoist0 crate2 pallet0 depot0) [1]
+8: (LOAD hoist0 crate2 truck0 depot0) [1]
+9: (LOAD hoist2 crate5 truck1 depot2) [1]
+10: (DRIVE truck0 depot0 distributor1) [1]
+11: (DRIVE truck1 depot2 depot1) [1]
+12: (LIFT hoist2 crate1 crate0 depot2) [1]
+13: (UNLOAD hoist4 crate2 truck0 distributor1) [1]
+14: (UNLOAD hoist1 crate5 truck1 depot1) [1]
+15: (DROP hoist4 crate2 pallet4 distributor1) [1]
+16: (DROP hoist1 crate5 pallet1 depot1) [1]
+17: (DRIVE truck0 distributor1 distributor2) [1]
+18: (DRIVE truck0 distributor2 depot2) [1]
+19: (LOAD hoist2 crate1 truck0 depot2) [1]
+20: (LIFT hoist2 crate0 pallet2 depot2) [1]
+21: (LOAD hoist2 crate0 truck0 depot2) [1]
+22: (DRIVE truck0 depot2 distributor2) [1]
+23: (UNLOAD hoist5 crate1 truck0 distributor2) [1]
+24: (DROP hoist5 crate1 pallet5 distributor2) [1]
+25: (DRIVE truck0 distributor2 depot0) [1]
+26: (UNLOAD hoist0 crate0 truck0 depot0) [1]
+27: (DROP hoist0 crate0 pallet0 depot0) [1]
+
+Valid plan : 28 actions.
+Computed nodes : 28
+Evaluated nodes : 7
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 40.00 %
+Preparation time : 0.02
+Search time : 0.00
+Total time : 0.02
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob7654..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.05 -> 15180 candidates, 2080 actions
+Finalization time : 0.00 -> 368 fluents, 38 init
+
+23 21 19 17 13 12 8 7 5 3 
+
+0: (LIFT hoist4 crate7 crate6 distributor1) [1]
+1: (LIFT hoist0 crate5 crate1 depot0) [1]
+2: (DRIVE truck0 depot1 distributor0) [1]
+3: (LIFT hoist3 crate9 crate2 distributor0) [1]
+4: (LOAD hoist3 crate9 truck0 distributor0) [1]
+5: (LIFT hoist1 crate8 pallet1 depot1) [1]
+6: (DROP hoist4 crate7 crate6 distributor1) [1]
+7: (DRIVE truck0 distributor0 distributor2) [1]
+8: (DROP hoist1 crate8 pallet1 depot1) [1]
+9: (LIFT hoist4 crate0 pallet8 distributor1) [1]
+10: (DRIVE truck0 distributor2 depot0) [1]
+11: (DROP hoist4 crate0 pallet8 distributor1) [1]
+12: (LIFT hoist4 crate7 crate6 distributor1) [1]
+13: (LOAD hoist0 crate5 truck0 depot0) [1]
+14: (LIFT hoist1 crate8 pallet1 depot1) [1]
+15: (LIFT hoist0 crate1 pallet9 depot0) [1]
+16: (LOAD hoist0 crate1 truck0 depot0) [1]
+17: (DROP hoist4 crate7 crate6 distributor1) [1]
+18: (DRIVE truck0 depot0 distributor2) [1]
+19: (UNLOAD hoist5 crate5 truck0 distributor2) [1]
+20: (LIFT hoist4 crate0 pallet8 distributor1) [1]
+21: (DROP hoist1 crate8 pallet1 depot1) [1]
+22: (DROP hoist5 crate5 pallet5 distributor2) [1]
+23: (DRIVE truck0 distributor2 distributor1) [1]
+24: (LOAD hoist4 crate0 truck0 distributor1) [1]
+25: (UNLOAD hoist4 crate1 truck0 distributor1) [1]
+26: (DROP hoist4 crate1 pallet8 distributor1) [1]
+27: (LIFT hoist5 crate3 pallet6 distributor2) [1]
+28: (LIFT hoist4 crate7 crate6 distributor1) [1]
+29: (DROP hoist4 crate7 crate1 distributor1) [1]
+30: (LIFT hoist4 crate6 pallet4 distributor1) [1]
+31: (LOAD hoist4 crate6 truck0 distributor1) [1]
+32: (DRIVE truck0 distributor1 depot1) [1]
+33: (LIFT hoist1 crate8 pallet1 depot1) [1]
+34: (LIFT hoist4 crate7 crate1 distributor1) [1]
+35: (LOAD hoist1 crate8 truck0 depot1) [1]
+36: (DRIVE truck0 depot1 depot0) [1]
+37: (UNLOAD hoist0 crate6 truck0 depot0) [1]
+38: (DROP hoist4 crate7 crate1 distributor1) [1]
+39: (DROP hoist0 crate6 crate4 depot0) [1]
+40: (DRIVE truck0 depot0 distributor1) [1]
+41: (LIFT hoist4 crate7 crate1 distributor1) [1]
+42: (LIFT hoist0 crate6 crate4 depot0) [1]
+43: (LOAD hoist4 crate7 truck0 distributor1) [1]
+44: (UNLOAD hoist4 crate9 truck0 distributor1) [1]
+45: (DRIVE truck0 distributor1 depot0) [1]
+46: (DROP hoist4 crate9 crate1 distributor1) [1]
+47: (LOAD hoist0 crate6 truck0 depot0) [1]
+48: (UNLOAD hoist0 crate7 truck0 depot0) [1]
+49: (DRIVE truck0 depot0 depot1) [1]
+50: (DROP hoist0 crate7 crate4 depot0) [1]
+51: (LIFT hoist4 crate9 crate1 distributor1) [1]
+52: (UNLOAD hoist1 crate6 truck0 depot1) [1]
+53: (DROP hoist1 crate6 pallet1 depot1) [1]
+54: (LIFT hoist0 crate7 crate4 depot0) [1]
+55: (DRIVE truck0 depot1 distributor1) [1]
+56: (LOAD hoist4 crate9 truck0 distributor1) [1]
+57: (DRIVE truck0 distributor1 depot0) [1]
+58: (LOAD hoist0 crate7 truck0 depot0) [1]
+59: (UNLOAD hoist0 crate9 truck0 depot0) [1]
+60: (DRIVE truck0 depot0 depot1) [1]
+61: (DROP hoist0 crate9 crate4 depot0) [1]
+62: (UNLOAD hoist1 crate7 truck0 depot1) [1]
+63: (DROP hoist1 crate7 crate6 depot1) [1]
+64: (LIFT hoist0 crate9 crate4 depot0) [1]
+65: (DRIVE truck0 depot1 depot0) [1]
+66: (LOAD hoist0 crate9 truck0 depot0) [1]
+67: (DRIVE truck0 depot0 depot1) [1]
+68: (UNLOAD hoist1 crate9 truck0 depot1) [1]
+69: (DROP hoist1 crate9 crate7 depot1) [1]
+
+Valid plan : 70 actions.
+Computed nodes : 73360
+Evaluated nodes : 17324
+Developed nodes : 1383
+Useful nodes : 7
+
+Lookahead utility : 32.61 %
+Preparation time : 0.05
+Search time : 12.28
+Total time : 12.33
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob4534..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.09 -> 28140 candidates, 3990 actions
+Finalization time : 0.01 -> 613 fluents, 48 init
+
+52 50 48 46 44 41 40 37 36 32 29 28 25 24 23 21 15 11 9 7 5 3 
+
+0: (DRIVE truck1 distributor2 depot0) [1]
+1: (LIFT hoist1 crate7 crate6 depot1) [1]
+2: (LIFT hoist3 crate9 pallet7 distributor0) [1]
+3: (LIFT hoist5 crate11 crate5 distributor2) [1]
+4: (DRIVE truck0 distributor1 distributor0) [1]
+5: (LOAD hoist3 crate9 truck0 distributor0) [1]
+6: (DRIVE truck1 depot0 depot2) [1]
+7: (LIFT hoist4 crate12 crate10 distributor1) [1]
+8: (LIFT hoist2 crate13 crate3 depot2) [1]
+9: (LIFT hoist3 crate8 pallet3 distributor0) [1]
+10: (DROP hoist3 crate8 pallet7 distributor0) [1]
+11: (DROP hoist2 crate13 crate3 depot2) [1]
+12: (UNLOAD hoist3 crate9 truck0 distributor0) [1]
+13: (DRIVE truck0 distributor0 distributor1) [1]
+14: (LOAD hoist4 crate12 truck0 distributor1) [1]
+15: (DROP hoist1 crate7 crate4 depot1) [1]
+16: (DROP hoist3 crate9 pallet3 distributor0) [1]
+17: (LIFT hoist2 crate13 crate3 depot2) [1]
+18: (LIFT hoist1 crate6 pallet1 depot1) [1]
+19: (DROP hoist5 crate11 crate5 distributor2) [1]
+20: (LIFT hoist4 crate10 crate1 distributor1) [1]
+21: (LOAD hoist4 crate10 truck0 distributor1) [1]
+22: (LIFT hoist4 crate1 pallet4 distributor1) [1]
+23: (LIFT hoist3 crate9 pallet3 distributor0) [1]
+24: (LIFT hoist5 crate11 crate5 distributor2) [1]
+25: (LOAD hoist2 crate13 truck1 depot2) [1]
+26: (LIFT hoist2 crate3 crate2 depot2) [1]
+27: (DROP hoist1 crate6 pallet1 depot1) [1]
+28: (LOAD hoist4 crate1 truck0 distributor1) [1]
+29: (DRIVE truck0 distributor1 depot1) [1]
+30: (LIFT hoist1 crate7 crate4 depot1) [1]
+31: (LOAD hoist1 crate7 truck0 depot1) [1]
+32: (LIFT hoist1 crate4 pallet6 depot1) [1]
+33: (LOAD hoist2 crate3 truck1 depot2) [1]
+34: (LOAD hoist1 crate4 truck0 depot1) [1]
+35: (DRIVE truck0 depot1 distributor1) [1]
+36: (DRIVE truck1 depot2 depot1) [1]
+37: (LIFT hoist2 crate2 pallet8 depot2) [1]
+38: (UNLOAD hoist4 crate7 truck0 distributor1) [1]
+39: (LIFT hoist1 crate6 pallet1 depot1) [1]
+40: (DROP hoist5 crate11 crate5 distributor2) [1]
+41: (DROP hoist1 crate6 pallet6 depot1) [1]
+42: (DROP hoist3 crate9 pallet3 distributor0) [1]
+43: (DROP hoist4 crate7 pallet4 distributor1) [1]
+44: (UNLOAD hoist1 crate3 truck1 depot1) [1]
+45: (DROP hoist1 crate3 pallet1 depot1) [1]
+46: (DRIVE truck1 depot1 depot2) [1]
+47: (UNLOAD hoist4 crate4 truck0 distributor1) [1]
+48: (LIFT hoist5 crate11 crate5 distributor2) [1]
+49: (DRIVE truck0 distributor1 depot2) [1]
+50: (LOAD hoist2 crate2 truck0 depot2) [1]
+51: (UNLOAD hoist2 crate13 truck1 depot2) [1]
+52: (LIFT hoist3 crate9 pallet3 distributor0) [1]
+53: (DROP hoist4 crate4 crate7 distributor1) [1]
+54: (DROP hoist2 crate13 pallet8 depot2) [1]
+55: (DRIVE truck0 depot2 depot0) [1]
+56: (UNLOAD hoist0 crate2 truck0 depot0) [1]
+57: (DRIVE truck0 depot0 distributor2) [1]
+58: (DROP hoist0 crate2 pallet0 depot0) [1]
+59: (LOAD hoist5 crate11 truck0 distributor2) [1]
+60: (DRIVE truck0 distributor2 depot0) [1]
+61: (UNLOAD hoist0 crate10 truck0 depot0) [1]
+62: (LIFT hoist5 crate5 crate0 distributor2) [1]
+63: (DROP hoist3 crate9 pallet3 distributor0) [1]
+64: (DRIVE truck1 depot2 distributor0) [1]
+65: (DRIVE truck0 depot0 distributor0) [1]
+66: (LIFT hoist3 crate9 pallet3 distributor0) [1]
+67: (DROP hoist5 crate5 crate0 distributor2) [1]
+68: (DRIVE truck1 distributor0 distributor2) [1]
+69: (LOAD hoist3 crate9 truck0 distributor0) [1]
+70: (UNLOAD hoist3 crate11 truck0 distributor0) [1]
+71: (DROP hoist0 crate10 crate2 depot0) [1]
+72: (LOAD hoist3 crate11 truck0 distributor0) [1]
+73: (DRIVE truck0 distributor0 depot0) [1]
+74: (UNLOAD hoist0 crate11 truck0 depot0) [1]
+75: (LIFT hoist5 crate5 crate0 distributor2) [1]
+76: (DROP hoist0 crate11 crate10 depot0) [1]
+77: (UNLOAD hoist0 crate1 truck0 depot0) [1]
+78: (LOAD hoist5 crate5 truck1 distributor2) [1]
+79: (DROP hoist0 crate1 crate11 depot0) [1]
+80: (DRIVE truck0 depot0 distributor1) [1]
+81: (LIFT hoist5 crate0 pallet5 distributor2) [1]
+82: (UNLOAD hoist4 crate9 truck0 distributor1) [1]
+83: (DROP hoist4 crate9 crate4 distributor1) [1]
+84: (LOAD hoist5 crate0 truck1 distributor2) [1]
+85: (DRIVE truck1 distributor2 depot0) [1]
+86: (DRIVE truck0 distributor1 depot0) [1]
+87: (UNLOAD hoist0 crate5 truck1 depot0) [1]
+88: (DROP hoist0 crate5 crate1 depot0) [1]
+89: (LIFT hoist0 crate5 crate1 depot0) [1]
+90: (DRIVE truck1 depot0 distributor0) [1]
+91: (LOAD hoist0 crate5 truck0 depot0) [1]
+92: (DRIVE truck0 depot0 distributor2) [1]
+93: (UNLOAD hoist3 crate0 truck1 distributor0) [1]
+94: (UNLOAD hoist5 crate5 truck0 distributor2) [1]
+95: (LIFT hoist0 crate1 crate11 depot0) [1]
+96: (DROP hoist3 crate0 crate8 distributor0) [1]
+97: (DROP hoist5 crate5 pallet5 distributor2) [1]
+98: (DROP hoist0 crate1 crate11 depot0) [1]
+99: (UNLOAD hoist5 crate12 truck0 distributor2) [1]
+100: (DRIVE truck0 distributor2 depot0) [1]
+101: (DROP hoist5 crate12 crate5 distributor2) [1]
+102: (LIFT hoist0 crate1 crate11 depot0) [1]
+103: (LOAD hoist0 crate1 truck0 depot0) [1]
+104: (LIFT hoist0 crate11 crate10 depot0) [1]
+105: (LOAD hoist0 crate11 truck0 depot0) [1]
+106: (DRIVE truck0 depot0 distributor1) [1]
+107: (LIFT hoist0 crate10 crate2 depot0) [1]
+108: (UNLOAD hoist4 crate11 truck0 distributor1) [1]
+109: (DROP hoist4 crate11 crate9 distributor1) [1]
+110: (DRIVE truck0 distributor1 depot0) [1]
+111: (LOAD hoist0 crate10 truck0 depot0) [1]
+112: (UNLOAD hoist0 crate1 truck0 depot0) [1]
+113: (DROP hoist0 crate1 crate2 depot0) [1]
+114: (DRIVE truck0 depot0 distributor1) [1]
+115: (UNLOAD hoist4 crate10 truck0 distributor1) [1]
+116: (DROP hoist4 crate10 crate11 distributor1) [1]
+117: (LIFT hoist0 crate1 crate2 depot0) [1]
+118: (DRIVE truck0 distributor1 depot0) [1]
+119: (LOAD hoist0 crate1 truck0 depot0) [1]
+120: (DRIVE truck0 depot0 distributor1) [1]
+121: (UNLOAD hoist4 crate1 truck0 distributor1) [1]
+122: (DROP hoist4 crate1 crate10 distributor1) [1]
+
+Valid plan : 123 actions.
+Computed nodes : 7635
+Evaluated nodes : 1021
+Developed nodes : 10
+Useful nodes : 8
+
+Lookahead utility : 24.22 %
+Preparation time : 0.10
+Search time : 1.06
+Total time : 1.16
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob4398..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.02 -> 6576 candidates, 1404 actions
+Finalization time : 0.00 -> 212 fluents, 32 init
+
+25 21 14 8 7 
+
+0: (DRIVE truck2 depot0 depot1) [1]
+1: (LIFT hoist0 crate5 crate2 depot0) [1]
+2: (LIFT hoist1 crate3 crate1 depot1) [1]
+3: (DRIVE truck3 distributor1 depot1) [1]
+4: (DRIVE truck0 depot1 depot0) [1]
+5: (LOAD hoist1 crate3 truck2 depot1) [1]
+6: (LOAD hoist0 crate5 truck0 depot0) [1]
+7: (LIFT hoist0 crate2 pallet0 depot0) [1]
+8: (LIFT hoist2 crate4 pallet2 distributor0) [1]
+9: (LIFT hoist1 crate1 pallet1 depot1) [1]
+10: (LOAD hoist0 crate2 truck0 depot0) [1]
+11: (DROP hoist2 crate4 pallet2 distributor0) [1]
+12: (LIFT hoist5 crate0 pallet4 depot1) [1]
+13: (DRIVE truck0 depot0 distributor0) [1]
+14: (DRIVE truck2 depot1 depot0) [1]
+15: (UNLOAD hoist0 crate3 truck2 depot0) [1]
+16: (UNLOAD hoist2 crate5 truck0 distributor0) [1]
+17: (DROP hoist0 crate3 pallet0 depot0) [1]
+18: (DROP hoist2 crate5 crate4 distributor0) [1]
+19: (LOAD hoist5 crate0 truck1 depot1) [1]
+20: (DRIVE truck1 depot1 distributor1) [1]
+21: (DRIVE truck0 distributor0 depot1) [1]
+22: (DRIVE truck2 depot0 distributor0) [1]
+23: (UNLOAD hoist7 crate0 truck1 distributor1) [1]
+24: (UNLOAD hoist6 crate2 truck0 depot1) [1]
+25: (DROP hoist7 crate0 pallet3 distributor1) [1]
+26: (DROP hoist6 crate2 pallet1 depot1) [1]
+27: (DRIVE truck0 depot1 distributor0) [1]
+28: (LIFT hoist2 crate5 crate4 distributor0) [1]
+29: (DROP hoist2 crate5 pallet7 distributor0) [1]
+30: (LIFT hoist2 crate4 pallet2 distributor0) [1]
+31: (LOAD hoist2 crate4 truck0 distributor0) [1]
+32: (DRIVE truck0 distributor0 depot0) [1]
+33: (UNLOAD hoist0 crate4 truck0 depot0) [1]
+34: (LIFT hoist2 crate5 pallet7 distributor0) [1]
+35: (DROP hoist0 crate4 crate3 depot0) [1]
+36: (DROP hoist2 crate5 pallet2 distributor0) [1]
+
+Valid plan : 37 actions.
+Computed nodes : 60
+Evaluated nodes : 14
+Developed nodes : 1
+Useful nodes : 1
+
+Lookahead utility : 40.60 %
+Preparation time : 0.02
+Search time : 0.00
+Total time : 0.02
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob6587..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.05 -> 13488 candidates, 2938 actions
+Finalization time : 0.00 -> 372 fluents, 40 init
+
+26 21 16 13 11 8 6 5 
+
+0: (LIFT hoist3 crate7 crate5 distributor1) [1]
+1: (DRIVE truck1 distributor1 depot0) [1]
+2: (DRIVE truck3 depot0 depot1) [1]
+3: (DRIVE truck0 depot1 distributor1) [1]
+4: (LIFT hoist0 crate3 pallet6 depot0) [1]
+5: (LIFT hoist1 crate4 pallet1 depot1) [1]
+6: (LOAD hoist0 crate3 truck1 depot0) [1]
+7: (LOAD hoist1 crate4 truck3 depot1) [1]
+8: (LOAD hoist3 crate7 truck0 distributor1) [1]
+9: (UNLOAD hoist0 crate3 truck1 depot0) [1]
+10: (DRIVE truck3 depot1 depot0) [1]
+11: (DRIVE truck1 depot0 distributor1) [1]
+12: (LIFT hoist7 crate8 crate6 distributor1) [1]
+13: (DRIVE truck2 depot1 distributor1) [1]
+14: (LOAD hoist7 crate8 truck1 distributor1) [1]
+15: (LIFT hoist3 crate6 pallet7 distributor1) [1]
+16: (UNLOAD hoist6 crate4 truck3 depot0) [1]
+17: (LIFT hoist7 crate1 pallet5 distributor1) [1]
+18: (LOAD hoist3 crate6 truck2 distributor1) [1]
+19: (DROP hoist0 crate3 pallet0 depot0) [1]
+20: (DROP hoist7 crate1 pallet7 distributor1) [1]
+21: (DRIVE truck1 distributor1 depot0) [1]
+22: (DRIVE truck2 distributor1 depot1) [1]
+23: (DRIVE truck0 distributor1 depot0) [1]
+24: (UNLOAD hoist5 crate8 truck1 depot0) [1]
+25: (DROP hoist6 crate4 crate3 depot0) [1]
+26: (DROP hoist5 crate8 pallet6 depot0) [1]
+27: (UNLOAD hoist6 crate7 truck0 depot0) [1]
+28: (UNLOAD hoist1 crate6 truck2 depot1) [1]
+29: (DROP hoist1 crate6 pallet1 depot1) [1]
+30: (DROP hoist6 crate7 crate4 depot0) [1]
+31: (LIFT hoist6 crate8 pallet6 depot0) [1]
+32: (DROP hoist6 crate8 pallet6 depot0) [1]
+33: (LIFT hoist5 crate7 crate4 depot0) [1]
+34: (LIFT hoist6 crate4 crate3 depot0) [1]
+35: (DROP hoist5 crate7 crate3 depot0) [1]
+36: (LIFT hoist0 crate7 crate3 depot0) [1]
+37: (DROP hoist6 crate4 crate8 depot0) [1]
+38: (LIFT hoist5 crate3 pallet0 depot0) [1]
+39: (LIFT hoist6 crate4 crate8 depot0) [1]
+40: (DROP hoist5 crate3 crate8 depot0) [1]
+41: (DROP hoist6 crate4 pallet0 depot0) [1]
+42: (DROP hoist0 crate7 crate3 depot0) [1]
+
+Valid plan : 43 actions.
+Computed nodes : 529
+Evaluated nodes : 83
+Developed nodes : 2
+Useful nodes : 2
+
+Lookahead utility : 45.58 %
+Preparation time : 0.05
+Search time : 0.04
+Total time : 0.09
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1916..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.09 -> 25008 candidates, 5568 actions
+Finalization time : 0.01 -> 617 fluents, 50 init
+
+58 51 44 40 38 32 29 28 21 19 16 15 12 10 9 7 5 3 
+
+0: (DRIVE truck2 depot0 distributor1) [1]
+1: (LIFT hoist0 crate13 crate7 depot0) [1]
+2: (DRIVE truck0 depot1 depot0) [1]
+3: (LIFT hoist3 crate10 crate9 distributor1) [1]
+4: (DRIVE truck1 distributor0 depot1) [1]
+5: (LIFT hoist2 crate8 crate6 distributor0) [1]
+6: (LIFT hoist1 crate11 crate1 depot1) [1]
+7: (LOAD hoist0 crate13 truck0 depot0) [1]
+8: (LIFT hoist0 crate7 crate4 depot0) [1]
+9: (LOAD hoist3 crate10 truck2 distributor1) [1]
+10: (LOAD hoist1 crate11 truck1 depot1) [1]
+11: (LIFT hoist3 crate9 pallet3 distributor1) [1]
+12: (LIFT hoist1 crate1 pallet1 depot1) [1]
+13: (DRIVE truck0 depot0 distributor1) [1]
+14: (LOAD hoist3 crate9 truck2 distributor1) [1]
+15: (UNLOAD hoist7 crate10 truck2 distributor1) [1]
+16: (DRIVE truck2 distributor1 depot1) [1]
+17: (LIFT hoist5 crate4 crate0 depot0) [1]
+18: (DRIVE truck1 depot1 distributor1) [1]
+19: (DROP hoist5 crate4 pallet4 depot0) [1]
+20: (DROP hoist1 crate1 pallet1 depot1) [1]
+21: (UNLOAD hoist1 crate9 truck2 depot1) [1]
+22: (LIFT hoist4 crate6 pallet5 distributor0) [1]
+23: (LIFT hoist5 crate0 pallet0 depot0) [1]
+24: (DROP hoist7 crate10 pallet3 distributor1) [1]
+25: (UNLOAD hoist7 crate13 truck0 distributor1) [1]
+26: (DROP hoist1 crate9 crate1 depot1) [1]
+27: (LIFT hoist1 crate5 pallet7 depot1) [1]
+28: (DRIVE truck2 depot1 depot0) [1]
+29: (DRIVE truck1 distributor1 distributor0) [1]
+30: (DRIVE truck2 depot0 distributor1) [1]
+31: (LOAD hoist1 crate5 truck3 depot1) [1]
+32: (DRIVE truck3 depot1 distributor0) [1]
+33: (LIFT hoist3 crate10 pallet3 distributor1) [1]
+34: (DROP hoist7 crate13 pallet3 distributor1) [1]
+35: (DROP hoist2 crate8 pallet5 distributor0) [1]
+36: (LOAD hoist4 crate6 truck3 distributor0) [1]
+37: (LIFT hoist1 crate9 crate1 depot1) [1]
+38: (UNLOAD hoist6 crate5 truck3 distributor0) [1]
+39: (DRIVE truck0 distributor1 depot1) [1]
+40: (DROP hoist6 crate5 crate14 distributor0) [1]
+41: (UNLOAD hoist6 crate11 truck1 distributor0) [1]
+42: (LOAD hoist3 crate10 truck2 distributor1) [1]
+43: (DRIVE truck2 distributor1 depot0) [1]
+44: (DRIVE truck3 distributor0 depot1) [1]
+45: (DROP hoist1 crate9 crate1 depot1) [1]
+46: (LIFT hoist2 crate8 pallet5 distributor0) [1]
+47: (DROP hoist6 crate11 pallet5 distributor0) [1]
+48: (DRIVE truck0 depot1 distributor0) [1]
+49: (LOAD hoist2 crate8 truck0 distributor0) [1]
+50: (UNLOAD hoist1 crate6 truck3 depot1) [1]
+51: (DROP hoist5 crate0 pallet0 depot0) [1]
+52: (LIFT hoist7 crate3 pallet6 distributor1) [1]
+53: (LIFT hoist4 crate5 crate14 distributor0) [1]
+54: (UNLOAD hoist5 crate10 truck2 depot0) [1]
+55: (DROP hoist1 crate6 pallet7 depot1) [1]
+56: (DROP hoist5 crate10 crate4 depot0) [1]
+57: (LIFT hoist2 crate14 crate12 distributor0) [1]
+58: (LOAD hoist2 crate14 truck0 distributor0) [1]
+59: (LIFT hoist2 crate12 crate2 distributor0) [1]
+60: (DRIVE truck3 depot1 depot0) [1]
+61: (DRIVE truck0 distributor0 depot0) [1]
+62: (LIFT hoist1 crate9 crate1 depot1) [1]
+63: (LIFT hoist6 crate2 pallet2 distributor0) [1]
+64: (DROP hoist2 crate12 crate11 distributor0) [1]
+65: (DROP hoist4 crate5 pallet2 distributor0) [1]
+66: (LIFT hoist5 crate0 pallet0 depot0) [1]
+67: (DROP hoist7 crate3 crate13 distributor1) [1]
+68: (DROP hoist6 crate2 crate12 distributor0) [1]
+69: (DROP hoist5 crate0 crate10 depot0) [1]
+70: (UNLOAD hoist5 crate14 truck0 depot0) [1]
+71: (DROP hoist5 crate14 pallet0 depot0) [1]
+72: (UNLOAD hoist5 crate8 truck0 depot0) [1]
+73: (DROP hoist0 crate7 crate14 depot0) [1]
+74: (DROP hoist1 crate9 crate1 depot1) [1]
+75: (LIFT hoist6 crate2 crate12 distributor0) [1]
+76: (LIFT hoist4 crate12 crate11 distributor0) [1]
+77: (DROP hoist4 crate12 crate5 distributor0) [1]
+78: (LIFT hoist0 crate0 crate10 depot0) [1]
+79: (LOAD hoist0 crate0 truck0 depot0) [1]
+80: (DROP hoist6 crate2 crate12 distributor0) [1]
+81: (LIFT hoist0 crate10 crate4 depot0) [1]
+82: (LIFT hoist1 crate9 crate1 depot1) [1]
+83: (DROP hoist5 crate8 crate4 depot0) [1]
+84: (LOAD hoist0 crate10 truck0 depot0) [1]
+85: (DRIVE truck0 depot0 depot1) [1]
+86: (DROP hoist1 crate9 crate6 depot1) [1]
+87: (UNLOAD hoist1 crate10 truck0 depot1) [1]
+88: (DRIVE truck0 depot1 distributor1) [1]
+89: (DROP hoist1 crate10 crate9 depot1) [1]
+90: (LIFT hoist1 crate1 pallet1 depot1) [1]
+91: (DRIVE truck0 distributor1 depot1) [1]
+92: (LOAD hoist1 crate1 truck0 depot1) [1]
+93: (LIFT hoist1 crate10 crate9 depot1) [1]
+94: (DROP hoist1 crate10 pallet1 depot1) [1]
+95: (UNLOAD hoist1 crate0 truck0 depot1) [1]
+96: (DROP hoist1 crate0 crate10 depot1) [1]
+97: (LIFT hoist1 crate9 crate6 depot1) [1]
+98: (DRIVE truck0 depot1 distributor1) [1]
+99: (DROP hoist1 crate9 crate0 depot1) [1]
+100: (UNLOAD hoist7 crate1 truck0 distributor1) [1]
+101: (DROP hoist7 crate1 pallet6 distributor1) [1]
+102: (LIFT hoist1 crate9 crate0 depot1) [1]
+103: (DRIVE truck0 distributor1 depot1) [1]
+104: (LOAD hoist1 crate9 truck0 depot1) [1]
+105: (DRIVE truck0 depot1 distributor1) [1]
+106: (UNLOAD hoist7 crate9 truck0 distributor1) [1]
+107: (DROP hoist7 crate9 crate1 distributor1) [1]
+
+Valid plan : 108 actions.
+Computed nodes : 53633
+Evaluated nodes : 9548
+Developed nodes : 395
+Useful nodes : 9
+
+Lookahead utility : 32.53 %
+Preparation time : 0.10
+Search time : 18.26
+Total time : 18.36
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob6178..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.05 -> 21728 candidates, 2352 actions
+Finalization time : 0.01 -> 354 fluents, 38 init
+
+34 29 28 27 26 25 17 15 11 9 6 3 
+
+0: (LIFT hoist0 crate6 pallet0 depot0) [1]
+1: (LIFT hoist1 crate1 pallet1 depot1) [1]
+2: (DRIVE truck1 distributor0 depot0) [1]
+3: (LIFT hoist3 crate7 pallet3 depot3) [1]
+4: (LIFT hoist5 crate5 crate3 distributor1) [1]
+5: (DRIVE truck0 depot0 depot3) [1]
+6: (LOAD hoist0 crate6 truck1 depot0) [1]
+7: (LOAD hoist3 crate7 truck0 depot3) [1]
+8: (LIFT hoist4 crate2 pallet4 distributor0) [1]
+9: (LIFT hoist6 crate4 pallet8 distributor2) [1]
+10: (LIFT hoist3 crate0 pallet9 depot3) [1]
+11: (LOAD hoist3 crate0 truck0 depot3) [1]
+12: (DRIVE truck3 distributor3 depot1) [1]
+13: (DROP hoist4 crate2 pallet4 distributor0) [1]
+14: (LOAD hoist1 crate1 truck3 depot1) [1]
+15: (DRIVE truck3 depot1 distributor1) [1]
+16: (DRIVE truck1 depot0 distributor0) [1]
+17: (UNLOAD hoist3 crate7 truck0 depot3) [1]
+18: (DROP hoist5 crate5 crate3 distributor1) [1]
+19: (DRIVE truck0 depot3 distributor2) [1]
+20: (UNLOAD hoist5 crate1 truck3 distributor1) [1]
+21: (LOAD hoist6 crate4 truck0 distributor2) [1]
+22: (UNLOAD hoist6 crate0 truck0 distributor2) [1]
+23: (UNLOAD hoist4 crate6 truck1 distributor0) [1]
+24: (DROP hoist3 crate7 pallet3 depot3) [1]
+25: (DROP hoist6 crate0 pallet6 distributor2) [1]
+26: (DROP hoist4 crate6 crate2 distributor0) [1]
+27: (DRIVE truck0 distributor2 distributor1) [1]
+28: (LOAD hoist5 crate1 truck3 distributor1) [1]
+29: (DRIVE truck3 distributor1 distributor2) [1]
+30: (LIFT hoist5 crate5 crate3 distributor1) [1]
+31: (UNLOAD hoist6 crate1 truck3 distributor2) [1]
+32: (LOAD hoist5 crate5 truck0 distributor1) [1]
+33: (UNLOAD hoist5 crate4 truck0 distributor1) [1]
+34: (LIFT hoist3 crate7 pallet3 depot3) [1]
+35: (DROP hoist6 crate1 pallet8 distributor2) [1]
+36: (LOAD hoist5 crate4 truck0 distributor1) [1]
+37: (DRIVE truck0 distributor1 depot3) [1]
+38: (DRIVE truck3 distributor2 distributor1) [1]
+39: (LIFT hoist5 crate3 pallet5 distributor1) [1]
+40: (DROP hoist3 crate7 pallet3 depot3) [1]
+41: (UNLOAD hoist3 crate5 truck0 depot3) [1]
+42: (LIFT hoist4 crate6 crate2 distributor0) [1]
+43: (LOAD hoist5 crate3 truck3 distributor1) [1]
+44: (DROP hoist3 crate5 crate7 depot3) [1]
+45: (UNLOAD hoist3 crate4 truck0 depot3) [1]
+46: (DROP hoist3 crate4 pallet9 depot3) [1]
+47: (DROP hoist4 crate6 crate2 distributor0) [1]
+48: (LIFT hoist3 crate5 crate7 depot3) [1]
+49: (DRIVE truck3 distributor1 depot3) [1]
+50: (DROP hoist3 crate5 crate7 depot3) [1]
+51: (DRIVE truck3 depot3 distributor2) [1]
+52: (LIFT hoist3 crate4 pallet9 depot3) [1]
+53: (UNLOAD hoist6 crate3 truck3 distributor2) [1]
+54: (LIFT hoist4 crate6 crate2 distributor0) [1]
+55: (LOAD hoist3 crate4 truck0 depot3) [1]
+56: (DRIVE truck0 depot3 distributor1) [1]
+57: (UNLOAD hoist5 crate4 truck0 distributor1) [1]
+58: (DROP hoist6 crate3 crate1 distributor2) [1]
+59: (DROP hoist5 crate4 pallet5 distributor1) [1]
+60: (LOAD hoist4 crate6 truck1 distributor0) [1]
+61: (LIFT hoist3 crate5 crate7 depot3) [1]
+62: (LIFT hoist4 crate2 pallet4 distributor0) [1]
+63: (DRIVE truck0 distributor1 depot3) [1]
+64: (LOAD hoist4 crate2 truck1 distributor0) [1]
+65: (DROP hoist3 crate5 crate7 depot3) [1]
+66: (UNLOAD hoist4 crate6 truck1 distributor0) [1]
+67: (DRIVE truck0 depot3 distributor1) [1]
+68: (DROP hoist4 crate6 pallet4 distributor0) [1]
+69: (LIFT hoist3 crate5 crate7 depot3) [1]
+70: (DROP hoist3 crate5 pallet9 depot3) [1]
+71: (DRIVE truck0 distributor1 depot3) [1]
+72: (LIFT hoist3 crate7 pallet3 depot3) [1]
+73: (LOAD hoist3 crate7 truck0 depot3) [1]
+74: (LIFT hoist3 crate5 pallet9 depot3) [1]
+75: (DRIVE truck0 depot3 distributor1) [1]
+76: (DROP hoist3 crate5 pallet9 depot3) [1]
+77: (UNLOAD hoist5 crate7 truck0 distributor1) [1]
+78: (DROP hoist5 crate7 crate4 distributor1) [1]
+79: (DRIVE truck0 distributor1 depot3) [1]
+80: (LIFT hoist3 crate5 pallet9 depot3) [1]
+81: (LOAD hoist3 crate5 truck0 depot3) [1]
+82: (DRIVE truck0 depot3 distributor1) [1]
+83: (UNLOAD hoist5 crate5 truck0 distributor1) [1]
+84: (DROP hoist5 crate5 crate7 distributor1) [1]
+
+Valid plan : 85 actions.
+Computed nodes : 5761
+Evaluated nodes : 1189
+Developed nodes : 29
+Useful nodes : 4
+
+Lookahead utility : 33.66 %
+Preparation time : 0.06
+Search time : 0.67
+Total time : 0.73
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob7615..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.16 -> 53984 candidates, 5894 actions
+Finalization time : 0.02 -> 725 fluents, 52 init
+
+62 56 45 40 38 35 33 32 31 30 27 21 18 16 15 11 9 
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob8715..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.40 -> 126792 candidates, 8562 actions
+Finalization time : 0.03 -> 737 fluents, 61 init
+
+33 25 16 15 9 6 3 
+
+0: (LIFT hoist1 crate5 pallet1 depot1) [1]
+1: (DRIVE truck0 distributor2 depot0) [1]
+2: (LIFT hoist4 crate6 pallet4 depot4) [1]
+3: (LIFT hoist0 crate1 pallet0 depot0) [1]
+4: (LIFT hoist11 crate2 pallet13 distributor5) [1]
+5: (LOAD hoist0 crate1 truck0 depot0) [1]
+6: (LIFT hoist7 crate8 pallet7 distributor1) [1]
+7: (DROP hoist11 crate2 pallet11 distributor5) [1]
+8: (LOAD hoist4 crate6 truck5 depot4) [1]
+9: (DRIVE truck5 depot4 distributor1) [1]
+10: (DRIVE truck0 depot0 distributor1) [1]
+11: (LIFT hoist13 crate0 pallet16 depot1) [1]
+12: (LOAD hoist7 crate8 truck0 distributor1) [1]
+13: (UNLOAD hoist7 crate1 truck0 distributor1) [1]
+14: (DROP hoist7 crate1 pallet7 distributor1) [1]
+15: (UNLOAD hoist7 crate6 truck5 distributor1) [1]
+16: (DROP hoist7 crate6 pallet12 distributor1) [1]
+17: (DRIVE truck0 distributor1 depot2) [1]
+18: (DRIVE truck0 depot2 depot1) [1]
+19: (LOAD hoist1 crate5 truck0 depot1) [1]
+20: (LOAD hoist13 crate0 truck0 depot1) [1]
+21: (UNLOAD hoist13 crate8 truck0 depot1) [1]
+22: (LIFT hoist1 crate3 pallet15 depot1) [1]
+23: (DROP hoist13 crate8 pallet15 depot1) [1]
+24: (LOAD hoist1 crate3 truck0 depot1) [1]
+25: (DRIVE truck0 depot1 depot2) [1]
+26: (UNLOAD hoist2 crate0 truck0 depot2) [1]
+27: (DROP hoist2 crate0 pallet2 depot2) [1]
+28: (DRIVE truck0 depot2 depot3) [1]
+29: (UNLOAD hoist3 crate3 truck0 depot3) [1]
+30: (DROP hoist3 crate3 pallet3 depot3) [1]
+31: (DRIVE truck0 depot3 depot5) [1]
+32: (UNLOAD hoist12 crate5 truck0 depot5) [1]
+33: (DROP hoist12 crate5 pallet5 depot5) [1]
+
+Valid plan : 34 actions.
+Computed nodes : 34
+Evaluated nodes : 8
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 31.78 %
+Preparation time : 0.43
+Search time : 0.02
+Total time : 0.45
+
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1817..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 1.12 -> 324792 candidates, 22252 actions
+Finalization time : 0.10 -> 1567 fluents, 81 init
+
+84 74 69 61 50 43 40 37 35 30 28 27 25 24 23 19 18 16 15 14 11 9 7 

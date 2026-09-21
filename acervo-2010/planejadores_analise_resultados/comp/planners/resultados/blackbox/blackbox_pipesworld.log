@@ -1,0 +1,1454 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p01.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p01.pddl
+Problem name: p01-net1-b6-g2-rt0-instance
+Facts loaded.
+time: 1, 228 facts and 154 exclusive pairs.
+time: 2, 242 facts and 378 exclusive pairs.
+time: 3, 248 facts and 404 exclusive pairs.
+Goals first reachable in 3 steps.
+1687 nodes created.
+
+####################################################
+goals at time 4:
+  on_b2_a3 on_b5_a2 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 67
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (pop-unitarypipe s13 b1 a1 a3 b5 lco oca1 ta1-1-oca1 ta3-1-lco)
+2 (push-unitarypipe s12 b5 a1 a2 b4 oca1 lco ta1-1-oca1 ta2-1-lco)
+2 (push-unitarypipe s13 b2 a1 a3 b1 gasoleo lco ta1-1-gasoleo ta3-1-lco)
+3 (push-unitarypipe s13 b3 a1 a3 b2 rat-a gasoleo ta1-1-rat-a ta3-1-gasoleo)
+3 (push-unitarypipe s12 b0 a1 a2 b5 oc1b oca1 ta1-1-oc1b ta2-1-oca1)
+End plan
+----------------------------------------------------
+
+5 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+5 actions tried
+
+####################################################
+Total elapsed time:   0.04 seconds
+Time in milliseconds: 41
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p02.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p02.pddl
+Problem name: p02-net1-b6-g4-rt0-instance
+Facts loaded.
+time: 1, 228 facts and 154 exclusive pairs.
+time: 2, 242 facts and 378 exclusive pairs.
+time: 3, 248 facts and 404 exclusive pairs.
+time: 4, 251 facts and 372 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 253 facts and 368 exclusive pairs.
+Goals first reachable in 5 steps.
+2834 nodes created.
+
+####################################################
+goals at time 6:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 6
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 255 facts and 391 exclusive pairs.
+596 new nodes added.
+
+####################################################
+goals at time 7:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 34
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 8:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 302
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 9:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 754
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 10:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3105
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 11:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 8705
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 12:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 6928
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (push-unitarypipe s12 b3 a1 a2 b4 rat-a lco ta1-1-rat-a ta2-1-lco)
+1 (pop-unitarypipe s13 b1 a1 a3 b5 lco oca1 ta1-1-oca1 ta3-1-lco)
+2 (push-unitarypipe s12 b2 a1 a2 b3 gasoleo rat-a ta1-1-gasoleo ta2-1-rat-a)
+3 (pop-unitarypipe s12 b4 a1 a2 b2 lco gasoleo ta1-1-gasoleo ta2-1-lco)
+4 (push-unitarypipe s12 b0 a1 a2 b4 oc1b lco ta1-1-oc1b ta2-1-lco)
+4 (push-unitarypipe s13 b2 a1 a3 b1 gasoleo lco ta1-1-gasoleo ta3-1-lco)
+5 (push-unitarypipe s12 b5 a1 a2 b0 oca1 oc1b ta1-1-oca1 ta2-1-oc1b)
+6 (pop-unitarypipe s12 b4 a1 a2 b5 lco oca1 ta1-1-oca1 ta2-1-lco)
+7 (push-unitarypipe s13 b5 a1 a3 b2 oca1 gasoleo ta1-1-oca1 ta3-1-gasoleo)
+7 (pop-unitarypipe s12 b0 a1 a2 b4 oc1b lco ta1-1-lco ta2-1-oc1b)
+8 (pop-unitarypipe s13 b1 a1 a3 b5 lco oca1 ta1-1-oca1 ta3-1-lco)
+9 (push-unitarypipe s12 b5 a1 a2 b0 oca1 oc1b ta1-1-oca1 ta2-1-oc1b)
+10 (push-unitarypipe s12 b4 a1 a2 b5 lco oca1 ta1-1-lco ta2-1-oca1)
+11 (pop-unitarypipe s12 b3 a1 a2 b4 rat-a lco ta1-1-lco ta2-1-rat-a)
+End plan
+----------------------------------------------------
+
+14 total actions in plan
+471 entries in hash table, 294 hash hits, avg set size 28
+775 total set-creation steps (entries + hits + plan length - 1)
+822 actions tried
+
+####################################################
+Total elapsed time:   0.15 seconds
+Time in milliseconds: 149
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p03.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p03.pddl
+Problem name: p03-net1-b8-g3-rt0-instance
+Facts loaded.
+time: 1, 281 facts and 113 exclusive pairs.
+time: 2, 298 facts and 291 exclusive pairs.
+time: 3, 310 facts and 514 exclusive pairs.
+time: 4, 320 facts and 662 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 322 facts and 482 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 326 facts and 449 exclusive pairs.
+Goals reachable at 6 steps but mutually exclusive.
+time: 7, 329 facts and 440 exclusive pairs.
+Goals first reachable in 7 steps.
+6179 nodes created.
+
+####################################################
+goals at time 8:
+  on_b0_a3 on_b1_a1 on_b6_a2 normal_s12 normal_s13 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 23669
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 329 facts and 422 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 9:
+  on_b0_a3 on_b1_a1 on_b6_a2 normal_s12 normal_s13 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 442763
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (push-unitarypipe s12 b3 a1 a2 b5 oca1 gasoleo ta1-2-oca1 ta2-2-gasoleo)
+1 (pop-unitarypipe s13 b6 a1 a3 b2 lco rat-a ta1-2-rat-a ta3-1-lco)
+2 (pop-unitarypipe s13 b1 a1 a3 b6 gasoleo lco ta1-1-lco ta3-1-gasoleo)
+3 (push-unitarypipe s12 b6 a1 a2 b3 lco oca1 ta1-1-lco ta2-2-oca1)
+3 (push-unitarypipe s13 b0 a1 a3 b1 rat-a gasoleo ta1-1-rat-a ta3-1-gasoleo)
+4 (pop-unitarypipe s12 b4 a1 a2 b6 gasoleo lco ta1-1-lco ta2-1-gasoleo)
+5 (pop-unitarypipe s12 b3 a1 a2 b4 oca1 gasoleo ta1-1-gasoleo ta2-2-oca1)
+5 (push-unitarypipe s13 b6 a1 a3 b0 lco rat-a ta1-1-lco ta3-1-rat-a)
+6 (pop-unitarypipe s12 b5 a1 a2 b3 gasoleo oca1 ta1-2-oca1 ta2-2-gasoleo)
+6 (pop-unitarypipe s13 b1 a1 a3 b6 gasoleo lco ta1-1-lco ta3-1-gasoleo)
+7 (push-unitarypipe s12 b6 a1 a2 b5 lco gasoleo ta1-1-lco ta2-2-gasoleo)
+7 (pop-unitarypipe s13 b0 a1 a3 b1 rat-a gasoleo ta1-2-gasoleo ta3-1-rat-a)
+8 (push-unitarypipe s13 b4 a1 a3 b0 gasoleo rat-a ta1-2-gasoleo ta3-1-rat-a)
+8 (push-unitarypipe s12 b2 a1 a2 b6 rat-a lco ta1-2-rat-a ta2-1-lco)
+End plan
+----------------------------------------------------
+
+14 total actions in plan
+11682 entries in hash table, 2227 hash hits, avg set size 36
+13916 total set-creation steps (entries + hits + plan length - 1)
+41942 actions tried
+
+####################################################
+Total elapsed time:   4.30 seconds
+Time in milliseconds: 4299
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p04.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p04.pddl
+Problem name: p04-net1-b8-g5-rt0-instance
+Facts loaded.
+time: 1, 281 facts and 113 exclusive pairs.
+time: 2, 298 facts and 291 exclusive pairs.
+time: 3, 310 facts and 514 exclusive pairs.
+time: 4, 320 facts and 662 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 322 facts and 482 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 326 facts and 449 exclusive pairs.
+Goals reachable at 6 steps but mutually exclusive.
+time: 7, 329 facts and 440 exclusive pairs.
+Goals first reachable in 7 steps.
+6179 nodes created.
+
+####################################################
+goals at time 8:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 479
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 329 facts and 422 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 9:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 343606
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 329 facts and 421 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 10:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 11817057
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 329 facts and 421 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 11:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p05.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p05.pddl
+Problem name: p05-net1-b10-g4-rt0-instance
+Facts loaded.
+time: 1, 280 facts and 125 exclusive pairs.
+time: 2, 305 facts and 431 exclusive pairs.
+time: 3, 320 facts and 649 exclusive pairs.
+time: 4, 330 facts and 777 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 335 facts and 769 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 339 facts and 716 exclusive pairs.
+Goals first reachable in 6 steps.
+5579 nodes created.
+
+####################################################
+goals at time 7:
+  on_b6_a3 on_b7_a2 on_b9_a1 on_b5_a1 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 12934
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 339 facts and 671 exclusive pairs.
+1230 new nodes added.
+
+####################################################
+goals at time 8:
+  on_b6_a3 on_b7_a2 on_b9_a1 on_b5_a1 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 105385
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (pop-unitarypipe s12 b5 a1 a2 b6 gasoleo rat-a ta1-1-rat-a ta2-1-gasoleo)
+1 (push-unitarypipe s13 b4 a1 a3 b2 lco gasoleo ta1-1-lco ta3-2-gasoleo)
+2 (pop-unitarypipe s13 b3 a1 a3 b4 oca1 lco ta1-1-lco ta3-1-oca1)
+2 (pop-unitarypipe s12 b0 a1 a2 b5 rat-a gasoleo ta1-2-gasoleo ta2-1-rat-a)
+3 (pop-unitarypipe s13 b2 a1 a3 b3 gasoleo oca1 ta1-1-oca1 ta3-1-gasoleo)
+3 (push-unitarypipe s12 b7 a1 a2 b0 gasoleo rat-a ta1-2-gasoleo ta2-1-rat-a)
+4 (push-unitarypipe s13 b6 a1 a3 b2 rat-a gasoleo ta1-1-rat-a ta3-1-gasoleo)
+4 (push-unitarypipe s12 b3 a1 a2 b7 oca1 gasoleo ta1-1-oca1 ta2-2-gasoleo)
+5 (pop-unitarypipe s12 b9 a1 a2 b3 oc1b oca1 ta1-1-oca1 ta2-1-oc1b)
+5 (push-unitarypipe s13 b8 a1 a3 b6 lco rat-a ta1-2-lco ta3-1-rat-a)
+6 (pop-unitarypipe s12 b7 a1 a2 b9 gasoleo oc1b ta1-1-oc1b ta2-2-gasoleo)
+7 (push-unitarypipe s12 b4 a1 a2 b7 lco gasoleo ta1-1-lco ta2-2-gasoleo)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+1976 entries in hash table, 386 hash hits, avg set size 38
+2368 total set-creation steps (entries + hits + plan length - 1)
+13466 actions tried
+
+####################################################
+Total elapsed time:   1.34 seconds
+Time in milliseconds: 1344
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p06.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p06.pddl
+Problem name: p06-net1-b10-g6-rt0-instance
+Facts loaded.
+time: 1, 280 facts and 125 exclusive pairs.
+time: 2, 305 facts and 431 exclusive pairs.
+time: 3, 320 facts and 649 exclusive pairs.
+time: 4, 330 facts and 777 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 335 facts and 769 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 339 facts and 716 exclusive pairs.
+Goals first reachable in 6 steps.
+5579 nodes created.
+
+####################################################
+goals at time 7:
+  on_b6_a3 on_b7_a2 on_b9_a1 on_b3_a1 on_b2_a3 
+on_b5_a1 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 14758
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 339 facts and 671 exclusive pairs.
+1230 new nodes added.
+
+####################################################
+goals at time 8:
+  on_b6_a3 on_b7_a2 on_b9_a1 on_b3_a1 on_b2_a3 
+on_b5_a1 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 45056
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (pop-unitarypipe s12 b5 a1 a2 b6 gasoleo rat-a ta1-1-rat-a ta2-1-gasoleo)
+1 (push-unitarypipe s13 b4 a1 a3 b2 lco gasoleo ta1-1-lco ta3-2-gasoleo)
+2 (pop-unitarypipe s13 b3 a1 a3 b4 oca1 lco ta1-1-lco ta3-1-oca1)
+2 (pop-unitarypipe s12 b0 a1 a2 b5 rat-a gasoleo ta1-2-gasoleo ta2-1-rat-a)
+3 (pop-unitarypipe s13 b2 a1 a3 b3 gasoleo oca1 ta1-1-oca1 ta3-1-gasoleo)
+3 (push-unitarypipe s12 b7 a1 a2 b0 gasoleo rat-a ta1-2-gasoleo ta2-1-rat-a)
+4 (push-unitarypipe s13 b6 a1 a3 b2 rat-a gasoleo ta1-1-rat-a ta3-1-gasoleo)
+4 (push-unitarypipe s12 b4 a1 a2 b7 lco gasoleo ta1-1-lco ta2-2-gasoleo)
+5 (pop-unitarypipe s12 b9 a1 a2 b4 oc1b lco ta1-1-lco ta2-1-oc1b)
+5 (push-unitarypipe s13 b8 a1 a3 b6 lco rat-a ta1-2-lco ta3-1-rat-a)
+6 (pop-unitarypipe s12 b7 a1 a2 b9 gasoleo oc1b ta1-1-oc1b ta2-2-gasoleo)
+7 (push-unitarypipe s12 b4 a1 a2 b7 lco gasoleo ta1-1-lco ta2-2-gasoleo)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+1027 entries in hash table, 189 hash hits, avg set size 38
+1222 total set-creation steps (entries + hits + plan length - 1)
+6150 actions tried
+
+####################################################
+Total elapsed time:   0.89 seconds
+Time in milliseconds: 893
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p07.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p07.pddl
+Problem name: p07-net1-b12-g5-rt0-instance
+Facts loaded.
+time: 1, 367 facts and 271 exclusive pairs.
+time: 2, 396 facts and 672 exclusive pairs.
+time: 3, 414 facts and 858 exclusive pairs.
+Goals reachable at 3 steps but mutually exclusive.
+time: 4, 426 facts and 939 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p08.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p08.pddl
+Problem name: p08-net1-b12-g7-rt0-instance
+Facts loaded.
+time: 1, 367 facts and 271 exclusive pairs.
+time: 2, 396 facts and 672 exclusive pairs.
+time: 3, 414 facts and 858 exclusive pairs.
+Goals reachable at 3 steps but mutually exclusive.
+time: 4, 426 facts and 939 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p09.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p09.pddl
+Problem name: p09-net1-b14-g6-rt0-instance
+Facts loaded.
+time: 1, 360 facts and 349 exclusive pairs.
+time: 2, 390 facts and 735 exclusive pairs.
+time: 3, 411 facts and 1044 exclusive pairs.
+time: 4, 425 facts and 1280 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p10.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p10.pddl
+Problem name: p10-net1-b14-g8-rt0-instance
+Facts loaded.
+time: 1, 360 facts and 349 exclusive pairs.
+time: 2, 390 facts and 735 exclusive pairs.
+time: 3, 411 facts and 1044 exclusive pairs.
+time: 4, 425 facts and 1280 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p11.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p11.pddl
+Problem name: p11-net2-b10-g2-rt0-instance
+Facts loaded.
+time: 1, 231 facts and 104 exclusive pairs.
+time: 2, 240 facts and 158 exclusive pairs.
+time: 3, 256 facts and 376 exclusive pairs.
+time: 4, 266 facts and 569 exclusive pairs.
+time: 5, 285 facts and 932 exclusive pairs.
+time: 6, 297 facts and 1172 exclusive pairs.
+time: 7, 324 facts and 2491 exclusive pairs.
+Goals reachable at 7 steps but mutually exclusive.
+time: 8, 335 facts and 2392 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 338 facts and 1614 exclusive pairs.
+Goals first reachable in 9 steps.
+8052 nodes created.
+
+####################################################
+goals at time 10:
+  on_b0_a2 on_b9_a3 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 821
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 342 facts and 1379 exclusive pairs.
+1570 new nodes added.
+
+####################################################
+goals at time 11:
+  on_b0_a2 on_b9_a3 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 279933
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 343 facts and 1333 exclusive pairs.
+1609 new nodes added.
+
+####################################################
+goals at time 12:
+  on_b0_a2 on_b9_a3 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9791600
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 344 facts and 1341 exclusive pairs.
+1619 new nodes added.
+
+####################################################
+goals at time 13:
+  on_b0_a2 on_b9_a3 normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p12.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p12.pddl
+Problem name: p12-net2-b10-g4-rt0-instance
+Facts loaded.
+time: 1, 273 facts and 104 exclusive pairs.
+time: 2, 284 facts and 160 exclusive pairs.
+time: 3, 300 facts and 378 exclusive pairs.
+time: 4, 314 facts and 685 exclusive pairs.
+time: 5, 333 facts and 1045 exclusive pairs.
+time: 6, 346 facts and 1279 exclusive pairs.
+time: 7, 372 facts and 2550 exclusive pairs.
+time: 8, 383 facts and 2399 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 386 facts and 1622 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 390 facts and 1384 exclusive pairs.
+Goals first reachable in 10 steps.
+12614 nodes created.
+
+####################################################
+goals at time 11:
+  on_b0_a2 on_b1_a2 on_b6_a2 on_b9_a3 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9692
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 391 facts and 1339 exclusive pairs.
+2209 new nodes added.
+
+####################################################
+goals at time 12:
+  on_b0_a2 on_b1_a2 on_b6_a2 on_b9_a3 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 768608
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 392 facts and 1347 exclusive pairs.
+2227 new nodes added.
+
+####################################################
+goals at time 13:
+  on_b0_a2 on_b1_a2 on_b6_a2 on_b9_a3 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p13.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p13.pddl
+Problem name: p13-net2-b12-g3-rt0-instance
+Facts loaded.
+time: 1, 359 facts and 248 exclusive pairs.
+time: 2, 377 facts and 400 exclusive pairs.
+time: 3, 406 facts and 1023 exclusive pairs.
+time: 4, 427 facts and 1574 exclusive pairs.
+time: 5, 447 facts and 2021 exclusive pairs.
+time: 6, 469 facts and 2709 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p14.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p14.pddl
+Problem name: p14-net2-b12-g5-rt0-instance
+Facts loaded.
+time: 1, 273 facts and 104 exclusive pairs.
+time: 2, 284 facts and 159 exclusive pairs.
+time: 3, 310 facts and 541 exclusive pairs.
+time: 4, 320 facts and 680 exclusive pairs.
+time: 5, 343 facts and 1279 exclusive pairs.
+time: 6, 359 facts and 1653 exclusive pairs.
+time: 7, 391 facts and 3088 exclusive pairs.
+time: 8, 407 facts and 3003 exclusive pairs.
+time: 9, 426 facts and 3157 exclusive pairs.
+time: 10, 433 facts and 2509 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p15.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p15.pddl
+Problem name: p15-net2-b14-g4-rt0-instance
+Facts loaded.
+time: 1, 280 facts and 51 exclusive pairs.
+time: 2, 286 facts and 64 exclusive pairs.
+time: 3, 305 facts and 301 exclusive pairs.
+time: 4, 309 facts and 332 exclusive pairs.
+time: 5, 319 facts and 469 exclusive pairs.
+time: 6, 327 facts and 577 exclusive pairs.
+time: 7, 347 facts and 1150 exclusive pairs.
+time: 8, 362 facts and 1498 exclusive pairs.
+time: 9, 384 facts and 2464 exclusive pairs.
+time: 10, 399 facts and 3211 exclusive pairs.
+time: 11, 403 facts and 2583 exclusive pairs.
+time: 12, 410 facts and 2341 exclusive pairs.
+time: 13, 414 facts and 2068 exclusive pairs.
+time: 14, 418 facts and 1988 exclusive pairs.
+time: 15, 426 facts and 2103 exclusive pairs.
+time: 16, 429 facts and 2077 exclusive pairs.
+time: 17, 429 facts and 1728 exclusive pairs.
+time: 18, 432 facts and 1770 exclusive pairs.
+Goals first reachable in 18 steps.
+23533 nodes created.
+
+####################################################
+goals at time 19:
+  on_b7_a1 on_b12_a1 on_b3_a3 on_b8_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 2285
+
+----------------------------------------------------
+Can't solve in 18 steps
+time: 19, 432 facts and 1731 exclusive pairs.
+1948 new nodes added.
+
+####################################################
+goals at time 20:
+  on_b7_a1 on_b12_a1 on_b3_a3 on_b8_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 924491
+
+----------------------------------------------------
+Can't solve in 19 steps
+time: 20, 432 facts and 1728 exclusive pairs.
+1948 new nodes added.
+
+####################################################
+goals at time 21:
+  on_b7_a1 on_b12_a1 on_b3_a3 on_b8_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p16.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p16.pddl
+Problem name: p16-net2-b14-g6-rt0-instance
+Facts loaded.
+time: 1, 420 facts and 51 exclusive pairs.
+time: 2, 433 facts and 71 exclusive pairs.
+time: 3, 452 facts and 301 exclusive pairs.
+time: 4, 462 facts and 447 exclusive pairs.
+time: 5, 472 facts and 589 exclusive pairs.
+time: 6, 487 facts and 890 exclusive pairs.
+time: 7, 502 facts and 1236 exclusive pairs.
+time: 8, 526 facts and 1946 exclusive pairs.
+time: 9, 548 facts and 2819 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p17.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p17.pddl
+Problem name: p17-net2-b16-g5-rt0-instance
+Facts loaded.
+time: 1, 319 facts and 343 exclusive pairs.
+time: 2, 325 facts and 348 exclusive pairs.
+time: 3, 352 facts and 776 exclusive pairs.
+time: 4, 362 facts and 964 exclusive pairs.
+time: 5, 397 facts and 1879 exclusive pairs.
+time: 6, 415 facts and 2391 exclusive pairs.
+time: 7, 485 facts and 8833 exclusive pairs.
+time: 8, 505 facts and 8972 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p18.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p18.pddl
+Problem name: p18-net2-b16-g7-rt0-instance
+Facts loaded.
+time: 1, 417 facts and 343 exclusive pairs.
+time: 2, 433 facts and 416 exclusive pairs.
+time: 3, 467 facts and 1113 exclusive pairs.
+time: 4, 488 facts and 1677 exclusive pairs.
+time: 5, 525 facts and 3017 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p19.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p19.pddl
+Problem name: p19-net2-b18-g6-rt0-instance
+Facts loaded.
+time: 1, 424 facts and 231 exclusive pairs.
+time: 2, 440 facts and 347 exclusive pairs.
+time: 3, 497 facts and 1660 exclusive pairs.
+time: 4, 516 facts and 1879 exclusive pairs.
+time: 5, 578 facts and 4946 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p20.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p20.pddl
+Problem name: p20-net2-b18-g8-rt0-instance
+Facts loaded.
+time: 1, 592 facts and 231 exclusive pairs.
+time: 2, 619 facts and 404 exclusive pairs.
+time: 3, 676 facts and 1741 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p21.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p21.pddl
+Problem name: p21-net3-b12-g2-rt0-instance
+Facts loaded.
+time: 1, 376 facts and 131 exclusive pairs.
+time: 2, 401 facts and 385 exclusive pairs.
+time: 3, 426 facts and 748 exclusive pairs.
+time: 4, 453 facts and 1475 exclusive pairs.
+time: 5, 478 facts and 2192 exclusive pairs.
+time: 6, 512 facts and 3876 exclusive pairs.
+time: 7, 536 facts and 4755 exclusive pairs.
+Goals reachable at 7 steps but mutually exclusive.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p22.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p22.pddl
+Problem name: p22-net3-b12-g4-rt0-instance
+Facts loaded.
+time: 1, 376 facts and 131 exclusive pairs.
+time: 2, 401 facts and 385 exclusive pairs.
+time: 3, 426 facts and 748 exclusive pairs.
+time: 4, 453 facts and 1475 exclusive pairs.
+time: 5, 478 facts and 2192 exclusive pairs.
+time: 6, 512 facts and 3876 exclusive pairs.
+time: 7, 536 facts and 4755 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p23.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p23.pddl
+Problem name: p23-net3-b14-g3-rt0-instance
+Facts loaded.
+time: 1, 453 facts and 227 exclusive pairs.
+time: 2, 487 facts and 639 exclusive pairs.
+time: 3, 513 facts and 1001 exclusive pairs.
+time: 4, 529 facts and 1167 exclusive pairs.
+time: 5, 571 facts and 3023 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p24.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p24.pddl
+Problem name: p24-net3-b14-g5-rt0-instance
+Facts loaded.
+time: 1, 453 facts and 227 exclusive pairs.
+time: 2, 487 facts and 639 exclusive pairs.
+time: 3, 513 facts and 1001 exclusive pairs.
+time: 4, 529 facts and 1167 exclusive pairs.
+time: 5, 571 facts and 3023 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p25.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p25.pddl
+Problem name: p25-net3-b16-g5-rt0-instance
+Facts loaded.
+time: 1, 539 facts and 413 exclusive pairs.
+time: 2, 577 facts and 820 exclusive pairs.
+time: 3, 617 facts and 1860 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p26.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p26.pddl
+Problem name: p26-net3-b16-g7-rt0-instance
+Facts loaded.
+time: 1, 567 facts and 413 exclusive pairs.
+time: 2, 608 facts and 869 exclusive pairs.
+time: 3, 648 facts and 1895 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p27.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p27.pddl
+Problem name: p27-net3-b18-g6-rt0-instance
+Facts loaded.
+time: 1, 586 facts and 499 exclusive pairs.
+time: 2, 624 facts and 1118 exclusive pairs.
+time: 3, 673 facts and 2394 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p28.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p28.pddl
+Problem name: p28-net3-b18-g7-rt0-instance
+Facts loaded.
+time: 1, 586 facts and 499 exclusive pairs.
+time: 2, 624 facts and 1118 exclusive pairs.
+time: 3, 673 facts and 2394 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p29.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p29.pddl
+Problem name: p29-net3-b20-g6-rt0-instance
+Facts loaded.
+time: 1, 665 facts and 493 exclusive pairs.
+time: 2, 705 facts and 892 exclusive pairs.
+time: 3, 767 facts and 2737 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p30.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p30.pddl
+Problem name: p30-net3-b20-g8-rt0-instance
+Facts loaded.
+time: 1, 689 facts and 569 exclusive pairs.
+time: 2, 735 facts and 1255 exclusive pairs.
+time: 3, 785 facts and 2275 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p31.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p31.pddl
+Problem name: p31-net4-b14-g3-rt0-instance
+Facts loaded.
+time: 1, 276 facts and 178 exclusive pairs.
+time: 2, 292 facts and 394 exclusive pairs.
+time: 3, 313 facts and 662 exclusive pairs.
+time: 4, 321 facts and 688 exclusive pairs.
+time: 5, 340 facts and 1164 exclusive pairs.
+time: 6, 355 facts and 1597 exclusive pairs.
+time: 7, 375 facts and 2296 exclusive pairs.
+time: 8, 399 facts and 3513 exclusive pairs.
+time: 9, 415 facts and 3845 exclusive pairs.
+time: 10, 442 facts and 5003 exclusive pairs.
+time: 11, 460 facts and 4811 exclusive pairs.
+Goals first reachable in 11 steps.
+12326 nodes created.
+
+####################################################
+goals at time 12:
+  on_b1_a2 on_b4_a4 on_b11_a1 normal_s12 normal_s13 
+normal_s34 normal_s23 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 134838
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 475 facts and 4401 exclusive pairs.
+2220 new nodes added.
+
+####################################################
+goals at time 13:
+  on_b1_a2 on_b4_a4 on_b11_a1 normal_s12 normal_s13 
+normal_s34 normal_s23 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 12253072
+
+----------------------------------------------------
+Can't solve in 12 steps
+time: 13, 482 facts and 3868 exclusive pairs.
+2383 new nodes added.
+
+####################################################
+goals at time 14:
+  on_b1_a2 on_b4_a4 on_b11_a1 normal_s12 normal_s13 
+normal_s34 normal_s23 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p32.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p32.pddl
+Problem name: p32-net4-b14-g5-rt0-instance
+Facts loaded.
+time: 1, 379 facts and 203 exclusive pairs.
+time: 2, 398 facts and 358 exclusive pairs.
+time: 3, 439 facts and 1433 exclusive pairs.
+time: 4, 462 facts and 1688 exclusive pairs.
+time: 5, 504 facts and 3306 exclusive pairs.
+time: 6, 546 facts and 4773 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p33.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p33.pddl
+Problem name: p33-net4-b16-g5-rt0-instance
+Facts loaded.
+time: 1, 466 facts and 101 exclusive pairs.
+time: 2, 497 facts and 382 exclusive pairs.
+time: 3, 532 facts and 1036 exclusive pairs.
+time: 4, 554 facts and 1260 exclusive pairs.
+time: 5, 592 facts and 2191 exclusive pairs.
+time: 6, 630 facts and 3047 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p34.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p34.pddl
+Problem name: p34-net4-b16-g6-rt0-instance
+Facts loaded.
+time: 1, 505 facts and 262 exclusive pairs.
+time: 2, 538 facts and 697 exclusive pairs.
+time: 3, 578 facts and 1548 exclusive pairs.
+time: 4, 611 facts and 1924 exclusive pairs.
+time: 5, 653 facts and 3144 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p35.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p35.pddl
+Problem name: p35-net4-b18-g4-rt0-instance
+Facts loaded.
+time: 1, 757 facts and 326 exclusive pairs.
+time: 2, 818 facts and 1025 exclusive pairs.
+time: 3, 879 facts and 2926 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p36.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p36.pddl
+Problem name: p36-net4-b18-g6-rt0-instance
+Facts loaded.
+time: 1, 757 facts and 326 exclusive pairs.
+time: 2, 818 facts and 1025 exclusive pairs.
+time: 3, 879 facts and 2926 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p37.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p37.pddl
+Problem name: p37-net4-b20-g5-rt0-instance
+Facts loaded.
+time: 1, 622 facts and 555 exclusive pairs.
+time: 2, 669 facts and 1095 exclusive pairs.
+time: 3, 734 facts and 2733 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p38.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p38.pddl
+Problem name: p38-net4-b20-g7-rt0-instance
+Facts loaded.
+time: 1, 622 facts and 555 exclusive pairs.
+time: 2, 669 facts and 1095 exclusive pairs.
+time: 3, 734 facts and 2733 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p39.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p39.pddl
+Problem name: p39-net4-b22-g7-rt0-instance
+Facts loaded.
+time: 1, 642 facts and 520 exclusive pairs.
+time: 2, 701 facts and 1521 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p40.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p40.pddl
+Problem name: p40-net4-b22-g8-rt0-instance
+Facts loaded.
+time: 1, 642 facts and 520 exclusive pairs.
+time: 2, 701 facts and 1521 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p41.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p41.pddl
+Problem name: p41-net5-b22-g2-rt0-instance
+Facts loaded.
+time: 1, 461 facts and 141 exclusive pairs.
+time: 2, 492 facts and 509 exclusive pairs.
+time: 3, 515 facts and 660 exclusive pairs.
+time: 4, 550 facts and 1392 exclusive pairs.
+time: 5, 582 facts and 1936 exclusive pairs.
+time: 6, 633 facts and 3153 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p42.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p42.pddl
+Problem name: p42-net5-b22-g4-rt0-instance
+Facts loaded.
+time: 1, 743 facts and 384 exclusive pairs.
+time: 2, 785 facts and 1087 exclusive pairs.
+time: 3, 818 facts and 1131 exclusive pairs.
+time: 4, 855 facts and 1633 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p43.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p43.pddl
+Problem name: p43-net5-b24-g3-rt0-instance
+Facts loaded.
+time: 1, 993 facts and 486 exclusive pairs.
+time: 2, 1075 facts and 1462 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p44.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p44.pddl
+Problem name: p44-net5-b24-g5-rt0-instance
+Facts loaded.
+time: 1, 993 facts and 486 exclusive pairs.
+time: 2, 1075 facts and 1462 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p45.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p45.pddl
+Problem name: p45-net5-b26-g4-rt0-instance
+Facts loaded.
+time: 1, 835 facts and 534 exclusive pairs.
+time: 2, 890 facts and 1222 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p46.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p46.pddl
+Problem name: p46-net5-b26-g6-rt0-instance
+Facts loaded.
+time: 1, 835 facts and 534 exclusive pairs.
+time: 2, 890 facts and 1222 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p47.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p47.pddl
+Problem name: p47-net5-b28-g5-rt0-instance
+Facts loaded.
+time: 1, 886 facts and 647 exclusive pairs.
+time: 2, 955 facts and 1588 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p48.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p48.pddl
+Problem name: p48-net5-b28-g7-rt0-instance
+Facts loaded.
+time: 1, 886 facts and 647 exclusive pairs.
+time: 2, 955 facts and 1588 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p49.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p49.pddl
+Problem name: p49-net5-b30-g6-rt0-instance
+Facts loaded.
+time: 1, 933 facts and 507 exclusive pairs.
+time: 2, 995 facts and 1208 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pipesworld/domain.pddl -f /home/matheus/mestrado/comp/pipesworld/p50.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/mestrado/comp/pipesworld/p50.pddl
+Problem name: p50-net5-b30-g8-rt0-instance
+Facts loaded.
+time: 1, 933 facts and 507 exclusive pairs.
+time: 2, 995 facts and 1208 exclusive pairs.
+Too many ops. Need to increase MAXNODES

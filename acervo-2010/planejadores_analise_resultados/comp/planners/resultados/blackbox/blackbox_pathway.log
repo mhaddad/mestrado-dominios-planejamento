@@ -1,0 +1,1262 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p01.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p01.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p01.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p01.pddl
+Problem name: grounded-pathways-01
+Facts loaded.
+time: 1, 35 facts and 153 exclusive pairs.
+time: 2, 52 facts and 187 exclusive pairs.
+time: 3, 53 facts and 70 exclusive pairs.
+time: 4, 62 facts and 112 exclusive pairs.
+time: 5, 64 facts and 106 exclusive pairs.
+Goals first reachable in 5 steps.
+795 nodes created.
+
+####################################################
+goals at time 6:
+  goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 13
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-p300-l1-l0)
+2 (choose-pcaf-l2-l1)
+2 (initialize-p300)
+3 (initialize-pcaf)
+4 (associate-pcaf-p300-pcaf-p300)
+5 (dummy-action-1-2)
+End plan
+----------------------------------------------------
+
+6 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+6 actions tried
+
+####################################################
+Total elapsed time:   0.02 seconds
+Time in milliseconds: 22
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p02.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p02.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p02.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p02.pddl
+Problem name: grounded-pathways-02
+Facts loaded.
+time: 1, 27 facts and 91 exclusive pairs.
+time: 2, 40 facts and 117 exclusive pairs.
+time: 3, 45 facts and 62 exclusive pairs.
+time: 4, 55 facts and 124 exclusive pairs.
+time: 5, 66 facts and 206 exclusive pairs.
+time: 6, 69 facts and 140 exclusive pairs.
+time: 7, 71 facts and 147 exclusive pairs.
+Goals first reachable in 7 steps.
+1100 nodes created.
+
+####################################################
+goals at time 8:
+  goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 62
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-ge2-l1-l0)
+2 (initialize-ge2)
+2 (choose-e2f13p1-dp12-l2-l1)
+3 (initialize-e2f13p1-dp12)
+3 (choose-e2f4-dp12p1-l3-l2)
+4 (initialize-e2f4-dp12p1)
+4 (associate-e2f13p1-dp12-ge2-e2f13p1-dp12-ge2)
+5 (synthesize-e2f13p1-dp12-ge2-p107)
+5 (synthesize-e2f13p1-dp12-ge2-cycdp1)
+6 (dummy-action-2-2)
+6 (associate-p107-e2f4-dp12p1-p107-e2f4-dp12p1)
+7 (dummy-action-1-1)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+8 entries in hash table, 3 hash hits, avg set size 3
+17 total set-creation steps (entries + hits + plan length - 1)
+30 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 14
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p03.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p03.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p03.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p03.pddl
+Problem name: grounded-pathways-03
+Facts loaded.
+time: 1, 41 facts and 210 exclusive pairs.
+time: 2, 61 facts and 250 exclusive pairs.
+time: 3, 62 facts and 82 exclusive pairs.
+time: 4, 73 facts and 138 exclusive pairs.
+time: 5, 87 facts and 186 exclusive pairs.
+time: 6, 96 facts and 224 exclusive pairs.
+time: 7, 100 facts and 226 exclusive pairs.
+Goals first reachable in 7 steps.
+1562 nodes created.
+
+####################################################
+goals at time 8:
+  goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 5913
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 100 facts and 206 exclusive pairs.
+318 new nodes added.
+
+####################################################
+goals at time 9:
+  goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 88827
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-gp-l1-l0)
+2 (initialize-gp)
+2 (choose-sp1-l2-l1)
+3 (initialize-sp1)
+3 (choose-cdk46p1-l3-l2)
+4 (initialize-cdk46p1)
+4 (associate-sp1-gp-sp1-gp)
+5 (initialize-sp1)
+5 (synthesize-sp1-gp-p107)
+5 (synthesize-sp1-gp-cyca)
+5 (initialize-gp)
+5 (synthesize-sp1-gp-cycd)
+6 (associate-cdk46p1-cycd-cdk46p1-cycd)
+6 (associate-sp1-p107-sp1-p107)
+6 (dummy-action-2-2)
+7 (dummy-action-3-2)
+7 (associate-sp1-p107-gp-sp1-p107-gp)
+8 (dummy-action-1-1)
+End plan
+----------------------------------------------------
+
+18 total actions in plan
+2457 entries in hash table, 23121 hash hits, avg set size 7
+25585 total set-creation steps (entries + hits + plan length - 1)
+36037 actions tried
+
+####################################################
+Total elapsed time:   0.09 seconds
+Time in milliseconds: 87
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p04.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p04.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p04.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p04.pddl
+Problem name: grounded-pathways-04
+Facts loaded.
+time: 1, 47 facts and 276 exclusive pairs.
+time: 2, 70 facts and 322 exclusive pairs.
+time: 3, 71 facts and 94 exclusive pairs.
+time: 4, 82 facts and 159 exclusive pairs.
+time: 5, 96 facts and 249 exclusive pairs.
+time: 6, 113 facts and 333 exclusive pairs.
+time: 7, 119 facts and 309 exclusive pairs.
+time: 8, 120 facts and 267 exclusive pairs.
+Goals first reachable in 8 steps.
+2207 nodes created.
+
+####################################################
+goals at time 9:
+  goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 40
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-gp-l1-l0)
+2 (initialize-gp)
+2 (choose-sp1-l2-l1)
+3 (initialize-sp1)
+4 (associate-sp1-gp-sp1-gp)
+5 (initialize-sp1)
+5 (synthesize-sp1-gp-pol)
+5 (synthesize-sp1-gp-cycep1)
+5 (synthesize-sp1-gp-p107)
+5 (initialize-gp)
+5 (synthesize-sp1-gp-p107p1)
+6 (associate-sp1-p107p1-sp1-p107p1)
+6 (dummy-action-2-2)
+6 (dummy-action-1-2)
+6 (dummy-action-4-2)
+7 (associate-sp1-p107p1-gp-sp1-p107p1-gp)
+8 (dummy-action-3-2)
+End plan
+----------------------------------------------------
+
+17 total actions in plan
+0 entries in hash table, 
+7 total set-creation steps (entries + hits + plan length - 1)
+17 actions tried
+
+####################################################
+Total elapsed time:   0.03 seconds
+Time in milliseconds: 33
+
+####################################################
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p05.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p05.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p05.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p05.pddl
+Problem name: grounded-pathways-05
+Facts loaded.
+time: 1, 47 facts and 276 exclusive pairs.
+time: 2, 70 facts and 322 exclusive pairs.
+time: 3, 75 facts and 102 exclusive pairs.
+time: 4, 95 facts and 222 exclusive pairs.
+time: 5, 113 facts and 335 exclusive pairs.
+time: 6, 130 facts and 330 exclusive pairs.
+time: 7, 149 facts and 552 exclusive pairs.
+Goals reachable at 7 steps but mutually exclusive.
+time: 8, 149 facts and 432 exclusive pairs.
+Goals first reachable in 8 steps.
+2802 nodes created.
+
+####################################################
+goals at time 9:
+  goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 28499509
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 149 facts and 348 exclusive pairs.
+564 new nodes added.
+
+####################################################
+goals at time 10:
+  goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p06.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p06.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p06.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p06.pddl
+Problem name: grounded-pathways-06
+Facts loaded.
+time: 1, 73 facts and 666 exclusive pairs.
+time: 2, 109 facts and 738 exclusive pairs.
+time: 3, 110 facts and 146 exclusive pairs.
+time: 4, 134 facts and 295 exclusive pairs.
+time: 5, 168 facts and 712 exclusive pairs.
+time: 6, 192 facts and 893 exclusive pairs.
+time: 7, 208 facts and 705 exclusive pairs.
+time: 8, 213 facts and 559 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 214 facts and 540 exclusive pairs.
+Goals first reachable in 9 steps.
+5073 nodes created.
+
+####################################################
+goals at time 10:
+  goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 4554
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 215 facts and 550 exclusive pairs.
+926 new nodes added.
+
+####################################################
+goals at time 11:
+  goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p07.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p07.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p07.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p07.pddl
+Problem name: grounded-pathways-07
+Facts loaded.
+time: 1, 83 facts and 861 exclusive pairs.
+time: 2, 124 facts and 943 exclusive pairs.
+time: 3, 129 facts and 170 exclusive pairs.
+time: 4, 165 facts and 409 exclusive pairs.
+time: 5, 193 facts and 753 exclusive pairs.
+time: 6, 212 facts and 631 exclusive pairs.
+time: 7, 253 facts and 1205 exclusive pairs.
+time: 8, 261 facts and 1053 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 262 facts and 610 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 263 facts and 618 exclusive pairs.
+Goals first reachable in 10 steps.
+7129 nodes created.
+
+####################################################
+goals at time 11:
+  goal11- goal10- goal9- goal8- goal7- 
+goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p08.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p08.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p08.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p08.pddl
+Problem name: grounded-pathways-08
+Facts loaded.
+time: 1, 85 facts and 903 exclusive pairs.
+time: 2, 127 facts and 987 exclusive pairs.
+time: 3, 132 facts and 174 exclusive pairs.
+time: 4, 170 facts and 430 exclusive pairs.
+time: 5, 207 facts and 835 exclusive pairs.
+time: 6, 247 facts and 1042 exclusive pairs.
+time: 7, 285 facts and 1518 exclusive pairs.
+time: 8, 294 facts and 1184 exclusive pairs.
+time: 9, 302 facts and 948 exclusive pairs.
+time: 10, 305 facts and 920 exclusive pairs.
+Goals reachable at 10 steps but mutually exclusive.
+time: 11, 306 facts and 916 exclusive pairs.
+Goals first reachable in 11 steps.
+9144 nodes created.
+
+####################################################
+goals at time 12:
+  goal12- goal11- goal10- goal9- goal8- 
+goal7- goal6- goal5- goal4- goal3- 
+goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p09.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p09.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p09.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p09.pddl
+Problem name: grounded-pathways-09
+Facts loaded.
+time: 1, 99 facts and 1225 exclusive pairs.
+time: 2, 148 facts and 1323 exclusive pairs.
+time: 3, 153 facts and 206 exclusive pairs.
+time: 4, 202 facts and 563 exclusive pairs.
+time: 5, 243 facts and 1281 exclusive pairs.
+time: 6, 275 facts and 1440 exclusive pairs.
+time: 7, 293 facts and 1113 exclusive pairs.
+time: 8, 300 facts and 956 exclusive pairs.
+time: 9, 305 facts and 873 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 306 facts and 832 exclusive pairs.
+Goals first reachable in 10 steps.
+8599 nodes created.
+
+####################################################
+goals at time 11:
+  goal13- goal12- goal11- goal10- goal9- 
+goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 7662985
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 307 facts and 843 exclusive pairs.
+1388 new nodes added.
+
+####################################################
+goals at time 12:
+  goal13- goal12- goal11- goal10- goal9- 
+goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p10.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p10.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p10.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p10.pddl
+Problem name: grounded-pathways-10
+Facts loaded.
+time: 1, 81 facts and 820 exclusive pairs.
+time: 2, 121 facts and 900 exclusive pairs.
+time: 3, 122 facts and 162 exclusive pairs.
+time: 4, 148 facts and 334 exclusive pairs.
+time: 5, 171 facts and 631 exclusive pairs.
+time: 6, 196 facts and 567 exclusive pairs.
+time: 7, 222 facts and 819 exclusive pairs.
+time: 8, 226 facts and 659 exclusive pairs.
+time: 9, 229 facts and 566 exclusive pairs.
+time: 10, 237 facts and 634 exclusive pairs.
+time: 11, 251 facts and 770 exclusive pairs.
+time: 12, 261 facts and 848 exclusive pairs.
+time: 13, 264 facts and 828 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 265 facts and 815 exclusive pairs.
+Goals reachable at 14 steps but mutually exclusive.
+time: 15, 265 facts and 814 exclusive pairs.
+Goals first reachable in 15 steps.
+13289 nodes created.
+
+####################################################
+goals at time 16:
+  goal14- goal13- goal12- goal11- goal10- 
+goal9- goal8- goal7- goal6- goal5- 
+goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p11.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p11.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p11.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p11.pddl
+Problem name: grounded-pathways-11
+Facts loaded.
+time: 1, 97 facts and 1176 exclusive pairs.
+time: 2, 145 facts and 1272 exclusive pairs.
+time: 3, 150 facts and 202 exclusive pairs.
+time: 4, 187 facts and 461 exclusive pairs.
+time: 5, 207 facts and 561 exclusive pairs.
+time: 6, 225 facts and 481 exclusive pairs.
+time: 7, 252 facts and 728 exclusive pairs.
+time: 8, 265 facts and 778 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 266 facts and 579 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 267 facts and 553 exclusive pairs.
+Goals first reachable in 10 steps.
+8063 nodes created.
+
+####################################################
+goals at time 11:
+  goal15- goal14- goal13- goal12- goal11- 
+goal10- goal9- goal8- goal7- goal6- 
+goal5- goal4- goal3- goal2- goal1- 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p12.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p12.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p12.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p12.pddl
+Problem name: grounded-pathways-12
+Facts loaded.
+time: 1, 79 facts and 780 exclusive pairs.
+time: 2, 118 facts and 858 exclusive pairs.
+time: 3, 123 facts and 162 exclusive pairs.
+time: 4, 153 facts and 354 exclusive pairs.
+time: 5, 183 facts and 629 exclusive pairs.
+time: 6, 223 facts and 925 exclusive pairs.
+time: 7, 278 facts and 2136 exclusive pairs.
+time: 8, 307 facts and 2305 exclusive pairs.
+time: 9, 324 facts and 1607 exclusive pairs.
+time: 10, 327 facts and 1234 exclusive pairs.
+Goals reachable at 10 steps but mutually exclusive.
+time: 11, 328 facts and 1203 exclusive pairs.
+Goals first reachable in 11 steps.
+9081 nodes created.
+
+####################################################
+goals at time 12:
+  goal16- goal15- goal14- goal13- goal12- 
+goal11- goal10- goal9- goal8- goal7- 
+goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p13.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p13.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p13.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p13.pddl
+Problem name: grounded-pathways-13
+Facts loaded.
+time: 1, 99 facts and 1225 exclusive pairs.
+time: 2, 148 facts and 1323 exclusive pairs.
+time: 3, 153 facts and 206 exclusive pairs.
+time: 4, 191 facts and 465 exclusive pairs.
+time: 5, 217 facts and 756 exclusive pairs.
+time: 6, 238 facts and 629 exclusive pairs.
+time: 7, 270 facts and 1002 exclusive pairs.
+time: 8, 282 facts and 1074 exclusive pairs.
+time: 9, 287 facts and 756 exclusive pairs.
+time: 10, 291 facts and 726 exclusive pairs.
+time: 11, 296 facts and 767 exclusive pairs.
+time: 12, 307 facts and 915 exclusive pairs.
+time: 13, 309 facts and 895 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 310 facts and 865 exclusive pairs.
+Goals first reachable in 14 steps.
+14288 nodes created.
+
+####################################################
+goals at time 15:
+  goal17- goal16- goal15- goal14- goal13- 
+goal12- goal11- goal10- goal9- goal8- 
+goal7- goal6- goal5- goal4- goal3- 
+goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p14.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p14.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p14.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p14.pddl
+Problem name: grounded-pathways-14
+Facts loaded.
+time: 1, 89 facts and 990 exclusive pairs.
+time: 2, 133 facts and 1078 exclusive pairs.
+time: 3, 138 facts and 182 exclusive pairs.
+time: 4, 174 facts and 428 exclusive pairs.
+time: 5, 214 facts and 1025 exclusive pairs.
+time: 6, 254 facts and 1209 exclusive pairs.
+time: 7, 297 facts and 1756 exclusive pairs.
+time: 8, 309 facts and 1224 exclusive pairs.
+time: 9, 313 facts and 887 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 314 facts and 867 exclusive pairs.
+Goals first reachable in 10 steps.
+8283 nodes created.
+
+####################################################
+goals at time 11:
+  goal18- goal17- goal16- goal15- goal14- 
+goal13- goal12- goal11- goal10- goal9- 
+goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p15.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p15.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p15.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p15.pddl
+Problem name: grounded-pathways-15
+Facts loaded.
+time: 1, 93 facts and 1081 exclusive pairs.
+time: 2, 139 facts and 1173 exclusive pairs.
+time: 3, 144 facts and 190 exclusive pairs.
+time: 4, 183 facts and 434 exclusive pairs.
+time: 5, 216 facts and 984 exclusive pairs.
+time: 6, 248 facts and 1241 exclusive pairs.
+time: 7, 274 facts and 1174 exclusive pairs.
+time: 8, 289 facts and 981 exclusive pairs.
+time: 9, 295 facts and 809 exclusive pairs.
+time: 10, 299 facts and 785 exclusive pairs.
+time: 11, 303 facts and 811 exclusive pairs.
+time: 12, 310 facts and 894 exclusive pairs.
+time: 13, 313 facts and 899 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 314 facts and 888 exclusive pairs.
+Goals reachable at 14 steps but mutually exclusive.
+time: 15, 315 facts and 902 exclusive pairs.
+Goals first reachable in 15 steps.
+16272 nodes created.
+
+####################################################
+goals at time 16:
+  goal19- goal18- goal17- goal16- goal15- 
+goal14- goal13- goal12- goal11- goal10- 
+goal9- goal8- goal7- goal6- goal5- 
+goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p16.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p16.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p16.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p16.pddl
+Problem name: grounded-pathways-16
+Facts loaded.
+time: 1, 113 facts and 1596 exclusive pairs.
+time: 2, 169 facts and 1708 exclusive pairs.
+time: 3, 174 facts and 230 exclusive pairs.
+time: 4, 228 facts and 632 exclusive pairs.
+time: 5, 275 facts and 1594 exclusive pairs.
+time: 6, 320 facts and 1928 exclusive pairs.
+time: 7, 391 facts and 3194 exclusive pairs.
+time: 8, 424 facts and 3530 exclusive pairs.
+time: 9, 437 facts and 2105 exclusive pairs.
+time: 10, 448 facts and 1544 exclusive pairs.
+time: 11, 458 facts and 1543 exclusive pairs.
+time: 12, 485 facts and 2098 exclusive pairs.
+time: 13, 488 facts and 1923 exclusive pairs.
+Goals first reachable in 13 steps.
+17494 nodes created.
+
+####################################################
+goals at time 14:
+  goal20- goal19- goal18- goal17- goal16- 
+goal15- goal14- goal13- goal12- goal11- 
+goal10- goal9- goal8- goal7- goal6- 
+goal5- goal4- goal3- goal2- goal1- 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 15
+
+----------------------------------------------------
+Can't solve in 13 steps
+time: 14, 489 facts and 1715 exclusive pairs.
+2282 new nodes added.
+
+####################################################
+goals at time 15:
+  goal20- goal19- goal18- goal17- goal16- 
+goal15- goal14- goal13- goal12- goal11- 
+goal10- goal9- goal8- goal7- goal6- 
+goal5- goal4- goal3- goal2- goal1- 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p17.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p17.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p17.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p17.pddl
+Problem name: grounded-pathways-17
+Facts loaded.
+time: 1, 123 facts and 1891 exclusive pairs.
+time: 2, 184 facts and 2013 exclusive pairs.
+time: 3, 189 facts and 250 exclusive pairs.
+time: 4, 245 facts and 662 exclusive pairs.
+time: 5, 300 facts and 1787 exclusive pairs.
+time: 6, 356 facts and 2357 exclusive pairs.
+time: 7, 404 facts and 2439 exclusive pairs.
+time: 8, 410 facts and 1513 exclusive pairs.
+time: 9, 415 facts and 1173 exclusive pairs.
+time: 10, 426 facts and 1273 exclusive pairs.
+time: 11, 459 facts and 1692 exclusive pairs.
+time: 12, 505 facts and 2735 exclusive pairs.
+time: 13, 515 facts and 2388 exclusive pairs.
+time: 14, 517 facts and 2015 exclusive pairs.
+Goals reachable at 14 steps but mutually exclusive.
+time: 15, 518 facts and 2017 exclusive pairs.
+Goals first reachable in 15 steps.
+23296 nodes created.
+
+####################################################
+goals at time 16:
+  goal21- goal20- goal19- goal18- goal17- 
+goal16- goal15- goal14- goal13- goal12- 
+goal11- goal10- goal9- goal8- goal7- 
+goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p18.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p18.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p18.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p18.pddl
+Problem name: grounded-pathways-18
+Facts loaded.
+time: 1, 95 facts and 1128 exclusive pairs.
+time: 2, 142 facts and 1222 exclusive pairs.
+time: 3, 147 facts and 194 exclusive pairs.
+time: 4, 190 facts and 510 exclusive pairs.
+time: 5, 237 facts and 1349 exclusive pairs.
+time: 6, 289 facts and 1626 exclusive pairs.
+time: 7, 363 facts and 3072 exclusive pairs.
+time: 8, 394 facts and 3310 exclusive pairs.
+time: 9, 407 facts and 1836 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 408 facts and 1324 exclusive pairs.
+Goals reachable at 10 steps but mutually exclusive.
+time: 11, 409 facts and 1319 exclusive pairs.
+Goals first reachable in 11 steps.
+11311 nodes created.
+
+####################################################
+goals at time 12:
+  goal24- goal23- goal22- goal21- goal20- 
+goal19- goal18- goal17- goal16- goal15- 
+goal14- goal13- goal12- goal11- goal10- 
+goal9- goal8- goal7- goal6- goal5- 
+goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p19.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p19.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p19.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p19.pddl
+Problem name: grounded-pathways-19
+Facts loaded.
+time: 1, 115 facts and 1653 exclusive pairs.
+time: 2, 172 facts and 1767 exclusive pairs.
+time: 3, 177 facts and 234 exclusive pairs.
+time: 4, 230 facts and 604 exclusive pairs.
+time: 5, 281 facts and 1385 exclusive pairs.
+time: 6, 338 facts and 1902 exclusive pairs.
+time: 7, 410 facts and 3040 exclusive pairs.
+time: 8, 417 facts and 1832 exclusive pairs.
+time: 9, 421 facts and 1122 exclusive pairs.
+time: 10, 432 facts and 1239 exclusive pairs.
+time: 11, 474 facts and 1829 exclusive pairs.
+time: 12, 530 facts and 3123 exclusive pairs.
+time: 13, 535 facts and 2364 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 536 facts and 1915 exclusive pairs.
+Goals first reachable in 14 steps.
+20448 nodes created.
+
+####################################################
+goals at time 15:
+  goal26- goal25- goal24- goal23- goal22- 
+goal21- goal20- goal19- goal18- goal17- 
+goal16- goal15- goal14- goal13- goal12- 
+goal11- goal10- goal9- goal8- goal7- 
+goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p20.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p20.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p20.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p20.pddl
+Problem name: grounded-pathways-20
+Facts loaded.
+time: 1, 107 facts and 1431 exclusive pairs.
+time: 2, 160 facts and 1537 exclusive pairs.
+time: 3, 165 facts and 218 exclusive pairs.
+time: 4, 211 facts and 533 exclusive pairs.
+time: 5, 253 facts and 1125 exclusive pairs.
+time: 6, 302 facts and 1374 exclusive pairs.
+time: 7, 390 facts and 3644 exclusive pairs.
+time: 8, 427 facts and 3888 exclusive pairs.
+time: 9, 446 facts and 2272 exclusive pairs.
+time: 10, 448 facts and 1506 exclusive pairs.
+Goals reachable at 10 steps but mutually exclusive.
+time: 11, 449 facts and 1459 exclusive pairs.
+Goals first reachable in 11 steps.
+12465 nodes created.
+
+####################################################
+goals at time 12:
+  goal27- goal26- goal25- goal24- goal23- 
+goal22- goal21- goal20- goal19- goal18- 
+goal17- goal16- goal15- goal14- goal13- 
+goal12- goal11- goal10- goal9- goal8- 
+goal7- goal6- goal5- goal4- goal3- 
+goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p21.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p21.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p21.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p21.pddl
+Problem name: grounded-pathways-21
+Facts loaded.
+time: 1, 125 facts and 1953 exclusive pairs.
+time: 2, 187 facts and 2077 exclusive pairs.
+time: 3, 192 facts and 254 exclusive pairs.
+time: 4, 247 facts and 647 exclusive pairs.
+time: 5, 293 facts and 1573 exclusive pairs.
+time: 6, 340 facts and 1705 exclusive pairs.
+time: 7, 403 facts and 2667 exclusive pairs.
+time: 8, 432 facts and 2791 exclusive pairs.
+time: 9, 445 facts and 1762 exclusive pairs.
+time: 10, 457 facts and 1477 exclusive pairs.
+time: 11, 465 facts and 1463 exclusive pairs.
+time: 12, 485 facts and 1797 exclusive pairs.
+time: 13, 492 facts and 1768 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 493 facts and 1641 exclusive pairs.
+Goals reachable at 14 steps but mutually exclusive.
+time: 15, 494 facts and 1653 exclusive pairs.
+Goals first reachable in 15 steps.
+23499 nodes created.
+
+####################################################
+goals at time 16:
+  goal28- goal27- goal26- goal25- goal24- 
+goal23- goal22- goal21- goal20- goal19- 
+goal18- goal17- goal16- goal15- goal14- 
+goal13- goal12- goal11- goal10- goal9- 
+goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p22.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p22.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p22.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p22.pddl
+Problem name: grounded-pathways-22
+Facts loaded.
+time: 1, 123 facts and 1891 exclusive pairs.
+time: 2, 184 facts and 2013 exclusive pairs.
+time: 3, 189 facts and 250 exclusive pairs.
+time: 4, 247 facts and 670 exclusive pairs.
+time: 5, 294 facts and 1626 exclusive pairs.
+time: 6, 341 facts and 1867 exclusive pairs.
+time: 7, 374 facts and 1709 exclusive pairs.
+time: 8, 382 facts and 1101 exclusive pairs.
+time: 9, 386 facts and 918 exclusive pairs.
+time: 10, 391 facts and 958 exclusive pairs.
+time: 11, 408 facts and 1145 exclusive pairs.
+time: 12, 413 facts and 1129 exclusive pairs.
+Goals first reachable in 12 steps.
+15409 nodes created.
+
+####################################################
+goals at time 13:
+  goal29- goal28- goal27- goal26- goal25- 
+goal24- goal23- goal22- goal21- goal20- 
+goal19- goal18- goal17- goal16- goal15- 
+goal14- goal13- goal12- goal11- goal10- 
+goal9- goal8- goal7- goal6- goal5- 
+goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 4
+
+----------------------------------------------------
+Can't solve in 12 steps
+time: 13, 414 facts and 1106 exclusive pairs.
+2108 new nodes added.
+
+####################################################
+goals at time 14:
+  goal29- goal28- goal27- goal26- goal25- 
+goal24- goal23- goal22- goal21- goal20- 
+goal19- goal18- goal17- goal16- goal15- 
+goal14- goal13- goal12- goal11- goal10- 
+goal9- goal8- goal7- goal6- goal5- 
+goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p23.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p23.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p23.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p23.pddl
+Problem name: grounded-pathways-23
+Facts loaded.
+time: 1, 125 facts and 1953 exclusive pairs.
+time: 2, 187 facts and 2077 exclusive pairs.
+time: 3, 192 facts and 254 exclusive pairs.
+time: 4, 247 facts and 653 exclusive pairs.
+time: 5, 301 facts and 1435 exclusive pairs.
+time: 6, 353 facts and 1942 exclusive pairs.
+time: 7, 421 facts and 2588 exclusive pairs.
+time: 8, 435 facts and 1654 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 436 facts and 1006 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 437 facts and 1010 exclusive pairs.
+Goals first reachable in 10 steps.
+12076 nodes created.
+
+####################################################
+goals at time 11:
+  goal30- goal29- goal28- goal27- goal26- 
+goal25- goal24- goal23- goal22- goal21- 
+goal20- goal19- goal18- goal17- goal16- 
+goal15- goal14- goal13- goal12- goal11- 
+goal10- goal9- goal8- goal7- goal6- 
+goal5- goal4- goal3- goal2- goal1- 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p24.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p24.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p24.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p24.pddl
+Problem name: grounded-pathways-24
+Facts loaded.
+time: 1, 115 facts and 1653 exclusive pairs.
+time: 2, 172 facts and 1767 exclusive pairs.
+time: 3, 177 facts and 234 exclusive pairs.
+time: 4, 231 facts and 614 exclusive pairs.
+time: 5, 286 facts and 1566 exclusive pairs.
+time: 6, 343 facts and 1963 exclusive pairs.
+time: 7, 435 facts and 4347 exclusive pairs.
+time: 8, 467 facts and 4510 exclusive pairs.
+time: 9, 484 facts and 2469 exclusive pairs.
+time: 10, 491 facts and 1813 exclusive pairs.
+time: 11, 496 facts and 1755 exclusive pairs.
+time: 12, 524 facts and 2319 exclusive pairs.
+time: 13, 533 facts and 2307 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 534 facts and 2035 exclusive pairs.
+Goals reachable at 14 steps but mutually exclusive.
+time: 15, 535 facts and 2045 exclusive pairs.
+Goals first reachable in 15 steps.
+22661 nodes created.
+
+####################################################
+goals at time 16:
+  goal31- goal30- goal29- goal28- goal27- 
+goal26- goal25- goal24- goal23- goal22- 
+goal21- goal20- goal19- goal18- goal17- 
+goal16- goal15- goal14- goal13- goal12- 
+goal11- goal10- goal9- goal8- goal7- 
+goal6- goal5- goal4- goal3- goal2- 
+goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p25.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p25.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p25.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p25.pddl
+Problem name: grounded-pathways-25
+Facts loaded.
+time: 1, 145 facts and 2628 exclusive pairs.
+time: 2, 217 facts and 2772 exclusive pairs.
+time: 3, 222 facts and 294 exclusive pairs.
+time: 4, 279 facts and 686 exclusive pairs.
+time: 5, 327 facts and 1127 exclusive pairs.
+time: 6, 385 facts and 1468 exclusive pairs.
+time: 7, 483 facts and 3798 exclusive pairs.
+time: 8, 499 facts and 2748 exclusive pairs.
+time: 9, 519 facts and 1573 exclusive pairs.
+time: 10, 527 facts and 1464 exclusive pairs.
+time: 11, 535 facts and 1474 exclusive pairs.
+time: 12, 555 facts and 1783 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p26.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p26.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p26.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p26.pddl
+Problem name: grounded-pathways-26
+Facts loaded.
+time: 1, 137 facts and 2346 exclusive pairs.
+time: 2, 205 facts and 2482 exclusive pairs.
+time: 3, 206 facts and 274 exclusive pairs.
+time: 4, 259 facts and 661 exclusive pairs.
+time: 5, 315 facts and 1475 exclusive pairs.
+time: 6, 376 facts and 1891 exclusive pairs.
+time: 7, 455 facts and 3250 exclusive pairs.
+time: 8, 486 facts and 3307 exclusive pairs.
+time: 9, 506 facts and 2186 exclusive pairs.
+time: 10, 516 facts and 1596 exclusive pairs.
+time: 11, 525 facts and 1592 exclusive pairs.
+time: 12, 544 facts and 1844 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p27.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p27.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p27.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p27.pddl
+Problem name: grounded-pathways-27
+Facts loaded.
+time: 1, 145 facts and 2628 exclusive pairs.
+time: 2, 217 facts and 2772 exclusive pairs.
+time: 3, 222 facts and 294 exclusive pairs.
+time: 4, 289 facts and 796 exclusive pairs.
+time: 5, 358 facts and 2100 exclusive pairs.
+time: 6, 420 facts and 2827 exclusive pairs.
+time: 7, 494 facts and 3446 exclusive pairs.
+time: 8, 498 facts and 2036 exclusive pairs.
+time: 9, 503 facts and 1285 exclusive pairs.
+time: 10, 515 facts and 1383 exclusive pairs.
+time: 11, 559 facts and 1957 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p28.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p28.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p28.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p28.pddl
+Problem name: grounded-pathways-28
+Facts loaded.
+time: 1, 137 facts and 2346 exclusive pairs.
+time: 2, 205 facts and 2482 exclusive pairs.
+time: 3, 210 facts and 282 exclusive pairs.
+time: 4, 276 facts and 785 exclusive pairs.
+time: 5, 343 facts and 2005 exclusive pairs.
+time: 6, 409 facts and 2553 exclusive pairs.
+time: 7, 494 facts and 3668 exclusive pairs.
+time: 8, 508 facts and 2399 exclusive pairs.
+time: 9, 517 facts and 1390 exclusive pairs.
+time: 10, 525 facts and 1413 exclusive pairs.
+time: 11, 532 facts and 1424 exclusive pairs.
+time: 12, 553 facts and 1761 exclusive pairs.
+Too many ops. Need to increase MAXNODES
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p29.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p29.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p29.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p29.pddl
+Problem name: grounded-pathways-29
+Facts loaded.
+time: 1, 111 facts and 1540 exclusive pairs.
+time: 2, 166 facts and 1650 exclusive pairs.
+time: 3, 171 facts and 226 exclusive pairs.
+time: 4, 222 facts and 605 exclusive pairs.
+time: 5, 271 facts and 1605 exclusive pairs.
+time: 6, 333 facts and 2305 exclusive pairs.
+time: 7, 440 facts and 5068 exclusive pairs.
+time: 8, 474 facts and 4523 exclusive pairs.
+time: 9, 486 facts and 1954 exclusive pairs.
+time: 10, 489 facts and 1559 exclusive pairs.
+Goals reachable at 10 steps but mutually exclusive.
+time: 11, 490 facts and 1546 exclusive pairs.
+Goals first reachable in 11 steps.
+14064 nodes created.
+
+####################################################
+goals at time 12:
+  goal39- goal38- goal37- goal36- goal35- 
+goal34- goal33- goal32- goal31- goal30- 
+goal29- goal28- goal27- goal26- goal25- 
+goal24- goal23- goal22- goal21- goal20- 
+goal19- goal18- goal17- goal16- goal15- 
+goal14- goal13- goal12- goal11- goal10- 
+goal9- goal8- goal7- goal6- goal5- 
+goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/mestrado/comp/pathways/Strips/domain_p30.pddl -f /home/matheus/mestrado/comp/pathways/Strips/p30.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/mestrado/comp/pathways/Strips/domain_p30.pddl
+Loading fact file: /home/matheus/mestrado/comp/pathways/Strips/p30.pddl
+Problem name: grounded-pathways-30
+Facts loaded.
+time: 1, 119 facts and 1770 exclusive pairs.
+time: 2, 178 facts and 1888 exclusive pairs.
+time: 3, 183 facts and 242 exclusive pairs.
+time: 4, 238 facts and 660 exclusive pairs.
+time: 5, 299 facts and 1782 exclusive pairs.
+time: 6, 360 facts and 2623 exclusive pairs.
+time: 7, 432 facts and 3341 exclusive pairs.
+time: 8, 440 facts and 2072 exclusive pairs.
+time: 9, 445 facts and 1248 exclusive pairs.
+time: 10, 456 facts and 1318 exclusive pairs.
+time: 11, 494 facts and 1745 exclusive pairs.
+time: 12, 551 facts and 3065 exclusive pairs.
+time: 13, 566 facts and 2528 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+Too many ops. Need to increase MAXNODES

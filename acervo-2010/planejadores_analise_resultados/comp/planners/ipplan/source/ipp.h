@@ -1,0 +1,786 @@
+/* (C) Copyright 1997 Albert Ludwigs University Freiburg
+ *     Institute of Computer Science
+ *
+ * All rights reserved. Use of this software is permitted for 
+ * non-commercial research purposes, and it may be copied only 
+ * for that use.  All copies must include this copyright message.
+ * This software is made available AS IS, and neither the authors
+ * nor the  Albert Ludwigs University Freiburg make any warranty
+ * about the software or its performance. 
+ */
+
+#ifndef __IPP_H
+#define __IPP_H
+
+/*
+ * defines,
+ * data structures,
+ * function prototypes and
+ * global variables
+ *
+ *  for extended graphplan algorithm
+ */
+
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<strings.h>
+#include<string.h>
+#include<ctype.h>
+#include<sys/types.h>
+#include<sys/times.h>
+
+
+/*
+ * defines
+ */
+
+
+/* technical defines */
+#define MAX_LENGTH 256/* maximal string length */
+#define BOOLEAN unsigned short int/* you should know about that one */
+#define TRUE 1/* this is true */
+#define FALSE 0/* and this is not */
+#define SAME 0/* for strcmp */
+#define CONNECTOR "~"  /* marks border between connected items */
+#define BIGPRIME 8000977/* prime for hashing */
+#define NOOP "noop"/* der blanke wahnsinn */
+#define INIT 1/* for initialising static variables, */
+#define EXEC 0/* i.e., better readability of fn calls */
+#define SEARCH 1/* readability */
+#define COMPLETE 0/* of fn call( in search ) */
+#define S_HSIZE 4/* size of tables in sub tree branches */
+#define S_HASH 3/* for index calculation */
+#define NO_QUANT 0
+#define ALL_QUANT 1
+#define EX_QUANT 2
+#define QUANTIFIERS "-AE" /* no, universal, existential */
+#define ANY_PRED 0
+#define EQ 1
+#define EQ_STR "eq"
+#define NOT_EQ 2
+#define NOT_EQ_STR "not-eq" /* this one MUST be NOT_STR + EQ_STR ! */
+#define NOT_STR "not-"
+#define NOT_PRED '!'
+#define NOT_EQ_PRED "!eq"
+#define NO_SOLUTION "NO SOLUTION\n"
+#define NO_MEMORY "\nipp:  SORRY, I RAN OUT OF MEMORY!\n"
+/* the following constants are for pl1 expression preprocessing */
+#define LIT_CONST      1
+#define AND_CONST      2
+#define OR_CONST       3
+#define IMPLY_CONST    4
+#define NOT_CONST      5
+#define EXISTS_CONST   6 
+#define FORALL_CONST   7
+#define LBRACK_CONST   8
+#define RBRACK_CONST   9
+#define VAR_CONST     10
+#define ENDNOT_CONST  11
+extern char *adl_string[];
+#define HIDDEN_STR "#"
+#define AXIOM_STR "AXIOM"
+#define NAME_STR "name\0"
+#define VARIABLE_STR "variable\0"
+#define STANDARD_TYPE "OBJECT\0"
+#define GOAL_OP_STR "#REACHGOAL"
+#define GOAL_REACHED "#GOALREACHED"
+#define EITHER_STR "EITHER"
+
+/* RIFO meta strategy */
+#define OPS_THRESH 3500
+#define OBJ_THRESH 35
+
+/* arbitrary preset value defines */
+#define HSIZE 50/* size of graph hashtables */
+#define MAX_PLAN 300/* max #time steps for making graph */
+#define MAX_MAX_NODES 4096/* upper limit for specified constant max_nodes */
+#define NUMINTS 128 /* MAX_MAX_NODES / 32; length of bitstring in vertex */
+
+/* NOTE: if you need max_nodes( the max number of facts or ops at
+ *       one time step ) to be > 1024, #define MAX_MAX_NODES <2 ** n>
+ *       and #define NUMINTS <2 ** ( n-5 )>.
+ */
+#define MAX_GOALS 50/* max number of goals in an array; just technical */
+#define MAX_SS 25/* max number of lists of goals to be prevented */
+
+
+#define OUTPUT_FILE if (outputFile){\
+  times( &gend );\
+  total_time += ( ( gend.tms_utime - gstart.tms_utime + gend.tms_stime - gstart.tms_stime  ));\
+  fprintf(outputFile, "%s%d\n", NO_SOLUTION, total_time*10);}
+/* Macro for NULL pointer check after mallocs/callocs */
+#define CHECK_MEMORY(ptr) if (!(ptr)) {\
+  fprintf(stderr,"%s", NO_MEMORY);\
+  printf(NULL);OUTPUT_FILE;\
+  exit(1);}
+#define GRAPH( type ) {bytes_graph += sizeof( type );}
+#define MEMO( type ) {bytes_memo += sizeof( type );}
+#define ARE_MUTEX( v, w ) ( ( ( v->exclusive_vect[w->uid_block] ) & ( w->uid_mask ) ) > 0 )
+
+/*
+ * data structures
+ */
+
+
+/* obviously a string */
+typedef char *token;
+
+/* string list */
+typedef struct TOKENLIST {
+
+  token item;
+  struct TOKENLIST *next;
+
+} *token_list, token_list_elt;
+
+
+/* list of string list */
+typedef struct FACTLIST {
+
+  token_list item;
+  struct FACTLIST *next;
+
+} *fact_list, fact_list_elt;
+
+
+/* effectlist of uninstantiated operator; format:
+ * forall <quantified variables> : <conditions> => <add_effects>,<del_effects>
+ */
+typedef struct EFFECTLIST {
+
+  fact_list quantified_variables;
+  fact_list conditions;
+  fact_list add_effects;
+  fact_list del_effects;
+
+  struct EFFECTLIST *next;
+
+} *effect_list, effect_list_elt;
+
+
+/* uninstantiated operator, read from inputfile <name>.ops
+ * into this structure
+ */
+typedef struct OP {
+
+  char *name;
+
+  fact_list params;
+  fact_list preconds;
+  effect_list effects;
+
+  fact_list params_objects;
+
+  int number_of_real_params; /* only important for PDDL where
+				:VARS may be added to the param list
+				which must be hidden when writing the
+				plan to an output file */
+  
+  struct OP *next;
+} *op_list, op_list_elt;
+
+
+/* effectlist for instantiated operator; format:
+ *   <conditions> => <add_effects>, <del_effects>
+ *  where the fact_list s of uninstantiated operators are replaced
+ *  by token_lists: connect the elements of a token_list by CONNECTOR
+ *  to make them be strings and get the resulting token_list as the
+ *  list of those strings.
+ *  example: at a b on c d changes to at_a_b on_c_d
+ *  see token_list_from_fact_list in file util_inst.c
+ */
+typedef struct INSTEFFECTLIST {
+
+  token_list conditions;
+  token_list add_effects;
+  token_list del_effects;
+
+  struct INSTEFFECTLIST *next;
+
+} *inst_effect_list, inst_effect_list_elt;
+
+
+/* completely instantiated operator, corresponds to actions in the paper
+ */
+typedef struct OPERATOR {
+
+  char *name;
+
+  token_list preconditions;
+  inst_effect_list effects;
+
+  token_list objects;
+
+  struct OPERATOR *next;
+} *operator_list, operator_list_elt;
+
+
+/* declaration of vertex, needed for edge_list
+ */
+typedef struct VERTEX *vertex_list, vertex_list_elt;
+
+/* technical, used in searching and memoizing
+ */
+typedef vertex_list goal_array[MAX_GOALS];
+
+typedef struct SSLIST {
+
+  goal_array goals;
+
+  vertex_list op;
+
+} ss_list_elt;
+
+/* list of edges in graph
+ */
+typedef struct EDGE {
+
+  vertex_list endpt;
+
+  struct EDGE *next;
+} *edge_list, edge_list_elt;
+
+
+
+
+/* list of conditional edges in graph;
+ *
+ * NOTE: the conditions are now fact vertexes in the graph; makes
+ *       building up a little bit more complicated, but should
+ *       speed up search as we always have to look up the
+ *       conditions
+ */
+typedef struct COND_EDGE {
+
+  edge_list conditions;
+  vertex_list endpt;
+
+  struct COND_EDGE *next;
+} *cond_edge_list, cond_edge_list_elt;
+
+
+/* technical for building graph;
+ *
+ * conditions are put in when we apply the operator, insert them, if
+ * the deleted fact is there, later.
+ */
+typedef struct DELETELIST {
+
+  token effect;
+
+  edge_list conditions;
+
+  struct DELETELIST *next;
+} *delete_list, delete_list_elt;
+
+
+/* technical for building memoize search tree */
+typedef struct NODE *node_list, node_list_elt;
+
+
+/* a vertex in the graph
+ */
+struct VERTEX {
+
+  char *name;/* stores what vertex actually is( exp at_home, move_home_bank )*/
+  int hashval;/* technical for finding vertex in table */
+  
+  /* if vertex is operator, this stores it's preconditions,
+   * if vertex is fact, this stores the operators it is precondition of
+   */
+  edge_list precond_edges;
+  /* if vertex is operator, this stores it's ADD effects with conditions,
+   * if vertex is fact, this stores the ops it is ADD effect of( with cond )
+   */
+  cond_edge_list add_edges;
+  /* technical for building graph */
+  delete_list del_list;
+  /* if vertex is operator, this stores it's DEL effects with conditions,
+   * if vertex is fact, this stores the ops it is DEL effect of( with cond )
+   */
+  cond_edge_list del_edges;
+
+  /* technical for fast calculation of exclusion; */
+  int uid_block;/* contains index in exclusive_vect */
+  unsigned int uid_mask;/* bit position in exclusive_vect[uid_block] */
+  int exclusive_vect[NUMINTS];/* bitstrings for storing exclusions */
+
+  /* technical for building graph; connect identical
+   * vertexes on adjacent levels
+   */
+  vertex_list prev_time;
+  vertex_list next_time;
+
+  /* is it a noop? */
+  BOOLEAN is_noop;
+
+  /* in fact: points to noop that adds them, for speedup in searching */
+  vertex_list my_noop;
+  /* five components for searching:
+   * is_goal      : used in fact to say if we want to have it true
+   *                in the current plan( = number of ops it's precond of )
+   * is_critic    : also used in fact to say if it is not allowed to be 
+   *                true in current plan
+   * is_used      : used in operators to say if we use it( i.e., the
+   *                number of facts we use it for ) in the current plan
+   * is_true      : counts number of effects that make fact true;
+   *                used for speedup and minimality check
+   * cant_do      : used for exclusion check between used operators and facts;
+   *                speeds up search a good deal also
+   */
+  int is_goal;
+  int is_critic;
+  int is_used;
+  int is_true;
+  /* used in search: says for which op it has been made a critic */
+  goal_array is_critic_for;
+  /* used in search: says for which op it has been made a goal */
+  goal_array is_goal_for;
+
+  /* used for edge ordering */
+  double heuristic;
+
+  BOOLEAN is_dummy;
+
+  node_list memo_start;
+  int memonum;
+
+  /* next in list, needed for hashing */
+  struct VERTEX *next;
+
+};
+
+
+/* contains one fact- or operator-layer of graph
+ */
+typedef vertex_list hashtable[HSIZE];
+
+
+/* technical for level off check( not really necessary, just readability )
+ */
+typedef struct PAIR { int first; int second; } pair;
+
+/* have to declare first due to recursive definition */
+typedef node_list node_table[S_HSIZE];
+
+
+/* a node in the memoizing search tree:
+ *   hashval, uid_block and uid_mask identify the fact it stands for,
+ *   tables goals and critics are the 'branches' to possible next
+ *   nodes, null_critics counts the number of memoize entries which
+ *   have stopped here.
+ *   next is just technical for hashing
+ *
+ * NOTE: *goals and *critics are hashtables of this structure
+ */
+struct NODE {
+
+  int hashval;
+  int uid_block;
+  unsigned int uid_mask;
+
+  node_table *goals;
+  node_table *critics;
+
+  int min_way;
+
+  struct NODE *next;
+};
+
+typedef ss_list_elt SS_at_type[MAX_SS];
+
+/* used to store set of fact_lists
+ * only used in eq_preproc.c
+ */
+typedef struct METAFACTLIST {
+
+  fact_list item;
+  struct METAFACTLIST *next;
+
+} *meta_fact_list, meta_fact_list_elt;
+
+
+/* used for storing effects that might be there due to
+ * parallelisation of actions
+ */
+typedef struct POTEFFLIST {
+
+  vertex_list op;
+
+  token_list conditions;
+  token_list adds;
+  token_list dels;
+
+  struct POTEFFLIST *next;
+} *pot_eff_list, pot_eff_list_elt;
+
+
+/* the type_tree structure is used to deal with types and subclasses
+   of types */
+typedef struct TYPETREE_LIST *type_tree_list, type_tree_list_elt;
+
+typedef struct TYPETREE 
+{
+  token name;  /* an object type */
+  type_tree_list sub_types;
+} *type_tree, type_tree_elt;
+
+struct TYPETREE_LIST 
+{
+  type_tree item;
+  struct TYPETREE_LIST *next;
+};
+
+// Old Version:
+// typedef struct TYPETREE {
+//
+//   token name;  /* an object type */
+//   struct TYPETREE *sub_types; /* subclasses of this type */
+//   struct TYPETREE *next; /* other subclasses of this type's superclass */
+// 
+// } *type_tree, type_tree_elt;
+
+
+/*
+ * function prototypes
+ */
+
+/* lex-fct.l */
+char* rmdash( char* s );
+
+void get_fct_file_name( char *filename );
+
+/* scan-fct.tab.c */
+void load_fct_file( char *filename );
+void print_factlist( fact_list list );
+void print_tokenlist(token_list list);
+void print_fct( fact_list con_list, token_list ini_list, token_list gol_list );
+
+/* scan-ops.tab.c */
+void load_ops_file( char *filename );
+void print_ops( op_list op );
+void print_effect( effect_list effects );
+void adjust_hidden_flag( op_list op );
+
+/* in file eq_preproc.c */
+void remove_uninstantiable_ops( op_list *ops, fact_list constants );
+BOOLEAN remove_able( op_list op, fact_list constants );
+void remove_effects( effect_list *effects, fact_list constants );
+BOOLEAN cannot_instantiate( token_list parameter, fact_list constants );
+int check_eq( token f );
+BOOLEAN args_eq( token two_args );
+BOOLEAN cond_in_initial( token_list conds, token_list initials );
+token_list copy_tl_return_end( token_list tl, token_list *end );
+fact_list rec_build_exgoal_fl( fact_list product_fl, 
+			       meta_fact_list factor_mfl );
+token_list dequantify_goals( effect_list raw_goals, op_list *ops );
+void preprocess_pl1_facts( void );
+op_list rec_prepoc_op_conditions( op_list op );
+effect_list rec_get_normal_form_effectcond( effect_list eff );
+fact_list transform_to_atomic_negation(fact_list f,BOOLEAN neg );
+fact_list eliminate_quantifiers( fact_list f, fact_list *end );
+effect_list rec_remove_quants_from_effectcond( fact_list* cond,
+					       effect_list orig_eff );
+fact_list get_variables( fact_list* last );
+effect_list transform_exists_effectcond( effect_list uninst, 
+					 fact_list param_list );
+effect_list transform_forall_effectcond( effect_list uninst, 
+					 fact_list params_list );
+fact_list instantiate_and_copy_fl( token old, token_list new_list, 
+			      fact_list source );
+void replace_in_fl( token old, token new, fact_list source );
+fact_list replace_in_fact_list( token old, token new, fact_list source,
+				BOOLEAN shall_copy, fact_list *end );
+effect_list multiply_effectconds( effect_list old1, effect_list old2 );
+op_list rec_get_normal_form_precond( op_list op );
+op_list rec_remove_quants_from_precond( fact_list* cond,
+					op_list orig_eff );
+op_list transform_forall_precond( op_list op, fact_list params_list );
+op_list multiply_preconds( op_list old1, op_list old2 );
+void preprocess_axioms();
+op_list conjuctive_goals( op_list the_ops, op_list *pred_address );
+
+/* in file not_preproc.c */
+token_list get_types_from_constlist(fact_list pred, fact_list var);
+void append_to_effects(token name, token_list args, fact_list* effect);
+token_list types_of_pred_args(fact_list predicate, op_list op, effect_list eff);
+void build_neg_predlist(fact_list pred, token_list f_types);
+void store_fact_list(fact_list i, fact_list* start, fact_list* last);
+void store_token_list(token_list i, token_list* start, token_list* last);
+void transform_initials(void);
+int not_in_list( token_list pred, fact_list list );
+BOOLEAN is_in_negated_preds(token name, 
+			   fact_list f_list, 
+			   token_list f_types);
+void preprocess_not(void);
+void build_type_list();
+token_list find_consts_of_subtypes( type_tree tt );
+token_list get_objects_of_type( token type_name );
+fact_list rec_inst_pred( fact_list facts, token_list typelist );
+fact_list instantiate_pred( token name, token_list typelist );
+
+/* in file utilities.c */
+fact_list new_fact_list(void);
+token_list new_token_list(void);
+effect_list new_effect_list(void);
+void factlist_from_tokenlist( fact_list *fl, token_list tl );
+token copy_token( token s );
+token_list copy_token_list(token_list source);
+effect_list copy_effect_list(effect_list source);
+fact_list copy_fact_list(fact_list source);
+token_list copy_complete_token_list(token_list source, token_list *end);
+effect_list copy_complete_effect_list(effect_list source, effect_list *end);
+fact_list copy_complete_fact_list(fact_list source, fact_list *end);
+operator_list copy_operator_list( operator_list source );
+op_list copy_complete_op( op_list source );
+op_list copy_complete_op_list( token name, op_list source, op_list *end );
+void free_complete_token_list( token_list source );
+void free_complete_fact_list( fact_list source );
+void free_complete_effect_list( effect_list source );
+void free_complete_op_list( op_list source );
+token new_token(int size);
+op_list new_axiom_op_list(void);
+op_list new_op_list( token name );
+operator_list new_ground_operator( token name );
+type_tree new_type_tree( token name );
+type_tree_list new_type_tree_list( token name );
+type_tree main_type_tree();
+fact_list build_object_list_from_ttl( type_tree_list ttl, 
+				      fact_list types_done );
+token_list type_already_known( token name, fact_list types );
+void build_orig_constant_list();
+void add_to_type_tree( fact_list types, type_tree tree );
+void print_type_tree( type_tree root, int indent );
+type_tree find_branch( token name, type_tree root );
+char* strupcase( char* from );
+effect_list merge_literal_effects( effect_list e );
+fact_list make_adl_fact( int c );
+int get_adl_token( fact_list f );
+void write_plan_to_file(int time );
+
+/* in file util_inst.c */
+token token_from_token_list( token_list tlist );
+token_list token_list_from_fact_list( fact_list flist );
+token_list copy_replace_tlist( token_list tlist, char *dest, char *source );
+fact_list copy_replace_flist( fact_list flist, char *dest, char *source );
+effect_list copy_replace_efflist( effect_list effects,char *dest,char *source);
+op_list_elt copy_replace_op( op_list_elt op, char *dest, char *source );
+op_list_elt copy_op( op_list_elt op );
+fact_list copy_remove( fact_list flist, fact_list rm );
+effect_list_elt copy_replace_effect( effect_list_elt effect,
+                                     char *dest, char *source);
+char *make_name( op_list_elt op );
+token_list make_objects( op_list_elt op );
+void check_instantiation(fact_list f_list, char* action);
+
+/* in file instantiate.c */
+void instantiate( op_list ops, fact_list initials,
+		  token_list inertia,  fact_list constants );
+void inertia_instantiate( op_list_elt op, int curr,
+			  fact_list initials,
+			  token_list inertia,  fact_list constants );
+BOOLEAN matches( op_list_elt op, token_list fact,
+		 token_list condition, fact_list *in_const, fact_list constants );
+BOOLEAN same_type( op_list_elt op, token param, token object, fact_list constants );
+void instantiate_first_parameter( op_list_elt op,
+                                  fact_list constants,
+                                  fact_list all_constants );
+inst_effect_list delete_ALL_quantifying( effect_list effects,
+                                         fact_list constants,
+					 char* op_name);
+void build_inst_effect_list( effect_list_elt effect, 
+			     fact_list constants, char* op_name );
+void print_operators( operator_list operators );
+
+/* in file inertia.c */
+token_list get_inertia( fact_list init, op_list ops );
+void handle_inertia( token_list inertia );
+BOOLEAN is_inertia( token str );
+void remove_inertia( token str, token_list *list );
+/* ...the following have nothing to do with inertia; just not to 
+ * introduce a new file for two pages of code
+ */
+BOOLEAN are_same_hoffmann( token_list c1, token_list c2 );
+void merge_effects( inst_effect_list i, inst_effect_list j );
+void merge_identical_effects( void );
+BOOLEAN is_instantiated_inertia( token t );
+
+/* in file hash.c */
+int hash( char *key );
+vertex_list lookup_from_table( hashtable t, char *key );
+vertex_list insert_into_table( hashtable t, char *key );
+vertex_list insert_noop_into_table( hashtable t, char *key );
+vertex_list get_next( hashtable t, BOOLEAN initialise );
+
+/* in file exclusions.c */
+void find_mutex_ops_and_insert_del_edges( int time );
+pair find_mutex_facts( int time );
+BOOLEAN are_mutex( vertex_list v, vertex_list w );
+void make_exclusive( vertex_list v, vertex_list w );
+BOOLEAN facts_are_exclusive( vertex_list ft1, vertex_list ft2 );
+BOOLEAN contains( edge_list l1, edge_list l2 );
+
+/* in file util_build.c */
+BOOLEAN are_there_non_exclusive( token_list facts, int time );
+BOOLEAN get_them_non_exclusive( token_list facts, int time,
+                                 goal_array *ft, int *num );
+BOOLEAN get_them( token_list facts, int time,
+		  goal_array *ft, int *num );
+edge_list insert_edge( edge_list e, vertex_list v );
+edge_list insert_edge_at_end( edge_list e, vertex_list v );
+cond_edge_list insert_cond_edge( cond_edge_list e,
+                                 vertex_list v,
+                                 edge_list t );
+cond_edge_list insert_sort_cond_edge( cond_edge_list e,
+				      vertex_list v,
+				      edge_list t );
+cond_edge_list insert_cond_edge_at_end( cond_edge_list e,
+                                        vertex_list v,
+                                        edge_list t );
+void set_uid( vertex_list, int );
+char *make_noop_string( char *str );
+
+/* in file build_graph.c */
+BOOLEAN build_graph( int *min_time );
+void build_graph_layer( BOOLEAN new_graph );
+void make_copy( int time );
+void make_noop_layer( int time );
+pot_eff_list apply_operator( operator_list operator, int time );
+void insert_potential_effects( int time, pot_eff_list potentials );
+BOOLEAN pot_applicable( pot_eff_list p, int time,
+			goal_array *next_facts, int *num ); 
+void put_pot_eff_in( pot_eff_list p, int time,
+		     goal_array next_facts, int num );
+
+
+/* in file memoize.c */
+int min( int a, int b );
+void memoize( int time, goal_array goals, int num_goals,
+                        goal_array critics, int num_critics );
+BOOLEAN memoized( goal_array goals, int num_goals,
+		  goal_array critics, int num_critics );
+BOOLEAN straight_memoized( goal_array goals, int start, int num_goals,
+                           goal_array critics, int num_critics );
+BOOLEAN sub_memoized( goal_array goals, int num_goals, int curr_g,
+                      goal_array critics, int num_critics, int curr_c,
+                      node_list node );
+node_list sub_lookup( node_table *t, 
+		      int hv, int ub, int um );
+node_list sub_insert( node_table *t, 
+		      int hv, int ub, int um );
+void quicksort( goal_array a, int l, int r );
+void free_sub_tree( node_list node );
+
+/* in file util_search.c */
+BOOLEAN is_deleted( vertex_list ft, int time, vertex_list op_ );
+BOOLEAN goals_still_possible( int n, int time, vertex_list op );
+BOOLEAN action_set_is_minimal( int time );
+void print_plan( int time );
+BOOLEAN cant_do_op( vertex_list op, int time );
+BOOLEAN cant_do_ft( vertex_list ft, int time );
+BOOLEAN each_list_contains_dummy( void );
+
+/* in file search_plan.c */
+BOOLEAN search_plan( int max_time );
+BOOLEAN search( int curr_index, int time );
+BOOLEAN prevent_critics_and_search( int curr_index, int time );
+BOOLEAN complete_critics_and_search( BOOLEAN mode, int time );
+BOOLEAN try_op( vertex_list op, edge_list conditions,
+                int curr_index, int time );
+void untry_op( vertex_list op, edge_list conditions, int time );
+void compute_SS( int time );
+BOOLEAN choose_critics( int time, BOOLEAN initialise );
+
+/* for saving the graph to disk */
+BOOLEAN SaveGraph( char *filename, int max_time, int active_part );
+BOOLEAN WriteirstLine(vertex_list node, int level, FILE *fp);
+BOOLEAN WritePreLine(vertex_list node, FILE *fp);
+BOOLEAN WriteExcLine(vertex_list node, int time, int type,
+		     FILE *fp, int active_part );
+BOOLEAN WriteAddLines(vertex_list node, FILE *fp);
+BOOLEAN WriteDelLines(vertex_list node, FILE *fp);
+int Error(char *str);
+
+
+/*
+ * global variables
+ */
+
+
+/* technical variables */
+
+extern char *act_filename;
+extern int lineno;
+extern int act_err;
+extern char *act_err_par;
+extern int bracket_count;
+extern inst_effect_list help_inst_effect_list;/* used for del_ALL_quantifiing */
+extern BOOLEAN minimize;/* has to do with recursive op choice in fn search */
+extern int total_time;
+extern struct tms gstart, gend; /* helpers */
+
+/* globally important variables */
+
+/* domain constants */
+extern char *gdomain_name;
+extern op_list loaded_ops;/* loaded, uninstantiated operators */
+extern op_list loaded_axioms;/* axioms as in UCPOP, before changing to ops */
+extern operator_list operators;/* list of instantiated operators */
+extern token_list initial_facts;/* the initial facts */
+extern effect_list raw_goal_facts;/* not yet preprocessed goal facts */
+extern token_list goal_facts;/* the goal facts */
+extern fact_list orig_constant_list;/* to store all typed objects */
+extern fact_list orig_initial_facts;/* stores initials as fact_list */
+extern fact_list negated_preds;/* needed for NOT preprocessing */ 
+extern fact_list global_object_fl;/* fast finding of types and their objs */
+extern type_tree_list global_type_tree_list;/* type hierarchy (PDDL) */
+
+/* have to do with completeness check */
+extern BOOLEAN same_as_prev_flag;/* is set when graph has levelled off */
+extern int first_full_time;/* stores time when graph has levelled off */
+extern int previous_Scount;/* previous num hashes at first full time */
+extern int current_Scount;/* current num hashes at that time */
+
+/* the actual graph: two arrays of hashtables */
+extern hashtable fact_table[3][MAX_PLAN+1], op_table[3][MAX_PLAN+1];
+extern int rifo_active_part;
+
+/* option preset values */
+extern int max_nodes;/* max number of nodes at one level */
+extern BOOLEAN do_subset;/* flag: use subset check in memoizing ? */
+extern int display_info;/* level of run time info printed */
+extern int do_heuristic;/* sort edges according to which heuristic ? */
+extern BOOLEAN rem_inertia;/* remove inertia ? */
+
+/* memoizing stuff */
+extern int simple_hits;/* just for info: */
+extern int partial_hits;
+extern int subset_hits;/* different memoize types */
+
+extern long bytes_graph;
+extern long bytes_memo;
+
+/* for searching */
+extern goal_array *goals_at;
+extern goal_array *ops_at;
+extern goal_array *critics_at;
+extern SS_at_type *SS_at;
+extern int *num_goals_at;
+extern int *num_ops_at;
+extern int *num_critics_at;
+extern int *num_SS_at;
+
+extern int num_ints;
+
+extern int num_of_actions_tried;/* info */
+
+extern char problemName[MAX_LENGTH];
+extern FILE * outputFile;
+
+/* RIFO meta-strategy */
+extern int ground_ops_count; /* number of ops helps to determine the strategy */
+extern int objects_count;    /* as does the number of objects */
+extern BOOLEAN complete_rifo_run;
+
+#endif

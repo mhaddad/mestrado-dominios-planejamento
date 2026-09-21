@@ -1,0 +1,1188 @@
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-1' defined
+ ... done.
+
+
+got 11 facts
+
+Cueing down from goal distance:    3 into depth [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST0 DEPOT0-1-1 LOADAREA
+        1: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: DROP HOIST0 CRATE0 DEPOT0-1-1 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 12 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 13 facts and 8 actions
+               0.00 seconds creating final representation with 11 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 4 states, to a max depth of 1
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-2' defined
+ ... done.
+
+
+got 20 facts
+
+Cueing down from goal distance:    4 into depth [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST0 DEPOT0-1-1 LOADAREA
+        1: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: DROP HOIST0 CRATE0 DEPOT0-1-1 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 44 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 23 facts and 28 actions
+               0.00 seconds creating final representation with 20 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 4 states, to a max depth of 1
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-3' defined
+ ... done.
+
+
+got 31 facts
+
+Cueing down from goal distance:    4 into depth [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST0 DEPOT0-1-2 LOADAREA
+        1: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: DROP HOIST0 CRATE0 DEPOT0-1-2 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 96 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 35 facts and 60 actions
+               0.00 seconds creating final representation with 31 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 4 states, to a max depth of 1
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-4' defined
+ ... done.
+
+
+got 32 facts
+
+Cueing down from goal distance:    6 into depth [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        1: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        2: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        3: GO-IN HOIST0 LOADAREA DEPOT0-2-1
+        4: DROP HOIST0 CRATE0 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+        5: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        6: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        7: DROP HOIST0 CRATE1 DEPOT0-2-1 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 102 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 38 facts and 58 actions
+               0.00 seconds creating final representation with 32 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 53 states, to a max depth of 3
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-5' defined
+ ... done.
+
+
+got 42 facts
+
+Cueing down from goal distance:    6 into depth [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        1: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        2: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        3: MOVE HOIST1 DEPOT0-1-2 DEPOT0-2-2
+        4: DROP HOIST0 CRATE0 DEPOT0-2-1 LOADAREA DEPOT0
+        5: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        6: LIFT HOIST1 CRATE0 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+        7: DROP HOIST0 CRATE1 DEPOT0-2-1 LOADAREA DEPOT0
+        8: DROP HOIST1 CRATE0 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 204 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 48 facts and 116 actions
+               0.00 seconds creating final representation with 42 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 66 states, to a max depth of 3
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-6' defined
+ ... done.
+
+
+got 52 facts
+
+Cueing down from goal distance:    6 into depth [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        1: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        2: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        3: DROP HOIST0 CRATE0 DEPOT0-2-1 LOADAREA DEPOT0
+        4: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        5: MOVE HOIST1 DEPOT0-1-2 DEPOT0-1-1
+        6: LIFT HOIST2 CRATE0 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+        7: DROP HOIST0 CRATE1 DEPOT0-2-1 LOADAREA DEPOT0
+        8: DROP HOIST2 CRATE0 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 306 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 58 facts and 174 actions
+               0.00 seconds creating final representation with 52 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 68 states, to a max depth of 3
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-7' defined
+ ... done.
+
+
+got 56 facts
+
+Cueing down from goal distance:   10 into depth [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST0 DEPOT0-1-3 DEPOT0-2-3
+        1: MOVE HOIST0 DEPOT0-2-3 DEPOT0-2-2
+        2: MOVE HOIST0 DEPOT0-2-2 DEPOT0-2-1
+        3: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        4: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        5: GO-IN HOIST0 LOADAREA DEPOT0-2-1
+        6: DROP HOIST0 CRATE0 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+        7: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        8: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        9: GO-IN HOIST0 LOADAREA DEPOT0-2-1
+       10: DROP HOIST0 CRATE1 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+       11: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+       12: LIFT HOIST0 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+       13: DROP HOIST0 CRATE2 DEPOT0-2-1 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 238 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 65 facts and 130 actions
+               0.00 seconds creating final representation with 56 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 264 states, to a max depth of 3
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-8' defined
+ ... done.
+
+
+got 70 facts
+
+Cueing down from goal distance:    8 into depth [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST1 DEPOT0-1-3 DEPOT0-2-3
+        1: GO-OUT HOIST1 DEPOT0-2-3 LOADAREA
+        2: LIFT HOIST1 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        3: DROP HOIST1 CRATE0 DEPOT0-2-3 LOADAREA DEPOT0
+        4: LIFT HOIST1 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        5: LIFT HOIST0 CRATE0 DEPOT0-2-3 DEPOT0-2-2 DEPOT0
+        6: DROP HOIST0 CRATE0 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+        7: DROP HOIST1 CRATE1 DEPOT0-2-3 LOADAREA DEPOT0
+        8: LIFT HOIST1 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+        9: LIFT HOIST0 CRATE1 DEPOT0-2-3 DEPOT0-2-2 DEPOT0
+       10: DROP HOIST1 CRATE2 DEPOT0-2-3 LOADAREA DEPOT0
+       11: DROP HOIST0 CRATE1 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 476 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 79 facts and 260 actions
+               0.00 seconds creating final representation with 70 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 127 states, to a max depth of 3
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-9' defined
+ ... done.
+
+
+got 84 facts
+
+Cueing down from goal distance:    7 into depth [1]
+                                   6            [1]
+                                   5            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST0 DEPOT0-2-2 LOADAREA
+        1: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: DROP HOIST0 CRATE0 DEPOT0-2-2 LOADAREA DEPOT0
+        3: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        4: LIFT HOIST2 CRATE0 DEPOT0-2-2 DEPOT0-2-3 DEPOT0
+        5: DROP HOIST2 CRATE0 DEPOT0-1-3 DEPOT0-2-3 DEPOT0
+        6: DROP HOIST0 CRATE1 DEPOT0-2-2 LOADAREA DEPOT0
+        7: LIFT HOIST0 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+        8: MOVE HOIST1 DEPOT0-1-1 DEPOT0-1-2
+        9: LIFT HOIST1 CRATE1 DEPOT0-2-2 DEPOT0-1-2 DEPOT0
+       10: DROP HOIST0 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       11: DROP HOIST1 CRATE1 DEPOT0-1-1 DEPOT0-1-2 DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 714 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 93 facts and 390 actions
+               0.00 seconds creating final representation with 84 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 192 states, to a max depth of 3
+               0.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-10' defined
+ ... done.
+
+
+got 86 facts
+
+Cueing down from goal distance:   12 into depth [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        1: MOVE HOIST0 DEPOT0-2-1 DEPOT0-2-2
+        2: MOVE HOIST0 DEPOT0-2-2 DEPOT0-2-3
+        3: GO-OUT HOIST0 DEPOT0-2-3 LOADAREA
+        4: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        5: GO-IN HOIST0 LOADAREA DEPOT0-2-3
+        6: DROP HOIST0 CRATE0 DEPOT0-1-3 DEPOT0-2-3 DEPOT0
+        7: GO-OUT HOIST0 DEPOT0-2-3 LOADAREA
+        8: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        9: GO-IN HOIST0 LOADAREA DEPOT0-2-3
+       10: DROP HOIST0 CRATE1 DEPOT0-2-2 DEPOT0-2-3 DEPOT0
+       11: GO-OUT HOIST0 DEPOT0-2-3 LOADAREA
+       12: LIFT HOIST0 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+       13: GO-IN HOIST0 LOADAREA DEPOT0-2-3
+       14: DROP HOIST0 CRATE2 DEPOT0-2-4 DEPOT0-2-3 DEPOT0
+       15: GO-OUT HOIST0 DEPOT0-2-3 LOADAREA
+       16: LIFT HOIST0 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+       17: DROP HOIST0 CRATE3 DEPOT0-2-3 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 430 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 98 facts and 230 actions
+               0.00 seconds creating final representation with 86 relevant facts
+               0.00 seconds building connectivity graph
+               0.02 seconds searching, evaluating 1505 states, to a max depth of 3
+               0.02 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-11' defined
+ ... done.
+
+
+got 104 facts
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1]
+                                   7            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        1: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: MOVE HOIST1 DEPOT0-1-4 DEPOT0-2-4
+        3: DROP HOIST0 CRATE0 DEPOT0-2-1 LOADAREA DEPOT0
+        4: MOVE HOIST1 DEPOT0-2-4 DEPOT0-2-3
+        5: MOVE HOIST1 DEPOT0-2-3 DEPOT0-2-2
+        6: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        7: LIFT HOIST1 CRATE0 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+        8: DROP HOIST1 CRATE0 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+        9: DROP HOIST0 CRATE1 DEPOT0-2-1 LOADAREA DEPOT0
+       10: LIFT HOIST0 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+       11: LIFT HOIST1 CRATE1 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+       12: DROP HOIST1 CRATE1 DEPOT0-2-3 DEPOT0-2-2 DEPOT0
+       13: DROP HOIST0 CRATE2 DEPOT0-2-1 LOADAREA DEPOT0
+       14: LIFT HOIST0 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+       15: LIFT HOIST1 CRATE2 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+       16: MOVE HOIST1 DEPOT0-2-2 DEPOT0-2-1
+       17: DROP HOIST1 CRATE2 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+       18: GO-OUT HOIST1 DEPOT0-2-1 LOADAREA
+       19: DROP HOIST0 CRATE3 DEPOT0-2-1 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 860 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 116 facts and 460 actions
+               0.00 seconds creating final representation with 104 relevant facts
+               0.00 seconds building connectivity graph
+               0.02 seconds searching, evaluating 588 states, to a max depth of 3
+               0.02 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-12' defined
+ ... done.
+
+
+got 122 facts
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1]
+                                   7            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST0 DEPOT0-2-1 LOADAREA
+        1: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: MOVE HOIST1 DEPOT0-1-2 DEPOT0-2-2
+        3: DROP HOIST0 CRATE0 DEPOT0-2-1 LOADAREA DEPOT0
+        4: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        5: LIFT HOIST1 CRATE0 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+        6: DROP HOIST1 CRATE0 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+        7: DROP HOIST0 CRATE1 DEPOT0-2-1 LOADAREA DEPOT0
+        8: LIFT HOIST0 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+        9: LIFT HOIST1 CRATE1 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+       10: DROP HOIST1 CRATE1 DEPOT0-2-3 DEPOT0-2-2 DEPOT0
+       11: DROP HOIST0 CRATE2 DEPOT0-2-1 LOADAREA DEPOT0
+       12: LIFT HOIST0 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+       13: LIFT HOIST1 CRATE2 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+       14: DROP HOIST0 CRATE3 DEPOT0-2-1 LOADAREA DEPOT0
+       15: LIFT HOIST2 CRATE0 DEPOT0-1-2 DEPOT0-1-3 DEPOT0
+       16: DROP HOIST1 CRATE2 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+       17: DROP HOIST2 CRATE0 DEPOT0-1-4 DEPOT0-1-3 DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 1290 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 134 facts and 690 actions
+               0.00 seconds creating final representation with 122 relevant facts
+               0.00 seconds building connectivity graph
+               0.02 seconds searching, evaluating 488 states, to a max depth of 3
+               0.02 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-13' defined
+ ... done.
+
+
+got 132 facts
+
+Cueing down from goal distance:   12 into depth [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST0 DEPOT0-1-3 DEPOT0-2-3
+        1: GO-OUT HOIST0 DEPOT0-2-3 LOADAREA
+        2: LIFT HOIST0 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        3: DROP HOIST0 CRATE0 DEPOT0-2-3 LOADAREA DEPOT0
+        4: LIFT HOIST0 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+        5: GO-IN HOIST0 LOADAREA DEPOT1-2-2
+        6: DROP HOIST0 CRATE2 DEPOT1-1-2 DEPOT1-2-2 DEPOT1
+        7: GO-OUT HOIST0 DEPOT1-2-2 LOADAREA
+        8: LIFT HOIST0 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+        9: GO-IN HOIST0 LOADAREA DEPOT1-2-2
+       10: DROP HOIST0 CRATE3 DEPOT1-2-1 DEPOT1-2-2 DEPOT1
+       11: GO-OUT HOIST0 DEPOT1-2-2 LOADAREA
+       12: LIFT HOIST0 CRATE4 CONTAINER-1-0 LOADAREA CONTAINER1
+       13: DROP HOIST0 CRATE4 DEPOT1-2-2 LOADAREA DEPOT1
+       14: LIFT HOIST0 CRATE0 DEPOT0-2-3 LOADAREA DEPOT0
+       15: GO-IN HOIST0 LOADAREA DEPOT0-2-3
+       16: DROP HOIST0 CRATE0 DEPOT0-1-3 DEPOT0-2-3 DEPOT0
+       17: GO-OUT HOIST0 DEPOT0-2-3 LOADAREA
+       18: LIFT HOIST0 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+       19: DROP HOIST0 CRATE1 DEPOT0-2-3 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 1034 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 147 facts and 282 actions
+               0.00 seconds creating final representation with 132 relevant facts
+               0.00 seconds building connectivity graph
+               0.36 seconds searching, evaluating 13228 states, to a max depth of 15
+               0.36 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-14' defined
+ ... done.
+
+
+got 154 facts
+
+Cueing down from goal distance:   16 into depth [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1][2][3][4][5][6]
+                                   8            [1][2][3][4][5][6][7][8][9][10][11][12][13]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   16
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST1 DEPOT1-1-2 DEPOT1-1-3
+        1: MOVE HOIST1 DEPOT1-1-3 DEPOT1-2-3
+        2: GO-OUT HOIST1 DEPOT1-2-3 LOADAREA
+        3: LIFT HOIST1 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+        4: DROP HOIST1 CRATE3 DEPOT1-2-3 LOADAREA DEPOT1
+        5: LIFT HOIST1 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        6: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        7: DROP HOIST1 CRATE0 DEPOT0-2-2 LOADAREA DEPOT0
+        8: LIFT HOIST1 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        9: LIFT HOIST0 CRATE0 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+       10: DROP HOIST0 CRATE0 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+       11: DROP HOIST1 CRATE1 DEPOT0-2-2 LOADAREA DEPOT0
+       12: LIFT HOIST1 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+       13: LIFT HOIST0 CRATE1 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+       14: GO-IN HOIST1 LOADAREA DEPOT0-2-2
+       15: DROP HOIST1 CRATE2 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+       16: GO-OUT HOIST1 DEPOT0-2-2 LOADAREA
+       17: MOVE HOIST0 DEPOT0-2-1 DEPOT0-2-2
+       18: DROP HOIST0 CRATE1 DEPOT0-2-1 DEPOT0-2-2 DEPOT0
+       19: LIFT HOIST1 CRATE4 CONTAINER-1-0 LOADAREA CONTAINER1
+       20: GO-OUT HOIST0 DEPOT0-2-2 LOADAREA
+       21: LIFT HOIST0 CRATE3 DEPOT1-2-3 LOADAREA DEPOT1
+       22: GO-IN HOIST1 LOADAREA DEPOT1-2-3
+       23: MOVE HOIST1 DEPOT1-2-3 DEPOT1-1-3
+       24: DROP HOIST1 CRATE4 DEPOT1-1-2 DEPOT1-1-3 DEPOT1
+       25: DROP HOIST0 CRATE3 DEPOT1-2-3 LOADAREA DEPOT1
+     
+
+time spent:    0.00 seconds instantiating 2068 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 169 facts and 564 actions
+               0.00 seconds creating final representation with 154 relevant facts
+               0.00 seconds building connectivity graph
+               0.10 seconds searching, evaluating 3313 states, to a max depth of 13
+               0.10 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-15' defined
+ ... done.
+
+
+got 176 facts
+
+Cueing down from goal distance:   12 into depth [1]
+                                  10            [1]
+                                   9            [1][2][3][4][5]
+                                   8            [1][2][3][4][5][6][7][8][9][10][11][12][13]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   12
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST2 DEPOT1-2-3 LOADAREA
+        1: LIFT HOIST2 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+        2: DROP HOIST2 CRATE2 DEPOT1-2-3 LOADAREA DEPOT1
+        3: LIFT HOIST2 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        4: LIFT HOIST1 CRATE2 DEPOT1-2-3 DEPOT1-1-3 DEPOT1
+        5: DROP HOIST1 CRATE2 DEPOT1-1-2 DEPOT1-1-3 DEPOT1
+        6: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        7: DROP HOIST2 CRATE0 DEPOT0-2-2 LOADAREA DEPOT0
+        8: LIFT HOIST2 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        9: LIFT HOIST0 CRATE0 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+       10: DROP HOIST2 CRATE1 DEPOT0-2-2 LOADAREA DEPOT0
+       11: DROP HOIST0 CRATE0 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+       12: LIFT HOIST2 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+       13: DROP HOIST2 CRATE3 DEPOT1-2-3 LOADAREA DEPOT1
+       14: LIFT HOIST2 CRATE4 CONTAINER-1-0 LOADAREA CONTAINER1
+       15: LIFT HOIST1 CRATE3 DEPOT1-2-3 DEPOT1-1-3 DEPOT1
+       16: MOVE HOIST1 DEPOT1-1-3 DEPOT1-2-3
+       17: DROP HOIST1 CRATE3 DEPOT1-1-3 DEPOT1-2-3 DEPOT1
+       18: GO-OUT HOIST1 DEPOT1-2-3 LOADAREA
+       19: DROP HOIST2 CRATE4 DEPOT1-2-3 LOADAREA DEPOT1
+     
+
+time spent:    0.00 seconds instantiating 3102 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 191 facts and 846 actions
+               0.00 seconds creating final representation with 176 relevant facts
+               0.00 seconds building connectivity graph
+               0.44 seconds searching, evaluating 10744 states, to a max depth of 13
+               0.44 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-16' defined
+ ... done.
+
+
+got 228 facts
+
+Cueing down from goal distance:   13 into depth [1]
+                                  12            [1]
+                                  11            [1][2][3][4][5]
+                                  10            [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST1 DEPOT1-2-3 LOADAREA
+        1: LIFT HOIST1 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+        2: DROP HOIST1 CRATE3 DEPOT1-2-3 LOADAREA DEPOT1
+        3: LIFT HOIST1 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        4: LIFT HOIST2 CRATE3 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+        5: DROP HOIST2 CRATE3 DEPOT1-1-2 DEPOT1-2-2 DEPOT1
+        6: MOVE HOIST0 DEPOT0-1-3 DEPOT0-2-3
+        7: DROP HOIST1 CRATE0 DEPOT0-2-2 LOADAREA DEPOT0
+        8: LIFT HOIST1 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        9: LIFT HOIST0 CRATE0 DEPOT0-2-2 DEPOT0-2-3 DEPOT0
+       10: DROP HOIST0 CRATE0 DEPOT0-1-3 DEPOT0-2-3 DEPOT0
+       11: DROP HOIST1 CRATE1 DEPOT0-2-2 LOADAREA DEPOT0
+       12: LIFT HOIST1 CRATE4 CONTAINER-1-0 LOADAREA CONTAINER1
+       13: DROP HOIST1 CRATE4 DEPOT1-2-3 LOADAREA DEPOT1
+       14: LIFT HOIST1 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+       15: LIFT HOIST2 CRATE4 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       16: DROP HOIST2 CRATE4 DEPOT1-2-1 DEPOT1-2-2 DEPOT1
+       17: LIFT HOIST0 CRATE1 DEPOT0-2-2 DEPOT0-2-3 DEPOT0
+       18: DROP HOIST1 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       19: LIFT HOIST1 CRATE5 CONTAINER-1-1 LOADAREA CONTAINER1
+       20: DROP HOIST1 CRATE5 DEPOT1-2-3 LOADAREA DEPOT1
+       21: LIFT HOIST1 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       22: MOVE HOIST0 DEPOT0-2-3 DEPOT0-2-2
+       23: MOVE HOIST0 DEPOT0-2-2 DEPOT0-1-2
+       24: DROP HOIST0 CRATE1 DEPOT0-1-1 DEPOT0-1-2 DEPOT0
+       25: DROP HOIST1 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 5322 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 246 facts and 1428 actions
+               0.00 seconds creating final representation with 228 relevant facts
+               0.00 seconds building connectivity graph
+               1.02 seconds searching, evaluating 16049 states, to a max depth of 15
+               1.02 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-17' defined
+ ... done.
+
+
+got 286 facts
+
+Cueing down from goal distance:   15 into depth [1]
+                                  14            [1]
+                                  13            [1][2][3][4][5][6]
+                                  12            [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: GO-OUT HOIST2 DEPOT1-2-3 LOADAREA
+        1: LIFT HOIST2 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        2: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        3: DROP HOIST2 CRATE0 DEPOT0-2-2 LOADAREA DEPOT0
+        4: LIFT HOIST2 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        5: LIFT HOIST0 CRATE0 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+        6: DROP HOIST0 CRATE0 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+        7: DROP HOIST2 CRATE1 DEPOT0-2-2 LOADAREA DEPOT0
+        8: LIFT HOIST2 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+        9: LIFT HOIST0 CRATE1 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+       10: DROP HOIST2 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       11: LIFT HOIST2 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+       12: MOVE HOIST1 DEPOT1-2-1 DEPOT1-2-2
+       13: DROP HOIST2 CRATE3 DEPOT1-2-3 LOADAREA DEPOT1
+       14: LIFT HOIST2 CRATE4 CONTAINER-1-0 LOADAREA CONTAINER1
+       15: LIFT HOIST1 CRATE3 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       16: DROP HOIST1 CRATE3 DEPOT1-1-2 DEPOT1-2-2 DEPOT1
+       17: DROP HOIST2 CRATE4 DEPOT1-2-3 LOADAREA DEPOT1
+       18: LIFT HOIST2 CRATE5 CONTAINER-1-1 LOADAREA CONTAINER1
+       19: LIFT HOIST1 CRATE4 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       20: DROP HOIST1 CRATE4 DEPOT1-2-1 DEPOT1-2-2 DEPOT1
+       21: DROP HOIST2 CRATE5 DEPOT1-2-3 LOADAREA DEPOT1
+       22: LIFT HOIST2 CRATE6 CONTAINER-1-2 LOADAREA CONTAINER1
+       23: LIFT HOIST1 CRATE5 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       24: MOVE HOIST1 DEPOT1-2-2 DEPOT1-2-3
+       25: MOVE HOIST1 DEPOT1-2-3 DEPOT1-1-3
+       26: DROP HOIST1 CRATE5 DEPOT1-1-4 DEPOT1-1-3 DEPOT1
+       27: DROP HOIST2 CRATE6 DEPOT1-2-3 LOADAREA DEPOT1
+       28: LIFT HOIST2 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       29: MOVE HOIST0 DEPOT0-2-1 DEPOT0-2-2
+       30: MOVE HOIST0 DEPOT0-2-2 DEPOT0-1-2
+       31: DROP HOIST0 CRATE1 DEPOT0-1-3 DEPOT0-1-2 DEPOT0
+       32: DROP HOIST2 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 7044 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 307 facts and 1872 actions
+               0.00 seconds creating final representation with 286 relevant facts
+               0.01 seconds building connectivity graph
+             111.99 seconds searching, evaluating 1065772 states, to a max depth of 17
+             112.00 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-18' defined
+ ... done.
+
+
+got 350 facts
+
+Cueing down from goal distance:   18 into depth [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17][18][19][20][21][22][23][24][25]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE HOIST1 DEPOT1-2-2 DEPOT1-2-3
+        1: GO-OUT HOIST1 DEPOT1-2-3 LOADAREA
+        2: LIFT HOIST1 CRATE4 CONTAINER-1-0 LOADAREA CONTAINER1
+        3: DROP HOIST1 CRATE4 DEPOT1-2-3 LOADAREA DEPOT1
+        4: LIFT HOIST1 CRATE0 CONTAINER-0-0 LOADAREA CONTAINER0
+        5: MOVE HOIST0 DEPOT0-1-1 DEPOT0-2-1
+        6: DROP HOIST1 CRATE0 DEPOT0-2-2 LOADAREA DEPOT0
+        7: LIFT HOIST1 CRATE1 CONTAINER-0-1 LOADAREA CONTAINER0
+        8: LIFT HOIST0 CRATE0 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+        9: DROP HOIST0 CRATE0 DEPOT0-1-1 DEPOT0-2-1 DEPOT0
+       10: DROP HOIST1 CRATE1 DEPOT0-2-2 LOADAREA DEPOT0
+       11: LIFT HOIST1 CRATE2 CONTAINER-0-2 LOADAREA CONTAINER0
+       12: LIFT HOIST0 CRATE1 DEPOT0-2-2 DEPOT0-2-1 DEPOT0
+       13: DROP HOIST1 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       14: MOVE HOIST2 DEPOT1-1-1 DEPOT1-2-1
+       15: MOVE HOIST2 DEPOT1-2-1 DEPOT1-2-2
+       16: LIFT HOIST1 CRATE5 CONTAINER-1-1 LOADAREA CONTAINER1
+       17: LIFT HOIST2 CRATE4 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       18: DROP HOIST2 CRATE4 DEPOT1-1-2 DEPOT1-2-2 DEPOT1
+       19: DROP HOIST1 CRATE5 DEPOT1-2-3 LOADAREA DEPOT1
+       20: LIFT HOIST1 CRATE6 CONTAINER-1-2 LOADAREA CONTAINER1
+       21: LIFT HOIST2 CRATE5 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       22: DROP HOIST2 CRATE5 DEPOT1-2-1 DEPOT1-2-2 DEPOT1
+       23: DROP HOIST1 CRATE6 DEPOT1-2-3 LOADAREA DEPOT1
+       24: LIFT HOIST1 CRATE7 CONTAINER-1-3 LOADAREA CONTAINER1
+       25: LIFT HOIST2 CRATE6 DEPOT1-2-3 DEPOT1-2-2 DEPOT1
+       26: MOVE HOIST2 DEPOT1-2-2 DEPOT1-2-3
+       27: MOVE HOIST2 DEPOT1-2-3 DEPOT1-1-3
+       28: DROP HOIST2 CRATE6 DEPOT1-1-4 DEPOT1-1-3 DEPOT1
+       29: DROP HOIST1 CRATE7 DEPOT1-2-3 LOADAREA DEPOT1
+       30: LIFT HOIST1 CRATE2 DEPOT0-2-2 LOADAREA DEPOT0
+       31: GO-IN HOIST1 LOADAREA DEPOT0-2-2
+       32: DROP HOIST1 CRATE2 DEPOT0-1-2 DEPOT0-2-2 DEPOT0
+       33: GO-OUT HOIST1 DEPOT0-2-2 LOADAREA
+       34: LIFT HOIST1 CRATE3 CONTAINER-0-3 LOADAREA CONTAINER0
+       35: MOVE HOIST0 DEPOT0-2-1 DEPOT0-2-2
+       36: MOVE HOIST0 DEPOT0-2-2 DEPOT0-2-3
+       37: DROP HOIST0 CRATE1 DEPOT0-1-3 DEPOT0-2-3 DEPOT0
+       38: DROP HOIST1 CRATE3 DEPOT0-2-2 LOADAREA DEPOT0
+     
+
+time spent:    0.00 seconds instantiating 9786 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 374 facts and 2580 actions
+               0.01 seconds creating final representation with 350 relevant facts
+               0.00 seconds building connectivity graph
+             692.84 seconds searching, evaluating 3590905 states, to a max depth of 25
+             692.85 seconds total time
+
+
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-19' defined
+ ... done.
+
+
+got 438 facts
+
+Cueing down from goal distance:   19 into depth [1]
+                                  18            [1]
+                                  17            [1][2][3][4][5][6][7][8][9][10][11][12]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-20' defined
+ ... done.
+
+
+got 516 facts
+
+Cueing down from goal distance:   22 into depth [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1][2][3][4][5]
+                                  18            [1][2][3][4][5][6][7][8][9][10][11]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-21' defined
+ ... done.
+
+
+got 646 facts
+
+Cueing down from goal distance:   24 into depth [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1][2][3][4][5][6]
+                                  20            [1][2][3][4][5][6][7][8][9][10]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-22' defined
+ ... done.
+
+
+got 740 facts
+
+Cueing down from goal distance:   25 into depth [1]
+                                  24            [1]
+                                  23            [1][2][3][4][5]
+                                  22            [1][2][3][4][5][6][7][8][9][10]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-23' defined
+ ... done.
+
+
+got 866 facts
+
+Cueing down from goal distance:   28 into depth [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1][2][3][4][5][6]
+                                  24            [1][2][3][4][5][6][7][8]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-24' defined
+ ... done.
+
+
+got 974 facts
+
+Cueing down from goal distance:   29 into depth [1]
+                                  28            [1]
+                                  27            [1][2][3][4][5]
+                                  26            [1][2][3][4][5][6][7][8]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-25' defined
+ ... done.
+
+
+got 1088 facts
+
+Cueing down from goal distance:   33 into depth [1]
+                                  32            [1]
+                                  31            [1]
+                                  30            [1]
+                                  29            [1][2][3][4][5][6][7][8]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-26' defined
+ ... done.
+
+
+got 1274 facts
+
+Cueing down from goal distance:   34 into depth [1]
+                                  33            [1]
+                                  32            [1]
+                                  31            [1][2][3][4][5]
+                                  30            [1][2][3][4][5][6][7]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-27' defined
+ ... done.
+
+
+got 1438 facts
+
+Cueing down from goal distance:   36 into depth [1]
+                                  35            [1]
+                                  34            [1]
+                                  33            [1][2][3][4][5][6][7]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-28' defined
+ ... done.
+
+
+got 1576 facts
+
+Cueing down from goal distance:   42 into depth [1]
+                                  37            [1]
+                                  36            [1]
+                                  35            [1][2][3][4][5]
+                                  34            [1][2][3][4][5]
+                                  33            [1][2][3][4][5][6][7]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-29' defined
+ ... done.
+
+
+got 1720 facts
+
+Cueing down from goal distance:   40 into depth [1]
+                                  39            [1]
+                                  38            [1]
+                                  37            [1][2][3][4][5][6]
+                                  36            [1][2][3][4][5][6][7]
+ff: parsing domain file
+domain 'STORAGE-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'STORAGE-30' defined
+ ... done.
+
+
+got 1870 facts
+
+Cueing down from goal distance:   41 into depth [1]
+                                  40            [1]
+                                  39            [1][2][3][4][5]
+                                  38            [1][2][3][4][5][6][7]

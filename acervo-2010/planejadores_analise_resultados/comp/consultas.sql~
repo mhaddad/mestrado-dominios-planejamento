@@ -1,0 +1,14 @@
+SELECT c.nome as caracterisitca,dc.valor as valor,d.nome as dominio FROM dominios_caracteristicas dc 
+INNER JOIN dominios d ON d.id=dc.dominio_id 
+INNER JOIN caracteristicas c ON c.id=dc.caracteristica_id 
+ORDER BY c.nome,dc.valor
+
+
+SELECT t.nome,p.nome from planejadores_tecnicas pt 
+INNER JOIN planejadores p ON p.id=pt.planejador_id 
+INNER JOIN tecnicas t ON t.id=pt.tecnica_id 
+ORDER BY t.nome
+
+
+
+
