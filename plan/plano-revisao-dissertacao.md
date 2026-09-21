@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 21/09/2026 |
-| Versão deste documento | 0.9 |
+| Versão deste documento | 0.10 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · próximas: Fase 1 e Fase 2 (em paralelo) |
 
 ---
@@ -365,7 +365,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Atividades**
 
-- [ ] Decidir a ferramenta de redação (abnTeX2/LaTeX, Word com modelo, ou Markdown com Pandoc) e confirmar com o autor a leitura de "ABTN2" como abnTeX2
+- [ ] Decidir a ferramenta de redação: Word com modelo ABNT/FEI, ou Markdown com Pandoc (sem LaTeX); testar a conversão com um capítulo curto e 5 a 10 referências
 - [ ] Conferir a edição vigente das normas ABNT e o manual de normalização da FEI
 - [ ] Redigir capítulos a partir dos entregáveis das fases anteriores
 - [ ] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências)
@@ -409,7 +409,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | | ⚪ |
 | 5 | Decidir o formato da nova versão | 0 | Matheus | 21/09/2026 | 🟢 dissertação revisada, ABNT |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | ⚪ |
-| 7 | Decidir a ferramenta de redação (abnTeX2 × Word × Pandoc) e confirmar "ABTN2" | 6 | Matheus | antes da Fase 6 | ⚪ |
+| 7 | Decidir a ferramenta de redação: Word × Markdown com Pandoc (sem LaTeX) | 6 | Matheus | antes da Fase 6; teste curto sugerido na Fase 1 | ⚪ |
 
 ---
 
@@ -426,7 +426,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | A revisão **não precisa manter a estrutura e o conteúdo de 2010**: pode ampliar e criar conteúdo novo. Cada expansão de escopo é registrada nesta seção | Definição do autor; controla o risco R1 sem impedir a evolução | 1–6 |
 | 21/09/2026 | O Obsidian não será usado no projeto; as notas de leitura ficam no repositório | Definição do autor | 0 |
 | 21/09/2026 | Formato da nova versão: dissertação revisada, padrão ABNT de formatação, citações e referências, e boas práticas acadêmicas brasileiras | Definição do autor | 0, 6 |
-| 21/09/2026 | "ABTN2" interpretado como abnTeX2 (a confirmar) | Provável referência à classe LaTeX que implementa a ABNT; muda a ferramenta de redação, não as normas | 6 |
+| 21/09/2026 | Padrão ABNT **sem LaTeX** (abnTeX2 descartado). Ferramenta de redação: Word ou Markdown com Pandoc, a decidir | Esclarecimento do autor | 6 |
 | 21/09/2026 | Variantes de 2010: Zeno-travel = IPC 2002 `zenotravel-strips-automatic`; Elevator = IPC 2000 `elevator-strips-simple-typed` (mais os 11 domínios identificados por conteúdo) | Autor confirmou as variantes identificadas; `automatic` e `typed` por consistência com os demais domínios | 0, 3 |
 | 21/09/2026 | Dataset de 2010 (incluindo as correções de Pathways e TPP) considerado conferido | Conferência manual do autor | 0 |
 | 21/09/2026 | Zeno-travel e Elevator: N = 20 instâncias cada (Zeno: conjunto inteiro; Elevator: as 20 primeiras de 150) | Definição do autor; leitura "20 primeiras" por analogia com o padrão do acervo | 0, 3 |
@@ -506,3 +506,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.7 | 21/09/2026 | N = 20 definido para Zeno-travel e Elevator; benchmarks totalmente mapeados |
 | 0.8 | 21/09/2026 | Dataset de 2010 conferido pelo autor; ação 2 concluída |
 | 0.9 | 21/09/2026 | Fase 0 concluída; formato definido (dissertação revisada, ABNT); Obsidian descartado; liberdade de escopo (não presa à estrutura de 2010); `redacao/README.md` com normas, retrato de 2010 e opções de ferramenta |
+| 0.10 | 21/09/2026 | Esclarecido: padrão ABNT sem LaTeX; abnTeX2 descartado; ferramenta de redação restrita a Word ou Markdown com Pandoc |

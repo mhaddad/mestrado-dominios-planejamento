@@ -7,7 +7,7 @@
 
 A nova versão será uma **dissertação revisada**, seguindo o **padrão ABNT** de formatação, citações e referências bibliográficas, além das boas práticas e recomendações acadêmicas do Brasil.
 
-> **A confirmar:** o autor escreveu "ABTN2". Interpretei como **abnTeX2**, o conjunto de classes e estilos LaTeX que implementa as normas da ABNT (classe `abntex2`, estilos de citação `abntex2cite`). Se a intenção foi só "padrão ABNT", sem LaTeX, a ferramenta de redação muda (ver "Ferramenta de redação"). As normas em si são as mesmas.
+> **Esclarecido pelo autor:** é o padrão **ABNT, sem LaTeX**. Não se usa abnTeX2. A ferramenta de redação é **Word** ou **Markdown com Pandoc** (ver "Ferramenta de redação").
 
 ### Normas de referência
 
@@ -82,13 +82,18 @@ Na proposta, os capítulos de "Planejadores" e "Domínios" de 2010 (3 e 4) alime
 
 ## Ferramenta de redação (a decidir antes da Fase 6)
 
-| Opção | Como funciona | Observações |
-|---|---|---|
-| **A. abnTeX2 (LaTeX)** | Capítulos em `.tex`; referências em `.bib` (exportado do Zotero) com estilo `abntex2cite`; compila para PDF | Casa com a leitura "ABTN2 = abnTeX2". As referências verificadas em `literatura/referencias/*.bib` entram direto. Exige ambiente LaTeX. |
-| **B. Word com modelo ABNT/FEI** | Capítulos em `.docx`; referências pelo Zotero + estilo ABNT | Igual ao formato de 2010. Menos reprodutível; o versionamento em Git é pior. |
-| **C. Markdown → Pandoc → uma das duas** | Capítulos em `.md` (como o plano previa), convertidos | Mantém o texto legível no Git; é preciso validar a saída contra a norma. |
+Sem LaTeX, restam duas opções. **Ainda não decidido.**
 
-Regras para qualquer opção: cada número do texto vem de execução reprodutível; cada referência foi verificada na fonte; o texto final é na voz do autor.
+| Opção | Como funciona | Vantagens | Cuidados |
+|---|---|---|---|
+| **A. Word com modelo ABNT/FEI** | Capítulos em `.docx`; citações e referências pelo plugin do Zotero para Word, com estilo ABNT | Mesmo ambiente de 2010; o Zotero atualiza citações e lista de referências dentro do Word; o modelo institucional se aplica direto | Versionamento em Git é pobre (`.docx` é binário); revisão de mudanças por diff é ruim; uso de IA sobre o texto exige exportar |
+| **B. Markdown → Pandoc → `.docx` (modelo ABNT/FEI)** | Capítulos em `.md` no repositório; o Pandoc converte para `.docx` usando um documento de referência com os estilos ABNT/FEI, e o `.bib` do Zotero com um estilo de citação ABNT (CSL) | Texto legível e versionável no Git; diff e revisão por trecho; casa com o fluxo com IA; cada número e referência rastreável | Exige montar o modelo de referência e validar a saída contra a norma; listas, sumário, capa e folhas pré-textuais podem precisar de ajuste manual no Word no final |
+
+`[A CONFIRMAR]` Existência e adequação de um estilo CSL para ABNT (NBR 6023 / 10520) na versão vigente. Precisa ser testado com algumas referências reais antes de decidir.
+
+**Sugestão (minha, não decisão):** a opção B para o **corpo do texto** (Markdown no Git, com o `.bib` do Zotero), com **montagem e acabamento final no Word**, onde ficam capa, folhas pré-textuais, sumário e listas. Isso aproveita o versionamento e a rastreabilidade do projeto sem abrir mão do modelo institucional. Um teste pequeno na Fase 1 (um capítulo curto convertido, com 5 a 10 referências) mostraria se o custo compensa.
+
+Em qualquer opção, o Zotero é a base das referências, e a exportação `.bib` verificada entra em `literatura/referencias/`. Regras para qualquer opção: cada número do texto vem de execução reprodutível; cada referência foi verificada na fonte; o texto final é na voz do autor.
 
 ## Pastas
 
