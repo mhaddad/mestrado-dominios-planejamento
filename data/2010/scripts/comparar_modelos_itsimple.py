@@ -16,11 +16,16 @@ Atributos não são comparados: na dissertação parecem incluir extremos de ass
 Saída: data/2010/conferencia/modelos_itsimple.csv e resumo no stdout.
 """
 import csv
+import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[3]
-EX = RAIZ / "acervo-2010/planejadores_analise_resultados/itSIMPLE/examples"
+# Uso: comparar_modelos_itsimple.py [pasta_com_xml] [sufixo_da_saida]
+#   sem argumentos: modelos do acervo (itSIMPLE 3.0.10, versão da época) -> modelos_itsimple.csv
+#   ex.: ... data/itsimple-domains 3_1_10  -> modelos_itsimple_3_1_10.csv (itSIMPLE 3.1.10, maio/2010)
+EX = RAIZ / (sys.argv[1] if len(sys.argv) > 1 else "acervo-2010/planejadores_analise_resultados/itSIMPLE/examples")
+SUFIXO = ("_" + sys.argv[2]) if len(sys.argv) > 2 else ""
 DADOS = RAIZ / "data/2010"
 
 CANDIDATOS = {
@@ -67,6 +72,9 @@ def main():
     print(f"{'domínio':12} {'arquivo':38} " + " ".join(f"{k[:5]:>11}" for k in COMPARAR) + "  acertos")
     for dom, arqs in CANDIDATOS.items():
         for a in arqs:
+            if not (EX / a).exists():
+                print(f"{dom:12} {a:38} (ausente nesta pasta)")
+                continue
             c = conta(EX / a)
             ok = 0
             cel = []
@@ -79,7 +87,7 @@ def main():
                 cel.append(f"{c[k]:>3} vs {int(alvo) if alvo is not None else '-':>2}{marca}")
             print(f"{dom:12} {a:38} " + " ".join(f"{x:>11}" for x in cel) + f"  {ok}/4")
             linhas.append([dom, a, *[c[k] for k in COMPARAR], c["classes_sem_aux"], *[ref[(dom, m)] for m in COMPARAR.values()], ok])
-    with open(DADOS / "conferencia/modelos_itsimple.csv", "w", newline="", encoding="utf-8") as f:
+    with open(DADOS / f"conferencia/modelos_itsimple{SUFIXO}.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, lineterminator="\n")
         w.writerow(["dominio", "arquivo", *[f"xml_{k}" for k in COMPARAR], "xml_classes_sem_aux", *[f"dissertacao_{k}" for k in COMPARAR], "acertos_de_4"])
         w.writerows(linhas)

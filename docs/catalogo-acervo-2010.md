@@ -119,6 +119,23 @@ Nenhuma delas foi convertida além de `contabilizacao_problemas.ods`. As demais 
 
 O restante da pasta `itSIMPLE/` (`itSIMPLE`, `itGraph`, `planning`, `languages`, `lib`, `resources`…) é a própria ferramenta, em Java.
 
+## Material adicional colocado pelo autor em `data/`
+
+Em 21/09/2026 o autor colocou `data/itsimple-domains/` (42 XML, 13 MB) e `data/itsimple-planners/` (16 arquivos, 15 MB). **Não estão versionados no Git** (decisão pendente; ver `MEMORY.md`). Comparados por hash e por conteúdo com o acervo:
+
+| Pasta | Versão | Relação com o acervo |
+|---|---|---|
+| `itsimple-domains/` | **itSIMPLE 3.1.10** (arquivos de 04/05/2010, depois da dissertação de 03/2010) | O acervo tem a **3.0.10**. Dos 41 arquivos em comum, **36 diferem só na tag `<version>`**; Gripper, Storage, Zeno-travel e GridDomainMetrics diferem só em **coordenadas de layout** de diagrama; `SettlersDomainv1.xml` é reformatado (86 mil linhas de diff). As contagens de classes, métodos, associações e generalizações são **idênticas** nos 19 arquivos comparados. Só na nova: `PaperReviewingDomainv1.xml`. Só no acervo: `BAMS`, `BlocksDomain_tf`, `GoldMinerDomainMetrics`, `OilSupplyDomainSequencialv1`, `PathwaysSimplePreferencesDomainv1`, `ZenoTravelDomainv2`. |
+| `itsimple-planners/` | Arquivos de 03/11/2010 | 14 dos 16 são **idênticos** aos de `itSIMPLE/myPlanners/`. Diferem `lprpg` e `mips-xxl2008` (não são planejadores da dissertação). |
+
+**Utilidade para as pendências da Fase 0:** nenhuma resolve uma pendência.
+
+- Modelos de **Pathways** e **TPP**: as contagens são idênticas na 3.1.10, então a divergência (associações 2 contra 4; generalizações 4 contra 2) não vem de versão do itSIMPLE.
+- **PDDL de Zeno-travel e Elevator:** os XML têm 1 problema de exemplo cada e nenhum PDDL embutido. Não recuperam os conjuntos de problemas. O itSIMPLE poderia gerar o PDDL do *domínio* a partir do modelo `[A CONFIRMAR]`, mas não os problemas.
+- Planejadores: nada novo, exceto a confirmação por hash das versões (ver `auditoria/condicoes-de-execucao-2010.md`).
+
+Uso possível: o `comparar_modelos_itsimple.py` aceita outra pasta (`... data/itsimple-domains 3_1_10`), e a saída dessa comparação está em `data/2010/conferencia/modelos_itsimple_3_1_10.csv`.
+
 ## O que foi excluído do versionamento
 
 Nada foi apagado do disco. O Git ignora: metadados `.svn` (32 diretórios), objetos compilados (`.o` × 69, `.pyc` × 24) e `.DS_Store`. São regeneráveis ou sem valor de pesquisa. O restante do acervo, inclusive binários de planejadores e arquivos `*~`, está versionado.
