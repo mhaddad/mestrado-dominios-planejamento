@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 21/09/2026 |
-| Versão deste documento | 0.8 |
-| Status geral | 🟡 Fase 0: critério de conclusão atendido; restam a decisão do formato e o Obsidian (adiado) |
+| Versão deste documento | 0.9 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · próximas: Fase 1 e Fase 2 (em paralelo) |
 
 ---
 
@@ -48,7 +48,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 | # | Fase | Objetivo | Duração estimada | Status | Início | Fim | Entregável principal |
 |---|---|---|---|---|---|---|---|
-| 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟡 | 21/09/2026 | | Acervo organizado + ambiente pronto |
+| 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas | ⚪ | | | Novo capítulo de fundamentos + base de referências |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (paralela à Fase 1) | ⚪ | | | Relatório de auditoria |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
@@ -120,8 +120,8 @@ Desdobramentos possíveis, não obrigatórios:
 | Leitura e extração estruturada de artigos | Claude com projetos e arquivos, NotebookLM |
 | Código, infraestrutura e experimentos | Claude Code, Fast Downward, Downward Lab, Unified Planning, contêineres (Apptainer/Docker) |
 | Análise de dados | Python (pandas, scikit-learn), notebooks |
-| Base de conhecimento e rastreabilidade | Obsidian (vault), Zotero |
-| Redação e revisão | Claude com as skills de estilo autoral, revisão humana |
+| Base de conhecimento e rastreabilidade | Notas de leitura em Markdown no repositório (`literatura/notas-de-leitura/`), Zotero para as referências (exportação `.bib` em `literatura/referencias/`) |
+| Redação e revisão | Claude com as skills de estilo autoral, revisão humana; formatação, citações e referências no padrão ABNT (ver `redacao/README.md`) |
 
 ---
 
@@ -139,8 +139,8 @@ Desdobramentos possíveis, não obrigatórios:
 - [x] Documentar como foram obtidos os dados da 5ª etapa do método (execuções fora das competições): máquina, limite de tempo, versões — `auditoria/condicoes-de-execucao-2010.md`; restam lacunas listadas lá
 - [x] Transcrever as tabelas da dissertação para CSV (dataset "2010") — feito por extração automática do docx, conferido contra o SQL; conferência manual pelo autor concluída em 21/09/2026
 - [x] Criar repositório (código + dados + este documento)
-- [ ] Criar estrutura no vault do Obsidian para notas de leitura — **adiado por decisão do autor (21/09/2026)**
-- [ ] Definir o formato da nova versão (monografia revisada, artigo, ou ambos) — **decisão do autor em aberto**
+- [x] ~~Criar estrutura no vault do Obsidian para notas de leitura~~ — **cancelado**: o Obsidian não será usado neste projeto (decisão do autor, 21/09/2026). As notas de leitura ficam no repositório, em `literatura/notas-de-leitura/`
+- [x] Definir o formato da nova versão — **dissertação revisada, padrão ABNT** (decisão do autor, 21/09/2026); ver `redacao/README.md`
 - [x] Conferência manual do dataset de 2010 pelo autor — concluída em 21/09/2026
 
 **Como a IA acelera:** transcrição das tabelas para CSV, criação da estrutura do repositório e de *templates* de notas.
@@ -191,7 +191,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Como a IA acelera:** geração de *strings* de busca, triagem inicial, extração estruturada de artigos, primeiras sínteses por eixo. Estimativa de redução: de 6–8 para 3–4 semanas.
 
-**Entregáveis:** base Zotero verificada · notas de leitura no Obsidian · síntese por eixo · rascunho do capítulo
+**Entregáveis:** base Zotero verificada · notas de leitura no repositório · síntese por eixo · rascunho do capítulo
 
 **Critério de conclusão:** todos os eixos com síntese e todas as referências citadas verificadas.
 
@@ -350,7 +350,9 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Objetivo:** produzir a nova versão e compartilhar com o orientador.
 
-**Estrutura proposta da nova versão**
+**Formato (definido em 21/09/2026):** dissertação revisada, seguindo o padrão ABNT de formatação, citações e referências, e as boas práticas e recomendações acadêmicas do Brasil. Detalhes, normas, retrato da versão de 2010 e opções de ferramenta em [redacao/README.md](../redacao/README.md).
+
+**Estrutura proposta da nova versão** (ponto de partida; o autor liberou reorganizar, ampliar e criar conteúdo novo: ver seção 10)
 
 1. Introdução — a pergunta em 2010 e hoje
 2. Fundamentos e estado da arte
@@ -363,15 +365,19 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Atividades**
 
+- [ ] Decidir a ferramenta de redação (abnTeX2/LaTeX, Word com modelo, ou Markdown com Pandoc) e confirmar com o autor a leitura de "ABTN2" como abnTeX2
+- [ ] Conferir a edição vigente das normas ABNT e o manual de normalização da FEI
 - [ ] Redigir capítulos a partir dos entregáveis das fases anteriores
 - [ ] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências)
 - [ ] Verificação final de todas as referências e números
 - [ ] Revisão de estilo na voz do autor
+- [ ] Elementos pré e pós-textuais (capa, folha de rosto, folha de aprovação, resumo e *abstract*, listas, sumário, referências) e conferência de formatação, citações e referências pela ABNT
+- [ ] Declaração do uso de IA no texto, conforme as regras da instituição
 - [ ] Preparar resumo executivo para o orientador
 - [ ] Enviar ao orientador (**Marco M3**)
 - [ ] Registrar retorno e próximos passos
 
-**Entregáveis:** nova versão do trabalho · resumo executivo · registro do retorno do orientador
+**Entregáveis:** dissertação revisada (padrão ABNT) · resumo executivo · registro do retorno do orientador
 
 **Critério de conclusão:** versão enviada e retorno registrado.
 
@@ -383,7 +389,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 | # | Risco | Probabilidade | Impacto | Mitigação |
 |---|---|---|---|---|
-| R1 | Expansão de escopo (a Fase 5 pode virar um projeto próprio) | Alta | Alto | Manter o piloto enxuto; decisões de produto só depois do piloto |
+| R1 | Expansão de escopo (a Fase 5 pode virar um projeto próprio; o autor liberou ampliar a revisão para além de 2010) | Alta | Alto | Manter o piloto enxuto; decisões de produto só depois do piloto; **registrar cada expansão na seção 10 com motivo e fase afetada** |
 | R2 | Referências inventadas ou erradas por IA | Alta | Alto | Princípio 1; verificação obrigatória na seção 13 |
 | R3 | Volatilidade dos LLMs torna resultados obsoletos | Alta | Médio | Congelar versões e datar resultados |
 | R4 | Planejadores antigos não compilam | Média | Médio | Usar imagens das IPCs; registrar o que não foi possível reproduzir |
@@ -399,10 +405,11 @@ Desdobramentos possíveis, não obrigatórios:
 |---|---|---|---|---|---|
 | 1 | Localizar modelos do itSIMPLE e planilhas originais | 0 | Matheus + IA | | 🟢 concluída (13 de 13 modelos; planilhas mapeadas) |
 | 2 | Transcrever tabelas da dissertação para CSV | 0 | IA + conferência de Matheus | 21/09/2026 | 🟢 concluída e conferida |
-| 3 | Criar repositório e estrutura no Obsidian | 0 | Matheus + IA | | 🟡 repositório criado; Obsidian adiado |
+| 3 | Criar repositório | 0 | Matheus + IA | 21/09/2026 | 🟢 concluída (Obsidian descartado) |
 | 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | | ⚪ |
-| 5 | Decidir o formato da nova versão | 0 | Matheus | | ⚪ |
+| 5 | Decidir o formato da nova versão | 0 | Matheus | 21/09/2026 | 🟢 dissertação revisada, ABNT |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | ⚪ |
+| 7 | Decidir a ferramenta de redação (abnTeX2 × Word × Pandoc) e confirmar "ABTN2" | 6 | Matheus | antes da Fase 6 | ⚪ |
 
 ---
 
@@ -416,7 +423,10 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | Repositório privado `mhaddad/mestrado-dominios-planejamento`, com estrutura por fase; acervo de 2010 em `acervo-2010/`, somente leitura | Separar material original do trabalho derivado; preservar rastreabilidade | 0 |
 | 21/09/2026 | Versionar o acervo de 2010 inteiro (cerca de 73 MB compactado), exceto `.svn`, `.o`, `.pyc` e `.DS_Store` | Cabe no GitHub sem LFS; os arquivos `*~` guardam scripts de execução úteis para documentar F6 | 0 |
 | 21/09/2026 | Benchmarks das IPCs e saídas brutas de execução não serão versionados (baixados/gerados por script) | Grandes e reproduzíveis | 0 |
-| 21/09/2026 | Estrutura no vault do Obsidian adiada; o autor fará depois | Definição do autor | 0 |
+| 21/09/2026 | A revisão **não precisa manter a estrutura e o conteúdo de 2010**: pode ampliar e criar conteúdo novo. Cada expansão de escopo é registrada nesta seção | Definição do autor; controla o risco R1 sem impedir a evolução | 1–6 |
+| 21/09/2026 | O Obsidian não será usado no projeto; as notas de leitura ficam no repositório | Definição do autor | 0 |
+| 21/09/2026 | Formato da nova versão: dissertação revisada, padrão ABNT de formatação, citações e referências, e boas práticas acadêmicas brasileiras | Definição do autor | 0, 6 |
+| 21/09/2026 | "ABTN2" interpretado como abnTeX2 (a confirmar) | Provável referência à classe LaTeX que implementa a ABNT; muda a ferramenta de redação, não as normas | 6 |
 | 21/09/2026 | Variantes de 2010: Zeno-travel = IPC 2002 `zenotravel-strips-automatic`; Elevator = IPC 2000 `elevator-strips-simple-typed` (mais os 11 domínios identificados por conteúdo) | Autor confirmou as variantes identificadas; `automatic` e `typed` por consistência com os demais domínios | 0, 3 |
 | 21/09/2026 | Dataset de 2010 (incluindo as correções de Pathways e TPP) considerado conferido | Conferência manual do autor | 0 |
 | 21/09/2026 | Zeno-travel e Elevator: N = 20 instâncias cada (Zeno: conjunto inteiro; Elevator: as 20 primeiras de 150) | Definição do autor; leitura "20 primeiras" por analogia com o padrão do acervo | 0, 3 |
@@ -495,3 +505,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.6 | 21/09/2026 | Variantes de Zeno-travel e Elevator confirmadas pelo autor; mapa final de benchmarks (`benchmarks_ipc_mapa_final.csv`) |
 | 0.7 | 21/09/2026 | N = 20 definido para Zeno-travel e Elevator; benchmarks totalmente mapeados |
 | 0.8 | 21/09/2026 | Dataset de 2010 conferido pelo autor; ação 2 concluída |
+| 0.9 | 21/09/2026 | Fase 0 concluída; formato definido (dissertação revisada, ABNT); Obsidian descartado; liberdade de escopo (não presa à estrutura de 2010); `redacao/README.md` com normas, retrato de 2010 e opções de ferramenta |

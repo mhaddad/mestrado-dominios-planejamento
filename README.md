@@ -29,13 +29,15 @@ A pergunta original: nenhum planejador é o melhor em todos os domínios, e cara
 
 | # | Fase | Status |
 |---|---|---|
-| 0 | Enquadramento e artefatos | 🟡 quase concluída |
+| 0 | Enquadramento e artefatos | 🟢 concluída |
 | 1 | Revisão de literatura assistida por IA | ⚪ |
 | 2 | Auditoria da versão original | ⚪ |
 | 3 | Infraestrutura e replicação experimental | ⚪ |
 | 4 | Camada LLM | ⚪ |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | ⚪ |
 | 6 | Redação e compartilhamento | ⚪ |
+
+**Produto final:** dissertação revisada, no padrão ABNT (ver [redacao/README.md](redacao/README.md)).
 
 O painel completo, com datas e entregáveis, fica no plano de trabalho. Este quadro só resume.
 
@@ -50,6 +52,6 @@ O painel completo, com datas e entregáveis, fica no plano de trabalho. Este qua
 
 ## O que não está neste repositório
 
-- **Notas de leitura no Obsidian** e **base Zotero**: vivem fora do Git. As exportações verificadas (BibTeX, resumos) entram em [literatura/referencias/](literatura/referencias/).
+- **Base Zotero**: vive fora do Git. A exportação verificada (BibTeX) entra em [literatura/referencias/](literatura/referencias/). As notas de leitura ficam no repositório, em [literatura/notas-de-leitura/](literatura/notas-de-leitura/).
 - **Benchmarks das IPCs** e **saídas brutas de execução**: grandes e reproduzíveis, ignorados pelo Git (ver `.gitignore`). Os scripts que os baixam e geram são versionados.
 - **Lixo do acervo de 2010**: metadados `.svn`, objetos compilados (`.o`, `.pyc`) e `.DS_Store`. Todo o resto foi preservado.
