@@ -61,6 +61,25 @@ FAMILIA = {  # diagrama UML de origem (Tabelas 5, 6 e 7)
 ORDEM_METRICAS = [m for f in ("casos_de_uso", "classes", "estados") for m in FAMILIA[f]]
 FAMILIA_DA_METRICA = {m: f for f, ms in FAMILIA.items() for m in ms}
 
+# Correções aprovadas pelo autor em 21/09/2026, com base nas figuras da dissertação (Figuras 26 e 27)
+# e nos modelos itSIMPLE. O valor publicado NÃO é sobrescrito: entra em `valor_corrigido`.
+# (dominio, metrica) -> (valor_corrigido, fonte, impacto_na_classe)
+CORRECOES = {
+    ("pathways", "Número total de Associações"): (
+        2,
+        "Figura 27 e PathwaysDomainv1.xml mostram 2 associações (synthesisReaction e next); a Tabela 9 diz 4",
+        "Classe publicada: Médio. O valor 2 fica abaixo de todos os valores 'Baixo' observados (3); "
+        "como a classe é monotônica com o valor nas 10 linhas, a classe passa provavelmente a Baixo "
+        "[inferência]. Recalcular junto com o método de discretização (Fase 3).",
+    ),
+    ("tpp", "Número total de Generalização"): (
+        4,
+        "Figura 26 e TPPPropositionalDomainv1.xml mostram 4 pares filho-pai; a Tabela 9 diz 2",
+        "Classe publicada: Médio. O valor 4 tem classe Médio em Logistics; sem mudança de classe "
+        "[inferência]. Recalcular junto com o método de discretização (Fase 3).",
+    ),
+}
+
 # linhas de cabeçalho repetidas no meio das tabelas por quebra de página
 CABECALHOS_REPETIDOS = {"Métricas / Domínios", "Técnicas / Planejadores"}
 
@@ -143,9 +162,14 @@ def metricas():
             saida[(slug, linha[0].strip())] = [num(linha[1]), linha[2].strip()]
     papel = {v[0]: v[2] for v in DOMINIOS.values()}
     ordem_dom = [v[0] for v in DOMINIOS.values()]
-    linhas = [[d, papel[d], m, fmt(saida[(d, m)][0]), saida[(d, m)][1]]
+    linhas = [[d, papel[d], m, fmt(saida[(d, m)][0]), saida[(d, m)][1],
+               CORRECOES[(d, m)][0] if (d, m) in CORRECOES else ""]
               for d in ordem_dom for m in ORDEM_METRICAS]
-    grava("metricas_dominios.csv", ["dominio", "papel", "metrica", "valor", "classe"], linhas)
+    grava("metricas_dominios.csv", ["dominio", "papel", "metrica", "valor", "classe", "valor_corrigido"], linhas)
+    grava("correcoes_2010.csv",
+          ["dominio", "metrica", "valor_publicado", "valor_corrigido", "fonte", "impacto_na_classe", "aprovado_por", "data"],
+          [[d, m, fmt(saida[(d, m)][0]), v, fonte, impacto, "autor", "21/09/2026"]
+           for (d, m), (v, fonte, impacto) in CORRECOES.items()])
 
 
 # --- 3. eficiência dos planejadores (domínios de treino) -------------------

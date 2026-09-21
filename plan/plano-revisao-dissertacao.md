@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 21/09/2026 |
-| Versão deste documento | 0.4 |
+| Versão deste documento | 0.5 |
 | Status geral | 🟡 Fase 0 quase concluída (restam itens que dependem do autor) |
 
 ---
@@ -156,6 +156,8 @@ Desdobramentos possíveis, não obrigatórios:
 - 21/09/2026 — **Condições de execução (F6)** respondidas em `auditoria/condicoes-de-execucao-2010.md`: 8 máquinas Core 2 Duo 2,5 GHz / 4 GB / Ubuntu 9.04, timeout de 20 min, ~2.000 execuções. 38 dos 100 pares de treino vêm de competição e 62 de execução própria.
 - 21/09/2026 — **Modelos itSIMPLE:** 11 de 13 batem 4/4 nas métricas comparáveis (com exclusão das classes auxiliares `Utility`/`Global`). Pathways e TPP foram identificados comparando as Figuras 26 e 27 da dissertação com o XML: figura e XML concordam entre si e discordam da tabela (Pathways: 4 associações contra 2; TPP: 2 generalizações contra 4).
 - 21/09/2026 — 10 achados para a auditoria em `auditoria/achados-fase0.md` (rótulo invertido de "casos de uso por atores", exclusão de classes auxiliares, Elevator inconsistente, entre outros).
+- 21/09/2026 — **Benchmarks:** os PDDL do acervo foram identificados nas IPCs 1998–2008 (`potassco/pddl-instances`, commit `cf19edf`): 10 domínios 100% idênticos, Gripper 19/20 equivalentes (gerado localmente). Zeno-travel (IPC 2002) e Elevator (IPC 2000) existem no repositório; **variante e subconjunto usados em 2010 a confirmar pelo autor**. Ver `docs/benchmarks-ipc-ate-2008.md`.
+- 21/09/2026 — **Correções aprovadas pelo autor** (Pathways/Associações 4→2; TPP/Generalização 2→4), em `data/2010/correcoes_2010.csv`. As classes Alto/Médio/Baixo devem ser recalculadas na Fase 3.
 - Zeno-travel e Elevator não têm PDDL no acervo, só modelos UML.
 
 ---
@@ -415,6 +417,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | Versionar o acervo de 2010 inteiro (cerca de 73 MB compactado), exceto `.svn`, `.o`, `.pyc` e `.DS_Store` | Cabe no GitHub sem LFS; os arquivos `*~` guardam scripts de execução úteis para documentar F6 | 0 |
 | 21/09/2026 | Benchmarks das IPCs e saídas brutas de execução não serão versionados (baixados/gerados por script) | Grandes e reproduzíveis | 0 |
 | 21/09/2026 | Estrutura no vault do Obsidian adiada; o autor fará depois | Definição do autor | 0 |
+| 21/09/2026 | Usar as contagens tiradas das figuras (Pathways/Associações = 2; TPP/Generalização = 4) como valores corrigidos, preservando o publicado | Autor conferiu as figuras e aprovou | 0 |
+| 21/09/2026 | O repositório `potassco/pddl-instances` (commit `cf19edf`) é a fonte dos benchmarks das IPCs até 2014; edições posteriores a definir | Indicado pelo autor; cobre os domínios da dissertação | 0, 3 |
 | 21/09/2026 | Manter memória de execução em `MEMORY.md` na raiz, para retomada entre sessões e entre agentes | Fases 1–6 serão executadas em sessões separadas | 0 |
 | 21/09/2026 | Fonte de verdade do dataset de 2010 = tabelas publicadas na dissertação; `script.sql` e planilhas só para conferência | O SQL tem blocos repetidos, versão anterior da taxonomia e fragmento truncado | 0 |
 
@@ -427,7 +431,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | 0 | Claude | Leitura da dissertação, diagnóstico inicial e elaboração deste plano | Revisão do autor pendente |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Reorganização do repositório, criação da estrutura por fase, templates e catálogo do acervo de 2010 (`docs/catalogo-acervo-2010.md`) | Contagens e achados conferidos por comando no disco; catálogo pendente de revisão do autor |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Extração do texto e das 44 tabelas do docx; construção do dataset de 2010 em CSV; conferência contra `script.sql`, planilhas e XML do itSIMPLE; documentação das condições de execução; `MEMORY.md` | Conferência automática entre fontes independentes (SQL, planilha, XML); duas leituras iniciais erradas foram detectadas e corrigidas. **Conferência manual do autor pendente** |
-| 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Leitura visual das Figuras 26 e 27 (diagramas de classes de TPP e Pathways) para identificar os modelos itSIMPLE; avaliação das pastas `itsimple-*` | Figuras lidas e conferidas contra o XML; contagens automáticas reproduzíveis por script. **Leitura visual das figuras: revisão do autor recomendada** |
+| 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Leitura visual das Figuras 26 e 27 (diagramas de classes de TPP e Pathways) para identificar os modelos itSIMPLE; avaliação das pastas `itsimple-*` | Figuras lidas e conferidas contra o XML; contagens automáticas reproduzíveis por script. **Leitura visual das figuras: confirmada pelo autor em 21/09/2026** |
+| 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Comparação de conteúdo entre os PDDL do acervo e o repositório `potassco/pddl-instances` (IPCs 1998–2008); construção do script e do documento | Correspondências verificadas por comparação de conteúdo e reproduzíveis por script (repositório externo em commit fixo). Variantes de Zeno-travel e Elevator: hipóteses, a confirmar |
 
 ---
 
@@ -483,3 +488,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.2 | 21/09/2026 | Repositório criado e estruturado; catálogo do acervo de 2010; achado de que `comp/script.sql` contém o dataset de 2010 (ação 2 da Fase 0 muda de transcrição para exportação e conferência); pendências da Fase 0 em `docs/catalogo-acervo-2010.md` |
 | 0.3 | 21/09/2026 | Fase 0 executada: dataset de 2010 em CSV com scripts e conferência; condições de execução (F6) documentadas; modelos itSIMPLE identificados (11 de 13); achados para a auditoria; `MEMORY.md` criado; Obsidian adiado; ações e decisões atualizadas |
 | 0.4 | 21/09/2026 | Modelos itSIMPLE de Pathways e TPP identificados pelas figuras da dissertação (13 de 13); achados G11–G13; mapa `modelos_itsimple_2010.csv` |
+| 0.5 | 21/09/2026 | Benchmarks das IPCs até 2008 mapeados (repositório `potassco/pddl-instances`); correções das métricas de Pathways e TPP aprovadas; achados G14–G17 |

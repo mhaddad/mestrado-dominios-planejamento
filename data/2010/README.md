@@ -11,7 +11,10 @@ Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual amo
 | `dominios.csv` | 13 | 10 domínios de treino + 3 de validação; pasta correspondente no acervo | — |
 | `planejadores.csv` | 10 | Planejadores; pasta correspondente em `comp/planners/` | — |
 | `metricas.csv` | 17 | As 17 métricas e o diagrama UML de origem | 5, 6, 7 |
-| `metricas_dominios.csv` | 221 | Valor bruto e classe (Baixo/Médio/Alto) de cada métrica em cada domínio (13 × 17) | 8–11, 26, 32, 38 |
+| `metricas_dominios.csv` | 221 | Valor bruto, classe (Baixo/Médio/Alto) e `valor_corrigido` (vazio, exceto nas 2 correções abaixo) de cada métrica em cada domínio (13 × 17) | 8–11, 26, 32, 38 |
+| `correcoes_2010.csv` | 2 | Correções aprovadas pelo autor em 21/09/2026: Pathways/Associações 4→2 e TPP/Generalização 2→4, com a fonte e o impacto provável na classe. O valor publicado não é sobrescrito. | 9, Figuras 26 e 27 |
+| `benchmarks_ipc.csv` | 34 | De qual IPC e variante (repositório `potassco/pddl-instances`) vieram os problemas de cada domínio; ver [docs/benchmarks-ipc-ate-2008.md](../../docs/benchmarks-ipc-ate-2008.md) | — |
+| `benchmarks_ipc_instancias.csv` | 425 | Um registro por arquivo PDDL do acervo, com a instância correspondente da IPC | — |
 | `eficiencia_planejadores.csv` | 100 | Por planejador × domínio de treino: eficiência (competição e completa, em %), nota 0–10, origem do dado | 12–17 |
 | `planejadores_tecnicas.csv` | 47 | Técnicas de cada planejador (formato longo) | 2, 3, 4 |
 | `validacao_ranking.csv` | 30 | Nos 3 domínios de validação: posição e média propostas pelo método × posição e nota reais | 30, 31, 36, 37, 42, 43 |
@@ -36,6 +39,10 @@ uv venv .venv --python 3.12 && uv pip install -r requirements.txt
 .venv/bin/python data/2010/scripts/conferir_dataset_2010.py      # docx x script.sql
 .venv/bin/python data/2010/scripts/comparar_modelos_itsimple.py  # docx x XML do itSIMPLE (todos os candidatos)
 .venv/bin/python data/2010/scripts/mapear_modelos_itsimple.py    # mapa final domínio -> modelo
+# benchmarks das IPCs: precisa do repositório externo (não versionado aqui; commit fixo)
+git clone https://github.com/potassco/pddl-instances.git /caminho/pddl-instances
+git -C /caminho/pddl-instances checkout cf19edf7c53d1540ddbb396c642595e0926ee552
+.venv/bin/python data/2010/scripts/mapear_benchmarks_ipc.py /caminho/pddl-instances
 ```
 
 ## Resultado da conferência
@@ -49,6 +56,7 @@ Detalhe em [conferencia/conferencia_sql.md](conferencia/conferencia_sql.md).
 | Notas: dissertação × SQL | 100/100 iguais |
 | Planejador × técnica: Tabela 4 × matriz das Tabelas 2–3 | 47/47 iguais |
 | Planejador × técnica: dissertação × SQL | **Diferem** (o SQL é uma versão anterior da taxonomia; ver abaixo) |
+| Problemas PDDL do acervo × instâncias das IPCs 1998–2008 | 10 domínios com 100% idênticos; Gripper 19/20 equivalentes; pastas `Strips/` de Pathways, Pipes World e TPP idênticas às variantes `-propositional-strips` da IPC 2006 |
 | Modelos itSIMPLE × tabelas (classes, métodos, associações, generalizações) | 11 de 13 domínios batem 4/4; Pathways (associações) e TPP (generalizações) divergem, com as figuras da dissertação concordando com o XML (achados G11, G12) |
 | Consistência interna: casos de uso = métodos = ações | 12 de 13 domínios (exceção: Elevator, é da própria dissertação) |
 | Eficiência: planilha `contabilizacao_problemas.ods` × dissertação | Concorda em todos os 63 pares em que a planilha tem valor (tolerância de 1 p.p.); 2 lacunas reais (Depots × LPG, Driverlog × LPG) |

@@ -62,7 +62,7 @@ Detalhes e arquivos de divergência: [data/2010/conferencia/](../data/2010/confe
 | `tpp` | 91 | TPP | 91 MB |
 | `storage` | 31 | Storage | Domínio de validação `[A CONFIRMAR]` |
 
-Os 10 primeiros correspondem aos 10 domínios de treino. **Não há pasta de PDDL para Zeno-travel nem Elevator**, os outros dois domínios de validação citados no plano. Só existem os modelos UML no itSIMPLE. `[FATO]`
+Os 10 primeiros correspondem aos 10 domínios de treino. **Não há pasta de PDDL para Zeno-travel nem Elevator**, os outros dois domínios de validação citados no plano; só existem os modelos UML no itSIMPLE. `[FATO]` Os PDDL dos 11 domínios que existem aqui foram identificados nas IPCs de 1998–2008, e os de Zeno-travel e Elevator existem no repositório `potassco/pddl-instances`: ver [benchmarks-ipc-ate-2008.md](benchmarks-ipc-ate-2008.md).
 
 ## Planejadores (`comp/planners/`)
 
@@ -145,6 +145,6 @@ Nada foi apagado do disco. O Git ignora: metadados `.svn` (32 diretórios), obje
 ## Pendências que restam (Fase 0)
 
 - [ ] **Conferência manual amostral** do dataset pelo autor (Tabelas 8–9, 26, 32, 38 têm uma só fonte).
-- [ ] Localizar (ou declarar ausentes) os PDDL de **Zeno-travel** e **Elevator**.
+- [ ] **Zeno-travel** e **Elevator**: os PDDL existem no repositório das IPCs (ver [benchmarks-ipc-ate-2008.md](benchmarks-ipc-ate-2008.md)); falta o autor **confirmar a variante** usada em 2010.
 - [ ] Reconstruir o que ainda falta das condições de execução: ver `auditoria/condicoes-de-execucao-2010.md`.
 - [ ] Converter as abas de `Análise dos resultados.xls` e `caracteristicas_tecnicas.xls` quando a Fase 3 precisar reproduzir o método de 2010.
