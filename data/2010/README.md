@@ -15,9 +15,11 @@ Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual amo
 | `eficiencia_planejadores.csv` | 100 | Por planejador × domínio de treino: eficiência (competição e completa, em %), nota 0–10, origem do dado | 12–17 |
 | `planejadores_tecnicas.csv` | 47 | Técnicas de cada planejador (formato longo) | 2, 3, 4 |
 | `validacao_ranking.csv` | 30 | Nos 3 domínios de validação: posição e média propostas pelo método × posição e nota reais | 30, 31, 36, 37, 42, 43 |
+| `modelos_itsimple_2010.csv` | 13 | Modelo itSIMPLE (3.0.10, do acervo) que corresponde a cada domínio, com as contagens do XML ao lado das da tabela e o status da conferência | 8–9, 26, 32, 38 |
+| `figuras/` | 2 | Figuras 26 (TPP) e 27 (Pathways) da dissertação, usadas para identificar os modelos | 26, 27 |
 | `problemas_resolvidos.csv` | 110 | Nº de problemas resolvidos por planejador × domínio (inclui Storage), da planilha | — (base das Tabelas 14–15) |
 | `extraido/` | — | Texto integral (`texto.md`) e as 44 tabelas do docx, uma por CSV, sem tratamento | 1–44 |
-| `conferencia/` | — | Relatório de conferência contra o SQL e contra os modelos itSIMPLE | — |
+| `conferencia/` | — | Relatório de conferência contra o SQL e contra os modelos itSIMPLE. `modelos_itsimple_3_1_10.csv` é registro histórico: a entrada (pasta `itsimple-domains`) foi removida e o arquivo não é regenerado pelos scripts | — |
 | `scripts/` | — | Scripts que geram tudo acima | — |
 
 Convenções: UTF-8, fim de linha LF, vírgula, ponto decimal, célula vazia = dado ausente. Eficiência em pontos percentuais (`25` = 25%). Domínios em *slug* (`blocksworld`, `logistics`, `pipesworld`…). Planejadores com grafia única (`Fast Downward`, `SATPlan`, `MaxPlan`).
@@ -32,7 +34,8 @@ uv venv .venv --python 3.12 && uv pip install -r requirements.txt
 .venv/bin/python data/2010/scripts/construir_dataset_2010.py     # extraido/ -> CSVs
 .venv/bin/python data/2010/scripts/extrair_contabilizacao.py     # planilha .ods -> problemas_resolvidos.csv
 .venv/bin/python data/2010/scripts/conferir_dataset_2010.py      # docx x script.sql
-.venv/bin/python data/2010/scripts/comparar_modelos_itsimple.py  # docx x XML do itSIMPLE
+.venv/bin/python data/2010/scripts/comparar_modelos_itsimple.py  # docx x XML do itSIMPLE (todos os candidatos)
+.venv/bin/python data/2010/scripts/mapear_modelos_itsimple.py    # mapa final domínio -> modelo
 ```
 
 ## Resultado da conferência
@@ -46,6 +49,7 @@ Detalhe em [conferencia/conferencia_sql.md](conferencia/conferencia_sql.md).
 | Notas: dissertação × SQL | 100/100 iguais |
 | Planejador × técnica: Tabela 4 × matriz das Tabelas 2–3 | 47/47 iguais |
 | Planejador × técnica: dissertação × SQL | **Diferem** (o SQL é uma versão anterior da taxonomia; ver abaixo) |
+| Modelos itSIMPLE × tabelas (classes, métodos, associações, generalizações) | 11 de 13 domínios batem 4/4; Pathways (associações) e TPP (generalizações) divergem, com as figuras da dissertação concordando com o XML (achados G11, G12) |
 | Consistência interna: casos de uso = métodos = ações | 12 de 13 domínios (exceção: Elevator, é da própria dissertação) |
 | Eficiência: planilha `contabilizacao_problemas.ods` × dissertação | Concorda em todos os 63 pares em que a planilha tem valor (tolerância de 1 p.p.); 2 lacunas reais (Depots × LPG, Driverlog × LPG) |
 

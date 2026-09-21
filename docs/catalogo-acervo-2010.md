@@ -106,22 +106,24 @@ Nenhuma delas foi convertida além de `contabilizacao_problemas.ods`. As demais 
 
 ## Modelos itSIMPLE
 
-`itSIMPLE/examples/` tem 47 modelos `.xml` (UML.P). Para descobrir quais correspondem à medição de 2010, `data/2010/scripts/comparar_modelos_itsimple.py` conta classes, métodos, associações e generalizações direto do XML e compara com as Tabelas 8–9, 26, 32 e 38. Resultado em [data/2010/conferencia/modelos_itsimple.csv](../data/2010/conferencia/modelos_itsimple.csv).
+`itSIMPLE/examples/` tem 47 modelos `.xml` (UML.P, itSIMPLE 3.0.10). O mapa final domínio → modelo, com a evidência, está em [data/2010/modelos_itsimple_2010.csv](../data/2010/modelos_itsimple_2010.csv) (gerado por `mapear_modelos_itsimple.py`). Os 13 domínios têm modelo identificado:
 
 | Situação | Domínio → arquivo |
 |---|---|
-| **4/4 métricas batem** `[FATO]` | Blocks World → `BlocksDomainv1.xml` · Depots → `DepotDomain.xml`\* · Driver Log → `DriverLogDomain.xml`\* · Gripper → `GripperDomainv1.xml` · Logistics → `LogisticDomainv1.xml` · Mystery → `MysteryDomainv1.xml` · Pipesworld → `PipesworldDomainv1.xml` · Satellite → `SatelliteDomainv1.xml`\* · Storage → `StorageDomainv1.xml` · Zeno-travel → `ZenoTravelDomainv1.xml` · Elevator → `ElevatorDomainv1.xml` |
-| **3/4, sem correspondência exata** | Pathways → `PathwaysDomainv1.xml` ou `PathwaysSimplePreferencesDomainv1.xml` (contagens idênticas; diferença nas associações: 2 no XML contra 4 na Tabela 8) · TPP → `TPPPropositionalDomainv1.xml` (generalizações: 4 no XML contra 2) |
+| **4/4 métricas comparáveis batem** `[FATO]` | Blocks World → `BlocksDomainv1.xml` · Depots → `DepotDomain.xml`\* · Driver Log → `DriverLogDomain.xml`\* · Gripper → `GripperDomainv1.xml` · Logistics → `LogisticDomainv1.xml` · Mystery → `MysteryDomainv1.xml` · Pipesworld → `PipesworldDomainv1.xml` · Satellite → `SatelliteDomainv1.xml`\* · Storage → `StorageDomainv1.xml` · Zeno-travel → `ZenoTravelDomainv1.xml` · Elevator → `ElevatorDomainv1.xml` |
+| **Identificado pela figura, com uma discrepância na tabela** | Pathways → `PathwaysDomainv1.xml` (Tabela 9: 4 associações; figura e XML: 2; achado G11) · TPP → `TPPPropositionalDomainv1.xml` (Tabela 9: 2 generalizações; figura e XML: 4; achado G12) |
 
-\* Só bate com a exclusão das classes auxiliares `Utility` (ou `Global`, no Satellite), o que sugere que a contagem manual de 2010 as ignorou (achado G2).
+\* Só bate com a exclusão das classes auxiliares `Utility` (ou `Global`, no Satellite): achado G2.
 
-**Cautela.** Só 4 das 17 métricas são comparáveis por contagem direta, e o modelo que acompanha o itSIMPLE pode ter evoluído depois de 2009. Coincidir em 4/4 é forte indício, não prova. As contagens de estados, ações de entrada/saída e transições não foram comparadas.
+**Como Pathways e TPP foram resolvidos.** As contagens automáticas não bastavam. Comparei as Figuras 26 e 27 da dissertação (`data/2010/figuras/`) com o XML. No TPP, a figura tem a classe `Level`, que só existe na versão *Propositional*. No Pathways, a figura tem as mesmas 6 classes, 2 associações, 2 generalizações e as 5 ações do `Agent` que o XML. Nos dois casos, **a figura da dissertação concorda com o XML e discorda da tabela**, o que indica erro de contagem manual e não modelo errado `[HIPÓTESE]`. `PathwaysSimplePreferencesDomainv1.xml` tem contagens idênticas às da versão base e não se distingue pela figura; foi escolhida a base.
+
+**Cautela.** Só 4 das 17 métricas são comparáveis por contagem direta, e a métrica "Agregação" não é conferível pelo XML (achado G13). Estados, ações de entrada/saída e transições não foram comparados. O modelo do acervo pode ter evoluído depois da medição de 2009.
 
 O restante da pasta `itSIMPLE/` (`itSIMPLE`, `itGraph`, `planning`, `languages`, `lib`, `resources`…) é a própria ferramenta, em Java.
 
-## Material adicional colocado pelo autor em `data/`
+## Material adicional avaliado e descartado (`itsimple-domains`, `itsimple-planners`)
 
-Em 21/09/2026 o autor colocou `data/itsimple-domains/` (42 XML, 13 MB) e `data/itsimple-planners/` (16 arquivos, 15 MB). **Não estão versionados no Git** (decisão pendente; ver `MEMORY.md`). Comparados por hash e por conteúdo com o acervo:
+Em 21/09/2026 o autor colocou `data/itsimple-domains/` (42 XML) e `data/itsimple-planners/` (16 arquivos). Foram comparados por hash e conteúdo com o acervo, **não foram versionados e o autor os removeu do disco**. O registro fica porque as conclusões continuam valendo:
 
 | Pasta | Versão | Relação com o acervo |
 |---|---|---|
@@ -134,7 +136,7 @@ Em 21/09/2026 o autor colocou `data/itsimple-domains/` (42 XML, 13 MB) e `data/i
 - **PDDL de Zeno-travel e Elevator:** os XML têm 1 problema de exemplo cada e nenhum PDDL embutido. Não recuperam os conjuntos de problemas. O itSIMPLE poderia gerar o PDDL do *domínio* a partir do modelo `[A CONFIRMAR]`, mas não os problemas.
 - Planejadores: nada novo, exceto a confirmação por hash das versões (ver `auditoria/condicoes-de-execucao-2010.md`).
 
-Uso possível: o `comparar_modelos_itsimple.py` aceita outra pasta (`... data/itsimple-domains 3_1_10`), e a saída dessa comparação está em `data/2010/conferencia/modelos_itsimple_3_1_10.csv`.
+O `comparar_modelos_itsimple.py` aceita outra pasta de XML e um sufixo de saída (a comparação com a 3.1.10 está em `data/2010/conferencia/modelos_itsimple_3_1_10.csv`).
 
 ## O que foi excluído do versionamento
 
@@ -142,7 +144,6 @@ Nada foi apagado do disco. O Git ignora: metadados `.svn` (32 diretórios), obje
 
 ## Pendências que restam (Fase 0)
 
-- [ ] Modelos itSIMPLE de **Pathways** e **TPP**: sem correspondência exata. Verificar pelos diagramas da dissertação (Figuras) ou perguntar.
 - [ ] **Conferência manual amostral** do dataset pelo autor (Tabelas 8–9, 26, 32, 38 têm uma só fonte).
 - [ ] Localizar (ou declarar ausentes) os PDDL de **Zeno-travel** e **Elevator**.
 - [ ] Reconstruir o que ainda falta das condições de execução: ver `auditoria/condicoes-de-execucao-2010.md`.
