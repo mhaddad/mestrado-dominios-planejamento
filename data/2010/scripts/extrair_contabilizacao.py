@@ -35,7 +35,7 @@ def main():
             pct_v = (0.0 if pd.isna(pct) else float(pct))
             linhas.append([dom, pl, total, resolvidos, round(pct_v, 2), vazio])
     with open(DADOS / "problemas_resolvidos.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["dominio", "planejador", "total_problemas", "resolvidos", "pct_planilha", "celula_vazia"])
         w.writerows(linhas)
     print(f"problemas_resolvidos.csv: {len(linhas)} linhas")

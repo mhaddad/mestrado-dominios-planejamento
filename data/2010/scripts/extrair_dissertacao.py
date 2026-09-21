@@ -54,7 +54,7 @@ def main():
             linhas = celulas(bloco)
             nome = f"tabela_{n_tab:02d}.csv"
             with open(SAIDA / nome, "w", newline="", encoding="utf-8") as f:
-                csv.writer(f).writerows(linhas)
+                csv.writer(f, lineterminator="\n").writerows(linhas)
             indice.append([n_tab, nome, len(linhas), len(linhas[0]) if linhas else 0, ultimo_par[:90]])
             md.append(f"[[TABELA {n_tab:02d}: {len(linhas)} linhas x {len(linhas[0]) if linhas else 0} colunas]]")
             for l in linhas:
@@ -62,7 +62,7 @@ def main():
             md.append("")
     (SAIDA / "texto.md").write_text("\n".join(md), encoding="utf-8")
     with open(SAIDA / "indice_tabelas.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["indice_fisico", "arquivo", "linhas", "colunas", "paragrafo_anterior"])
         w.writerows(indice)
     print(f"{n_tab} tabelas; {len(md)} linhas de texto -> {SAIDA}")

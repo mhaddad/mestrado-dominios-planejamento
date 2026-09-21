@@ -61,7 +61,7 @@ def sem_acento(s):
 
 def grava(nome, cab, linhas):
     with open(SAIDA / nome, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(cab)
         w.writerows(linhas)
 

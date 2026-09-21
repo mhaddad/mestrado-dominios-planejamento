@@ -80,7 +80,7 @@ def main():
             print(f"{dom:12} {a:38} " + " ".join(f"{x:>11}" for x in cel) + f"  {ok}/4")
             linhas.append([dom, a, *[c[k] for k in COMPARAR], c["classes_sem_aux"], *[ref[(dom, m)] for m in COMPARAR.values()], ok])
     with open(DADOS / "conferencia/modelos_itsimple.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["dominio", "arquivo", *[f"xml_{k}" for k in COMPARAR], "xml_classes_sem_aux", *[f"dissertacao_{k}" for k in COMPARAR], "acertos_de_4"])
         w.writerows(linhas)
 

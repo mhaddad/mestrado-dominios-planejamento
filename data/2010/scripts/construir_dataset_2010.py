@@ -90,7 +90,7 @@ def fmt(v):
 
 def grava(nome, cabecalho, linhas):
     with open(SAIDA / nome, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(cabecalho)
         w.writerows(linhas)
     print(f"{nome}: {len(linhas)} linhas")

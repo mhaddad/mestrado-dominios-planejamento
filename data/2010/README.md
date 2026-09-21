@@ -20,7 +20,7 @@ Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual amo
 | `conferencia/` | — | Relatório de conferência contra o SQL e contra os modelos itSIMPLE | — |
 | `scripts/` | — | Scripts que geram tudo acima | — |
 
-Convenções: UTF-8, vírgula, ponto decimal, célula vazia = dado ausente. Eficiência em pontos percentuais (`25` = 25%). Domínios em *slug* (`blocksworld`, `logistics`, `pipesworld`…). Planejadores com grafia única (`Fast Downward`, `SATPlan`, `MaxPlan`).
+Convenções: UTF-8, fim de linha LF, vírgula, ponto decimal, célula vazia = dado ausente. Eficiência em pontos percentuais (`25` = 25%). Domínios em *slug* (`blocksworld`, `logistics`, `pipesworld`…). Planejadores com grafia única (`Fast Downward`, `SATPlan`, `MaxPlan`).
 
 `origem_do_dado` = `competicao` quando a Tabela 12/13 tem valor (etapa 4 do método); `execucao_propria` quando o valor veio de execução do autor (etapa 5). São 38 pares de competição e 62 de execução própria.
 
