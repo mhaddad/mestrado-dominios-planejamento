@@ -15,6 +15,7 @@ Uso:
 Saídas em data/2010/:
   benchmarks_ipc_instancias.csv  um registro por problema do acervo
   benchmarks_ipc.csv             um registro por (domínio, variante do repositório) com cobertura
+  benchmarks_ipc_mapa_final.csv  a variante escolhida para cada um dos 13 domínios, com a base da escolha
 """
 import csv
 import hashlib
@@ -45,6 +46,31 @@ ACERVO = {
     "pathways#strips": ("pathways/Strips", r"^p\d+\.pddl$", r"^domain_p\d+\.pddl$"),
     "pipesworld#strips": ("pipesworld/Strips", r"^p\d+\.pddl$", r"^domain_p\d+\.pddl$"),
     "tpp#strips": ("tpp/Strips", r"^p\d+\.pddl$", r"^domain_p\d+\.pddl$"),
+}
+# Escolha final por domínio: (ipc, variante, base, observação).
+# base = identico | equivalente  -> comprovado por comparação de conteúdo com o acervo
+#      = confirmado_pelo_autor   -> Zeno-travel e Elevator não têm PDDL no acervo (ver observação)
+ESCOLHA = {
+    "blocksworld": ("2000", "blocks-strips-typed", "identico", ""),
+    "depots": ("2002", "depots-strips-automatic", "identico", ""),
+    "driverlog": ("2002", "driverlog-strips-automatic", "identico", ""),
+    "gripper": ("1998", "gripper-round-1-strips", "equivalente",
+                "19 de 20 equivalentes; pfile1 (2 bolas) gerado localmente, sem par na IPC"),
+    "logistics": ("2000", "logistics-strips-typed", "identico", "domínio equivalente: só muda a ordem de :types"),
+    "mystery": ("1998", "mystery-round-1-strips", "identico", ""),
+    "pathways": ("2006", "pathways-propositional", "identico", "a pasta Strips/ = pathways-propositional-strips"),
+    "pipesworld": ("2004", "pipesworld-tankage-nontemporal-strips", "identico",
+                   "idêntico a 2006 pipesworld-propositional; a edição de origem não se distingue pelos arquivos"),
+    "satellite": ("2004", "satellite-strips", "identico", "domínio idêntico ao de 2004; problemas também em 2002"),
+    "tpp": ("2006", "tpp-propositional", "identico", "a pasta Strips/ = tpp-propositional-strips"),
+    "storage": ("2006", "storage-propositional", "identico", ""),
+    "zenotravel": ("2002", "zenotravel-strips-automatic", "confirmado_pelo_autor",
+                   "autor confirmou 'strips' (21/09/2026). 'automatic' é inferência: todos os domínios de 2002 do acervo "
+                   "usam a variante automatic e os planejadores são independentes de domínio; o domínio é igual ao "
+                   "hand-coded, só mudam as instâncias. Instâncias usadas: conjunto de 20, a confirmar"),
+    "elevator": ("2000", "elevator-strips-simple-typed", "confirmado_pelo_autor",
+                 "autor confirmou 'strips-simple' (21/09/2026). 'typed' é inferência: Blocks World e Logistics de 2000 "
+                 "usam a variante typed e o modelo itSIMPLE é tipado. Subconjunto de instâncias (de 150): a confirmar"),
 }
 # prefixo do nome da variante no repositório -> domínio
 PREFIXOS = {"blocks": "blocksworld", "depots": "depots", "driverlog": "driverlog", "gripper": "gripper",
@@ -166,6 +192,22 @@ def main(repo):
                     "problemas_identicos", "problemas_equivalentes", "fracao_do_acervo_coberta",
                     "arquivo_de_dominio_identico"])
         w.writerows(linhas)
+
+    # mapa final
+    usadas = defaultdict(set)
+    for chave, arq, tipo, _, ids in inst_rows:
+        for i in ids.split(";"):
+            if i:
+                usadas[chave].add(int(re.findall(r"\d+", i)[0]))
+    with open(SAIDA / "benchmarks_ipc_mapa_final.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["dominio", "ipc", "variante_repositorio", "instancias_usadas", "instancias_no_conjunto",
+                    "base_da_escolha", "observacao"])
+        for dom, (ano, var, base, obs) in ESCOLHA.items():
+            assert (dom, ano, var) in tam, f"variante inexistente no repositório: {dom} {ano} {var}"
+            u = sorted(usadas.get(dom, ()))
+            faixa = f"{u[0]}-{u[-1]}" if u else "a confirmar"
+            w.writerow([dom, ano, var, faixa, tam[(dom, ano, var)], base, obs])
 
     print(f"{'entrada':18} {'acervo':>6}  id = idêntico, eq = equivalente, sem = sem correspondência")
     for chave in ACERVO:
