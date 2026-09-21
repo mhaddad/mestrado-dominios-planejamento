@@ -7,7 +7,7 @@
 
 A nova versão será uma **dissertação revisada**, seguindo o **padrão ABNT** de formatação, citações e referências bibliográficas, além das boas práticas e recomendações acadêmicas do Brasil.
 
-> **Esclarecido pelo autor:** é o padrão **ABNT, sem LaTeX**. Não se usa abnTeX2. A ferramenta de redação é **Word** ou **Markdown com Pandoc** (ver "Ferramenta de redação").
+> **Esclarecido pelo autor:** é o padrão **ABNT, sem LaTeX**. Não se usa abnTeX2. O corpo do texto é escrito em **Markdown no repositório**, com as referências vindas do **`.bib` do Zotero** (ver "Como se escreve").
 
 ### Normas de referência
 
@@ -80,20 +80,30 @@ Na proposta, os capítulos de "Planejadores" e "Domínios" de 2010 (3 e 4) alime
 - Referências: reconstruir a partir do `.bib` verificado (ver abaixo).
 - **Declaração do uso de IA**: o plano exige registrar todo uso substantivo (seção 11). Como declarar isso no texto segue as regras da instituição e do programa `[A CONFIRMAR]`.
 
-## Ferramenta de redação (a decidir antes da Fase 6)
+## Como se escreve (decidido pelo autor em 21/09/2026)
 
-Sem LaTeX, restam duas opções. **Ainda não decidido.**
+**O corpo do texto é escrito em Markdown, no repositório, com as referências no `.bib` exportado do Zotero.** A conversão para o documento final no padrão ABNT é feita com o Pandoc.
 
-| Opção | Como funciona | Vantagens | Cuidados |
-|---|---|---|---|
-| **A. Word com modelo ABNT/FEI** | Capítulos em `.docx`; citações e referências pelo plugin do Zotero para Word, com estilo ABNT | Mesmo ambiente de 2010; o Zotero atualiza citações e lista de referências dentro do Word; o modelo institucional se aplica direto | Versionamento em Git é pobre (`.docx` é binário); revisão de mudanças por diff é ruim; uso de IA sobre o texto exige exportar |
-| **B. Markdown → Pandoc → `.docx` (modelo ABNT/FEI)** | Capítulos em `.md` no repositório; o Pandoc converte para `.docx` usando um documento de referência com os estilos ABNT/FEI, e o `.bib` do Zotero com um estilo de citação ABNT (CSL) | Texto legível e versionável no Git; diff e revisão por trecho; casa com o fluxo com IA; cada número e referência rastreável | Exige montar o modelo de referência e validar a saída contra a norma; listas, sumário, capa e folhas pré-textuais podem precisar de ajuste manual no Word no final |
+### Convenções do texto
 
-`[A CONFIRMAR]` Existência e adequação de um estilo CSL para ABNT (NBR 6023 / 10520) na versão vigente. Precisa ser testado com algumas referências reais antes de decidir.
+- Um arquivo por capítulo em `capitulos/` (`01-introducao.md`, …). A numeração das seções (NBR 6024) e a formatação ABNT vêm da conversão, não são digitadas à mão no Markdown.
+- **Citações por chave do `.bib`**, na sintaxe do Pandoc: `[@chave]`, `[@chave, p. 12]`, `@chave` (citação no fluxo do texto). O estilo autor-data é definido por um arquivo CSL na conversão.
+- **Só se cita chave que existe em `literatura/referencias/referencias.bib`**, que contém apenas obras verificadas na fonte primária. Obra fora do `.bib` não pode ser citada. Isso vale para pessoas e agentes e é a barreira contra citação inventada.
+- **Todo número do texto aponta para sua origem** (CSV em `data/`, script, execução), em comentário ao lado ou em nota, para a verificação final.
+- `[FATO]` e `[HIPÓTESE]` valem nos rascunhos; ao redigir o texto final, a distinção passa para a redação (afirmação × conjectura), e as marcas saem.
 
-**Sugestão (minha, não decisão):** a opção B para o **corpo do texto** (Markdown no Git, com o `.bib` do Zotero), com **montagem e acabamento final no Word**, onde ficam capa, folhas pré-textuais, sumário e listas. Isso aproveita o versionamento e a rastreabilidade do projeto sem abrir mão do modelo institucional. Um teste pequeno na Fase 1 (um capítulo curto convertido, com 5 a 10 referências) mostraria se o custo compensa.
+### O que ainda precisa ser definido
 
-Em qualquer opção, o Zotero é a base das referências, e a exportação `.bib` verificada entra em `literatura/referencias/`. Regras para qualquer opção: cada número do texto vem de execução reprodutível; cada referência foi verificada na fonte; o texto final é na voz do autor.
+| Ponto | Situação |
+|---|---|
+| Pandoc | **Não está instalado** neste computador. É pré-requisito do teste abaixo. |
+| Estilo CSL para a ABNT | `[A CONFIRMAR]` se existe e se cumpre a NBR 10520 e a 6023 vigentes. Testar com 5 a 10 referências reais. |
+| Modelo de documento (estilos ABNT/FEI) | Um `.docx` de referência com os estilos do modelo, aplicado na conversão. Precisa ser montado e validado contra a norma e o manual da FEI. |
+| Saída final | `.docx` e/ou PDF. Capa, folhas pré-textuais, sumário e listas podem exigir acabamento no Word; ver se a conversão dá conta. **O autor definiu o corpo e as referências; a etapa final de montagem ainda não foi decidida.** |
+
+**Teste sugerido na Fase 1:** converter um capítulo curto, com 5 a 10 referências reais do `.bib`, e conferir a saída contra a ABNT. Se a conversão der conta, fica assim; se não, o acabamento final vai para o Word, e o corpo continua em Markdown.
+
+Regras para qualquer saída: cada número do texto vem de execução reprodutível; cada referência foi verificada na fonte; o texto final é na voz do autor.
 
 ## Pastas
 
