@@ -9,7 +9,8 @@
 |---|---|
 | `afirmacoes.csv` | Tabela de auditoria (colunas: `id, afirmacao, local, classificacao, justificativa, acao`) |
 | `taxonomia-tecnicas.md` | Nova taxonomia de técnicas, compatível com a literatura atual (F4) |
-| `condicoes-de-execucao-2010.md` | Como os dados da 5ª etapa foram obtidos (F6) |
+| `condicoes-de-execucao-2010.md` | Como os dados da 5ª etapa foram obtidos (F6). **Feito na Fase 0.** |
+| `achados-fase0.md` | Pontos a examinar, levantados ao extrair e conferir o dataset (G1–G10). **Feito na Fase 0.** |
 | `reexecucao.md` | O que precisa ser reexecutado na Fase 3 |
 | `m1-orientador.md` | Material do Marco M1 |
 

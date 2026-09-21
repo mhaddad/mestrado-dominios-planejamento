@@ -21,25 +21,30 @@ Data da catalogação: 21/09/2026.
 
 Tamanho: 652 MB em disco, 3.133 arquivos. Compactado: cerca de 73 MB. O `pipesworld` (408 MB) e o `tpp` (91 MB) respondem por três quartos do volume; são problemas PDDL grandes, gerados.
 
-## Dataset (achado para a Fase 0)
+## Dataset
 
-`comp/script.sql` contém os dados usados na análise, em `INSERT` (não há `CREATE TABLE`; o esquema é inferível pelo `consultas.sql`). `[FATO]`
+O dataset de 2010 já foi extraído da dissertação e conferido: ver [data/2010/README.md](../data/2010/README.md). Esta seção descreve o `script.sql` como artefato do acervo.
+
+`comp/script.sql` contém dados da análise em `INSERT` (sem `CREATE TABLE`). `[FATO]`
 
 | Tabela | Linhas | Conteúdo |
 |---|---|---|
 | `dominios` | 10 | Blocks World, Depot, Driver Log, Gripper, Logistic World, Mystery, Pathways, Pipes World, Satellite, TPP |
 | `planejadores` | 10 | Blackbox, IPP, FF, R, LPG, Fast Downward, YAHSP, SGPlan, SATPlan, MAXPlan |
-| `caracteristicas` | 17 | Métricas UML: atores, casos de uso, classes, atributos, métodos, associações, agregações, generalizações, hierarquias, DIT, estados, ações de entrada/saída, ações, transições, etc. |
-| `tecnicas` | 13 | State-Space, Plan-Space, Partial-order, Total-order, Linear, Non-Linear, Hierarchical, Forward-chaining, Backward-chaining, Graph-based, Knowledge-based, SAT-based, Heuristic Search |
-| `dominios_caracteristicas` | 270 | Valor **discretizado** (Baixo / Medio / Alto) de cada característica por domínio. Esperado: 10 × 17 = 170. **Anomalia:** os domínios 1–5 têm 17 linhas cada; os domínios 6–10 têm 37 (20 a mais cada). Ver abaixo. |
-| `planejadores_tecnicas` | 104 | Associação planejador × técnica (a taxonomia questionada em F4) |
-| `planejamentos` | 100 | Por planejador × domínio (10 × 10): `eficiencia` (numérica, ex.: 25.4) e `nota` (inteira de 0 a 10) |
+| `caracteristicas` | 17 | As 17 métricas UML |
+| `tecnicas` | 13 | As 11 técnicas da dissertação mais `Linear` e `Non-Linear` |
+| `dominios_caracteristicas` | 170 + 100 | Classe (Baixo/Medio/Alto) por domínio × característica, em **dois blocos** |
+| `planejadores_tecnicas` | 52 + 52 | Planejador × técnica, em **dois blocos idênticos** |
+| `planejamentos` | 100 | `eficiencia` (com decimais) e `nota` (0–10) por planejador × domínio |
 
-Isso cobre boa parte da ação 2 do plano ("transcrever tabelas da dissertação para CSV"): em vez de transcrever a partir do texto, dá para **exportar do SQL e conferir contra as Tabelas 8–25 da dissertação**. A conferência continua obrigatória. `[A CONFIRMAR]`
+**Integridade do arquivo.** O `script.sql` é uma concatenação com sobras. As contagens de 270 (`dominios_caracteristicas`) e 104 (`planejadores_tecnicas`) da primeira inspeção vêm de blocos alternativos ou repetidos, não de dados a mais no conjunto publicado:
 
-Ponto de atenção: em `dominios_caracteristicas`, os domínios 6 a 10 (Mystery, Pathways, Pipes World, Satellite, TPP) têm 37 linhas cada, e não 17. Os valores existentes são só Alto / Medio / Baixo, então não se trata de valor bruto ao lado do discretizado. Hipótese: bloco de `INSERT` reinserido ou duplicado durante a montagem `[HIPÓTESE]`. Se houver valores conflitantes para o mesmo par domínio × característica, é preciso decidir qual vale, conferindo contra a dissertação. Resolver antes de gerar o `dataset-2010.csv`.
+- `dominios_caracteristicas`: o **bloco 1** (170 linhas, 10 domínios × 17) bate 170/170 com a dissertação. O **bloco 2** (100 linhas) refaz os domínios 6–10 com 20 características, 3 delas sem definição; difere do bloco 1 em 43 de 85 pares. Não foi publicado.
+- `planejadores_tecnicas`: bloco repetido; difere da Tabela 4 (versão anterior da taxonomia).
+- Linha 298 tem um **fragmento truncado** (`cteristicas VALUES(5,20,"Alto");`), resto de um `INSERT` cortado por edição manual.
+- Os valores de `planejamentos` (eficiência e nota) batem 100/100 com a dissertação; a eficiência tem decimais que o texto arredondou.
 
-Os valores do banco são **discretizados**; as contagens brutas (nº de classes, atributos etc.) não estão no SQL. Elas devem estar nas planilhas ou nas Tabelas da dissertação.
+Detalhes e arquivos de divergência: [data/2010/conferencia/](../data/2010/conferencia/).
 
 ## Domínios (`comp/`)
 
@@ -84,42 +89,33 @@ Existe também `itSIMPLE/myPlanners/` com binários usados pela ferramenta (Plan
 
 ### Condições de execução (F6)
 
-Nos scripts inspecionados, o comando é `timeout 1200 ./<planejador> …`, ou seja, **limite de 1.200 s (20 min)**, com caminhos absolutos de `/home/matheus/mestrado/comp/…`. `[FATO]` para os scripts lidos (`ff_depots.sh~`). Falta: máquina, memória, versões exatas e se o limite foi o mesmo para todos os planejadores. `[A CONFIRMAR]`
-
-O plano pede documentar como foram obtidos os dados da 5ª etapa do método (execuções fora das competições). O que existe aqui permite reconstruir parte disso, mas não a máquina nem a memória.
+A dissertação declara: 8 computadores idênticos (Core 2 Duo 2,5 GHz, 4 GB, Ubuntu 9.04), timeout de 20 minutos, cerca de 2.000 processos, planejadores nas versões originais das competições. Os scripts confirmam o `timeout 1200`. O que ainda falta (memória por processo, critério de "não resolvido", versões exatas) está em [../auditoria/condicoes-de-execucao-2010.md](../auditoria/condicoes-de-execucao-2010.md).
 
 ## Planilhas
 
-| Arquivo | Data | Provável conteúdo `[A CONFIRMAR]` |
-|---|---|---|
-| `Análise dos resultados.xls` | 10/12/2009 | Análise final: eficiência, discretização, correlações |
-| `caracteristicas_tecnicas.xls` | 19/11/2009 | Matriz planejador × técnica |
-| `contabilizacao_problemas.ods` | 30/11/2009 | Contagem de problemas resolvidos por planejador × domínio (base da eficiência) |
-| `testes.ods` | 10/12/2009 | Testes auxiliares |
+Mapeadas em 21/09/2026 (abas e conteúdo). Nenhuma contém as **contagens brutas das métricas** (Tabelas 8–9): elas só existem na dissertação e, discretizadas, no SQL.
 
-Nenhuma foi aberta em profundidade. Falta mapear abas e ligar cada uma às tabelas da dissertação (Tabelas 8–25).
+| Arquivo | Data | Abas | Conteúdo |
+|---|---|---|---|
+| `contabilizacao_problemas.ods` | 30/11/2009 | `Planilha1` | **Problemas resolvidos** por planejador × domínio (n e %), com o total de problemas por domínio; inclui Storage. Base das Tabelas 14–15. Extraído para `data/2010/problemas_resolvidos.csv`. `[FATO]` |
+| `Análise dos resultados.xls` | 10/12/2009 | `Características x Técnicas`, `Tecnicas x Características`, `Impacto`, `Relevância` | Cálculo da relação característica × técnica e da relevância (variância, menor, maior, diferença). `Relevância` corresponde às Tabelas 21–23 (títulos "não relevantes / pouco relevantes / muito relevantes"). As demais abas provavelmente correspondem às Tabelas 18–20 e 24–25 `[A CONFIRMAR]`. |
+| `caracteristicas_tecnicas.xls` | 19/11/2009 | `Planilha1` (46×14) | Matriz característica × técnica; parece uma versão anterior da relação das Tabelas 19–20 `[A CONFIRMAR]`. |
+| `testes.ods` | 10/12/2009 | `Planilha1`, `Planilha2`, `Planilha4`, `Ponderada x Valores`, `Ponderada com 10`, `Media com 10`, `Média simples` | Testes de **agregação alternativa** (média simples, ponderada, com valor 10) e seu efeito no ranking de Storage (`Planilha4`). Ver achado G7. `[FATO]` |
+
+Nenhuma delas foi convertida além de `contabilizacao_problemas.ods`. As demais são insumo da Fase 3 (replicação do método de 2010 como linha de base) e da auditoria.
 
 ## Modelos itSIMPLE
 
-`itSIMPLE/examples/` tem 47 modelos `.xml` (UML.P). Candidatos aos 13 domínios do plano: `[A CONFIRMAR]`
+`itSIMPLE/examples/` tem 47 modelos `.xml` (UML.P). Para descobrir quais correspondem à medição de 2010, `data/2010/scripts/comparar_modelos_itsimple.py` conta classes, métodos, associações e generalizações direto do XML e compara com as Tabelas 8–9, 26, 32 e 38. Resultado em [data/2010/conferencia/modelos_itsimple.csv](../data/2010/conferencia/modelos_itsimple.csv).
 
-| Domínio | Arquivo(s) candidato(s) |
+| Situação | Domínio → arquivo |
 |---|---|
-| Blocks World | `BlocksDomainv1.xml`, `BlocksDomainv2.xml`, `BlocksDomain_tf.xml` |
-| Depots | `DepotDomain.xml`, `DepotDomainv2.xml` |
-| Driver Log | `DriverLogDomain.xml` |
-| Gripper | `GripperDomainv1.xml` |
-| Logistics | `LogisticDomainv1.xml`, `LogisticDomainv2.xml` |
-| Mystery | `MysteryDomainv1.xml` |
-| Pathways | `PathwaysDomainv1.xml`, `PathwaysSimplePreferencesDomainv1.xml` |
-| Pipes World | `PipesworldDomainv1.xml` |
-| Satellite | `SatelliteDomainv1.xml` |
-| TPP | `TPPMetricDomainv1.xml`, `TPPPropositionalDomainv1.xml` |
-| Storage | `StorageDomainv1.xml` |
-| Zeno-travel | `ZenoTravelDomainv1.xml`, `ZenoTravelDomainv2.xml` |
-| Elevator | `ElevatorDomain.xml`, `ElevatorDomainv0.xml`, `ElevatorDomainv1.xml` |
+| **4/4 métricas batem** `[FATO]` | Blocks World → `BlocksDomainv1.xml` · Depots → `DepotDomain.xml`\* · Driver Log → `DriverLogDomain.xml`\* · Gripper → `GripperDomainv1.xml` · Logistics → `LogisticDomainv1.xml` · Mystery → `MysteryDomainv1.xml` · Pipesworld → `PipesworldDomainv1.xml` · Satellite → `SatelliteDomainv1.xml`\* · Storage → `StorageDomainv1.xml` · Zeno-travel → `ZenoTravelDomainv1.xml` · Elevator → `ElevatorDomainv1.xml` |
+| **3/4, sem correspondência exata** | Pathways → `PathwaysDomainv1.xml` ou `PathwaysSimplePreferencesDomainv1.xml` (contagens idênticas; diferença nas associações: 2 no XML contra 4 na Tabela 8) · TPP → `TPPPropositionalDomainv1.xml` (generalizações: 4 no XML contra 2) |
 
-Esses são os modelos que **acompanham o itSIMPLE**, que podem ter evoluído depois de 2009. O plano pede os modelos **originais usados na dissertação**. Onde há mais de uma versão, é preciso decidir qual foi a medida em 2010 (comparando as contagens com o dataset). Enquanto isso não for feito, a ação "localizar os modelos originais" fica aberta.
+\* Só bate com a exclusão das classes auxiliares `Utility` (ou `Global`, no Satellite), o que sugere que a contagem manual de 2010 as ignorou (achado G2).
+
+**Cautela.** Só 4 das 17 métricas são comparáveis por contagem direta, e o modelo que acompanha o itSIMPLE pode ter evoluído depois de 2009. Coincidir em 4/4 é forte indício, não prova. As contagens de estados, ações de entrada/saída e transições não foram comparadas.
 
 O restante da pasta `itSIMPLE/` (`itSIMPLE`, `itGraph`, `planning`, `languages`, `lib`, `resources`…) é a própria ferramenta, em Java.
 
@@ -127,12 +123,10 @@ O restante da pasta `itSIMPLE/` (`itSIMPLE`, `itGraph`, `planning`, `languages`,
 
 Nada foi apagado do disco. O Git ignora: metadados `.svn` (32 diretórios), objetos compilados (`.o` × 69, `.pyc` × 24) e `.DS_Store`. São regeneráveis ou sem valor de pesquisa. O restante do acervo, inclusive binários de planejadores e arquivos `*~`, está versionado.
 
-## Pendências da Fase 0 reveladas pela catalogação
+## Pendências que restam (Fase 0)
 
-- [ ] Explicar as 270 linhas de `dominios_caracteristicas` (esperado: 170; domínios 6–10 com 37 linhas em vez de 17).
-- [ ] Localizar as contagens brutas das 17 características (o SQL só tem valores discretizados).
-- [ ] Exportar `script.sql` para CSV e conferir contra as Tabelas 8–25 da dissertação.
-- [ ] Mapear as abas das quatro planilhas e ligá-las às tabelas da dissertação.
-- [ ] Decidir qual versão de cada modelo itSIMPLE corresponde à medição de 2010.
-- [ ] Localizar (ou declarar ausentes) os PDDL de Zeno-travel e Elevator.
-- [ ] Reconstruir as condições de execução dos planejadores (máquina, memória, versões).
+- [ ] Modelos itSIMPLE de **Pathways** e **TPP**: sem correspondência exata. Verificar pelos diagramas da dissertação (Figuras) ou perguntar.
+- [ ] **Conferência manual amostral** do dataset pelo autor (Tabelas 8–9, 26, 32, 38 têm uma só fonte).
+- [ ] Localizar (ou declarar ausentes) os PDDL de **Zeno-travel** e **Elevator**.
+- [ ] Reconstruir o que ainda falta das condições de execução: ver `auditoria/condicoes-de-execucao-2010.md`.
+- [ ] Converter as abas de `Análise dos resultados.xls` e `caracteristicas_tecnicas.xls` quando a Fase 3 precisar reproduzir o método de 2010.

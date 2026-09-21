@@ -4,12 +4,15 @@ Revisão e evolução da dissertação de mestrado *Relação entre característ
 
 A pergunta original: nenhum planejador é o melhor em todos os domínios, e características do domínio podem indicar a técnica mais promissora. Desde 2010 a área desenvolveu essa linha sob o nome de *seleção de algoritmos* e *portfólios de planejadores*. Este projeto refaz o trabalho com o estado da arte e os recursos de hoje, verifica o que das conclusões originais se sustenta e testa se o princípio de ajuste entre problema e técnica ajuda a escolher configurações de agentes de IA no desenvolvimento de software.
 
-**Documento de trabalho:** [plan/plano-revisao-dissertacao.md](plan/plano-revisao-dissertacao.md) — fases, perguntas de pesquisa, riscos, registros de decisão e de uso de IA. Comece por ele.
+**Documento de trabalho:** [plan/plano-revisao-dissertacao.md](plan/plano-revisao-dissertacao.md) — fases, perguntas de pesquisa, riscos, registros de decisão e de uso de IA.
+
+**Retomando o trabalho (pessoa ou agente):** comece por [MEMORY.md](MEMORY.md), que registra o estado da execução, as pendências e o log de sessões.
 
 ## Estrutura
 
 | Pasta | Fase | O que contém |
 |---|---|---|
+| [MEMORY.md](MEMORY.md) | — | Memória de execução: estado atual, pendências, log de sessões |
 | [plan/](plan/) | — | Plano de trabalho vivo (painel, decisões, registro de IA, changelog) |
 | [acervo-2010/](acervo-2010/) | 0 | Material original, **somente leitura**: dissertação, planejadores, domínios, resultados, modelos itSIMPLE |
 | [docs/](docs/) | 0 | Catálogo do acervo e notas de apoio |
@@ -26,7 +29,7 @@ A pergunta original: nenhum planejador é o melhor em todos os domínios, e cara
 
 | # | Fase | Status |
 |---|---|---|
-| 0 | Enquadramento e artefatos | 🟡 em andamento |
+| 0 | Enquadramento e artefatos | 🟡 quase concluída |
 | 1 | Revisão de literatura assistida por IA | ⚪ |
 | 2 | Auditoria da versão original | ⚪ |
 | 3 | Infraestrutura e replicação experimental | ⚪ |

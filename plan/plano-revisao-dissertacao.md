@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 21/09/2026 |
-| Versão deste documento | 0.2 |
-| Status geral | 🟡 Fase 0 em andamento |
+| Versão deste documento | 0.3 |
+| Status geral | 🟡 Fase 0 quase concluída (restam itens que dependem do autor) |
 
 ---
 
@@ -134,23 +134,29 @@ Desdobramentos possíveis, não obrigatórios:
 **Atividades**
 
 - [x] Extrair o texto da dissertação e mapear capítulos, tabelas e figuras
-- [ ] Localizar os modelos originais do itSIMPLE (UML.P) dos 13 domínios (10 de treino + Storage, Zeno-travel, Elevator)
-- [ ] Localizar planilhas com métricas, discretização e notas de eficiência (Tabelas 8–25)
-- [ ] Documentar como foram obtidos os dados da 5ª etapa do método (execuções fora das competições): máquina, limite de tempo, versões
-- [ ] Transcrever as tabelas da dissertação para CSV (dataset "2010") — **pode ser feito por IA a partir do texto, com conferência manual**
+- [ ] Localizar os modelos originais do itSIMPLE (UML.P) dos 13 domínios (10 de treino + Storage, Zeno-travel, Elevator) — **11 de 13 identificados por contagem; faltam Pathways e TPP** (ver notas)
+- [x] Localizar planilhas com métricas, discretização e notas de eficiência (Tabelas 8–25) — mapeadas; **não existe planilha com as contagens brutas das métricas** (só dissertação e SQL discretizado)
+- [x] Documentar como foram obtidos os dados da 5ª etapa do método (execuções fora das competições): máquina, limite de tempo, versões — `auditoria/condicoes-de-execucao-2010.md`; restam lacunas listadas lá
+- [x] Transcrever as tabelas da dissertação para CSV (dataset "2010") — feito por extração automática do docx, conferido contra o SQL; **conferência manual amostral pelo autor pendente**
 - [x] Criar repositório (código + dados + este documento)
-- [ ] Criar estrutura no vault do Obsidian para notas de leitura
-- [ ] Definir o formato da nova versão (monografia revisada, artigo, ou ambos)
+- [ ] Criar estrutura no vault do Obsidian para notas de leitura — **adiado por decisão do autor (21/09/2026)**
+- [ ] Definir o formato da nova versão (monografia revisada, artigo, ou ambos) — **decisão do autor em aberto**
+- [ ] Conferência manual amostral do dataset de 2010 pelo autor
 
 **Como a IA acelera:** transcrição das tabelas para CSV, criação da estrutura do repositório e de *templates* de notas.
 
-**Entregáveis:** repositório criado · `dataset-2010.csv` · acervo original catalogado
+**Entregáveis:** repositório criado · dataset de 2010 (conjunto de CSVs em `data/2010/`, em vez de um único `dataset-2010.csv`) · acervo original catalogado
 
 **Critério de conclusão:** dados de 2010 disponíveis em formato processável e ambiente pronto.
 
 **Notas:**
 
-- 21/09/2026 — Catálogo do acervo em [docs/catalogo-acervo-2010.md](../docs/catalogo-acervo-2010.md). `comp/script.sql` já contém o dataset (10 domínios × 17 características discretizadas, 100 notas de eficiência). Anomalia a resolver: domínios 6–10 têm 37 linhas de características em vez de 17. Zeno-travel e Elevator não têm PDDL no acervo, só modelos UML no itSIMPLE. Scripts de execução usam `timeout 1200` (F6).
+- 21/09/2026 — Catálogo do acervo em [docs/catalogo-acervo-2010.md](../docs/catalogo-acervo-2010.md).
+- 21/09/2026 — **Dataset de 2010** em [data/2010/](../data/2010/README.md), gerado por scripts a partir das tabelas do docx (44 tabelas extraídas 1:1 com a numeração das legendas). Conferência contra `comp/script.sql`: 170/170 classes, 100/100 eficiências e 100/100 notas iguais; Tabela 4 = matriz das Tabelas 2–3. O SQL é uma concatenação com blocos repetidos e uma versão anterior da taxonomia de técnicas, então **não é fonte de verdade**.
+- 21/09/2026 — **Condições de execução (F6)** respondidas em `auditoria/condicoes-de-execucao-2010.md`: 8 máquinas Core 2 Duo 2,5 GHz / 4 GB / Ubuntu 9.04, timeout de 20 min, ~2.000 execuções. 38 dos 100 pares de treino vêm de competição e 62 de execução própria.
+- 21/09/2026 — **Modelos itSIMPLE:** 11 de 13 batem 4/4 nas métricas comparáveis (com exclusão das classes auxiliares `Utility`/`Global`). Pathways e TPP sem correspondência exata.
+- 21/09/2026 — 10 achados para a auditoria em `auditoria/achados-fase0.md` (rótulo invertido de "casos de uso por atores", exclusão de classes auxiliares, Elevator inconsistente, entre outros).
+- Zeno-travel e Elevator não têm PDDL no acervo, só modelos UML.
 
 ---
 
@@ -389,10 +395,12 @@ Desdobramentos possíveis, não obrigatórios:
 
 | # | Ação | Fase | Responsável | Prazo | Status |
 |---|---|---|---|---|---|
-| 1 | Localizar modelos do itSIMPLE e planilhas originais | 0 | Matheus | | ⚪ |
-| 2 | Transcrever tabelas da dissertação para CSV | 0 | IA + conferência de Matheus | | ⚪ |
-| 3 | Criar repositório e estrutura no Obsidian | 0 | Matheus + IA | | 🟡 repositório criado em 21/09/2026; falta o Obsidian |
+| 1 | Localizar modelos do itSIMPLE e planilhas originais | 0 | Matheus + IA | | 🟡 planilhas ok; modelos 11 de 13 |
+| 2 | Transcrever tabelas da dissertação para CSV | 0 | IA + conferência de Matheus | | 🟡 feito; conferência manual pendente |
+| 3 | Criar repositório e estrutura no Obsidian | 0 | Matheus + IA | | 🟡 repositório criado; Obsidian adiado |
 | 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | | ⚪ |
+| 5 | Decidir o formato da nova versão | 0 | Matheus | | ⚪ |
+| 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | ⚪ |
 
 ---
 
@@ -406,6 +414,9 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | Repositório privado `mhaddad/mestrado-dominios-planejamento`, com estrutura por fase; acervo de 2010 em `acervo-2010/`, somente leitura | Separar material original do trabalho derivado; preservar rastreabilidade | 0 |
 | 21/09/2026 | Versionar o acervo de 2010 inteiro (cerca de 73 MB compactado), exceto `.svn`, `.o`, `.pyc` e `.DS_Store` | Cabe no GitHub sem LFS; os arquivos `*~` guardam scripts de execução úteis para documentar F6 | 0 |
 | 21/09/2026 | Benchmarks das IPCs e saídas brutas de execução não serão versionados (baixados/gerados por script) | Grandes e reproduzíveis | 0 |
+| 21/09/2026 | Estrutura no vault do Obsidian adiada; o autor fará depois | Definição do autor | 0 |
+| 21/09/2026 | Manter memória de execução em `MEMORY.md` na raiz, para retomada entre sessões e entre agentes | Fases 1–6 serão executadas em sessões separadas | 0 |
+| 21/09/2026 | Fonte de verdade do dataset de 2010 = tabelas publicadas na dissertação; `script.sql` e planilhas só para conferência | O SQL tem blocos repetidos, versão anterior da taxonomia e fragmento truncado | 0 |
 
 ---
 
@@ -415,6 +426,7 @@ Desdobramentos possíveis, não obrigatórios:
 |---|---|---|---|---|
 | 21/09/2026 | 0 | Claude | Leitura da dissertação, diagnóstico inicial e elaboração deste plano | Revisão do autor pendente |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Reorganização do repositório, criação da estrutura por fase, templates e catálogo do acervo de 2010 (`docs/catalogo-acervo-2010.md`) | Contagens e achados conferidos por comando no disco; catálogo pendente de revisão do autor |
+| 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Extração do texto e das 44 tabelas do docx; construção do dataset de 2010 em CSV; conferência contra `script.sql`, planilhas e XML do itSIMPLE; documentação das condições de execução; `MEMORY.md` | Conferência automática entre fontes independentes (SQL, planilha, XML); duas leituras iniciais erradas foram detectadas e corrigidas. **Conferência manual do autor pendente** |
 
 ---
 
@@ -468,3 +480,4 @@ Desdobramentos possíveis, não obrigatórios:
 |---|---|---|
 | 0.1 | 21/09/2026 | Criação do documento: diagnóstico, perguntas de pesquisa, fases revisadas com aceleração por IA e ponte para desenvolvimento de software |
 | 0.2 | 21/09/2026 | Repositório criado e estruturado; catálogo do acervo de 2010; achado de que `comp/script.sql` contém o dataset de 2010 (ação 2 da Fase 0 muda de transcrição para exportação e conferência); pendências da Fase 0 em `docs/catalogo-acervo-2010.md` |
+| 0.3 | 21/09/2026 | Fase 0 executada: dataset de 2010 em CSV com scripts e conferência; condições de execução (F6) documentadas; modelos itSIMPLE identificados (11 de 13); achados para a auditoria; `MEMORY.md` criado; Obsidian adiado; ações e decisões atualizadas |

@@ -1,0 +1,18 @@
+# Achados da Fase 0 para a auditoria (Fase 2)
+
+Observações feitas ao extrair e conferir o dataset de 2010. **Não são conclusões**: são pontos a examinar na Fase 2 (auditoria) e a tratar na Fase 3. Cada item aponta a evidência.
+
+Legenda: `[FATO]` = verificado nos arquivos. `[HIPÓTESE]` = interpretação.
+
+| # | Achado | Evidência | Fragilidade ligada | Sugestão |
+|---|---|---|---|---|
+| G1 | A métrica "Número de Casos de Uso por Atores" tem rótulo invertido: os valores são **atores ÷ casos de uso** (Blocks World: 1 ÷ 4 = 0,25). O SQL a chama de "Número Médio de Atores por Caso de Uso", o que combina com os valores. `[FATO]` | Tabela 8 e 5; `script.sql` linha 25 | — | Corrigir rótulo na nova versão; conferir se o texto usa a interpretação certa. |
+| G2 | A contagem manual de classes **excluiu classes auxiliares** (*Utility* em Depots, Driver Log, Pathways e TPP; *Global* em Satellite): sem elas, a contagem do modelo itSIMPLE bate com a Tabela 8/9. `[FATO]` para a coincidência numérica; `[HIPÓTESE]` de que foi exclusão deliberada. | `data/2010/conferencia/modelos_itsimple.csv` | F3 | Fazer disso a regra explícita do extrator da Fase 3 e testar a robustez. |
+| G3 | O `script.sql` guarda uma **versão anterior da taxonomia de técnicas**, com `Linear` e `Non-Linear` e atribuições diferentes em 5 pares. A Tabela 4 é a final. `[FATO]` | `data/2010/conferencia/divergencias_tecnicas.csv` | F4 | Entender por que a taxonomia mudou entre o SQL e o texto: pode indicar dúvidas do próprio autor à época. |
+| G4 | **Elevator (Tabela 38): 6 casos de uso, 9 métodos, 10 ações.** Nos outros 12 domínios esses três valores coincidem. `[FATO]` | `data/2010/metricas_dominios.csv` | F3 | Verificar no modelo (`ElevatorDomainv1.xml` tem 9 operadores) qual dos números vale. |
+| G5 | A **planilha de eficiência está incompleta** em Depots × LPG e Driverlog × LPG. O SQL e a Tabela 14 têm o valor. `[FATO]` | `data/2010/problemas_resolvidos.csv` | F6 | Aceitar o SQL/Tabela 14 como fonte; registrar a lacuna. |
+| G6 | O SQL tem **eficiência com casas decimais** (ex.: 25,4%; 13,33%) que a dissertação arredondou para inteiro em 37 pares. As **notas 0–10** da dissertação foram derivadas de um valor arredondado ou do preciso, o que ainda não se sabe. `[FATO]` para a diferença | `data/2010/conferencia/eficiencia_precisa_sql.csv` | F5, F7 | Reproduzir a regra de conversão eficiência → nota. |
+| G7 | O `testes.ods` contém **testes de agregação alternativa** ("Média simples", "Média com 10", "Ponderada com 10", "Ponderada com valores") que mudam o ranking do domínio Storage. `[FATO]` | `testes.ods`, aba `Planilha4` | F4, F7 | A dissertação usa média das médias (Tabela 29). `[HIPÓTESE]` de que as variantes ponderadas foram testadas e descartadas; confirmar e documentar o motivo. |
+| G8 | **Erros de grafia** nos rótulos publicados: "Fast Fownward" (Tabela 3), "Heurist Search" (Tabelas 2–4), pasta "sattelite". `[FATO]` | `data/2010/extraido/` | — | Corrigir na nova versão; nomes canônicos já estão em `data/2010/`. |
+| G9 | **Duas populações de dados de eficiência** (38 de competição, 62 de execução própria) misturadas nas Tabelas 14–15. `[FATO]` | `data/2010/eficiencia_planejadores.csv` | F6 | Ver `condicoes-de-execucao-2010.md`. |
+| G10 | O SQL tem 20 características para os domínios 6–10 em um segundo bloco, com valores diferentes do bloco 1 em 43 de 85 pares e 3 características a mais sem definição. `[FATO]` Não foi publicado. `[HIPÓTESE]` de que seja tentativa anterior de discretização. | `data/2010/conferencia/divergencias_bloco2_vs_bloco1.csv`, `caracteristicas_18_a_20.csv` | F7 | Perguntar ao orientador ou ao histórico, se ainda existir, o que eram as características 18–20. |
