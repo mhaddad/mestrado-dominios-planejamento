@@ -2,7 +2,7 @@
 
 Dados da dissertação de 2010 em formato processável. **Fonte de verdade: as tabelas publicadas na dissertação** (`acervo-2010/dissertacao/dissertacao-haddad-2010.docx`). O `script.sql` e as planilhas do acervo servem de conferência.
 
-Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual amostral pelo autor: pendente.**
+Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual pelo autor: concluída em 21/09/2026** (o dataset está conferido, inclusive as duas correções e as contagens das figuras).
 
 ## Arquivos
 

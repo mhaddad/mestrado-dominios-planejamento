@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 21/09/2026 |
-| Versão deste documento | 0.7 |
-| Status geral | 🟡 Fase 0 quase concluída (restam itens que dependem do autor) |
+| Versão deste documento | 0.8 |
+| Status geral | 🟡 Fase 0: critério de conclusão atendido; restam a decisão do formato e o Obsidian (adiado) |
 
 ---
 
@@ -137,11 +137,11 @@ Desdobramentos possíveis, não obrigatórios:
 - [x] Localizar os modelos originais do itSIMPLE (UML.P) dos 13 domínios (10 de treino + Storage, Zeno-travel, Elevator) — **13 de 13 identificados** (`data/2010/modelos_itsimple_2010.csv`); Pathways e TPP pelas figuras, com discrepância na tabela (G11, G12)
 - [x] Localizar planilhas com métricas, discretização e notas de eficiência (Tabelas 8–25) — mapeadas; **não existe planilha com as contagens brutas das métricas** (só dissertação e SQL discretizado)
 - [x] Documentar como foram obtidos os dados da 5ª etapa do método (execuções fora das competições): máquina, limite de tempo, versões — `auditoria/condicoes-de-execucao-2010.md`; restam lacunas listadas lá
-- [x] Transcrever as tabelas da dissertação para CSV (dataset "2010") — feito por extração automática do docx, conferido contra o SQL; **conferência manual amostral pelo autor pendente**
+- [x] Transcrever as tabelas da dissertação para CSV (dataset "2010") — feito por extração automática do docx, conferido contra o SQL; conferência manual pelo autor concluída em 21/09/2026
 - [x] Criar repositório (código + dados + este documento)
 - [ ] Criar estrutura no vault do Obsidian para notas de leitura — **adiado por decisão do autor (21/09/2026)**
 - [ ] Definir o formato da nova versão (monografia revisada, artigo, ou ambos) — **decisão do autor em aberto**
-- [ ] Conferência manual amostral do dataset de 2010 pelo autor
+- [x] Conferência manual do dataset de 2010 pelo autor — concluída em 21/09/2026
 
 **Como a IA acelera:** transcrição das tabelas para CSV, criação da estrutura do repositório e de *templates* de notas.
 
@@ -398,7 +398,7 @@ Desdobramentos possíveis, não obrigatórios:
 | # | Ação | Fase | Responsável | Prazo | Status |
 |---|---|---|---|---|---|
 | 1 | Localizar modelos do itSIMPLE e planilhas originais | 0 | Matheus + IA | | 🟢 concluída (13 de 13 modelos; planilhas mapeadas) |
-| 2 | Transcrever tabelas da dissertação para CSV | 0 | IA + conferência de Matheus | | 🟡 feito; conferência manual pendente |
+| 2 | Transcrever tabelas da dissertação para CSV | 0 | IA + conferência de Matheus | 21/09/2026 | 🟢 concluída e conferida |
 | 3 | Criar repositório e estrutura no Obsidian | 0 | Matheus + IA | | 🟡 repositório criado; Obsidian adiado |
 | 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | | ⚪ |
 | 5 | Decidir o formato da nova versão | 0 | Matheus | | ⚪ |
@@ -418,6 +418,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | Benchmarks das IPCs e saídas brutas de execução não serão versionados (baixados/gerados por script) | Grandes e reproduzíveis | 0 |
 | 21/09/2026 | Estrutura no vault do Obsidian adiada; o autor fará depois | Definição do autor | 0 |
 | 21/09/2026 | Variantes de 2010: Zeno-travel = IPC 2002 `zenotravel-strips-automatic`; Elevator = IPC 2000 `elevator-strips-simple-typed` (mais os 11 domínios identificados por conteúdo) | Autor confirmou as variantes identificadas; `automatic` e `typed` por consistência com os demais domínios | 0, 3 |
+| 21/09/2026 | Dataset de 2010 (incluindo as correções de Pathways e TPP) considerado conferido | Conferência manual do autor | 0 |
 | 21/09/2026 | Zeno-travel e Elevator: N = 20 instâncias cada (Zeno: conjunto inteiro; Elevator: as 20 primeiras de 150) | Definição do autor; leitura "20 primeiras" por analogia com o padrão do acervo | 0, 3 |
 | 21/09/2026 | Usar as contagens tiradas das figuras (Pathways/Associações = 2; TPP/Generalização = 4) como valores corrigidos, preservando o publicado | Autor conferiu as figuras e aprovou | 0 |
 | 21/09/2026 | O repositório `potassco/pddl-instances` (commit `cf19edf`) é a fonte dos benchmarks das IPCs até 2014; edições posteriores a definir | Indicado pelo autor; cobre os domínios da dissertação | 0, 3 |
@@ -493,3 +494,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.5 | 21/09/2026 | Benchmarks das IPCs até 2008 mapeados (repositório `potassco/pddl-instances`); correções das métricas de Pathways e TPP aprovadas; achados G14–G17 |
 | 0.6 | 21/09/2026 | Variantes de Zeno-travel e Elevator confirmadas pelo autor; mapa final de benchmarks (`benchmarks_ipc_mapa_final.csv`) |
 | 0.7 | 21/09/2026 | N = 20 definido para Zeno-travel e Elevator; benchmarks totalmente mapeados |
+| 0.8 | 21/09/2026 | Dataset de 2010 conferido pelo autor; ação 2 concluída |
