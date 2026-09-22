@@ -20,3 +20,17 @@ Conferências feitas pelo Coordenador (Claude Code, claude-opus-5) sobre o traba
 | 4 | `vallati2016identifying`: nota feita sobre a versão do ICAPS 2015; o `.bib` registra a de periódico (Fundamenta Informaticae, 2016) | Relatório do leitor E1E2-BC | Mesma situação de `vallati2019robustness`: conferir antes de citar |
 | 4 | `nunez2015automatic` (E1-022): sem acesso ao texto nem ao resumo (ScienceDirect 403; resumo suprimido no Crossref, no Semantic Scholar e no Unpaywall) | Relatório do leitor E1E2-BC | **Sem nota de leitura.** Obra verificada nos metadados, mas não lida; precisa de acervo institucional |
 | 4 | Instalação do Ghostscript (`brew install ghostscript`) por um leitor, para converter PostScript do JAIR | Relatório do leitor E3E4-A1 | **Fora do combinado** (nenhum agente devia instalar programas). Inofensivo e reversível (`brew uninstall ghostscript`); os prompts seguintes proíbem instalação |
+
+## Onda 6 — crítica do rascunho do capítulo
+
+O parecer adversarial (`redacao/capitulos/02-fundamentos-critica.md`) levantou 9 achados: 1 crítico, 4 sérios, 4 menores. O Coordenador conferiu cada um contra as sínteses e as notas e **aceitou todos**, aplicando as correções no rascunho em 23/09/2026:
+
+| ID | O que era | Correção aplicada |
+|---|---|---|
+| CRI-001 (crítico) | O capítulo dizia que "nenhuma obra revisada" aplicou seleção de algoritmos a planejamento, contradizendo a própria seção anterior | Escopo restrito ao meta-aprendizado e à *Instance Space Analysis* de Smith-Miles e Vanschoren, com remissão explícita ao corpo de portfólios já tratado |
+| CRI-002 (sério) | Atribuição trocada: qualidade estática de código citada como estatística de desempenho passado | Citações redistribuídas entre `zhou2026agentasarouter`, `son2026swerouter` e `madeyski2026triage` |
+| CRI-003 (sério) | Delfi descrito como CNN sobre grafo | Corrigido para grafo → imagem em escala de cinza → CNN, conferido na nota primária |
+| CRI-007 (sério) | Comparação de magnitude com 2010 sem termo de comparação | Trocada por comparação qualitativa, dizendo que o capítulo não reporta a magnitude de 2010 |
+| CRI-004, CRI-005, CRI-006, CRI-008, CRI-009 (menores) | Condição omitida em Domshlak & Nazarenko; "menos da metade" impreciso; hedge "quase certamente" removido; erro aritmético (treze × quinze anos entre a IPC 2008 e a IPC 2023); aspas em tradução livre | Todas corrigidas. O erro aritmético vinha da síntese E3, também corrigida. As traduções passaram a trazer o original em inglês entre aspas |
+
+O parecer também registra que a fidelidade do rascunho às fontes é alta e que nenhum problema exigiu nova busca bibliográfica.
