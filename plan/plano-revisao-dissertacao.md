@@ -9,9 +9,9 @@
 | Autor | Matheus Haddad |
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
-| Última atualização | 21/09/2026 |
-| Versão deste documento | 0.11 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · próximas: Fase 1 e Fase 2 (em paralelo) |
+| Última atualização | 23/09/2026 |
+| Versão deste documento | 0.12 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟡 Fase 1 executada em 22–23/09/2026 por equipe de agentes, pendente de confirmação do autor · próxima: Fase 2 |
 
 ---
 
@@ -49,7 +49,7 @@ Desdobramentos possíveis, não obrigatórios:
 | # | Fase | Objetivo | Duração estimada | Status | Início | Fim | Entregável principal |
 |---|---|---|---|---|---|---|---|
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
-| 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas | ⚪ | | | Novo capítulo de fundamentos + base de referências |
+| 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟡 | 22/09/2026 | 23/09/2026 | 155 obras triadas e verificadas, 153 notas, 8 sínteses, rascunho do capítulo 2. Falta a confirmação do autor e o `referencias.bib` do Zotero |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (paralela à Fase 1) | ⚪ | | | Relatório de auditoria |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
@@ -170,24 +170,24 @@ Desdobramentos possíveis, não obrigatórios:
 
 | Eixo | Tópicos | Status |
 |---|---|---|
-| E1 | Seleção de algoritmos e portfólios em planejamento (Rice; PbP; Fast Downward Stone Soup; IBaCoP; Delfi; Cedalion) | ⚪ |
-| E2 | *Features* de tarefas de planejamento e predição de desempenho (Roberts & Howe; Fawcett et al.; representações em grafo) | ⚪ |
-| E3 | Evolução dos planejadores e heurísticas (LAMA, LM-cut, *merge-and-shrink*, busca simbólica, BFWS, Madagascar) e resultados das IPCs 2008–2023 | ⚪ |
-| E4 | Aprendizado para planejamento (heurísticas aprendidas, ASNets, GNNs, planejamento generalizado, aprendizado de modelos de ação) | ⚪ |
-| E5 | LLMs e planejamento (PlanBench; LLM+P; LLM-Modulo; modelos de raciocínio; agentes) | ⚪ |
-| E6 | Engenharia do conhecimento para planejamento (evolução do itSIMPLE, ICKEPS, Unified Planning, LLMs gerando PDDL) | ⚪ |
-| E7 | Pontes conceituais (No Free Lunch; teoria da contingência; *task-technology fit*; roteamento de modelos de linguagem) | ⚪ |
-| E8 | IA no desenvolvimento de software (agentes de código, SWE-bench e similares, estratégias de orquestração, estudos empíricos em equipes) | ⚪ |
+| E1 | Seleção de algoritmos e portfólios em planejamento (Rice; PbP; Fast Downward Stone Soup; IBaCoP; Delfi; Cedalion) | 🟢 21 obras |
+| E2 | *Features* de tarefas de planejamento e predição de desempenho (Roberts & Howe; Fawcett et al.; representações em grafo) | 🟢 15 obras |
+| E3 | Evolução dos planejadores e heurísticas (LAMA, LM-cut, *merge-and-shrink*, busca simbólica, BFWS, Madagascar) e resultados das IPCs 2008–2023 | 🟢 18 obras |
+| E4 | Aprendizado para planejamento (heurísticas aprendidas, ASNets, GNNs, planejamento generalizado, aprendizado de modelos de ação) | 🟢 17 obras |
+| E5 | LLMs e planejamento (PlanBench; LLM+P; LLM-Modulo; modelos de raciocínio; agentes) | 🟢 20 obras |
+| E6 | Engenharia do conhecimento para planejamento (evolução do itSIMPLE, ICKEPS, Unified Planning, LLMs gerando PDDL) | 🟢 24 obras |
+| E7 | Pontes conceituais (No Free Lunch; teoria da contingência; *task-technology fit*; roteamento de modelos de linguagem) | 🟢 20 obras |
+| E8 | IA no desenvolvimento de software (agentes de código, SWE-bench e similares, estratégias de orquestração, estudos empíricos em equipes) | 🟢 20 obras |
 
 **Atividades**
 
-- [ ] Definir protocolo leve: *strings* de busca, bases, critérios de inclusão/exclusão
-- [ ] Rodar buscas por eixo com apoio de IA e montar lista bruta
-- [ ] Triagem por título e resumo (IA pré-classifica, autor confirma)
-- [ ] Verificar existência e metadados de cada referência selecionada (Zotero)
-- [ ] Leitura com extração estruturada: problema, método, dados, resultado, relação com a dissertação
-- [ ] Produzir síntese por eixo
-- [ ] Redigir rascunho do novo capítulo de fundamentos
+- [x] Definir protocolo leve: *strings* de busca, bases, critérios de inclusão/exclusão — `literatura/protocolo/protocolo-busca.md` (v1.1)
+- [x] Rodar buscas por eixo com apoio de IA e montar lista bruta — 344 registros, 317 obras únicas, mais busca dirigida de 5 lacunas
+- [x] Triagem por título e resumo — 155 incluídas; **a confirmação do autor está pendente** (coluna `confirmado_autor`)
+- [x] Verificar metadados no registro primário — 154 verificadas, `literatura/referencias/candidatas.bib`. **Falta a etapa do Zotero e o `referencias.bib`**
+- [x] Leitura com extração estruturada — 153 notas (91 de texto integral, 62 de resumo)
+- [x] Produzir síntese por eixo — 8 sínteses, 17.785 palavras, todas as notas citadas
+- [x] Redigir rascunho do novo capítulo de fundamentos — `redacao/capitulos/02-fundamentos.md` (rascunho de IA, revisado por parecer adversarial)
 
 **Como a IA acelera:** geração de *strings* de busca, triagem inicial, extração estruturada de artigos, primeiras sínteses por eixo. Estimativa de redução: de 6–8 para 3–4 semanas.
 
@@ -195,7 +195,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Critério de conclusão:** todos os eixos com síntese e todas as referências citadas verificadas.
 
-**Notas:**
+**Notas:** executada em 22–23/09/2026 por equipe multiagente (`plan/fase1-estrategia-multiagentes.md`). Relatório: `literatura/relatorio-fase1.md`. Controle de qualidade: `literatura/protocolo/qc-coordenador.md`. Insumos para a Fase 2: `auditoria/insumos-fase1.md`. **Critério de conclusão ainda não cumprido:** as referências estão verificadas no registro primário, não no Zotero; o `referencias.bib` não existe.
 
 ---
 
@@ -406,10 +406,15 @@ Desdobramentos possíveis, não obrigatórios:
 | 1 | Localizar modelos do itSIMPLE e planilhas originais | 0 | Matheus + IA | | 🟢 concluída (13 de 13 modelos; planilhas mapeadas) |
 | 2 | Transcrever tabelas da dissertação para CSV | 0 | IA + conferência de Matheus | 21/09/2026 | 🟢 concluída e conferida |
 | 3 | Criar repositório | 0 | Matheus + IA | 21/09/2026 | 🟢 concluída (Obsidian descartado) |
-| 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | | ⚪ |
+| 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | 22/09/2026 | 🟢 concluída (v1.1, com o critério X7) |
 | 5 | Decidir o formato da nova versão | 0 | Matheus | 21/09/2026 | 🟢 dissertação revisada, ABNT |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | ⚪ |
-| 7 | Validar a conversão Markdown → Pandoc → documento ABNT (instalar o Pandoc; testar CSL ABNT; montar modelo de referência) e decidir se o acabamento final é no Word | 1, 6 | Matheus + IA | teste na Fase 1 | 🟡 corpo e referências decididos; falta validar |
+| 7 | Validar a conversão Markdown → Pandoc → documento ABNT | 1, 6 | Matheus + IA | 23/09/2026 | 🟡 Pandoc 3.11 instalado; corpo e referências convertem, inclusive no capítulo inteiro (`redacao/teste-abnt/relatorio-teste.md`). Falta: escolher a variante do CSL (a genérica não imprime o nome do evento; a UFPR imprime), conferir a caixa alta da NBR 10520 e testar os elementos pré-textuais |
+
+| 8 | Confirmar a triagem da Fase 1 (155 obras incluídas) | 1 | Matheus | | ⚪ |
+| 9 | Importar as candidatas no Zotero e exportar `literatura/referencias/referencias.bib` | 1, 6 | Matheus | | ⚪ bloqueia a citação de qualquer texto |
+| 10 | Obter por acervo institucional as 3 obras sem acesso (`nunez2015automatic`, `tonidandel2006reading`, `sette2008are`) e as atas da ECP-01 (GIPO) | 1 | Matheus | | ⚪ |
+| 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | | ⚪ |
 
 ---
 
@@ -436,6 +441,12 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | Manter memória de execução em `MEMORY.md` na raiz, para retomada entre sessões e entre agentes | Fases 1–6 serão executadas em sessões separadas | 0 |
 | 21/09/2026 | Fonte de verdade do dataset de 2010 = tabelas publicadas na dissertação; `script.sql` e planilhas só para conferência | O SQL tem blocos repetidos, versão anterior da taxonomia e fragmento truncado | 0 |
 
+| 22/09/2026 | Executar a Fase 1 com equipe de agentes: Coordenador em Opus 5 para planejamento, controle de qualidade e decisões; subagentes em Sonnet 5 para busca, triagem, verificação, leitura, síntese e redação. Autonomia ponta a ponta, com tudo marcado como pendente de confirmação | Definição do autor; estratégia em `plan/fase1-estrategia-multiagentes.md` | 1 |
+| 22/09/2026 | Metadados verificados por agente no registro primário entram em `literatura/referencias/candidatas.bib`, **nunca** em `referencias.bib`; só o autor, via Zotero, promove uma referência | Preserva a regra de que só obra verificada é citável, sem travar o trabalho dos agentes | 1, 6 |
+| 22/09/2026 | Critério de exclusão **X7** (relevante, mas redundante diante do teto do eixo), acrescentado ao protocolo v1.1 | Os triadores vinham usando X2 e X6 para redundância, o que distorcia o registro | 1 |
+| 23/09/2026 | Reverter a exclusão do artigo do itSIMPLE de 2005 (`vaquero2005itsimple`) e tratá-lo como obra de prioridade A | A leitura do PDF fornecido pelo autor mostrou que ele declara, em 2005, o objetivo que a dissertação executou em 2010 | 1, 2 |
+| 23/09/2026 | Usar a variante UFPR do CSL da ABNT como padrão de trabalho até decisão final | A variante genérica não imprime o nome do evento em trabalhos de conferência, e boa parte do corpus é de anais | 1, 6 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -447,6 +458,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Extração do texto e das 44 tabelas do docx; construção do dataset de 2010 em CSV; conferência contra `script.sql`, planilhas e XML do itSIMPLE; documentação das condições de execução; `MEMORY.md` | Conferência automática entre fontes independentes (SQL, planilha, XML); duas leituras iniciais erradas foram detectadas e corrigidas. **Conferência manual do autor pendente** |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Leitura visual das Figuras 26 e 27 (diagramas de classes de TPP e Pathways) para identificar os modelos itSIMPLE; avaliação das pastas `itsimple-*` | Figuras lidas e conferidas contra o XML; contagens automáticas reproduzíveis por script. **Leitura visual das figuras: confirmada pelo autor em 21/09/2026** |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Comparação de conteúdo entre os PDDL do acervo e o repositório `potassco/pddl-instances` (IPCs 1998–2008); construção do script e do documento | Correspondências verificadas por comparação de conteúdo e reproduzíveis por script (repositório externo em commit fixo). Variantes de Zeno-travel e Elevator: hipóteses, a confirmar |
+
+| 22–23/09/2026 | 1 | Claude Code — Coordenador (claude-opus-5) + 45 execuções de subagentes (claude-sonnet-5) | Fase 1 inteira: protocolo, busca em 8 eixos, triagem, verificação de metadados, leitura e extração de 153 obras, 8 sínteses, rascunho do capítulo 2 e parecer crítico | Coordenador reconferiu: amostra de 32 itens da busca, todas as 115 entradas com DOI e as 19 do arXiv, 4 números centrais de notas nos PDFs originais e os 9 achados do parecer crítico. Registro completo em `literatura/protocolo/qc-coordenador.md`. **Conferência do autor pendente em tudo** |
 
 ---
 
@@ -466,6 +479,8 @@ Desdobramentos possíveis, não obrigatórios:
 ## 13. Referências a verificar
 
 > Levantadas no diagnóstico inicial a partir de conhecimento geral. **Nenhuma deve ser citada antes de verificada.**
+>
+> **Atualização de 23/09/2026:** as 22 referências desta lista foram localizadas e conferidas no registro primário durante a Fase 1, junto de outras 133. A lista viva passa a ser `literatura/protocolo/verificacao-metadados.csv` e o arquivo `literatura/referencias/candidatas.bib`. Elas continuam **não citáveis** até entrarem no `referencias.bib` exportado do Zotero pelo autor.
 
 | Referência (provisória) | Eixo | Status |
 |---|---|---|
@@ -509,3 +524,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.9 | 21/09/2026 | Fase 0 concluída; formato definido (dissertação revisada, ABNT); Obsidian descartado; liberdade de escopo (não presa à estrutura de 2010); `redacao/README.md` com normas, retrato de 2010 e opções de ferramenta |
 | 0.10 | 21/09/2026 | Esclarecido: padrão ABNT sem LaTeX; abnTeX2 descartado; ferramenta de redação restrita a Word ou Markdown com Pandoc |
 | 0.11 | 21/09/2026 | Decidido: corpo do texto em Markdown no repositório, com `.bib` do Zotero; convenções de referências e de escrita; ação 7 passa a validar a conversão |
+| 0.12 | 23/09/2026 | **Fase 1 executada em modo multiagente** (22–23/09/2026): protocolo v1.1 com o critério X7, 317 obras únicas triadas, 155 incluídas, 154 verificadas no registro primário, 153 notas de leitura, 8 sínteses, rascunho do capítulo 2 com parecer crítico, insumos para a Fase 2 e teste da conversão ABNT. Relatório em `literatura/relatorio-fase1.md`; tudo pendente de confirmação do autor |
