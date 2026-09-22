@@ -1,6 +1,6 @@
 # Protocolo de busca da Fase 1
 
-Versão 1.0 · 22/09/2026 · redigido pelo Coordenador (Claude Code, claude-opus-5). **Aprovado pelo Coordenador em nome do autor; pendente de confirmação do autor** (modo "ponta a ponta", ver [estratégia](../../plan/fase1-estrategia-multiagentes.md)).
+Versão 1.1 · 22/09/2026 · redigido pelo Coordenador (Claude Code, claude-opus-5). v1.1: critério X7; os triadores usavam X2 e X6 para exclusões por redundância, recodificadas em `triagem.csv` (`revisado_coordenador=recodificado`). **Aprovado pelo Coordenador em nome do autor; pendente de confirmação do autor** (modo "ponta a ponta", ver [estratégia](../../plan/fase1-estrategia-multiagentes.md)).
 
 Revisão de literatura **leve e rastreável**, não revisão sistemática formal: o objetivo é reconstruir o capítulo de fundamentos com obras verificadas, e registrar o caminho para que a busca possa ser refeita e auditada.
 
@@ -93,6 +93,7 @@ As *strings* são ponto de partida; o buscador pode refiná-las, desde que regis
 | X4 | Não acadêmico (blog, notícia), exceto literatura cinza da seção 1 |
 | X5 | Idioma diferente de inglês ou português |
 | X6 | Aplicação específica sem contribuição geral (ex.: planejamento para um robô específico sem método transferível) |
+| X7 | Relevante, mas redundante com obra já incluída, diante do teto do eixo (acrescentado na v1.1, na revisão da triagem) |
 
 Decisão de triagem: `incluir` / `excluir` / `talvez`, com o código do critério e uma frase de justificativa. **Prioridade de leitura:** `A` (texto integral, sustenta argumento central), `B` (nota a partir do resumo e da introdução), `C` (só citação contextual).
 
