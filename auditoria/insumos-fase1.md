@@ -75,3 +75,5 @@ Depois da confirmação da triagem (critérios em `literatura/protocolo/protocol
 | A1, A4, A6 | uma ou duas obras de literatura cinza de IPC | as demais | A literatura cinza de IPC é a referência padrão para descrever os planejadores das competições; aceitável para esse uso |
 
 O argumento de que *features* de domínio não discriminam dificuldade **dentro** de um domínio, usado no capítulo e no veredito do A3, vem só de `delarosa2017performance`. É um artigo do ICAPS, revisado por pares, mas pouco citado. Esse ponto específico merece busca de confirmação independente antes da redação final.
+
+**Atualização de 23/09/2026:** `helmert2011fast`, `katz2018delfi` e `seipp2014fast` entraram no `referencias.bib` por exceção do autor. Das chaves desta tabela, seguem fora do `referencias.bib` e não podem ser citadas no texto final: `delarosa2017performance`, `percassi2021improving` e `cenamor2019insights`.

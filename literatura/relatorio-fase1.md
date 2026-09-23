@@ -74,16 +74,20 @@ Está detalhado em `literatura/protocolo/qc-coordenador.md`. Em resumo: amostra 
 - Duas notas foram feitas sobre versões diferentes das obras que o `.bib` registra (`vallati2019robustness`, `vallati2015identifying`); precisam de conferência antes de citar.
 - O GIPO foi "verificado" só por fontes secundárias; rebaixei para `divergente` e o tirei do `.bib`.
 
-## 5. Pendências
+## 5. Fechamento (atualizado em 23/09/2026)
 
-**Do autor, bloqueando o uso do material no texto final:**
-1. **Confirmar a triagem** (`triagem.csv` tem a coluna `confirmado_autor` vazia nas 155 linhas incluídas).
-2. **Revisar as referências e gerar o `referencias.bib`** (atualizado em 23/09/2026: sem Zotero, pela lista `literatura/referencias/revisao-referencias.md`). Enquanto isso não acontecer, o script de checagem marca todo texto como não citável, corretamente. `[A CONFIRMAR]` se o Better BibTeX preserva as chaves importadas; se não, as chaves do rascunho precisam ser convertidas por DOI.
-3. **Três obras sem acesso:** `nunez2015automatic` (sem nota), `tonidandel2006reading` e `sette2008are` (notas só com metadados). Precisam de acervo institucional.
-4. **Conferir na fonte primária** as duas notas feitas sobre versão diferente da citada, e as atas da ECP-01 para o GIPO.
-5. **Decidir o que fazer com a coincidência de propósito** entre a dissertação de 2010 e o artigo de 2005 do itSIMPLE.
+A fase foi concluída em 23/09/2026, depois de tratadas as pendências do autor:
 
-**Do formato (ação 7 do plano):** o teste está feito e documentado em `redacao/teste-abnt/relatorio-teste.md`. A cadeia Markdown → Pandoc → `.docx` funciona, inclusive no capítulo inteiro. O estilo CSL genérico da ABNT **não imprime o nome do evento** em trabalhos de conferência; a variante UFPR imprime. Nenhuma variante põe o sobrenome em caixa alta dentro dos parênteses, como a NBR 10520 pede — `[A CONFIRMAR]` na norma. O acabamento dos elementos pré-textuais continua sem teste.
+| Pendência | Como foi resolvida |
+|---|---|
+| Confirmar a triagem | Delegada pelo autor ao Coordenador, com critérios acadêmicos padrão (protocolo, seção 9) |
+| Gerar o `referencias.bib` | Sem Zotero, por decisão do autor. **133 obras**: 122 confirmadas aprovadas pelo autor, 5 ressalvas com ≥ 50 citações, 2 obras confirmadas a partir de PDFs do autor e 4 exceções do autor (`tonidandel2006reading`, Stone Soup, Delfi, Cedalion) |
+| Obras sem acesso | Núñez et al. (2015) e Tonidandel et al. (2006) lidas a partir de PDFs do autor; Strobel e Kirsch (2014) acrescentada. Só `sette2008are` segue não lida (não citada em lugar nenhum). GIPO excluído |
+| Notas com versão divergente | Resolvidas: uma é republicação declarada; a outra passou a citar a versão lida |
+| Quatro decisões de fundo | Tomadas pelo autor (plano, seção 10) |
+| Capítulo citável | 11 chaves trocadas ou retiradas; o capítulo cita 83 obras, todas no `referencias.bib` |
+
+**Continua aberto, fora do escopo da Fase 1:** a ação 7 (acabamento ABNT: variante do CSL, caixa alta da NBR 10520, elementos pré-textuais) e a conferência, pelo autor, da divergência de autoria do MetaGPT entre os anais e o arXiv.
 
 ## 6. Insumos para a Fase 2
 

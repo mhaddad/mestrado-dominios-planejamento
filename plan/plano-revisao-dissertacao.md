@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.15 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟡 Fase 1 executada em 22–23/09/2026 por equipe de agentes, pendente de confirmação do autor · próxima: Fase 2 |
+| Versão deste documento | 0.16 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · próxima: Fase 2 |
 
 ---
 
@@ -49,7 +49,7 @@ Desdobramentos possíveis, não obrigatórios:
 | # | Fase | Objetivo | Duração estimada | Status | Início | Fim | Entregável principal |
 |---|---|---|---|---|---|---|---|
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
-| 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟡 | 22/09/2026 | 23/09/2026 | 155 obras triadas e verificadas, 153 notas, 8 sínteses, rascunho do capítulo 2. Falta a confirmação do autor e o `referencias.bib` do Zotero |
+| 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (paralela à Fase 1) | ⚪ | | | Relatório de auditoria |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
@@ -183,8 +183,8 @@ Desdobramentos possíveis, não obrigatórios:
 
 - [x] Definir protocolo leve: *strings* de busca, bases, critérios de inclusão/exclusão — `literatura/protocolo/protocolo-busca.md` (v1.1)
 - [x] Rodar buscas por eixo com apoio de IA e montar lista bruta — 344 registros, 317 obras únicas, mais busca dirigida de 5 lacunas
-- [x] Triagem por título e resumo — 155 incluídas; **a confirmação do autor está pendente** (coluna `confirmado_autor`)
-- [x] Verificar metadados no registro primário — 154 verificadas, `literatura/referencias/candidatas.bib`. **Falta a revisão do autor em `revisao-referencias.md` e a geração do `referencias.bib`** (sem Zotero, decisão de 23/09/2026)
+- [x] Triagem por título e resumo — 156 incluídas; confirmação delegada pelo autor ao Coordenador (critérios no protocolo, seção 9)
+- [x] Verificar metadados no registro primário — 156 verificadas em `candidatas.bib`; **133 aprovadas no `referencias.bib`** (sem Zotero, decisão de 23/09/2026)
 - [x] Leitura com extração estruturada — 153 notas (91 de texto integral, 62 de resumo)
 - [x] Produzir síntese por eixo — 8 sínteses, 17.785 palavras, todas as notas citadas
 - [x] Redigir rascunho do novo capítulo de fundamentos — `redacao/capitulos/02-fundamentos.md` (rascunho de IA, revisado por parecer adversarial)
@@ -195,7 +195,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Critério de conclusão:** todos os eixos com síntese e todas as referências citadas verificadas.
 
-**Notas:** executada em 22–23/09/2026 por equipe multiagente (`plan/fase1-estrategia-multiagentes.md`). Relatório: `literatura/relatorio-fase1.md`. Controle de qualidade: `literatura/protocolo/qc-coordenador.md`. Insumos para a Fase 2: `auditoria/insumos-fase1.md`. **Critério de conclusão ainda não cumprido:** as referências estão verificadas no registro primário, não no Zotero; o `referencias.bib` não existe.
+**Notas:** executada em 22–23/09/2026 por equipe multiagente (`plan/fase1-estrategia-multiagentes.md`). Relatório: `literatura/relatorio-fase1.md`. Controle de qualidade: `literatura/protocolo/qc-coordenador.md`. Insumos para a Fase 2: `auditoria/insumos-fase1.md`. **Critério de conclusão cumprido em 23/09/2026:** todos os eixos têm síntese, e todas as 83 referências citadas no capítulo estão no `referencias.bib`. Por decisão do autor, o critério vale para o capítulo; as sínteses são material de trabalho (ver `literatura/sinteses/README.md`).
 
 ---
 
@@ -463,6 +463,10 @@ Desdobramentos possíveis, não obrigatórios:
 
 | 23/09/2026 | `tonidandel2006reading` promovido ao `referencias.bib` como exceção à regra de citações (1 citação registrada) | Decisão do autor: obra do orientador original, que define a UML.P usada nas métricas de 2010 | 1, 2 |
 
+| 23/09/2026 | Stone Soup, Delfi e Cedalion (`helmert2011fast`, `katz2018delfi`, `seipp2014fast`) promovidos ao `referencias.bib` por exceção à regra de citações | Decisão do autor: são as referências padrão desses planejadores; não têm contagem nas bases por serem resumos de planejadores da IPC | 1 |
+| 23/09/2026 | O critério de conclusão da Fase 1 ("todas as referências citadas verificadas") vale para o capítulo, não para as sínteses, que são material de trabalho | Decisão do autor | 1 |
+| 23/09/2026 | Rascunho do capítulo 2 ajustado para citar só obras do `referencias.bib`: 11 chaves trocadas por obras citáveis ou retiradas com a afirmação correspondente; Fase 1 concluída | Critério de conclusão da fase | 1 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -478,6 +482,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 22–23/09/2026 | 1 | Claude Code — Coordenador (claude-opus-5) + 45 execuções de subagentes (claude-sonnet-5) | Fase 1 inteira: protocolo, busca em 8 eixos, triagem, verificação de metadados, leitura e extração de 153 obras, 8 sínteses, rascunho do capítulo 2 e parecer crítico | Coordenador reconferiu: amostra de 32 itens da busca, todas as 115 entradas com DOI e as 19 do arXiv, 4 números centrais de notas nos PDFs originais e os 9 achados do parecer crítico. Registro completo em `literatura/protocolo/qc-coordenador.md`. **Conferência do autor pendente em tudo** |
 
 | 23/09/2026 | 1 | Claude Code (claude-opus-5-5) | Tratamento das pendências da Fase 1: confirmação da triagem por critérios com dados do OpenAlex; resolução das duas notas com versão divergente; veículo do itSIMPLE 2005 confirmado no site oficial; limpeza mecânica do `candidatas.bib`; lista de revisão e script de promoção das referências | Critérios e resultado registrados no protocolo (seção 9) e em `triagem.csv`. **A revisão das referências é do autor** |
+
+| 23/09/2026 | 1 | Claude Code (claude-opus-5-5) | Fechamento da Fase 1: leitura das obras enviadas pelo autor, contagem de citações das ressalvas (OpenAlex e Semantic Scholar), geração do `referencias.bib`, ajuste do capítulo 2 para citar só obras aprovadas | Cada substituição de citação no capítulo conferida contra a nota da obra substituta; conversão com Pandoc testada com o `referencias.bib`. **Revisão do texto pelo autor pendente** |
 
 ---
 
@@ -546,3 +552,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.13 | 23/09/2026 | Pendências da Fase 1 tratadas: triagem confirmada (delegada ao Coordenador), fluxo de referências sem Zotero (`revisao-referencias.md` + `promover_referencias.py`), GIPO excluído, notas com versão divergente resolvidas; ações 8 a 10 atualizadas; 4 decisões |
 | 0.14 | 23/09/2026 | Quatro decisões de fundo para as Fases 2 e 3: taxonomia de técnicas em quatro dimensões (expansão de escopo, R1), análise por domínio e por instância, métricas UML testadas contra *features* de PDDL, itSIMPLE 2005 assumido como origem da pergunta; ação 12 (conversa com o Tonidandel) |
 | 0.15 | 23/09/2026 | `referencias.bib` gerado (129 obras); obras enviadas pelo autor lidas (Núñez 2015, Tonidandel 2006, Strobel e Kirsch 2014); A3 revisto para "reformula"; ações 9 e 10 concluídas |
+| 0.16 | 23/09/2026 | **Fase 1 concluída.** Stone Soup, Delfi e Cedalion promovidos por exceção (133 obras no `referencias.bib`); capítulo 2 ajustado e 100% citável; critério de conclusão aplicado ao capítulo |

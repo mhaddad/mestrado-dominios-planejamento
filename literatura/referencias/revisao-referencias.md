@@ -88,21 +88,24 @@ Para mudar qualquer decisão: troque a marca (`[x]` promove, `[ ]` não promove)
 - [ ] `zhou2026agentasarouter` — ZHOU, P.; TANG, Z.; MA, Y.; et al. Agent-as-a-Router: Agentic Model Routing for Coding Tasks., 2026. Disponível em: <https://arxiv.org/abs/2606.22902>.
   - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
   - **Citações:** 0 citações · citada 4× no capítulo
-- [ ] `helmert2011fast` — HELMERT, M.; RÖGER, G.; KARPAS, E. Fast Downward Stone Soup: A Baseline for Building Planner Portfolios. Proceedings of the ICAPS 2011 Workshop on Planning and Learning (PAL).Anais... , 2011. Disponível em: <https://ai.dmi.unibas.ch/papers/helmert-et-al-icaps2011ws.pdf>.
+- [x] `helmert2011fast` — HELMERT, M.; RÖGER, G.; KARPAS, E. Fast Downward Stone Soup: A Baseline for Building Planner Portfolios. Proceedings of the ICAPS 2011 Workshop on Planning and Learning (PAL).Anais... , 2011. Disponível em: <https://ai.dmi.unibas.ch/papers/helmert-et-al-icaps2011ws.pdf>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
   - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 1× no capítulo
+  - **Promovida por decisão do autor (23/09/2026):** exceção à regra de citações — referência padrão do planejador na área; não tem contagem nas bases por ser resumo de planejador da IPC
 - [ ] `ipc2008results` — INTERNATIONAL PLANNING COMPETITION. Results - IPC-2008, Deterministic Part., 2008. Página oficial de resultados, IPC-2008. Disponível em: <https://ipc08.icaps-conference.org/deterministic/Results.html>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
   - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 0× no capítulo
 - [ ] `jilani2014automated` — JILANI, R.; CRAMPTON, A.; KITCHIN, D. E.; VALLATI, M. Automated Knowledge Engineering Tools in Planning: State-of-the-art and Future Challenges. Proceedings of the ICAPS 2014 Workshop on Knowledge Engineering for Planning and Scheduling (KEPS).Anais... , 2014. Disponível em: <https://eprints.hud.ac.uk/id/eprint/20380/>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
   - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 0× no capítulo
-- [ ] `katz2018delfi` — KATZ, M.; SOHRABI, S.; SAMULOWITZ, H.; SIEVERS, S. Delfi: Online Planner Selection for Cost-Optimal Planning. International Planning Competition (IPC) 2018 – Planner Abstracts.Anais... , 2018. Disponível em: <https://ai.dmi.unibas.ch/papers/katz-et-al-ipc2018.pdf>.
+- [x] `katz2018delfi` — KATZ, M.; SOHRABI, S.; SAMULOWITZ, H.; SIEVERS, S. Delfi: Online Planner Selection for Cost-Optimal Planning. International Planning Competition (IPC) 2018 – Planner Abstracts.Anais... , 2018. Disponível em: <https://ai.dmi.unibas.ch/papers/katz-et-al-ipc2018.pdf>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
   - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 3× no capítulo
-- [ ] `seipp2014fast` — SEIPP, J.; SIEVERS, S.; HUTTER, F. Fast Downward Cedalion. International Planning Competition (IPC) 2014 – Planner Abstracts.Anais... , 2014. Disponível em: <https://mrlab.ai/papers/seipp-et-al-ipc2014b.pdf>.
+  - **Promovida por decisão do autor (23/09/2026):** exceção à regra de citações — referência padrão do planejador na área; não tem contagem nas bases por ser resumo de planejador da IPC
+- [x] `seipp2014fast` — SEIPP, J.; SIEVERS, S.; HUTTER, F. Fast Downward Cedalion. International Planning Competition (IPC) 2014 – Planner Abstracts.Anais... , 2014. Disponível em: <https://mrlab.ai/papers/seipp-et-al-ipc2014b.pdf>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
   - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 1× no capítulo
+  - **Promovida por decisão do autor (23/09/2026):** exceção à regra de citações — referência padrão do planejador na área; não tem contagem nas bases por ser resumo de planejador da IPC
 
 ---
 
