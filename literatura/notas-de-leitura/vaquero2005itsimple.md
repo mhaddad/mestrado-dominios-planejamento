@@ -15,8 +15,8 @@ perguntas: [Q2]
 
 # The itSIMPLE tool for Modeling Planning Domains
 
-**Vaquero, T. S.; Tonidandel, F.; Silva, J. R. · 2005 · documento com copyright da AAAI; o texto diz que a ferramenta foi proposta à ICKEPS. Veículo exato `[A CONFIRMAR]`**
-**Link/DOI:** sem DOI localizado (Crossref não tem registro). Cópia em PDF fornecida pelo autor.
+**Vaquero, T. S.; Tonidandel, F.; Silva, J. R. · 2005 · ICAPS 2005 Competition on Knowledge Engineering for Planning and Scheduling (ICKEPS), Monterey, 7 jun. 2005** (veículo confirmado em 23/09/2026 no site oficial da competição)
+**Link/DOI:** sem DOI; https://ipc05.icaps-conference.org/papers/paper5.pdf
 
 ## Extração estruturada
 
