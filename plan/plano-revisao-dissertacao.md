@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.19 |
+| Versão deste documento | 0.20 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -54,7 +54,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (piloto começa em paralelo à Fase 3) | ⚪ | | | Relatório do piloto + decisão sobre produto |
-| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | ⚪ | | | Nova versão + material para o orientador |
+| 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
 
@@ -62,7 +62,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 | Marco | Quando | O que levar | Status |
 |---|---|---|---|
-| M1 — Primeiro contato | Após Fase 2 | Diagnóstico da versão 2010 + perguntas de pesquisa revisadas | ⚪ |
+| M1 — Primeiro contato | Após Fase 2 | Diagnóstico da versão 2010 + perguntas de pesquisa revisadas | 🟡 enviado em 23/09/2026; aguardando retorno |
 | M2 — Resultados | Após Fases 3–4 | Resultados da replicação e da camada LLM | ⚪ |
 | M3 — Nova versão | Fim da Fase 6 | Texto completo + ponte com desenvolvimento de software | ⚪ |
 
@@ -361,7 +361,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - [ ] Validar a conversão do Markdown para o documento final ABNT (Pandoc, estilo CSL, modelo de referência) e decidir a montagem final; ver `redacao/README.md`
 - [ ] Conferir a edição vigente das normas ABNT e o manual de normalização da FEI
-- [ ] Redigir capítulos a partir dos entregáveis das fases anteriores
+- [ ] Redigir capítulos a partir dos entregáveis das fases anteriores — rascunhos de IA prontos: 1 (Introdução, com seções pendentes dos resultados), 2 (Fundamentos) e 3 (Revisitando 2010); os capítulos 4 a 8 dependem das Fases 3 a 5
 - [ ] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências)
 - [ ] Verificação final de todas as referências e números
 - [ ] Revisão de estilo na voz do autor
@@ -410,8 +410,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 10 | Obras sem acesso | 1 | Matheus | 23/09/2026 | 🟢 `nunez2015automatic` e `tonidandel2006reading` lidas a partir dos PDFs do autor; `strobel2014planning` acrescentada; só `sette2008are` segue sem leitura (não citável). GIPO excluído |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
 | 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta | 2, 6 | Matheus | | ⚪ entra no Marco M1 (o artigo de 2006 já foi lido a partir do PDF do autor) |
-| 13 | Revisar a auditoria: ler primeiro as afirmações "reformula" e "descarta" de `auditoria/afirmacoes.csv` | 2 | Matheus + Coordenador | antes do M1 | 🟢 revisão do Coordenador por delegação do autor (`auditoria/relatorio-auditoria.md`, seções 9 e 10); leitura humana recomendada antes da redação |
-| 14 | Revisar e enviar o material do Marco M1 (`auditoria/m1-orientador.md`) | 2 | Matheus | | ⚪ |
+| 13 | Revisar a auditoria (afirmações "reformula" e "descarta") | 2 | Matheus + Coordenador | 23/09/2026 | 🟢 revisão do Coordenador por delegação; **leitura das 84 feita pelo autor** em 23/09/2026 |
+| 14 | Revisar e enviar o material do Marco M1 (`auditoria/m1-orientador.md`) | 2 | Matheus | 23/09/2026 | 🟢 revisado e enviado ao Tonidandel; aguardando retorno |
 | 15 | Aprovar as fontes novas da Fase 2 no `referencias.bib` | 2, 6 | Coordenador (delegado pelo autor) | 23/09/2026 | 🟢 17 promovidas (11 da Fase 2 + 6 da resolução de pendências); `referencias.bib` com 150 obras |
 | 16 | Conferir na fonte as afirmações com ação "CONFERIR" | 2, 6 | Coordenador | 23/09/2026 | 🟢 nenhuma restante; 16 de confiança baixa com decisão registrada (retirar, parafrasear ou tratar como hipótese) |
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
@@ -479,6 +479,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | Pendências da auditoria resolvidas pelo Coordenador por delegação do autor: 17 referências promovidas ao `referencias.bib` pelo critério das exceções anteriores (fontes primárias de planejadores e competições); `cenamor2019insights` mantido fora; afirmações periféricas sem fonte são retiradas da versão revisada, citações diretas não conferidas viram paráfrase com fonte aprovada | Pedido do autor: "decidindo a partir do contexto do projeto [...] pelo mais coerente" | 2, 6 |
 | 23/09/2026 | Os 4 pares do G21 vieram da execução própria de 2010 (logs no acervo): valores publicados preservados, origem corrigida na documentação e na Fase 3 (34 de competição, 66 de execução própria) | Evidência do acervo | 2, 3 |
 
+| 23/09/2026 | Fase 3 roda numa máquina virtual do OrbStack neste Mac (Apple M4). Primeiro teste: se os binários de 2010 (ELF 32-bit i386) rodam numa máquina amd64; tempos sob emulação não são comparáveis aos de 2010 | Decisão do autor; ressalva técnica do Coordenador | 3 |
+| 23/09/2026 | Redação iniciada pelos capítulos que não dependem de resultados: Introdução (rascunho) e capítulo 3 (auditoria); a dissertação de 2010 entra no `referencias.bib` como `haddad2010relacao` | Autor liberou a redação após ler a auditoria | 6 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -502,6 +505,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | 2 | Claude Code — Coordenador (claude-opus-5-5) | Revisão das 101 afirmações "reformula"/"descarta" | Conferência em fontes primárias: relatórios das IPCs 1998–2004 (AI Magazine, JAIR) e resultados brutos das IPCs 1998 e 2006, agregados por script; listas de participantes e domínios de cada IPC cruzadas com os 38 pares de "competição" de 2010. **Leitura do autor pendente** |
 
 | 23/09/2026 | 2 | Claude Code — Coordenador (claude-opus-5-5) | Resolução das pendências da auditoria | Conferência nos logs do acervo (G21), em Weld 1994, Bonet e Geffner 2001, relatórios das IPCs, resumo do SatPlan 2006 e site da IPC 2006; trechos das 6 notas novas e suas páginas conferidos por script contra o PDF; metadados do OJS e do Crossref. Promoção de referências por delegação do autor. **Leitura humana recomendada** |
+
+| 23/09/2026 | 6 | Claude Code — Coordenador (claude-opus-5-5) | Rascunhos do capítulo 1 (Introdução) e do capítulo 3 (Revisitando 2010) | Números conferidos contra `auditoria/afirmacoes.csv` e `conferencia-rankings.csv`; 22 e 36 chaves conferidas por `checar_citacoes.py`, todas no `referencias.bib`; usos das obras conferidos nas notas. **Texto final é do autor** |
 
 ---
 
@@ -574,3 +579,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.17 | 23/09/2026 | **Fase 2 concluída** (multiagente): 349 afirmações classificadas (248 mantém, 99 reformula, 2 descarta), achados G18–G20, fontes primárias dos 10 planejadores e dos 2 trabalhos relacionados de 2010, nova taxonomia em 4 dimensões, plano de reexecução (31 itens), relatório de auditoria, material do M1; tabela semente movida para `auditoria/afirmacoes.csv`; ações 13 a 16 |
 | 0.18 | 23/09/2026 | Revisão das 101 afirmações (a pedido do autor): 268 mantém, 76 reformula, 5 descarta; números das IPCs conferidos nas fontes oficiais; achado G21 (4 pares de "competição" impossíveis); R reconhecido como *regression-progression* (Bacchus, 2001) na taxonomia; ações 17 e 18 |
 | 0.19 | 23/09/2026 | Pendências da auditoria resolvidas por delegação do autor: G21 esclarecido (execução própria, logs no acervo), 26 "CONFERIR" resolvidas, 17 referências promovidas (`referencias.bib` com 150), taxonomia 100% citável; totais 265/80/4; ações 13 e 15 a 18 concluídas |
+| 0.20 | 23/09/2026 | M1 enviado ao orientador; leitura das 84 feita pelo autor; Fase 3 no OrbStack (ressalva: binários de 2010 são 32-bit i386); rascunhos dos capítulos 1 e 3; `haddad2010relacao` no `referencias.bib` (151 obras) |

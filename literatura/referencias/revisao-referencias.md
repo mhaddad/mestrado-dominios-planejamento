@@ -331,3 +331,7 @@ Acrescentadas na resolução das pendências da auditoria (relatórios oficiais 
 - [x] `hoffmann2005deterministic` — Hoffmann, J. and Edelkamp, S.. The Deterministic Part of IPC-4: An Overview. Journal of Artificial Intelligence Research, v. 24, p. 519-579, 2005. Disponível em: <https://doi.org/10.1613/jair.1677>.
 - [x] `bonet2001heuristic` — Bonet, Blai and Geffner, Hector. Heuristic Search Planner 2.0. AI Magazine, v. 22, p. 77-80, 2001. Disponível em: <https://doi.org/10.1609/aimag.v22i3.1576>.
 - [x] `weld1994introduction` — Weld, Daniel S.. An Introduction to Least Commitment Planning. AI Magazine, v. 15, p. 27-61, 1994. Disponível em: <https://doi.org/10.1609/aimag.v15i4.1109>.
+
+## Obra revisada
+
+- [x] `haddad2010relacao` — HADDAD, M. Relação entre características de domínios e técnicas de planejamento. Dissertação (Mestrado em Engenharia Elétrica) — Centro Universitário da FEI, São Bernardo do Campo, 2010.
