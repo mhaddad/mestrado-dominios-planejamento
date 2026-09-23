@@ -87,7 +87,7 @@ A fase foi concluída em 23/09/2026, depois de tratadas as pendências do autor:
 | Quatro decisões de fundo | Tomadas pelo autor (plano, seção 10) |
 | Capítulo citável | 11 chaves trocadas ou retiradas; o capítulo cita 83 obras, todas no `referencias.bib` |
 
-**Continua aberto, fora do escopo da Fase 1:** a ação 7 (acabamento ABNT: variante do CSL, caixa alta da NBR 10520, elementos pré-textuais) e a conferência, pelo autor, da divergência de autoria do MetaGPT entre os anais e o arXiv.
+**Continua aberto, fora do escopo da Fase 1:** a ação 7 (acabamento ABNT: variante do CSL, caixa alta da NBR 10520, elementos pré-textuais). A divergência de autoria do MetaGPT foi fechada em 23/09/2026: vale a forma dos anais do ICLR 2024, a versão citada.
 
 ## 6. Insumos para a Fase 2
 

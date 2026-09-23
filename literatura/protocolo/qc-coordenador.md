@@ -46,3 +46,7 @@ O parecer também registra que a fidelidade do rascunho às fontes é alta e que
 ## Fechamento — ajuste do capítulo (23/09/2026)
 
 As 11 chaves não citáveis do capítulo foram tratadas uma a uma. Cada obra substituta teve a afirmação conferida na própria nota antes da troca: `fawcett2014improved` (contribuição marginal das famílias de *features*), `katz2018delfi` (Delfi 1 em primeiro lugar na faixa ótima da IPC 2018, entre 16 submissões), `sievers2019deep` (nenhuma receita única; validação preservando o domínio), `nunez2015automatic` (portfólio por domínio venceu a trilha de aprendizado da IPC 2014), `guan2023leveraging` e `tantakoun2025llms` (LLM gera PDDL, com validador externo), `chen2023frugalgpt` (cascatas de modelos). Afirmações que só obras não promovidas sustentavam foram retiradas: o resultado da METR (−19%), a matriz de roteamento de `zhou2026agentasarouter`, o `RouterBench` e o argumento específico de `delarosa2017performance`.
+
+## MetaGPT — autoria (23/09/2026)
+
+**Fechado.** O autor trouxe um texto sem fonte que lista o coautor como "Jonathan Chen (ou Jiaqi Chen)", sem resolver a forma. Decisão: manter "Chen, Jonathan", como nos anais do ICLR 2024 (proceedings.iclr.cc), que é a versão citada; a referência reproduz o nome como aparece na fonte citada. Os demais autores do texto (Hong, Zhuge, Zheng, Cheng, Wu, Schmidhuber) conferem com o `referencias.bib`.
