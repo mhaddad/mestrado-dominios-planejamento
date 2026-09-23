@@ -87,7 +87,7 @@ Está detalhado em `literatura/protocolo/qc-coordenador.md`. Em resumo: amostra 
 
 ## 6. Insumos para a Fase 2
 
-Estão em `auditoria/insumos-fase1.md`: veredito sugerido para cada afirmação A1–A8, situação das sete fragilidades e o que a literatura acrescenta aos achados G1–G17 da Fase 0. O resumo dos vereditos: **mantém** A1 (reformulada) e A4 (com ressalva); **reformula** A2, A5 e A7; **descarta** A3, A6 e A8 na forma atual.
+Estão em `auditoria/insumos-fase1.md`: veredito sugerido para cada afirmação A1–A8, situação das sete fragilidades e o que a literatura acrescenta aos achados G1–G17 da Fase 0. O resumo dos vereditos: **mantém** A1 (reformulada) e A4 (com ressalva); **reformula** A2, A3, A5 e A7; **descarta** A6 e A8 na forma atual. (Atualizado em 23/09/2026: o A3 passou de "descarta" para "reformula" depois da leitura de `nunez2015automatic`, que mostra que a configuração por domínio continua competitiva quando há treino no domínio.)
 
 A Fase 2 não precisa mais discutir o que a literatura já resolveu com fonte primária. Precisa decidir quatro coisas que são do autor: se mantém a taxonomia de técnicas como objeto; se a pergunta passa a ser sobre instâncias; se as métricas UML continuam como objeto de teste ou são substituídas; e como tratar o antecedente de 2005.
 
