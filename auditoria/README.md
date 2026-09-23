@@ -7,7 +7,8 @@
 
 | Arquivo | Conteúdo |
 |---|---|
-| `afirmacoes.csv` | Tabela de auditoria (colunas: `id, afirmacao, local, classificacao, justificativa, acao`) |
+| `afirmacoes.csv` | Tabela de auditoria: `id` (AF-NNN), `origem` (ID no bloco de extração), `linha` e `secao` (local em `data/2010/extraido/texto.md`), `tipo`, `trecho` (cópia literal), `resumo`, `observacao`, `rotulo_fase1` (A1–A8, T1–T6), `classificacao` (mantém / reformula / descarta), `justificativa`, `acao`, `conferencia_numerica`. Gerada por `scripts/consolidar_extracao.py` a partir de `extracao/bloco-*.csv` |
+| `extracao/` | Extração por bloco do texto (Onda 1 da Fase 2) e conferência numérica (Onda 2) |
 | `taxonomia-tecnicas.md` | Nova taxonomia de técnicas, compatível com a literatura atual (F4) |
 | `condicoes-de-execucao-2010.md` | Como os dados da 5ª etapa foram obtidos (F6). **Feito na Fase 0.** |
 | `achados-fase0.md` | Pontos a examinar, levantados ao extrair e conferir o dataset (G1–G10). **Feito na Fase 0.** |
@@ -16,4 +17,4 @@
 
 Enquanto `afirmacoes.csv` não existir, a tabela de auditoria semente (A1–A4) fica na seção 7 do [plano](../plan/plano-revisao-dissertacao.md). Ao criar o CSV, mova as linhas para lá e deixe um ponteiro no plano.
 
-O CSV começa só com o cabeçalho, de propósito: as linhas entram quando a IA extrair a lista completa e o autor revisar.
+Os IDs AF-NNN seguem a ordem das linhas no texto. Depois que a classificação começar, **não acrescente blocos novos sem renumerar com cuidado**: o script preserva a classificação pela coluna `origem`, mas os AF-NNN mudam se entrarem afirmações no meio.
