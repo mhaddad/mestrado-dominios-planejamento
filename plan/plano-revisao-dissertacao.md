@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.13 |
+| Versão deste documento | 0.14 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟡 Fase 1 executada em 22–23/09/2026 por equipe de agentes, pendente de confirmação do autor · próxima: Fase 2 |
 
 ---
@@ -414,7 +414,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 8 | Confirmar a triagem da Fase 1 | 1 | Coordenador (delegado pelo autor) | 23/09/2026 | 🟢 122 confirmadas, 29 com ressalva, 3 não citáveis (não lidas), GIPO excluído; critérios no protocolo, seção 9 |
 | 9 | Revisar as referências em `literatura/referencias/revisao-referencias.md` (122 pré-aprovadas, 29 com ressalva a decidir) e rodar `promover_referencias.py` | 1, 6 | Matheus | | ⚪ bloqueia a citação de qualquer texto |
 | 10 | Obras sem acesso: `nunez2015automatic` (acesso aberto no ScienceDirect, baixar no navegador), `tonidandel2006reading` e `sette2008are` (pedir aos autores). GIPO excluído | 1 | Matheus | | 🟡 opcional: as três ficam não citáveis até serem lidas |
-| 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | | ⚪ |
+| 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
+| 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta, e pedir a cópia de "Reading PDDL, Writing an Object-Oriented Model" (2006), do qual ele é primeiro autor | 2, 6 | Matheus | | ⚪ pode coincidir com o primeiro contato antes do Marco M1 |
 
 ---
 
@@ -451,6 +452,11 @@ Desdobramentos possíveis, não obrigatórios:
 | 23/09/2026 | **Sem Zotero.** O autor revisa as referências em `literatura/referencias/revisao-referencias.md`; o script `promover_referencias.py` gera o `referencias.bib` a partir das marcas. Substitui a parte do Zotero na decisão de 21/09/2026 sobre o `.bib` | Zotero não instalado; decisão do autor | 1, 6 |
 | 23/09/2026 | GIPO (2001) excluído: sem fonte primária e coberto por `simpson2007planning` | Decisão do autor | 1 |
 | 23/09/2026 | `vallati2016identifying` passa a ser citado na versão do ICAPS 2015 (`vallati2015identifying`), que foi a lida | Regra de citar a versão lida | 1 |
+
+| 23/09/2026 | **Taxonomia de técnicas refeita em quatro dimensões** (algoritmo de busca, tipo de heurística, representação de estado, arquitetura do sistema), no lugar das seis categorias exclusivas de 2010. **Expansão de escopo** (risco R1): vira contribuição própria, a validar na Fase 3 | A taxonomia de 2010 não se sustenta contra a fonte primária (`auditoria/insumos-fase1.md`, A6); decisão do autor | 2, 3 |
+| 23/09/2026 | **Análise em dois níveis, reportados separadamente:** por domínio (continuidade com 2010) e por instância (estado da arte), separando discriminação entre domínios de dificuldade dentro do domínio | A literatura migrou para a seleção por instância; A3 não se sustenta na forma de 2010; decisão do autor | 2, 3 |
+| 23/09/2026 | **Métricas UML mantidas como objeto de teste, comparadas com *features* automáticas de PDDL** (grafo causal, DTG) nos mesmos domínios, com controle da ordem de serialização do modelo. Resposta direta à Q2; resultado negativo também é resultado | Lacuna confirmada por busca dirigida (nenhum trabalho compara as duas); decisão do autor | 2, 3 |
+| 23/09/2026 | **O artigo do itSIMPLE de 2005 é assumido como origem da pergunta** da dissertação, que passa a ser apresentada como a primeira execução de um objetivo do projeto itSIMPLE. Conversar com o Tonidandel (coautor do artigo e orientador original) | O artigo declara em 2005 o objetivo que a dissertação executou e não foi citado em 2010; decisão do autor | 2, 6 |
 
 ---
 
@@ -533,3 +539,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.11 | 21/09/2026 | Decidido: corpo do texto em Markdown no repositório, com `.bib` do Zotero; convenções de referências e de escrita; ação 7 passa a validar a conversão |
 | 0.12 | 23/09/2026 | **Fase 1 executada em modo multiagente** (22–23/09/2026): protocolo v1.1 com o critério X7, 317 obras únicas triadas, 155 incluídas, 154 verificadas no registro primário, 153 notas de leitura, 8 sínteses, rascunho do capítulo 2 com parecer crítico, insumos para a Fase 2 e teste da conversão ABNT. Relatório em `literatura/relatorio-fase1.md`; tudo pendente de confirmação do autor |
 | 0.13 | 23/09/2026 | Pendências da Fase 1 tratadas: triagem confirmada (delegada ao Coordenador), fluxo de referências sem Zotero (`revisao-referencias.md` + `promover_referencias.py`), GIPO excluído, notas com versão divergente resolvidas; ações 8 a 10 atualizadas; 4 decisões |
+| 0.14 | 23/09/2026 | Quatro decisões de fundo para as Fases 2 e 3: taxonomia de técnicas em quatro dimensões (expansão de escopo, R1), análise por domínio e por instância, métricas UML testadas contra *features* de PDDL, itSIMPLE 2005 assumido como origem da pergunta; ação 12 (conversa com o Tonidandel) |

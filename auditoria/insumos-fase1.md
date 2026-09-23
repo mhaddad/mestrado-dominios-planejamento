@@ -58,11 +58,11 @@ Os rótulos A1–A8 e T1–T6 estão definidos em `literatura/protocolo/instruco
 
 **Não precisa mais discutir** (a literatura já resolveu, com fonte primária): que Fast Downward não é *Hierarchical*; que planejadores SAT não são *forward-chaining* nem *plan-space*; que a seleção por instância supera a seleção por domínio; que cobertura sozinha é métrica insuficiente.
 
-**Precisa decidir** (escolhas do autor, não da literatura):
-1. Se a nova versão mantém a taxonomia de técnicas como objeto (corrigida em quatro eixos) ou abandona a ideia de classificar planejadores por técnica exclusiva.
-2. Se a pergunta central passa a ser sobre **instâncias** e não só sobre domínios — o que muda o desenho da Fase 3.
-3. Se as métricas UML continuam como objeto de teste (para responder Q2 com um resultado publicável, inclusive negativo) ou se são substituídas por *features* automáticas.
-4. Como tratar a coincidência de propósito com o artigo de 2005 do itSIMPLE: a dissertação de 2010 executou um objetivo declarado pela equipe da ferramenta, e isso precisa aparecer na nova revisão de trabalhos relacionados.
+**Precisava decidir** (escolhas do autor, não da literatura) — **decidido em 23/09/2026**, ver plano, seção 10:
+1. Se a nova versão mantém a taxonomia de técnicas como objeto (corrigida em quatro eixos) ou abandona a ideia de classificar planejadores por técnica exclusiva. → **Refazer em quatro dimensões.**
+2. Se a pergunta central passa a ser sobre **instâncias** e não só sobre domínios — o que muda o desenho da Fase 3. → **Os dois níveis, reportados separadamente.**
+3. Se as métricas UML continuam como objeto de teste (para responder Q2 com um resultado publicável, inclusive negativo) ou se são substituídas por *features* automáticas. → **Testadas contra *features* de PDDL, com controle da serialização.**
+4. Como tratar a coincidência de propósito com o artigo de 2005 do itSIMPLE: a dissertação de 2010 executou um objetivo declarado pela equipe da ferramenta, e isso precisa aparecer na nova revisão de trabalhos relacionados. → **Assumido como origem da pergunta; conversar com o Tonidandel.**
 
 ## 6. Força da evidência por veredito (acrescentado em 23/09/2026)
 
