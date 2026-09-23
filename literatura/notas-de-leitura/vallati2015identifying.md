@@ -1,7 +1,7 @@
 ---
 tipo: nota-de-leitura
 eixo: E2
-citekey: vallati2016identifying
+citekey: vallati2015identifying
 prioridade: B
 status: lido
 profundidade: resumo
@@ -15,7 +15,7 @@ perguntas: [Q2]
 
 # Identifying and Exploiting Features for Effective Plan Retrieval in Case-Based Planning
 
-**Vallati, M.; Serina, I.; Saetti, A.; Gerevini, A. · 2016 (versão de periódico; leitura feita na versão de conferência ICAPS 2015) · Fundamenta Informaticae**
+**Vallati, M.; Serina, I.; Saetti, A.; Gerevini, A. · 2015 · Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS 2015), v. 25, p. 239-243**
 **Link/DOI:** 10.3233/fi-2016-1447
 
 ## Extração estruturada
@@ -44,3 +44,5 @@ perguntas: [Q2]
 ## Uso de IA nesta nota
 
 Claude Code, subagente claude-sonnet-5, 22/09/2026. Leitura de resumo, introdução e conclusão da versão de conferência (ICAPS 2015) em https://cdn.aaai.org/ojs/13715/13715-40-17233-1-2-20201228.pdf, por não ter sido possível acessar a versão de periódico canônica (paywall em journals.sagepub.com). Conferência humana: pendente.
+
+**Nota do Coordenador (23/09/2026):** a leitura foi feita na versão do ICAPS 2015 (DOI 10.1609/icaps.v25i1.13715). A citação passou a ser dessa versão, e a chave mudou de `vallati2016identifying` (versão de periódico, Fundamenta Informaticae, não lida) para `vallati2015identifying`.

@@ -44,3 +44,5 @@ perguntas: [Q2]
 ## Uso de IA nesta nota
 
 Claude Code, subagente claude-sonnet-5, 22/09/2026. Leitura de resumo e introdução de cópia aberta (mesmo título e autoria do artigo K-CAP 2019) em https://icaps20subpages.icaps-conference.org/wp-content/uploads/2020/10/KEPS-2020_paper_3.pdf, localizada por busca web pois o artigo publicado pela ACM está atrás de paywall. Conferência humana: pendente (inclusive quanto à correspondência exata entre esta versão e a publicada).
+
+**Nota do Coordenador (23/09/2026):** a cópia lida (KEPS 2020) traz, na nota de rodapé do título, "This paper has been published in the proceedings of the ACM Conference on Knowledge Capture (K-CAP) 2019." É republicação declarada pelos autores do mesmo artigo, então a citação à versão do K-CAP 2019 é correta e a divergência entre versão lida e versão citada fica resolvida.

@@ -34,3 +34,11 @@ O parecer adversarial (`redacao/capitulos/02-fundamentos-critica.md`) levantou 9
 | CRI-004, CRI-005, CRI-006, CRI-008, CRI-009 (menores) | Condição omitida em Domshlak & Nazarenko; "menos da metade" impreciso; hedge "quase certamente" removido; erro aritmético (treze × quinze anos entre a IPC 2008 e a IPC 2023); aspas em tradução livre | Todas corrigidas. O erro aritmético vinha da síntese E3, também corrigida. As traduções passaram a trazer o original em inglês entre aspas |
 
 O parecer também registra que a fidelidade do rascunho às fontes é alta e que nenhum problema exigiu nova busca bibliográfica.
+
+## Pendências tratadas em 23/09/2026
+
+| Pendência | Resolução |
+|---|---|
+| `vallati2019robustness`: nota feita na versão KEPS 2020, citação ao K-CAP 2019 | **Resolvida.** A cópia do KEPS 2020 declara, na nota de rodapé do título, que o artigo foi publicado nos anais da K-CAP 2019. É republicação do mesmo texto; a citação ao K-CAP fica mantida |
+| `vallati2016identifying`: nota feita na versão ICAPS 2015, citação ao periódico de 2016 | **Resolvida.** Citação trocada para a versão lida (ICAPS 2015, DOI 10.1609/icaps.v25i1.13715, BibTeX do doi.org). Chave nova: `vallati2015identifying`, atualizada em notas, sínteses, capítulo, triagem e verificação |
+| `nunez2015automatic` sem acesso | O OpenAlex e o Unpaywall indicam **acesso aberto no ScienceDirect** (acervo aberto do *Artificial Intelligence*); o bloqueio era contra robôs. Download precisa ser feito pelo autor num navegador |

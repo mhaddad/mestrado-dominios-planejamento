@@ -71,7 +71,7 @@ Está detalhado em `literatura/protocolo/qc-coordenador.md`. Em resumo: amostra 
 **Falhas encontradas no próprio processo**, que ficam registradas:
 - Os triadores usaram os códigos X2 e X6 para exclusões por redundância, o que distorcia o registro; criei o critério X7 e recodifiquei 96 linhas.
 - Um leitor instalou o Ghostscript sem autorização para converter um PostScript do JAIR.
-- Duas notas foram feitas sobre versões diferentes das obras que o `.bib` registra (`vallati2019robustness`, `vallati2016identifying`); precisam de conferência antes de citar.
+- Duas notas foram feitas sobre versões diferentes das obras que o `.bib` registra (`vallati2019robustness`, `vallati2015identifying`); precisam de conferência antes de citar.
 - O GIPO foi "verificado" só por fontes secundárias; rebaixei para `divergente` e o tirei do `.bib`.
 
 ## 5. Pendências
