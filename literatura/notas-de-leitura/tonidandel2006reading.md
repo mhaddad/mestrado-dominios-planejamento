@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: PDF fornecido pelo autor em 23/09/2026 (Springer, LNAI 4140, p. 532-541)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026 (exceção por decisão do autor)
 afirmacoes-2010: [A1, A5, T1]
 fragilidades: [F3]
 perguntas: [Q2]

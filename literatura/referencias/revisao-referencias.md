@@ -66,8 +66,9 @@ Para mudar qualquer decisão: troque a marca (`[x]` promove, `[ ]` não promove)
 - [ ] `madeyski2026triage` — MADEYSKI, L. Triage: Routing Software Engineering Tasks to Cost-Effective LLM Tiers via Code Quality Signals., 2026. Disponível em: <https://arxiv.org/abs/2604.07494>.
   - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
   - **Citações:** 2 citações · citada 3× no capítulo
-- [ ] `tonidandel2006reading` — TONIDANDEL, F.; VAQUERO, T. S.; SILVA, J. R. Reading PDDL, Writing an Object-Oriented Model. Advances in Artificial Intelligence - IBERAMIA-SBIA 2006, Lecture Notes em Computer Science. p.532–541, 2006. Springer. Disponível em: <https://doi.org/10.1007/11874850_57>.
+- [x] `tonidandel2006reading` — TONIDANDEL, F.; VAQUERO, T. S.; SILVA, J. R. Reading PDDL, Writing an Object-Oriented Model. Advances in Artificial Intelligence - IBERAMIA-SBIA 2006, Lecture Notes em Computer Science. p.532–541, 2006. Springer. Disponível em: <https://doi.org/10.1007/11874850_57>.
   - **Ressalva:** lida em 23/09/2026 (PDF do autor); revisada por pares, mas baixo impacto (percentil de citação 0.06; 1 citação no OpenAlex)
+  - **Promovida por decisão do autor (23/09/2026):** exceção à regra de citações — obra do orientador original, que define a UML.P, notação das métricas de 2010
   - **Citações:** 1 citações · citada 0× no capítulo
 - [ ] `yang2022pg3` — YANG, R.; SILVER, T.; CURTIS, A.; LOZANO-PÉREZ, T.; KAELBLING, L. P. PG3: Policy-Guided Planning for Generalized Policy Generation. Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI 2022).Anais... . p.4686–4692, 2022. Disponível em: <https://doi.org/10.24963/ijcai.2022/650>.
   - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.40; 1 citações); não sustentar sozinha um argumento central

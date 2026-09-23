@@ -461,6 +461,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 23/09/2026 | **Das obras com ressalva, promover só as muito citadas**; o Coordenador fixou o corte em ≥ 50 citações (maior valor entre OpenAlex e Semantic Scholar), o mesmo limite já usado para *preprints*. Obras sem contagem nas duas bases não sobem | Decisão do autor; limite do Coordenador | 1, 6 |
 | 23/09/2026 | Veredito do A3 revisto de "descarta" para "reformula" depois da leitura de `nunez2015automatic` | A configuração por domínio continua competitiva quando há treino no domínio | 2 |
 
+| 23/09/2026 | `tonidandel2006reading` promovido ao `referencias.bib` como exceção à regra de citações (1 citação registrada) | Decisão do autor: obra do orientador original, que define a UML.P usada nas métricas de 2010 | 1, 2 |
+
 ---
 
 ## 11. Registro de uso de IA
