@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.17 |
+| Versão deste documento | 0.18 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -50,7 +50,7 @@ Desdobramentos possíveis, não obrigatórios:
 |---|---|---|---|---|---|---|---|
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
-| 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (248 mantém, 99 reformula, 2 descarta), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
+| 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (268 mantém, 76 reformula, 5 descarta, após a revisão das 101), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (piloto começa em paralelo à Fase 3) | ⚪ | | | Relatório do piloto + decisão sobre produto |
@@ -410,10 +410,12 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 10 | Obras sem acesso | 1 | Matheus | 23/09/2026 | 🟢 `nunez2015automatic` e `tonidandel2006reading` lidas a partir dos PDFs do autor; `strobel2014planning` acrescentada; só `sette2008are` segue sem leitura (não citável). GIPO excluído |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
 | 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta | 2, 6 | Matheus | | ⚪ entra no Marco M1 (o artigo de 2006 já foi lido a partir do PDF do autor) |
-| 13 | Revisar a auditoria: ler primeiro as 101 afirmações "reformula" e "descarta" de `auditoria/afirmacoes.csv` | 2 | Matheus | antes do M1 | ⚪ |
+| 13 | Revisar a auditoria: ler primeiro as 101 afirmações "reformula" e "descarta" de `auditoria/afirmacoes.csv` | 2 | Matheus + Coordenador | antes do M1 | 🟡 revisão do Coordenador feita a pedido do autor (60 confirmadas, 16 com evidência nova, 25 alteradas; `auditoria/relatorio-auditoria.md`, seção 9); leitura do autor pendente |
 | 14 | Revisar e enviar o material do Marco M1 (`auditoria/m1-orientador.md`) | 2 | Matheus | | ⚪ |
 | 15 | Aprovar (ou não) as 11 fontes novas da Fase 2 no `referencias.bib`: 9 planejadores de 2010 (o Fast Downward já estava) e 2 trabalhos relacionados citados em 2010 | 2, 6 | Matheus | antes de usar a taxonomia no texto | ⚪ |
-| 16 | Conferir na fonte as 49 afirmações com ação "CONFERIR" (percentuais das IPCs 1998–2006, detalhes históricos) | 2, 6 | IA + Matheus | antes da redação | ⚪ |
+| 16 | Conferir na fonte as afirmações com ação "CONFERIR" | 2, 6 | IA + Matheus | antes da redação | 🟡 números das IPCs 1998–2006 conferidos nos relatórios oficiais; restam 26 (citações diretas e detalhes históricos) |
+| 17 | Esclarecer a origem de 4 valores da Tabela 12 marcados como competição que não podem ter vindo de IPC (R e Fast Downward no Depots e no DriverLog; achado G21) | 2, 3 | Matheus | antes da Fase 3 | ⚪ |
+| 18 | Incluir no `candidatas.bib` os relatórios oficiais das IPCs 1998–2004 (McDermott 2000, Bacchus 2001, Long e Fox 2003, Hoffmann e Edelkamp 2005), usados para conferir as afirmações | 2, 6 | IA | | ⚪ |
 
 ---
 
@@ -472,6 +474,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | As Tabelas 2–4 de 2010 são descartadas e substituídas pela nova taxonomia; as Tabelas 18–25 serão recalculadas (Fase 3, R-06 e R-10) | Coerente com A6 e com as fontes primárias dos 10 planejadores | 2, 3 |
 | 23/09/2026 | Regras de auditoria adotadas: trecho literal conferido por script; números derivados de tabela conferidos por script, não por agente; plausibilidade não é evidência (confiança baixa + "CONFERIR"); afirmação sobre obra citada em 2010 é conferida contra a obra que a lista de referências de 2010 indica | Falhas observadas nas Ondas 1–3 (`plan/fase2-estrategia-multiagentes.md`, seção 6) | 2 |
 
+| 23/09/2026 | Revisão das 101 afirmações "reformula"/"descarta" feita pelo Coordenador a pedido do autor: números das IPCs conferidos nos relatórios oficiais e nos resultados brutos; 25 classificações alteradas (4 viram "descarta", 20 viram "mantém", AF-328 volta a "reformula"); achado G21 | Pedido do autor; fontes primárias das competições | 2 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -491,6 +495,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | 1 | Claude Code (claude-opus-5-5) | Fechamento da Fase 1: leitura das obras enviadas pelo autor, contagem de citações das ressalvas (OpenAlex e Semantic Scholar), geração do `referencias.bib`, ajuste do capítulo 2 para citar só obras aprovadas | Cada substituição de citação no capítulo conferida contra a nota da obra substituta; conversão com Pandoc testada com o `referencias.bib`. **Revisão do texto pelo autor pendente** |
 
 | 23/09/2026 | 2 | Claude Code — Coordenador (claude-opus-5-5) + 15 subagentes (5 claude-haiku-4-5, 10 claude-sonnet-5), alguns retomados para correção | Fase 2 inteira: extração de 349 afirmações, fontes primárias dos 10 planejadores e dos 2 trabalhos relacionados de 2010, conferência numérica, classificação, nova taxonomia, plano de reexecução, relatório de auditoria e material do M1 | Coordenador: literalidade dos trechos por script; médias, taxa de acerto e linha de base recalculadas por script; DOIs e URLs das fontes novas reconferidos; 21 revisões de classificação registradas; nota do MAXPLAN e taxonomia corrigidas. Falhas dos agentes e correções em `plan/fase2-estrategia-multiagentes.md`, seção 6. **Revisão do autor pendente** |
+
+| 23/09/2026 | 2 | Claude Code — Coordenador (claude-opus-5-5) | Revisão das 101 afirmações "reformula"/"descarta" | Conferência em fontes primárias: relatórios das IPCs 1998–2004 (AI Magazine, JAIR) e resultados brutos das IPCs 1998 e 2006, agregados por script; listas de participantes e domínios de cada IPC cruzadas com os 38 pares de "competição" de 2010. **Leitura do autor pendente** |
 
 ---
 
@@ -561,3 +567,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.15 | 23/09/2026 | `referencias.bib` gerado (129 obras); obras enviadas pelo autor lidas (Núñez 2015, Tonidandel 2006, Strobel e Kirsch 2014); A3 revisto para "reformula"; ações 9 e 10 concluídas |
 | 0.16 | 23/09/2026 | **Fase 1 concluída.** Stone Soup, Delfi e Cedalion promovidos por exceção (133 obras no `referencias.bib`); capítulo 2 ajustado e 100% citável; critério de conclusão aplicado ao capítulo |
 | 0.17 | 23/09/2026 | **Fase 2 concluída** (multiagente): 349 afirmações classificadas (248 mantém, 99 reformula, 2 descarta), achados G18–G20, fontes primárias dos 10 planejadores e dos 2 trabalhos relacionados de 2010, nova taxonomia em 4 dimensões, plano de reexecução (31 itens), relatório de auditoria, material do M1; tabela semente movida para `auditoria/afirmacoes.csv`; ações 13 a 16 |
+| 0.18 | 23/09/2026 | Revisão das 101 afirmações (a pedido do autor): 268 mantém, 76 reformula, 5 descarta; números das IPCs conferidos nas fontes oficiais; achado G21 (4 pares de "competição" impossíveis); R reconhecido como *regression-progression* (Bacchus, 2001) na taxonomia; ações 17 e 18 |

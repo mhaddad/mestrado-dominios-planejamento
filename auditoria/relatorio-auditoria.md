@@ -1,6 +1,6 @@
 # Relatório de auditoria da dissertação de 2010 (Fase 2)
 
-Versão 1.0 · 23/09/2026 · Coordenador (Claude Code, claude-opus-5-5). Rascunho de trabalho para revisão do autor. Os números saem de `auditoria/scripts/resumir_auditoria.py` sobre `auditoria/afirmacoes.csv`, salvo indicação de outro script.
+Versão 1.1 · 23/09/2026 (revisão das 101 afirmações "reformula"/"descarta" incorporada; seção 9) · Coordenador (Claude Code, claude-opus-5-5). Rascunho de trabalho para revisão do autor. Os números saem de `auditoria/scripts/resumir_auditoria.py` sobre `auditoria/afirmacoes.csv`, salvo indicação de outro script.
 
 ---
 
@@ -19,27 +19,27 @@ A divisão do trabalho entre agentes e as correções feitas pelo Coordenador es
 
 | Classe | Afirmações |
 |---|---|
-| mantém | 248 |
-| reformula | 99 |
-| descarta | 2 |
+| mantém | 268 |
+| reformula | 76 |
+| descarta | 5 |
 | **Total** | **349** |
 
-Confiança: alta 181, média 107, baixa 61.
+Confiança: alta 203, média 108, baixa 38.
 
 **Por capítulo**
 
 | Capítulo | Afirmações | mantém | reformula | descarta |
 |---|---|---|---|---|
 | Resumo | 6 | 4 | 2 | 0 |
-| 1 Introdução | 43 | 23 | 20 | 0 |
-| 2 Revisão bibliográfica | 145 | 109 | 36 | 0 |
+| 1 Introdução | 43 | 27 | 12 | 4 |
+| 2 Revisão bibliográfica | 145 | 124 | 21 | 0 |
 | 3 Planejadores | 20 | 18 | 1 | 1 |
-| 4 Domínios | 31 | 25 | 6 | 0 |
+| 4 Domínios | 31 | 26 | 5 | 0 |
 | 5 Características × técnicas | 41 | 35 | 6 | 0 |
-| 6 Testes e validações | 42 | 30 | 11 | 1 |
+| 6 Testes e validações | 42 | 30 | 12 | 0 |
 | 7 Conclusões e trabalhos futuros | 21 | 4 | 17 | 0 |
 
-**Leitura.** A maior parte das afirmações é descrição fiel do que foi feito (métodos, domínios, história do campo) e se mantém. O que precisa mudar se concentra onde a dissertação **tira conclusões**: das 69 afirmações de resultado, 43 são "reformula"; nas Conclusões e trabalhos futuros, 17 de 21. Descrição de método ruim não foi classificada como erro de descrição: a fraqueza foi para a conclusão que se apoia nele (regra de desempate das instruções).
+**Leitura.** A maior parte das afirmações é descrição fiel do que foi feito (métodos, domínios, história do campo) e se mantém. O que precisa mudar se concentra onde a dissertação **tira conclusões**: das 69 afirmações de resultado, 32 são "reformula"; nas Conclusões e trabalhos futuros, 17 de 21. Descrição de método ruim não foi classificada como erro de descrição: a fraqueza foi para a conclusão que se apoia nele (regra de desempate das instruções).
 
 ## 3. Vereditos por estrutura (além das frases)
 
@@ -61,16 +61,20 @@ Detalhes e evidência em `auditoria/achados-fase0.md`.
 - **G20 — o *ranking* previsto quase não muda entre domínios.** Correlação de postos entre os três *rankings* previstos: 0,94 a 0,99. Uma linha de base **sem características de domínio** (nota média de cada planejador nos 10 domínios de treino) acerta os mesmos cinco primeiros em Storage e Zeno-travel e 4 de 5 no Elevator. `[HIPÓTESE]` Boa parte da previsão reflete a qualidade geral dos planejadores; com 10 planejadores e 3 domínios, a vantagem do método sobre a linha de base (correlação 0,81 × 0,75; 0,86 × 0,68; 0,65 × 0,65) não permite concluir que as características do domínio melhoram a escolha.
 - **Trabalhos relacionados.** Hoffmann (2001) analisa a heurística teórica h+ e testa empiricamente só a do FF; o HSP aparece como trabalho futuro. 2010 diz que a análise foi feita "para as heurísticas utilizadas nos planejadores FF e HSP" (AF-191, reformula). Gerevini, Saetti e Serina (2004) estão descritos corretamente.
 - **Competição de 1998.** A organização da IPC 1998 evitou declarar um vencedor geral; só a trilha ADL teve vencedor (IPP). 2010 chama IPP e Blackbox de "vencedores" (AF-018, AF-089, reformula).
+- **G21 — quatro pares de "competição" impossíveis.** R e Fast Downward no Depots e no DriverLog aparecem na Tabela 12 como resultados de competição, mas esses domínios só estiveram na IPC 2002, da qual nenhum dos dois participou. `[HIPÓTESE]` Os do Fast Downward podem vir do artigo do planejador; os do R, de origem desconhecida.
 - **Elevator.** O domínio usado é a variante simples do Miconic, mas o texto descreve restrições da variante completa (AF-315, reformula).
 
-## 5. As duas afirmações descartadas
+## 5. As cinco afirmações descartadas
 
 | ID | Afirmação | Por quê |
 |---|---|---|
-| AF-214 | Planejadores SAT são tratados como *forward-chaining* "porque partem do estado inicial" | Convenção própria, contrariada pelas fontes de Blackbox, SATPlan e MAXPLAN: quem busca é o resolvedor SAT sobre uma codificação de horizonte fixo. É a base textual do erro das Tabelas 2–4. |
-| AF-328 | O R é o único planejador que usa *backward-chaining* | A fonte descreve o R como STRIPS recursivo, dirigido por metas, com o estado avançado ao aplicar cada ação; não há *backward-chaining* como técnica separada. |
+| AF-019 | Blackbox "40% melhor" que o IPP no Logistics (IPC 1998) | Resultados brutos oficiais: 3 problemas resolvidos cada, IPP mais rápido e com pontuação maior. |
+| AF-023 | No Depots, FF resolveu tudo e o R "apenas 5%" (no parágrafo da IPC 2000) | O Depots não estava na IPC 2000 e o R não participou da IPC 2002 (G21). |
+| AF-028 | SGPlan "40% melhor" que o YAHSP no Pipesworld (IPC 2004) | O YAHSP ficou em 1º nas versões não temporais; a própria Tabela 12 dá YAHSP 86% e SGPlan 66%. |
+| AF-029 | SGPlan e YAHSP com 100% no Satellite | A própria Tabela 12 dá 83% ao SGPlan. |
+| AF-214 | Planejadores SAT tratados como *forward-chaining* "porque partem do estado inicial" | Convenção própria, contrariada pelas fontes de Blackbox, SATPlan e MAXPLAN. É a base textual do erro das Tabelas 2–4. |
 
-Nenhuma das duas é uma conclusão central da dissertação; ambas sustentam a taxonomia que a Fase 1 já tinha marcado como "descarta" (A6), com a concordância do autor.
+Nenhuma é conclusão central. As quatro primeiras são números da revisão histórica das competições; a quinta sustenta a taxonomia que a Fase 1 já tinha marcado como "descarta" (A6). A AF-328 (R como único *backward-chaining*) saiu da lista na revisão: o R de fato regride metas (seção 9).
 
 ## 6. Conclusões centrais de 2010 (A1–A8)
 
@@ -81,19 +85,41 @@ Nenhuma das duas é uma conclusão central da dissertação; ambas sustentam a t
 | A3 — escolher planejador só pelo domínio | reformula | G19 e G20 enfraquecem a evidência de validação: 50% é coincidência de posição e a linha de base sem características faz quase o mesmo. |
 | A4 — mais dados melhoram o *ranking* | mantém, com ressalva | — |
 | A5 — UML mede a complexidade que afeta o desempenho | reformula | AF-005 reclassificada pelo Coordenador para coerência com A5. |
-| A6 — taxonomia de técnicas | descarta (Tabelas 2–4) | Fontes primárias dos 10 planejadores; nova taxonomia. |
+| A6 — taxonomia de técnicas | descarta (Tabelas 2–4) | Fontes primárias dos 10 planejadores; nova taxonomia. O rótulo do R tem base parcial (regressão de metas). |
 | A7 — eficiência = cobertura | reformula | — |
 | A8 — trabalhos relacionados | descarta (como revisão suficiente) | As duas obras citadas ficam e estão descritas quase corretamente (só o escopo de Hoffmann, 2001, está errado); o problema é o que falta, e a seção é reescrita. |
 
 ## 7. O que ainda depende de verificação
 
-- **61 afirmações com confiança baixa**, a maioria com ação "CONFERIR" (49 ações pedem conferência na fonte): percentuais das competições de 1998 a 2006 ("40% melhor", "150% melhor"), detalhes históricos e descrições de domínios apoiadas só em plausibilidade. Não mudam as conclusões centrais; precisam de fonte antes de ir para o texto revisado.
+- **38 afirmações com confiança baixa** e 26 ações "CONFERIR": citações diretas não conferidas, detalhes históricos (Aristóteles, planejadores dos anos 1980 e 1990) e descrições de domínios apoiadas só em plausibilidade. Os números das competições foram conferidos na revisão das 101 (seção 9). Não mudam as conclusões centrais.
 - **11 fontes novas não são citáveis** até o autor aprová-las no `referencias.bib` (9 planejadores — o Fast Downward já estava — e os 2 trabalhos relacionados; ver `literatura/referencias/revisao-referencias.md`).
 - **G10** (segundo bloco de características do SQL) segue em aberto.
-- **Conferência humana.** As classificações são de agentes, revisadas por amostragem e por regra pelo Coordenador (21 linhas em `auditoria/extracao/classificacao-Z-coordenador.csv`: 19 revisões do Coordenador e 2 confirmações do autor). Não houve dupla classificação independente para medir concordância. As 101 afirmações "reformula" e "descarta" são as que o autor deve ler primeiro.
+- **Conferência humana.** As classificações são de agentes, revisadas por amostragem e por regra pelo Coordenador (21 linhas em `auditoria/extracao/classificacao-Z-coordenador.csv`: 19 revisões do Coordenador e 2 confirmações do autor). Não houve dupla classificação independente para medir concordância. As 101 afirmações "reformula" e "descarta" da versão 1.0 foram revistas pelo Coordenador a pedido do autor (seção 9); a leitura do autor continua pendente.
 
 ## 8. Limites desta auditoria
 
 - A extração é por frase. Uma afirmação repetida em dois lugares aparece duas vezes (marcado na coluna `acao` quando o auditor notou).
 - A classificação depende das fontes que o projeto já tem. Onde não havia fonte, a regra foi baixar a confiança, não inventar apoio.
 - Os números de G18 a G20 vêm das tabelas publicadas, não de nova execução. A reexecução é da Fase 3.
+
+## 9. Revisão das 101 afirmações "reformula" e "descarta" (23/09/2026)
+
+Pedido do autor. O Coordenador reviu as 101 afirmações e registrou o resultado em `auditoria/extracao/classificacao-Z9-revisao-101.csv`, com a classificação anterior e o tipo de mudança. O consolidador aplica esse arquivo por último.
+
+| Resultado da revisão | Afirmações |
+|---|---|
+| Confirmadas sem mudança | 60 |
+| Confirmadas com evidência nova | 16 |
+| Alteradas | 25 |
+
+**Por que mudaram.** Cerca de 28 afirmações estavam como "reformula/baixa" só porque os auditores não tinham conseguido conferir números e fatos das IPCs de 1998 a 2006. A revisão conferiu esses dados nos relatórios oficiais de cada competição (McDermott, 2000; Bacchus, 2001; Long e Fox, 2003; Hoffmann e Edelkamp, 2005) e nos resultados brutos publicados nos sites das IPCs de 1998 e 2006:
+
+- **Confirmadas** e passadas a "mantém": vencedores e destaques de cada IPC (AF-021, 024, 027, 090, 092, 097, 101, 102), o "150% melhor" do IPP no Gripper (AF-020), o comportamento do HSP no Gripper (AF-093), as contagens do TPP e do Pathways (AF-108, 109).
+- **Contrariadas** e passadas a "descarta": AF-019, 023, 028, 029 (seção 5).
+- **Números corrigidos:** AF-031 e AF-032 (as contagens conferem, os percentuais não).
+- **Outras mudanças:** AF-145 passa a "mantém" (o PDDL de 1998 tinha ações hierárquicas por *expansions*); AF-328 passa de "descarta" a "reformula" (o R regride metas, segundo Bacchus, 2001); quatro citações diretas plausíveis mas não conferidas (AF-127, 177, 181, 231) passam a "mantém" com confiança baixa e ação "CONFERIR", pela regra da versão 1.1 das instruções.
+
+**Achado novo:** G21 (seção 4).
+
+**Fontes a incluir.** Os quatro relatórios das IPCs são as referências que a versão revisada deveria citar no lugar dos *slides* e páginas de 2010. Ainda não estão no `candidatas.bib`.
+
