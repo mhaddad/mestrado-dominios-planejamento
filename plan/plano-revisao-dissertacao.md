@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.16 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · próxima: Fase 2 |
+| Versão deste documento | 0.17 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
 
@@ -50,7 +50,7 @@ Desdobramentos possíveis, não obrigatórios:
 |---|---|---|---|---|---|---|---|
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
-| 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (paralela à Fase 1) | ⚪ | | | Relatório de auditoria |
+| 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (248 mantém, 99 reformula, 2 descarta), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (piloto começa em paralelo à Fase 3) | ⚪ | | | Relatório do piloto + decisão sobre produto |
@@ -205,22 +205,16 @@ Desdobramentos possíveis, não obrigatórios:
 
 **Atividades**
 
-- [ ] Extrair todas as afirmações substantivas (IA gera a lista, autor revisa)
-- [ ] Classificar cada uma: **mantém / reformula / descarta**, com justificativa
-- [ ] Revisar a taxonomia de técnicas (F4) e propor uma nova, compatível com a literatura atual
-- [ ] Documentar condições de obtenção dos dados (F6)
-- [ ] Listar o que precisa ser reexecutado na Fase 3
-- [ ] Preparar material para o **Marco M1** com o orientador
+- [x] Extrair todas as afirmações substantivas (IA gera a lista, autor revisa) — 349 em `auditoria/afirmacoes.csv`; **revisão do autor pendente**
+- [x] Classificar cada uma: **mantém / reformula / descarta**, com justificativa — `auditoria/relatorio-auditoria.md`
+- [x] Revisar a taxonomia de técnicas (F4) e propor uma nova, compatível com a literatura atual — `auditoria/taxonomia-tecnicas.md`
+- [x] Documentar condições de obtenção dos dados (F6) — `auditoria/condicoes-de-execucao-2010.md`, com a resposta do autor sobre o corte de instâncias
+- [x] Listar o que precisa ser reexecutado na Fase 3 — `auditoria/reexecucao.md`
+- [x] Preparar material para o **Marco M1** com o orientador — `auditoria/m1-orientador.md` (rascunho)
 
 **Tabela de auditoria**
 
-| # | Afirmação (resumo) | Local | Classificação | Justificativa | Ação |
-|---|---|---|---|---|---|
-| A1 | Existe relação entre características de domínios e técnicas de planejamento | Cap. 6.1 | | | |
-| A2 | As características mais relevantes são nº de casos de uso por atores, atributos, agregações, ações de entrada, associações e transições | Cap. 6.1 | | | |
-| A3 | Novos planejadores serão mais promissores se usarem Heuristic Search, Hierarchical, Knowledge-based, Forward-chaining, Plan-Space e Total-order | Cap. 6.1 | | | |
-| A4 | O ranking permite escolher o planejador apenas com as características do domínio, independentemente do problema | Cap. 6.1 | | | |
-| … | | | | | |
+Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela semente que ficava aqui (A1–A4, numeração antiga) corresponde às conclusões de 2010, rotuladas A1–A5 na Fase 1 (`literatura/protocolo/instrucoes-leitura.md`, seção 1); o veredito de cada uma está em `auditoria/relatorio-auditoria.md`, seção 6.
 
 **Entregáveis:** relatório de auditoria · nova taxonomia de técnicas
 
@@ -415,7 +409,11 @@ Desdobramentos possíveis, não obrigatórios:
 | 9 | Revisar as referências e gerar o `referencias.bib` | 1, 6 | Matheus + Coordenador | 23/09/2026 | 🟢 **129 obras citáveis**: as 122 confirmadas aprovadas pelo autor, 5 ressalvas com ≥ 50 citações e 2 confirmadas a partir dos PDFs do autor. O capítulo 2 tem 14 chaves não citáveis a substituir ou retirar |
 | 10 | Obras sem acesso | 1 | Matheus | 23/09/2026 | 🟢 `nunez2015automatic` e `tonidandel2006reading` lidas a partir dos PDFs do autor; `strobel2014planning` acrescentada; só `sette2008are` segue sem leitura (não citável). GIPO excluído |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
-| 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta, e pedir a cópia de "Reading PDDL, Writing an Object-Oriented Model" (2006), do qual ele é primeiro autor | 2, 6 | Matheus | | ⚪ pode coincidir com o primeiro contato antes do Marco M1 |
+| 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta | 2, 6 | Matheus | | ⚪ entra no Marco M1 (o artigo de 2006 já foi lido a partir do PDF do autor) |
+| 13 | Revisar a auditoria: ler primeiro as 101 afirmações "reformula" e "descarta" de `auditoria/afirmacoes.csv` | 2 | Matheus | antes do M1 | ⚪ |
+| 14 | Revisar e enviar o material do Marco M1 (`auditoria/m1-orientador.md`) | 2 | Matheus | | ⚪ |
+| 15 | Aprovar (ou não) as 11 fontes novas da Fase 2 no `referencias.bib`: 9 planejadores de 2010 (o Fast Downward já estava) e 2 trabalhos relacionados citados em 2010 | 2, 6 | Matheus | antes de usar a taxonomia no texto | ⚪ |
+| 16 | Conferir na fonte as 49 afirmações com ação "CONFERIR" (percentuais das IPCs 1998–2006, detalhes históricos) | 2, 6 | IA + Matheus | antes da redação | ⚪ |
 
 ---
 
@@ -467,6 +465,13 @@ Desdobramentos possíveis, não obrigatórios:
 | 23/09/2026 | O critério de conclusão da Fase 1 ("todas as referências citadas verificadas") vale para o capítulo, não para as sínteses, que são material de trabalho | Decisão do autor | 1 |
 | 23/09/2026 | Rascunho do capítulo 2 ajustado para citar só obras do `referencias.bib`: 11 chaves trocadas por obras citáveis ou retiradas com a afirmação correspondente; Fase 1 concluída | Critério de conclusão da fase | 1 |
 
+| 23/09/2026 | Fase 2 executada com a mesma abordagem multiagente da Fase 1, com modelos mais econômicos (Haiku 4.5) nas tarefas mecânicas; estratégia em `plan/fase2-estrategia-multiagentes.md` | Decisão do autor | 2 |
+| 23/09/2026 | A taxa de acerto de 2010 é a coincidência exata de posição entre *ranking* previsto e real (G19); as variantes de agregação do `testes.ods` foram testadas e ficou a média das médias por simplicidade (G7); o corte das instâncias buscou igualar o subconjunto publicado da IPC (G14) | Respostas do autor | 2, 3 |
+| 23/09/2026 | Na nova taxonomia, *Partial-order* e *Total-order* saem das técnicas e ficam como atributo do plano | Decisão do autor | 2 |
+| 23/09/2026 | Demais escolhas da taxonomia (7 itens, `auditoria/taxonomia-tecnicas.md`, "Decisões"): *Knowledge-based* fora das dimensões, SGPlan como decomposição na Dimensão 1 e não como portfólio, "heurísticas aprendidas" e "grafo causal" como valores próprios, R em valor próprio, fonte de POCL a buscar | Decisão do Coordenador, a validar no M1 | 2 |
+| 23/09/2026 | As Tabelas 2–4 de 2010 são descartadas e substituídas pela nova taxonomia; as Tabelas 18–25 serão recalculadas (Fase 3, R-06 e R-10) | Coerente com A6 e com as fontes primárias dos 10 planejadores | 2, 3 |
+| 23/09/2026 | Regras de auditoria adotadas: trecho literal conferido por script; números derivados de tabela conferidos por script, não por agente; plausibilidade não é evidência (confiança baixa + "CONFERIR"); afirmação sobre obra citada em 2010 é conferida contra a obra que a lista de referências de 2010 indica | Falhas observadas nas Ondas 1–3 (`plan/fase2-estrategia-multiagentes.md`, seção 6) | 2 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -484,6 +489,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 23/09/2026 | 1 | Claude Code (claude-opus-5-5) | Tratamento das pendências da Fase 1: confirmação da triagem por critérios com dados do OpenAlex; resolução das duas notas com versão divergente; veículo do itSIMPLE 2005 confirmado no site oficial; limpeza mecânica do `candidatas.bib`; lista de revisão e script de promoção das referências | Critérios e resultado registrados no protocolo (seção 9) e em `triagem.csv`. **A revisão das referências é do autor** |
 
 | 23/09/2026 | 1 | Claude Code (claude-opus-5-5) | Fechamento da Fase 1: leitura das obras enviadas pelo autor, contagem de citações das ressalvas (OpenAlex e Semantic Scholar), geração do `referencias.bib`, ajuste do capítulo 2 para citar só obras aprovadas | Cada substituição de citação no capítulo conferida contra a nota da obra substituta; conversão com Pandoc testada com o `referencias.bib`. **Revisão do texto pelo autor pendente** |
+
+| 23/09/2026 | 2 | Claude Code — Coordenador (claude-opus-5-5) + 15 subagentes (5 claude-haiku-4-5, 10 claude-sonnet-5), alguns retomados para correção | Fase 2 inteira: extração de 349 afirmações, fontes primárias dos 10 planejadores e dos 2 trabalhos relacionados de 2010, conferência numérica, classificação, nova taxonomia, plano de reexecução, relatório de auditoria e material do M1 | Coordenador: literalidade dos trechos por script; médias, taxa de acerto e linha de base recalculadas por script; DOIs e URLs das fontes novas reconferidos; 21 revisões de classificação registradas; nota do MAXPLAN e taxonomia corrigidas. Falhas dos agentes e correções em `plan/fase2-estrategia-multiagentes.md`, seção 6. **Revisão do autor pendente** |
 
 ---
 
@@ -553,3 +560,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.14 | 23/09/2026 | Quatro decisões de fundo para as Fases 2 e 3: taxonomia de técnicas em quatro dimensões (expansão de escopo, R1), análise por domínio e por instância, métricas UML testadas contra *features* de PDDL, itSIMPLE 2005 assumido como origem da pergunta; ação 12 (conversa com o Tonidandel) |
 | 0.15 | 23/09/2026 | `referencias.bib` gerado (129 obras); obras enviadas pelo autor lidas (Núñez 2015, Tonidandel 2006, Strobel e Kirsch 2014); A3 revisto para "reformula"; ações 9 e 10 concluídas |
 | 0.16 | 23/09/2026 | **Fase 1 concluída.** Stone Soup, Delfi e Cedalion promovidos por exceção (133 obras no `referencias.bib`); capítulo 2 ajustado e 100% citável; critério de conclusão aplicado ao capítulo |
+| 0.17 | 23/09/2026 | **Fase 2 concluída** (multiagente): 349 afirmações classificadas (248 mantém, 99 reformula, 2 descarta), achados G18–G20, fontes primárias dos 10 planejadores e dos 2 trabalhos relacionados de 2010, nova taxonomia em 4 dimensões, plano de reexecução (31 itens), relatório de auditoria, material do M1; tabela semente movida para `auditoria/afirmacoes.csv`; ações 13 a 16 |

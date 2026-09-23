@@ -4,7 +4,10 @@ Confere que cada trecho é substring exata da linha indicada em
 data/2010/extraido/texto.md, ordena as afirmações pela linha e atribui IDs
 AF-NNN. Preenche `conferencia_numerica` a partir de
 extracao/conferencia-coordenador.csv (prioridade) e
-extracao/conferencia-numerica.csv. Se afirmacoes.csv já existir, preserva as colunas de auditoria
+extracao/conferencia-numerica.csv, e as colunas de classificação a partir de
+extracao/classificacao-*.csv (Onda 3); os arquivos classificacao-Y-*.csv (revisões
+com fonte primária) e classificacao-Z-coordenador.csv (revisões do
+Coordenador), lidos por último, prevalecem sobre os dos auditores. Se afirmacoes.csv já existir, preserva as colunas de auditoria
 (rotulo_fase1, classificacao, justificativa, acao, conferencia_numerica),
 casando pela coluna `origem` (ID do bloco).
 
@@ -19,7 +22,8 @@ TEXTO = RAIZ / "data/2010/extraido/texto.md"
 EXTRACAO = RAIZ / "auditoria/extracao"
 SAIDA = RAIZ / "auditoria/afirmacoes.csv"
 
-CAMPOS_AUDITORIA = ["rotulo_fase1", "classificacao", "justificativa", "acao", "conferencia_numerica"]
+CAMPOS_AUDITORIA = ["rotulo_fase1", "classificacao", "confianca", "justificativa", "acao", "conferencia_numerica"]
+CAMPOS_CLASSIFICACAO = ["rotulo_fase1", "classificacao", "confianca", "justificativa", "acao"]
 CAMPOS = ["id", "origem", "linha", "secao", "tipo", "trecho", "resumo", "observacao"] + CAMPOS_AUDITORIA
 
 
@@ -57,6 +61,14 @@ def main() -> int:
             for r in csv.DictReader(f):
                 conferencia[r["id"]] = f"{r['situacao']}: {r['observacao']}"
 
+    classificacao = {}
+    for arq in sorted(EXTRACAO.glob("classificacao-*.csv")):
+        with arq.open(encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r["id"] in classificacao and not arq.name.startswith(("classificacao-Y", "classificacao-Z")):
+                    print(f"Aviso: {r['id']} classificado em mais de um arquivo; vale {arq.name}")
+                classificacao[r["id"]] = r
+
     afirmacoes.sort(key=lambda r: (int(r["linha"]), r["id"]))
     with SAIDA.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CAMPOS, lineterminator="\n")
@@ -70,6 +82,7 @@ def main() -> int:
                 "observacao": r.get("observacao", ""),
                 **{c: antigo.get(c, "") for c in CAMPOS_AUDITORIA},
                 "conferencia_numerica": conferencia.get(af, antigo.get("conferencia_numerica", "")),
+                **({c: classificacao[af].get(c, "") for c in CAMPOS_CLASSIFICACAO} if af in classificacao else {}),
             })
     print(f"{len(afirmacoes)} afirmações gravadas em {SAIDA.relative_to(RAIZ)}")
     return 0

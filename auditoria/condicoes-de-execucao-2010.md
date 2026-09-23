@@ -31,7 +31,7 @@ Fonte: seção "Resultados da eficiência dos planejadores" (antes da Tabela 14)
 - **Limite de memória por processo.** A máquina tinha 4 GB; não há registro de limite imposto (`ulimit`) nem de falhas por memória.
 - **Como um "problema não resolvido" foi contado:** timeout, falta de memória, erro do planejador ou plano inválido? Não há registro de validação dos planos (por exemplo, com VAL).
 - **Versão exata de cada planejador** usada, e de qual competição (IPC 2002, 2004, 2006, 2008?).
-- **Se os problemas usados foram os mesmos das competições** ou um subconjunto. Os totais na planilha (35, 22, 20, 20, 28, 30, 30, 50, 20, 30, 30) sugerem os conjuntos oficiais, mas isso não foi conferido.
+- ~~**Se os problemas usados foram os mesmos das competições** ou um subconjunto.~~ **Respondido pelo autor em 23/09/2026:** onde só as primeiras N instâncias foram usadas (Blocks World 35 de 102, Logistics 28 de 84, Satellite 20 de 36; achado G14), o corte buscou igualar o subconjunto usado nos resultados publicados da IPC. `[A CONFIRMAR]` na Fase 3: conferir, nas páginas de resultados de cada IPC, que o subconjunto publicado é de fato esse.
 - **Distribuição das execuções pelas 8 máquinas** e se houve execução concorrente em cada uma.
 - **Domínios sem PDDL no acervo:** Zeno-travel e Elevator.
 - **Ambiguidade de "célula vazia" vs. "zero"** em `contabilizacao_problemas.ods`: a planilha não distingue "não executado" de "zero resolvidos".
