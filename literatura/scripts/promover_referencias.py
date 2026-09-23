@@ -22,7 +22,17 @@ MARCA = re.compile(r"^- \[([ xX])\] `([^`]+)`", re.MULTILINE)
 ENTRADA = re.compile(r"@\w+\s*\{\s*([^,\s]+)\s*,")
 
 
+def sem_comentarios_finais(bloco):
+    """Tira do fim do bloco as linhas de comentário que precedem a próxima entrada."""
+    linhas = bloco.rstrip().split("\n")
+    while linhas and (not linhas[-1].strip() or linhas[-1].lstrip().startswith("%")):
+        linhas.pop()
+    return "\n".join(linhas)
+
+
 def main():
+    if len(sys.argv) > 1:
+        sys.exit(__doc__)
     marcas = MARCA.findall(REVISAO.read_text(encoding="utf-8"))
     aprovadas = [k for m, k in marcas if m.lower() == "x"]
     recusadas = [k for m, k in marcas if m == " "]
@@ -31,7 +41,7 @@ def main():
     for bloco in re.split(r"(?m)^(?=@)", CANDIDATAS.read_text(encoding="utf-8")):
         m = ENTRADA.match(bloco)
         if m:
-            entradas[m.group(1)] = bloco.strip()
+            entradas[m.group(1)] = sem_comentarios_finais(bloco.strip())
 
     faltando = [k for k in aprovadas if k not in entradas]
     if faltando:

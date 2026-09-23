@@ -28,7 +28,7 @@ Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual pel
 
 Convenções: UTF-8, fim de linha LF, vírgula, ponto decimal, célula vazia = dado ausente. Eficiência em pontos percentuais (`25` = 25%). Domínios em *slug* (`blocksworld`, `logistics`, `pipesworld`…). Planejadores com grafia única (`Fast Downward`, `SATPlan`, `MaxPlan`).
 
-`origem_do_dado` = `competicao` quando a Tabela 12/13 tem valor (etapa 4 do método); `execucao_propria` quando o valor veio de execução do autor (etapa 5). São 38 pares de competição e 62 de execução própria.
+`origem_do_dado` = `competicao` quando a Tabela 12/13 tem valor (fiel à publicação; 4 desses valores — R e Fast Downward no Depots e no DriverLog — vieram na verdade de execução própria, ver achado G21 em `auditoria/achados-fase0.md`) (etapa 4 do método); `execucao_propria` quando o valor veio de execução do autor (etapa 5). São 38 pares de competição e 62 de execução própria.
 
 ## Como regenerar
 

@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/download/1575/1474
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026 (aprovação delegada ao Coordenador)
 afirmacoes-2010: [A6]
 fragilidades: [F4]
 perguntas: [Q1]

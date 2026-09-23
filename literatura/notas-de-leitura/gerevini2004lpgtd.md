@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://icaps04.icaps-conference.org/demos/icaps04-lpgdemo.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026 (aprovação delegada ao Coordenador)
 afirmacoes-2010: [A2, A6]
 fragilidades: [F4]
 perguntas: [Q1]

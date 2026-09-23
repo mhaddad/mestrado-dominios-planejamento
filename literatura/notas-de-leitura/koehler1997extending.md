@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: http://web.archive.org/web/20080821140756/http://www.informatik.uni-freiburg.de/~koehler/papiere/ecp-97.ps.gz
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026 (aprovação delegada ao Coordenador)
 afirmacoes-2010: [A6]
 fragilidades: [F4]
 perguntas: [Q1]

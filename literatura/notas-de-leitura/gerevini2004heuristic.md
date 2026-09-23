@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://cdn.aaai.org/ICAPS/2004/ICAPS04-022.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026 (aprovação delegada ao Coordenador)
 afirmacoes-2010: [A8]
 fragilidades: []
 perguntas: [Q1]

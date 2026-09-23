@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://fai.cs.uni-saarland.de/hoffmann/papers/ijcai01.ps.gz
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026 (aprovação delegada ao Coordenador)
 afirmacoes-2010: [A8]
 fragilidades: [F1]
 perguntas: [Q1]

@@ -47,7 +47,7 @@ Ainda sem executar planejadores: aplica ao mesmo dataset de 2010 as correções 
 
 ## 5. Nível 3 — Reexecução dos planejadores
 
-Envolve rodar planejadores. Objetivo central: eliminar a mistura de duas populações de dados (38 pares de competição, condições de cada IPC; 62 pares de execução própria, hardware único e timeout de 20 min — G9) e produzir dados que faltam (tempo, qualidade, validação de planos).
+Envolve rodar planejadores. Objetivo central: eliminar a mistura de duas populações de dados (38 pares de competição pela Tabela 12/13 — na verdade 34, ver G21 —, condições de cada IPC; 62 pares de execução própria, hardware único e timeout de 20 min — G9) e produzir dados que faltam (tempo, qualidade, validação de planos).
 
 | Item | O que reexecutar | Condições | Fecha |
 |---|---|---|---|
@@ -121,3 +121,4 @@ Respostas de 23/09/2026 e o que ainda está em aberto.
 | **G14** | Qual o critério de corte das instâncias? | **Respondido:** igualar o subconjunto dos resultados publicados da IPC. **Em aberto para a Fase 3:** recomendação do Coordenador — Níveis 1 a 3 usam o subconjunto de 2010 (fidelidade); Nível 4 usa os conjuntos completos. |
 | **G10** | O que eram as 20 características do segundo bloco do `script.sql`? | **Em aberto.** Sem resposta, o Nível 1 registra o bloco como não reproduzido. |
 | **G15/G16** | Manter o Gripper gerado localmente ou usar o conjunto oficial da IPC 1998? Sobre qual conjunto recalcular as 100 células? | **Em aberto para a Fase 3.** A resposta sobre G14 enfraquece G16. Recomendação do Coordenador: mesma regra de G14 (Gripper de 2010 nos Níveis 1 a 3; oficial no Nível 4). |
+| **G21** | De onde vieram os 4 valores de "competição" de R e Fast Downward no Depots e no DriverLog? | **Resolvido pelo acervo (23/09/2026):** vieram dos logs de execução própria de 2010 (`auditoria/scripts/conferir_origem_competicao.py`). Na Fase 3, esses 4 pares entram no grupo de execução própria (66 pares, não 62). |
