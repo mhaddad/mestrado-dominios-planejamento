@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://www.sciencedirect.com/science/article/pii/S0004370208001896
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A7, A8]
 fragilidades: [F1]
 perguntas: [Q1, Q2]

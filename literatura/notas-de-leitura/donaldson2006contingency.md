@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://api.crossref.org/works/10.1007/0-387-34173-0_2
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: []
 perguntas: []

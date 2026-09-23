@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.im.2018.12.002
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: []
 perguntas: [Q4]

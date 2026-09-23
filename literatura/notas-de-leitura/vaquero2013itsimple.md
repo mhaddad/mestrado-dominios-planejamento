@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://tidel.mie.utoronto.ca/pubs/KERtvaquero.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1]
 fragilidades: [F3]
 perguntas: [Q1]

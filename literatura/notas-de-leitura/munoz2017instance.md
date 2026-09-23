@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://link.springer.com/article/10.1007/s10994-017-5629-5
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: []
 perguntas: [Q2]

@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://arxiv.org/abs/2311.13184
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A3]
 fragilidades: []
 perguntas: [Q2, Q4]

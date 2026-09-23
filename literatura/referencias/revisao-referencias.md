@@ -1,117 +1,116 @@
 # Revisão das referências (promoção para o `referencias.bib`)
 
-Preparado pelo Coordenador em 23/09/2026. **Decisão do autor (23/09/2026):** as referências são revisadas diretamente neste arquivo, sem Zotero.
+Preparado pelo Coordenador em 23/09/2026. **Decisões do autor (23/09/2026):** revisão sem Zotero; **as 122 confirmadas estão aprovadas; das obras com ressalva, promover só as muito citadas.**
 
-## Como usar
+Regra aplicada pelo Coordenador para "muito citada": **≥ 50 citações**, pelo maior valor entre OpenAlex e Semantic Scholar (consulta de 23/09/2026) — o mesmo limite que o protocolo já usava para *preprints*. Obras sem contagem em nenhuma das duas bases não foram promovidas, porque a regra pede a citação comprovada.
 
-1. Leia cada referência formatada (estilo ABNT, variante UFPR). Confira autor, título, veículo e ano. Se algo estiver errado, **não corrija aqui**: anote ao lado da linha, e o `.bib` é corrigido na fonte (`candidatas.bib`) antes de promover.
-2. `[x]` = promover para o `referencias.bib`; `[ ]` = não promover.
-   - As **122 confirmadas** vêm marcadas: desmarque só o que rejeitar.
-   - As **29 com ressalva** vêm desmarcadas: marque as que aceitar. A seção 1 diz o motivo de cada ressalva e quantas vezes a obra é citada nas sínteses e no capítulo — uma obra com ressalva que sustenta argumento do capítulo merece atenção.
-3. Rode `python3 literatura/scripts/promover_referencias.py`. Ele lê as marcas deste arquivo e gera o `referencias.bib`.
+Para mudar qualquer decisão: troque a marca (`[x]` promove, `[ ]` não promove) e rode `python3 literatura/scripts/promover_referencias.py`.
 
-Critérios da confirmação: revisão por pares; impacto medido pelo percentil de citação normalizado por área e ano (OpenAlex, 23/09/2026); peso do veículo; ausência de retratação (nenhuma das 155 obras está retratada); e leitura efetiva da obra. Detalhe em `literatura/protocolo/protocolo-busca.md`, seção 9.
-
-**Fora desta revisão:** `nunez2015automatic`, `sette2008are` e `tonidandel2006reading` (não lidas por falta de acesso; não citáveis) e `simpson2001gipo` (excluída).
+**Fora desta lista:** `simpson2001gipo` (excluída).
 
 ---
 
-## 1. Com ressalva — decidir (29)
+## 1. Com ressalva (30)
 
-- [ ] `delarosa2017performance` — DE LA ROSA, T.; CENAMOR, I.; FERNÁNDEZ, F. Performance Modelling of Planners from Homogeneous Problem Sets. Proceedings of the International Conference on Automated Planning and Scheduling, v. 27, p. 425–433, 2017. AAAI Press. Disponível em: <https://doi.org/10.1609/icaps.v27i1.13848>.
-  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.11; 2 citações); não sustentar sozinha um argumento central
-  - Eixo E2, prioridade A · citada 14× nas sínteses e **5× no capítulo**
-- [ ] `valmeekam2024llms` — VALMEEKAM, K.; STECHLY, K.; KAMBHAMPATI, S. LLMs Still Can’t Plan; Can LRMs? A Preliminary Evaluation of OpenAI’s o1 on PlanBench., 2024. Disponível em: <https://arxiv.org/abs/2409.13373>.
-  - **Ressalva:** preprint pouco citado (6 citações) sem versão revisada; não usar como evidência central
-  - Eixo E5, prioridade A · citada 16× nas sínteses e **4× no capítulo**
-- [ ] `zhou2026agentasarouter` — ZHOU, P.; TANG, Z.; MA, Y.; et al. Agent-as-a-Router: Agentic Model Routing for Coding Tasks., 2026. Disponível em: <https://arxiv.org/abs/2606.22902>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E8, prioridade A · citada 13× nas sínteses e **4× no capítulo**
-- [ ] `liu2023llmp` — LIU, B.; JIANG, Y.; ZHANG, X.; et al. LLM+P: Empowering Large Language Models with Optimal Planning Proficiency., 2023. Disponível em: <https://arxiv.org/abs/2304.11477>.
-  - **Ressalva:** preprint sem versão revisada localizada, mas muito citado (85 citações)
-  - Eixo E5, prioridade A · citada 9× nas sínteses e **3× no capítulo**
-- [ ] `madeyski2026triage` — MADEYSKI, L. Triage: Routing Software Engineering Tasks to Cost-Effective LLM Tiers via Code Quality Signals., 2026. Disponível em: <https://arxiv.org/abs/2604.07494>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E8, prioridade B · citada 9× nas sínteses e **3× no capítulo**
-- [ ] `son2026swerouter` — SON, S.; YOON, S.; TANG, J.; et al. SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks., 2026. Disponível em: <https://arxiv.org/abs/2607.00053>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E8, prioridade A · citada 8× nas sínteses e **3× no capítulo**
-- [ ] `katz2018delfi` — KATZ, M.; SOHRABI, S.; SAMULOWITZ, H.; SIEVERS, S. Delfi: Online Planner Selection for Cost-Optimal Planning. International Planning Competition (IPC) 2018 – Planner Abstracts.Anais... , 2018. Disponível em: <https://ai.dmi.unibas.ch/papers/katz-et-al-ipc2018.pdf>.
-  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E1, prioridade A · citada 7× nas sínteses e **3× no capítulo**
-- [ ] `becker2025measuring` — BECKER, J.; RUSH, N.; BARNES, E.; REIN, D. Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity., 2025. Disponível em: <https://arxiv.org/abs/2507.09089>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E8, prioridade A · citada 12× nas sínteses e **2× no capítulo**
-- [ ] `peng2023impact` — PENG, S.; KALLIAMVAKOU, E.; CIHON, P.; DEMIRER, M. The Impact of AI on Developer Productivity: Evidence from GitHub Copilot., 2023. Disponível em: <https://arxiv.org/abs/2302.06590>.
-  - **Ressalva:** preprint sem versão revisada localizada, mas muito citado (274 citações)
-  - Eixo E8, prioridade A · citada 10× nas sínteses e **2× no capítulo**
-- [ ] `rintanen2014madagascar` — RINTANEN, J. Madagascar: Scalable Planning with SAT., 2014. Descrição de sistema associada à International Planning Competition 2014. Disponível em: <https://users.aalto.fi/~rintanj1/papers/Rintanen14IPC.pdf>.
-  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E3, prioridade A · citada 9× nas sínteses e **2× no capítulo**
-- [ ] `cenamor2019insights` — CENAMOR, I.; POZANCO, A. Insights from the 2018 IPC Benchmarks. Proceedings of the Workshop on the International Planning Competition (WIPC 2019), held at ICAPS 2019.Anais... . p.8–14, 2019. Disponível em: <https://icaps19.icaps-conference.org/workshops/WIPC/proceedings.pdf>.
-  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E3, prioridade C · citada 8× nas sínteses e **1× no capítulo**
-- [ ] `helmert2011fast` — HELMERT, M.; RÖGER, G.; KARPAS, E. Fast Downward Stone Soup: A Baseline for Building Planner Portfolios. Proceedings of the ICAPS 2011 Workshop on Planning and Learning (PAL).Anais... , 2011. Disponível em: <https://ai.dmi.unibas.ch/papers/helmert-et-al-icaps2011ws.pdf>.
-  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E1, prioridade A · citada 8× nas sínteses e **1× no capítulo**
-- [ ] `hu2024routerbench` — HU, Q. J.; BIEKER, J.; LI, X.; et al. RouterBench: A Benchmark for Multi-LLM Routing System., 2024. Disponível em: <https://arxiv.org/abs/2403.12031>.
-  - **Ressalva:** preprint pouco citado (3 citações) sem versão revisada; não usar como evidência central
-  - Eixo E7, prioridade B · citada 8× nas sínteses e **1× no capítulo**
-- [ ] `ferber2022explainable` — FERBER, P.; SEIPP, J. Explainable Planner Selection for Classical Planning. Proceedings of the AAAI Conference on Artificial Intelligence, v. 36, n. 9, p. 9741–9749, 2022. AAAI Press. Disponível em: <https://doi.org/10.1609/aaai.v36i9.21209>.
-  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.39; 1 citações); não sustentar sozinha um argumento central
-  - Eixo E1, prioridade B · citada 6× nas sínteses e **1× no capítulo**
-- [ ] `seipp2014fast` — SEIPP, J.; SIEVERS, S.; HUTTER, F. Fast Downward Cedalion. International Planning Competition (IPC) 2014 – Planner Abstracts.Anais... , 2014. Disponível em: <https://mrlab.ai/papers/seipp-et-al-ipc2014b.pdf>.
-  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E1, prioridade A · citada 6× nas sínteses e **1× no capítulo**
-- [ ] `gestrin2024nl2plan` — GESTRIN, E.; KUHLMANN, M.; SEIPP, J. NL2Plan: Robust LLM-Driven Planning from Minimal Text Descriptions., 2024. Disponível em: <https://arxiv.org/abs/2405.04215>.
-  - **Ressalva:** preprint pouco citado (1 citações) sem versão revisada; não usar como evidência central
-  - Eixo E6, prioridade B · citada 5× nas sínteses e **1× no capítulo**
-- [ ] `jiang2026toward` — JIANG, J.; ZHANG, J.; MO, F.; LI, L.; ZENG, D. Toward Secure and Reliable PDDL Formalization of Large Language Models with Planner-in-the-Loop Feedback., 2026. Disponível em: <https://arxiv.org/abs/2606.29700>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E6, prioridade B · citada 5× nas sínteses e **1× no capítulo**
-- [ ] `smirnov2024generating` — SMIRNOV, P.; JOUBLIN, F.; CERAVOLA, A.; GIENGER, M. Generating consistent PDDL domains with Large Language Models., 2024. Disponível em: <https://arxiv.org/abs/2404.07751>.
-  - **Ressalva:** preprint pouco citado (1 citações) sem versão revisada; não usar como evidência central
-  - Eixo E6, prioridade B · citada 5× nas sínteses e **1× no capítulo**
-- [ ] `huang2025spar` — HUANG, S.; WU, Y.; SHI, G.; SUKHATME, G. S.; KUMAR, V. SPAR: Scalable LLM-based PDDL Domain Generation for Aerial Robotics., 2025. Disponível em: <https://arxiv.org/abs/2509.13691>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E6, prioridade C · citada 7× nas sínteses e **0× no capítulo**
-- [ ] `percassi2021improving` — PERCASSI, F.; GEREVINI, A. E.; SCALA, E.; SERINA, I.; VALLATI, M. Improving domain-independent heuristic state-space planning via plan cost predictions. Journal of Experimental & Theoretical Artificial Intelligence, v. 35, n. 6, p. 849–875, 2021. Taylor & Francis. Disponível em: <https://doi.org/10.1080/0952813x.2021.1970239>.
-  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.08; 1 citações); não sustentar sozinha um argumento central
-  - Eixo E2, prioridade A · citada 6× nas sínteses e **0× no capítulo**
-- [ ] `ferber2019ipc` — FERBER, P.; MA, T.; HUO, S.; CHEN, J.; KATZ, M. IPC: A Benchmark Data Set for Learning with Graph-Structured Data., 2019. Disponível em: <https://arxiv.org/abs/1905.06393>.
-  - **Ressalva:** preprint pouco citado (3 citações) sem versão revisada; não usar como evidência central
-  - Eixo E2, prioridade B · citada 5× nas sínteses e **0× no capítulo**
-- [ ] `huang2024understanding` — HUANG, X.; LIU, W.; CHEN, X.; et al. Understanding the planning of LLM agents: A survey., 2024. Disponível em: <https://arxiv.org/abs/2402.02716>.
+- [x] `huang2024understanding` — HUANG, X.; LIU, W.; CHEN, X.; et al. Understanding the planning of LLM agents: A survey., 2024. Disponível em: <https://arxiv.org/abs/2402.02716>.
   - **Ressalva:** preprint pouco citado (35 citações) sem versão revisada; não usar como evidência central
-  - Eixo E5, prioridade B · citada 4× nas sínteses e **0× no capítulo**
-- [ ] `ipc2008results` — INTERNATIONAL PLANNING COMPETITION. Results - IPC-2008, Deterministic Part., 2008. Página oficial de resultados, IPC-2008. Disponível em: <https://ipc08.icaps-conference.org/deterministic/Results.html>.
+  - **Citações:** 516 citações · citada 0× no capítulo
+- [x] `peng2023impact` — PENG, S.; KALLIAMVAKOU, E.; CIHON, P.; DEMIRER, M. The Impact of AI on Developer Productivity: Evidence from GitHub Copilot., 2023. Disponível em: <https://arxiv.org/abs/2302.06590>.
+  - **Ressalva:** preprint sem versão revisada localizada, mas muito citado (274 citações)
+  - **Citações:** 274 citações · citada 2× no capítulo
+- [x] `valmeekam2024llms` — VALMEEKAM, K.; STECHLY, K.; KAMBHAMPATI, S. LLMs Still Can’t Plan; Can LRMs? A Preliminary Evaluation of OpenAI’s o1 on PlanBench., 2024. Disponível em: <https://arxiv.org/abs/2409.13373>.
+  - **Ressalva:** preprint pouco citado (6 citações) sem versão revisada; não usar como evidência central
+  - **Citações:** 126 citações · citada 4× no capítulo
+- [x] `rintanen2014madagascar` — RINTANEN, J. Madagascar: Scalable Planning with SAT., 2014. Descrição de sistema associada à International Planning Competition 2014. Disponível em: <https://users.aalto.fi/~rintanj1/papers/Rintanen14IPC.pdf>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E3, prioridade C · citada 3× nas sínteses e **0× no capítulo**
-- [ ] `jilani2014automated` — JILANI, R.; CRAMPTON, A.; KITCHIN, D. E.; VALLATI, M. Automated Knowledge Engineering Tools in Planning: State-of-the-art and Future Challenges. Proceedings of the ICAPS 2014 Workshop on Knowledge Engineering for Planning and Scheduling (KEPS).Anais... , 2014. Disponível em: <https://eprints.hud.ac.uk/id/eprint/20380/>.
-  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
-  - Eixo E6, prioridade B · citada 3× nas sínteses e **0× no capítulo**
-- [ ] `yang2022pg3` — YANG, R.; SILVER, T.; CURTIS, A.; LOZANO-PÉREZ, T.; KAELBLING, L. P. PG3: Policy-Guided Planning for Generalized Policy Generation. Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI 2022).Anais... . p.4686–4692, 2022. Disponível em: <https://doi.org/10.24963/ijcai.2022/650>.
-  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.40; 1 citações); não sustentar sozinha um argumento central
-  - Eixo E4, prioridade B · citada 3× nas sínteses e **0× no capítulo**
-- [ ] `aghzal2025survey` — AGHZAL, M.; PLAKU, E.; STEIN, G. J.; YAO, Z. A Survey on Large Language Models for Automated Planning., 2025. Disponível em: <https://arxiv.org/abs/2502.12435>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - Eixo E5, prioridade C · citada 2× nas sínteses e **0× no capítulo**
-- [ ] `greco2022scaling` — GRECO, M.; TORRALBA, Á.; BAIER, J. A.; PALACIOS, H. Scaling up ML-based Black-box Planning with Partial STRIPS Models., 2022. Disponível em: <https://arxiv.org/abs/2207.04479>.
-  - **Ressalva:** preprint pouco citado (0 citações) sem versão revisada; não usar como evidência central
-  - Eixo E4, prioridade B · citada 2× nas sínteses e **0× no capítulo**
+  - **Citações:** 99 citações · citada 2× no capítulo
+- [x] `liu2023llmp` — LIU, B.; JIANG, Y.; ZHANG, X.; et al. LLM+P: Empowering Large Language Models with Optimal Planning Proficiency., 2023. Disponível em: <https://arxiv.org/abs/2304.11477>.
+  - **Ressalva:** preprint sem versão revisada localizada, mas muito citado (85 citações)
+  - **Citações:** 85 citações · citada 3× no capítulo
 - [ ] `pallagani2023understanding` — PALLAGANI, V.; MUPPASANI, B.; MURUGESAN, K.; et al. Understanding the Capabilities of Large Language Models for Automated Planning., 2023. Disponível em: <https://arxiv.org/abs/2305.16151>.
   - **Ressalva:** preprint pouco citado (6 citações) sem versão revisada; não usar como evidência central
-  - Eixo E5, prioridade C · citada 2× nas sínteses e **0× no capítulo**
+  - **Citações:** 49 citações · citada 0× no capítulo
 - [ ] `xie2023translating` — XIE, Y.; YU, C.; ZHU, T.; et al. Translating Natural Language to Planning Goals with Large-Language Models., 2023. Disponível em: <https://arxiv.org/abs/2302.05128>.
   - **Ressalva:** preprint pouco citado (46 citações) sem versão revisada; não usar como evidência central
-  - Eixo E5, prioridade B · citada 2× nas sínteses e **0× no capítulo**
+  - **Citações:** 46 citações · citada 0× no capítulo
+- [ ] `gestrin2024nl2plan` — GESTRIN, E.; KUHLMANN, M.; SEIPP, J. NL2Plan: Robust LLM-Driven Planning from Minimal Text Descriptions., 2024. Disponível em: <https://arxiv.org/abs/2405.04215>.
+  - **Ressalva:** preprint pouco citado (1 citações) sem versão revisada; não usar como evidência central
+  - **Citações:** 32 citações · citada 1× no capítulo
+- [ ] `smirnov2024generating` — SMIRNOV, P.; JOUBLIN, F.; CERAVOLA, A.; GIENGER, M. Generating consistent PDDL domains with Large Language Models., 2024. Disponível em: <https://arxiv.org/abs/2404.07751>.
+  - **Ressalva:** preprint pouco citado (1 citações) sem versão revisada; não usar como evidência central
+  - **Citações:** 25 citações · citada 1× no capítulo
+- [ ] `becker2025measuring` — BECKER, J.; RUSH, N.; BARNES, E.; REIN, D. Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity., 2025. Disponível em: <https://arxiv.org/abs/2507.09089>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 11 citações · citada 2× no capítulo
+- [ ] `cenamor2019insights` — CENAMOR, I.; POZANCO, A. Insights from the 2018 IPC Benchmarks. Proceedings of the Workshop on the International Planning Competition (WIPC 2019), held at ICAPS 2019.Anais... . p.8–14, 2019. Disponível em: <https://icaps19.icaps-conference.org/workshops/WIPC/proceedings.pdf>.
+  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
+  - **Citações:** 10 citações · citada 1× no capítulo
+- [ ] `delarosa2017performance` — DE LA ROSA, T.; CENAMOR, I.; FERNÁNDEZ, F. Performance Modelling of Planners from Homogeneous Problem Sets. Proceedings of the International Conference on Automated Planning and Scheduling, v. 27, p. 425–433, 2017. AAAI Press. Disponível em: <https://doi.org/10.1609/icaps.v27i1.13848>.
+  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.11; 2 citações); não sustentar sozinha um argumento central
+  - **Citações:** 7 citações · citada 5× no capítulo
+- [ ] `ferber2022explainable` — FERBER, P.; SEIPP, J. Explainable Planner Selection for Classical Planning. Proceedings of the AAAI Conference on Artificial Intelligence, v. 36, n. 9, p. 9741–9749, 2022. AAAI Press. Disponível em: <https://doi.org/10.1609/aaai.v36i9.21209>.
+  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.39; 1 citações); não sustentar sozinha um argumento central
+  - **Citações:** 7 citações · citada 1× no capítulo
+- [ ] `ferber2019ipc` — FERBER, P.; MA, T.; HUO, S.; CHEN, J.; KATZ, M. IPC: A Benchmark Data Set for Learning with Graph-Structured Data., 2019. Disponível em: <https://arxiv.org/abs/1905.06393>.
+  - **Ressalva:** preprint pouco citado (3 citações) sem versão revisada; não usar como evidência central
+  - **Citações:** 5 citações · citada 0× no capítulo
+- [ ] `hu2024routerbench` — HU, Q. J.; BIEKER, J.; LI, X.; et al. RouterBench: A Benchmark for Multi-LLM Routing System., 2024. Disponível em: <https://arxiv.org/abs/2403.12031>.
+  - **Ressalva:** preprint pouco citado (3 citações) sem versão revisada; não usar como evidência central
+  - **Citações:** 3 citações · citada 1× no capítulo
+- [ ] `percassi2021improving` — PERCASSI, F.; GEREVINI, A. E.; SCALA, E.; SERINA, I.; VALLATI, M. Improving domain-independent heuristic state-space planning via plan cost predictions. Journal of Experimental & Theoretical Artificial Intelligence, v. 35, n. 6, p. 849–875, 2021. Taylor & Francis. Disponível em: <https://doi.org/10.1080/0952813x.2021.1970239>.
+  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.08; 1 citações); não sustentar sozinha um argumento central
+  - **Citações:** 3 citações · citada 0× no capítulo
+- [ ] `aghzal2025survey` — AGHZAL, M.; PLAKU, E.; STEIN, G. J.; YAO, Z. A Survey on Large Language Models for Automated Planning., 2025. Disponível em: <https://arxiv.org/abs/2502.12435>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 2 citações · citada 0× no capítulo
+- [ ] `madeyski2026triage` — MADEYSKI, L. Triage: Routing Software Engineering Tasks to Cost-Effective LLM Tiers via Code Quality Signals., 2026. Disponível em: <https://arxiv.org/abs/2604.07494>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 2 citações · citada 3× no capítulo
+- [ ] `tonidandel2006reading` — TONIDANDEL, F.; VAQUERO, T. S.; SILVA, J. R. Reading PDDL, Writing an Object-Oriented Model. Advances in Artificial Intelligence - IBERAMIA-SBIA 2006, Lecture Notes em Computer Science. p.532–541, 2006. Springer. Disponível em: <https://doi.org/10.1007/11874850_57>.
+  - **Ressalva:** lida em 23/09/2026 (PDF do autor); revisada por pares, mas baixo impacto (percentil de citação 0.06; 1 citação no OpenAlex)
+  - **Citações:** 1 citações · citada 0× no capítulo
+- [ ] `yang2022pg3` — YANG, R.; SILVER, T.; CURTIS, A.; LOZANO-PÉREZ, T.; KAELBLING, L. P. PG3: Policy-Guided Planning for Generalized Policy Generation. Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI 2022).Anais... . p.4686–4692, 2022. Disponível em: <https://doi.org/10.24963/ijcai.2022/650>.
+  - **Ressalva:** revisada por pares, mas baixo impacto (percentil de citação 0.40; 1 citações); não sustentar sozinha um argumento central
+  - **Citações:** 1 citações · citada 0× no capítulo
+- [ ] `greco2022scaling` — GRECO, M.; TORRALBA, Á.; BAIER, J. A.; PALACIOS, H. Scaling up ML-based Black-box Planning with Partial STRIPS Models., 2022. Disponível em: <https://arxiv.org/abs/2207.04479>.
+  - **Ressalva:** preprint pouco citado (0 citações) sem versão revisada; não usar como evidência central
+  - **Citações:** 0 citações · citada 0× no capítulo
+- [ ] `huang2025spar` — HUANG, S.; WU, Y.; SHI, G.; SUKHATME, G. S.; KUMAR, V. SPAR: Scalable LLM-based PDDL Domain Generation for Aerial Robotics., 2025. Disponível em: <https://arxiv.org/abs/2509.13691>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 0 citações · citada 0× no capítulo
+- [ ] `jiang2026toward` — JIANG, J.; ZHANG, J.; MO, F.; LI, L.; ZENG, D. Toward Secure and Reliable PDDL Formalization of Large Language Models with Planner-in-the-Loop Feedback., 2026. Disponível em: <https://arxiv.org/abs/2606.29700>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 0 citações · citada 1× no capítulo
+- [ ] `son2026swerouter` — SON, S.; YOON, S.; TANG, J.; et al. SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks., 2026. Disponível em: <https://arxiv.org/abs/2607.00053>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 0 citações · citada 3× no capítulo
+- [ ] `zhou2026agentasarouter` — ZHOU, P.; TANG, Z.; MA, Y.; et al. Agent-as-a-Router: Agentic Model Routing for Coding Tasks., 2026. Disponível em: <https://arxiv.org/abs/2606.22902>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+  - **Citações:** 0 citações · citada 4× no capítulo
+- [ ] `helmert2011fast` — HELMERT, M.; RÖGER, G.; KARPAS, E. Fast Downward Stone Soup: A Baseline for Building Planner Portfolios. Proceedings of the ICAPS 2011 Workshop on Planning and Learning (PAL).Anais... , 2011. Disponível em: <https://ai.dmi.unibas.ch/papers/helmert-et-al-icaps2011ws.pdf>.
+  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
+  - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 1× no capítulo
+- [ ] `ipc2008results` — INTERNATIONAL PLANNING COMPETITION. Results - IPC-2008, Deterministic Part., 2008. Página oficial de resultados, IPC-2008. Disponível em: <https://ipc08.icaps-conference.org/deterministic/Results.html>.
+  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
+  - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 0× no capítulo
+- [ ] `jilani2014automated` — JILANI, R.; CRAMPTON, A.; KITCHIN, D. E.; VALLATI, M. Automated Knowledge Engineering Tools in Planning: State-of-the-art and Future Challenges. Proceedings of the ICAPS 2014 Workshop on Knowledge Engineering for Planning and Scheduling (KEPS).Anais... , 2014. Disponível em: <https://eprints.hud.ac.uk/id/eprint/20380/>.
+  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
+  - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 0× no capítulo
+- [ ] `katz2018delfi` — KATZ, M.; SOHRABI, S.; SAMULOWITZ, H.; SIEVERS, S. Delfi: Online Planner Selection for Cost-Optimal Planning. International Planning Competition (IPC) 2018 – Planner Abstracts.Anais... , 2018. Disponível em: <https://ai.dmi.unibas.ch/papers/katz-et-al-ipc2018.pdf>.
+  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
+  - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 3× no capítulo
+- [ ] `seipp2014fast` — SEIPP, J.; SIEVERS, S.; HUTTER, F. Fast Downward Cedalion. International Planning Competition (IPC) 2014 – Planner Abstracts.Anais... , 2014. Disponível em: <https://mrlab.ai/papers/seipp-et-al-ipc2014b.pdf>.
+  - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
+  - **Citações:** sem contagem em OpenAlex nem Semantic Scholar · citada 1× no capítulo
 
 ---
 
-## 2. Confirmadas (122)
+## 2. Confirmadas (124)
+
+As 122 aprovadas pelo autor, mais 2 obras confirmadas depois, pelos mesmos critérios, a partir dos PDFs enviados pelo autor em 23/09/2026 (marcadas com ★).
 
 
-### E1 — Seleção de algoritmos e portfólios (16)
+### E1 — Seleção de algoritmos e portfólios (17)
 
 - [x] `bischl2016aslib` — BISCHL, B.; KERSCHKE, P.; KOTTHOFF, L.; et al. ASlib: A benchmark library for algorithm selection. Artificial Intelligence, v. 237, p. 41–58, 2016. Elsevier. Disponível em: <https://doi.org/10.1016/j.artint.2016.04.003>.
   - Verificação: existe versão publicada: Artificial Intelligence, vol. 237, pp. 41-58, 2016, DOI 10.1016/j.artint.2016.04.003 (registro original era o preprint arXiv, DOI 10.48550/arXiv.1506.02465, ano 2015); a versão publicada lista 11…
@@ -125,6 +124,8 @@ Critérios da confirmação: revisão por pares; impacto medido pelo percentil d
 - [x] `lindauer2015autofolio` — LINDAUER, M.; HOOS, H. H.; HUTTER, F.; SCHAUB, T. AutoFolio: An Automatically Configured Algorithm Selector. Journal of Artificial Intelligence Research, v. 53, p. 745–778, 2015. AI Access Foundation. Disponível em: <https://doi.org/10.1613/jair.4726>.
 - [x] `lindauer2019algorithm` — LINDAUER, M.; VAN RIJN, J. N.; KOTTHOFF, L. The algorithm selection competitions 2015 and 2017. Artificial Intelligence, v. 272, p. 86–100, 2019. Elsevier. Disponível em: <https://doi.org/10.1016/j.artint.2018.10.004>.
 - [x] `ma2020online` — MA, T.; FERBER, P.; HUO, S.; CHEN, J.; KATZ, M. Online Planner Selection with Graph Neural Networks and Adaptive Scheduling. Proceedings of the AAAI Conference on Artificial Intelligence, v. 34, n. 04, p. 5077–5084, 2020. AAAI Press. Disponível em: <https://doi.org/10.1609/aaai.v34i04.5949>.
+- [x] `nunez2015automatic` ★ — NÚÑEZ, S.; BORRAJO, D.; LINARES LÓPEZ, C. Automatic construction of optimal static sequential portfolios for AI planning and beyond. Artificial Intelligence, v. 226, p. 75–101, 2015. Elsevier. Disponível em: <https://doi.org/10.1016/j.artint.2015.05.005>.
+  - Verificação: Coordenador 23/09/2026: lido no PDF fornecido pelo autor; metadados conferem (v. 226, p. 75-101)
 - [x] `rice1976algorithm` — RICE, J. R. The Algorithm Selection Problem. Advances in Computers. v. 15, p.65–118, 1976. Elsevier. Disponível em: <https://doi.org/10.1016/S0065-2458(08)60520-3>.
 - [x] `sievers2019deep` — SIEVERS, S.; KATZ, M.; SOHRABI, S.; SAMULOWITZ, H.; FERBER, P. Deep Learning for Cost-Optimal Planning: Task-Dependent Planner Selection. Proceedings of the AAAI Conference on Artificial Intelligence, v. 33, n. 01, p. 7715–7723, 2019. AAAI Press. Disponível em: <https://doi.org/10.1609/aaai.v33i01.33017715>.
 - [x] `vallati2015portfolio` — VALLATI, M.; CHRPA, L.; KITCHIN, D. Portfolio-based planning: State of the art, common practice and open challenges. AI Communications, v. 28, n. 4, p. 717–733, 2015. IOS Press. Disponível em: <https://doi.org/10.3233/AIC-150671>.
@@ -217,7 +218,7 @@ Critérios da confirmação: revisão por pares; impacto medido pelo percentil d
 - [x] `yao2023react` — YAO, S.; ZHAO, J.; YU, D.; et al. ReAct: Synergizing Reasoning and Acting in Language Models. The Eleventh International Conference on Learning Representations (ICLR 2023).Anais... , 2023. Disponível em: <https://openreview.net/forum?id=WE_vluYUL-X>.
   - Verificação: Registrado apenas como preprint arXiv (2022); aceito e publicado na ICLR 2023 (openreview.net/forum?id=WE_vluYUL-X), sem DOI atribuido pela conferencia. Comentario do proprio arXiv confirma: "v3 is the ICLR camera ready …
 
-### E6 — Engenharia do conhecimento (16)
+### E6 — Engenharia do conhecimento (17)
 
 - [x] `alnazer2023understanding` — ALNAZER, E.; GEORGIEVSKI, I. Understanding Real-World AI Planning Domains: A Conceptual Framework. Service-Oriented Computing, Communications em Computer e Information Science. p.3–23, 2023. Springer. Disponível em: <https://doi.org/10.1007/978-3-031-45728-9_1>.
 - [x] `chrpa2017fifth` — CHRPA, L.; MCCLUSKEY, T. L.; VALLATI, M.; VAQUERO, T. The Fifth International Competition on Knowledge Engineering for Planning and Scheduling: Summary and Trends. AI Magazine, v. 38, n. 1, p. 104–106, 2017. Disponível em: <https://doi.org/10.1609/aimag.v38i1.2719>.
@@ -231,6 +232,8 @@ Critérios da confirmação: revisão por pares; impacto medido pelo percentil d
 - [x] `orlandini2014planning` — ORLANDINI, A.; BERNARDI, G.; CESTA, A.; FINZI, A. Planning meets verification and validation in a knowledge engineering environment. Intelligenza Artificiale, v. 8, n. 1, p. 87–100, 2014. Disponível em: <https://doi.org/10.3233/IA-140063>.
 - [x] `simpson2000knowledge` — SIMPSON, R. M.; MCCLUSKEY, T. L.; LIU, D.; KITCHIN, D. E. Knowledge Representation in Planning: A PDDL to OCLh Translation. Foundations of Intelligent Systems, Lecture Notes em Computer Science. p.610–618, 2000. Springer. Disponível em: <https://doi.org/10.1007/3-540-39963-1_64>.
 - [x] `simpson2007planning` — SIMPSON, R. M.; KITCHIN, D. E.; MCCLUSKEY, T. L. Planning domain definition using GIPO. The Knowledge Engineering Review, v. 22, n. 2, p. 117–134, 2007. Disponível em: <https://doi.org/10.1017/S0269888907001063>.
+- [x] `strobel2014planning` ★ — STROBEL, V.; KIRSCH, A. Planning in the Wild: Modeling Tools for PDDL. KI 2014: Advances in Artificial Intelligence, Lecture Notes em Computer Science. p.273–284, 2014. Springer International Publishing. Disponível em: <http://dx.doi.org/10.1007/978-3-319-11206-0_27>.
+  - Verificação: Obra trazida pelo autor (não estava na busca). Lida na versão dos autores, que remete à versão final na Springer
 - [x] `vallati2015effective` — VALLATI, M.; HUTTER, F.; CHRPA, L.; MCCLUSKEY, T. L. On the Effective Configuration of Planning Domain Models. Proceedings of the Twenty-Fourth International Joint Conference on Artificial Intelligence (IJCAI 2015).Anais... . p.1704–1711, 2015. Disponível em: <https://www.ijcai.org/Proceedings/15/Papers/243.pdf>.
 - [x] `vallati2019robustness` — VALLATI, M.; CHRPA, L. On the Robustness of Domain-Independent Planning Engines: The Impact of Poorly-Engineered Knowledge. Proceedings of the 10th International Conference on Knowledge Capture.Anais... , K-CAP ’19. p.197–204, 2019. ACM. Disponível em: <http://dx.doi.org/10.1145/3360901.3364416>.
 - [x] `vallati2021importance` — VALLATI, M.; CHRPA, L.; MCCLUSKEY, T. L.; HUTTER, F. On the Importance of Domain Model Configuration for Automated Planning Engines. Journal of Automated Reasoning, v. 65, n. 6, p. 727–773, 2021. Springer Science and Business Media LLC. Disponível em: <http://dx.doi.org/10.1007/s10817-021-09592-1>.

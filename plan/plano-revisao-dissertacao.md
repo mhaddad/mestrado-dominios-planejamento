@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.14 |
+| Versão deste documento | 0.15 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟡 Fase 1 executada em 22–23/09/2026 por equipe de agentes, pendente de confirmação do autor · próxima: Fase 2 |
 
 ---
@@ -412,8 +412,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 7 | Validar a conversão Markdown → Pandoc → documento ABNT | 1, 6 | Matheus + IA | 23/09/2026 | 🟡 Pandoc 3.11 instalado; corpo e referências convertem, inclusive no capítulo inteiro (`redacao/teste-abnt/relatorio-teste.md`). Falta: escolher a variante do CSL (a genérica não imprime o nome do evento; a UFPR imprime), conferir a caixa alta da NBR 10520 e testar os elementos pré-textuais |
 
 | 8 | Confirmar a triagem da Fase 1 | 1 | Coordenador (delegado pelo autor) | 23/09/2026 | 🟢 122 confirmadas, 29 com ressalva, 3 não citáveis (não lidas), GIPO excluído; critérios no protocolo, seção 9 |
-| 9 | Revisar as referências em `literatura/referencias/revisao-referencias.md` (122 pré-aprovadas, 29 com ressalva a decidir) e rodar `promover_referencias.py` | 1, 6 | Matheus | | ⚪ bloqueia a citação de qualquer texto |
-| 10 | Obras sem acesso: `nunez2015automatic` (acesso aberto no ScienceDirect, baixar no navegador), `tonidandel2006reading` e `sette2008are` (pedir aos autores). GIPO excluído | 1 | Matheus | | 🟡 opcional: as três ficam não citáveis até serem lidas |
+| 9 | Revisar as referências e gerar o `referencias.bib` | 1, 6 | Matheus + Coordenador | 23/09/2026 | 🟢 **129 obras citáveis**: as 122 confirmadas aprovadas pelo autor, 5 ressalvas com ≥ 50 citações e 2 confirmadas a partir dos PDFs do autor. O capítulo 2 tem 14 chaves não citáveis a substituir ou retirar |
+| 10 | Obras sem acesso | 1 | Matheus | 23/09/2026 | 🟢 `nunez2015automatic` e `tonidandel2006reading` lidas a partir dos PDFs do autor; `strobel2014planning` acrescentada; só `sette2008are` segue sem leitura (não citável). GIPO excluído |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
 | 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta, e pedir a cópia de "Reading PDDL, Writing an Object-Oriented Model" (2006), do qual ele é primeiro autor | 2, 6 | Matheus | | ⚪ pode coincidir com o primeiro contato antes do Marco M1 |
 
@@ -457,6 +457,9 @@ Desdobramentos possíveis, não obrigatórios:
 | 23/09/2026 | **Análise em dois níveis, reportados separadamente:** por domínio (continuidade com 2010) e por instância (estado da arte), separando discriminação entre domínios de dificuldade dentro do domínio | A literatura migrou para a seleção por instância; A3 não se sustenta na forma de 2010; decisão do autor | 2, 3 |
 | 23/09/2026 | **Métricas UML mantidas como objeto de teste, comparadas com *features* automáticas de PDDL** (grafo causal, DTG) nos mesmos domínios, com controle da ordem de serialização do modelo. Resposta direta à Q2; resultado negativo também é resultado | Lacuna confirmada por busca dirigida (nenhum trabalho compara as duas); decisão do autor | 2, 3 |
 | 23/09/2026 | **O artigo do itSIMPLE de 2005 é assumido como origem da pergunta** da dissertação, que passa a ser apresentada como a primeira execução de um objetivo do projeto itSIMPLE. Conversar com o Tonidandel (coautor do artigo e orientador original) | O artigo declara em 2005 o objetivo que a dissertação executou e não foi citado em 2010; decisão do autor | 2, 6 |
+
+| 23/09/2026 | **Das obras com ressalva, promover só as muito citadas**; o Coordenador fixou o corte em ≥ 50 citações (maior valor entre OpenAlex e Semantic Scholar), o mesmo limite já usado para *preprints*. Obras sem contagem nas duas bases não sobem | Decisão do autor; limite do Coordenador | 1, 6 |
+| 23/09/2026 | Veredito do A3 revisto de "descarta" para "reformula" depois da leitura de `nunez2015automatic` | A configuração por domínio continua competitiva quando há treino no domínio | 2 |
 
 ---
 
@@ -540,3 +543,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.12 | 23/09/2026 | **Fase 1 executada em modo multiagente** (22–23/09/2026): protocolo v1.1 com o critério X7, 317 obras únicas triadas, 155 incluídas, 154 verificadas no registro primário, 153 notas de leitura, 8 sínteses, rascunho do capítulo 2 com parecer crítico, insumos para a Fase 2 e teste da conversão ABNT. Relatório em `literatura/relatorio-fase1.md`; tudo pendente de confirmação do autor |
 | 0.13 | 23/09/2026 | Pendências da Fase 1 tratadas: triagem confirmada (delegada ao Coordenador), fluxo de referências sem Zotero (`revisao-referencias.md` + `promover_referencias.py`), GIPO excluído, notas com versão divergente resolvidas; ações 8 a 10 atualizadas; 4 decisões |
 | 0.14 | 23/09/2026 | Quatro decisões de fundo para as Fases 2 e 3: taxonomia de técnicas em quatro dimensões (expansão de escopo, R1), análise por domínio e por instância, métricas UML testadas contra *features* de PDDL, itSIMPLE 2005 assumido como origem da pergunta; ação 12 (conversa com o Tonidandel) |
+| 0.15 | 23/09/2026 | `referencias.bib` gerado (129 obras); obras enviadas pelo autor lidas (Núñez 2015, Tonidandel 2006, Strobel e Kirsch 2014); A3 revisto para "reformula"; ações 9 e 10 concluídas |

@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://cdn.aaai.org/ojs/13715/13715-40-17233-1-2-20201228.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1]
 fragilidades: []
 perguntas: [Q2]

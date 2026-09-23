@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://arxiv.org/pdf/2401.02500 (PDF baixado, lidos resumo e introdução)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: []
 perguntas: [Q3]

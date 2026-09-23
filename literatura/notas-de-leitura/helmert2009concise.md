@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://ai.dmi.unibas.ch/papers/helmert-aij2009.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F3]
 perguntas: [Q2]

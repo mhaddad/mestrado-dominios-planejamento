@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: PDF fornecido pelo autor em 22/09/2026 (The_itSIMPLE_tool_for_Modeling_Planning_Domains.pdf)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A5, A8]
 fragilidades: [F3]
 perguntas: [Q2]

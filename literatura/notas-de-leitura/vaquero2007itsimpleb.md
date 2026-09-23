@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://teses.usp.br/teses/disponiveis/3/3152/tde-19072007-174135/publico/DissertacaoRevisadaVaqueroTS.pdf (PDF baixado, lidos resumo, introdução do capítulo 1 e conclusões do capítulo 6)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F3]
 perguntas: [Q2]

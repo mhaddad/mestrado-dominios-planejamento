@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://arxiv.org/pdf/2307.04701
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F3]
 perguntas: [Q2]

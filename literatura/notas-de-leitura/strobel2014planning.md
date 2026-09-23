@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: PDF fornecido pelo autor em 23/09/2026 (versão dos autores; a nota de rodapé do título remete à versão final na Springer, DOI 10.1007/978-3-319-11206-0_27)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [T1]
 fragilidades: [F3]
 perguntas: [Q2]

@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://docs.lib.purdue.edu/cstech/68 (CSD-TR 116, 1974, precursor do capítulo de 1976; ver nota sobre a leitura)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A5]
 fragilidades: [F1]
 perguntas: [Q1, Q2]

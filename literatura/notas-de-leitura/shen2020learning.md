@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://ojs.aaai.org/index.php/ICAPS/article/download/6754/6608/9983
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A2]
 fragilidades: []
 perguntas: [Q2]

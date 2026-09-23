@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://serjice.webs.upv.es/publications/sergio-ker11/sergio-ker11.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5, A6]
 fragilidades: [F3, F4]
 perguntas: [Q2]

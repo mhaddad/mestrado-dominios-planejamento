@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://proceedings.mlr.press/v235/xie24j.html (resumo completo via página PMLR; PDF baixado de cópia espelhada no GitHub para conferência da introdução)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: [F5]
 perguntas: [Q3]

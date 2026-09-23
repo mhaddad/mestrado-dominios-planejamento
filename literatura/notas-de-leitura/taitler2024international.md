@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://ai.dmi.unibas.ch/papers/taitler-et-al-aimag2024.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A2, A3, A4]
 fragilidades: [F1, F2, F6]
 perguntas: [Q1]

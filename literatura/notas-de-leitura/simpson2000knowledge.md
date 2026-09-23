@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: http://eprints.hud.ac.uk/id/eprint/2239/1/trans.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: [F3]
 perguntas: []

@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://www.cs.ubc.ca/~kevinlb/papers/EmpiricalHardness.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: []
 perguntas: [Q2]

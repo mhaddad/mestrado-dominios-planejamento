@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: http://www.rhydlewis.eu/papers/COR_RhydFINAL.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A3]
 fragilidades: [F2]
 perguntas: [Q1, Q2]

@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://www.jair.org/index.php/jair/article/download/10852/25897/20241
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F3, F4]
 perguntas: [Q2]

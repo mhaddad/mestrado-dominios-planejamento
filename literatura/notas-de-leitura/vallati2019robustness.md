@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://icaps20subpages.icaps-conference.org/wp-content/uploads/2020/10/KEPS-2020_paper_3.pdf (cópia aberta em workshop KEPS/ICAPS 2020, mesmo título/autoria do artigo K-CAP 2019 registrado em url_registro; lidos resumo e introdução)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F3]
 perguntas: [Q2]

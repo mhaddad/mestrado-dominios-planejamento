@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://ai.dmi.unibas.ch/papers/helmert-et-al-jacm2014.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A6]
 fragilidades: [F4]
 perguntas: [Q1]

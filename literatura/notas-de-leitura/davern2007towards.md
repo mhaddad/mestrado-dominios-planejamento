@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://doi.org/10.22459/isftrr.11.2007.03
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: []
 perguntas: [Q4]

@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://www.ijcai.org/proceedings/2024/0744.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A4]
 fragilidades: [F2]
 perguntas: [Q1, Q2]

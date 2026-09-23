@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: http://eprints.hud.ac.uk/id/eprint/24291/1/VallatiPort.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A6, A7]
 fragilidades: [F1, F5]
 perguntas: [Q1]

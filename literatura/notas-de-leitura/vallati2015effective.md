@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://www.ijcai.org/Proceedings/15/Papers/243.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F3]
 perguntas: [Q2]

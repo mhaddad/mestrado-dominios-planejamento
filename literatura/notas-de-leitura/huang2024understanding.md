@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://arxiv.org/pdf/2402.02716 (PDF baixado, lidos resumo, introdução e seção 9 - conclusões)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: []
 fragilidades: [F4]
 perguntas: [Q3]

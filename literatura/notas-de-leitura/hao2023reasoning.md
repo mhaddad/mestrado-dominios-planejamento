@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://aclanthology.org/2023.emnlp-main.507/
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A2, A5]
 fragilidades: []
 perguntas: [Q3]

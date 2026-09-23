@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://ojs.aaai.org/index.php/AAAI/article/view/5949/5805
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1]
 fragilidades: [F5]
 perguntas: [Q2, Q3]

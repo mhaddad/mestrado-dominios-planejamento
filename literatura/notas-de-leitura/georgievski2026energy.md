@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://arxiv.org/pdf/2601.21967 (PDF baixado, lidos resumo, introdução e conclusão - seção 5)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A5]
 fragilidades: [F5]
 perguntas: [Q2]

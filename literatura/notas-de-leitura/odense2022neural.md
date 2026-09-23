@@ -7,7 +7,7 @@ status: lido
 profundidade: resumo
 fonte-lida: https://arxiv.org/pdf/2207.14422
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A5]
 fragilidades: []
 perguntas: [Q2]

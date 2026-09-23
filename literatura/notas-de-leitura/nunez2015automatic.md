@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: PDF fornecido pelo autor em 23/09/2026 (Artificial Intelligence, v. 226, p. 75-101, 2015)
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A1, A3, A6, A7]
 fragilidades: [F2, F4, F5]
 perguntas: [Q1]

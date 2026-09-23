@@ -7,7 +7,7 @@ status: lido
 profundidade: texto-integral
 fonte-lida: https://pure.hud.ac.uk/ws/files/14703963/ipc_robustness.pdf
 metadados: verificada-por-agente
-referencia-verificada: false
+referencia-verificada: true   # no referencias.bib desde 23/09/2026
 afirmacoes-2010: [A6, A7]
 fragilidades: [F4, F5, F6]
 perguntas: [Q1]
