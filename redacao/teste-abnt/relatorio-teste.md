@@ -8,7 +8,7 @@ Executado em 22/09/2026 pelo Coordenador (Claude Code, claude-opus-5). Arquivo d
 |---|---|
 | Pandoc | 3.11, instalado com Homebrew em 22/09/2026 |
 | Estilos CSL | Repositório oficial `citation-style-language/styles`, commit `c7de5be` (15/05/2025): variante genérica da ABNT e as variantes UFPR, UFRGS e UFS, em `redacao/estilos/` |
-| Bibliografia | `literatura/referencias/candidatas.bib` (metadados conferidos por agente; **não** é o `referencias.bib` do Zotero) |
+| Bibliografia | `literatura/referencias/candidatas.bib` (metadados conferidos por agente; **não** é o `referencias.bib`) |
 
 Comando:
 
@@ -36,4 +36,4 @@ pandoc redacao/teste-abnt/teste-conversao.md --citeproc \
 
 Corpo em Markdown e conversão com Pandoc **dão conta do texto e das referências**. O acabamento final (capa, folha de rosto, sumário, listas, numeração de seções segundo a NBR 6024) ainda não foi testado e é o ponto em que o Word deve entrar. Sugestão para a Fase 6: gerar o corpo com Pandoc usando a variante UFPR, revisar a lista de referências à mão contra a norma e montar os elementos pré-textuais no Word.
 
-**Pendência que bloqueia o uso real:** o `referencias.bib` do Zotero não existe. Este teste usou o `candidatas.bib`, e por isso o script `literatura/scripts/checar_citacoes.py` classifica as 10 chaves como `pendente-zotero` e marca o texto como não citável — comportamento correto.
+**Pendência que bloqueia o uso real:** o `referencias.bib` ainda não foi gerado. Este teste usou o `candidatas.bib`, e por isso o script `literatura/scripts/checar_citacoes.py` classifica as 10 chaves como `pendente-revisao` e marca o texto como não citável — comportamento correto.

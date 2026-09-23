@@ -97,11 +97,11 @@ Para a **Fase 4** (LLMs): o padrão "LLM gera, mecanismo simbólico corrige" [@g
 - [@mccluskey2017engineering]
 - [@micheli2025unified]
 - [@orlandini2014planning]
-- [@sette2008are]
+- `sette2008are` — **não lida** (sem acesso ao texto nem ao resumo); não citada no corpo desta síntese e não citável até leitura
 - [@simpson2000knowledge]
 - [@simpson2007planning]
 - [@smirnov2024generating]
-- [@tonidandel2006reading]
+- `tonidandel2006reading` — **não lida** (sem acesso ao texto nem ao resumo); não citada no corpo desta síntese e não citável até leitura
 - [@vallati2015effective]
 - [@vallati2019robustness]
 - [@vallati2021importance]

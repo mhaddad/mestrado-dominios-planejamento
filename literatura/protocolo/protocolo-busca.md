@@ -1,6 +1,6 @@
 # Protocolo de busca da Fase 1
 
-Versão 1.1 · 22/09/2026 · redigido pelo Coordenador (Claude Code, claude-opus-5). v1.1: critério X7; os triadores usavam X2 e X6 para exclusões por redundância, recodificadas em `triagem.csv` (`revisado_coordenador=recodificado`). **Aprovado pelo Coordenador em nome do autor; pendente de confirmação do autor** (modo "ponta a ponta", ver [estratégia](../../plan/fase1-estrategia-multiagentes.md)).
+Versão 1.2 · 23/09/2026 · v1.2: seção 9, critérios de confirmação da triagem (delegada ao Coordenador pelo autor). Versão 1.1 · 22/09/2026 · redigido pelo Coordenador (Claude Code, claude-opus-5). v1.1: critério X7; os triadores usavam X2 e X6 para exclusões por redundância, recodificadas em `triagem.csv` (`revisado_coordenador=recodificado`). **Aprovado pelo Coordenador em nome do autor; pendente de confirmação do autor** (modo "ponta a ponta", ver [estratégia](../../plan/fase1-estrategia-multiagentes.md)).
 
 Revisão de literatura **leve e rastreável**, não revisão sistemática formal: o objetivo é reconstruir o capítulo de fundamentos com obras verificadas, e registrar o caminho para que a busca possa ser refeita e auditada.
 
@@ -124,3 +124,16 @@ Formato `sobrenomeANOpalavra`, em minúsculas e sem acento: sobrenome do primeir
 2. BibTeX só gerado a partir do registro primário (Crossref por DOI, arXiv, página da editora). Vai para `literatura/referencias/candidatas.bib`, nunca para `referencias.bib`.
 3. `acervo-2010/`, `plan/` e `MEMORY.md` são intocáveis para subagentes.
 4. Cada agente escreve só nos arquivos que lhe foram atribuídos.
+
+## 9. Confirmação da triagem (v1.2, 23/09/2026)
+
+**Decisão do autor (23/09/2026):** a confirmação da triagem foi delegada ao Coordenador, com critérios acadêmicos padrão. Cada obra incluída recebeu, em `triagem.csv`, a coluna `confirmacao`:
+
+| Valor | Critério |
+|---|---|
+| `confirmada` | Revisada por pares (periódico ou anais) ou tese examinada; percentil de citação normalizado por área e ano ≥ 0,5 no OpenAlex, ou publicada de 2024 em diante (cedo demais para medir impacto); não retratada; lida |
+| `ressalva` | Aceitável, mas com limite de uso: *preprint* sem versão revisada (muito citado, recente ou pouco citado); literatura cinza oficial (resumo de planejador de IPC, resultados oficiais, *workshop*); ou revisada por pares com percentil < 0,5 e publicada até 2023. **Não deve sustentar sozinha um argumento central** |
+| `nao-promover` | Obra não lida (sem acesso ao texto nem ao resumo). Não citável até a leitura |
+| `excluida` | Excluída por decisão do autor |
+
+A revisão por pares é lida do `.bib` verificado (tipo da entrada e veículo), não do OpenAlex, porque o OpenAlex marca como *preprint* obras cuja versão publicada (OpenReview, PMLR) não tem DOI. Nenhuma das 155 obras está retratada. Resultado: 122 confirmadas, 29 com ressalva, 3 não citáveis, 1 excluída.

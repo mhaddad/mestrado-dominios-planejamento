@@ -78,7 +78,7 @@ Está detalhado em `literatura/protocolo/qc-coordenador.md`. Em resumo: amostra 
 
 **Do autor, bloqueando o uso do material no texto final:**
 1. **Confirmar a triagem** (`triagem.csv` tem a coluna `confirmado_autor` vazia nas 155 linhas incluídas).
-2. **Importar as candidatas no Zotero e exportar o `referencias.bib`.** Enquanto isso não acontecer, o script de checagem marca todo texto como não citável, corretamente. `[A CONFIRMAR]` se o Better BibTeX preserva as chaves importadas; se não, as chaves do rascunho precisam ser convertidas por DOI.
+2. **Revisar as referências e gerar o `referencias.bib`** (atualizado em 23/09/2026: sem Zotero, pela lista `literatura/referencias/revisao-referencias.md`). Enquanto isso não acontecer, o script de checagem marca todo texto como não citável, corretamente. `[A CONFIRMAR]` se o Better BibTeX preserva as chaves importadas; se não, as chaves do rascunho precisam ser convertidas por DOI.
 3. **Três obras sem acesso:** `nunez2015automatic` (sem nota), `tonidandel2006reading` e `sette2008are` (notas só com metadados). Precisam de acervo institucional.
 4. **Conferir na fonte primária** as duas notas feitas sobre versão diferente da citada, e as atas da ECP-01 para o GIPO.
 5. **Decidir o que fazer com a coincidência de propósito** entre a dissertação de 2010 e o artigo de 2005 do itSIMPLE.
@@ -99,4 +99,4 @@ A Fase 2 não precisa mais discutir o que a literatura já resolveu com fonte pr
 
 ## 8. O que este relatório não cobre
 
-Nenhuma referência aqui está verificada no Zotero; nada é citável no texto final. As sínteses e o capítulo são rascunhos de IA, não texto do autor. A leitura de 62 das 153 obras ficou no resumo, por acesso pago. E a busca cobriu as bases listadas no protocolo, com o OpenAlex indisponível na maior parte da execução por esgotamento de cota — o que aumenta a chance de haver obra relevante fora do alcance desta revisão.
+Nenhuma referência aqui está aprovada pelo autor ainda; nada é citável no texto final. As sínteses e o capítulo são rascunhos de IA, não texto do autor. A leitura de 62 das 153 obras ficou no resumo, por acesso pago. E a busca cobriu as bases listadas no protocolo, com o OpenAlex indisponível na maior parte da execução por esgotamento de cota — o que aumenta a chance de haver obra relevante fora do alcance desta revisão.

@@ -52,6 +52,6 @@ O painel completo, com datas e entregáveis, fica no plano de trabalho. Este qua
 
 ## O que não está neste repositório
 
-- **Base Zotero**: vive fora do Git. A exportação verificada (BibTeX) entra em [literatura/referencias/](literatura/referencias/). As notas de leitura ficam no repositório, em [literatura/notas-de-leitura/](literatura/notas-de-leitura/).
+- **Referências** (sem Zotero, decisão de 23/09/2026): obras verificadas por agente ficam em `candidatas.bib`; o autor aprova em `revisao-referencias.md` e o script gera o `referencias.bib`, a única fonte citável. Ver [literatura/referencias/](literatura/referencias/). As notas de leitura ficam no repositório, em [literatura/notas-de-leitura/](literatura/notas-de-leitura/).
 - **Benchmarks das IPCs** e **saídas brutas de execução**: grandes e reproduzíveis, ignorados pelo Git (ver `.gitignore`). Os scripts que os baixam e geram são versionados.
 - **Lixo do acervo de 2010**: metadados `.svn`, objetos compilados (`.o`, `.pyc`) e `.DS_Store`. Todo o resto foi preservado.

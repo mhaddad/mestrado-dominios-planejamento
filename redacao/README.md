@@ -7,7 +7,7 @@
 
 A nova versão será uma **dissertação revisada**, seguindo o **padrão ABNT** de formatação, citações e referências bibliográficas, além das boas práticas e recomendações acadêmicas do Brasil.
 
-> **Esclarecido pelo autor:** é o padrão **ABNT, sem LaTeX**. Não se usa abnTeX2. O corpo do texto é escrito em **Markdown no repositório**, com as referências vindas do **`.bib` do Zotero** (ver "Como se escreve").
+> **Esclarecido pelo autor:** é o padrão **ABNT, sem LaTeX**. Não se usa abnTeX2. O corpo do texto é escrito em **Markdown no repositório**, com as referências em **BibTeX aprovado pelo autor** (`literatura/referencias/referencias.bib`, sem Zotero desde 23/09/2026; ver "Como se escreve").
 
 ### Normas de referência
 
@@ -82,7 +82,7 @@ Na proposta, os capítulos de "Planejadores" e "Domínios" de 2010 (3 e 4) alime
 
 ## Como se escreve (decidido pelo autor em 21/09/2026)
 
-**O corpo do texto é escrito em Markdown, no repositório, com as referências no `.bib` exportado do Zotero.** A conversão para o documento final no padrão ABNT é feita com o Pandoc.
+**O corpo do texto é escrito em Markdown, no repositório, com as referências no `referencias.bib` aprovado pelo autor (ver `literatura/referencias/README.md`).** A conversão para o documento final no padrão ABNT é feita com o Pandoc.
 
 ### Convenções do texto
 

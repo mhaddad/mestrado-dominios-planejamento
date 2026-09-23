@@ -2,7 +2,7 @@
 
 Produzido pelo Coordenador (Claude Code, claude-opus-5) em 22/09/2026, a partir das oito sínteses em `literatura/sinteses/`. **Pendente de confirmação do autor.**
 
-A Fase 2 classifica cada afirmação da dissertação de 2010 como **mantém / reformula / descarta**. Este documento entrega o que a literatura tem a dizer sobre cada uma, com as chaves que sustentam o veredito. Toda chave existe em `literatura/referencias/candidatas.bib` e tem nota em `literatura/notas-de-leitura/`; nenhuma está no `referencias.bib` verificado ainda, então **nada aqui é citável no texto final** antes do Zotero.
+A Fase 2 classifica cada afirmação da dissertação de 2010 como **mantém / reformula / descarta**. Este documento entrega o que a literatura tem a dizer sobre cada uma, com as chaves que sustentam o veredito. Toda chave existe em `literatura/referencias/candidatas.bib` e tem nota em `literatura/notas-de-leitura/`; nenhuma está no `referencias.bib` verificado ainda, então **nada aqui é citável no texto final** antes da aprovação do autor em `literatura/referencias/revisao-referencias.md`.
 
 Os rótulos A1–A8 e T1–T6 estão definidos em `literatura/protocolo/instrucoes-leitura.md`, seção 1; as fragilidades F1–F7, no plano, seção 4; os achados G1–G17, em `auditoria/achados-fase0.md`.
 
@@ -63,3 +63,15 @@ Os rótulos A1–A8 e T1–T6 estão definidos em `literatura/protocolo/instruco
 2. Se a pergunta central passa a ser sobre **instâncias** e não só sobre domínios — o que muda o desenho da Fase 3.
 3. Se as métricas UML continuam como objeto de teste (para responder Q2 com um resultado publicável, inclusive negativo) ou se são substituídas por *features* automáticas.
 4. Como tratar a coincidência de propósito com o artigo de 2005 do itSIMPLE: a dissertação de 2010 executou um objetivo declarado pela equipe da ferramenta, e isso precisa aparecer na nova revisão de trabalhos relacionados.
+
+## 6. Força da evidência por veredito (acrescentado em 23/09/2026)
+
+Depois da confirmação da triagem (critérios em `literatura/protocolo/protocolo-busca.md`, seção 9), algumas obras da tabela da seção 1 ficaram **com ressalva**. Todos os vereditos têm ao menos uma obra confirmada, mas dois dependem mais das obras com ressalva e precisam de reforço antes de virar texto:
+
+| Veredito | Obras com ressalva | Obras confirmadas que sustentam | O que fazer |
+|---|---|---|---|
+| **A3** (descarta) | `katz2018delfi` (literatura cinza de IPC), `delarosa2017performance` (baixo impacto: 2 citações) | `cenamor2016ibacop` | Reforçar com obras confirmadas do eixo E1 que mostram a seleção por instância: `sievers2019deep`, `ma2020online`, `kerschke2019automated` |
+| **A7** (reformula) | `helmert2011fast` (literatura cinza de IPC), `percassi2021improving` (baixo impacto: 1 citação) | `ferber2022neural` | Reforçar com obras confirmadas que medem tempo e qualidade além da cobertura: `vallati2015portfolio`, `fawcett2014improved` |
+| A1, A4, A6 | uma ou duas obras de literatura cinza de IPC | as demais | A literatura cinza de IPC é a referência padrão para descrever os planejadores das competições; aceitável para esse uso |
+
+O argumento de que *features* de domínio não discriminam dificuldade **dentro** de um domínio, usado no capítulo e no veredito do A3, vem só de `delarosa2017performance`. É um artigo do ICAPS, revisado por pares, mas pouco citado. Esse ponto específico merece busca de confirmação independente antes da redação final.

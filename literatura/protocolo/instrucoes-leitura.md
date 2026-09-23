@@ -55,7 +55,7 @@ status: lido
 profundidade: texto-integral | resumo
 fonte-lida: <URL efetivamente lida>
 metadados: verificada-por-agente
-referencia-verificada: false   # só o autor muda, depois do Zotero
+referencia-verificada: false   # vira true quando a obra entra no referencias.bib (aprovação do autor)
 afirmacoes-2010: [A2, A6]      # rótulos da seção 1 que a obra confirma, corrige ou torna obsoletos; [] se nenhum
 fragilidades: [F4]             # F1–F7 que a obra ajuda a tratar; [] se nenhuma
 perguntas: [Q1, Q2]            # Q1–Q4 que a obra alimenta

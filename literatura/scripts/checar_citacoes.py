@@ -3,8 +3,8 @@
 Uso: python literatura/scripts/checar_citacoes.py ARQUIVO.md [ARQUIVO.md ...]
 
 Status por chave:
-  verificada        está em referencias.bib (exportação do Zotero)
-  pendente-zotero   só está em candidatas.bib (metadados conferidos por agente)
+  verificada        está em referencias.bib (aprovada pelo autor)
+  pendente-revisao  só está em candidatas.bib (conferida por agente, aguardando a revisão do autor)
   ausente           não está em nenhum .bib: não pode ser citada
 Também avisa quando a chave não tem nota em literatura/notas-de-leitura/.
 Sai com código 1 se houver chave ausente.
@@ -39,12 +39,12 @@ def main(arquivos):
         for chave in CITACAO.findall(texto):
             citadas.setdefault(chave, set()).add(arq)
 
-    contagem = {"verificada": 0, "pendente-zotero": 0, "ausente": 0}
+    contagem = {"verificada": 0, "pendente-revisao": 0, "ausente": 0}
     for chave in sorted(citadas):
         if chave in verificadas:
             status = "verificada"
         elif chave in candidatas:
-            status = "pendente-zotero"
+            status = "pendente-revisao"
         else:
             status = "ausente"
         contagem[status] += 1
@@ -53,7 +53,7 @@ def main(arquivos):
             print(f"{status:16} {chave}{sem_nota}")
 
     print(f"\n{len(citadas)} chaves: " + ", ".join(f"{k} {v}" for k, v in contagem.items()))
-    if contagem["pendente-zotero"] or contagem["ausente"]:
+    if contagem["pendente-revisao"] or contagem["ausente"]:
         print("Texto NÃO citável: há chaves fora do referencias.bib.")
     return 1 if contagem["ausente"] else 0
 

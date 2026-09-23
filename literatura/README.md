@@ -8,7 +8,7 @@
 | `protocolo/` | *Strings* de busca, bases consultadas, critérios de inclusão e exclusão |
 | `notas-de-leitura/` | Uma nota por artigo lido, a partir de [templates/nota-leitura.md](../templates/nota-leitura.md) |
 | `sinteses/` | Uma síntese por eixo (E1–E8) |
-| `referencias/` | Exportação verificada da base Zotero (BibTeX) |
+| `referencias/` | `candidatas.bib` (verificadas por agente), `revisao-referencias.md` (aprovação do autor) e `referencias.bib` (a única fonte citável) |
 
 ## Eixos
 
@@ -25,4 +25,4 @@
 
 ## Regra
 
-Uma referência só sai de "a verificar" depois de conferida na fonte primária. A lista provisória e o status estão na seção 13 do [plano](../plan/plano-revisao-dissertacao.md). Quando a base Zotero existir, o `.bib` verificado passa a ser a fonte de verdade e a seção 13 aponta para ele.
+Uma referência só sai de "a verificar" depois de conferida na fonte primária. A lista provisória e o status estão na seção 13 do [plano](../plan/plano-revisao-dissertacao.md). Desde 23/09/2026 a fonte de verdade é `referencias/referencias.bib`, gerado a partir da aprovação do autor (sem Zotero).

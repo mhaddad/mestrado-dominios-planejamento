@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.12 |
+| Versão deste documento | 0.13 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟡 Fase 1 executada em 22–23/09/2026 por equipe de agentes, pendente de confirmação do autor · próxima: Fase 2 |
 
 ---
@@ -120,7 +120,7 @@ Desdobramentos possíveis, não obrigatórios:
 | Leitura e extração estruturada de artigos | Claude com projetos e arquivos, NotebookLM |
 | Código, infraestrutura e experimentos | Claude Code, Fast Downward, Downward Lab, Unified Planning, contêineres (Apptainer/Docker) |
 | Análise de dados | Python (pandas, scikit-learn), notebooks |
-| Base de conhecimento e rastreabilidade | Notas de leitura em Markdown no repositório (`literatura/notas-de-leitura/`), Zotero para as referências (exportação `.bib` verificada em `literatura/referencias/`); texto em Markdown, convertido com Pandoc |
+| Base de conhecimento e rastreabilidade | Notas de leitura em Markdown no repositório (`literatura/notas-de-leitura/`), referências em BibTeX no repositório, aprovadas pelo autor em `literatura/referencias/revisao-referencias.md` (sem Zotero desde 23/09/2026); texto em Markdown, convertido com Pandoc |
 | Redação e revisão | Claude com as skills de estilo autoral, revisão humana; formatação, citações e referências no padrão ABNT (ver `redacao/README.md`) |
 
 ---
@@ -184,14 +184,14 @@ Desdobramentos possíveis, não obrigatórios:
 - [x] Definir protocolo leve: *strings* de busca, bases, critérios de inclusão/exclusão — `literatura/protocolo/protocolo-busca.md` (v1.1)
 - [x] Rodar buscas por eixo com apoio de IA e montar lista bruta — 344 registros, 317 obras únicas, mais busca dirigida de 5 lacunas
 - [x] Triagem por título e resumo — 155 incluídas; **a confirmação do autor está pendente** (coluna `confirmado_autor`)
-- [x] Verificar metadados no registro primário — 154 verificadas, `literatura/referencias/candidatas.bib`. **Falta a etapa do Zotero e o `referencias.bib`**
+- [x] Verificar metadados no registro primário — 154 verificadas, `literatura/referencias/candidatas.bib`. **Falta a revisão do autor em `revisao-referencias.md` e a geração do `referencias.bib`** (sem Zotero, decisão de 23/09/2026)
 - [x] Leitura com extração estruturada — 153 notas (91 de texto integral, 62 de resumo)
 - [x] Produzir síntese por eixo — 8 sínteses, 17.785 palavras, todas as notas citadas
 - [x] Redigir rascunho do novo capítulo de fundamentos — `redacao/capitulos/02-fundamentos.md` (rascunho de IA, revisado por parecer adversarial)
 
 **Como a IA acelera:** geração de *strings* de busca, triagem inicial, extração estruturada de artigos, primeiras sínteses por eixo. Estimativa de redução: de 6–8 para 3–4 semanas.
 
-**Entregáveis:** base Zotero verificada · notas de leitura no repositório · síntese por eixo · rascunho do capítulo
+**Entregáveis:** `referencias.bib` aprovado pelo autor · notas de leitura no repositório · síntese por eixo · rascunho do capítulo
 
 **Critério de conclusão:** todos os eixos com síntese e todas as referências citadas verificadas.
 
@@ -411,9 +411,9 @@ Desdobramentos possíveis, não obrigatórios:
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | ⚪ |
 | 7 | Validar a conversão Markdown → Pandoc → documento ABNT | 1, 6 | Matheus + IA | 23/09/2026 | 🟡 Pandoc 3.11 instalado; corpo e referências convertem, inclusive no capítulo inteiro (`redacao/teste-abnt/relatorio-teste.md`). Falta: escolher a variante do CSL (a genérica não imprime o nome do evento; a UFPR imprime), conferir a caixa alta da NBR 10520 e testar os elementos pré-textuais |
 
-| 8 | Confirmar a triagem da Fase 1 (155 obras incluídas) | 1 | Matheus | | ⚪ |
-| 9 | Importar as candidatas no Zotero e exportar `literatura/referencias/referencias.bib` | 1, 6 | Matheus | | ⚪ bloqueia a citação de qualquer texto |
-| 10 | Obter por acervo institucional as 3 obras sem acesso (`nunez2015automatic`, `tonidandel2006reading`, `sette2008are`) e as atas da ECP-01 (GIPO) | 1 | Matheus | | ⚪ |
+| 8 | Confirmar a triagem da Fase 1 | 1 | Coordenador (delegado pelo autor) | 23/09/2026 | 🟢 122 confirmadas, 29 com ressalva, 3 não citáveis (não lidas), GIPO excluído; critérios no protocolo, seção 9 |
+| 9 | Revisar as referências em `literatura/referencias/revisao-referencias.md` (122 pré-aprovadas, 29 com ressalva a decidir) e rodar `promover_referencias.py` | 1, 6 | Matheus | | ⚪ bloqueia a citação de qualquer texto |
+| 10 | Obras sem acesso: `nunez2015automatic` (acesso aberto no ScienceDirect, baixar no navegador), `tonidandel2006reading` e `sette2008are` (pedir aos autores). GIPO excluído | 1 | Matheus | | 🟡 opcional: as três ficam não citáveis até serem lidas |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | | ⚪ |
 
 ---
@@ -447,6 +447,11 @@ Desdobramentos possíveis, não obrigatórios:
 | 23/09/2026 | Reverter a exclusão do artigo do itSIMPLE de 2005 (`vaquero2005itsimple`) e tratá-lo como obra de prioridade A | A leitura do PDF fornecido pelo autor mostrou que ele declara, em 2005, o objetivo que a dissertação executou em 2010 | 1, 2 |
 | 23/09/2026 | Usar a variante UFPR do CSL da ABNT como padrão de trabalho até decisão final | A variante genérica não imprime o nome do evento em trabalhos de conferência, e boa parte do corpus é de anais | 1, 6 |
 
+| 23/09/2026 | **Confirmação da triagem delegada ao Coordenador**, com critérios acadêmicos padrão: revisão por pares, impacto (percentil de citação normalizado), peso do veículo, ausência de retratação e leitura efetiva. Resultado: 122 confirmadas, 29 com ressalva, 3 não citáveis até serem lidas | Definição do autor; critérios no protocolo, seção 9 | 1 |
+| 23/09/2026 | **Sem Zotero.** O autor revisa as referências em `literatura/referencias/revisao-referencias.md`; o script `promover_referencias.py` gera o `referencias.bib` a partir das marcas. Substitui a parte do Zotero na decisão de 21/09/2026 sobre o `.bib` | Zotero não instalado; decisão do autor | 1, 6 |
+| 23/09/2026 | GIPO (2001) excluído: sem fonte primária e coberto por `simpson2007planning` | Decisão do autor | 1 |
+| 23/09/2026 | `vallati2016identifying` passa a ser citado na versão do ICAPS 2015 (`vallati2015identifying`), que foi a lida | Regra de citar a versão lida | 1 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -460,6 +465,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Comparação de conteúdo entre os PDDL do acervo e o repositório `potassco/pddl-instances` (IPCs 1998–2008); construção do script e do documento | Correspondências verificadas por comparação de conteúdo e reproduzíveis por script (repositório externo em commit fixo). Variantes de Zeno-travel e Elevator: hipóteses, a confirmar |
 
 | 22–23/09/2026 | 1 | Claude Code — Coordenador (claude-opus-5) + 45 execuções de subagentes (claude-sonnet-5) | Fase 1 inteira: protocolo, busca em 8 eixos, triagem, verificação de metadados, leitura e extração de 153 obras, 8 sínteses, rascunho do capítulo 2 e parecer crítico | Coordenador reconferiu: amostra de 32 itens da busca, todas as 115 entradas com DOI e as 19 do arXiv, 4 números centrais de notas nos PDFs originais e os 9 achados do parecer crítico. Registro completo em `literatura/protocolo/qc-coordenador.md`. **Conferência do autor pendente em tudo** |
+
+| 23/09/2026 | 1 | Claude Code (claude-opus-5-5) | Tratamento das pendências da Fase 1: confirmação da triagem por critérios com dados do OpenAlex; resolução das duas notas com versão divergente; veículo do itSIMPLE 2005 confirmado no site oficial; limpeza mecânica do `candidatas.bib`; lista de revisão e script de promoção das referências | Critérios e resultado registrados no protocolo (seção 9) e em `triagem.csv`. **A revisão das referências é do autor** |
 
 ---
 
@@ -525,3 +532,4 @@ Desdobramentos possíveis, não obrigatórios:
 | 0.10 | 21/09/2026 | Esclarecido: padrão ABNT sem LaTeX; abnTeX2 descartado; ferramenta de redação restrita a Word ou Markdown com Pandoc |
 | 0.11 | 21/09/2026 | Decidido: corpo do texto em Markdown no repositório, com `.bib` do Zotero; convenções de referências e de escrita; ação 7 passa a validar a conversão |
 | 0.12 | 23/09/2026 | **Fase 1 executada em modo multiagente** (22–23/09/2026): protocolo v1.1 com o critério X7, 317 obras únicas triadas, 155 incluídas, 154 verificadas no registro primário, 153 notas de leitura, 8 sínteses, rascunho do capítulo 2 com parecer crítico, insumos para a Fase 2 e teste da conversão ABNT. Relatório em `literatura/relatorio-fase1.md`; tudo pendente de confirmação do autor |
+| 0.13 | 23/09/2026 | Pendências da Fase 1 tratadas: triagem confirmada (delegada ao Coordenador), fluxo de referências sem Zotero (`revisao-referencias.md` + `promover_referencias.py`), GIPO excluído, notas com versão divergente resolvidas; ações 8 a 10 atualizadas; 4 decisões |
