@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.24 |
+| Versão deste documento | 0.25 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -492,6 +492,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | 24/09/2026 | Nível 1 concluído (EXP-03): o método de 2010 é reproduzível por script; a discretização usada foi por extremos (G23), não a descrita; duas taxonomias no mesmo método (G24); G6 resolvido (nota a partir do valor preciso) | Evidência do EXP-03 | 3 |
 
+| 24/09/2026 | Discretização: o autor considera correta a regra escrita no texto (as classes publicadas teriam erro de transcrição) e, informado de que ela deixa 7–8 métricas com uma só classe e de que as Tabelas 19–25 usaram as classes publicadas, decidiu aplicá-la como cenário do Nível 2; o Nível 1 segue com as classes publicadas | Decisão do autor (EXP-04) | 3, 6 |
+| 24/09/2026 | Referência do Nível 2 = método de 2010 recalculado sem os erros aritméticos de G18; com isso, o acerto do Elevator cai de 50% para 40% e o do Zeno-travel de 40% para 30% | EXP-04 | 3 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -523,6 +526,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-02: extração dos tempos de 2010 e calibração do limite | Extração conferida contra as contagens de 2010 (43 de 48) e contra leitura manual; erro de leitura de minutos no Blackbox detectado e corrigido; achado G22 |
 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-03: reprodução do método de 2010 por script (Nível 1) | Cada etapa comparada célula a célula com as tabelas publicadas; regras inferidas testadas contra alternativas (discretização descrita × extremos; arredondamentos; conjuntos de técnicas) |
+
+| 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-04: Nível 2, cenário da discretização pela regra do texto | Referência reproduz o método de 2010 com a aritmética corrigida; efeitos comparados com a linha de base de G20 |
 
 ---
 
@@ -600,3 +605,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.22 | 24/09/2026 | Fase 3 iniciada: máquina OrbStack provisionada; os 10 planejadores de 2010 rodam (EXP-01); emulação 4–8× mais lenta que 2010; ação 19 (limite de tempo) |
 | 0.23 | 24/09/2026 | EXP-02: limites calibrados por planejador (38 a 137 min); achado G22 (Blackbox sem limite no Depots e DriverLog em 2010); ação 19 concluída |
 | 0.24 | 24/09/2026 | Nível 1 da Fase 3 concluído (EXP-03): método de 2010 reproduzido por script; achados G23 (discretização por extremos) e G24 (duas taxonomias); G6 resolvido |
+| 0.25 | 24/09/2026 | EXP-04: regra de discretização do texto como cenário do Nível 2 (decisão do autor); corrigida a aritmética, acerto de 2010 cai para 50/30/40% |
