@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.21 |
+| Versão deste documento | 0.22 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -51,7 +51,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
-| 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | ⚪ | | | Dataset, código, resultados |
+| 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (piloto começa em paralelo à Fase 3) | ⚪ | | | Relatório do piloto + decisão sobre produto |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
@@ -243,9 +243,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Atividades**
 
-- [ ] Montar ambiente de execução em contêineres
+- [ ] Montar ambiente de execução em contêineres — 🟡 máquina OrbStack Ubuntu 22.04 amd64 provisionada por script (`experimentos/containers/orbstack/`); os 10 planejadores de 2010 rodam por QEMU i386 (EXP-01)
 - [ ] Baixar e organizar *benchmarks*
-- [ ] Compilar e testar planejadores
+- [ ] Compilar e testar planejadores — 🟡 os 10 de 2010 testados (EXP-01, `experimentos/execucoes/2026-09-24-teste-orbstack.md`); planejadores atuais pendentes
 - [ ] Implementar extrator das métricas de 2010 a partir do PDDL
 - [ ] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0)
 - [ ] Implementar ou reutilizar extrator de *features* modernas
@@ -416,6 +416,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 16 | Conferir na fonte as afirmações com ação "CONFERIR" | 2, 6 | Coordenador | 23/09/2026 | 🟢 nenhuma restante; 16 de confiança baixa com decisão registrada (retirar, parafrasear ou tratar como hipótese) |
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
 | 18 | Incluir os relatórios oficiais das IPCs no `candidatas.bib` | 2, 6 | Coordenador | 23/09/2026 | 🟢 incluídos e promovidos, com Bonet e Geffner (2001) e Weld (1994) |
+| 19 | Decidir o limite de tempo da reexecução dos planejadores de 2010 (Nível 3): a emulação QEMU i386 os deixa de 4 a 8 vezes mais lentos que a máquina de 2010 (EXP-01) | 3 | Matheus | antes do Nível 3 | ⚪ |
 
 ---
 
@@ -485,6 +486,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | Retorno do M1: o orientador confirmou a nova taxonomia (incluindo as escolhas do Coordenador) e concordou com Q2, com a expansão de escopo (Q3, Q4) e com o desenho da Fase 3. G10 segue em aberto | Orientador, relatado pelo autor | 2, 3 |
 | 24/09/2026 | **Sem artigo com os resultados da Fase 3:** o único produto é a dissertação final revisada, no padrão ABNT | Decisão do autor | 6 |
 
+| 24/09/2026 | Máquina da Fase 3: Ubuntu 22.04 amd64 no OrbStack (não 24.04), por causa do `python2` do Fast Downward de 2010; binários de 2010 rodam por QEMU i386; chamadas tiradas dos scripts finais de 2010 (`comp/planners/scripts/`) | EXP-01 | 3 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -510,6 +513,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | 2 | Claude Code — Coordenador (claude-opus-5-5) | Resolução das pendências da auditoria | Conferência nos logs do acervo (G21), em Weld 1994, Bonet e Geffner 2001, relatórios das IPCs, resumo do SatPlan 2006 e site da IPC 2006; trechos das 6 notas novas e suas páginas conferidos por script contra o PDF; metadados do OJS e do Crossref. Promoção de referências por delegação do autor. **Leitura humana recomendada** |
 
 | 23/09/2026 | 6 | Claude Code — Coordenador (claude-opus-5-5) | Rascunhos do capítulo 1 (Introdução) e do capítulo 3 (Revisitando 2010) | Números conferidos contra `auditoria/afirmacoes.csv` e `conferencia-rankings.csv`; 22 e 36 chaves conferidas por `checar_citacoes.py`, todas no `referencias.bib`; usos das obras conferidos nas notas. **Texto final é do autor** |
+
+| 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-01: provisionamento da máquina OrbStack e teste dos 10 planejadores de 2010 | Planos conferidos nos logs; tempos e comprimentos comparados com os logs de 2010 do acervo; desvios registrados no EXP-01 |
 
 ---
 
@@ -584,3 +589,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.19 | 23/09/2026 | Pendências da auditoria resolvidas por delegação do autor: G21 esclarecido (execução própria, logs no acervo), 26 "CONFERIR" resolvidas, 17 referências promovidas (`referencias.bib` com 150), taxonomia 100% citável; totais 265/80/4; ações 13 e 15 a 18 concluídas |
 | 0.20 | 23/09/2026 | M1 enviado ao orientador; leitura das 84 feita pelo autor; Fase 3 no OrbStack (ressalva: binários de 2010 são 32-bit i386); rascunhos dos capítulos 1 e 3; `haddad2010relacao` no `referencias.bib` (151 obras) |
 | 0.21 | 24/09/2026 | Retorno do M1 registrado: taxonomia validada pelo orientador, demais pontos de acordo; sem artigo, só a dissertação final; ações 12 e 14 concluídas |
+| 0.22 | 24/09/2026 | Fase 3 iniciada: máquina OrbStack provisionada; os 10 planejadores de 2010 rodam (EXP-01); emulação 4–8× mais lenta que 2010; ação 19 (limite de tempo) |
