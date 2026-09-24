@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.22 |
+| Versão deste documento | 0.23 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -416,7 +416,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 16 | Conferir na fonte as afirmações com ação "CONFERIR" | 2, 6 | Coordenador | 23/09/2026 | 🟢 nenhuma restante; 16 de confiança baixa com decisão registrada (retirar, parafrasear ou tratar como hipótese) |
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
 | 18 | Incluir os relatórios oficiais das IPCs no `candidatas.bib` | 2, 6 | Coordenador | 23/09/2026 | 🟢 incluídos e promovidos, com Bonet e Geffner (2001) e Weld (1994) |
-| 19 | Decidir o limite de tempo da reexecução dos planejadores de 2010 (Nível 3): a emulação QEMU i386 os deixa de 4 a 8 vezes mais lentos que a máquina de 2010 (EXP-01) | 3 | Matheus | antes do Nível 3 | ⚪ |
+| 19 | Decidir o limite de tempo da reexecução dos planejadores de 2010 (Nível 3) | 3 | Matheus | 24/09/2026 | 🟢 opção 1, limite calibrado por planejador (EXP-02): de 38 min (SGPlan) a 137 min (R); LPG-TD com o fator comum (76 min) e várias sementes; `experimentos/execucoes/fatores-2010.csv` |
 
 ---
 
@@ -488,6 +488,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | 24/09/2026 | Máquina da Fase 3: Ubuntu 22.04 amd64 no OrbStack (não 24.04), por causa do `python2` do Fast Downward de 2010; binários de 2010 rodam por QEMU i386; chamadas tiradas dos scripts finais de 2010 (`comp/planners/scripts/`) | EXP-01 | 3 |
 
+| 24/09/2026 | Limite da reexecução dos planejadores de 2010 = 20 min × fator de lentidão da emulação medido por planejador (mediana do tempo de relógio agora ÷ tempo de 2010); LPG-TD, estocástico, recebe a mediana dos determinísticos e roda com várias sementes | Autor escolheu a opção 1; critério do Coordenador (EXP-02) | 3 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -515,6 +517,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | 6 | Claude Code — Coordenador (claude-opus-5-5) | Rascunhos do capítulo 1 (Introdução) e do capítulo 3 (Revisitando 2010) | Números conferidos contra `auditoria/afirmacoes.csv` e `conferencia-rankings.csv`; 22 e 36 chaves conferidas por `checar_citacoes.py`, todas no `referencias.bib`; usos das obras conferidos nas notas. **Texto final é do autor** |
 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-01: provisionamento da máquina OrbStack e teste dos 10 planejadores de 2010 | Planos conferidos nos logs; tempos e comprimentos comparados com os logs de 2010 do acervo; desvios registrados no EXP-01 |
+
+| 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-02: extração dos tempos de 2010 e calibração do limite | Extração conferida contra as contagens de 2010 (43 de 48) e contra leitura manual; erro de leitura de minutos no Blackbox detectado e corrigido; achado G22 |
 
 ---
 
@@ -590,3 +594,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.20 | 23/09/2026 | M1 enviado ao orientador; leitura das 84 feita pelo autor; Fase 3 no OrbStack (ressalva: binários de 2010 são 32-bit i386); rascunhos dos capítulos 1 e 3; `haddad2010relacao` no `referencias.bib` (151 obras) |
 | 0.21 | 24/09/2026 | Retorno do M1 registrado: taxonomia validada pelo orientador, demais pontos de acordo; sem artigo, só a dissertação final; ações 12 e 14 concluídas |
 | 0.22 | 24/09/2026 | Fase 3 iniciada: máquina OrbStack provisionada; os 10 planejadores de 2010 rodam (EXP-01); emulação 4–8× mais lenta que 2010; ação 19 (limite de tempo) |
+| 0.23 | 24/09/2026 | EXP-02: limites calibrados por planejador (38 a 137 min); achado G22 (Blackbox sem limite no Depots e DriverLog em 2010); ação 19 concluída |

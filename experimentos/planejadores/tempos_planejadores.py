@@ -53,13 +53,21 @@ def blocos(texto: str, marca: str):
 
 # planejador -> (marca do início do problema, marca de sucesso, expressão do tempo)
 FORMATOS = {
-    "blackbox": (r"^Problem name:\s*(\S+)", r"Begin plan", r"Total elapsed time:\s*([\d.]+)"),
+    # O Blackbox escreve "Total elapsed time:   33 minutes, 48 seconds" acima de 1 min.
+    "blackbox": (r"^Problem name:\s*(\S+)", r"Begin plan",
+                 r"Total elapsed time:\s*((?:\d+\s+minutes?,\s*)?[\d.]+)\s+seconds"),
     "ipp": (r"problem '([^']+)' defined", r"found plan", r"([\d.]+) seconds total time"),
     "ff": (r"problem '([^']+)' defined", r"found legal plan", r"([\d.]+) seconds total time"),
     "lpg": (r"problem '([^']+)' defined", r"Solution found", r"^Total time:\s*([\d.]+)"),
     "yahsp": (r"Parsing problem\.+\s*([^.\s]+)", r"Valid plan", r"Total time\s*:\s*([\d.]+)"),
     "sgplan": (r"problem '([^']+)' defined", r"^; Time", r"^; Time\s+([\d.]+)"),
 }
+
+
+def segundos(texto: str) -> float:
+    """'12.5' -> 12.5; '33 minutes, 48' -> 2028.0."""
+    m = re.match(r"\s*(\d+)\s+minutes?,\s*([\d.]+)", texto)
+    return int(m.group(1)) * 60 + float(m.group(2)) if m else float(texto)
 
 
 def ordem_script(stem: str, pasta: str) -> list:
@@ -93,9 +101,9 @@ def ler_log(planejador: str, texto: str, mapa: dict, ordem=None):
             if not (re.search(ok, bloco, re.I | re.M) and t):
                 continue
             if usar_ordem:
-                yield ordem[i], float(t.group(1))
+                yield ordem[i], segundos(t.group(1))
             elif nome in mapa and mapa[nome] is not None:
-                yield mapa[nome], float(t.group(1))
+                yield mapa[nome], segundos(t.group(1))
     elif planejador == "r":
         for linha in texto.splitlines():
             p = linha.split(",")

@@ -9,6 +9,13 @@ como fator de lentidão. O limite calibrado é 20 min × fator.
 Uso, no macOS, a partir da raiz do repositório (depois de teste_2010.sh ter criado a cópia
 de trabalho dos planejadores em ~/fase3/planners-2010):
   orb -m fase3-amd64 python3 experimentos/planejadores/calibrar_2010.py [paralelos]
+  python3 experimentos/planejadores/calibrar_2010.py --resumir   (refaz os fatores a partir do CSV)
+
+Critério do fator: o limite de 2010 (`timeout 1200`) cortava o tempo de relógio, então o fator
+é a mediana de (tempo de relógio agora / tempo registrado em 2010). Casos cujo tempo de 2010,
+depois de corrigida a leitura, fica fora da faixa da amostra são excluídos. Planejadores
+estocásticos (LPG-TD) não têm fator próprio confiável: recebem a mediana dos fatores dos
+planejadores determinísticos, porque o custo da emulação é do ambiente, não do planejador.
 
 Saídas (versionadas): experimentos/execucoes/calibracao-2010.csv e fatores-2010.csv.
 Logs brutos: ~/fase3/calibracao-2010/ dentro da máquina.
@@ -65,7 +72,7 @@ def tempo_agora(pl, cwd, saida, prob):
     if chave in T.FORMATOS:
         _, ok, tempo = T.FORMATOS[chave]
         t = re.search(tempo, saida, re.I | re.M)
-        return float(t.group(1)) if t and re.search(ok, saida, re.I | re.M) else None
+        return T.segundos(t.group(1)) if t and re.search(ok, saida, re.I | re.M) else None
     if chave in ("satplan", "maxplan"):
         solns = sorted(Path(cwd).glob("*.soln"), key=os.path.getmtime)
         if solns:
@@ -140,16 +147,42 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(resultados[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(resultados)
-    fatores = []
-    for pl in sorted(sel):
-        rs = [float(r["razao"]) for r in resultados if r["planejador"] == pl and r["razao"] != ""]
-        validos = [r for r in resultados if r["planejador"] == pl and r["situacao"] == "ok"]
+    resumir(paralelos)
+
+
+ESTOCASTICOS = {"LPG"}
+
+
+def resumir(paralelos=4):
+    with (RAIZ / "experimentos/execucoes/calibracao-2010.csv").open(encoding="utf-8") as f:
+        resultados = list(csv.DictReader(f))
+    t2010 = {}
+    with (RAIZ / "experimentos/planejadores/tempos_2010.csv").open(encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            t2010[(r["planejador"], r["dominio"], r["problema"])] = float(r["tempo_s_2010"])
+    fatores, deterministicos = [], []
+    for pl in sorted({r["planejador"] for r in resultados}):
+        rs = []
+        for r in resultados:
+            if r["planejador"] != pl:
+                continue
+            t = t2010.get((pl, r["dominio"], r["problema"]), float(r["tempo_s_2010"]))
+            if not FAIXA[0] <= t <= FAIXA[1]:
+                continue  # fora da faixa depois de corrigida a leitura do tempo de 2010
+            rs.append(float(r["relogio_s"]) / t)
         fator = statistics.median(rs) if rs else None
-        fatores.append({"planejador": pl, "n_amostra": len(sel[pl]), "n_resolvidos": len(validos),
-                        "razao_min": round(min(rs), 2) if rs else "", "fator_mediana": round(fator, 2) if fator else "",
-                        "razao_max": round(max(rs), 2) if rs else "",
-                        "limite_calibrado_min": math.ceil(LIMITE_2010 * fator / 60) if fator else "",
-                        "paralelos": paralelos})
+        if pl not in ESTOCASTICOS and fator:
+            deterministicos.append(fator)
+        fatores.append({"planejador": pl, "n_usados": len(rs),
+                        "n_resolvidos": sum(r["planejador"] == pl and r["situacao"] == "ok" for r in resultados),
+                        "razao_min": round(min(rs), 2) if rs else "", "fator_proprio": round(fator, 2) if fator else "",
+                        "razao_max": round(max(rs), 2) if rs else "", "paralelos": paralelos})
+    comum = statistics.median(deterministicos)
+    for x in fatores:
+        usado = comum if x["planejador"] in ESTOCASTICOS else float(x["fator_proprio"])
+        x["fator_usado"] = round(usado, 2)
+        x["origem_do_fator"] = "mediana dos determinísticos" if x["planejador"] in ESTOCASTICOS else "próprio"
+        x["limite_calibrado_min"] = math.ceil(LIMITE_2010 * usado / 60)
     with (RAIZ / "experimentos/execucoes/fatores-2010.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(fatores[0]), lineterminator="\n")
         w.writeheader()
@@ -159,4 +192,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["--resumir"]:
+        resumir()
+    else:
+        main()
