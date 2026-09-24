@@ -1,4 +1,4 @@
-"""Nível 3 da reexecução: os 10 planejadores de 2010 nos 10 domínios de treino, sob condições únicas.
+r"""Nível 3 da reexecução: os 10 planejadores de 2010 nos 10 domínios de treino, sob condições únicas.
 
 Condições (decisões registradas no plano, ações 6 e 19):
 - máquina OrbStack `fase3-amd64` (Ubuntu 22.04 amd64; binários de 2010 via QEMU i386);
@@ -13,6 +13,12 @@ Condições (decisões registradas no plano, ações 6 e 19):
 
 Retoma de onde parou: pula as execuções já registradas em experimentos/execucoes/nivel3-2010.csv.
 Ordem: domínio por domínio, para cada domínio terminado já ser comparável com 2010.
+
+Opções:
+  --adiar P1,P2   não agenda esses planejadores nesta rodada (decisão do autor, 24/09/2026:
+                  o R fica para o fim, a decidir depois de todos os outros)
+Parada suave: crie ~/fase3/nivel3/PARAR; o executor não inicia novas execuções, termina as
+que estão em curso e sai. Apague o arquivo antes de reiniciar.
 
 Uso, dentro da máquina (em segundo plano, independente da sessão):
   orb -m fase3-amd64 bash -c "cd <repo> && nohup python3 experimentos/execucoes/rodar_nivel3_2010.py \
@@ -42,6 +48,7 @@ import tempos_planejadores as T  # noqa: E402
 BASE = Path.home() / "fase3"
 MODELO = BASE / "planners-2010"
 BRUTOS = BASE / "nivel3/brutos"
+PARAR = BASE / "nivel3/PARAR"
 RESULTADOS = RAIZ / "experimentos/execucoes/nivel3-2010.csv"
 PARALELOS = 4
 SEMENTES_LPG = (1, 2, 3)
@@ -98,6 +105,8 @@ def registrar(linha):
 
 def executar(tarefa, limite):
     pl, dom, prob, semente = tarefa
+    if PARAR.exists():
+        return
     with trava:
         w = slots_livres.pop()
     try:
@@ -143,17 +152,21 @@ def executar(tarefa, limite):
 
 
 def main():
+    adiados = set()
+    if "--adiar" in sys.argv:
+        adiados = set(sys.argv[sys.argv.index("--adiar") + 1].split(","))
     preparar_slots()
     lim = limites()
     feitas = ja_feitas()
     tarefas = []
     for dom in ORDEM_DOMINIOS:
         for prob in problemas(dom):
-            for pl in PLANEJADORES:
+            for pl in [p for p in PLANEJADORES if p not in adiados]:
                 for s in (SEMENTES_LPG if pl == "LPG" else ("",)):
                     if (pl, dom, prob, str(s)) not in feitas:
                         tarefas.append((pl, dom, prob, s))
-    print(f"{len(tarefas)} execuções pendentes ({len(feitas)} já registradas)", flush=True)
+    print(f"{len(tarefas)} execuções pendentes ({len(feitas)} já registradas); adiados: {sorted(adiados) or '-'}",
+          flush=True)
     def seguro(t):
         try:
             executar(t, lim[t[0]])
