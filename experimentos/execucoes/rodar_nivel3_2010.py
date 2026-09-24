@@ -7,6 +7,8 @@ Condições (decisões registradas no plano, ações 6 e 19):
   tempo de relógio, com o grupo de processos morto no estouro;
 - 4 execuções em paralelo, a mesma concorrência da calibração;
 - LPG-TD com 3 sementes fixas (1, 2, 3), por ser estocástico;
+- limites internos do LPG-TD (-cputime 1800 e -cputime_localsearch 1200) e do MAXPLAN
+  (-timeout 1800) igualados ao limite calibrado: em 2010 eles nunca agiam;
 - os problemas do acervo (subconjuntos de 2010, achado G14; Gripper gerado localmente, G15).
 
 Retoma de onde parou: pula as execuções já registradas em experimentos/execucoes/nivel3-2010.csv.
@@ -16,6 +18,10 @@ Uso, dentro da máquina (em segundo plano, independente da sessão):
   orb -m fase3-amd64 bash -c "cd <repo> && nohup python3 experimentos/execucoes/rodar_nivel3_2010.py \
       > ~/fase3/nivel3/execucao.log 2>&1 &"
 Saídas brutas (log e plano de cada execução): ~/fase3/nivel3/brutos/ (não versionadas).
+Para parar: `pkill` pelo nome não pega os processos emulados; mate pelo número:
+  orb -m fase3-amd64 bash -c 'kill -9 $(ps -eo pid,args | grep -E "rodar_nivel3|qemu-i386|r.execute|/usr/bin/time" \
+      | grep -v grep | awk "{print \$1}")'
+e confira que nada sobrou antes de reiniciar (execuções órfãs disputam CPU e diretórios).
 """
 import csv
 import os
@@ -96,8 +102,12 @@ def executar(tarefa, limite):
         w = slots_livres.pop()
     try:
         cwd, cmd = C.comando(pl, dom, prob, base=w)
+        # Limites internos que em 2010 nunca agiam (o timeout de 20 min vinha antes) e que,
+        # sob emulação, cortariam antes do limite calibrado: igualados ao limite calibrado.
         if pl == "LPG":
-            cmd = cmd + ["-seed", str(semente)]
+            cmd = cmd + ["-seed", str(semente), "-cputime", str(limite), "-cputime_localsearch", str(limite)]
+        if pl == "MaxPlan":
+            cmd = cmd + ["-timeout", str(limite)]
         for s in Path(cwd).glob("*.soln"):
             s.unlink()
         destino = BRUTOS / C.CHAVE[pl] / dom
