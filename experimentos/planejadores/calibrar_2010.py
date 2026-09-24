@@ -46,8 +46,10 @@ CHAVE = {"Blackbox": "blackbox", "IPP": "ipp", "FF": "ff", "LPG": "lpg", "YAHSP"
          "SATPlan": "satplan", "MaxPlan": "maxplan", "Fast Downward": "fastdownward", "R": "r"}
 
 
-def comando(pl, dom, prob):
-    """(diretório, comando) com as chamadas dos scripts finais de 2010 (ver teste_2010.sh)."""
+def comando(pl, dom, prob, base=None):
+    """(diretório, comando) com as chamadas dos scripts finais de 2010 (ver teste_2010.sh).
+    `base` troca a cópia de trabalho dos planejadores (uma por processo paralelo)."""
+    W = base or globals()["W"]
     d = T.COMP / dom
     D, P = str(d / "domain.pddl"), str(d / prob)
     return {
