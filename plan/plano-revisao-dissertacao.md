@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.23 |
+| Versão deste documento | 0.24 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -250,7 +250,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [ ] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0)
 - [ ] Implementar ou reutilizar extrator de *features* modernas
 - [ ] Rodar experimentos
-- [ ] Reproduzir o método de 2010 sobre os dados novos (linha de base)
+- [ ] Reproduzir o método de 2010 sobre os dados novos (linha de base) — 🟡 sobre os dados de 2010 já feito (Nível 1, EXP-03): 220/221 classes, 100/100 notas, 535/539 células característica × técnica, *rankings* iguais salvo empates; achados G23 e G24
 - [ ] Treinar e avaliar modelos de seleção
 - [ ] Testar robustez das métricas UML a variações de modelagem (F3)
 - [ ] Analisar importância das *features* e responder Q1 e Q2
@@ -490,6 +490,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | 24/09/2026 | Limite da reexecução dos planejadores de 2010 = 20 min × fator de lentidão da emulação medido por planejador (mediana do tempo de relógio agora ÷ tempo de 2010); LPG-TD, estocástico, recebe a mediana dos determinísticos e roda com várias sementes | Autor escolheu a opção 1; critério do Coordenador (EXP-02) | 3 |
 
+| 24/09/2026 | Nível 1 concluído (EXP-03): o método de 2010 é reproduzível por script; a discretização usada foi por extremos (G23), não a descrita; duas taxonomias no mesmo método (G24); G6 resolvido (nota a partir do valor preciso) | Evidência do EXP-03 | 3 |
+
 ---
 
 ## 11. Registro de uso de IA
@@ -519,6 +521,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-01: provisionamento da máquina OrbStack e teste dos 10 planejadores de 2010 | Planos conferidos nos logs; tempos e comprimentos comparados com os logs de 2010 do acervo; desvios registrados no EXP-01 |
 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-02: extração dos tempos de 2010 e calibração do limite | Extração conferida contra as contagens de 2010 (43 de 48) e contra leitura manual; erro de leitura de minutos no Blackbox detectado e corrigido; achado G22 |
+
+| 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-03: reprodução do método de 2010 por script (Nível 1) | Cada etapa comparada célula a célula com as tabelas publicadas; regras inferidas testadas contra alternativas (discretização descrita × extremos; arredondamentos; conjuntos de técnicas) |
 
 ---
 
@@ -595,3 +599,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.21 | 24/09/2026 | Retorno do M1 registrado: taxonomia validada pelo orientador, demais pontos de acordo; sem artigo, só a dissertação final; ações 12 e 14 concluídas |
 | 0.22 | 24/09/2026 | Fase 3 iniciada: máquina OrbStack provisionada; os 10 planejadores de 2010 rodam (EXP-01); emulação 4–8× mais lenta que 2010; ação 19 (limite de tempo) |
 | 0.23 | 24/09/2026 | EXP-02: limites calibrados por planejador (38 a 137 min); achado G22 (Blackbox sem limite no Depots e DriverLog em 2010); ação 19 concluída |
+| 0.24 | 24/09/2026 | Nível 1 da Fase 3 concluído (EXP-03): método de 2010 reproduzido por script; achados G23 (discretização por extremos) e G24 (duas taxonomias); G6 resolvido |
