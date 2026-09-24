@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 23/09/2026 |
-| Versão deste documento | 0.20 |
+| Versão deste documento | 0.21 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -62,7 +62,7 @@ Desdobramentos possíveis, não obrigatórios:
 
 | Marco | Quando | O que levar | Status |
 |---|---|---|---|
-| M1 — Primeiro contato | Após Fase 2 | Diagnóstico da versão 2010 + perguntas de pesquisa revisadas | 🟡 enviado em 23/09/2026; aguardando retorno |
+| M1 — Primeiro contato | Após Fase 2 | Diagnóstico da versão 2010 + perguntas de pesquisa revisadas | 🟢 enviado em 23/09/2026; retorno em 24/09/2026 (`redacao/orientador/2026-09-24-retorno-m1.md`) |
 | M2 — Resultados | Após Fases 3–4 | Resultados da replicação e da camada LLM | ⚪ |
 | M3 — Nova versão | Fim da Fase 6 | Texto completo + ponte com desenvolvimento de software | ⚪ |
 
@@ -409,9 +409,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 9 | Revisar as referências e gerar o `referencias.bib` | 1, 6 | Matheus + Coordenador | 23/09/2026 | 🟢 **129 obras citáveis**: as 122 confirmadas aprovadas pelo autor, 5 ressalvas com ≥ 50 citações e 2 confirmadas a partir dos PDFs do autor. O capítulo 2 tem 14 chaves não citáveis a substituir ou retirar |
 | 10 | Obras sem acesso | 1 | Matheus | 23/09/2026 | 🟢 `nunez2015automatic` e `tonidandel2006reading` lidas a partir dos PDFs do autor; `strobel2014planning` acrescentada; só `sette2008are` segue sem leitura (não citável). GIPO excluído |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
-| 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta | 2, 6 | Matheus | | ⚪ entra no Marco M1 (o artigo de 2006 já foi lido a partir do PDF do autor) |
+| 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta | 2, 6 | Matheus | 24/09/2026 | 🟢 coberto pelo M1 |
 | 13 | Revisar a auditoria (afirmações "reformula" e "descarta") | 2 | Matheus + Coordenador | 23/09/2026 | 🟢 revisão do Coordenador por delegação; **leitura das 84 feita pelo autor** em 23/09/2026 |
-| 14 | Revisar e enviar o material do Marco M1 (`auditoria/m1-orientador.md`) | 2 | Matheus | 23/09/2026 | 🟢 revisado e enviado ao Tonidandel; aguardando retorno |
+| 14 | Revisar e enviar o material do Marco M1 (`auditoria/m1-orientador.md`) | 2 | Matheus | 24/09/2026 | 🟢 enviado; retorno registrado: taxonomia confirmada, demais pontos de acordo, sem artigo; G10 segue em aberto |
 | 15 | Aprovar as fontes novas da Fase 2 no `referencias.bib` | 2, 6 | Coordenador (delegado pelo autor) | 23/09/2026 | 🟢 17 promovidas (11 da Fase 2 + 6 da resolução de pendências); `referencias.bib` com 150 obras |
 | 16 | Conferir na fonte as afirmações com ação "CONFERIR" | 2, 6 | Coordenador | 23/09/2026 | 🟢 nenhuma restante; 16 de confiança baixa com decisão registrada (retirar, parafrasear ou tratar como hipótese) |
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
@@ -470,7 +470,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 23/09/2026 | Fase 2 executada com a mesma abordagem multiagente da Fase 1, com modelos mais econômicos (Haiku 4.5) nas tarefas mecânicas; estratégia em `plan/fase2-estrategia-multiagentes.md` | Decisão do autor | 2 |
 | 23/09/2026 | A taxa de acerto de 2010 é a coincidência exata de posição entre *ranking* previsto e real (G19); as variantes de agregação do `testes.ods` foram testadas e ficou a média das médias por simplicidade (G7); o corte das instâncias buscou igualar o subconjunto publicado da IPC (G14) | Respostas do autor | 2, 3 |
 | 23/09/2026 | Na nova taxonomia, *Partial-order* e *Total-order* saem das técnicas e ficam como atributo do plano | Decisão do autor | 2 |
-| 23/09/2026 | Demais escolhas da taxonomia (7 itens, `auditoria/taxonomia-tecnicas.md`, "Decisões"): *Knowledge-based* fora das dimensões, SGPlan como decomposição na Dimensão 1 e não como portfólio, "heurísticas aprendidas" e "grafo causal" como valores próprios, R em valor próprio, fonte de POCL a buscar | Decisão do Coordenador, a validar no M1 | 2 |
+| 23/09/2026 | Demais escolhas da taxonomia (7 itens, `auditoria/taxonomia-tecnicas.md`, "Decisões"): *Knowledge-based* fora das dimensões, SGPlan como decomposição na Dimensão 1 e não como portfólio, "heurísticas aprendidas" e "grafo causal" como valores próprios, R em valor próprio, fonte de POCL a buscar | Decisão do Coordenador, **validada pelo orientador no M1 (24/09/2026)** | 2 |
 | 23/09/2026 | As Tabelas 2–4 de 2010 são descartadas e substituídas pela nova taxonomia; as Tabelas 18–25 serão recalculadas (Fase 3, R-06 e R-10) | Coerente com A6 e com as fontes primárias dos 10 planejadores | 2, 3 |
 | 23/09/2026 | Regras de auditoria adotadas: trecho literal conferido por script; números derivados de tabela conferidos por script, não por agente; plausibilidade não é evidência (confiança baixa + "CONFERIR"); afirmação sobre obra citada em 2010 é conferida contra a obra que a lista de referências de 2010 indica | Falhas observadas nas Ondas 1–3 (`plan/fase2-estrategia-multiagentes.md`, seção 6) | 2 |
 
@@ -481,6 +481,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | 23/09/2026 | Fase 3 roda numa máquina virtual do OrbStack neste Mac (Apple M4). Primeiro teste: se os binários de 2010 (ELF 32-bit i386) rodam numa máquina amd64; tempos sob emulação não são comparáveis aos de 2010 | Decisão do autor; ressalva técnica do Coordenador | 3 |
 | 23/09/2026 | Redação iniciada pelos capítulos que não dependem de resultados: Introdução (rascunho) e capítulo 3 (auditoria); a dissertação de 2010 entra no `referencias.bib` como `haddad2010relacao` | Autor liberou a redação após ler a auditoria | 6 |
+
+| 24/09/2026 | Retorno do M1: o orientador confirmou a nova taxonomia (incluindo as escolhas do Coordenador) e concordou com Q2, com a expansão de escopo (Q3, Q4) e com o desenho da Fase 3. G10 segue em aberto | Orientador, relatado pelo autor | 2, 3 |
+| 24/09/2026 | **Sem artigo com os resultados da Fase 3:** o único produto é a dissertação final revisada, no padrão ABNT | Decisão do autor | 6 |
 
 ---
 
@@ -580,3 +583,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.18 | 23/09/2026 | Revisão das 101 afirmações (a pedido do autor): 268 mantém, 76 reformula, 5 descarta; números das IPCs conferidos nas fontes oficiais; achado G21 (4 pares de "competição" impossíveis); R reconhecido como *regression-progression* (Bacchus, 2001) na taxonomia; ações 17 e 18 |
 | 0.19 | 23/09/2026 | Pendências da auditoria resolvidas por delegação do autor: G21 esclarecido (execução própria, logs no acervo), 26 "CONFERIR" resolvidas, 17 referências promovidas (`referencias.bib` com 150), taxonomia 100% citável; totais 265/80/4; ações 13 e 15 a 18 concluídas |
 | 0.20 | 23/09/2026 | M1 enviado ao orientador; leitura das 84 feita pelo autor; Fase 3 no OrbStack (ressalva: binários de 2010 são 32-bit i386); rascunhos dos capítulos 1 e 3; `haddad2010relacao` no `referencias.bib` (151 obras) |
+| 0.21 | 24/09/2026 | Retorno do M1 registrado: taxonomia validada pelo orientador, demais pontos de acordo; sem artigo, só a dissertação final; ações 12 e 14 concluídas |

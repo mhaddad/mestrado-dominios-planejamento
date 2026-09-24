@@ -1,4 +1,4 @@
-> **Rascunho de IA para revisão do autor.** Produzido por Claude Code (subagente redator, claude-sonnet-5) em 23/09/2026, a partir de `auditoria/taxonomia/fontes-planejadores.csv`, das notas de leitura dos 10 planejadores, de `auditoria/insumos-fase1.md` e das sínteses E1 e E3. Nenhuma citação aqui é definitiva: chaves marcadas com `*` ainda não estão em `literatura/referencias/referencias.bib` (só em `candidatas.bib`) e dependem da aprovação do autor em `revisao-referencias.md`. Texto de trabalho, não é a versão final da dissertação.
+> **Validada pelo autor e pelo orientador no Marco M1 (24/09/2026; `redacao/orientador/2026-09-24-retorno-m1.md`).** Originalmente rascunho de IA. Produzido por Claude Code (subagente redator, claude-sonnet-5) em 23/09/2026, a partir de `auditoria/taxonomia/fontes-planejadores.csv`, das notas de leitura dos 10 planejadores, de `auditoria/insumos-fase1.md` e das sínteses E1 e E3. Nenhuma citação aqui é definitiva: chaves marcadas com `*` ainda não estão em `literatura/referencias/referencias.bib` (só em `candidatas.bib`) e dependem da aprovação do autor em `revisao-referencias.md`. Texto de trabalho, não é a versão final da dissertação.
 
 # Taxonomia de técnicas de planejamento (revisão da Fase 2)
 
@@ -146,5 +146,5 @@ Isso significa que qualquer célula das Tabelas 18–25 que cruze uma caracterí
 | 7 | "Grafo causal" fica como valor próprio da Dimensão 2. | Coordenador |
 | 8 | O R fica em valor próprio da Dimensão 1 ("decomposição recursiva por metas", que regride metas e progride o estado; Bacchus, 2001, o chama de *regression-progression*). | Coordenador |
 
-As decisões 2 a 8 são técnicas e seguem o propósito do trabalho (classificar pela fonte primária, sem categorias que nenhum planejador ocupa, exceto quando a Fase 3 precisa delas). O autor pode revê-las no Marco M1.
+As decisões 2 a 8 são técnicas e seguem o propósito do trabalho (classificar pela fonte primária, sem categorias que nenhum planejador ocupa, exceto quando a Fase 3 precisa delas). O orientador confirmou a taxonomia e essas decisões no Marco M1 (24/09/2026).
 
