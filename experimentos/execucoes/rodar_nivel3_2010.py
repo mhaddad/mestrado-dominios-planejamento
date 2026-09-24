@@ -7,8 +7,8 @@ Condições (decisões registradas no plano, ações 6 e 19):
   tempo de relógio, com o grupo de processos morto no estouro;
 - 4 execuções em paralelo, a mesma concorrência da calibração;
 - LPG-TD com 3 sementes fixas (1, 2, 3), por ser estocástico;
-- limites internos do LPG-TD (-cputime 1800 e -cputime_localsearch 1200) e do MAXPLAN
-  (-timeout 1800) igualados ao limite calibrado: em 2010 eles nunca agiam;
+- limites internos do LPG-TD (-cputime 1800 e -cputime_localsearch 1200), do MAXPLAN
+  (-timeout 1800) e do SGPlan (-cputime) igualados ao limite calibrado: em 2010 nunca agiam;
 - os problemas do acervo (subconjuntos de 2010, achado G14; Gripper gerado localmente, G15).
 
 Retoma de onde parou: pula as execuções já registradas em experimentos/execucoes/nivel3-2010.csv.
@@ -117,6 +117,8 @@ def executar(tarefa, limite):
             cmd = cmd + ["-seed", str(semente), "-cputime", str(limite), "-cputime_localsearch", str(limite)]
         if pl == "MaxPlan":
             cmd = cmd + ["-timeout", str(limite)]
+        if pl == "SGPlan":
+            cmd = cmd + ["-cputime", str(limite)]
         for s in Path(cwd).glob("*.soln"):
             s.unlink()
         destino = BRUTOS / C.CHAVE[pl] / dom
