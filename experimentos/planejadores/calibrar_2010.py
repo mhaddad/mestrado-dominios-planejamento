@@ -139,24 +139,27 @@ def roda_planejador(pl, casos):
 
 
 def main():
+    global SAIDA_CAL, SAIDA_FAT
     paralelos = int(sys.argv[1]) if len(sys.argv) > 1 else 4
+    sufixo = sys.argv[2] if len(sys.argv) > 2 else ""  # ex.: "-gcp", para não sobrescrever a calibração do OrbStack
+    SAIDA_CAL = RAIZ / f"experimentos/execucoes/calibracao-2010{sufixo}.csv"
+    SAIDA_FAT = RAIZ / f"experimentos/execucoes/fatores-2010{sufixo}.csv"
     LOGS.mkdir(parents=True, exist_ok=True)
     sel = amostra()
     with ThreadPoolExecutor(max_workers=paralelos) as ex:
         resultados = [l for ls in ex.map(lambda kv: roda_planejador(*kv), sorted(sel.items())) for l in ls]
-    saida = RAIZ / "experimentos/execucoes/calibracao-2010.csv"
-    with saida.open("w", encoding="utf-8", newline="") as f:
+    with SAIDA_CAL.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(resultados[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(resultados)
-    resumir(paralelos)
+    resumir(paralelos, sufixo)
 
 
 ESTOCASTICOS = {"LPG"}
 
 
-def resumir(paralelos=4):
-    with (RAIZ / "experimentos/execucoes/calibracao-2010.csv").open(encoding="utf-8") as f:
+def resumir(paralelos=4, sufixo=""):
+    with (RAIZ / f"experimentos/execucoes/calibracao-2010{sufixo}.csv").open(encoding="utf-8") as f:
         resultados = list(csv.DictReader(f))
     t2010 = {}
     with (RAIZ / "experimentos/planejadores/tempos_2010.csv").open(encoding="utf-8") as f:
@@ -185,7 +188,7 @@ def resumir(paralelos=4):
         x["fator_usado"] = round(usado, 2)
         x["origem_do_fator"] = "mediana dos determinísticos" if x["planejador"] in ESTOCASTICOS else "próprio"
         x["limite_calibrado_min"] = math.ceil(LIMITE_2010 * usado / 60)
-    with (RAIZ / "experimentos/execucoes/fatores-2010.csv").open("w", encoding="utf-8", newline="") as f:
+    with (RAIZ / f"experimentos/execucoes/fatores-2010{sufixo}.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(fatores[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(fatores)
@@ -194,7 +197,7 @@ def resumir(paralelos=4):
 
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["--resumir"]:
-        resumir()
+    if sys.argv[1:2] == ["--resumir"]:
+        resumir(sufixo=sys.argv[2] if len(sys.argv) > 2 else "")
     else:
         main()

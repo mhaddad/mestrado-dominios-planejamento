@@ -16,6 +16,10 @@ Retoma de onde parou: pula as execuções já registradas em experimentos/execuc
 Ordem: domínio por domínio, para cada domínio terminado já ser comparável com 2010.
 
 Opções:
+  --paralelos N   execuções simultâneas (padrão 4, a concorrência da calibração no OrbStack)
+  --fatores F     limites calibrados do ambiente (padrão experimentos/execucoes/fatores-2010.csv)
+  --resultados F  CSV de saída (padrão experimentos/execucoes/nivel3-2010.csv); use um
+                  arquivo por ambiente para não misturar condições de medição
   --adiar P1,P2   não agenda esses planejadores nesta rodada (decisão do autor, 24/09/2026:
                   o R fica para o fim, a decidir depois de todos os outros)
 Parada suave: crie ~/fase3/nivel3/PARAR; o executor não inicia novas execuções, termina as
@@ -88,8 +92,8 @@ def problemas(dom):
                   if f.is_file() and f.name != "domain.pddl" and "(problem" in f.read_text(errors="replace").lower())
 
 
-def limites():
-    with (RAIZ / "experimentos/execucoes/fatores-2010.csv").open(encoding="utf-8") as f:
+def limites(arquivo="experimentos/execucoes/fatores-2010.csv"):
+    with (RAIZ / arquivo).open(encoding="utf-8") as f:
         return {r["planejador"]: int(r["limite_calibrado_min"]) * 60 for r in csv.DictReader(f)}
 
 
@@ -164,12 +168,21 @@ def executar(tarefa, limite):
             slots_livres.append(w)
 
 
+def opcao(nome, padrao):
+    return sys.argv[sys.argv.index(nome) + 1] if nome in sys.argv else padrao
+
+
 def main():
+    global PARALELOS, RESULTADOS
+    PARALELOS = int(opcao("--paralelos", PARALELOS))
+    RESULTADOS = Path(opcao("--resultados", RESULTADOS))
+    if not RESULTADOS.is_absolute():
+        RESULTADOS = RAIZ / RESULTADOS
     adiados = set()
     if "--adiar" in sys.argv:
         adiados = set(sys.argv[sys.argv.index("--adiar") + 1].split(","))
     preparar_slots()
-    lim = limites()
+    lim = limites(opcao("--fatores", "experimentos/execucoes/fatores-2010.csv"))
     feitas = ja_feitas()
     tarefas = []
     for dom in ORDEM_DOMINIOS:
