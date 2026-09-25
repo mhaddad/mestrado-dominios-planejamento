@@ -546,6 +546,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 25/09/2026 | **Marco M2 cancelado.** Depois do M1, o próximo contato com o orientador é o M3: a dissertação reescrita inteira, enviada por e-mail, com retorno posterior | Decisão do autor | 6 |
 | 25/09/2026 | **Nível 3 migrado para o GCP**: VM `fase3-2010` (c2d-standard-8 Spot, 4 núcleos, us-central1-c), binários de 2010 em x86_64 nativo, limites recalibrados no próprio ambiente (`fatores-2010-gcp.csv`, 7 a 13 min) e resultados em `nivel3-2010-gcp.csv`; R por último na fila. As 259 execuções do OrbStack ficam como registro do ambiente emulado, sem misturar com as do GCP. Proteção de custo: orçamento de R$ 1.500 com avisos e desligamento automático da VM em 28/09/2026 | No OrbStack (QEMU i386) a rodada levaria ~17 dias; autor tem US$ 300 de crédito de avaliação e não quer ultrapassá-lo | 3 |
 | 25/09/2026 | **Blackbox no Satellite (G25):** a rodada principal mantém a chamada dos scripts finais (sem `-M`); ao fim, roda-se a variante `blackbox-m8192` (Blackbox no Satellite com `-M 8192`, como nos logs de 2010), com resultados em `nivel3-2010-gcp-blackbox-m8192.csv`, e os dois são registrados | Em 2010 só o Satellite usou `-M 8192`; sem ela, o Blackbox falha nos problemas 11 a 20. Decisão do autor | 3 |
+| 25/09/2026 | **Máquina OrbStack `fase3-amd64` apagada**; a Fase 3 segue só no GCP. Saídas brutas do OrbStack preservadas em `experimentos/execucoes/brutos/orbstack/` (fora do git; cópia conferida por MD5) e resultados em `nivel3-2010.csv` | Decisão do autor | 3 |
 
 ---
 
@@ -662,4 +663,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.25 | 24/09/2026 | EXP-04: regra de discretização do texto como cenário do Nível 2 (decisão do autor); corrigida a aritmética, acerto de 2010 cai para 50/30/40% |
 | 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada; Fase 5 passa a começar depois da 4B |
 | 0.27 | 25/09/2026 | Marco M2 cancelado; o M3 é o envio da dissertação reescrita por e-mail, com retorno posterior; status geral atualizado |
-| 0.28 | 25/09/2026 | Nível 3 migrado para o GCP (orçamento e desligamento automático); achado G25 (Blackbox com `-M 8192` só no Satellite em 2010) e variante `blackbox-m8192` para o fim da rodada |
+| 0.28 | 25/09/2026 | Nível 3 migrado para o GCP (orçamento e desligamento automático); achado G25 (Blackbox com `-M 8192` só no Satellite em 2010) e variante `blackbox-m8192` para o fim da rodada; máquina OrbStack apagada, brutos preservados |
