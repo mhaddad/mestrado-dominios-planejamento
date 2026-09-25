@@ -54,7 +54,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | ⚪ | | | Dataset, mapa característica × técnica, resposta a Q5 |
-| 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (piloto começa em paralelo à Fase 3) | ⚪ | | | Relatório do piloto + decisão sobre produto |
+| 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (começa depois da Fase 4B) | ⚪ | | | Relatório do piloto + decisão sobre produto |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
@@ -340,6 +340,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Objetivo:** responder Q4 com um piloto no Ateliê de Software e decidir se há base para um produto.
 
+**Início:** depois da conclusão da Fase 4B, inclusive a conversa com o Ateliê e o desenho do piloto (decisão de 25/09/2026).
+
 **Entrada:** a síntese para a Ponte da Fase 4B orienta a escolha das características da tarefa, das configurações de agente e das hipóteses do piloto.
 
 **Analogia de trabalho** `[HIPÓTESE]`
@@ -540,6 +542,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | Discretização: o autor considera correta a regra escrita no texto (as classes publicadas teriam erro de transcrição) e, informado de que ela deixa 7–8 métricas com uma só classe e de que as Tabelas 19–25 usaram as classes publicadas, decidiu aplicá-la como cenário do Nível 2; o Nível 1 segue com as classes publicadas | Decisão do autor (EXP-04) | 3, 6 |
 | 24/09/2026 | Referência do Nível 2 = método de 2010 recalculado sem os erros aritméticos de G18; com isso, o acerto do Elevator cai de 50% para 40% e o do Zeno-travel de 40% para 30% | EXP-04 | 3 |
 | 25/09/2026 | **Expansão de escopo (R1): nova Fase 4B**, panorama das IPCs posteriores a 2010 com os resultados publicados, características extraídas do PDDL sem UML.P e nova pergunta Q5. Fica depois da Fase 4 e antes da Fase 5; numerada com sufixo para não renumerar as fases seguintes | Decisão do autor: ter uma avaliação geral antes de desenhar a Ponte | 4B, 5 |
+| 25/09/2026 | **A Fase 5 começa depois da Fase 4B**, e não mais em paralelo à Fase 3; vale também para a conversa com o Ateliê e o desenho do piloto | Decisão do autor: considerar os achados da 4B no desenho da Ponte | 5 |
 
 ---
 
@@ -653,4 +656,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.23 | 24/09/2026 | EXP-02: limites calibrados por planejador (38 a 137 min); achado G22 (Blackbox sem limite no Depots e DriverLog em 2010); ação 19 concluída |
 | 0.24 | 24/09/2026 | Nível 1 da Fase 3 concluído (EXP-03): método de 2010 reproduzido por script; achados G23 (discretização por extremos) e G24 (duas taxonomias); G6 resolvido |
 | 0.25 | 24/09/2026 | EXP-04: regra de discretização do texto como cenário do Nível 2 (decisão do autor); corrigida a aritmética, acerto de 2010 cai para 50/30/40% |
-| 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada |
+| 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada; Fase 5 passa a começar depois da 4B |
