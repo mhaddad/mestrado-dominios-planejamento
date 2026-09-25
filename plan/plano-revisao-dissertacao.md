@@ -9,8 +9,8 @@
 | Autor | Matheus Haddad |
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
-| Última atualização | 23/09/2026 |
-| Versão deste documento | 0.25 |
+| Última atualização | 25/09/2026 |
+| Versão deste documento | 0.26 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
 
 ---
@@ -53,6 +53,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
+| 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | ⚪ | | | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (piloto começa em paralelo à Fase 3) | ⚪ | | | Relatório do piloto + decisão sobre produto |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
 
@@ -98,6 +99,7 @@ Desdobramentos possíveis, não obrigatórios:
 | Q2 | Métricas estruturais de modelagem, no estilo orientado a objetos, acrescentam poder preditivo às *features* modernas extraídas de PDDL? | Continuidade | 3 |
 | Q3 | Onde os LLMs entram no mapa: como técnica de planejamento, como tradutores de domínio ou como seletores? | Atualização | 4 |
 | Q4 | O princípio de ajuste entre características da tarefa e estratégia de solução ajuda a escolher configurações de agentes de IA no desenvolvimento de software? | Transferência | 5 |
+| Q5 | Nos resultados publicados das IPCs posteriores a 2010, quais características estruturais do domínio, extraídas automaticamente do PDDL (sem UML.P), explicam o desempenho relativo das famílias de técnicas de planejamento? | Ampliação | 4B |
 
 **Observação sobre Q4.** As métricas usadas em 2010 para diagramas de classes e de estados (Genero & Piattini; In, Kim & Barry) vieram da **engenharia de software**. No desenvolvimento de software essas métricas estão em seu terreno de origem, o que torna a ponte da Fase 5 mais natural do que parece à primeira vista. `[HIPÓTESE]`
 
@@ -293,9 +295,52 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 ---
 
+### Fase 4B — Panorama das IPCs posteriores a 2010
+
+**Objetivo:** responder Q5 e produzir uma avaliação geral da relação entre características de domínio e técnicas de planejamento, com os dados de 15 anos de competições, como base para desenhar a Ponte (Fase 5).
+
+**Posição:** depois da Fase 4 e antes da Fase 5 (decisão de 25/09/2026). O sufixo evita renumerar as fases seguintes.
+
+**Diferença em relação à Fase 3.** A Fase 3 reexecuta planejadores em condições controladas. A 4B usa **dados secundários**: os resultados publicados pelas próprias IPCs, com os domínios e planejadores de cada edição, sem reexecução. Ganha amplitude (muitos planejadores e domínios) e perde controle experimental.
+
+**Desenho** (a detalhar no início da fase)
+
+- **Fontes:** resultados oficiais das IPCs 2011, 2014, 2018 e 2023, trilhas clássicas (*satisficing*, ótima, *agile*); os PDDL dos domínios de cada edição; bases derivadas, se houver dados publicados (ex.: `lequen2026planner`). `[A CONFIRMAR]` formato, granularidade e disponibilidade em cada edição.
+- **Unidade de análise:** instância, agregada por domínio. Comparações **dentro de cada edição**; entre edições, só com dados reexecutados em hardware uniforme.
+- **Técnicas:** planejadores classificados pela taxonomia em 4 dimensões (R-10). Portfólios, que vencem trilhas desde 2011, precisam de regra própria (classificar pela técnica que resolveu a instância, pelos componentes ou como categoria à parte). Decisão do autor no início da fase.
+- **Características, sem UML.P:** as *features* de PDDL/SAS+ da Fase 3, mais propriedades com fundamento teórico (grafo causal, reversibilidade, becos sem saída, topologia de busca na linha de `hoffmann2011analyzing`). Reaproveitar os extratores da Fase 3.
+- **Análise:** modelos interpretáveis primeiro; importância das características; mapa característica × família de técnicas; comparação com os resultados da Fase 3 nos domínios em comum. A contribuição pretendida é o **mapa explicável por técnica**, não mais um seletor caixa-preta `[HIPÓTESE]`.
+
+**Cuidados**
+
+- Hardware, limites e conjunto de domínios mudam a cada edição.
+- Cada planejador roda uma vez; a ordem do PDDL muda *rankings* (`vallati2021importance`).
+- Separar "não resolveu" de "não suporta o recurso do PDDL" (cobertura censurada).
+- Obras de trabalho ainda **não citáveis** (fora do `referencias.bib`): Ferber et al. (2019), base de domínios das IPCs com tempos de planejadores, e Ferber et al. (2022), seleção interpretável, principal trabalho a confrontar.
+
+**Atividades**
+
+- [ ] Levantar o que cada IPC publicou (resultados por instância, limites, hardware, domínios, planejadores)
+- [ ] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar
+- [ ] Montar o dataset em `data/` com `README.md` de origem e método
+- [ ] Classificar os planejadores na taxonomia e decidir a regra dos portfólios
+- [ ] Extrair as características dos domínios
+- [ ] Analisar e montar o mapa característica × técnica; responder Q5
+- [ ] Escrever a síntese para a Ponte: o que se transfere como hipótese para a Fase 5 e o que não se transfere
+
+**Entregáveis:** dataset documentado · mapa característica × técnica · resposta a Q5 · síntese para a Ponte
+
+**Critério de conclusão:** análise reprodutível a partir do repositório e síntese para a Ponte revisada pelo autor.
+
+**Notas:**
+
+---
+
 ### Fase 5 — Ponte para desenvolvimento de software dirigido por IA
 
 **Objetivo:** responder Q4 com um piloto no Ateliê de Software e decidir se há base para um produto.
+
+**Entrada:** a síntese para a Ponte da Fase 4B orienta a escolha das características da tarefa, das configurações de agente e das hipóteses do piloto.
 
 **Analogia de trabalho** `[HIPÓTESE]`
 
@@ -494,6 +539,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | 24/09/2026 | Discretização: o autor considera correta a regra escrita no texto (as classes publicadas teriam erro de transcrição) e, informado de que ela deixa 7–8 métricas com uma só classe e de que as Tabelas 19–25 usaram as classes publicadas, decidiu aplicá-la como cenário do Nível 2; o Nível 1 segue com as classes publicadas | Decisão do autor (EXP-04) | 3, 6 |
 | 24/09/2026 | Referência do Nível 2 = método de 2010 recalculado sem os erros aritméticos de G18; com isso, o acerto do Elevator cai de 50% para 40% e o do Zeno-travel de 40% para 30% | EXP-04 | 3 |
+| 25/09/2026 | **Expansão de escopo (R1): nova Fase 4B**, panorama das IPCs posteriores a 2010 com os resultados publicados, características extraídas do PDDL sem UML.P e nova pergunta Q5. Fica depois da Fase 4 e antes da Fase 5; numerada com sufixo para não renumerar as fases seguintes | Decisão do autor: ter uma avaliação geral antes de desenhar a Ponte | 4B, 5 |
 
 ---
 
@@ -528,6 +574,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-03: reprodução do método de 2010 por script (Nível 1) | Cada etapa comparada célula a célula com as tabelas publicadas; regras inferidas testadas contra alternativas (discretização descrita × extremos; arredondamentos; conjuntos de técnicas) |
 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-04: Nível 2, cenário da discretização pela regra do texto | Referência reproduz o método de 2010 com a aritmética corrigida; efeitos comparados com a linha de base de G20 |
+| 25/09/2026 | 4B | Claude Code (claude-opus-5-5) | Proposta e desenho da Fase 4B a partir da ideia do autor | Chaves citadas conferidas no `referencias.bib`; duas obras sugeridas fora dele marcadas como não citáveis; disponibilidade dos dados das IPCs marcada `[A CONFIRMAR]`. **Desenho a revisar pelo autor** |
 
 ---
 
@@ -606,3 +653,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.23 | 24/09/2026 | EXP-02: limites calibrados por planejador (38 a 137 min); achado G22 (Blackbox sem limite no Depots e DriverLog em 2010); ação 19 concluída |
 | 0.24 | 24/09/2026 | Nível 1 da Fase 3 concluído (EXP-03): método de 2010 reproduzido por script; achados G23 (discretização por extremos) e G24 (duas taxonomias); G6 resolvido |
 | 0.25 | 24/09/2026 | EXP-04: regra de discretização do texto como cenário do Nível 2 (decisão do autor); corrigida a aritmética, acerto de 2010 cai para 50/30/40% |
+| 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada |
