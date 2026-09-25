@@ -45,14 +45,15 @@ case "${1:-}" in
       bash experimentos/planejadores/teste_2010.sh driverlog pfile1 120"
     ;;
   calibrar)
-    ssh_vm "cd $REMOTO && nohup python3 -u experimentos/planejadores/calibrar_2010.py $PARALELOS -gcp \
-      > ~/calibracao.log 2>&1 &"
+    ssh_vm "cd $REMOTO && setsid nohup python3 -u experimentos/planejadores/calibrar_2010.py $PARALELOS -gcp \
+      > ~/calibracao.log 2>&1 < /dev/null &"
     ;;
   rodar)
     ssh_vm "cd $REMOTO && rm -f ~/fase3/nivel3/PARAR && mkdir -p ~/fase3/nivel3 && \
-      nohup python3 experimentos/execucoes/rodar_nivel3_2010.py --paralelos $PARALELOS \
+      setsid nohup python3 experimentos/execucoes/rodar_nivel3_2010.py --paralelos $PARALELOS \
       --fatores experimentos/execucoes/fatores-2010-gcp.csv \
-      --resultados experimentos/execucoes/nivel3-2010-gcp.csv >> ~/fase3/nivel3/execucao.log 2>&1 &"
+      --resultados experimentos/execucoes/nivel3-2010-gcp.csv --por-ultimo R \
+      >> ~/fase3/nivel3/execucao.log 2>&1 < /dev/null &"
     ;;
   status)
     ssh_vm "tail -3 ~/calibracao.log 2>/dev/null; tail -2 ~/fase3/nivel3/execucao.log 2>/dev/null; \

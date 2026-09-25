@@ -20,6 +20,7 @@ Opções:
   --fatores F     limites calibrados do ambiente (padrão experimentos/execucoes/fatores-2010.csv)
   --resultados F  CSV de saída (padrão experimentos/execucoes/nivel3-2010.csv); use um
                   arquivo por ambiente para não misturar condições de medição
+  --por-ultimo P  agenda esses planejadores depois de todos os outros (ex.: R)
   --adiar P1,P2   não agenda esses planejadores nesta rodada (decisão do autor, 24/09/2026:
                   o R fica para o fim, a decidir depois de todos os outros)
 Parada suave: crie ~/fase3/nivel3/PARAR; o executor não inicia novas execuções, termina as
@@ -191,6 +192,8 @@ def main():
                 for s in (SEMENTES_LPG if pl == "LPG" else ("",)):
                     if (pl, dom, prob, str(s)) not in feitas:
                         tarefas.append((pl, dom, prob, s))
+    ultimos = set(opcao("--por-ultimo", "").split(",")) - {""}
+    tarefas.sort(key=lambda t: t[0] in ultimos)  # estável: mantém a ordem por domínio dentro de cada grupo
     print(f"{len(tarefas)} execuções pendentes ({len(feitas)} já registradas); adiados: {sorted(adiados) or '-'}",
           flush=True)
     def seguro(t):
