@@ -8,7 +8,8 @@ Condições (decisões registradas no plano, ações 6 e 19):
 - 4 execuções em paralelo, a mesma concorrência da calibração;
 - LPG-TD com 3 sementes fixas (1, 2, 3), por ser estocástico;
 - limites internos do LPG-TD (-cputime 1800 e -cputime_localsearch 1200), do MAXPLAN
-  (-timeout 1800) e do SGPlan (-cputime) igualados ao limite calibrado: em 2010 nunca agiam;
+  (-timeout 1800), do SGPlan (-cputime) e do SATPlan (-globaltime, em minutos) igualados ao
+  limite calibrado: em 2010 nunca agiam; paradas por esses limites contam como "estourou";
 - os problemas do acervo (subconjuntos de 2010, achado G14; Gripper gerado localmente, G15).
 
 Retoma de onde parou: pula as execuções já registradas em experimentos/execucoes/nivel3-2010.csv.
@@ -28,6 +29,10 @@ Para parar: `pkill` pelo nome não pega os processos emulados; mate pelo número
   orb -m fase3-amd64 bash -c 'kill -9 $(ps -eo pid,args | grep -E "rodar_nivel3|qemu-i386|r.execute|/usr/bin/time" \
       | grep -v grep | awk "{print \$1}")'
 e confira que nada sobrou antes de reiniciar (execuções órfãs disputam CPU e diretórios).
+O Mac não pode dormir durante a rodada: `caffeinate -i` não impede o sono ao fechar a tampa,
+e uma execução que atravessa o sono tem tempo de relógio e limite distorcidos (25/09/2026:
+três execuções descartadas). Antes de retomar, impeça o sono (ex.: `sudo pmset -a
+disablesleep 1`, revertido com `sudo pmset -a disablesleep 0`) ou mantenha a tampa aberta.
 """
 import csv
 import os
@@ -58,6 +63,8 @@ PLANEJADORES = ["Blackbox", "IPP", "FF", "LPG", "YAHSP", "SGPlan", "SATPlan", "M
 CAMPOS = ["planejador", "dominio", "problema", "semente", "situacao", "tempo_relogio_s", "tempo_planejador_s",
           "memoria_max_kb", "limite_s", "inicio", "slot"]
 trava = threading.Lock()
+# Mensagens com que os planejadores param pelo próprio limite de tempo
+LIMITE_INTERNO = re.compile(r"Program Timeout|Max cpu time exceeded|Solver runs with time out", re.I)
 slots_livres = []
 
 
@@ -119,6 +126,8 @@ def executar(tarefa, limite):
             cmd = cmd + ["-timeout", str(limite)]
         if pl == "SGPlan":
             cmd = cmd + ["-cputime", str(limite)]
+        if pl == "SATPlan":
+            cmd = cmd + ["-globaltime", str(limite // 60)]
         for s in Path(cwd).glob("*.soln"):
             s.unlink()
         destino = BRUTOS / C.CHAVE[pl] / dom
@@ -142,6 +151,8 @@ def executar(tarefa, limite):
         t = C.tempo_agora(pl, cwd, saida, prob) if situacao == "terminou" else None
         if situacao == "terminou":
             situacao = "resolvido" if t is not None else "sem-plano"
+        if situacao == "sem-plano" and LIMITE_INTERNO.search(saida):
+            situacao = "estourou"  # parou pelo limite interno, igualado ao calibrado
         mem = re.search(r"__MEMKB (\d+)", saida)
         registrar({"planejador": pl, "dominio": dom, "problema": prob, "semente": semente or "",
                    "situacao": situacao, "tempo_relogio_s": round(relogio, 2),
