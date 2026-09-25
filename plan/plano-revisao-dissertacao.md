@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 25/09/2026 |
-| Versão deste documento | 0.26 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · próxima: Marco M1 e Fase 3 |
+| Versão deste documento | 0.27 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
 
@@ -64,8 +64,8 @@ Desdobramentos possíveis, não obrigatórios:
 | Marco | Quando | O que levar | Status |
 |---|---|---|---|
 | M1 — Primeiro contato | Após Fase 2 | Diagnóstico da versão 2010 + perguntas de pesquisa revisadas | 🟢 enviado em 23/09/2026; retorno em 24/09/2026 (`redacao/orientador/2026-09-24-retorno-m1.md`) |
-| M2 — Resultados | Após Fases 3–4 | Resultados da replicação e da camada LLM | ⚪ |
-| M3 — Nova versão | Fim da Fase 6 | Texto completo + ponte com desenvolvimento de software | ⚪ |
+| ~~M2 — Resultados~~ | ~~Após Fases 3–4~~ | Cancelado em 25/09/2026: o autor só volta a falar com o orientador depois da reescrita geral | ⛔ |
+| M3 — Nova versão | Fim da Fase 6, depois da reescrita geral | Dissertação reescrita completa, enviada **por e-mail**; o retorno do orientador vem depois e é registrado em `redacao/orientador/` | ⚪ |
 
 ---
 
@@ -415,7 +415,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [ ] Elementos pré e pós-textuais (capa, folha de rosto, folha de aprovação, resumo e *abstract*, listas, sumário, referências) e conferência de formatação, citações e referências pela ABNT
 - [ ] Declaração do uso de IA no texto, conforme as regras da instituição
 - [ ] Preparar resumo executivo para o orientador
-- [ ] Enviar ao orientador (**Marco M3**)
+- [ ] Enviar a dissertação reescrita ao orientador por e-mail (**Marco M3**)
 - [ ] Registrar retorno e próximos passos
 
 **Entregáveis:** dissertação revisada (padrão ABNT) · resumo executivo · registro do retorno do orientador
@@ -543,6 +543,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | Referência do Nível 2 = método de 2010 recalculado sem os erros aritméticos de G18; com isso, o acerto do Elevator cai de 50% para 40% e o do Zeno-travel de 40% para 30% | EXP-04 | 3 |
 | 25/09/2026 | **Expansão de escopo (R1): nova Fase 4B**, panorama das IPCs posteriores a 2010 com os resultados publicados, características extraídas do PDDL sem UML.P e nova pergunta Q5. Fica depois da Fase 4 e antes da Fase 5; numerada com sufixo para não renumerar as fases seguintes | Decisão do autor: ter uma avaliação geral antes de desenhar a Ponte | 4B, 5 |
 | 25/09/2026 | **A Fase 5 começa depois da Fase 4B**, e não mais em paralelo à Fase 3; vale também para a conversa com o Ateliê e o desenho do piloto | Decisão do autor: considerar os achados da 4B no desenho da Ponte | 5 |
+| 25/09/2026 | **Marco M2 cancelado.** Depois do M1, o próximo contato com o orientador é o M3: a dissertação reescrita inteira, enviada por e-mail, com retorno posterior | Decisão do autor | 6 |
 
 ---
 
@@ -657,3 +658,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.24 | 24/09/2026 | Nível 1 da Fase 3 concluído (EXP-03): método de 2010 reproduzido por script; achados G23 (discretização por extremos) e G24 (duas taxonomias); G6 resolvido |
 | 0.25 | 24/09/2026 | EXP-04: regra de discretização do texto como cenário do Nível 2 (decisão do autor); corrigida a aritmética, acerto de 2010 cai para 50/30/40% |
 | 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada; Fase 5 passa a começar depois da 4B |
+| 0.27 | 25/09/2026 | Marco M2 cancelado; o M3 é o envio da dissertação reescrita por e-mail, com retorno posterior; status geral atualizado |
