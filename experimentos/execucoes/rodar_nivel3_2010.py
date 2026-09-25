@@ -23,6 +23,9 @@ Opções:
   --por-ultimo P  agenda esses planejadores depois de todos os outros (ex.: R)
   --adiar P1,P2   não agenda esses planejadores nesta rodada (decisão do autor, 24/09/2026:
                   o R fica para o fim, a decidir depois de todos os outros)
+  --variante V    roda só as execuções da variante V (ver VARIANTES), com a chamada alterada;
+                  use um --resultados próprio. blackbox-m8192: Blackbox no Satellite com
+                  `-M 8192`, como nos logs de 2010 (achado G25; decisão do autor, 25/09/2026)
 Parada suave: crie ~/fase3/nivel3/PARAR; o executor não inicia novas execuções, termina as
 que estão em curso e sai. Apague o arquivo antes de reiniciar.
 
@@ -71,6 +74,9 @@ trava = threading.Lock()
 # Mensagens com que os planejadores param pelo próprio limite de tempo
 LIMITE_INTERNO = re.compile(r"Program Timeout|Max cpu time exceeded|Solver runs with time out", re.I)
 slots_livres = []
+# Variantes de chamada: (planejador, domínio) -> opções acrescentadas à chamada dos scripts finais
+VARIANTES = {"blackbox-m8192": {("Blackbox", "sattelite"): ["-M", "8192"]}}
+variante = {}
 
 
 def preparar_slots():
@@ -123,6 +129,8 @@ def executar(tarefa, limite):
         w = slots_livres.pop()
     try:
         cwd, cmd = C.comando(pl, dom, prob, base=w)
+        if (pl, dom) in variante:
+            cmd = cmd[:1] + variante[(pl, dom)] + cmd[1:]
         # Limites internos que em 2010 nunca agiam (o timeout de 20 min vinha antes) e que,
         # sob emulação, cortariam antes do limite calibrado: igualados ao limite calibrado.
         if pl == "LPG":
@@ -182,6 +190,8 @@ def main():
     adiados = set()
     if "--adiar" in sys.argv:
         adiados = set(sys.argv[sys.argv.index("--adiar") + 1].split(","))
+    if "--variante" in sys.argv:
+        variante.update(VARIANTES[opcao("--variante", "")])
     preparar_slots()
     lim = limites(opcao("--fatores", "experimentos/execucoes/fatores-2010.csv"))
     feitas = ja_feitas()
@@ -189,6 +199,8 @@ def main():
     for dom in ORDEM_DOMINIOS:
         for prob in problemas(dom):
             for pl in [p for p in PLANEJADORES if p not in adiados]:
+                if variante and (pl, dom) not in variante:
+                    continue
                 for s in (SEMENTES_LPG if pl == "LPG" else ("",)):
                     if (pl, dom, prob, str(s)) not in feitas:
                         tarefas.append((pl, dom, prob, s))

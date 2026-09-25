@@ -3,7 +3,7 @@
 #
 # Uso, no macOS, da raiz do repositório:
 #   bash experimentos/containers/gcp/gcp.sh <etapa>
-# Etapas, em ordem: criar | preparar | enviar | calibrar | rodar | status | buscar | apagar
+# Etapas, em ordem: criar | preparar | enviar | calibrar | rodar | variante | status | buscar | apagar
 #
 # Por que GCP: os binários de 2010 são ELF 32-bit i386 e rodam nativamente em x86_64 com as
 # bibliotecas i386, sem a emulação QEMU do OrbStack (EXP-01, EXP-02). A VM é Spot (barata,
@@ -55,12 +55,22 @@ case "${1:-}" in
       --resultados experimentos/execucoes/nivel3-2010-gcp.csv --por-ultimo R \
       >> ~/fase3/nivel3/execucao.log 2>&1 < /dev/null &"
     ;;
+  variante)
+    # Depois da rodada principal: Blackbox no Satellite com -M 8192, como em 2010 (achado G25)
+    gcloud compute scp "$RAIZ/experimentos/execucoes/rodar_nivel3_2010.py" \
+      "$NOME:$REMOTO/experimentos/execucoes/rodar_nivel3_2010.py" --zone "$ZONA" --project "$PROJETO"
+    ssh_vm "cd $REMOTO && rm -f ~/fase3/nivel3/PARAR && \
+      setsid nohup python3 experimentos/execucoes/rodar_nivel3_2010.py --paralelos $PARALELOS \
+      --fatores experimentos/execucoes/fatores-2010-gcp.csv --variante blackbox-m8192 \
+      --resultados experimentos/execucoes/nivel3-2010-gcp-blackbox-m8192.csv \
+      >> ~/fase3/nivel3/variante.log 2>&1 < /dev/null &"
+    ;;
   status)
     ssh_vm "tail -3 ~/calibracao.log 2>/dev/null; tail -2 ~/fase3/nivel3/execucao.log 2>/dev/null; \
       wc -l $REMOTO/experimentos/execucoes/nivel3-2010-gcp.csv 2>/dev/null; uptime"
     ;;
   buscar)
-    for f in calibracao-2010-gcp.csv fatores-2010-gcp.csv nivel3-2010-gcp.csv; do
+    for f in calibracao-2010-gcp.csv fatores-2010-gcp.csv nivel3-2010-gcp.csv nivel3-2010-gcp-blackbox-m8192.csv; do
       gcloud compute scp "$NOME:$REMOTO/experimentos/execucoes/$f" "$RAIZ/experimentos/execucoes/$f" \
         --zone "$ZONA" --project "$PROJETO" || true
     done

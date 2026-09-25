@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 25/09/2026 |
-| Versão deste documento | 0.27 |
+| Versão deste documento | 0.28 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -544,6 +544,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 25/09/2026 | **Expansão de escopo (R1): nova Fase 4B**, panorama das IPCs posteriores a 2010 com os resultados publicados, características extraídas do PDDL sem UML.P e nova pergunta Q5. Fica depois da Fase 4 e antes da Fase 5; numerada com sufixo para não renumerar as fases seguintes | Decisão do autor: ter uma avaliação geral antes de desenhar a Ponte | 4B, 5 |
 | 25/09/2026 | **A Fase 5 começa depois da Fase 4B**, e não mais em paralelo à Fase 3; vale também para a conversa com o Ateliê e o desenho do piloto | Decisão do autor: considerar os achados da 4B no desenho da Ponte | 5 |
 | 25/09/2026 | **Marco M2 cancelado.** Depois do M1, o próximo contato com o orientador é o M3: a dissertação reescrita inteira, enviada por e-mail, com retorno posterior | Decisão do autor | 6 |
+| 25/09/2026 | **Nível 3 migrado para o GCP**: VM `fase3-2010` (c2d-standard-8 Spot, 4 núcleos, us-central1-c), binários de 2010 em x86_64 nativo, limites recalibrados no próprio ambiente (`fatores-2010-gcp.csv`, 7 a 13 min) e resultados em `nivel3-2010-gcp.csv`; R por último na fila. As 259 execuções do OrbStack ficam como registro do ambiente emulado, sem misturar com as do GCP. Proteção de custo: orçamento de R$ 1.500 com avisos e desligamento automático da VM em 28/09/2026 | No OrbStack (QEMU i386) a rodada levaria ~17 dias; autor tem US$ 300 de crédito de avaliação e não quer ultrapassá-lo | 3 |
+| 25/09/2026 | **Blackbox no Satellite (G25):** a rodada principal mantém a chamada dos scripts finais (sem `-M`); ao fim, roda-se a variante `blackbox-m8192` (Blackbox no Satellite com `-M 8192`, como nos logs de 2010), com resultados em `nivel3-2010-gcp-blackbox-m8192.csv`, e os dois são registrados | Em 2010 só o Satellite usou `-M 8192`; sem ela, o Blackbox falha nos problemas 11 a 20. Decisão do autor | 3 |
 
 ---
 
@@ -579,6 +581,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-04: Nível 2, cenário da discretização pela regra do texto | Referência reproduz o método de 2010 com a aritmética corrigida; efeitos comparados com a linha de base de G20 |
 | 25/09/2026 | 4B | Claude Code (claude-opus-5-5) | Proposta e desenho da Fase 4B a partir da ideia do autor | Chaves citadas conferidas no `referencias.bib`; duas obras sugeridas fora dele marcadas como não citáveis; disponibilidade dos dados das IPCs marcada `[A CONFIRMAR]`. **Desenho a revisar pelo autor** |
+| 25/09/2026 | 3 | Claude Code (claude-opus-5-5) | Operação da rodada no GCP (`gcp.sh`), conferência dos casos sem plano e achado G25 | Cada "sem plano" conferido no log bruto e comparado com os logs de 2010; variante testada localmente (gera as 20 execuções esperadas) |
 
 ---
 
@@ -659,3 +662,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.25 | 24/09/2026 | EXP-04: regra de discretização do texto como cenário do Nível 2 (decisão do autor); corrigida a aritmética, acerto de 2010 cai para 50/30/40% |
 | 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada; Fase 5 passa a começar depois da 4B |
 | 0.27 | 25/09/2026 | Marco M2 cancelado; o M3 é o envio da dissertação reescrita por e-mail, com retorno posterior; status geral atualizado |
+| 0.28 | 25/09/2026 | Nível 3 migrado para o GCP (orçamento e desligamento automático); achado G25 (Blackbox com `-M 8192` só no Satellite em 2010) e variante `blackbox-m8192` para o fim da rodada |
