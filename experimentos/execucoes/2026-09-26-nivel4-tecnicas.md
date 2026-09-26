@@ -17,7 +17,7 @@
     - 7 só pelos resumos das IPCs de 2018 e 2023, baixados das páginas oficiais em 26/09/2026.
   - **7 planejadores só com fonte secundária:** a descrição de `lequen2026planner`, em 5 casos somada à documentação ou ao código do artefato. São eles MIPS, SimPlanner, MIPS-XXL, C3, FFSA, Probe e Mercury (**M1**).
   - Cada linha do CSV diz qual fonte sustenta a classificação.
-- **Decisões de codificação (pendentes de revisão do autor):**
+- **Decisões de codificação (revisadas e aprovadas pelo autor sem alteração em 26/09/2026):**
   - **P1, portfólios:** D4 = Portfólio; D1 a D3 recebem a união dos valores dos componentes descritos na fonte. É a leitura da taxonomia, §6. São portfólios: FDSS11, FDSS23, FDRemix, Saarplan, Maidu e Levitron.
   - **M2, componentes de portfólio não listados na fonte lida:** a D2 do FDSS11, do Maidu e do Levitron segue a composição usual dos portfólios do Fast Downward (relaxação, grafo causal, *landmarks*). Precisa de confirmação.
   - **Valores novos:**
@@ -83,6 +83,6 @@ uv run --no-project --with scikit-learn --with scipy python experimentos/analise
 
 ## Limites
 
-- 7 dos 29 planejadores foram classificados só com fonte secundária (M1). Há decisões de codificação pendentes (P1, M2, N1–N6).
+- 7 dos 29 planejadores foram classificados só com fonte secundária (M1). As decisões P1, M2 e N1–N6 foram aprovadas pelo autor.
 - Os mesmos limites do EXP-12: só cobertura, só por domínio, *features* SAS+ de uma amostra de 10 instâncias.
 - O recorte "sem portfólios" depende da classificação P1.
