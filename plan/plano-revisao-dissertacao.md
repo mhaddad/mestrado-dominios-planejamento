@@ -547,6 +547,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 25/09/2026 | **Nível 3 migrado para o GCP**: VM `fase3-2010` (c2d-standard-8 Spot, 4 núcleos, us-central1-c), binários de 2010 em x86_64 nativo, limites recalibrados no próprio ambiente (`fatores-2010-gcp.csv`, 7 a 13 min) e resultados em `nivel3-2010-gcp.csv`; R por último na fila. As 259 execuções do OrbStack ficam como registro do ambiente emulado, sem misturar com as do GCP. Proteção de custo: orçamento de R$ 1.500 com avisos e desligamento automático da VM em 28/09/2026 | No OrbStack (QEMU i386) a rodada levaria ~17 dias; autor tem US$ 300 de crédito de avaliação e não quer ultrapassá-lo | 3 |
 | 25/09/2026 | **Blackbox no Satellite (G25):** a rodada principal mantém a chamada dos scripts finais (sem `-M`); ao fim, roda-se a variante `blackbox-m8192` (Blackbox no Satellite com `-M 8192`, como nos logs de 2010), com resultados em `nivel3-2010-gcp-blackbox-m8192.csv`, e os dois são registrados | Em 2010 só o Satellite usou `-M 8192`; sem ela, o Blackbox falha nos problemas 11 a 20. Decisão do autor | 3 |
 | 25/09/2026 | **Máquina OrbStack `fase3-amd64` apagada**; a Fase 3 segue só no GCP. Saídas brutas do OrbStack preservadas em `experimentos/execucoes/brutos/orbstack/` (fora do git; cópia conferida por MD5) e resultados em `nivel3-2010.csv` | Decisão do autor | 3 |
+| 26/09/2026 | Codificação dos 10 planejadores na taxonomia em 4 dimensões (`auditoria/taxonomia/planejadores_4d.csv`), com as decisões C1–C5, aprovada sem alteração | Revisão do autor (EXP-06) | 3 |
 
 ---
 
@@ -583,7 +584,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-04: Nível 2, cenário da discretização pela regra do texto | Referência reproduz o método de 2010 com a aritmética corrigida; efeitos comparados com a linha de base de G20 |
 | 25/09/2026 | 4B | Claude Code (claude-opus-5-5) | Proposta e desenho da Fase 4B a partir da ideia do autor | Chaves citadas conferidas no `referencias.bib`; duas obras sugeridas fora dele marcadas como não citáveis; disponibilidade dos dados das IPCs marcada `[A CONFIRMAR]`. **Desenho a revisar pelo autor** |
 | 25/09/2026 | 3 | Claude Code (claude-opus-5-5) | Operação da rodada no GCP (`gcp.sh`), conferência dos casos sem plano e achado G25 | Cada "sem plano" conferido no log bruto e comparado com os logs de 2010; variante testada localmente (gera as 20 execuções esperadas) |
-| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) marcadas para o autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
+| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) aprovadas pelo autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 
 ---
 

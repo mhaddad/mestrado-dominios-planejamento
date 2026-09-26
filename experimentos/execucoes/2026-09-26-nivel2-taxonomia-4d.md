@@ -11,7 +11,7 @@
 ## Configuração
 
 - **Código:** `experimentos/analise/nivel2.py`, que reaproveita o método de 2010 de `reproducao_2010.py`.
-- **Atribuição de técnicas:** `auditoria/taxonomia/planejadores_4d.csv`, uma linha por planejador × dimensão × valor. Foi codificada a partir de `auditoria/taxonomia-tecnicas.md` (§3 e decisões de 23/09/2026, validadas no M1). Cinco pontos exigiram uma decisão de codificação, marcada na coluna `codificacao`, e **aguardam a revisão do autor**:
+- **Atribuição de técnicas:** `auditoria/taxonomia/planejadores_4d.csv`, uma linha por planejador × dimensão × valor. Foi codificada a partir de `auditoria/taxonomia-tecnicas.md` (§3 e decisões de 23/09/2026, validadas no M1). Cinco pontos exigiram uma decisão de codificação, marcada na coluna `codificacao`. **O autor revisou e aprovou as cinco sem alteração (26/09/2026):**
   - **C1:** o LPG tem dois valores na D1 (busca local e espaço de planos parciais).
   - **C2:** o LPG recebeu um valor próprio na D2 ("Avaliação heurística da vizinhança"), porque nenhum valor da D2 o cobre segundo a fonte lida.
   - **C3:** o SGPlan tem dois valores na D1 (decomposição e busca progressiva do Metric-FF interno).
@@ -68,5 +68,5 @@ uv run --no-project python experimentos/analise/nivel2.py
 
 ## Problemas e desvios
 
-- As decisões de codificação C1 a C5 alteram os resultados dos cenários 4D e precisam da confirmação do autor.
+- As decisões de codificação C1 a C5 alteram os resultados dos cenários 4D; aprovadas pelo autor em 26/09/2026.
 - O desempate pela ordem publicada em 2010 favorece a referência nas posições empatadas. Isso afeta o acerto por posição, não a correlação de postos. Mesmo critério do EXP-04, mantido para a comparação.
