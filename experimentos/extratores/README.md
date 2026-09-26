@@ -3,6 +3,7 @@
 | Script | Item | O que faz | Saída |
 |---|---|---|---|
 | `metricas_2010_pddl.py` | R-25 | Extrai do PDDL as métricas de 2010 que têm correspondente no PDDL (11 de 17), por regras fixas descritas no próprio script, e compara com os valores publicados | `metricas-2010-pddl/` |
+| `features_sas.py` | R-26 | *Features* modernas por instância, a partir da tradução SAS+ do Fast Downward: tamanho, grafo causal (densidade, ciclos, componentes, *treewidth*) e DTG (conectividade, arcos invertíveis); mediana por domínio | `features-sas/` |
 
 ## Benchmarks
 
@@ -13,10 +14,20 @@ git clone https://github.com/potassco/pddl-instances.git experimentos/benchmarks
 git -C experimentos/benchmarks/ipc/pddl-instances checkout cf19edf
 ```
 
+## Fast Downward (tradutor)
+
+O `features_sas.py` usa o tradutor do Fast Downward, release-26.6.0 (commit `7ea275526`), fora do git:
+
+```bash
+git clone https://github.com/aibasel/downward.git experimentos/ferramentas/downward
+git -C experimentos/ferramentas/downward checkout release-26.6.0
+```
+
 ## Como rodar
 
 ```bash
 uv run --no-project python experimentos/extratores/metricas_2010_pddl.py
+uv run --no-project --with networkx python experimentos/extratores/features_sas.py --limite 300 --processos 8
 ```
 
 Saídas em `metricas-2010-pddl/`:

@@ -103,7 +103,7 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-23 | 3 | F2; AF-327 | planejadores forward-chaining/recursivos adicionais | ranking do Elevator com mais planejadores da família do R | R-17 | baixa |
 | R-24 | 4 | Q1 | *benchmarks* IPC 1998–2023 | ambiente e condições padronizadas montados | R-18, R-19, R-21 | alta |
 | R-25 | 4 | F3; Q2 (*features* a); G2, G11–G13 | PDDL de todos os domínios | extrator automático validado contra 2010 | R-13 | alta · 🟢 feito (EXP-07): 11 de 17 métricas extraíveis; 8 se reproduzem, 3 dependem da modelagem; o R-13 segue pendente |
-| R-26 | 4 | Q2 (*features* b) | PDDL/SAS+ | *features* modernas extraídas (grafo causal, DTG, *treewidth*) | — | média |
+| R-26 | 4 | Q2 (*features* b) | PDDL/SAS+ | *features* modernas extraídas (grafo causal, DTG, *treewidth*) | — | média · 🟢 feito (EXP-11): 354 de 354 instâncias; nenhuma métrica UML se correlaciona com as *features* acima do acaso |
 | R-27 | 4 | Q2; A5; AF-310, AF-337 | R-25, R-26 | comparação UML × *features* de PDDL, com controle de serialização | R-25, R-26 | alta |
 | R-28 | 4 | Q1 | R-24, R-25, R-26 | modelos treinados; comparação com *single best*/*virtual best* | R-24, R-25, R-26 | alta |
 | R-29 | 4 | Q1, A1, A3; AF-329, AF-335 | R-28 | relatório por domínio e por instância, separados | R-28 | média |
