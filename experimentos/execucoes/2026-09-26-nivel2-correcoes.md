@@ -59,7 +59,7 @@ uv run --no-project python experimentos/analise/nivel2.py
 - **R-13 (Agregação):** o critério de contagem da Agregação não pode ser reconstruído dos modelos itSIMPLE. `[FATO]`
   - O texto de 2010 descreve a agregação no Blocks World pela semântica ("os blocos podem ser agregados sobre a mesa", "os blocos podem ser empilhados") e com base na Figura 11, um diagrama UML desenhado à parte, não no modelo itSIMPLE.
   - `[HIPÓTESE]` A Agregação foi contada por julgamento semântico de quem modelou, relação por relação.
-  - Só o autor pode confirmar o critério. Sem essa confirmação, a métrica fica registrada como não reproduzível, e a AF-331, que a lista entre as seis mais impactantes, precisa dessa ressalva.
+  - **Resposta do autor (26/09/2026):** a contagem foi visual e manual, com base nos diagramas da UML.P. Não havia regra escrita. Como o XML dos modelos quase não marca extremos de agregação, a contagem refletiu a leitura de quem contou, não um atributo do modelo. A métrica fica registrada como **não reproduzível**, e a AF-331, que a lista entre as seis mais impactantes, leva essa ressalva.
 - **R-15:** ao lado de cada resultado de validação agora sai a linha de base sem características.
   - Pela correlação de postos, o método de 2010 supera a linha de base no Storage (0,81 contra 0,75) e no Zeno-travel (0,86 contra 0,68), e fica abaixo no Elevator (0,61 contra 0,65).
   - `[HIPÓTESE]` Com 10 planejadores por domínio, diferenças dessa ordem estão dentro do que o acaso explica. A linha de base segue como comparação obrigatória em todo resultado do Nível 4.
