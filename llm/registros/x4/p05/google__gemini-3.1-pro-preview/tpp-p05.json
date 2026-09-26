@@ -1,0 +1,52 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "dominio": "tpp",
+ "instancia": "p05",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "max_correcoes": 3,
+ "rodadas": [
+  {
+   "rodada": 0,
+   "data_utc": "2026-09-26T18:49:31+00:00",
+   "segundos": 32.4,
+   "modelo_respondeu": "google/gemini-3.1-pro-preview",
+   "provedor": "Google",
+   "uso": {
+    "prompt_tokens": 2159,
+    "completion_tokens": 5445,
+    "total_tokens": 7604,
+    "cost": 0.069658,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.069658,
+     "upstream_inference_prompt_cost": 0.004318,
+     "upstream_inference_completions_cost": 0.06534
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 4138,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "stop",
+   "valido": true,
+   "diagnostico": "válido",
+   "resposta": "BEGIN PLAN\n(drive truck1 depot7 market3)\n(buy truck1 goods1 market3 level1 level2 level0 level1)\n(load goods1 truck1 market3 level0 level1 level0 level1)\n(drive truck1 market3 depot7)\n(unload goods1 truck1 depot7 level0 level1 level0 level1)\n(drive truck2 depot4 market1)\n(buy truck2 goods1 market1 level2 level3 level0 level1)\n(buy truck2 goods1 market1 level1 level2 level1 level2)\n(buy truck2 goods1 market1 level0 level1 level2 level3)\n(load goods1 truck2 market1 level2 level3 level0 level1)\n(load goods1 truck2 market1 level1 level2 level1 level2)\n(load goods1 truck2 market1 level0 level1 level2 level3)\n(buy truck2 goods2 market1 level3 level4 level0 level1)\n(buy truck2 goods2 market1 level2 level3 level1 level2)\n(buy truck2 goods2 market1 level1 level2 level2 level3)\n(load goods2 truck2 market1 level2 level3 level0 level1)\n(load goods2 truck2 market1 level1 level2 level1 level2)\n(load goods2 truck2 market1 level0 level1 level2 level3)\n(buy truck2 goods3 market1 level6 level7 level0 level1)\n(buy truck2 goods3 market1 level5 level6 level1 level2)\n(buy truck2 goods3 market1 level4 level5 level2 level3)\n(buy truck2 goods3 market1 level3 level4 level3 level4)\n(buy truck2 goods3 market1 level2 level3 level4 level5)\n(load goods3 truck2 market1 level4 level5 level0 level1)\n(load goods3 truck2 market1 level3 level4 level1 level2)\n(load goods3 truck2 market1 level2 level3 level2 level3)\n(load goods3 truck2 market1 level1 level2 level3 level4)\n(load goods3 truck2 market1 level0 level1 level4 level5)\n(buy truck2 goods4 market1 level1 level2 level0 level1)\n(load goods4 truck2 market1 level0 level1 level0 level1)\n(buy truck2 goods5 market1 level6 level7 level0 level1)\n(buy truck2 goods5 market1 level5 level6 level1 level2)\n(buy truck2 goods5 market1 level4 level5 level2 level3)\n(buy truck2 goods5 market1 level3 level4 level3 level4)\n(load goods5 truck2 market1 level3 level4 level0 level1)\n(load goods5 truck2 market1 level2 level3 level1 level2)\n(load goods5 truck2 market1 level1 level2 level2 level3)\n(load goods5 truck2 market1 level0 level1 level3 level4)\n(buy truck2 goods6 market1 level4 level5 level0 level1)\n(buy truck2 goods6 market1 level3 level4 level1 level2)\n(buy truck2 goods6 market1 level2 level3 level2 level3)\n(buy truck2 goods6 market1 level1 level2 level3 level4)\n(buy truck2 goods6 market1 level0 level1 level4 level5)\n(load goods6 truck2 market1 level4 level5 level0 level1)\n(load goods6 truck2 market1 level3 level4 level1 level2)\n(load goods6 truck2 market1 level2 level3 level2 level3)\n(load goods6 truck2 market1 level1 level2 level3 level4)\n(load goods6 truck2 market1 level0 level1 level4 level5)\n(drive truck2 market1 market2)\n(buy truck2 goods6 market2 level1 level2 level0 level1)\n(load goods6 truck2 market2 level0 level1 level5 level6)\n(drive truck2 market2 market1)\n(drive truck2 market1 depot4)\n(unload goods1 truck2 depot4 level2 level3 level1 level2)\n(unload goods1 truck2 depot4 level1 level2 level2 level3)\n(unload goods1 truck2 depot4 level0 level1 level3 level4)\n(unload goods2 truck2 depot4 level2 level3 level0 level1)\n(unload goods2 truck2 depot4 level1 level2 level1 level2)\n(unload goods2 truck2 depot4 level0 level1 level2 level3)\n(unload goods3 truck2 depot4 level4 level5 level0 level1)\n(unload goods3 truck2 depot4 level3 level4 level1 level2)\n(unload goods3 truck2 depot4 level2 level3 level2 level3)\n(unload goods3 truck2 depot4 level1 level2 level3 level4)\n(unload goods3 truck2 depot4 level0 level1 level4 level5)\n(unload goods4 truck2 depot4 level0 level1 level0 level1)\n(unload goods5 truck2 depot4 level3 level4 level0 level1)\n(unload goods5 truck2 depot4 level2 level3 level1 level2)\n(unload goods5 truck2 depot4 level1 level2 level2 level3)\n(unload goods5 truck2 depot4 level0 level1 level3 level4)\n(unload goods6 truck2 depot4 level5 level6 level0 level1)\n(unload goods6 truck2 depot4 level4 level5 level1 level2)\n(unload goods6 truck2 depot4 level3 level4 level2 level3)\n(unload goods6 truck2 depot4 level2 level3 level3 level4)\n(unload goods6 truck2 depot4 level1 level2 level4 level5)\n(unload goods6 truck2 depot4 level0 level1 level5 level6)\nEND PLAN",
+   "retorno_enviado": ""
+  }
+ ]
+}

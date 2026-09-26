@@ -1,0 +1,52 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "dominio": "blocksworld",
+ "instancia": "p05",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "max_correcoes": 3,
+ "rodadas": [
+  {
+   "rodada": 0,
+   "data_utc": "2026-09-26T18:49:26+00:00",
+   "segundos": 54.7,
+   "modelo_respondeu": "anthropic/claude-sonnet-5",
+   "provedor": "Claude Platform on AWS",
+   "uso": {
+    "prompt_tokens": 1369,
+    "completion_tokens": 7521,
+    "total_tokens": 8890,
+    "cost": 0.077948,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.077948,
+     "upstream_inference_prompt_cost": 0.002738,
+     "upstream_inference_completions_cost": 0.07521
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6428,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "stop",
+   "valido": true,
+   "diagnostico": "válido",
+   "resposta": "Looking at this problem, I need to disassemble all stacks to the table, then rebuild the goal configuration.\n\n**Initial stacks:**\n- b16-b14-b24-b23-b9-b17-b11-b1\n- b2 (table)\n- b27-b3-b5-b10\n- b4-b19-b8-b18-b22-b6\n- b12-b13-b25-b26\n- b21-b28-b20-b7-b15\n\n**Goal chains (bottom to top):**\n- b12-b13-b10-b4-b23-b27-b5\n- b25-b9-b26-b21-b16-b18-b3-b17-b24-b15\n- b8-b14\n- b7-b20-b6\n- b11-b2-b19-b28-b1-b22\n\nBEGIN PLAN\n(unstack b1 b11)\n(putdown b1)\n(unstack b11 b17)\n(putdown b11)\n(unstack b17 b9)\n(putdown b17)\n(unstack b9 b23)\n(putdown b9)\n(unstack b23 b24)\n(putdown b23)\n(unstack b24 b14)\n(putdown b24)\n(unstack b14 b16)\n(putdown b14)\n(unstack b10 b5)\n(putdown b10)\n(unstack b5 b3)\n(putdown b5)\n(unstack b3 b27)\n(putdown b3)\n(unstack b6 b22)\n(putdown b6)\n(unstack b22 b18)\n(putdown b22)\n(unstack b18 b8)\n(putdown b18)\n(unstack b8 b19)\n(putdown b8)\n(unstack b19 b4)\n(putdown b19)\n(unstack b26 b25)\n(putdown b26)\n(unstack b25 b13)\n(putdown b25)\n(unstack b13 b12)\n(putdown b13)\n(unstack b15 b7)\n(putdown b15)\n(unstack b7 b20)\n(putdown b7)\n(unstack b20 b28)\n(putdown b20)\n(unstack b28 b21)\n(putdown b28)\n(pickup b13)\n(stack b13 b12)\n(pickup b10)\n(stack b10 b13)\n(pickup b4)\n(stack b4 b10)\n(pickup b23)\n(stack b23 b4)\n(pickup b27)\n(stack b27 b23)\n(pickup b5)\n(stack b5 b27)\n(pickup b9)\n(stack b9 b25)\n(pickup b26)\n(stack b26 b9)\n(pickup b21)\n(stack b21 b26)\n(pickup b16)\n(stack b16 b21)\n(pickup b18)\n(stack b18 b16)\n(pickup b3)\n(stack b3 b18)\n(pickup b17)\n(stack b17 b3)\n(pickup b24)\n(stack b24 b17)\n(pickup b15)\n(stack b15 b24)\n(pickup b14)\n(stack b14 b8)\n(pickup b20)\n(stack b20 b7)\n(pickup b6)\n(stack b6 b20)\n(pickup b2)\n(stack b2 b11)\n(pickup b19)\n(stack b19 b2)\n(pickup b28)\n(stack b28 b19)\n(pickup b1)\n(stack b1 b28)\n(pickup b22)\n(stack b22 b1)\nEND PLAN",
+   "retorno_enviado": ""
+  }
+ ]
+}

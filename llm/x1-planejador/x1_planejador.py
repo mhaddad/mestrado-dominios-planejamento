@@ -57,7 +57,7 @@ def validar(dominio, plano):
         f.write("\n".join(plano) + "\n")
     r = subprocess.run([str(VAL), "-v", str(dom), str(prob), f.name], capture_output=True, text=True)
     saida = r.stdout + r.stderr
-    valido = "Plan valid" in saida
+    valido = re.search(r"^Plan valid\s*$", saida, re.M) is not None
     if valido:
         return True, "válido"
     for padrao, rotulo in (("unsatisfied precondition", "pré-condição não satisfeita"),

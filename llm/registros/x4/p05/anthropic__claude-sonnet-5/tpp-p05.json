@@ -1,0 +1,122 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "dominio": "tpp",
+ "instancia": "p05",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "max_correcoes": 3,
+ "rodadas": [
+  {
+   "rodada": 0,
+   "data_utc": "2026-09-26T18:50:50+00:00",
+   "segundos": 84.4,
+   "modelo_respondeu": "anthropic/claude-sonnet-5",
+   "provedor": "Claude Platform on AWS",
+   "uso": {
+    "prompt_tokens": 2917,
+    "completion_tokens": 11572,
+    "total_tokens": 14489,
+    "cost": 0.121554,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.121554,
+     "upstream_inference_prompt_cost": 0.005834,
+     "upstream_inference_completions_cost": 0.11572
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 9519,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "stop",
+   "valido": false,
+   "diagnostico": "erro de tipos",
+   "resposta": "Looking at this problem, I need to buy goods at markets, load them onto trucks, then unload at depots to build up \"stored\" counts matching the goal. Since \"stored\" has no depot parameter, any depot works.\n\nBEGIN PLAN\n(drive truck2 depot4 market1)\n(buy truck2 goods4 market1 level1 level2 level0 level1)\n(load truck2 goods4 market1 level0 level1 level0 level1)\n(buy truck2 goods1 market1 level2 level3 level0 level1)\n(load truck2 goods1 market1 level0 level1 level0 level1)\n(buy truck2 goods1 market1 level1 level2 level0 level1)\n(load truck2 goods1 market1 level0 level1 level1 level2)\n(buy truck2 goods1 market1 level0 level1 level0 level1)\n(load truck2 goods1 market1 level0 level1 level2 level3)\n(buy truck2 goods2 market1 level3 level4 level0 level1)\n(load truck2 goods2 market1 level0 level1 level0 level1)\n(buy truck2 goods2 market1 level2 level3 level0 level1)\n(load truck2 goods2 market1 level0 level1 level1 level2)\n(buy truck2 goods2 market1 level1 level2 level0 level1)\n(load truck2 goods2 market1 level0 level1 level2 level3)\n(buy truck2 goods3 market1 level6 level7 level0 level1)\n(load truck2 goods3 market1 level0 level1 level0 level1)\n(buy truck2 goods3 market1 level5 level6 level0 level1)\n(load truck2 goods3 market1 level0 level1 level1 level2)\n(buy truck2 goods3 market1 level4 level5 level0 level1)\n(load truck2 goods3 market1 level0 level1 level2 level3)\n(buy truck2 goods3 market1 level3 level4 level0 level1)\n(load truck2 goods3 market1 level0 level1 level3 level4)\n(buy truck2 goods3 market1 level2 level3 level0 level1)\n(load truck2 goods3 market1 level0 level1 level4 level5)\n(buy truck2 goods5 market1 level6 level7 level0 level1)\n(load truck2 goods5 market1 level0 level1 level0 level1)\n(buy truck2 goods5 market1 level5 level6 level0 level1)\n(load truck2 goods5 market1 level0 level1 level1 level2)\n(buy truck2 goods5 market1 level4 level5 level0 level1)\n(load truck2 goods5 market1 level0 level1 level2 level3)\n(buy truck2 goods5 market1 level3 level4 level0 level1)\n(load truck2 goods5 market1 level0 level1 level3 level4)\n(buy truck2 goods6 market1 level4 level5 level0 level1)\n(load truck2 goods6 market1 level0 level1 level0 level1)\n(buy truck2 goods6 market1 level3 level4 level0 level1)\n(load truck2 goods6 market1 level0 level1 level1 level2)\n(buy truck2 goods6 market1 level2 level3 level0 level1)\n(load truck2 goods6 market1 level0 level1 level2 level3)\n(buy truck2 goods6 market1 level1 level2 level0 level1)\n(load truck2 goods6 market1 level0 level1 level3 level4)\n(buy truck2 goods6 market1 level0 level1 level0 level1)\n(load truck2 goods6 market1 level0 level1 level4 level5)\n(drive truck2 market1 depot4)\n(unload truck2 goods4 depot4 level0 level1 level0 level1)\n(unload truck2 goods1 depot4 level2 level3 level0 level1)\n(unload truck2 goods1 depot4 level1 level2 level1 level2)\n(unload truck2 goods1 depot4 level0 level1 level2 level3)\n(unload truck2 goods2 depot4 level2 level3 level0 level1)\n(unload truck2 goods2 depot4 level1 level2 level1 level2)\n(unload truck2 goods2 depot4 level0 level1 level2 level3)\n(unload truck2 goods3 depot4 level4 level5 level0 level1)\n(unload truck2 goods3 depot4 level3 level4 level1 level2)\n(unload truck2 goods3 depot4 level2 level3 level2 level3)\n(unload truck2 goods3 depot4 level1 level2 level3 level4)\n(unload truck2 goods3 depot4 level0 level1 level4 level5)\n(unload truck2 goods5 depot4 level3 level4 level0 level1)\n(unload truck2 goods5 depot4 level2 level3 level1 level2)\n(unload truck2 goods5 depot4 level1 level2 level2 level3)\n(unload truck2 goods5 depot4 level0 level1 level3 level4)\n(unload truck2 goods6 depot4 level4 level5 level0 level1)\n(unload truck2 goods6 depot4 level3 level4 level1 level2)\n(unload truck2 goods6 depot4 level2 level3 level2 level3)\n(unload truck2 goods6 depot4 level1 level2 level3 level4)\n(unload truck2 goods6 depot4 level0 level1 level4 level5)\n(drive truck1 depot7 market3)\n(buy truck1 goods1 market3 level1 level2 level0 level1)\n(load truck1 goods1 market3 level0 level1 level0 level1)\n(drive truck1 market3 depot7)\n(unload truck1 goods1 depot7 level0 level1 level3 level4)\n(drive truck3 depot4 market1)\n(drive truck3 market1 market2)\n(buy truck3 goods6 market2 level1 level2 level0 level1)\n(load truck3 goods6 market2 level0 level1 level0 level1)\n(drive truck3 market2 depot3)\n(unload truck3 goods6 depot3 level0 level1 level5 level6)\nEND PLAN",
+   "retorno_enviado": "The plan you gave is not valid. The plan validator VAL reports the following (last part of its output):\n\n6f0]\n\n               type: (NULL)\n               either_types: (NULL)\n            either_types: (NULL)\n         either_types: (NULL)\n      either_types: (NULL)\n      (symbol)\n      name: level0[0x79d50106f0]\n\n      type: \n         (symbol)\n         name: level[0x101009830]\n\n         type: \n            (symbol)\n            name: object[0x1010096f0]\n\n            type: (NULL)\n            either_types: (NULL)\n         either_types: (NULL)\n      either_types: (NULL)\n      (symbol)\n      name: level1[0x79d5010720]\n\n      type: \n         (symbol)\n         name: level[0x101009830]\n\n         type: \n            (symbol)\n            name: object[0x1010096f0]\n\n            type: (NULL)\n            either_types: (NULL)\n         either_types: (NULL)\n      either_types: (NULL)\n      (symbol)\n      name: level0[0x79d50106f0]\n\n      type: \n         (symbol)\n         name: level[0x101009830]\n\n         type: \n            (symbol)\n            name: object[0x1010096f0]\n\n            type: (NULL)\n            either_types: (NULL)\n         either_types: (NULL)\n      either_types: (NULL)\n      (symbol)\n      name: level1[0x79d5010720]\n\n      type: \n         (symbol)\n         name: level[0x101009830]\n\n         type: \n            (symbol)\n            name: object[0x1010096f0]\n\n            type: (NULL)\n            either_types: (NULL)\n         either_types: (NULL)\n      either_types: (NULL)\nduration: 0\nBad plan description!\n\n\nFailed plans:\n /var/folders/qm/bhbtkpg902jc0jz76md7tdxh0000gn/T/tmp2wo0d31p.plan\n\nPlease provide a corrected, complete plan for the same problem, from the initial state,\nbetween the lines BEGIN PLAN and END PLAN, one action per line in PDDL syntax."
+  },
+  {
+   "rodada": 1,
+   "data_utc": "2026-09-26T18:51:50+00:00",
+   "segundos": 59.5,
+   "modelo_respondeu": "anthropic/claude-sonnet-5",
+   "provedor": "Claude Platform on AWS",
+   "uso": {
+    "prompt_tokens": 5649,
+    "completion_tokens": 8181,
+    "total_tokens": 13830,
+    "cost": 0.093108,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.093108,
+     "upstream_inference_prompt_cost": 0.011298,
+     "upstream_inference_completions_cost": 0.08181
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6242,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "stop",
+   "valido": false,
+   "diagnostico": "pré-condição não satisfeita",
+   "resposta": "BEGIN PLAN\n(drive truck2 depot4 market1)\n\n(buy truck2 goods1 market1 level2 level3 level0 level1)\n(buy truck2 goods1 market1 level1 level2 level1 level2)\n(buy truck2 goods1 market1 level0 level1 level2 level3)\n(load goods1 truck2 market1 level2 level3 level0 level1)\n(load goods1 truck2 market1 level1 level2 level1 level2)\n(load goods1 truck2 market1 level0 level1 level2 level3)\n\n(buy truck2 goods2 market1 level3 level4 level0 level1)\n(buy truck2 goods2 market1 level2 level3 level1 level2)\n(buy truck2 goods2 market1 level1 level2 level2 level3)\n(load goods2 truck2 market1 level2 level3 level0 level1)\n(load goods2 truck2 market1 level1 level2 level1 level2)\n(load goods2 truck2 market1 level0 level1 level2 level3)\n\n(buy truck2 goods3 market1 level6 level7 level0 level1)\n(buy truck2 goods3 market1 level5 level6 level1 level2)\n(buy truck2 goods3 market1 level4 level5 level2 level3)\n(buy truck2 goods3 market1 level3 level4 level3 level4)\n(buy truck2 goods3 market1 level2 level3 level4 level5)\n(load goods3 truck2 market1 level4 level5 level0 level1)\n(load goods3 truck2 market1 level3 level4 level1 level2)\n(load goods3 truck2 market1 level2 level3 level2 level3)\n(load goods3 truck2 market1 level1 level2 level3 level4)\n(load goods3 truck2 market1 level0 level1 level4 level5)\n\n(buy truck2 goods4 market1 level1 level2 level0 level1)\n(load goods4 truck2 market1 level0 level1 level0 level1)\n\n(buy truck2 goods5 market1 level6 level7 level0 level1)\n(buy truck2 goods5 market1 level5 level6 level1 level2)\n(buy truck2 goods5 market1 level4 level5 level2 level3)\n(buy truck2 goods5 market1 level3 level4 level3 level4)\n(load goods5 truck2 market1 level3 level4 level0 level1)\n(load goods5 truck2 market1 level2 level3 level1 level2)\n(load goods5 truck2 market1 level1 level2 level2 level3)\n(load goods5 truck2 market1 level0 level1 level3 level4)\n\n(buy truck2 goods6 market1 level4 level5 level0 level1)\n(buy truck2 goods6 market1 level3 level4 level1 level2)\n(buy truck2 goods6 market1 level2 level3 level2 level3)\n(buy truck2 goods6 market1 level1 level2 level3 level4)\n(buy truck2 goods6 market1 level0 level1 level4 level5)\n(load goods6 truck2 market1 level4 level5 level0 level1)\n(load goods6 truck2 market1 level3 level4 level1 level2)\n(load goods6 truck2 market1 level2 level3 level2 level3)\n(load goods6 truck2 market1 level1 level2 level3 level4)\n(load goods6 truck2 market1 level0 level1 level4 level5)\n\n(drive truck2 market1 market2)\n(buy truck2 goods6 market2 level1 level2 level0 level1)\n(load goods6 truck2 market2 level0 level1 level4 level5)\n\n(drive truck2 market2 market3)\n(buy truck2 goods1 market3 level1 level2 level0 level1)\n(load goods1 truck2 market3 level0 level1 level3 level4)\n\n(drive truck2 market3 depot1)\n\n(unload goods1 truck2 depot1 level3 level4 level0 level1)\n(unload goods1 truck2 depot1 level2 level3 level1 level2)\n(unload goods1 truck2 depot1 level1 level2 level2 level3)\n(unload goods1 truck2 depot1 level0 level1 level3 level4)\n\n(unload goods2 truck2 depot1 level2 level3 level0 level1)\n(unload goods2 truck2 depot1 level1 level2 level1 level2)\n(unload goods2 truck2 depot1 level0 level1 level2 level3)\n\n(unload goods3 truck2 depot1 level4 level5 level0 level1)\n(unload goods3 truck2 depot1 level3 level4 level1 level2)\n(unload goods3 truck2 depot1 level2 level3 level2 level3)\n(unload goods3 truck2 depot1 level1 level2 level3 level4)\n(unload goods3 truck2 depot1 level0 level1 level4 level5)\n\n(unload goods4 truck2 depot1 level0 level1 level0 level1)\n\n(unload goods5 truck2 depot1 level3 level4 level0 level1)\n(unload goods5 truck2 depot1 level2 level3 level1 level2)\n(unload goods5 truck2 depot1 level1 level2 level2 level3)\n(unload goods5 truck2 depot1 level0 level1 level3 level4)\n\n(unload goods6 truck2 depot1 level5 level6 level0 level1)\n(unload goods6 truck2 depot1 level4 level5 level1 level2)\n(unload goods6 truck2 depot1 level3 level4 level2 level3)\n(unload goods6 truck2 depot1 level2 level3 level3 level4)\n(unload goods6 truck2 depot1 level1 level2 level4 level5)\n(unload goods6 truck2 depot1 level0 level1 level5 level6)\nEND PLAN",
+   "retorno_enviado": "The plan you gave is not valid. The plan validator VAL reports the following (last part of its output):\n\ntime 40)\nDeleting (loaded goods6 truck2 level1)\nDeleting (ready-to-load goods6 market1 level4)\nAdding (loaded goods6 truck2 level2)\nAdding (ready-to-load goods6 market1 level3)\n\nChecking next happening (time 41)\nDeleting (loaded goods6 truck2 level2)\nDeleting (ready-to-load goods6 market1 level3)\nAdding (loaded goods6 truck2 level3)\nAdding (ready-to-load goods6 market1 level2)\n\nChecking next happening (time 42)\nDeleting (loaded goods6 truck2 level3)\nDeleting (ready-to-load goods6 market1 level2)\nAdding (loaded goods6 truck2 level4)\nAdding (ready-to-load goods6 market1 level1)\n\nChecking next happening (time 43)\nDeleting (loaded goods6 truck2 level4)\nDeleting (ready-to-load goods6 market1 level1)\nAdding (loaded goods6 truck2 level5)\nAdding (ready-to-load goods6 market1 level0)\n\nChecking next happening (time 44)\nDeleting (at truck2 market1)\nAdding (at truck2 market2)\n\nChecking next happening (time 45)\nDeleting (on-sale goods6 market2 level2)\nDeleting (ready-to-load goods6 market2 level0)\nAdding (on-sale goods6 market2 level1)\nAdding (ready-to-load goods6 market2 level1)\n\nChecking next happening (time 46)\nPlan failed because of unsatisfied precondition in:\n(load goods6 truck2 market2 level0 level1 level4 level5)\n\nPlan failed to execute\n\nPlan Repair Advice:\n\n(load goods6 truck2 market2 level0 level1 level4 level5) has an unsatisfied precondition at time 46\n(Set (loaded goods6 truck2 level4) to true)\n\n\nFailed plans:\n /var/folders/qm/bhbtkpg902jc0jz76md7tdxh0000gn/T/tmp8iwd2p27.plan\n\nPlease provide a corrected, complete plan for the same problem, from the initial state,\nbetween the lines BEGIN PLAN and END PLAN, one action per line in PDDL syntax."
+  },
+  {
+   "rodada": 2,
+   "data_utc": "2026-09-26T18:52:55+00:00",
+   "segundos": 64.6,
+   "modelo_respondeu": "anthropic/claude-sonnet-5",
+   "provedor": "Claude Platform on AWS",
+   "uso": {
+    "prompt_tokens": 8379,
+    "completion_tokens": 8512,
+    "total_tokens": 16891,
+    "cost": 0.101878,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.101878,
+     "upstream_inference_prompt_cost": 0.016758,
+     "upstream_inference_completions_cost": 0.08512
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6574,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "stop",
+   "valido": true,
+   "diagnostico": "válido",
+   "resposta": "BEGIN PLAN\n(drive truck2 depot4 market1)\n\n(buy truck2 goods1 market1 level2 level3 level0 level1)\n(buy truck2 goods1 market1 level1 level2 level1 level2)\n(buy truck2 goods1 market1 level0 level1 level2 level3)\n(load goods1 truck2 market1 level2 level3 level0 level1)\n(load goods1 truck2 market1 level1 level2 level1 level2)\n(load goods1 truck2 market1 level0 level1 level2 level3)\n\n(buy truck2 goods2 market1 level3 level4 level0 level1)\n(buy truck2 goods2 market1 level2 level3 level1 level2)\n(buy truck2 goods2 market1 level1 level2 level2 level3)\n(load goods2 truck2 market1 level2 level3 level0 level1)\n(load goods2 truck2 market1 level1 level2 level1 level2)\n(load goods2 truck2 market1 level0 level1 level2 level3)\n\n(buy truck2 goods3 market1 level6 level7 level0 level1)\n(buy truck2 goods3 market1 level5 level6 level1 level2)\n(buy truck2 goods3 market1 level4 level5 level2 level3)\n(buy truck2 goods3 market1 level3 level4 level3 level4)\n(buy truck2 goods3 market1 level2 level3 level4 level5)\n(load goods3 truck2 market1 level4 level5 level0 level1)\n(load goods3 truck2 market1 level3 level4 level1 level2)\n(load goods3 truck2 market1 level2 level3 level2 level3)\n(load goods3 truck2 market1 level1 level2 level3 level4)\n(load goods3 truck2 market1 level0 level1 level4 level5)\n\n(buy truck2 goods4 market1 level1 level2 level0 level1)\n(load goods4 truck2 market1 level0 level1 level0 level1)\n\n(buy truck2 goods5 market1 level6 level7 level0 level1)\n(buy truck2 goods5 market1 level5 level6 level1 level2)\n(buy truck2 goods5 market1 level4 level5 level2 level3)\n(buy truck2 goods5 market1 level3 level4 level3 level4)\n(load goods5 truck2 market1 level3 level4 level0 level1)\n(load goods5 truck2 market1 level2 level3 level1 level2)\n(load goods5 truck2 market1 level1 level2 level2 level3)\n(load goods5 truck2 market1 level0 level1 level3 level4)\n\n(buy truck2 goods6 market1 level4 level5 level0 level1)\n(buy truck2 goods6 market1 level3 level4 level1 level2)\n(buy truck2 goods6 market1 level2 level3 level2 level3)\n(buy truck2 goods6 market1 level1 level2 level3 level4)\n(buy truck2 goods6 market1 level0 level1 level4 level5)\n(load goods6 truck2 market1 level4 level5 level0 level1)\n(load goods6 truck2 market1 level3 level4 level1 level2)\n(load goods6 truck2 market1 level2 level3 level2 level3)\n(load goods6 truck2 market1 level1 level2 level3 level4)\n(load goods6 truck2 market1 level0 level1 level4 level5)\n\n(drive truck2 market1 market2)\n(buy truck2 goods6 market2 level1 level2 level0 level1)\n(load goods6 truck2 market2 level0 level1 level5 level6)\n\n(drive truck2 market2 market3)\n(buy truck2 goods1 market3 level1 level2 level0 level1)\n(load goods1 truck2 market3 level0 level1 level3 level4)\n\n(drive truck2 market3 depot1)\n\n(unload goods1 truck2 depot1 level3 level4 level0 level1)\n(unload goods1 truck2 depot1 level2 level3 level1 level2)\n(unload goods1 truck2 depot1 level1 level2 level2 level3)\n(unload goods1 truck2 depot1 level0 level1 level3 level4)\n\n(unload goods2 truck2 depot1 level2 level3 level0 level1)\n(unload goods2 truck2 depot1 level1 level2 level1 level2)\n(unload goods2 truck2 depot1 level0 level1 level2 level3)\n\n(unload goods3 truck2 depot1 level4 level5 level0 level1)\n(unload goods3 truck2 depot1 level3 level4 level1 level2)\n(unload goods3 truck2 depot1 level2 level3 level2 level3)\n(unload goods3 truck2 depot1 level1 level2 level3 level4)\n(unload goods3 truck2 depot1 level0 level1 level4 level5)\n\n(unload goods4 truck2 depot1 level0 level1 level0 level1)\n\n(unload goods5 truck2 depot1 level3 level4 level0 level1)\n(unload goods5 truck2 depot1 level2 level3 level1 level2)\n(unload goods5 truck2 depot1 level1 level2 level2 level3)\n(unload goods5 truck2 depot1 level0 level1 level3 level4)\n\n(unload goods6 truck2 depot1 level5 level6 level0 level1)\n(unload goods6 truck2 depot1 level4 level5 level1 level2)\n(unload goods6 truck2 depot1 level3 level4 level2 level3)\n(unload goods6 truck2 depot1 level2 level3 level3 level4)\n(unload goods6 truck2 depot1 level1 level2 level4 level5)\n(unload goods6 truck2 depot1 level0 level1 level5 level6)\nEND PLAN",
+   "retorno_enviado": ""
+  }
+ ]
+}

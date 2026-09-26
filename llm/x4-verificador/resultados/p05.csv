@@ -1,0 +1,17 @@
+modelo,dominio,valido_na_primeira,valido_ao_final,valido_na_rodada,rodadas,diagnosticos,passos_final,passos_lama,custo_usd
+anthropic/claude-sonnet-5,blocksworld,True,True,0,1,válido,90,160,0.0779
+anthropic/claude-sonnet-5,tpp,False,True,2,3,erro de tipos → pré-condição não satisfeita → válido,73,106,0.3165
+anthropic/claude-sonnet-5,floortile,False,False,,4,sem plano na resposta → sem plano na resposta → sem plano na resposta → sem plano na resposta,,,0.7076
+anthropic/claude-sonnet-5,pipesworld-notankage,False,False,,1,sem plano na resposta,,48,0.1674
+openai/gpt-6-sol,blocksworld,True,True,0,1,válido,86,160,0.0191
+openai/gpt-6-sol,tpp,True,True,0,1,válido,73,106,0.0254
+openai/gpt-6-sol,floortile,True,True,0,1,válido,206,,0.061
+openai/gpt-6-sol,pipesworld-notankage,True,True,0,1,válido,42,48,0.0604
+google/gemini-3.1-pro-preview,blocksworld,True,True,0,1,válido,86,160,0.0573
+google/gemini-3.1-pro-preview,tpp,True,True,0,1,válido,75,106,0.0697
+google/gemini-3.1-pro-preview,floortile,False,True,1,2,sem plano na resposta → válido,204,,0.3663
+google/gemini-3.1-pro-preview,pipesworld-notankage,False,True,2,3,sem plano na resposta → meta não alcançada → válido,36,48,0.5199
+deepseek/deepseek-v4-pro-0813,blocksworld,True,True,0,1,válido,90,160,0.0065
+deepseek/deepseek-v4-pro-0813,tpp,False,False,,2,erro de tipos → sem plano na resposta,,106,0.0772
+deepseek/deepseek-v4-pro-0813,floortile,False,False,,0,,,,0
+deepseek/deepseek-v4-pro-0813,pipesworld-notankage,False,False,,0,,,48,0

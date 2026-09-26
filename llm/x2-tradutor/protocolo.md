@@ -6,10 +6,15 @@ Rascunho de 26/09/2026 (Claude Code), seguindo a ordem aprovada pelo autor (X2 d
 - **Descrições:** as publicadas pelo LLM+P (`liu2023llmp`; repositório `github.com/Cranial-XIX/llm-pddl`, citado no artigo, commit `f5f897c`), com `domain.nl` e o PDDL de referência de cada domínio.
   - Usar descrições publicadas evita o viés de escrevê-las nós mesmos.
   - O repositório não tem arquivo de licença: fica fora do git, em `experimentos/ferramentas/llm-pddl`.
-- **Domínios:** os 7 do LLM+P com conjunto de problemas (Barman, Blocks World, Floortile, Grippers, Storage, Termes e Tyreworld). O Manipulation fica de fora: tem só 2 problemas e é uma demonstração com robô.
+- **Domínios:** 6 do LLM+P: Barman, Blocks World, Floortile, Grippers, Storage e Termes.
+  - O Manipulation fica de fora: tem só 2 problemas e é uma demonstração com robô.
+  - O Tyreworld também sai, antes de qualquer chamada: o domínio de referência publicado usa o objeto `wrench` sem declará-lo, e o tradutor do Fast Downward o recusa. Sem referência válida não há solidez nem completude a medir.
+- **Referências conferidas:** o Fast Downward resolve p01–p05 com o domínio de referência nos 6 domínios, exceto Floortile p04 e p05 em 120 s. Nesses dois, a completude não é medida.
+  - O p01 do Blocks World tem a meta satisfeita no estado inicial (plano vazio).
 - **O que o modelo recebe:** a descrição do domínio em linguagem natural e **o problema p01 em PDDL**, para que use os mesmos nomes de tipos, predicados e objetos. É preciso fornecer o problema porque a descrição em linguagem natural não fixa esses nomes. Sem eles, nenhum domínio gerado seria comparável com os problemas de referência.
 - **Pedido:** o domínio em PDDL.
-- **Modelos e parâmetros:** os mesmos do X3 e do X1. Uma chamada por par modelo × domínio (28 chamadas).
+- **Modelos e parâmetros:** os mesmos do X3 e do X1. Uma chamada por par modelo × domínio (24 chamadas).
+- **Validação:** a checagem do VAL exige a linha exata "Plan valid" na saída. A mesma regra foi aplicada ao X1, e a reavaliação dele não mudou.
 - **Critérios de correção,** em três níveis, sobre os problemas p01 a p05 de cada domínio:
   1. **Sintaxe:** o tradutor do Fast Downward aceita o domínio gerado com os problemas.
   2. **Solidez:** o plano que o Fast Downward (lama-first) encontra com o domínio gerado é válido no domínio de **referência** (VAL). Plano válido no modelo gerado e inválido na referência revela um modelo permissivo demais.
