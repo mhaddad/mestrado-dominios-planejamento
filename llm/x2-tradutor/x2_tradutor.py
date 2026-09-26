@@ -82,6 +82,20 @@ def chamar(k, modelo, dominio, rodada):
     return f"{'sem domínio' if extrair_dominio(texto) is None else 'domínio gerado'} (US$ {((resp.get('usage') or {}).get('cost') or 0):.4f})"
 
 
+def assinaturas(texto_pddl):
+    """{nome da ação: número de parâmetros}. Solidez e completude pelo VAL só fazem sentido quando
+    as assinaturas do domínio gerado e da referência são iguais: o VAL lê o plano pelos nomes e
+    pela ordem dos parâmetros das ações."""
+    sys.path.insert(0, str(RAIZ / "experimentos/extratores"))
+    import metricas_2010_pddl as M
+    out = {}
+    for sec in M.sexp(texto_pddl)[2:]:
+        if isinstance(sec, list) and sec and sec[0] == ":action":
+            campos = dict(zip(sec[2::2], sec[3::2]))
+            out[sec[1]] = len(M.lista_tipada(campos.get(":parameters", [])))
+    return out
+
+
 def planejar(dominio_pddl, problema, tmp):
     """Plano do Fast Downward (lama-first) ou None; também diz se a tradução falhou."""
     sas = Path(tmp) / "sas_plan"
@@ -101,15 +115,18 @@ def val(dominio_pddl, problema, plano_txt):
 
 def avaliar(a):
     linhas = []
+    alvo = lambda m, d: (not a.modelo or a.modelo == m) and (not a.dominio or a.dominio == d)
     with tempfile.TemporaryDirectory() as tmp:
         ref_planos = {}
         for d in DOMINIOS:
+            if a.dominio and d != a.dominio:
+                continue
             for p in PROBLEMAS:
                 _t, ref_planos[(d, p)] = planejar(LLMP / d / "domain.pddl", LLMP / d / f"{p}.pddl", tmp)
         for modelo in X3.MODELOS:
             for d in DOMINIOS:
                 arq = REGISTROS / a.rodada / modelo.replace("/", "__") / f"{d}.json"
-                if not arq.exists():
+                if not arq.exists() or not alvo(modelo, d):
                     continue
                 r = json.loads(arq.read_text(encoding="utf-8"))
                 gerado = extrair_dominio(r["resposta"])
@@ -118,6 +135,10 @@ def avaliar(a):
                     linhas += [{**base, "problema": p, "extraido": False, "sintaxe": False, "solidez": "",
                                 "completude": "", "plano_referencia": ref_planos[(d, p)] is not None} for p in PROBLEMAS]
                     continue
+                try:
+                    base["assinatura_igual"] = assinaturas(gerado) == assinaturas((LLMP / d / "domain.pddl").read_text())
+                except Exception:  # noqa: BLE001
+                    base["assinatura_igual"] = False
                 dom_gerado = Path(tmp) / f"gerado-{modelo.replace('/', '_')}-{d}.pddl"
                 dom_gerado.write_text(gerado, encoding="utf-8")
                 for p in PROBLEMAS:
@@ -129,16 +150,32 @@ def avaliar(a):
                                    "plano_gerado": plano is not None, "solidez": solidez, "completude": completude,
                                    "plano_referencia": ref_planos[(d, p)] is not None})
     RESULTADOS.mkdir(parents=True, exist_ok=True)
-    campos = ["modelo", "dominio", "problema", "extraido", "sintaxe", "plano_gerado", "solidez", "completude",
-              "plano_referencia", "custo_usd"]
-    with (RESULTADOS / f"{a.rodada}.csv").open("w", encoding="utf-8", newline="") as f:
+    campos = ["modelo", "dominio", "problema", "extraido", "sintaxe", "assinatura_igual", "plano_gerado", "solidez",
+              "completude", "plano_referencia", "custo_usd"]
+    saida = RESULTADOS / f"{a.rodada}.csv"
+    if (a.modelo or a.dominio) and saida.exists():
+        # avaliação parcial: substitui só as linhas dos pares avaliados, mantém as demais
+        antigas = [l for l in csv.DictReader(saida.open(encoding="utf-8")) if not alvo(l["modelo"], l["dominio"])]
+        for l in antigas:  # linhas de avaliações anteriores à coluna assinatura_igual: preenche pelos registros
+            if not l.get("assinatura_igual") and l["extraido"] == "True":
+                r = json.loads((REGISTROS / a.rodada / l["modelo"].replace("/", "__") / f"{l['dominio']}.json").read_text(encoding="utf-8"))
+                try:
+                    l["assinatura_igual"] = assinaturas(extrair_dominio(r["resposta"])) == \
+                        assinaturas((LLMP / l["dominio"] / "domain.pddl").read_text())
+                except Exception:  # noqa: BLE001
+                    l["assinatura_igual"] = False
+        linhas = antigas + linhas
+    with saida.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=campos, lineterminator="\n", restval="")
         w.writeheader()
         w.writerows(linhas)
+    linhas = list(csv.DictReader(saida.open(encoding="utf-8")))
     for modelo in X3.MODELOS:
         ls = [l for l in linhas if l["modelo"] == modelo]
-        print(modelo, {"problemas": len(ls), "sintaxe": sum(l["sintaxe"] is True for l in ls),
-                       "solidez": sum(l["solidez"] is True for l in ls), "completude": sum(l["completude"] is True for l in ls)})
+        v = lambda x: str(x) == "True"
+        print(modelo, {"problemas": len(ls), "sintaxe": sum(v(l["sintaxe"]) for l in ls),
+                       "assinatura_igual": sum(v(l.get("assinatura_igual")) for l in ls),
+                       "solidez": sum(v(l["solidez"]) for l in ls), "completude": sum(v(l["completude"]) for l in ls)})
 
 
 def rodar(a):
@@ -157,6 +194,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("acao", choices=("rodar", "avaliar"))
     ap.add_argument("--rodada", default="principal")
+    ap.add_argument("--modelo", help="avaliar só este modelo (mescla no CSV existente)")
+    ap.add_argument("--dominio", help="avaliar só este domínio (mescla no CSV existente)")
     a = ap.parse_args()
     {"rodar": rodar, "avaliar": avaliar}[a.acao](a)
 

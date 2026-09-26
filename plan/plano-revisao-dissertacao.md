@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.41 |
+| Versão deste documento | 0.42 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -52,7 +52,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
-| 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | 🟡 | 26/09/2026 | | Resultados comparativos |
+| 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | ⚪ | | | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (começa depois da Fase 4B) | ⚪ | | | Relatório do piloto + decisão sobre produto |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
@@ -276,7 +276,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | # | Experimento | Pergunta | Status |
 |---|---|---|---|
 | X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | 🟢 EXP-16: 28 de 32 planos válidos (VAL) nas instâncias p01 de 8 domínios; planos em geral mais curtos que os do LAMA |
-| X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | ⚪ |
+| X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | 🟢 EXP-18: sintaxe válida em 23 de 24; só 10 pares comparáveis (assinatura igual), dos quais 6 corretos; a descrição em linguagem natural deixa livres nomes, ordem e tipos dos parâmetros |
 | X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | 🟢 EXP-14 (anônima): nenhum LLM supera o *single best*; GPT-6 Sol empata (146 × 143). EXP-15 (com nomes): piora em 3 de 4 modelos; escolhas seguem a reputação (LAMA, FDSS), sem sinal de lembrança dos resultados por domínio |
 | X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | 🟢 EXP-17 (p05, 4 domínios): 8 de 16 válidos na 1ª tentativa, 13 de 16 com o retorno do VAL; as 3 falhas restantes são por limite de *tokens*; o GPT e o Gemini resolvem o Floortile p05, que o LAMA não resolveu em 300 s |
 
@@ -604,6 +604,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os mesmos 4 modelos via OpenRouter | EXP-15: X3, condição com nomes; US$ 2,64 | Única diferença para o EXP-14 é o nome e a IPC no catálogo; código commitado antes das chamadas; rodada anônima repontuada e conferida |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-16: X1, LLM como planejador; VAL e Fast Downward compilados no Mac; US$ 1,21 | Validador testado com plano embaralhado e incompleto; referência do LAMA validada; falhas de formato separadas das de conteúdo |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-17: X4, ciclo LLM + VAL nas instâncias p05; US$ 2,35 | Checagem do VAL reforçada (linha exata) e X1 reavaliado sem mudança; conversas cortadas pela trava marcadas; alarme falso do VAL investigado (meta satisfeita no estado inicial) |
+| 26–27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-18: X2, LLM como tradutor; US$ 0,65; fechamento da Fase 4 (US$ 10,51 no total, conferido pela soma dos registros) | Dois artefatos da medida (assinatura das ações; checagem de tipos do VAL) e dois erros do classificador encontrados e corrigidos antes do registro |
 
 ---
 
@@ -698,3 +699,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.39 | 26/09/2026 | EXP-15 (X3 com nomes): sem sinal de lembrança dos resultados por domínio; escolhas por reputação; gasto acumulado US$ 5,34 |
 | 0.40 | 26/09/2026 | EXP-16 (X1): 28 de 32 planos válidos nas instâncias menores; acumulado US$ 6,56 |
 | 0.41 | 26/09/2026 | EXP-17 (X4, parcial): o retorno do VAL recupera 3 de 6 falhas; LLMs resolvem o Floortile p05; acumulado US$ 8,92; X2 preparado, sem rodar |
+| 0.42 | 27/09/2026 | EXP-18 (X2); X4 completo; **Fase 4 concluída** (X1–X4 registrados; US$ 10,51 de US$ 12) |
