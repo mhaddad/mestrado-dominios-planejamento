@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "miconic",
+ "data_utc": "2026-09-26T17:28:47+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 8.9,
+ "uso": {
+  "prompt_tokens": 3077,
+  "completion_tokens": 484,
+  "total_tokens": 3561,
+  "cost": 0.012531,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3074,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.012531,
+   "upstream_inference_prompt_cost": 0.007691,
+   "upstream_inference_completions_cost": 0.00484
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 414,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P29",
+ "razao": "Miconic has a natural star structure: the elevator is shared, while each passenger’s boarding and service status is otherwise independent. DecStar’s decoupled search can exploit this structure to avoid exploring many combinations of passenger states, making it a strong choice as instances grow.",
+ "resposta": "{\"planner\":\"P29\",\"reason\":\"Miconic has a natural star structure: the elevator is shared, while each passenger’s boarding and service status is otherwise independent. DecStar’s decoupled search can exploit this structure to avoid exploring many combinations of passenger states, making it a strong choice as instances grow.\"}",
+ "bruto": {
+  "id": "gen-1790443718-vL1wqEpFf7uTofNoCcwy",
+  "object": "chat.completion",
+  "created": 1790443718,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P29\",\"reason\":\"Miconic has a natural star structure: the elevator is shared, while each passenger’s boarding and service status is otherwise independent. DecStar’s decoupled search can exploit this structure to avoid exploring many combinations of passenger states, making it a strong choice as instances grow.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquADOa8G2cTL31-0zpwiFEr_A9NNxEQUBrMC1WuoUh1QUN3tyfFFjYYO-VrZNjTYY1MEc3J_6LcE4nXqacuY20fAvoiDeAj6u5kr6Nuzmq4QFGVjBcaMkWaH9XpTOy00Kw-33vdFAsOfK3AceCBt0w2Cg3ADz-BS6qUIeq606VMs3njR1yzWkdHt45YNjkukBMj_cHZJwHsvoMcR-M-XKry17yeMKQBFJachPYbCGQl9eoHHOaMLUl-RLgq_6Dx5mgUzGeftd3wdcfLqX6UQcYgpLnju6ENCtAB7oZiOARdoUS81EaZ4hju4J84u2SYeKxufHGuCnMUS6rLM1vK1LpLmHjjPX1OrndTXnZuvInqW47Nb2Q383aL2cAnyUyBJPN31iWOZTi02TKteXf3rU3RnARcKmA8DTpHaYqeH9TzuASR5_rq1l6ylMHZQ4nTg79iUHkKipcgQJPEj8UjOSiUqK4klPZWntT_syYjaTLYCTKjHxY1rhZD-PAtLT62Z9E7MyhNwJVWN0nc0G3MP690X4M5bMoHupa8C1hYmytBqnqfjy8J3kQwZTUw2zc9TZP0ptQ1_UNZxGtmf0UYrYvdCSs29JwnFKnwVehFF-Hru1Mbc0m3CEJ84mjjkXrUSqvfG01b2kFgQevhDsq1sH8foJtiBlAaSwwfBqrHyCGBda3kKgljJnBzUQGReD98-gp1t-8g62oKbhxFfyvqXsPsMLFcMeHCxoLX17JGhAjof7uV0pBFaAewl2lnjYUuXclFuLuYiy8W49FQkE5FJqw_Qn1KOqD0WllgrIXskxee125Hb4kFSvLZGA3llKInvjmN1Kuw-PQ16UIrxhx15gwcNCUsNzJdcvKjcr7__z8wuxGJOA-TqdBn9t-z7aQNXBVy-Lge7U3dQ5xw5BZl_-kgeBWycLPZoRLakgNzqwSuHsaCWdbLBEBuO_2xXQ8SklbX0u3xW0YcVVH5KhkeJDzRo1iLXRRZwFcRdx6k6RvKQEBCMzkK2VBY6qTRSey1_TIuCplRC5BMv9yDfwFR5RoYAbTe1KIasWXWCOZY0Mtl3to60agKI-nai0k48UnmuLamdRUxPQWAdfIpSeCYxCUdzDAVWKXBwiFwUn2i5GKHZwRTK-J0L-NqnFlRSzqFwTixgcct1-HlgqVgBqqta2OaL0UNFvVGANfvyag7cMts2zwjHinUZY6VHm6HeGKSoKSqfiMKGeVg1qL-3VspjtUOFeNN8qoiKEziDpwOoAwpBHdnslOn-IF19w142n8HewYS85ecW8Mu5vRwWWOB5lYzfrGbPhybm0Ktq-ZX5JrD_PIJhchAqIwipZsj3xOUOC92ci_X-xFyM-4cIjQYC7mv_apHwK3_1gNfpswYRQ0SrNmZT_ikWQsiF8OBtHHoAbs7mo-Hdy-E_pKrdNvOcXbz8zAORiwK0FmiYRYf1O128l8uK0mrHbLgfWfo8GMfQC_0fyyuOsyGZf2g8gmI5KZk3eM8TXFmyCSbhuaDI2DYcveUMV3COo8PMTMGo9p2a-j8DqNXkQ3Gcd77DWK0i8wmppYzlXr25PgdgDKV7RB4p2ZXDISMvozWybZRhG0poaLyrYzNnCkpsp07uG-54CHFwl1l-kIkS3PNfPYWoIQfRa9UAlQWFgk9dxiyfZ6tkB28vNvJ2Y5iCE3s_Ybmgk-txPOJ4nqHHndtkdZF0ulO--inwHXa7VJgL-DYRH7j5MYe0niKil1BaudwkFcRXq4Xmcl0ImOYi3SY4t7ozf5SklXeFXPeuF3qSvYJhC9oqQ7gsIKl9_iac2LdwGtj1ZOcVJH_EaqSnsfCo54upDeec_VNWIIQl5CUbPpp6WGOk6JImF5bHq_UtSc0UZrhFh2f5PMkDqIH3yuXcHpVofwC5wFikT89z-VoVt9uxvKh2y3vTB7E5roktO2gTViPw0y3wGz08ECak5t1knWxJDBE4ejD3zLjZDVDWEhOgCwDH-iMjVF7u_MisDdbwIyp5rtjirPN3WZwX506rteS9ZcR0wPe8Hjy8wJSaI7U6069fxpdNAxlKFuzaVl7rinHIABO3HVdJjFeCkhP5oqcIgwIWl1hOP4QcI8c-CjX3eSRfomd5PDdvXavyvYR6Yiy1ImyN4qx259GKWy7jcYO72LRknK6zJeKvOkdj92vljRKlXPOq1kfIfDRWQFQkI36n0JygRDgQws9ylHrn0JeV0zYVWCE6kGsrDDJyK4dbJmYLMz2cLjF-TgdIzt5FuObHSi2LIo1m2Gl1GHpu9dkJYPEiX35crXH1t4GxFUuMaYRhCWut3TYnWtGjSnsTHRtdCFkiG-ei1I0d1B8YkStss0v-W-VBMGqOxF0ogIIFAlR7URBFPIdNxc-AwA7IobcmIw5Ct5EOePGrEakm_NeJKqdVo4hQL_G-FKgLY_L9A5FRgXO-7ctPh8AwuHUdBFNoXKVXdOmeg2EyLfOSv9wKUyc6GZZu7bJ_aV5hBSNjGBsRrbNwuziBl1ce13X8sH_O_y_bGbGJ7F93aIS7cgzP7CGzqzorGbNXApOMZC7-OF6Oq0OBl7AEzavq4luN9gxIVO46MuNkqduyk8k4iUA-uA6nnVUGOk82h0moekZeihGfr4xR6iimj4mVdTW2GbtQN6bf1rhnewn75Hh9MjeH-OoVUPiCmOpEEuzdpGzDrT7aPj-i_T2mHWz6TMloRb7Wph8GVzJ5NhfzFKJM6GiRGEhyiOa1rYkIjf4yUmGI_KFnmQRUifmPYXdkfn555gVGXxwZie9hA0xjAwRRuZg-fdSSAt0WZ6Vltrw_T5MslLM4GdxMJD0RAOKJJmerJPvX9cpDAMBpE8_NXfIg1GIy2SFeUO2gXACSbHRNEJ9_aFOrWinH-iaAL9iIUTL2ZmHN0pScToR8j8wZUz79Nuuznk29TQeOm35I8gK7on9UL1BxXyWXMY0ypWGvqXneob-OQ1dTPhJ744OEifsiNXpEtv-ge5ocjGBDjQNHSQy5AshkLpuWXMhW4OqKe4GKhLpD2txv_xUfzYK4zzYGN9iXkw0vqfGbZu9BshYoDn9wkT76QIWyhj-YPzt1iDwKoIPTc2MCaIS_ZiexST-wRuCfdKvaWYszWsoS62DZ_MXXb2uU1Mu-umoOHuJciRUaGl8tTUab7vBE63M2gVfIQUHJebmFDX0hPJhkk7zoZ5pwReKBe9w17NPxmEn9xC1elq8qaFdRtBz6DfVTAZFjRrT4NuT6p80QFdiAqEpRMD2euuJTlHdnDyeG83lTrTObAwQHo5cVnYzo6Riqi1zCIlp3Zn-sVzU96Bnp23i9sbkGGw5g__3A8bg4a2x3BH_fy9pIdV8YtHZg2PSwocbLDqcupqGhMRIXZlhz0o5ilQ_MBw6z--EH9-9VBMwraPxyphEABybOWBGFFJe0SyEuieBY8Rd4DBQICL3Hsqzwsml4XEIstv4oeCmlXkrbYPu57f2sGKavlrqzPTleGpuH4uYWnebcPsyBjT6yXJYq5Tse2lBJO1zn-pgxzysWbQYZBgQtaC-q2GgRyH6ZQafYxgOjwp77KUjiwxASdul3le8N52mqKqQKBgCAwm9qKb1TgLJje_bxCVhFKbN1-6d_74EX8MsQpdmDjNXq3qIqlcAxFE9Ny2FsZGKixFMjKSPo4St4dgQf8snJ1yILUfcZXhJ3jMIaBTmMBkHMGxeoC98MpsLhIxFvNpOTo9LGMz5c5d-Fd9cT-kKfdfFfAFPC0KjMgQtmoGjJF6H-k4kiAhURtwYAnMfjGxqjj7DVXBhzZnpZ4HOlKd0Cpg8MqHMoMd_r_eRBFNLB1KXePXC5X0rjueTSb9iC15DYTCGy5d8gY9pSaQpghO1_42IqFrKBQLl3FGhNdPB1BqF6QjHRdJFoo1mW6_Cunm4ye7apOPwhoW2Lyi52WUMMWWaCVtuSn75rQ3u3Im7GL0xpCPYrMIII6Txw2GLXcKIdNDgCvePqfAzdl2X3K1xYr-HaUBp44Ds_UjoYxFWehReEqAxLZ8BwDhsyd58O-2fFwys7USGQyUEN2bVXgNv1sCZzY3NBdapwfOzVO_JhWrRS-IJwIHmUOb_MYoF7hwnMRVaVGoczQoVOt5xaZqDCEr0tcTgbSDhziY5lHFwpFUZtcDhJVVUwoErbQs9n5R84iWefqzBx37gPoSNrfsg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0abaca49ecffce45016ab800c7782087d1bf6df97e4d44db74",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3077,
+   "completion_tokens": 484,
+   "total_tokens": 3561,
+   "cost": 0.012531,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3074,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012531,
+    "upstream_inference_prompt_cost": 0.007691,
+    "upstream_inference_completions_cost": 0.00484
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 414,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

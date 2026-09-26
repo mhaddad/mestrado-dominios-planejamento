@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "airport",
+ "data_utc": "2026-09-26T17:26:58+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 9.8,
+ "uso": {
+  "prompt_tokens": 44538,
+  "completion_tokens": 335,
+  "total_tokens": 44873,
+  "cost": 0.093096,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.093096,
+   "upstream_inference_prompt_cost": 0.089076,
+   "upstream_inference_completions_cost": 0.00402
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 259,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a highly optimized portfolio of state-of-the-art search algorithms and heuristics. As the winner of recent IPCs for coverage, it robustly handles large, complex domains like Airport by leveraging multiple complementary configurations within the time limit.",
+ "resposta": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly optimized portfolio of state-of-the-art search algorithms and heuristics. As the winner of recent IPCs for coverage, it robustly handles large, complex domains like Airport by leveraging multiple complementary configurations within the time limit.\"}\n```",
+ "bruto": {
+  "id": "gen-1790443609-7wn1pBwjpGbz6kQEalsT",
+  "object": "chat.completion",
+  "created": 1790443609,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly optimized portfolio of state-of-the-art search algorithms and heuristics. As the winner of recent IPCs for coverage, it robustly handles large, complex domains like Airport by leveraging multiple complementary configurations within the time limit.\"}\n```",
+     "refusal": null,
+     "reasoning": "**Exploring Airport's Complexity**\n\nI'm currently grappling with the IPC-4 Airport domain. Its scale, with numerous constants and a vast initial state, presents a significant challenge. I'm analyzing why this domain has proven so difficult for many planners.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Exploring Airport's Complexity**\n\nI'm currently grappling with the IPC-4 Airport domain. Its scale, with numerous constants and a vast initial state, presents a significant challenge. I'm analyzing why this domain has proven so difficult for many planners.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 44538,
+   "completion_tokens": 335,
+   "total_tokens": 44873,
+   "cost": 0.093096,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.093096,
+    "upstream_inference_prompt_cost": 0.089076,
+    "upstream_inference_completions_cost": 0.00402
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 259,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

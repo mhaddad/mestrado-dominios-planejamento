@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "tetris",
+ "data_utc": "2026-09-26T17:31:07+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.9,
+ "uso": {
+  "prompt_tokens": 3813,
+  "completion_tokens": 358,
+  "total_tokens": 4171,
+  "cost": 0.013111,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3810,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.013111,
+   "upstream_inference_prompt_cost": 0.009531,
+   "upstream_inference_completions_cost": 0.00358
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 294,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "The movement actions have many position parameters and geometric constraints, making grounding costly on larger boards. Levitron combines lifted planning with a portfolio of heuristic and novelty-based searches, giving it several ways to handle both grounding growth and difficult rearrangement searches.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"The movement actions have many position parameters and geometric constraints, making grounding costly on larger boards. Levitron combines lifted planning with a portfolio of heuristic and novelty-based searches, giving it several ways to handle both grounding growth and difficult rearrangement searches.\"}",
+ "bruto": {
+  "id": "gen-1790443860-jT9HdeiyWschkKB0IOXY",
+  "object": "chat.completion",
+  "created": 1790443860,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"The movement actions have many position parameters and geometric constraints, making grounding costly on larger boards. Levitron combines lifted planning with a portfolio of heuristic and novelty-based searches, giving it several ways to handle both grounding growth and difficult rearrangement searches.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAFaC8hLOmMmoD583q05S_S5aDOiV3Xv-FsttjQAIvoilQlZL5cmIv_HdrmjjHlXGjJ3mF-4oBBSWR-GecCKiKd83rp63gLfTdHKkhJ-LmXXRPDLOumOu2nWZoDFk7i062XiQdqVORpdvKGfWN85UW0u9-mdTeIV0RDWgg7e046ReCHfbemJ-7PufPZJnpRFOevuLM740lnypJWD5pEkRS5tYEnjHcG-g3jDQKz5RhtZz2dWYbOIr907hF7X6kOmaYsqqJTBC0W2a5xe3MOR1q5kTFQT4njADijTtVRo3Fu1dVLcadghYF_fTGa5J60-ZfMImo9QSWGA2YdylkTEhymm5NjqTlCgDIqGopGd4Fg08NB-w3E54VURLLDzNOIjAQxSpFDVpqosOcT0kyuuX47mcDCJgCD3j9QHOreei0yiqDgIhGmA_thVIeOCFFHG5TzDAaDIb9ode4UuLW10QI68Jw6gXPM0MXsu9BvjMTkKiGQjJYVikXWtzVyOua2Bxaw6gZ2r3Hy5he8D3itn9HllZwXgdZ11Qwl4SPlfvSC7ahpVzBM7Ne1fpmVRp6Tgg3zxFoFasf_EuKVAkFfPyDdvpzwh96z1EROrlmocvtfsM6RYmjptNYAmbeG0CPM28SoNdiSBSPCo27Hkt0U7xBzShfYb5JAU3MvnFNG3IuDkILU6JmWRmnNVHjQxAUAQESKY7Cvu81nwk-RgcTgg0GRzPA2DcMCvdAX_XuYtX6sILL_-0L71RhS7zIl32nZ6xe7VQr5uolMzdjIVIb-dt4-nE0crwbcZ7Phb2g5mC3DLvmmcc3bbNLcfkuhYhNqsOAxu6vON-S1aGl2qiqBZ-qDLgvc4Cdn_C5s64F5FTxBgE8Yb9XdQsCQQFrXNs8HgaYoN6elkL9hFdEnavMzwm3_3f1ePMWMhwpnO7dtSAbiqJmiTMJ-nwoS8qPAxdfouKEpB0cUFfvKfowLGuyZ3iORPaxilrfci-F5vn0pIjW2EnJwPiheKv-lF0cOTqKFmgyvuiH7oSeLsKpq0schifQQnsL1TVDQb5ViNLdEv258zDr6tjdIcb8UXAVDFfFI4KexBBN_PrPxUn5715_cdCLdgKemwIr26mgbdn9sGM-YSR4ftwkONZaGYcyOKLEifxB1SgwtdPjui1szRPfflHWnL5Ep0Jv_YVap4MuFTdqaAIuZWBay7JaB2kq9sAzgwQfoTwX396cX4z01uauxOONaiZL64NmV6chqOrfRqrwHzwehPhxE9Xn5PwNGHsJ8mcb8zrJZ5oUjbeKVU2KeSWXbilF_7vfyffTH2i3_16fh5Ryuau7nFFZqdTLptu72hGd8ehrS9HOE7Bu6vg2LzUVO62ztbPCRT5Ansik2K2rLL8C_ZejldMocNNu2csO1LZ7qb1huU1EME4G-fvBZtH8onCpk7TSiIPugZh4x0FY12wYz-b_kPSMFVekykIkCFmQG9RLOePxt18JamIx2viR096LxAiVIlGFYi0ZLzHKpoGM3_yzaAiurlL03OqgtYykLdfGlT-1CeLY6dj1cIKl89eTCXM1tC7BWNz5M_uQodyBM8qV8A19jHAsEUgebD5ytOW1UDyPjuvNvh6D5CemXqxSFEjX8Qh0XjIjqnwQ3sEAKy6BaN6CgOQoZQ21-VRFP3gQXbuIngqLqtPc5LHF8_MAiNa3Q2sh8i-hNU2beFl9dmGrcw8x89yHv3sXKCEwNQ-PrIZmNh1v31XDUaDQjw1RUlB5fZ5dybEg-wJDX-Ew8g5mAuJx5x8iR4zTYh5Oe-aiHiwNE0LxzYD4KHU4KyBhD0aqvXqXcChNDORHPsVK8WN5FClku04SHlql4Hsqs3QB9G3D74JG9KercAHYgYyHuSclhCEugkjxZ5sLvsjrjDiIccU11kmhoLrU3GInXeILTZ53DEhAB62fjhF0WLR0pf6eABFF4PxvMP56RGG40-MOEtSMTpRe0xIqkzAukifZQmaAAhN3UxuiBhk9D0x7eHxPAX8cb5hvOI_2RKgNE9m6dXl59f0UM3ZIF0YYkbBuYGeDR3-DvPdNvxSCjCXH1tyWODpr7XTe4_8WUr7pa_DnIj7YyIh43ol__8zDkHwAM05gr5aU5tCDzlpwfX_yyyo8TEp2kmJinHs0Ps0Pa7JZP4YFcmqi-HcHKA7lzlHn810rPOsUPCdou0q-XSDzF190g7ka9UMZJbtFZTVWKzIL6yT7XQZVwt11YVFyqLtVkgujynNo1UHuvUxePFU_PEUGodU0zB_q77eUCADrrgfPrFbm-K_0JY315loojtb8PFcP25OpFNJoBRhilu5A55QMKIB5r3UJqgeRPHRcLS8GzMm9xmnr6GYt4aVrOjKDi09WeUY5yCGE94FiQp2f3gA7R_Ss7NWLgVzO7RJyFbu98ZJyBnXJIvURBJZRyY2a0gFSCgp8TExbI0r8gPm9osZWB52tokjvkOriYfq1aIdFcxBL_HMUM-pISDcZ6MTJHmEgVR2X_DtdNVkiIWu5mSWA8Gp-wV93Mcg4ybOsJX5PTM9cZZ-eHTIVX2rP8JvTUobCy93lTaLLeFLRmtRUNxhna1b22ohjWXqkVHSj92nfz1u7EIDJHYB4jL2RxZf2JiGi9NPsV2IgIOdVrMq2CHBHsN0n6WNSPrXl8lqOjIbb1_bJsBn12Po1FWwjK0yH4_qfeqWx6rQceRUGbYX5JjZl7VApfcFd7vW_BvQd7F4YFx8QPjj5Fk3cdPd0POmSIKkgn0oB-pysh33BZomL8ZsN6p2-cRcBpOjcdDVfU1j5xWz1Zw5B4vqHMu8a2r6ICxUUSt0lfzBpJV41Gm5iHWgsivFqNX_3tYgAK_kDY3uhAbzDsWdQqqRLrOQVnU6BbXKauGc0XTRF9xhlRNgDFmYDyQDbb6pf8CjfR8IqErS_NbAKU6fU9o2b3B3zXV4DAE4C1NO_bY0Lv0HGD5f9P_IqzfZapiGgsOHldfiwpUQBNGaPWRPGTUPf94M6Jp3AOcJttr7ccCsgfQIafeVoJ6UBzQ6eaSAt1MFsmVlD9EBUCHNEgqVSrkoo5VdBcoriQtM-TsXXD-RtFWAqREMzaXtwnA7roOxZ1Ee-tt49OiyNIxyssVUEAdaXbTmgsecY-h1szzT9pa36ghcbPrpA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0a1ba32091540589016ab8015537a487d1af206d426bcfa95e",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3813,
+   "completion_tokens": 358,
+   "total_tokens": 4171,
+   "cost": 0.013111,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3810,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013111,
+    "upstream_inference_prompt_cost": 0.009531,
+    "upstream_inference_completions_cost": 0.00358
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 294,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

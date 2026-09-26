@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "transport",
+ "data_utc": "2026-09-26T17:30:25+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.1,
+ "uso": {
+  "prompt_tokens": 13565,
+  "completion_tokens": 482,
+  "total_tokens": 14047,
+  "cost": 0.032914,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.032914,
+   "upstream_inference_prompt_cost": 0.02713,
+   "upstream_inference_completions_cost": 0.005784
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 404,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a highly competitive modern portfolio planner. It combines various search strategies, including bounded-suboptimal and satisficing searches with diverse heuristics, making it extremely robust and effective for maximizing coverage across standard transport domains compared to older or single-technique planners.",
+ "resposta": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly competitive modern portfolio planner. It combines various search strategies, including bounded-suboptimal and satisficing searches with diverse heuristics, making it extremely robust and effective for maximizing coverage across standard transport domains compared to older or single-technique planners.\"}\n```",
+ "bruto": {
+  "id": "gen-1790443819-eXMNU4LExyy5T6CowOEO",
+  "object": "chat.completion",
+  "created": 1790443819,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly competitive modern portfolio planner. It combines various search strategies, including bounded-suboptimal and satisficing searches with diverse heuristics, making it extremely robust and effective for maximizing coverage across standard transport domains compared to older or single-technique planners.\"}\n```",
+     "refusal": null,
+     "reasoning": "**Analyzing Transport Domain**\n\nI'm currently examining the 'transport' domain, a typical IPC problem focusing on vehicle routing with capacity limitations. My recent focus has been on evaluating various planner options such as Fast Downward (2011/2023), Fast Downward Remix, LAMA, and Scorpion.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Transport Domain**\n\nI'm currently examining the 'transport' domain, a typical IPC problem focusing on vehicle routing with capacity limitations. My recent focus has been on evaluating various planner options such as Fast Downward (2011/2023), Fast Downward Remix, LAMA, and Scorpion.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 13565,
+   "completion_tokens": 482,
+   "total_tokens": 14047,
+   "cost": 0.032914,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.032914,
+    "upstream_inference_prompt_cost": 0.02713,
+    "upstream_inference_completions_cost": 0.005784
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 404,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

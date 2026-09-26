@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "ged",
+ "data_utc": "2026-09-26T17:28:04+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.9,
+ "uso": {
+  "prompt_tokens": 3821,
+  "completion_tokens": 273,
+  "total_tokens": 4094,
+  "cost": 0.012281,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3818,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.012281,
+   "upstream_inference_prompt_cost": 0.009551,
+   "upstream_inference_completions_cost": 0.00273
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 206,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Genome rearrangement creates misleading delete-relaxation estimates: relaxed plans ignore the adjacency edges removed by cuts and splices. Scorpion Maidu’s portfolio combines landmark and causal-graph guidance with novelty search, giving it several ways to escape those heuristic plateaus.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Genome rearrangement creates misleading delete-relaxation estimates: relaxed plans ignore the adjacency edges removed by cuts and splices. Scorpion Maidu’s portfolio combines landmark and causal-graph guidance with novelty search, giving it several ways to escape those heuristic plateaus.\"}",
+ "bruto": {
+  "id": "gen-1790443678-PAugWaw4sUCPWaoyvvu5",
+  "object": "chat.completion",
+  "created": 1790443678,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Genome rearrangement creates misleading delete-relaxation estimates: relaxed plans ignore the adjacency edges removed by cuts and splices. Scorpion Maidu’s portfolio combines landmark and causal-graph guidance with novelty search, giving it several ways to escape those heuristic plateaus.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquACjW_4VkeQjUVbZbDKminYTSlDj6ACh4cmZbcZE27bQDcWKeYlO4nEaWvJwK60Clgv9ROstVCvZlZEq7EPrEFn8Ksd4eiwLmHdWs1AxO2GJgVGYAgfXYjjVbVSquQ7xB52b8Swq_tW_cVEnPUvpe3p2k7vYL-gaeB-poX0sfOgsVQsq7MyFaCcC2oC4Q8bRED5SWz61suayGDfcxkw7aGBiVc1yksWW0JpEV3YileyUxHi8QiFtbZHM5zDJMh56QzIC8YRWA5_04zd7qjCXlRGVno3Iz56DfjP1oGJRkSPDaUOONAftidX9Jc7bKSItop5dby8ymuLVGOGSeX4BZDebMMy4fpP0tuN9sPbzgsYYMRpv_MdNum6btIco737PNJDUqBBtumS-uLuLcJNIKoKyU6vOZQlCle0e0l2_n-GcvjZxLsOrUK-7uSP07365FGEAMnULoRN0ciKMZumz-WN_01ZuT3F03GZZKQkb6IBFUulhB-6xJAFFlhLrXkH6FViz9ch6Nzil2D8k747r5GbyiKDMkr5sGy7ncIjROF4KeOPE4qJlC7hGQ7C84jE93ievHAVfXhQ2KstUVFhrJT-mp5qVxXjsbMcvbEb4cr7ZxCj163Mk8bZRDc3ANEFGd1N5rm9AlvBpQwTuPA-gu_mOuhmPc80Ah5pM1CFDho_qtMBeM9dFK_hvhIhjwX0KBM499B98B1QV0ZfU_JpHtWIs6ntgssZlepwvJLVtmwYaHqYAL0hv3Xgf9kKb1y3AYYD_Ts7S0YJlsAEyOWyq5CYaTt2MPvR2nl_CoP_xqNL6NOSGf1TV-oDn2dSlboY6hgSLNvcNk_lD2QaLnXbfvu9AAj-FentHCnRQemrMxE4omQ0QUXMS9-UQwXutaglVM8fNAboVRX9hB23U-mLGLIczPsKWlkDHxj66qR_AC-o18rACzF_L5XWp8lPzKBe2QN2LSFsSadAPhR5lF58h_8AAXeYYakX3LZceh3OO9vkbSbTedk3SX5lGoC_CTRoxyoMFnitqBhquQHCEJmNcW4xlCHhU_5JsFKgoA2kQ7gRkgmpiMan4OisqfpQjCNOnkLAsggLF-lLdlrwtWU7LM_nMmZC1xdOLVx1TT0UU6_UUjBGkPJaobTjRQPV6tdlvqI7vAOlb8omAzBCcQ3cZBbgnI-AYQ7GPsMgExsIPwbUyr3gTECNlv1MAKQurnu1eLI9zvwRsLqQNgMZnA-IKYIRmKibV-mXuHotzA2Bgmo1hGotF0h3t0PzKsNFKQg6xJQtUowHlxTbMBoq5jqjPHzs5kvo5iTE5MCtBzdbnZLGiNzQYAugigaayuMEbNJuJMIZ0PuoLsqHo2hbe6p0OxGNCFDhnfUjGTvpnZX86yJrRvnJduT8nnDhRuDkyL3z4XJu7LoIGTOPTlubgg6OjYLymnA3IkSVpxRS1hI3kOwT_x9CwQmqhuSwmCi9Ix-oN6e-6XQxWBMaTo_DUjLJHhiU4jwC8kX5FaqwG2Kn4krYDA8Lrb_F_unR3L_p6A7aV3_9TNXd0TMRjhCK6lf0gEJNG1D4Ny2NG-tyfBp1ABWICfDPjtWfVN6Eds_tmCICLR8DldORoVLYEIQJGrUlAoXxw4qWdWzpNoecqYYUWowBBJqpWyr08RFPoUjE75BdQJkLFTC3gmIwu9kUujDurod6XevXXEy5GMCTxYdImJayxOKMxriGO6R-j1yC7l9GVGsCyWTSxw5Jetd6lYpP2Aowe9ippJd-ZHEAisuoJGJk3RpEh90ELLHbzpVeQQJFaRvfL4JKVJxiSRsmw-xNFT5EF2d34oAcwVHIOVRDS7RXcGwDu6DUufSfXhKzlksNn2jiu_KfwOCbrMe9unpFROxoyTt9PuqhAZT2xsednEp00Zj5jIsZAsr6flXi-ntSpiDv95Y3fhhMOlluKxbi4MsboZ0F2XbxNzWrlL4nwvi_Sh4siAyKsvZhSxmGCY01Zfq63XZCK4Nb-97GhYLwq3xbjjeYT6FZNOgO61bINWse4p3F1YtbkufOdBKxNq6AD1V9PqCZqafAnneSWmfDMVlVZF5r3tQ3ZBjiKKUxdQ-N0Spek59yUzBzMM6XwN9wfJ0H_zG4lSX-7P8l1g7KdfuMkyR5yeQOzL1ueev6bUnrC1G1ZD5RCEdOe-68uu_fPI4GNdTZ6OI8h5aGR1Cu33MimZy2bAXXuiMhp9dxYyR0xbs_3cB8NLmbJpwGczH2P3pSi7S0qEZ4L5PXiUXXzk3gr6S_a0SZw1dRUb0Z0Hv9Bfj8qkyYErlsgX1w3oki4knbIt_tCejva-7-vMJ0OnBf9VjdvNrnyUhaJIkyj15ELWvmRJ7QpYdi943CpJxmGKK_pZsfmk8WoeBqdFgm38ER1Olr41-DNXfup9xqFNciYjabztopqVYAwjY1MPrPfbHcTOcV3mKyf7UjZtoYg3PZv6dgJonbR0CXbDpZV1k-sLv9U3v4EmrFxPt0gVoLdL7w-l3bsb9HqjYCaAeotHpQM_7zU_HITGDsiWWjfu9uZb5PLZXOV5H95d0zdZtrf4NCrJpnLqZx5YVdJTKI9QjI2LYMW9aDpIyz_hFUG5kObjMS0qcc85uzxeIyq4icOw3QUZlZNYXOrJk0dfTSgkQmmVQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0c3e53b9691a918b016ab8009fc11887d1b872a3602d18eb10",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3821,
+   "completion_tokens": 273,
+   "total_tokens": 4094,
+   "cost": 0.012281,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3818,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012281,
+    "upstream_inference_prompt_cost": 0.009551,
+    "upstream_inference_completions_cost": 0.00273
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 206,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

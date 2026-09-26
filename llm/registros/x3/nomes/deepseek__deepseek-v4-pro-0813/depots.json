@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "depots",
+ "data_utc": "2026-09-26T17:32:10+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 12.5,
+ "uso": {
+  "prompt_tokens": 3095,
+  "completion_tokens": 1104,
+  "total_tokens": 4199,
+  "cost": 0.00269184832,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00269184832,
+   "upstream_inference_prompt_cost": 0.00052977472,
+   "upstream_inference_completions_cost": 0.0021620736
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1037,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a modern portfolio planner with strong delete-relaxation, causal-graph, and landmark heuristics. It is robust on satisficing transportation-and-stacking domains like depots and designed to maximize coverage under time/memory limits.",
+ "resposta": "{\"planner\":\"P02\",\"reason\":\"Fast Downward Stone Soup 2023 is a modern portfolio planner with strong delete-relaxation, causal-graph, and landmark heuristics. It is robust on satisficing transportation-and-stacking domains like depots and designed to maximize coverage under time/memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790443918-vsNPZEsNxX1fxrvcc70F",
+  "object": "chat.completion",
+  "created": 1790443918,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P02\",\"reason\":\"Fast Downward Stone Soup 2023 is a modern portfolio planner with strong delete-relaxation, causal-graph, and landmark heuristics. It is robust on satisficing transportation-and-stacking domains like depots and designed to maximize coverage under time/memory limits.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose one planner most likely maximize coverage on depots domain. Need reason at most 60 words. Need decide. We need understand domain: depots is classical logistics-like with trucks, hoists, crates, pallets. Need coverage across larger instances. Which planner from catalog best? Domain depots known IPC benchmark. Need pick modern portfolio/planner likely robust. Options P02 Fast Downward Stone Soup 2023, P03 FD Remix, P07 Levitron, P21 Scorpion Maidu, P23 etc. Need choose ONE. Coverage with 30min 4GB. Depots involves dead ends? Delete relaxation? Depots is known hard for optimal but satisficing. Modern planners with portfolios likely best: P02 or P03 or P21/P07. We need choose likely maximize coverage. Maybe Fast Downward Stone Soup 2023? Let's reason.\n\nClassical domain depots from IPC 2002? It has transportation + stacking. Satisfying planners: LAMA, Fast Downward Stone Soup, Mercury etc. From catalog, P02 Fast Downward Stone Soup 2023 is IPC 2023 portfolio; P21 Scorpion Maidu. P07 Levitron. P02 likely strong. We need output JSON.\n\nBut let's not rush. Need maybe pick P21? Catalog describes \"Scorpion Maidu (IPC 2023); search: forward + width-based/novelty; heuristic: delete-relaxation + causal-graph + landmarks; representation: multi-valued; architecture: portfolio\". This is also top in IPC 2023. Stone Soup 2023 is portfolio of several planner configurations, includes Scorpion? Actually Fast Downward Stone Soup 2023 based on IPC 2023, likely best coverage. Depots? Let's see if any special: domain has typed place locatable etc. Plan tasks can involve loading/unloading; goal on crates at locations. Strong heuristics with landmarks good. Width-based novelty maybe less needed. Depots is not hard for modern.\n\nPotential issue: drive action doesn't require truck at y? It allows moving any truck from y to z. No duplicate. Empty truck? It can drive without restrictions. Unload/load requires hoist available/lifting. The small has 3 crates, enough. Larger instances of same domain maybe many crates/ depots. Need select planner robust.\n\nAmong planners: P02 Fast Downward Stone Soup 2023 likely uses multiple configurations, state-of-art. Reason: modern portfolio with delete-relaxation, causal graph, landmarks; success on satisficing. We can output P02.\n\nBut need maybe choose P07 Levitron? It uses lifted no grounding + novelty, portfolio; newer. But for coverage on PDDL, P02 is probably known as best satisficing? Let's assess IPC 2023 results. Fast Downward Stone Soup 2023 won overall agile track? I recall in IPC 2023, \"Fast Downward Stone Soup 2023\" is baseline/portfolio, \"Scorpion Maidu\" maybe also. Levitron maybe won? IPC 2023 satisficing track: planners include Lifted, Scorpion, Stone Soup, DecStar, dia? Need maybe not relevant.\n\nCatalog planners include P01 HSP2, P02 Fast Downward Stone Soup 2023, P03 Remix, P04 C3, P05 Saarplan, P06 FD diagonal, P07 Levitron, P08 Mercury, P09 System R, P10 FD 2004, P11 HSP, P12 Blackbox, P13 FF, P14 Approx Novelty Search, P15 Madagascar, P16 LAMA 2008, P17 LAMA 2011, P18 Probe, P19 IPP, P20 LPG, P21 Scorpion Maidu, P22 MIPS, P23 FD Stone Soup 2011, P24 YAHSP3, P25 MIPS-XXL, P26 SimPlanner, P27 LAPKT-BFWS-Preference, P28 FF(h_sa), P29 DecStar.\n\nThe problem states: Larger instances given to planner with 30 min 4 GiB. Goal coverage. Plan quality does not matter. So satisficing planning. Choose ONE planner. On depots, known best maybe Fast Downward Remix? P03 might include LAMA and dead-end detection. P02 similar. Since P02 2023 is current. I'd select P02.\n\nNeed include reason <=60 words. Example reason: \"Fast Downward Stone Soup 2023 is a modern portfolio planner that combines state-of-the-art satisficing configurations with delete-relaxation, causal-graph, and landmark heuristics; it is robust across transportation-and-stacking domains like depots and fits the memory/time limits well.\" That's ~40 words. Good.\n\nEnsure JSON only. Use code P02. final.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose one planner most likely maximize coverage on depots domain. Need reason at most 60 words. Need decide. We need understand domain: depots is classical logistics-like with trucks, hoists, crates, pallets. Need coverage across larger instances. Which planner from catalog best? Domain depots known IPC benchmark. Need pick modern portfolio/planner likely robust. Options P02 Fast Downward Stone Soup 2023, P03 FD Remix, P07 Levitron, P21 Scorpion Maidu, P23 etc. Need choose ONE. Coverage with 30min 4GB. Depots involves dead ends? Delete relaxation? Depots is known hard for optimal but satisficing. Modern planners with portfolios likely best: P02 or P03 or P21/P07. We need choose likely maximize coverage. Maybe Fast Downward Stone Soup 2023? Let's reason.\n\nClassical domain depots from IPC 2002? It has transportation + stacking. Satisfying planners: LAMA, Fast Downward Stone Soup, Mercury etc. From catalog, P02 Fast Downward Stone Soup 2023 is IPC 2023 portfolio; P21 Scorpion Maidu. P07 Levitron. P02 likely strong. We need output JSON.\n\nBut let's not rush. Need maybe pick P21? Catalog describes \"Scorpion Maidu (IPC 2023); search: forward + width-based/novelty; heuristic: delete-relaxation + causal-graph + landmarks; representation: multi-valued; architecture: portfolio\". This is also top in IPC 2023. Stone Soup 2023 is portfolio of several planner configurations, includes Scorpion? Actually Fast Downward Stone Soup 2023 based on IPC 2023, likely best coverage. Depots? Let's see if any special: domain has typed place locatable etc. Plan tasks can involve loading/unloading; goal on crates at locations. Strong heuristics with landmarks good. Width-based novelty maybe less needed. Depots is not hard for modern.\n\nPotential issue: drive action doesn't require truck at y? It allows moving any truck from y to z. No duplicate. Empty truck? It can drive without restrictions. Unload/load requires hoist available/lifting. The small has 3 crates, enough. Larger instances of same domain maybe many crates/ depots. Need select planner robust.\n\nAmong planners: P02 Fast Downward Stone Soup 2023 likely uses multiple configurations, state-of-art. Reason: modern portfolio with delete-relaxation, causal graph, landmarks; success on satisficing. We can output P02.\n\nBut need maybe choose P07 Levitron? It uses lifted no grounding + novelty, portfolio; newer. But for coverage on PDDL, P02 is probably known as best satisficing? Let's assess IPC 2023 results. Fast Downward Stone Soup 2023 won overall agile track? I recall in IPC 2023, \"Fast Downward Stone Soup 2023\" is baseline/portfolio, \"Scorpion Maidu\" maybe also. Levitron maybe won? IPC 2023 satisficing track: planners include Lifted, Scorpion, Stone Soup, DecStar, dia? Need maybe not relevant.\n\nCatalog planners include P01 HSP2, P02 Fast Downward Stone Soup 2023, P03 Remix, P04 C3, P05 Saarplan, P06 FD diagonal, P07 Levitron, P08 Mercury, P09 System R, P10 FD 2004, P11 HSP, P12 Blackbox, P13 FF, P14 Approx Novelty Search, P15 Madagascar, P16 LAMA 2008, P17 LAMA 2011, P18 Probe, P19 IPP, P20 LPG, P21 Scorpion Maidu, P22 MIPS, P23 FD Stone Soup 2011, P24 YAHSP3, P25 MIPS-XXL, P26 SimPlanner, P27 LAPKT-BFWS-Preference, P28 FF(h_sa), P29 DecStar.\n\nThe problem states: Larger instances given to planner with 30 min 4 GiB. Goal coverage. Plan quality does not matter. So satisficing planning. Choose ONE planner. On depots, known best maybe Fast Downward Remix? P03 might include LAMA and dead-end detection. P02 similar. Since P02 2023 is current. I'd select P02.\n\nNeed include reason <=60 words. Example reason: \"Fast Downward Stone Soup 2023 is a modern portfolio planner that combines state-of-the-art satisficing configurations with delete-relaxation, causal-graph, and landmark heuristics; it is robust across transportation-and-stacking domains like depots and fits the memory/time limits well.\" That's ~40 words. Good.\n\nEnsure JSON only. Use code P02. final.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3095,
+   "completion_tokens": 1104,
+   "total_tokens": 4199,
+   "cost": 0.00269184832,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1536,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00269184832,
+    "upstream_inference_prompt_cost": 0.00052977472,
+    "upstream_inference_completions_cost": 0.0021620736
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1037,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

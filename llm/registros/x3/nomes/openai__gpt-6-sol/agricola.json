@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "agricola",
+ "data_utc": "2026-09-26T17:26:52+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 10.4,
+ "uso": {
+  "prompt_tokens": 8281,
+  "completion_tokens": 517,
+  "total_tokens": 8798,
+  "cost": 0.025871,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 8278,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.025871,
+   "upstream_inference_prompt_cost": 0.020701,
+   "upstream_inference_completions_cost": 0.00517
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 454,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Long, repetitive rounds and food-management choices create dead ends that delete-relaxation heuristics can miss. Scorpion Maidu combines those heuristics with landmarks and novelty search, giving its portfolio several ways to make progress through the harvest stages.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Long, repetitive rounds and food-management choices create dead ends that delete-relaxation heuristics can miss. Scorpion Maidu combines those heuristics with landmarks and novelty search, giving its portfolio several ways to make progress through the harvest stages.\"}",
+ "bruto": {
+  "id": "gen-1790443601-elN2N4z4pPXxYqSRvrPZ",
+  "object": "chat.completion",
+  "created": 1790443601,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Long, repetitive rounds and food-management choices create dead ends that delete-relaxation heuristics can miss. Scorpion Maidu combines those heuristics with landmarks and novelty search, giving its portfolio several ways to make progress through the harvest stages.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquABbKBxuiu8nPrAUmBPHo4g_lV8KUd9oxGsqD1_wU-qe6jYu41c_NJYnvw2E55wloMGuRVn07yDMBzxVwfDhJT3hpt44F56xM62pnuOAFqfzkAm4jc4FLrd4QG286sA6ATCjvnjUATmVI5M7JeHNdOEfgw25PGBKZgHd0YSY-gOWxx0GFNrRDemPtYysg0zN4mkCtjbIzvJPtoLj0DHm6na9ttiFD-sy4L7scvBcGSpL9ji29SdwxCAJPdWqsu-P_a8iHyb1tSQvLC0HZKeThq9aOiqhrxRojxmyn0mvmcUYhKMQreXLbkbTX-ZM5HguNHvtjMZcAVlHgwmgCeTN0nkCIEH6Z7jlDKPA2lKM5f1O8010zaRCQdQ6Qz6ShK_1TGI5Uh3Mf55F1U4NTnbbvoTY17bswufKV27c-Dr_lzND78RFj3dGfEdELhjc9FtYr7VeXTg3CKatJXZfdDSAFtAfg4KuImL8WMdwfrGLmx9AUi1Qvl-hhulrgrM5gjpfQbzT7nF-7lOSBUKvoBQGxgXuPp1b6KgCWp2po9n7LLzIw1E6VU_lUJJ0hLjeGUh7hbEWEQmwho6C6HTu8y3tLS3u1QqXwNa5wHVhLf5xz8O87vcP05ahCQP-9iDCO_x8Tur7AS7dGSjQSHgFhmkqRpckvI0WPsxRaxlljWfrX9NoOxpj2ycvEAfIieRH1SXKqJALhQ4qvho-5vNZdOez3i5Z79cnFcAPziTXurvyarKmITflXOnwXEiw64MPExdF_lbMVhoZtyNttAi3zeSj7jLeV1xi2dU_gsqzn1SxuHuDwAchQTKCPkIl15y_ab_dNpYusaqjV1sQdZlQDMJCuG00Q6lFqWJlk3pLw2Hg82hEz6uIrpCoEhUUWT5jVvk63pLuXZadCGDO1wTnB-PljqYy-5JYoGdKKOtDjxLYR7Jg0ktUIcL5HSNlzPW0jS5Z5_fGtHAvff3BGzMQiqHCA6FqWHqBkATHXfUpDSGbbM4F2qAS6vnjy691vQMCAukxgcou1cEcCmPpO8tz--QHKwAGPQvsmkCTe6Efg75CZzArfEl5b_17WzOszVhhisETXQkIoDls0PL4jKN6SbWbhQwy-FgiZnzvU6pB-uiQbP_yLMKIYBN4p6oFnNJobHLLhPIg3EcqAehlZ6g61b0EuiUwmMc_NrnqO2yPnATa-lnA_eEUSALsoqmxLiylDVMJDig3favlo46dDXOFDseJtud-w47cQ0TRPSUWJS15h_hq3dt-V7gX_kGxrDR1t-3esNNmVpkVB6rjrRRuZjlEGWEJiYF2zldEM7eLilvfG7iTNi8GtWMY9ypFVPAeGqTqE9bXQ-NMuhAinVjcoqjN2OENdOhJg2frzuVPGBu9QnQxjR0h0XcYzcVa4TSFpT9OD-fbjMmRBvRmYbssW0B9pTnAgY-xPn6twAhsZAX97GAMl_UvyJu9DybmvYOGhRXVn4NSqzNiPkKDPiBq8USJkp5-Dn4R_4dUKCk5jwaJhO9_aTTkf0gXFZSW4au9pzG98IzmUVt1E2IwKXzwd2TPaj_Ct5hB05F0vd8OQxK7fj_oZ4pXZH7-oLrCrR1PimvsfphjCd1vzVx06zJGYSYRN9J5t7M_jqO7IPdbW9eIIpyXEdQr2mwvlL3dLdIXSwe3_3BSj50TZad-uzo83ESYH-ah9S-F5iwmUa-ksLBrWvbUsnpa65AByMxCwFU1uC70VBt23KDHWYLIHD691z_1ozUtuExH1Kbm0-UiB0QV5pNMN0MNBASoqhnbf8hYRw5hl53A0rAUUvvJLEvlSHNKzlrKlMvCOXWLEcjBNVqBx3FXaxHul8NIgEZ8fiPAAnLnnUIXQRYXBVFoAPvydY6ixJYl_NWUFLNgyd3b2xMPvvFO3vlXKkgw-GxvuYmoIlYPQqUgRhnZn89tjLBEn5hJUFI2H1l7nCZmaUWR_TG2IF4vSNNiXCX746-AIVRd-s-y9DzAl-MjRA2LVwWi2IMogspXQ08hTlJ7vk7ADuyy7ucKMB5CuS7K6AXqusmE6I7z6HVd8czIzP4nEb95OsrNuydq0MmZw65HHEepT974KKW0KwGnvOzo9serMVQplSdmiJLBhSE16XIFXXgF62VhAOeVgpDSy7I8EXEC4bs5z3yP8K0CY46EWMNRYddNS4mWUtcol2JA_rbUsVgWOAh1P1W6HKv3DKqPUcRnk0FI9TU9ozAXPYG45lN27FxlbTFTrvnOcrn0fw-CHvXJV3Km1YJdLe5XU6vUsbYwEbhy02baZReAd8ymJwQhZrIN2UptsC7pIOJ7BlMS6A-UMqdu0QDJgyqdMfdv9y226iqLrhfu3z1EHEecn79O0sMFmbBqHA6tKVWYuQF-eIBUKDKmAXXX1bxoTkU40E5S0BfV903nYDtCIGFstaRnvpEepAZDumwvySQoSmKc6Bd-MnpKNeR-IgbM1IyUZe0xM-qmzB7vkYAiVPWkY2qaKFtvIxCThCmX7HbLzuiXwv6vOSk3M1I2hcuNlXSWIWYoqKZTofGh2ydMyfsbxfSurlH0dvz1o5rBFXXWBkxMBiqAMUkfvQ__s3Sjc33_aL9VyA7P5DVmxDdvioFk6xqJ7V431K1NQXxn_2y0bMTfnnG_NB-owCSih30B1nEFURiULZHa-32iLlXMzTulFxuACafDvKFeY4LFfaDCEZnKEjlPPRnFG9YOtYhK8HzPVlRcJ8x0fAEcLmqt1WilvaO0ycuw_yJN1gjLSZGVuRTTeVbx-PwDjn14S1YhN3VGeI9HkYJcXaBLEYvy1qjCjbNDIEKebWG47TRElu4MWXgwBoUQ5AhWm9jnh88pgC8v9hEOmY3Hu7GmRuyR5qMkfirTixTHTfuex5VQtDYxU4vwGp8zzBIrbZ-DYdsmDxE3uF60LAuTxjBc47MBxVR2qA_Kudd2uL9TVZZWPnrrNOhQRWc_kv0t_o6x6Zof7QPZe-a-JvuEcvvEvFKBfjmiXqPmkJaU9Fv1B_zG60PW4cBrI9ljNFnJFU5WIvFB8qThNStFrqs-LJ1BZEoTeq_Ya9IOLYBLIhtTVemuMjqCUSafRuCbZJhFpORT0uHb5T5LED9rNAbkJP81kjMd_QOxNU_FF5VUMkhlPAizwcX21dRv3JjBAikU5fietr9oe7h2gK26DblUEU1bgayF9IIVGmxj-gC401WTgg4k-9oFKJLAkgRL4i3HyVbdSHnYJfbQ2Cl4-zHyyc36xL02sJ-Prf9uvlRGNJgQoK04IeMdH32gP0KOA97YLXRfZ-9OJSUdje1quf308vh3vbRyGlqxJG2TKMPYZMSKsyu-18LpKC48ckdXe_v_1BV91QWU9eK9SdWEbYqmCoGgIY7UoMIpvAHSqvqg-ibMQkk_m8sXFBlbWTNyGe4lBWuAu62SVJEe89z0BCfgOhFZb96BzrVVzV3xxSRV9SvKEre-33VzmY0VisXGpjA5sh20JTpmK4U0sM9zNe7wXjuH9x6mUj3Qs_cfsqbbYP4sIBwT9YuPigt2oWrRNmRKVbsZHfm-t4wNtRXeiPLnQhlys-a9nv_EJBER21ETzv924JsKEEeDlwfD_03jI82JdShyceTMELhVt9hNp49aoTeUhMGgp0lSvgrMiP9kXs1SMvsczTSfKZrcIdHw_niCfHIAqS0ydxihkZqSAwo_0s_If8zcOR-KGEH0dp95WgPzsLAN03wJCD_GvIk1isJPTFFOfcI6PyF7muQhDkFtH7ev1xaYvoPjgpJs8Th51jgIOMAWRC60yMzjGUG-S3ZOKgKCP0_cNuGy8GXtWFofew-zOdR2r4imNIpoSCS7Z3NEjTGSG-hauqBIK3S48nadJSO1m3EXUZrmX0r3VxPWYEFWdnvjv-7AE0IHsT3wmFoajMjrRKb7Ym4wG_8KFdtjhhVkKiUpeIeh1SW7cYvEBbp6yxMLh7RqbxCrAKVzCMUpEkMOsKiCLiC0s9c2MTe_Z6mrie4K0VVEeOYaZW6W3fDL3dwTM9GDgI9WzEVCdaAmolKl0b_XOo5NtorPueFuUZnNKX2BMQThsfozXxT8Ptb__JLQSGV53OC90x_u1ipqIIJKFbuxpXA2F5JJAnnCaqfZfg6WIXqg74lR_0i_J44vZHrXxDkLle2Wp3_Mi6oqv8ApPIJ7n4ssUjRabofXkOvx7Lzqaj4F51CbchzdR1Pqkto=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_088a418e036d3d7d016ab80052d20087d19933384ed0fcc4f6",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 8281,
+   "completion_tokens": 517,
+   "total_tokens": 8798,
+   "cost": 0.025871,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 8278,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025871,
+    "upstream_inference_prompt_cost": 0.020701,
+    "upstream_inference_completions_cost": 0.00517
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 454,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

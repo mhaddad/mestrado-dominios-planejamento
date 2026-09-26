@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "storage",
+ "data_utc": "2026-09-26T17:30:49+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 10.0,
+ "uso": {
+  "prompt_tokens": 3868,
+  "completion_tokens": 567,
+  "total_tokens": 4435,
+  "cost": 0.0153385,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3865,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0153385,
+   "upstream_inference_prompt_cost": 0.0096685,
+   "upstream_inference_completions_cost": 0.00567
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 495,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Storage combines hoist routing with occupancy constraints: moving or dropping a crate can block a needed area. Scorpion Maidu’s portfolio combines delete-relaxation, causal-graph, and landmark guidance with novelty search, giving it several ways to escape misleading heuristic plateaus and improve coverage.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Storage combines hoist routing with occupancy constraints: moving or dropping a crate can block a needed area. Scorpion Maidu’s portfolio combines delete-relaxation, causal-graph, and landmark guidance with novelty search, giving it several ways to escape misleading heuristic plateaus and improve coverage.\"}",
+ "bruto": {
+  "id": "gen-1790443839-Zg3N556CdufgmtqEOQ6U",
+  "object": "chat.completion",
+  "created": 1790443839,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Storage combines hoist routing with occupancy constraints: moving or dropping a crate can block a needed area. Scorpion Maidu’s portfolio combines delete-relaxation, causal-graph, and landmark guidance with novelty search, giving it several ways to escape misleading heuristic plateaus and improve coverage.\"}",
+     "refusal": null,
+     "reasoning": "**Selecting storage solutions**\n\nI'm considering the domain IPC storage and whether red-black trees are the best planners. They seem to handle deletions well, which is important for efficiency. I have to think about the user's question on domain selection and how it highlights issues like occupancy and diversifying searches. P21 looks appealing with its novel features and adherence to traditional FD heuristics, so it seems like the right choice to make!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Selecting storage solutions**\n\nI'm considering the domain IPC storage and whether red-black trees are the best planners. They seem to handle deletions well, which is important for efficiency. I have to think about the user's question on domain selection and how it highlights issues like occupancy and diversifying searches. P21 looks appealing with its novel features and adherence to traditional FD heuristics, so it seems like the right choice to make!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAFJBhHvUngn_SAI3TqP3GnKOcSStogfonl6r7dpFjpaBqq6JXyZC0r0-7PeiKwdAJ6kyC5vKAwacY3ekO6sMzf3NHY-Hw4o0TEaA7LDCJMWW-SpCLOevfC2CL7CVDwVTIIncITuK7l-GlPn7LOl6LDQUHOLqzMkHoHyasY0nZ-ZIPH62-JAU8w6qL5ppSvc6LQOD1nq4u6Yv3Q82DFgQJxMb131Zg_ZV_XYMoqTpPzrObzlJP0s2DoNy1Ym7SlfR8qfmj9jkxNajn75aloea2ScJZTjhMj5IY3TgCRKOwECEVH8r4-RN_xwvlEpNVo6ZFA_R9l-Ifj3DB2yEEgyiliOBVpXISJbh_x7u3MS4BX7h-POc3mOjCI21kkxtxVALib5-Cq5-foOHa_kg8ytRZNxRYTDC-W1oiKPegY8oF0K0rKMowgg_DcZ9zUBW2OnyeGJ6uaWXbB0UIB_WlueO5LWpkD5uyBKFItRcBFFx0ccRFNgMEChUZ5VVCPDv-q4wvRXLQXRsg4sR73Y2ZuqahPobmz8FDfGFavaa6OIBdywD_hTrsJ9ppEHOP2-qcm2cmw10k5rZdsd76bk0QMO9hYZ_bOxceKb6wMmiAf8hof54BCzOvq_FVy26hru0aCaH56BXK3GjcTAfMhScEYHS7Ek5c8xyeebnrGcCzCYsLzV3Kifm5MnIujDru69qTZ2w2GfCdTDsR1NcbAiDC_D3HZYGQyRT5XKx-zKvAM9zZo67f4AsZAFxVQzIYdjeNN40O4DTrVCTSYJ_LYmHbkIcWl0e0B7FbbBWrsrPf96Q_B9kzdMqEgdENKB21MO7RM7Rr6by3dLeAwA99ScFg02rj2k-CtSE6CofUpSv_cZLImNv_5Wnetl4azoIfzWqxy3ySEHvAu_d318aHYnn8hYAlz3zkR0D3nBPczdJlRKFs76X3-zODBN1RZLy3Y-Z44oXC7h8jU5YgWxkOahyy_RWpLlkIA3pxr-WAFKjeo8q-5CyhCCrLrFMPmislYAcvX7c3Y9QjxRv5CfelRTzAvjiYjEJjAEp4sqXpEc_dmJG0HcXh5fNkw9dl9KJFZzuxNlhjlDqepe1G7T0zTU6A5raw4SFC_1GvxvWTJFlKRnsEk0XSHsGCZNhTfOCJ31rdLbnJnu6skRJhMPdnzV0h2H6poZdgdko4o9e1QZKwV2XKpPzJQ9_DJ6qN8kMHg5CoIZZcVyli6gNtYo6D43EJDmiQfsK_GLSlGTAJyHg0bVSwvGTVss7qEh_e9ezQV4zD7VGCyzw0yu9gOn9lg_j-6D9-30754zekMyuwcesXUCMe6VcE_MGBP6Qte2LgqegOJtI0vq6rWpkIG8ogk34-10r5LAABOgA76EnQlEIJnNHNQt0fX3hQaMVCPuAT5wCCdo6qJPBYYRcka7MgN987y5iNzSGzsBLsDUplhB08S-5l6X0UOd86a3SWhBzAFgAG0_ukq3WoHN1w4a9tJdGseiBqoFf_-nrBvx7SlNQPR4bFAolFT_Hy1zZLOYisP4gD2WZDNas_Gh9YQ7gdH-sdNRelNHv9wBSe7KzADa7peTZSfZjjk_9odu85QEIQjObhOiHWMmAl-JaqQci0LEaTcQhtrfo7kg_pM23Ycc_69FdhnQ0n-9Y_IWpQbTdpyvuM2IE0r73Sf88fj3sMYvFDPxPwd0gVGdL0_ZfPX6Z5rr2kLXe6K4RxWYiCGV_5fDQlZ063wSK8vJI7alBRknOrNfC9zEUywJ5rZHMbw58gIIOuk40JDZVodoOt0wIMvxDtmYAu6w9L71qJ8e1vrvv9D7UUwQ2ImES_gw4rM07A3-jEomVtsPZIKN3onPoN4foZQXJf6salj6qgOj9wX5CE6kJOSSe2Af5i1B_PhgA96TLUOrnrh-bA98La6faU9ZJYzHyj5B1SjVU7cNOX8DzWLW-Y8uVTQiQDHnwHCrItNZx7qoWz6gi5ZBRJMfQttfqeqHtOvUUAd3QutrkCm-ZxnBHpmJvNmEhkvox8y2ECaMmDgP7dVVFQJSGHxWGER2yB1lwBkYOVrU9Urd4ZWc6jSmZiN26Pvq-OEmJ7c8JoTUYdXzThC6qfGJxx218ohgmsUoOIAJqglwFoOa4xMgPkg59-yCv7-tu_Hr6A9vdTfWDxGlEq3s8yieAX7HXvoWPTWuUBVTNM6Pqcf1eXAG0ydgJz5o19FvwlrN8ZTbwwk3fWteIs_PpzJBfzCpPtHh8AWeEyk_PNW3_R6GhqvXB2IoZJkw_K8Z4AHzAi7LrylXfky93H-DIlQK8T9rQqnc4e0wdXSC-JNpWmWOq2XsJPNdsJz4356_SRxRD2AtJjiwFmJD7eL79lfvbd2h1EQnPIGp3Zca8kFYpjYthfEZ9Hn07wTxr3HtUP05Z63Y1tXV-PvJs6VdDLdqKdxlCqw3-ndPo89RJwI_BlLU-Ear_rcIBFQUT7YLH-QUZb1uKdvDjc1FLW3GbPrA5tw0s5zgOm5VofRe2GTuDXnAQ9nuBBZKHpg_nltIgvxyeyfeVGMQ1C0rt7-e0P9nUPVwXrPRHhVLoKroOJL9qDIQVPX8q51GcYByk5Vvo1mahaJQRAjl271vwrugxcfzY8snjZAWE4S_8o6Kbhyp-G75_uSOq0fz1BB7mnoWaJkLKq_hrsvRA0hdFg7IEAEnYcXvMORoQphbEDJymPhRTb6RzFfFu2tF6aYwVyUGxbZrSTIBSPkbAaLri0ULpSn2dMUqpMdHCuSflqS600dtM4TBGZtQoSlacHXlry90eDulI_X-Ld0llSxWw4n-qLX8mslahoWBFZQPs4mQ686MRbZ-BfWU2EeV4LNgI4K633euf8XXlz4rbZQWdHKGqeE_pXr_5PJ-4enKebY3LkbYNuFPtKc69dQujj2kDWvqFXhcjcug7szyokIaC3g4H5rgygrphiuEVb1-nfe-X8ed1Pp5xs9lREVSFjzV7AlvjQcZfipvleNYbw6W0O167Cc9ql41hwTLFQReC0Rfd-szczdJ1Ep78c8IsaLv5EUBz3MbRcYERhpoAj-dHdHNjjBuWj-kc8pcuIbedTHPzmcfdXeO-6Vi5N9PREMtmZSZQyn2TfNiUdOYVHAXb7aLt_UHlUIVBvllWK9IutDBFep4jklzrydiajbUne3tuBuP3eHL5hsjTh9QT9d2ikgOlQD34GJKl9n4atjw4FjVcCtJXTUWJyC9fvNc9odUYQV4U97VvteaoiVjMuTdMc-YoUDgRDZkEEofNPSHEa5sDFx2l5G1mBRzIsuLxl4oO2rMkXyYqeQP5h4HpBqrNPt1ZAAtmPSdN7LxffQop7Qt378TGVARcmc_pmTmXQ6c61SS8Wc4c0TO3rj-v4oyO2uWf2nC_VsZBoCAtRf5IEVYthSsCG9s4a4oj9sOEjJR5ABxS1esl5IPCiOq5r_5AwW-vmPNS-p4LhN7Edy9Z-0GvpucTF0T1KW_Rr3Xz472cF6R2AAAP7ulcxpRIWmvRRfDiuyhDmo1SOhBzkoikKPgGNG1g17iUYy5NmFXbTYPJFbvyOV2O3BYQbzROEUJHGqPnjoYaFUPbv9CYaIR5qDbqgfNLFEcK-2AoH-NUI2WczeA4Rgcy0znag4ebLVJnebinKMm159UFfB6VHDTAtue6FQzA9Cuo6TcMckFGoZVRp_0psW8VQKYstCRF3PWOVwYfxRYEx25GalZtF2EyTSkoCnW306KoTh1oTKiokpvCHkNB_Qk_qHdM1KwDq4uVD29BOVx5iZPNBrtgzusAC-k1V2IfcCRS_NQhQar818ycQ3gQeRXZAxo_T9-1qNmuBZk9JUhzfKRlLqMb_vV8Vk9S9C_AdBy97P3hCCW39bF42QOuhZGQtKS9lrzplj5cnWhueiQ-n0pxS5v6mfQ04D4jNLz_nc1jya0LIpKC9F7ncCmwP99rI_DiKClyDg0uyGnA8BP0LMWka354-G7OgliW65l0o1yVCav5ivBI9GLSMB3W9NzKFq9IQZLVNwo6XUGKwHu4TJocb_SAft6sLOapmnzolA0VA1_hQWaztLhkqnfomzcCL2UAIsbFysGI_aQlGF6R6_gDEwq9wgV5wFk5NAr9ZSbJ_C6y7AJE0p6QRCTiMIbXfTAiKMzI6fEnk34vPNvkR18PC1aIxLXeVRBwhZS5hSsLhPccaP1Co_gaydIHK6wruICY6MMPq6jExiGHWRNJygcIqCNwPxhOSJCyWNlgUdRjlj_FOhgHdEh192RL7ZiqGkhFFihr9SCVeJ19U8XTJV3TwKXVZdgsIJ0jOiXoKeuZxAxpD4-yn7KLQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0d9eba44e9f741e4016ab80140530487d1b8246e5f9954e5b2",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3868,
+   "completion_tokens": 567,
+   "total_tokens": 4435,
+   "cost": 0.0153385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3865,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0153385,
+    "upstream_inference_prompt_cost": 0.0096685,
+    "upstream_inference_completions_cost": 0.00567
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 495,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

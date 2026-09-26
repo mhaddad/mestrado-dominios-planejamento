@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "grid",
+ "data_utc": "2026-09-26T17:28:11+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.5,
+ "uso": {
+  "prompt_tokens": 5764,
+  "completion_tokens": 312,
+  "total_tokens": 6076,
+  "cost": 0.0175285,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 5761,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0175285,
+   "upstream_inference_prompt_cost": 0.0144085,
+   "upstream_inference_completions_cost": 0.00312
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 243,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Larger grids create many navigation choices, while locks and single-key carrying constraints can mislead delete-relaxation heuristics. Scorpion Maidu’s portfolio combines landmarks and causal-graph guidance with novelty search, giving it several ways to make progress through those plateaus.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Larger grids create many navigation choices, while locks and single-key carrying constraints can mislead delete-relaxation heuristics. Scorpion Maidu’s portfolio combines landmarks and causal-graph guidance with novelty search, giving it several ways to make progress through those plateaus.\"}",
+ "bruto": {
+  "id": "gen-1790443684-RuZvUzEC5tQHPCNHVtzK",
+  "object": "chat.completion",
+  "created": 1790443684,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Larger grids create many navigation choices, while locks and single-key carrying constraints can mislead delete-relaxation heuristics. Scorpion Maidu’s portfolio combines landmarks and causal-graph guidance with novelty search, giving it several ways to make progress through those plateaus.\"}",
+     "refusal": null,
+     "reasoning": "**Evaluating key transport in logistics**\n\nI'm thinking about the grid domain's key transport from IPC 2011. It seems like red-black trees might be involved in key swaps, which makes sense. The width here is good because it allows for huge relaxed heuristic plateaus when moving keys from point A to B. The use of red-black trees for logistics seems really helpful in streamlining that process. I should definitely consider this more in relation to how we can apply it practically.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating key transport in logistics**\n\nI'm thinking about the grid domain's key transport from IPC 2011. It seems like red-black trees might be involved in key swaps, which makes sense. The width here is good because it allows for huge relaxed heuristic plateaus when moving keys from point A to B. The use of red-black trees for logistics seems really helpful in streamlining that process. I should definitely consider this more in relation to how we can apply it practically.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquACr8qzZbwcWju2YNg1-4NGqOLRV0ZoGu9OSVpykrYPh5n3U2VqfwBEGwu8QHmR_7tuNxTnlfMwgHjog3ibBCpvSqQjeaFLO2QBZeJ7VB7tr1pxhytwnFUQ5VR82TLHepYAP2j04X7_dovqy_s2zXrfvOt705noMO0HDuq5i7O0NITWhW3kxrjvaL9k9d14QPdYkEOyUlCB_BB8hXp2neQKik7WPLtMHmAqptHSwCqV_QtKT0FR8rwGqgloqHv8zUmWaoUNWnO4srbTljc3-ZF1e21ZXswnGkvbcDIUKpB5KzvplMsMQ3TVmbgsRmm43bMks2l03jpVIY7G217UkQK62B6hE5R1lI7swLVZeA6y3S40YPOsMqse3oG1sF_w_WZ7z7H4Ygc3gLoa-1a1FOF0lht3pva0X4Hgp08qBXkLn4q8ko1hYU5b33Ou2XoRFzpVTyTMMtudgz6UqxZdP-49FfoFkZ60U688p8v5oMV4cVb6gCLpE0Aktg8zBCFEX0kNQxIgdR9r6JwIrWFJHZSnwUwVtHu5cXYP3Zsn-F8MUcfR-EuaT2NYIDKqfi7XkOOU9gPmWndU4zS2sFL5mSioPHTcyLqJBlou6gfLI4fROMCTZ9p7uyUEwqOGMiyFlVShhWHOPoj1H85zoo7tTMJji9inQV8NvTdoVRppP0UmFP4kMBY0VlDelpmnfLj_EMf-G5_m3Ei_ct8fqNuDKIpHMWq9O-XNkxFWzyEqTR4sLyf7VUQCHqVNVzhHDrNntxWJwd_wrllISwiD2wwm4JhRtk8tbYaAAUEHmb9SsVR61GR9JqWeMBOaMMzZ57O6CNLsV1wQ9d5Ud7i0DVJA53FOBsLpOhn3hH_Tvq5RobY3bcSQLpWFJPu9zUN61i15CnzuJqa9YJ0-fEm-ZbHzvvIadoS_c8AYjGdoRSwhT9SKzlmbghK7zE9Q8r1mO_d7VH2w4It687O7XqhYjtMzmL7Ja40rz3ldZhqIa4r8BToWHJz1hZnnnmoZ4HlOLQ-A6TFvZ8WBAB3vti24wvfaSL2XeUkwiH0YX49MtSkebVFxIyBZoOXPyB4l_uSkdEkl9u4GdpRImTtBh2038MNFhr-VNVroRxDAPVIbMGHHWz-ExPX7P1YkiJkUs4t0cif9pPNT5L4X9c4lU_aJgjCcgnVRj_fehxcy5jE7y2N99H9fdWoLi_OxpsSLHIQ5xDBVb3Ni0jZOJaBq2Rk57TZ-fD-nl89a-QRoh1joH01gDs2OskNOpHKpn0AsopRh4jQBMoPgY8jYjf3bcGxq5cwbgHBgCFQl0scXVdMxy8woeBluxZJal0nD83SaPapHVwUijAwmIWr1RUOk4-x5Rw7ZeJpz_lzKvRavz1y2nV_8GN7ju1npxNuE5tuyasxMEVog432v6qVG_nFaUmepqZvY7nc-YZqqvcOUvef1RA8C2MSAH6sK5kuTGEH4nhMKVQeV9UhmQXqyQqNVWz2ZXTPH-XldzaVShr4BvmZWCtHK1II4jWf_H1aQ-aci0cg7NM0rlpI-rY-1WxfhOZW_12dzkbDM0d6Xy3O9xZwabLHe0xdBlwhMb3ruWT44qnhuujeA2clAEZ6DSHiDuUfQqdXj8wB0rHc9gTHQ8JCN9uUJB8AwME2nMZxdGLrw_MoXI2TC-HslnXoA25OvivLTf8g8pfXvZm_tfl8mC6uzJV3pSeb3wv5vR1V0FBnTl1YKaRkd3ZGOBqlyLvR-CIpo4I5ifQr63mjugMTsKL8XlphKkR8zvpmw9udctpYoT5ZQlf5R5a7EvkdKXr_YnPSAPn-V5gGLRKHvhM-etPLfva82DXgMsV9KgxDPnV0KaHz0FEURK2asme6wT7lEHZYmdQrY5ZCwKXP4kTkhnqQBluVZQrNdrMB_O8AA0UOsoWNTTjAwFdInqOYIGLwS9dO5HFg4rDoYW3Tw7zOJibTbE98GUXM6MZVNQvkY-xdcxBKNYSeuuW-ssv8FIMtvxpZQWPL5aMo2y5nVRPJkcXb_MgWnPtSoVdLb1nlY50A3oKC9J8hLgjEzdLDUjwXg02lQdS9xFxYYQWl_RWEfCL8N4M3S5-ptFViWSQralJJMXVZ2BRMNUIKcBP9JI7AcDUUgJuV6DqeVU9unQgFxacBjRo2W5hfgxoVHIW--xaBcvlT0o5OCYCCeB4StKkPysT7MxTYoaWI84Z1hFECaJaDy1vehTTGqsyj6ekipWAiWmGTE8kLRKtgWhP9B73PSfNJ4NlNb0mBSIFdt_JM142Nw7NtF3qk8euFW3NWKctIcT9xuzyHEuSGrePAxAfyv1DW3uIP9ty3PU-Ru8_BYgfYkwXBTnIYJrGqS-KydiLq00a5mKbMGnJVtODri57tzuhxbYOwqoMbXbyEEpp9UWq-5p7zwHtt7m_WT5yaHTx22VA553RTZ7Zkac1rk61l8nBPc1OljY2g7A6Zh4r3uit0xoDf3Q0NH-G7PmWCJ0qfG1jma13CnkQZBQtp37vO4CJehpJpn2Mes2si1FepgedfX2idp0Jtzwb6jIZBSTVCREXDjWG7LupF3OZLfJE7GI3FxNlDT17PrkVd_0c2dcJgBm7Ls9uWSSwwtJ3nmN4-RhGmyjxYrZhD3IdqvmYfwWmmhXruEMcj9npGw6DnYLyixHTVjTAEsy5PqBww_5P0GLkgNuzo-bcKIo6qya9bwzdGxJ1Fjs6mxluqhXhczszxvhfqYi7hViL1CMCrnruMHhPic8iqW-g3jjEElEmlJBNRY24fVwlvWMSw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0e2acf748f1bbfc8016ab800a5acac87d1a22722b3033432b1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 5764,
+   "completion_tokens": 312,
+   "total_tokens": 6076,
+   "cost": 0.0175285,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 5761,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0175285,
+    "upstream_inference_prompt_cost": 0.0144085,
+    "upstream_inference_completions_cost": 0.00312
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 243,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

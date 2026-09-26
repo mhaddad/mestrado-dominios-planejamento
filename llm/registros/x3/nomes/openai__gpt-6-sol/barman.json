@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "barman",
+ "data_utc": "2026-09-26T17:27:08+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 8.9,
+ "uso": {
+  "prompt_tokens": 3819,
+  "completion_tokens": 384,
+  "total_tokens": 4203,
+  "cost": 0.013386,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3816,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.013386,
+   "upstream_inference_prompt_cost": 0.009546,
+   "upstream_inference_completions_cost": 0.00384
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 317,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Barman requires repeatedly reusing and cleaning shots and the shaker, which can create plateaus for delete-relaxation heuristics. Scorpion Maidu combines novelty search with landmark and causal-graph guidance, and its portfolio offers several ways to handle larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Barman requires repeatedly reusing and cleaning shots and the shaker, which can create plateaus for delete-relaxation heuristics. Scorpion Maidu combines novelty search with landmark and causal-graph guidance, and its portfolio offers several ways to handle larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790443619-vt9vev3zCLOPTuhl14ns",
+  "object": "chat.completion",
+  "created": 1790443619,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Barman requires repeatedly reusing and cleaning shots and the shaker, which can create plateaus for delete-relaxation heuristics. Scorpion Maidu combines novelty search with landmark and causal-graph guidance, and its portfolio offers several ways to handle larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquABrTeENjdGziyx9GxHbjFSimbMzUKNAZIB_YXUh9ynAmmQz8JQVf5xXggLThq7eBecwnJpmAQYYvZvRtT8baglEp-DGlEavCs1zT-gIbgb5YLR4Rkbx834vq9NvRrY89KXQlYuTQw4eSRbJFCN6QMnyhQXJMw_1Zh_lB0gpKSjkeRInkJOwXNkwcxTR4_CEIIg1VtKcuLmJODQdG5MjUA2gLLVV8XNcU5OH5wI0ggcRrdosUXpbyA5gqTS-F19R0UDBB_i-ac98M3N-CGe-fKXuxEJA-h0_zZzhDfmaM4tLlJWUtOPUfOxxYppFBRt4CM43EqkJitSLczsKtK1m3-rIqfuFcUhBRiwYBxJAOypR7CdXT9DEOzyKeeSsDNjr96xKf8XZDWEyu5Gf_VkKowjFBX7XDudRHncoJpkHltSYZUIAPZzXjAnUHLtxc_l9X-j0wEn8tCNUR3iZK39GJLWZfnQgKd4Qq1zsNq-5zp_5YU1jgYzprXFmolK38DYfbjyEk_FFx2WLGjx3pGQNNlxqF3To6opq4tmeEDENHWydnQqbJATiYYFeNFIlpvAxx9HGr1bozIb-BXZmSfS-cw5TB2ezaQf95VXm7DTVdvrLPDff-56SeZQY6tfZCOOcxs4MbsN2LUnxaSuD8XXtzb9QORSEd0L5f3IBi8EwZ5hG5tM-yLl2WKk6YcZwA2meWM-pUb4v9M0IaNowori4G1hSz3iO1cmEmbAHS7dXuDmAtI1M_3nOfygl3aQ2EZLHX-nwy3QJqy0MYfS37smfxUBJv90p51MSxvM1XaWC4EblHL_bk8dY9CBVCvqPI9Z2iMC3jp1TaHGkIBZxnb4hnFnPnDJidyCwQj5sDgLxisYztBZbaDGzaE6M2G0PLUktA8mIcoARYMrjEDwnusBYRt0TuV6LE7WNMM8D1LR97MdHCTZ4GyiGego9XxlEZ_dJ5dPdkrK73tPvbqOLYtQLTclu3IZhybSELjIyx61_rajqn4Dj1Vah5cXUv16m6O3wMjUhGKW2UM_HZpJjmlaNCktNKttxhDb5eNtU0uMHcbxtBmV-X-9MvQpPYYsDzSyRLAhBi-XaMbSRHN9GBZdVTrcPp1QKWJO8Ht4SySoLwiKbgiCW6R1-JPtlYuQibAoibSA-eyAIHumotiGsi--K9PP0VRQxjIYAZhwmSXzGVougykee06VGpcMbGBtoqgAOKHazV0nbJda5-kQh4ipb0X4pcAtbkXGThqENKAYiN_QsVon0JG-xa1OsTjwQ0a7Fg0Ke-fIB59Z6ikmvr0G6825s66yTRPbhewuCu7TTIsQGv40EH0EHhJkhNmPGHDT8EZBZjEUin0crWFOky37EzxocSnPVsGSW4LJY7_SR_VK-o6WPIpKwExD9ANvS28NxCWl3BbeK0nf5NbaQU06Z6JY_PtqPuB8Z2YPRe30-vl_L_fjBlm8iza_TT6KcxVfSdrdouMTfenS3NYMc6fJ994NlIQzVwevRGqUiykjzXPTtyiZr6Gwf7rBznjLVEk_W_neS2riIOLOeKBZLZRSbBAiDc2Z2xczbQ-Yz0irgjuutm7P-uIJXQhDzDTgANiR_4bS63LwfXG5yCaWC90rq3lWuEmfNH3GaKjPBTBGtOMUtBk-0nx1-Oer_MeiVGB1TIUvn-NaFEjKeseRnBON300rmhXb5HfiU5x7UJyL7huIrWpxnv4GY0vRwaa77d6IG6uYI9phulS1xnUwy7OozfsnfOvmw9glwk1uQ0Jdr6v3JRLhLUgyFi3NLCvzWXv3NL420HaD9SIH8yXqFtfL0C0OeZDycB5Tq5aWjttST9DbV2xyKM-WGZIi-7iW_tTCf5FijZpbkobbAVQIyeyBXYS-nQI6WTJsvACVOqh57SHH-q51z9csZ2eFrzHgwrJ_ipqBW4xuqsVJgc9T4cWaJVogRf8AO7IZ8e7aaSbiJEVVSHuP12Dy9WNtY6pHLrJiiSpGefxLbebnIuP4jXEyDjrbdOCaTcX37fVa5_9vg-PQ-3ebyBOg_fbBfguZlTc_CbKUj6UM1wDx7AblF8363p7gkUAJAj5wqvX1AMK-5czObHUqrMN9NF6Mx3ATGvVXd7s6wnF6_K7jaYZJZ-ExhDEdt-9tuBENMNJ_LwWAaAD5D3APcxQiOGlbj-VYltzphNF6YZEb6RHewrCfH-KKjVB3JsGSsOX2c3XCYmC_N_sS4A2n3ldIFGRSsIwFbohsrKFe7lWTvLaAxoCPR9i2PPtpUHuVWvhIVQ9aWnq3LzDD5TOtHFhbtgxbIk9Lo-c1cpLSxi9ZK3O630BkbfuUvKBpltieg0PTUZFeShR9cg1ZtbV7jwCoFEiUB0B3mA4hlfi-bknnjpQ8qWJjvIthgCW6qsFWFD1iLwNFQJ28OqA0uB9PNMc39ZlryHvYYmAIX7pFyVt7OemRudVosAeeWvccOZxfE1LlR9Ln6eHYAYVOR7affkk9zAw8O9UX5bsk_dznkNZAnHqTkp7LwoBrMyRl2RjlcknrWuOE96LBrzWlNiyvSkQJONhimSdA2m2lu6ssIVfp62qyuy9MsBHvYtv9yZVN2YWTn3vyzDm13iqNM0577iiCiyzyuO6R8FIltOmLLPLaf25Q4cqRMSnHuFrejNnEBapnz-wjR5B7L6rTh_4AwralPQY8_HyDYIq-xEmpeFnlOt4vKUF4qItog9So1o0imhKin9XOXrnJoZjBsr2IFGlQkNvSjkTkCpR2Wq3AT4ylXLD0lFXNrm00AD46zZGzHpWP3JOWWEWLdai6BS-c_DSbDQYNtiz8yGhigI-M9ByrDf6EyCrLfgmFIsF4JZi__jSgIp9YPNmkJNPMeADHr2C6FJ3uF3wEran5Y7lAERYGYX05bRxlOG_FyYTz0QS1UYHJsx_DcjzOwQ2zWSlQsxMf8tFCet3B0aLaZTyYk6ghRDsySTt8VseH0r273kDsbjVFR72hxUBCrqzWyg5vrq4X6miBC-FjyZ7uZHG6fmcjGTRwdHeDIDlCOHqt6V8LfwgA8SWd-vnQsIUGCveejHwqn833FJpA_BN5jm64zan4LOD20zu-pZu466J0Y2icCIdmWMqMpczton8wGkvx8PelZO5LdILgk8zMPsXSY5oTGPoHHgjXtNA7c_ZAyZCB6ZooLPqM3LHkCQKYwiiH_tjtf4fTD-CSGU9-VyraV00Miw75SFC4dBhht-wNK_42cYTL2gy_iTD5BcCn7eSNT4MbVBeNVQKlAFNLYG-7zuoyFbJFBeTU4VtXt2hJNH0rJrZc3YQBqEtnqRS_OVIkfgVNkOSc6lKO2K_khGbZdLEA7FCdzfY1IhiDIyeZVS5ql3iFBuTtFLy4eSE0ziPc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0872177223455c8e016ab80065406887d1875cb001f951ea96",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3819,
+   "completion_tokens": 384,
+   "total_tokens": 4203,
+   "cost": 0.013386,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3816,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013386,
+    "upstream_inference_prompt_cost": 0.009546,
+    "upstream_inference_completions_cost": 0.00384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 317,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

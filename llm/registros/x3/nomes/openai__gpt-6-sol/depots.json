@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "depots",
+ "data_utc": "2026-09-26T17:27:32+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.7,
+ "uso": {
+  "prompt_tokens": 3033,
+  "completion_tokens": 289,
+  "total_tokens": 3322,
+  "cost": 0.010471,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3030,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.010471,
+   "upstream_inference_prompt_cost": 0.007581,
+   "upstream_inference_completions_cost": 0.00289
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 223,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Depots combines transport with stacking, where delete-relaxation heuristics alone can miss important ordering constraints. Fast Downward Stone Soup 2023 offers a portfolio with complementary heuristics and search configurations, making it a robust choice for coverage across larger instances.",
+ "resposta": "{\"planner\":\"P02\",\"reason\":\"Depots combines transport with stacking, where delete-relaxation heuristics alone can miss important ordering constraints. Fast Downward Stone Soup 2023 offers a portfolio with complementary heuristics and search configurations, making it a robust choice for coverage across larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790443646-RdbeZzFZrRU1F6AlnLWO",
+  "object": "chat.completion",
+  "created": 1790443646,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P02\",\"reason\":\"Depots combines transport with stacking, where delete-relaxation heuristics alone can miss important ordering constraints. Fast Downward Stone Soup 2023 offers a portfolio with complementary heuristics and search configurations, making it a robust choice for coverage across larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquACDIU93c5DdmIBgmEcrPUOWRzEGY2ezJFZV2oHr_Pll4RbR3dCE_eMFAcFD9CznNw8nvS9heTwQ1iSoWHjy0yv5kmRZ0hSDuNrmrjoQy6Xf1tYDn2fJDidqEzYPRcxCILFDG_hvxfsYy24gralkhQ6iBdbE00f2CRyC6UTwcxamMcMC3bi-URAUp8aTseYgiMEsGW3akFKL-Cm7415Lyqo7PRxDbQHh7XOLpt6rsQPfIRk1H-DN8s-83ujdYO-KYFoOvguHNQ1vDPWhLawJXEPEY1InP9tg7br-FbprWXly1b9_mQbC5LOqI8LwPvwO3VtSgIBRJdBP2XpZ_Ie3OBQ2fhMcbbG_82mEariLwPspt-kaBEbMFw3kwaNtasE-6TrLdrur4BOVXhvjzDtkp7Li1_s18pF5UzrY2BB9QzFCin0GNzoYTnj6u52YsPB32pi6JphCHgVTmOL4usYEj7YKEWRWDNyE8HD7DH1GX9Vc5fTVFr9eyfsSZczlUJvTxP0Mmlv1m52UfFedBdDLYND20WCERFonDsAVJmqRD_1-JkAedKd08jgY5D4wf4UaLeUG72mgYeq3utMVjv8TR6369bPQYdj4YCR3HvHihvR654P_RZACRbX0TxytHrvNvqujux6GVRiwj70ddvPsDtapEBptLW6kyiSPWzBDVJaYumXaPjDn9PhX8x0mgh4RTKA3OGgbYoIYRFV-mN7ANC9cjEYwgT8LdFRop1VnP_Xt6RYjefek5PscZ8MvFZRDeKjX3qoWpDb2k-NJ7wX95niBxvZy_4yUyon2f1LNrY5TLOKTxiGZfP2fCFYHCvUq6GEYttnMGawG9Qt27Gsryq97MOLrxabr36VNAL8vA55orzQPLKN7UI3b40Lfi-TyYgpzy50-s8z0ALmcSSEI6LgY0idXfJ8rxSg_D7-WOevpgPsXxVwleGsyNQDi3Pl0UGrKXdwlP4LbaUs2YXp_R1dAV6ESPknbzoVx5HkqYmBjbKIPhPNwTKpUs0ryif49aN2s67ettRko8PbLKblMMp7TTZ0LuuA9Bj_ugtIcviHbtx0nSvpJ2EwtEmkZSWvKIkZS6MPWSfrK11MFUpgjWUioftv56nVcviKJGrxp60_6yye7Ylbry8nq8OrLZ1WrwoIqw-L-sEuN_MTnLxcY55mpLYDvugpq-lQZDGN9-jkynL1WJmEGA9bf7e_bt8GVaG43IdTuFdbuKMVW50DWt1svBEgbTkID4wAAqOdNmXqbcIuAsC_3F-Yjbu37VxXX1H1_8hIfj6Ywtk1oK5w6J_XjCgpeNPj7G47I2M-21HWTW0KM4M_dNMl_YkT7kk2sLA-yNAuGnNK5f21sEAk-pFfSP64nP_56qrnLlTCRSnyK_8DjfjvRukKqdvQ1Y_2p6N6E7MsMEF83E5ar26RYwW6UFEqNSO1qTvi4tSu_jPrppppMKe7jWJ6DEXmUVXdeIreb1U4sqPYBhzaBZUGknYS8ZAv4WUjdTf8x5wIGYRlG9O9K9JeblDPbrJR60sIbK-w_v3fcRqrpB7xTnODhGelXS_tFOPRlSYdMKGQ4TZk250YTwl3FzNQcHz7JMv9iCAeJjgr3h2MbYx8YEucFelHRw_QBBEwXUkNbSTwM4PAXz4g5mzHCrBU9qxYsQgCxGW1UZAWuVay3uaSjLWYWNEGNm8cWL1orvjo4HS8fC6BULSwOb8xXXL0ndMg647oH2l2ZWLMM-5QGRAzUpsahfCTgaLcf2d8qpcFRKZu8QwFYhKQ5GG6v1_V7TXrOcuN69-p4zYhg7SamTd1NWFoKBZhY5gqb8lY1dm5nBhrA35xeYidjM9BLClLz4ND-00Q_Xg7gk_8XIpZ4mP0OBu-lUhM3Wfgkzslg3JpEm-MsopOr2FsBnSlKK_VNmWCseEktYGQECjf2hKHfIG9ulM5pvtNCp5R7vJKbBn4zn_x3bMZhd1ybqA2edGjB0VAHMp_KduGq_EU6HOQFDzzbMo4A6FIV_8CMtrI0EFXuwK-V81NBdVf8YqUMSopWa8mCiCm7EqKBADwx5sK8UfiU_EDPikxoGl1bpmw-iW1xYyv5aWVlNGzQcRU9Ep7ICH6-uE4utIC1_GEBftjPT1Nn4o2nBlBnsavaSSmFpMXhYpkY1VE8KkVjqCe-ZextfFg96BJhfSdXE5Cdbx3iPKEJpBFIkolq-SY1lOy-qAM8qodedQpCU6X2KYeAIC1vAro0CAb7T07ozF_Xl3XWO6cP1BN9URqNGjCslkxQgoCld_2WhA2ydi8rY0vwFMAcIq0x5-l8Xkz5BApStnLxrbqUnN1GGUQbs3sRcpwRO4P2EsYng_1WYS6I3D9Dl3z2lkHYHjYttbDT2xKJInwvYWphAxCEv470RrAE0IBHzlafNi2AU5KTvGfn2PzFsUQUDBX4PHl4GS0YWEJHXQQNsEzhQwslAU0JUXbfyidcVOM7X4gqSOkIvsFL2vfUJ9O4iRY3sAaCamI8aSXM2YnLQcKc9HJ_cRY62tdbGVuwuVTLoBnREEkYAiXdsxhmW1I7yhaDuog4Jyszf8zbCDwuH7d_sn63-2OkC1mreSccn9CRLMtbreagI4P95YbSudWoPv9f5_rsMUGoVCUXdy12lq1_vCK--SxqbSyclQolK4QjvTI4j2rWgGZ0LP_DFY_90zcd1-_DsnfYsJJHp1OurWkin-C67BQlKA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_019f791fd0a31605016ab8007fa61487d1845b20002ae00de3",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3033,
+   "completion_tokens": 289,
+   "total_tokens": 3322,
+   "cost": 0.010471,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3030,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010471,
+    "upstream_inference_prompt_cost": 0.007581,
+    "upstream_inference_completions_cost": 0.00289
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 223,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

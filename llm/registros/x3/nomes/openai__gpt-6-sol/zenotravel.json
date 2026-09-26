@@ -1,0 +1,109 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "zenotravel",
+ "data_utc": "2026-09-26T17:32:09+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 12.7,
+ "uso": {
+  "prompt_tokens": 2693,
+  "completion_tokens": 785,
+  "total_tokens": 3478,
+  "cost": 0.014581,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2690,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.014581,
+   "upstream_inference_prompt_cost": 0.006731,
+   "upstream_inference_completions_cost": 0.00785
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 721,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P05",
+ "razao": "Zeno-travel has a star-like structure: passengers can be treated largely independently around shared aircraft actions. Saarplan’s decoupled search can exploit this structure, while its portfolio provides alternative configurations if factoring is less effective on a particular instance.",
+ "resposta": "{\"planner\":\"P05\",\"reason\":\"Zeno-travel has a star-like structure: passengers can be treated largely independently around shared aircraft actions. Saarplan’s decoupled search can exploit this structure, while its portfolio provides alternative configurations if factoring is less effective on a particular instance.\"}",
+ "bruto": {
+  "id": "gen-1790443916-9wpThuuZ4ME6yZYPWkcv",
+  "object": "chat.completion",
+  "created": 1790443916,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P05\",\"reason\":\"Zeno-travel has a star-like structure: passengers can be treated largely independently around shared aircraft actions. Saarplan’s decoupled search can exploit this structure, while its portfolio provides alternative configurations if factoring is less effective on a particular instance.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAGV4I5ETA6pW7bDI2a5mbPQt9csCMwEMvyblgEqc6kP0kW-leW2zvu_h-qc0UaIPgrZ_pth0v3Lnvr-PxitKOc1Ddwd59KtIycn3BjBoofSPQALx0sipgGb__GPfmTvhsqCFH7_cOPrBmpJxeME-abED9jmxszd_dQUvSyPz2oFyI8NRFo7cZqSTRtSYBH2eFMK2guUhZi_G48ormxSQIogasYlYnE3VMcUaLHsUTMYe9LSlUKqo4O16ia8_nh2fm9-HTS0qx1cLwS008e5hZoovksA7zw7nmISnjUD7s0ztdkUkNRaq1lBcBo4Cbje0pprkca3_J0EO0yvXO3i-ZB5gmvhNO7Wvqw0zMwCXvmDmGF_e5YrJHMWE5HyyqLYOXqERIBPG6jHzy4XZXL3AcD4x0_3CuFAagklz5M1hir3B1rfWERSxItrA0zJNxtpgeWU8yHDWHGYciGHc1pE_9arPkCipV1bDlGI6cdRsVVqcRzYsfBjYdbfquHuZTF3pF8A6qHZ7BpbXN1zAKcf05ExfAJCyNTcNTjTkA-oVOZtI0GWLtkZagxoDq_zXLZa2amzmwaEezCldORU7jz9hUkqnyFl750b79F9x2hueFSx2pgREIgy8GHWbkMUP0oUVGe6S__qMywpgQ47p1C2PtZo7jh9uNYFmSy65oYRGagdQ22-ayf0SiJFzIdUFeMsyX2Baa5iJvWWG3vmiius6DG1D4_Ie0L-GeCpKG9Z-i2jmNwDOLNrw_WlgvBgvfXvxStthvSZawk_ocOSd4Ls1hJPeqUgyt6gElOTOYhWxyP0Sblzoi1oCmfpnDU5uKIZN5WVwGXT1cLo1zJXZrxsBauT5D6maxPPLrEOnIfsPVfeSVqAYhtAlHleBtGTmc-nlSlhoj8cUIvZwFps3u6I_fp-oX5dpC9y1bsTmMUk69JlAvkjp3T_A0B4FR6eTWrQLijZvzwtLX83jHUjnZzTK6lQr1lI4fudZcAw74fwBbLOC6xcFXMzJXBxVbqNTQ3ceuf2N2Em6o-cNd_cpAu8WkumkQLjabdRyCNvRrzPiOFhhs5S3PnAZ6UyAAC2N3bKo9ORsnK0KjBAXAb2mrD2LXUbUwA384tqdJQLx0e5CoZvVjp6n8BDnX6veeD4bAzc-ZGy97z0yQcibQwrLxmdA1AOHb5HGHTSfiuRYCLA6Za2OOqHsfEepfiDv-Pyk_eSxqI3Vnh4UbHAK09iGdzQOUpksOKn37W3uov504rFGPnz1_Va64wWCBiXQMF-rX8jPprpZZh9pnCUurZ3-m21orniTe7ugYBTZS8PIWRJMPtR9uNtU8o5S2xlub2EVYaUBKDUn5Hb-S9nN9wsbgEqZaDZg0zCpMvwmxQIU1RrnD-Fo_RRARXzqWgEp8rXSvACMgfNq3SF1Frz0SRNoDvIQdMtvKsStb5nkKh62LW47IBfcPWcIZMgC-Hkwu0XiBR9Fh1jEIPW1eUK4azml7OkJNf58ahGDEWKcKI7mkfbuZVsaHB5DfnOSKjegOZAwPeT601RSFeurc2wJBZ6wDxhzuW0iPyYcV3T-DlhffC7WbvfTl5rEn6pnizxCmcz8NhzbrYYkDc6yWsZIB1jB-14B_fNvssnLjD7UiVR3ah2r-FeDYdIhXKP4hbVMjbx0zcJTA2gwA3ebtCFcCAg9-xgCoGdTt28NTR-0ifTvNMaJIwkcwjc-yilrbpHiG4x8EMy-Z8NrBRw3LPMZaIxg0mrXWN3mL7OjM9NfBzP33bJaqX6eXLGfpdd4HatvxA0UnqsYK2YHNbK9QzRBbyCSR5hp9_0S5qu72n4TMdzM5cQQbDxfE9hrJvM3hRdCeq2cOih-bkQ_drLLfRDNnbQEh17-9JKnZIwT28DuX4vcpwrC-KgN_KZi5Swppwt6A9t2_BV3R1GkIi_BAyX4IREPOsneDuJ9Mx-XU_nHbiN4gOGqy6PQMDhlh-HQW2Tq7o0nXnnwPTG4DrFw1LgJaqVVrEz8_LTX2WQ7qeyFrSLBUfkbtzEHFa9Ei02keYGsPoSe6p2JNhFeiw9sjG04N_87SgZ2wcd82brl-2gtGLqBuqkVm5N7dtQ-L1fIFb87gqo4-qe_7O0thRS_2eUuiIsVmuO9zV5yfg7Zsy1IgNT-L6o4i8oxm75XObEfIV6VgQ85hqbL-h7m4YZ8MuPq0mfVCBIIAa-JUx-b1oPZIBackTTVAwDkwV0x0KvAYuLAkuhNK3oiVxqOp7Mf6E6w2dQyD1upqiA8X3EagEJ2mfrZgGtfDKR0o3ItED0XYPdY86QFtaVnhmfLcUZDqH6FzKBZmDNIXryAzzuH9J19bwBaI-g7GuagDzrDpSuaS345mZMzVhXkXKqoAZ3zxjbI39HN0XmUzEGv0jH3wA9yJizy3zf9f8WW5GuhspXxl-Xj-VyDs8RZfHf60cNmH9m_8o1LakZFOGTwKtlY0vrHAG3LjX8dYqcgm7I7LcaesHNy2h6AnZjrUdGK9s2lhZ-dss1Bo8270TLVRUCtwepoAJdBXQ76mruYRuM0fpA6O4M8NSUkhZ6kRJ13iVnn4a-sKpBXdcKev_oWLgAxS_f4NxuN_s9Ni4fPtSTSOl466oRndu6hrlWQSQRJLIrKyroeWSDiC3QD9TujtqIL6WPoxdzzQRmEOpkFLVp546xH-YVgiZTh1hfFzXNwzGvP2I_ucCMNRRcwZTeeChHlpSpis_FyJP5Ux7TsouZ09ZqVjmvIrDU5WH8Yf6XaD2W29ZJOyyL-HxAQSIpQezElvg_aMovTGeTU4IeWDe2SDzkUw8hclKsSvUiuhJnxjDJ9xAeWDdW48J16B7IW0XhdrMtAOz3NYGecz9HeOAV27FaW3463sWmDPS9I5DaTCWCxs2Mdc9gWpo46togKB_kKp0CfLrGTcdAksPu_Q2U83OI1b5bMXRJbSXbPgVvyt3XIXOgGLiBSfLLdBwp-IncibeNAD9ZrpwUNhA5hvd6pHAdY6T35xOmLuWckT6yHG2HVtZser8BX0hRMN_TnRxzVPmEYPbHoqO788lM4nViVmYTHtuRRCtmaDvE60haMVO1-Do9lE3pk6qJrKuSnGpH7CLKAh--BeKSbbvslSzc9yk1qRROtCSfnlM9NcGyygL9hiOFbPIBjQSoynWXq3XrVnNzhBGvpf1DHrweoMkQGMSUspeSAsutpcqqhOmaZeE1cpgfcSw5bebHtClaFLd7D4A74xX86rigEV4dQ6T9aVMV1QptlXagCjpjFlNE5TeHXYLA3Ya3FEgQReAnss-WmXB742HHp4bzynExbN3-XOuANgHg8ryVdfCXh6xgYx4tcaOg0c1CBb23YeeKubGhfxGK0BUYHRPBvJfGdYV22HS0eqD0ZxwAJ49GdZ6TO1IJjnWbSl-QwI510s5jySS6vbp3DLommp2tJmaIPkUKchjYW74mT7tMHi7Ugk_lqsg1QHAb97rIL07BCegQOWngMGyntI2aonso-I6mzB2yIbXpzcftmpiBodYzt-e1R5RjDgpFJoVx4HR8chYKty-JfE7GkVY_rj6JejRvKDoV2nGhiS1l7hkaGglU5Sd-o5hnr63xLMCMS4L8iNGAQoeD16hqie6Ya-tO0cY2OX6eWx0jA4b7k6vsBtAPEWXLMKwfek61yM2apuTy5qvUjTGAOP1ehtseRCUtXGNAM4Tb2LApMJSHfxsfggCZalh2dom9vO3f01tG4vuC0UGsUanlCs2UYo24NizZ97KUq9fJlQdU9H7oAhZoz06zVZFm8UF7rdaCR4qIZRr1waNnl-jq7kJlotO3cQmoccAQeGXirIJ_nUuVjISn1gmzhV47DLxQIU59MFJAuE0nQl_D-DFHVKGbhI_9Vh6cTLK1ki-C4SMALY_PoGQeTsCsz_HLKUPjbc7BnmKw3_Qsws7pedHsFKUAzY1QnxeR0SDU_KUocH19Mo-uG-Zps7IthhADkFDJgK8L96pNW-r6W88wGPh5E5zr4gv-CwlNnSITHb9bUiunNaLtytMiJfU7S5JqpbIe7i1APvLcfjQyzaA0vwaoJ_5TWaJaFgx_o2yOr523xA0QUVNrcgq97wfvLIRfTwBfNcZcsnk7OGugL45OrxFiLYSR5znYVRR7cNJkALVWooPl19aDWgoJr4VAtqL6n20iTWMAIMQHg8rj9PcKz67IktI-hUv8CMtEM95Ur3j8rNF7KBTjEx64V7puLuMYyhgAIe-Mluv3T66ovuqjTwPDq2tHT0P9FVYXzREqVr_EH0VhQDW0s2KTWdxOu6G6McGWDTIMJDMYZXjDX1wRPR-Ueb1vYsFiHtn5CE-jN8gEKuc3pcpnctcKc4LLecDYrp9qD9Iea9hNa-IVHQLjn-oTVdxTNDcvMtYgH1-6aqUd1J4yh3Bq32QF36-4UOJdzu_TKr34qWTNauxf8EBMIUdyziag5EwsSoRKBeUb0JXjEKloG4o-wrDJBx6Was-u5D9LwLVQvfBDqvF-T3RYDhPtPcVd7vYT4racEzGUmGSQIr56XWGz7E27cK_xGTPaVKFhg4uZW7pknDQPnlyiPEtKs-_SKcA2ApqCp6o6wqhfiT-1TNvdVle8ZfXSUNdH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_082101fd060f8f14016ab8018dadf487d198545aa0a832eda8",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAGYxHoExISqzJNjEca94_MwGL5YbJM7d1vV49nk2dW1Oun8Rqgt54qSW-c_6_htDp4AkU6OfeTDl1nz7068gJok-n7_uYMwZxZ2u1SXjIKLe7hY6s_rUL-SuoTjj52ym6xHz_6L5tmrCs_5cIhTSYuK3q8nScICJhfuYEUsRPUwWhyKI_GULdzbHfcCg9ET2B7FQTw5P0OzVdt7QfXP-_kssf0zCFzX-4AYa_rQtl3GR45CAj4cw539lSrTNhNUecaihXudRHikHNPAb_0825-cRKhbwkrT7F8b2DfraXJCP2XpqslOfqkG_VaiOd6OgY6yIYAffjWyTCTeoYy1jFMPgk0p1gn_VA3xhxPCFNC05a8n9hv_1ZrsxiJ4ad7952ZonNmboYmwOxIT1cy4JmrUKhnNoi-FFU5w_on4KTRAEMFTYfBIpQ0ZR1BW3EfTOLSaAYUuK8ET4yIxdd3ddL8-8Bied-4jbXLrWPQFY1OzOt1lHt9jMtXKRJfte1qAavzjIkD35ouCx20iovIbBbIkRM228l6-ArF8quaEEabYDHLnUM-0rCH6X6dLFiZme6T44HuE0b1dPZSq8GU3YTZoxspbMFeH1Uw96fjrj-WlDMsvdG0ayBl8tVPPvX2-x6ul3UuXEF1wmkVLGg3NZ3Q9F1trlasSVBGMIEYM30xUn_qz1T8vCWq1kelou8gS3c7nDbcQcdmG7pc5FjoLRVBpxfBxSh7SiWj1h1E3oIikipEX80tTQWwHY2nszELc-MOG3ngUvSY2dZWLpfrV1j7Mblw9Uv0R-ogAveLVzPa07itTJHRQIzuCWlw8sJEkScf5FC6Egkv2oESXNvKPIEobNQwQlPVvdAZk7P07ryKMf2Y645O3bQf-DW44XoBVYlZ_UCTiEWwX7VA4xH6iji6YQwQtQzOKSIbuPpCS8Xtsd2TVfnifGqtWNDvGbQSc_zOUsfIzarsz4Bwq4NlvyKAtMO4AP6DnmbN_YhZdbRbXmjuyDlzdXAW1QLVq5j26ZLYRA2TVpcttcx2f9uMepj5vPwIIS5598DoulnQibt8kmPGh0MswA0hqDJF52aUcsOKRKAzATPb1v8baIZ4NAaNgHs_mFPYymULMC7dzTaFJ-YPZudjYi78Esm6mSWRb2rj_0NdbuVd4izHvuJrjlGjCMxe1KrhpTudX3W6VtW3B5k923Ep2jSESnDE2qFFN0MeFRuIqWtBtLwWPjeAKF2HohaY-xSmY7GJURsqu_NtzYDCXsuoBkqeMJlPoz5qvoA2MiHzKCvr7AWdDgnwwBkAbfQVULonq8yFgoJCfeBGrwXgzLmUF2MJyhfN3WH3NMpAhUaTKU2LI5iyFCs7gdVOkg5bXYg_8BD-prBsdy4G6jy96eB7dV51N4HvkSs_-R3AchcL5jDRWW01dL6SKx5gWZO1pEa5dYLx_g7-W0YIZh0C7e-wMIpWEtoHY_Eey8qCZNgtbtfPtnY9wDNd14kfYMJGbl7SSQbLJTHgII6dr66nEfkjh0oUcwphZEKhppKwzrCaQnaOE0XE7UJUnxqgYmriDZxRfwRMTROj9cmRt5pAxPUDO6asa6plDp428vvGfROVtaG82yYlvoD8M-qZ9CJ3aLYp7wv-D_pq_hRkB95dlqrj5Bw1GApQmw21HgABsj2__5hO20bl3SIyfEMTuuZ1ybXl-ixkIuaOttHlEfK8wPIZOc80CFDdt1T6XeJMeDWIVeedK9l4pXbtuFG5hBmGLllmLOywQQRhzTGnC6-WU5phi8OL2AqUtXDxGwXF7xqirM1R1ghTJ_OAt1Wiko6ZMI9MAr0sphftmNWMmjOvSxzxe3dMI3nFm0bRW_gv4SoWQo0rVAZCKqduGo10PmNJHz1AqhoYPEqd_rtxpI1MIfLdg2JnIjKXWaj4u12WNIxW11n0IL6W7sXCvAjtI9WSV3Lr_-thWNzGoD-RpoNmFZMH6_B_7VLNmjm_HJn9XPq7akC0kz2PeyWp3c4EmxsEYoyqmmpv6ro2fIiJGBYE6Iqo91belGlETTGz9hTEoJ4TH6-ZK07IgzUNK5RRunlrB_gDHHCxa087q3vfI4LsBkPh-3zj9u7-4jUvKL2ClU6Q2Q2WCLckGICd33GWNV0YekADA46EbA88JcGoxQq7EYKjINc99UkuPsgnSv79vBZmhD9HofPnbUCy6hHLldghttWlHfqXpfwXPySvZjQq5rcenjgIncWbuvvaAiX1OF_UX1DZ-HY0Z8vdloVXyLsh35mmc37l73qtJgt1BuYAIIivXNnXYZ9Moxkm0FDjJyl6x6kZ2rEM-BalwLx5rCHE60y7AxITOMLrITBGdIUMS8c5WycWWZAHvpbzHQiBQNTbzT-e4CZQRmpnhtDFuU7iQXuMNXa_Scqqo_DH8Uoz5V3RNmmUkTe1myuWV4nOmd34Woy4r_iDiess1g-02cMH3UmBzmF2lS8MIohZIRSYhHxbtpXzuT4itxYCo2mh4OXqjNy6JgiTjsfehY-6DlJQdLmz6aGzfd9aqgAyMkCHcrcNxMG_8ZENq921fdmwo3sN6xOBVob4gJzZ553tzWI9jR9rfPU8Ab81aCDLXBME=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_082101fd060f8f14016ab80195b17887d189703d1ee4595871",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2693,
+   "completion_tokens": 785,
+   "total_tokens": 3478,
+   "cost": 0.014581,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2690,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014581,
+    "upstream_inference_prompt_cost": 0.006731,
+    "upstream_inference_completions_cost": 0.00785
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 721,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

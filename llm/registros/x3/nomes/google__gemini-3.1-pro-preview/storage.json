@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "storage",
+ "data_utc": "2026-09-26T17:29:49+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.7,
+ "uso": {
+  "prompt_tokens": 4222,
+  "completion_tokens": 332,
+  "total_tokens": 4554,
+  "cost": 0.012428,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.012428,
+   "upstream_inference_prompt_cost": 0.008444,
+   "upstream_inference_completions_cost": 0.003984
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 244,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a highly competitive modern portfolio planner from IPC 2023. It runs multiple complementary search strategies and heuristics (such as landmarks, causal-graph, and delete-relaxation), making it extremely robust and likely to maximize coverage across diverse instances of the Storage domain.",
+ "resposta": "```json\n{\n  \"planner\": \"P02\",\n  \"reason\": \"Fast Downward Stone Soup 2023 is a highly competitive modern portfolio planner from IPC 2023. It runs multiple complementary search strategies and heuristics (such as landmarks, causal-graph, and delete-relaxation), making it extremely robust and likely to maximize coverage across diverse instances of the Storage domain.\"\n}\n```",
+ "bruto": {
+  "id": "gen-1790443784-dcnoXYCzAPyUp6rm65sZ",
+  "object": "chat.completion",
+  "created": 1790443784,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\n  \"planner\": \"P02\",\n  \"reason\": \"Fast Downward Stone Soup 2023 is a highly competitive modern portfolio planner from IPC 2023. It runs multiple complementary search strategies and heuristics (such as landmarks, causal-graph, and delete-relaxation), making it extremely robust and likely to maximize coverage across diverse instances of the Storage domain.\"\n}\n```",
+     "refusal": null,
+     "reasoning": "**Exploring Storage Logic**\n\nI'm currently analyzing the \"storage-propositional\" domain, likely from IPC 2006 or 2014. My focus is on understanding how hoists and crates interact within depots. This involves examining various planner implementations, including Fast Downward variants, LAMA 2011, and LAPKT-BFWS-Preference.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Exploring Storage Logic**\n\nI'm currently analyzing the \"storage-propositional\" domain, likely from IPC 2006 or 2014. My focus is on understanding how hoists and crates interact within depots. This involves examining various planner implementations, including Fast Downward variants, LAMA 2011, and LAPKT-BFWS-Preference.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4222,
+   "completion_tokens": 332,
+   "total_tokens": 4554,
+   "cost": 0.012428,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012428,
+    "upstream_inference_prompt_cost": 0.008444,
+    "upstream_inference_completions_cost": 0.003984
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 244,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

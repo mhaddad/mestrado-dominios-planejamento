@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "airport",
+ "data_utc": "2026-09-26T17:26:59+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 7.2,
+ "uso": {
+  "prompt_tokens": 36155,
+  "completion_tokens": 324,
+  "total_tokens": 36479,
+  "cost": 0.093626,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 36152,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.093626,
+   "upstream_inference_prompt_cost": 0.090386,
+   "upstream_inference_completions_cost": 0.00324
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 261,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "The airport has long routes and interacting occupancy constraints, where delete-relaxation heuristics can encounter plateaus. Scorpion Maidu combines landmarks and causal-graph guidance with novelty search, and its portfolio offers several ways to tackle larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"The airport has long routes and interacting occupancy constraints, where delete-relaxation heuristics can encounter plateaus. Scorpion Maidu combines landmarks and causal-graph guidance with novelty search, and its portfolio offers several ways to tackle larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790443612-qmcUUlvgVmrHs8dfvrkc",
+  "object": "chat.completion",
+  "created": 1790443612,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"The airport has long routes and interacting occupancy constraints, where delete-relaxation heuristics can encounter plateaus. Scorpion Maidu combines landmarks and causal-graph guidance with novelty search, and its portfolio offers several ways to tackle larger instances.\"}",
+     "refusal": null,
+     "reasoning": "**Evaluating airport plans**\n\nI’m thinking about collision avoidance at airports and how certain features like hFF at lower levels seem a bit odd. I wonder if landmarks can solve some of these issues. P21's recent novelty and heuristics might be useful in selecting options for long paths and plateaus. It seems like having a pre-grounded fixed structure could provide a helpful solution, especially in promoting novelty in designs.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating airport plans**\n\nI’m thinking about collision avoidance at airports and how certain features like hFF at lower levels seem a bit odd. I wonder if landmarks can solve some of these issues. P21's recent novelty and heuristics might be useful in selecting options for long paths and plateaus. It seems like having a pre-grounded fixed structure could provide a helpful solution, especially in promoting novelty in designs.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquABiH00TY_EVJpToLk4Aq10Qn7FKilujEb1FjqU_dNhbCOUxHB5w513I56VTTMgkPOpLdvtV8uggMOb_W02ohUrB2OyoqyIXtLLH2Fhw3DhNUMD-MAMQuf_kL29tA9xDbqb-pq7VS9gV9Ggt335oblJSgUVLwwpylnD5SDE63AqM8Y1oMe3h-1cBcJ5mLvcYaJvdOCC6VLTUqQ7Vr47et59Bi5ohP3Q0GmzxLMkmyHS7dSirIzwiU1YdEfX12qMZHgOkBp_tAyq-CDCelrsjVvY5fKDWyfcFYEtfYlpiTIxteiBy8hNalwSgByrZt9Hsdbg151TNqzR08vdEegjkhTDygOYOuUtxSIjSyoHGDg2I8KOZz2hn0SXU_FPnS7xG4R6w75-WCLj4-EZuQE6Cavt0oPxha4fq0MRG5jlUg-Pt2Z_o6hrEaUYnDX-qxAHeHH6IsXRPf0KNa5DANEi0EauuyH4EvzIDEx6y5VR4xbwNJCPyTybvklWBSElxO3IeGo5fExFLVwXsQguHPYhXq2yfGqGDIOsPjQ0a-Bw6qlVDIWobcpwsmD2u3A_PK9umiLqPDT6Yef7x4Ptit72AqLyQdhe5tH58Pu3y-Xr72Y-SPgwY7yWTYEg9wVi_Rou0nY8FwVPU3hk_yWgBm6bv-CMe5ve2CmXOsLy2V-evhNDYquBMpEpCkotsUEvaUH4kcuzJKAsAR9uWSeSbMzV6PDqxBpfsN5udjywjJk1w5r2RaJuLp6-fodFCeCE1i6ORacewYSWAlu06vbzujqPhTqSzfLzX9lhxQIR-WxPd5FvI3b8xkvFct53KB3FfzkphlsoVJSF7Fc3gpFcDkNOiJ0iHdJVqVTbo2-l21f2MbQFPSIUA60jTc6XXD7lvAcHolyDOWU9GTKF2nySdkGVx-OQ5fuHb8Q8WoisJ5C2ankkUJ4ySZNQ_hjVvAKLM4EjRATlyhm7UtTOT4oC1rglrLB0NkDTbtbvKWL9eaIjHdaGaVgfNxYhgMuxSRx1K83Xfhe3_jwHF02Nl23LQRmzFHPLj8QRtAOPTiSqB3RYF4nRpBhwNKyFRpdPfSIMxexZckf3MfnvowXQClEENxgU3C0-2dnAVL9cTsyXNeWEC4AftlVptJPMNbBx9ATTOdBmvANieKG5aJhqL3TS9LMVx5ogA6ewQ4m1wRRn2mwIwgYsvQD402-OoIOeVc6OexskTn3VtATQ4pwzKjhgY85tJ_wOtaKhsUAcnuHfZ7OLBRSm41YTa61IXiKpTEamTZuhkCQ2bGfTqbp0iizmd9QSTknZigN46nqQprq04dAN-CL5itj3Nl8aomUNmp3sq4pQ0YkHml1jmZFd0RvKb15Om3wfW9VvlwI1VFZfZQuLVDFYGYFSdduHA8fQ_QMENi8t7neUIRRY1jhQA4bIaYLW6l01HHTMwWfaQ65YQBliV5YNAu4Sl3ugp6cZ52FOXtTnV0Q7q7hR_tNvRr9fJejKD9Yn50og8ZOvWLZZ6oHFm6THhi_BuWpxeYj1trotXvHPPlLbtBWFUqSp3QfSv1luM4163jjo0SegdbzWwH6NqbMCfp99nJlOXTDSIYBpbh4PYg_bf8X9CpU33AD3umN-0nXtcHr4RU50IPogJLCWu6D_AE_0jo__APw2XrehkSGMe8nY2vSY1WiHK0oWOzkqU3S-rT_jh7_lrEjA2IbUaBfW5w_DecdEW_5RS9KxImcLIccyZgWKxpnZCFqweZfDnsBI5l_o9jdAj6IqNfmwOLi0WumoxpEssmWAS-RJfysj29pQHc1q4unMEH1_MIK1_oLOE7uN9UfIBxoox4akjPcJ8dCqfr0FbvS9FasqN6WUjvy6osYGkG8vLf2mN7gEMQQfPy3KzsYvCNp4j5bu5_aBl2nYYNN0YbhTTJ8iiupoPdwuX8ReyoJzVAyQwxyWn9XZIgAnWRLYqwbiVsZ-N5_WbpNffn5aHgA7hOrruCOB7VdTBpDFoLrUFIDvgo600S6I9f7i6tFL2ktmAN5x9z51hGuWpuJaKFdocbLhxH8mYyTiM3PivS2D2IT1uVOYeu_Z-D6Cj0FNNK-ipofJTuZ0k-UETU_TRE5ZHz8IAxBcYIuiN7puhn7AhiZ8SM7qoRS68Cdkkc7AmmS8qTHjW4HHY-Dmm-FSlfX01dIRY1GkYMt17DjgTn5ZpxbceztQHWkzpnhG0-ao4LGb9idrVUY2hPT3PUExV-qDBZHlCBwcNc2E6vJwKlEihVyd-ZPVbazMOMMrDpE0zIFvu69aHh3Q35yZJjH9qKeIaJhh2xf3Kwse_TxpkVcaMhusYV6EI1tvECFTj7lfgTuwQ5pZcJSjovQ2vYeuJUmdU1jSGwmkYceTssq0RO6wlc1Smg78xN6cbB9RY2QKSUIbK9JiZukNHLCovrKK0cIWP3jLjARzYsaFlO95SXrwv3ImWpAaAHs79He--qCDXNhuCy15gRwJpG5ZhLzjo5FF7EjR5q1JWhiBs9p8W8nrQbm_xYFiQzukj77yx1ZeZmsV8Y1v3IqD7yDy7JG59htCaCVzJODg8KPZDYBsjId_0RDODapd8lbo_vdRpj9VyUABvKpS4qrRgcA1fhOpj_tZnWFZJ3KM_VnYAtDI3LQlWsv4pmRY7DjLxK11On9G0GFEhjVIC07qwMQy2uh5fWyh0YWgPgDFnvh2X0iYBS0FPJTbLG-Nz0pCJbh3mzWTSk7MhlWr_vShEZLknGidqxH5zkzFPPxOFruH8MAyOjgP7Eechluokg5PB1mfKiNm-cBc5fKB1kHvu06JCrqJlC3eAMi30EMW-zp2a2EKbSlOGhPjMeFOD7chhwDuH4HqnlKsWibIEtMznCNvsUw_tyEabfX3YFRX4L7MCtOQcyr1z8ixIH6QN3Fg65nO9eylnNfVxXrle7XQhVrI9Y9BgDyqhs6WJVdyirRMo3Hv9SkWorC24HoVkY8Gbn8thnye48mioRQeHG-pHbi-aK3XUfjC8GGfxnTVc2DPU.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0ab9b75a5067f1f3016ab8005d4cd087d1aa168f7e36410a2a",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 36155,
+   "completion_tokens": 324,
+   "total_tokens": 36479,
+   "cost": 0.093626,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 36152,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.093626,
+    "upstream_inference_prompt_cost": 0.090386,
+    "upstream_inference_completions_cost": 0.00324
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 261,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

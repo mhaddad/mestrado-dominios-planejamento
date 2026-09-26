@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "thoughtful",
+ "data_utc": "2026-09-26T17:31:12+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.6,
+ "uso": {
+  "prompt_tokens": 7603,
+  "completion_tokens": 282,
+  "total_tokens": 7885,
+  "cost": 0.021826,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 7600,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.021826,
+   "upstream_inference_prompt_cost": 0.019006,
+   "upstream_inference_completions_cost": 0.00282
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 219,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Thoughtful solitaire has many reversible moves and misleading delete-relaxation estimates. Scorpion Maidu’s portfolio combines novelty search with several complementary heuristics, giving it multiple ways to escape plateaus and improve coverage when plan quality does not matter.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Thoughtful solitaire has many reversible moves and misleading delete-relaxation estimates. Scorpion Maidu’s portfolio combines novelty search with several complementary heuristics, giving it multiple ways to escape plateaus and improve coverage when plan quality does not matter.\"}",
+ "bruto": {
+  "id": "gen-1790443867-vDkH9Q7QiO9PCjx360cc",
+  "object": "chat.completion",
+  "created": 1790443867,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Thoughtful solitaire has many reversible moves and misleading delete-relaxation estimates. Scorpion Maidu’s portfolio combines novelty search with several complementary heuristics, giving it multiple ways to escape plateaus and improve coverage when plan quality does not matter.\"}",
+     "refusal": null,
+     "reasoning": "**Deciding on solitaire domains**\n\nI need to determine the strongest domain for solitaire, weighing options like BFWS, FD stone soup 2023, and Levitron. Solitaire’s grounding with 48 cards brings significant action parameters, but I find that flexibility with heuristics can be deceptive. BFWS offers strong puzzle configurations, while stone soup's portfolio seems robust. I’m leaning towards choosing P21, as it seems to provide the best coverage and novelty for thoughtful exploration in solitaire. Scorpion Maidu might also be a strong contender.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Deciding on solitaire domains**\n\nI need to determine the strongest domain for solitaire, weighing options like BFWS, FD stone soup 2023, and Levitron. Solitaire’s grounding with 48 cards brings significant action parameters, but I find that flexibility with heuristics can be deceptive. BFWS offers strong puzzle configurations, while stone soup's portfolio seems robust. I’m leaning towards choosing P21, as it seems to provide the best coverage and novelty for thoughtful exploration in solitaire. Scorpion Maidu might also be a strong contender.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAFgTTbIO1iGoVmw0LCWKbkypEEUaiL0QLRxUMpSZ3E3xLScnZUt_A56fLbaNSo9SrOi9HwW4vDtlJHfoYGw_loRDMrmdztcYMhulbYy7hnW-dHsVWlH8mlXm4YPHtQF4Y2ch95c70AKdPJS7UwPxA1INZtpjWIQmcLHig37vjPhm-G1OyaXgtaPrLglgjfrWdqEaiPpko9FWyt9_L-Lf3CxDeJDT2RN6ulm22iev1v73orufnHRRxyL9PZkP2I7ZuYXXIOpxrOsl4M5s9W7aM5BvYj7Ln9_P5STRBSZkfEGjKLXQpEMt0N3hLpsu5IFo0Z4QnOuQd1IImT4kJOMVRgX_0g20HAFf2cKkdmvxkru__URqgLRYYPm6z_oHbN9P8GQ4VUZdwFEDVEBJ6MLha8j8iCcuE5_sDPD-vMD6GCAqk2x3yQh8qQVtiWEtXA8oRFr8xMvf7jNocSwj9pwJ448vSNN1j8GCGmkzqFlZ6tOlRllk6cTLEkNgHKhGNxEoNPxmmP1fuL1biUljHoHye-4Z-X5mpiacOZBWdYmMuuYXLIejawmSt110_4ZqpNUI75XRUfMplCw0-yUxRsb78CJnvraEBGOIX0dTnlO4gzw9jCWEnzOkwvbklJELmOG10_DXaCAOz0CX5ubty0ZqL1uS3tUXq-i5I-Y4rObFQ5vLYJ1-5Xd43R9N_x054l7EfI-NltigsucqK4IbYTvsVA8YiRUpzlUJbdMw6kkpfDGFNatVTwOn5GGA4J9qqxu5Ms01Rug24p4iMAcy3TbRSPepRWuR7B23eVmeHL6QXSstuXzAc0aYV0eEZ8-jjvEgX8K6RlZoAmbS4oON9JMFqZqI1T3pM9wL-NUHh277x1c7R6Lmb7DmWLWgErYQi29MFEdG50URvcAsH66qHB4bs8BnB5WX_2qQJd7VYmCaaDTdIxGp-3l3u-dIYPcpMcSMGwzFFy7Jm_-MdUhhonB2kWQq_zYLiXDtCNth6DXMwjYewK85J4QEUZnUvndCTIA_S6hgPNLBSuHmElHcH5kYcsjD51hlS6iEa9yicLrMYxHHrxF-oGPnGKO9pmKyhUuTKVn_MGlab0x5YUQvXIO2H0cnTFo6RdqlDkwBfdqj9zEcAdXEO1ARj1RoUcwyEO8twjxFCDUHee9DZi8N4ezppuDz7WP2RLNXDEU_zRxaIKArJ8tYRsWcqPZMIzQmXl7Cev1YNgnB_uVbiObtCngUltM5s5TcdDLInqiDzaqeo6qDdZCkRR7kuA-cfJUcTAjI9rdje9TfqkCBwxyii2wlFKvTbmAIx-I9z65miUlVSId5h0FeomIDDM5MtfRmU5U1j4wT5I9I1kvcmgRDSOcSrquY_cfawNcWQfaJQ35D6_2cVPbUirdcix3lautlXYP5TXmpO1sHBM-A9jNZsRS4y_XglvxPHdBRZnqCGXAmPszxNfRi2q3DMQZFL4SGENSTNIYa8c_ocnIuT1ROv8El9YVCcCymqLbtNYI9lwrh1G5rClN8p_juqYiYq5-bB25YD8ufBM9C8HsXvpa8wXCSOIecCiY5KgTEYA3wklT2duh8Yv8452aUCrT-_laGCAXjd33kAKCk2Rh1ljtEcH4FQxQ3fsOD1Xk5nJdYqqnUjEBAz8EE2FeWEnVlE9pGdd4y6chwGJYIa2V2XsBbAhuQN-6hd07f7aIkMxzSVR99cHPEv0rKaft-SHptPo0uGTUR80EN9ATjdKgqUZ9yow4PDdma1gHKLeirRha2HidZR7Cgisu_LvrePMWpJXvC8vC5h-Oldn_gx3zBTic2kbv69rHA2MNBc-SK6jpZpOauWIecqiyaOrv9uwynBkLOWY8yg9L8CvI2xzu44jRZnvrr9tjoQDw75wEQrwgk7L2sRHH1rABQeh4qMTDLFLZEoGU7CqtT2aG3GrqcEas8P_WzGRoBNYX9U4Nlc6ZWt-c9i2wrkL9rbNY1R2GmtCKIYg6SA36c2PmXe3o_8cidnpSpW1h6r6qiYmKCPftLmpSAmX7-BD06raUpr94c1vGm6wT1bhCtvWGv1EwZ9-5NwH4-kdhE6GyFOEVtygy8ncscfC0Svx8pWcUIlFZ7-9eu9JuMqu7RU_syHq4fZNfWiEREjX8h1wb-eGB3WyqOazOYNDCPQ-LDq34IRgZgeoj7SOAz6OQHp3d7zOBXiYp8y06aVzTmymapzhjoTSoa5qz39KFRJod-MhCK_mtL739sfrXbwqqNC9IUbasjJIQBAv1eDcyI5o9rkhrgfutgTexfwm6r3NWjyNf00S3r8NRVHmQ_2csCi8HJEvj-n9dXyI7Phh-QpDDI7dYEdSHgho5msMy6Ar8bA01xL1v3KAKxbdIxXMz-JiwncNhsrTvY8GPZ42dgzdxB6c7GaNsErbimN8zCWeGzlEyekr5g3wUCm82jNSLHWI7XcXugSGSp8CFj6GCdT6y3FaZR7URbmP_GTgFwzp3Ex0ghk9MIJiLaaBKPskZa35XozWEfQhF30bJLgxhYxwe0NOvsfTUxDlGNWKCaXpWRJP1wTBvZOQc3JR21tbRN7r8hi2DA-1QRlvEZ9AU0H00qww0scAPZKlZBQ6t1zg2xIpOc-wA1tglYXF53VMRmLMOEz6aNPUvtg65o_r0WLj_SN4P51D3FL5yh_PsOg0pOlRZ4D2t-LtuTqD3_AA48HnNObsFk0F6YW35y1T7CuQlZTPd_FbsQmHFP6JCbOlEXI3wpzqVYLx9luqumGrC.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_03f207b6ff810314016ab8015c04a887d1a896ea2eeb6c8bdb",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 7603,
+   "completion_tokens": 282,
+   "total_tokens": 7885,
+   "cost": 0.021826,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 7600,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021826,
+    "upstream_inference_prompt_cost": 0.019006,
+    "upstream_inference_completions_cost": 0.00282
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 219,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

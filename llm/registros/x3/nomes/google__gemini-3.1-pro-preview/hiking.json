@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "hiking",
+ "data_utc": "2026-09-26T17:28:13+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 9.0,
+ "uso": {
+  "prompt_tokens": 3282,
+  "completion_tokens": 647,
+  "total_tokens": 3929,
+  "cost": 0.014328,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.014328,
+   "upstream_inference_prompt_cost": 0.006564,
+   "upstream_inference_completions_cost": 0.007764
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 557,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a highly optimized, state-of-the-art portfolio of several strong search configurations. It leverages multiple heuristics (delete-relaxation, causal-graph, landmarks) and handles multi-valued variables natively, generally maximizing coverage across a wide variety of classical planning domains, including Logistics-like domains like Hiking.",
+ "resposta": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly optimized, state-of-the-art portfolio of several strong search configurations. It leverages multiple heuristics (delete-relaxation, causal-graph, landmarks) and handles multi-valued variables natively, generally maximizing coverage across a wide variety of classical planning domains, including Logistics-like domains like Hiking.\"}\n```",
+ "bruto": {
+  "id": "gen-1790443686-1N8klvCw56rcPQEyOs2G",
+  "object": "chat.completion",
+  "created": 1790443686,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly optimized, state-of-the-art portfolio of several strong search configurations. It leverages multiple heuristics (delete-relaxation, causal-graph, landmarks) and handles multi-valued variables natively, generally maximizing coverage across a wide variety of classical planning domains, including Logistics-like domains like Hiking.\"}\n```",
+     "refusal": null,
+     "reasoning": "**Analyzing Domain Structure**\n\nI'm currently dissecting the domain's inherent structure, specifically focusing on how elements like cars and tents interrelate within the hiking context. This star topology seems key to understanding coverage maximization.\n\n**Exploring Decoupled Search**\n\nMy current focus is on decoupled search strategies, particularly their efficacy in domains like Hiking where a star topology can effectively factor out mobile elements such as cars. I'm examining past IPC results and specific planners like DecStar to understand this better.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Domain Structure**\n\nI'm currently dissecting the domain's inherent structure, specifically focusing on how elements like cars and tents interrelate within the hiking context. This star topology seems key to understanding coverage maximization.\n\n**Exploring Decoupled Search**\n\nMy current focus is on decoupled search strategies, particularly their efficacy in domains like Hiking where a star topology can effectively factor out mobile elements such as cars. I'm examining past IPC results and specific planners like DecStar to understand this better.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3282,
+   "completion_tokens": 647,
+   "total_tokens": 3929,
+   "cost": 0.014328,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014328,
+    "upstream_inference_prompt_cost": 0.006564,
+    "upstream_inference_completions_cost": 0.007764
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 557,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

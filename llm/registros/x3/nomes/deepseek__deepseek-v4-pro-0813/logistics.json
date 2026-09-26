@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "logistics",
+ "data_utc": "2026-09-26T17:40:13+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 24.6,
+ "uso": {
+  "prompt_tokens": 5777,
+  "completion_tokens": 1809,
+  "total_tokens": 7586,
+  "cost": 0.00475052992,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00475052992,
+   "upstream_inference_prompt_cost": 0.00120778432,
+   "upstream_inference_completions_cost": 0.0035427456
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1753,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a modern portfolio with multiple heuristics (delete-relaxation, causal graph, landmarks), which is robust for Logistics and likely maximizes coverage within time and memory limits.",
+ "resposta": "{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio with multiple heuristics (delete-relaxation, causal graph, landmarks), which is robust for Logistics and likely maximizes coverage within time and memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790444388-f46bqkWGuu4cKs9EUGZf",
+  "object": "chat.completion",
+  "created": 1790444388,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio with multiple heuristics (delete-relaxation, causal graph, landmarks), which is robust for Logistics and likely maximizes coverage within time and memory limits.\"}",
+     "refusal": null,
+     "reasoning": "We need answer with JSON only. Need choose one planner most likely maximize coverage on logistics-strips domain with limits 30 min 4GiB. Need reason. We must select from catalog. Need think carefully. Domain logistics-strips classic Logistics. Larger instances. Planner likely modern Fast Downward portfolio or LAMA. Need maximize coverage. IPC logistics domain known. We need choose one. Catalog includes many old and new. Need decide.\n\nWe need answer JSON only. Need reason at most 60 words. We can choose P02 Fast Downward Stone Soup 2023, P03 Fast Downward Remix, P21 Scorpion Maidu, P07 Levitron? Need coverage. Domain logistics strips is relatively simple but large state spaces. Delete-relaxation heuristics and landmarks work well. Portfolio of configurations likely best. Among portfolios: P02, P03, P05, P07, P21, P23. P07 and P21 include novelty/width. Logistics often FF/LAMA solves fast. Coverage on logistics? Fast Downward Stone Soup 2023 likely very strong. But maybe \"Fast Downward Remix\" IPC 2018 also strong. Need choose one.\n\nLet's analyze domain features: object types but PDDL strips uses predicates for types, no typing in STRIPS? Actually domain strips with predicates obj, truck, location, airplane, city, airport; actions require type predicates. This is untyped STRIPS but they encode types via predicates. Instance large: 8 cities, 15 locations each, 8 trucks, 5 airplanes, 3 packages. Goal deliver packages across cities: must use airplanes or trucks to airports. This is logistics. It can be solved quite easily by heuristic FF/LAMA. For maximize coverage across larger instances, portfolio. Fast Downward Stone Soup 2023 is latest portfolio likely robust. But maybe P21 Scorpion Maidu from IPC 2023 also includes novelty. Need choose one likely max. In IPC 2023 logistics? Let's recall. IPC 2023 tracks had planners. The \"classical\" domains included? I don't remember if Logistics included. But Stone Soup 2023 is a portfolio of all previous? It's specifically designed for \"stone soup\" aggregator? Fast Downward Stone Soup 2023 uses many configurations including LAMA, FF, etc. It likely has good coverage across domains. But maybe P21 Scorpion Maidu is also strong but maybe not all.\n\nLet's inspect catalog:\nP02 Fast Downward Stone Soup 2023: forward search, hFF + causal-graph + landmarks, portfolio of several planner configurations.\nP21 Scorpion Maidu: forward + width/novelty, same heuristics, portfolio.\nP07 Levitron: forward + breadth/novelty, portfolio.\nP03 Fast Downward Remix: portfolio.\nP23 Fast Downward Stone Soup 2011.\nFor classic logistics, novelty search might be less necessary, but could hurt? Goal counting? Actually width-based BFWS can be good. However coverage under 30 min 4GiB, simple logistics, any heuristic planner solves maybe all. Need select portfolio.\n\nQuestion: \"The goal is to solve as many instances as possible (coverage); plan quality does not matter. Choose the ONE planner from catalog below that is most likely to maximize coverage on this domain.\" It asks larger instances same domain. Maybe known IPC results: logistics domain is one of benchmark. What planner had best coverage? In IPC 2000, FF was strong. In recent? For logistics-satellite? But with resource limits, portfolios often robust. Fast Downward Stone Soup 2023 maybe includes all sorts, high coverage.\n\nBut maybe \"DecStar\" (P29) or \"Saarplan\" P05 decoupled search factoring? Logistics has star-topology? Could be very efficient. However decoupled search can exploit star topologies. In logistics, trucks/airplanes interact? Actually packages and vehicles independent? But if package goals are different, packages share vehicles? maybe star factoring. Could handle large instances well. But one planner only? P05 Saarplan IPC 2018: decoupled search star-topology factoring, red-black partial delete relaxation, portfolio. Could be strong for logistics. But I'd lean Fast Downward.\n\nLet's reason: Domain classic logistics-strips. It has typed predicates but no :typing. Many locations, cities, package goals maybe scale. The main search is to move objects. Delete-relaxation h^FF or h^LAMA finds good plans. LAMA with landmarks is particularly strong on logistics? In IPC 2011 LAMA was made for logistics? Actually FF did well. In logistics, landmark heuristics maybe helpful because package must be loaded before unloaded, etc. But delete-relaxation with preferred ops good.\n\nPortfolio likely best because one configuration may timeout on some instances; portfolio tries many. Among portfolios, Fast Downward Stone Soup 2023 (P02) is a sequel. It has \"Stone Soup\" from all fast downward configurations. P03 Fast Downward Remix IPC 2018 is portfolio but perhaps older. P21 and P07 are 2023. Need maybe P21 Scorpion Maidu was top performer in IPC 2023? Let's recall IPC 2023 classical planning results: Gold? \"Scorpion\" maybe from \"Scorpion Maidu\" was winner? Another planner \"Lifted Decorator\"? Hmm.\n\nIPC 2023 planners: \n- Pascal? \n- Team \"DELTA\"? \nI can't recall, but Scorpion is well-known strong. \"Scorpion Maidan\" likely achieved high coverage. Fast Downward Stone Soup 2023 is a portfolio of many planners maybe from Pyperplan, etc. The catalog says \"portfolio of several planner configurations\" but maybe includes only configurations within Fast Downward. P21 includes \"width-based / novelty search + causal-graph + landmarks\" and portfolio. P07 \"Lifted\" maybe.\n\nWhich one from catalog has \"portfolio of several planner configurations\" and \"delete-relaxation + causal-graph + landmarks\" = P02, P03, P07? P21 has same plus width. P05 decoupled search but partial delete relaxation.\n\nIf covering logistics, P21 may be best due to h^ff + landmark + width? But width may not be harmful? Similarly P07 novelty.\n\nWe need maybe output one code and reason. The reason should mention logistics suits delete-relaxation and landmarks; portfolio robust.\n\nGiven that the question likely expects known best planner for this domain. Let's search memory: In many planning benchmark sets \"logistics\" with strips from IPC 1998/2000. The classic \"Fast Downward\" or \"LAMA\" often dominates. For 30min/4GiB, maybe \"Fast Downward Stone Soup 2023\" is safest. I'd select P02 or P23? P23 is older; P02 newer. So P02.\n\nBut we need consider if P21 maybe better. Let's compare P02 vs P21.\n- P02 Fast Downward Stone Soup 2023; no width. It likely runs LAMA, FF, cg. \n- P21 Scorpion Maidu: includes width. Width search can be extremely good on some domains, including? Logistics has small width? Hmm. Width-based search is good for many. But if no plan? It can still fall back.\nIPC 2023 classical track: In optimal? Actually Agile? There is satisficing. \"Stone Soup\" is a portfolio constructor, not a specific planner. It may use parts from many other planners like Fast Downward, Cerberus, etc. It includes \"Sat\" and may be strongest in coverage overall. But planner config might be heavy memory.\n\nCould be P03 \"Fast Downward Remix\" from IPC 2018. In IPC 2018, Fast Downward Remix won? Actually Fast Downward Remix is a collection of configurations generated by \"Fast Downward Stone Soup\" 2011 etc. It was very strong. P03: Fast Downward Remix from 2018: portfolio. This might be better because ICC 2018 had more improved versions. But P02 from 2023 is newer.\n\nMaybe the answer should choose \"P02\" with reason \"modern FD portfolio combines delete-relaxation, causal graph, landmarks robustly for Logistics\". Enough.\n\nLet's ensure JSON valid.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer with JSON only. Need choose one planner most likely maximize coverage on logistics-strips domain with limits 30 min 4GiB. Need reason. We must select from catalog. Need think carefully. Domain logistics-strips classic Logistics. Larger instances. Planner likely modern Fast Downward portfolio or LAMA. Need maximize coverage. IPC logistics domain known. We need choose one. Catalog includes many old and new. Need decide.\n\nWe need answer JSON only. Need reason at most 60 words. We can choose P02 Fast Downward Stone Soup 2023, P03 Fast Downward Remix, P21 Scorpion Maidu, P07 Levitron? Need coverage. Domain logistics strips is relatively simple but large state spaces. Delete-relaxation heuristics and landmarks work well. Portfolio of configurations likely best. Among portfolios: P02, P03, P05, P07, P21, P23. P07 and P21 include novelty/width. Logistics often FF/LAMA solves fast. Coverage on logistics? Fast Downward Stone Soup 2023 likely very strong. But maybe \"Fast Downward Remix\" IPC 2018 also strong. Need choose one.\n\nLet's analyze domain features: object types but PDDL strips uses predicates for types, no typing in STRIPS? Actually domain strips with predicates obj, truck, location, airplane, city, airport; actions require type predicates. This is untyped STRIPS but they encode types via predicates. Instance large: 8 cities, 15 locations each, 8 trucks, 5 airplanes, 3 packages. Goal deliver packages across cities: must use airplanes or trucks to airports. This is logistics. It can be solved quite easily by heuristic FF/LAMA. For maximize coverage across larger instances, portfolio. Fast Downward Stone Soup 2023 is latest portfolio likely robust. But maybe P21 Scorpion Maidu from IPC 2023 also includes novelty. Need choose one likely max. In IPC 2023 logistics? Let's recall. IPC 2023 tracks had planners. The \"classical\" domains included? I don't remember if Logistics included. But Stone Soup 2023 is a portfolio of all previous? It's specifically designed for \"stone soup\" aggregator? Fast Downward Stone Soup 2023 uses many configurations including LAMA, FF, etc. It likely has good coverage across domains. But maybe P21 Scorpion Maidu is also strong but maybe not all.\n\nLet's inspect catalog:\nP02 Fast Downward Stone Soup 2023: forward search, hFF + causal-graph + landmarks, portfolio of several planner configurations.\nP21 Scorpion Maidu: forward + width/novelty, same heuristics, portfolio.\nP07 Levitron: forward + breadth/novelty, portfolio.\nP03 Fast Downward Remix: portfolio.\nP23 Fast Downward Stone Soup 2011.\nFor classic logistics, novelty search might be less necessary, but could hurt? Goal counting? Actually width-based BFWS can be good. However coverage under 30 min 4GiB, simple logistics, any heuristic planner solves maybe all. Need select portfolio.\n\nQuestion: \"The goal is to solve as many instances as possible (coverage); plan quality does not matter. Choose the ONE planner from catalog below that is most likely to maximize coverage on this domain.\" It asks larger instances same domain. Maybe known IPC results: logistics domain is one of benchmark. What planner had best coverage? In IPC 2000, FF was strong. In recent? For logistics-satellite? But with resource limits, portfolios often robust. Fast Downward Stone Soup 2023 maybe includes all sorts, high coverage.\n\nBut maybe \"DecStar\" (P29) or \"Saarplan\" P05 decoupled search factoring? Logistics has star-topology? Could be very efficient. However decoupled search can exploit star topologies. In logistics, trucks/airplanes interact? Actually packages and vehicles independent? But if package goals are different, packages share vehicles? maybe star factoring. Could handle large instances well. But one planner only? P05 Saarplan IPC 2018: decoupled search star-topology factoring, red-black partial delete relaxation, portfolio. Could be strong for logistics. But I'd lean Fast Downward.\n\nLet's reason: Domain classic logistics-strips. It has typed predicates but no :typing. Many locations, cities, package goals maybe scale. The main search is to move objects. Delete-relaxation h^FF or h^LAMA finds good plans. LAMA with landmarks is particularly strong on logistics? In IPC 2011 LAMA was made for logistics? Actually FF did well. In logistics, landmark heuristics maybe helpful because package must be loaded before unloaded, etc. But delete-relaxation with preferred ops good.\n\nPortfolio likely best because one configuration may timeout on some instances; portfolio tries many. Among portfolios, Fast Downward Stone Soup 2023 (P02) is a sequel. It has \"Stone Soup\" from all fast downward configurations. P03 Fast Downward Remix IPC 2018 is portfolio but perhaps older. P21 and P07 are 2023. Need maybe P21 Scorpion Maidu was top performer in IPC 2023? Let's recall IPC 2023 classical planning results: Gold? \"Scorpion\" maybe from \"Scorpion Maidu\" was winner? Another planner \"Lifted Decorator\"? Hmm.\n\nIPC 2023 planners: \n- Pascal? \n- Team \"DELTA\"? \nI can't recall, but Scorpion is well-known strong. \"Scorpion Maidan\" likely achieved high coverage. Fast Downward Stone Soup 2023 is a portfolio of many planners maybe from Pyperplan, etc. The catalog says \"portfolio of several planner configurations\" but maybe includes only configurations within Fast Downward. P21 includes \"width-based / novelty search + causal-graph + landmarks\" and portfolio. P07 \"Lifted\" maybe.\n\nWhich one from catalog has \"portfolio of several planner configurations\" and \"delete-relaxation + causal-graph + landmarks\" = P02, P03, P07? P21 has same plus width. P05 decoupled search but partial delete relaxation.\n\nIf covering logistics, P21 may be best due to h^ff + landmark + width? But width may not be harmful? Similarly P07 novelty.\n\nWe need maybe output one code and reason. The reason should mention logistics suits delete-relaxation and landmarks; portfolio robust.\n\nGiven that the question likely expects known best planner for this domain. Let's search memory: In many planning benchmark sets \"logistics\" with strips from IPC 1998/2000. The classic \"Fast Downward\" or \"LAMA\" often dominates. For 30min/4GiB, maybe \"Fast Downward Stone Soup 2023\" is safest. I'd select P02 or P23? P23 is older; P02 newer. So P02.\n\nBut we need consider if P21 maybe better. Let's compare P02 vs P21.\n- P02 Fast Downward Stone Soup 2023; no width. It likely runs LAMA, FF, cg. \n- P21 Scorpion Maidu: includes width. Width search can be extremely good on some domains, including? Logistics has small width? Hmm. Width-based search is good for many. But if no plan? It can still fall back.\nIPC 2023 classical track: In optimal? Actually Agile? There is satisficing. \"Stone Soup\" is a portfolio constructor, not a specific planner. It may use parts from many other planners like Fast Downward, Cerberus, etc. It includes \"Sat\" and may be strongest in coverage overall. But planner config might be heavy memory.\n\nCould be P03 \"Fast Downward Remix\" from IPC 2018. In IPC 2018, Fast Downward Remix won? Actually Fast Downward Remix is a collection of configurations generated by \"Fast Downward Stone Soup\" 2011 etc. It was very strong. P03: Fast Downward Remix from 2018: portfolio. This might be better because ICC 2018 had more improved versions. But P02 from 2023 is newer.\n\nMaybe the answer should choose \"P02\" with reason \"modern FD portfolio combines delete-relaxation, causal graph, landmarks robustly for Logistics\". Enough.\n\nLet's ensure JSON valid.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 5777,
+   "completion_tokens": 1809,
+   "total_tokens": 7586,
+   "cost": 0.00475052992,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1536,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00475052992,
+    "upstream_inference_prompt_cost": 0.00120778432,
+    "upstream_inference_completions_cost": 0.0035427456
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1753,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

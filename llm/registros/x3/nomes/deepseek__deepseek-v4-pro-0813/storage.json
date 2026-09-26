@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "storage",
+ "data_utc": "2026-09-26T17:53:56+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 24.8,
+ "uso": {
+  "prompt_tokens": 3861,
+  "completion_tokens": 1536,
+  "total_tokens": 5397,
+  "cost": 0.00373152192,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00373152192,
+   "upstream_inference_prompt_cost": 0.00072341952,
+   "upstream_inference_completions_cost": 0.0030081024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1476,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a robust portfolio of multiple heuristic configurations including delete-relaxation, causal-graph and landmark guidance; this makes it highly likely to maximize coverage on storage/logistics-style domains under time and memory limits.",
+ "resposta": "{\"planner\":\"P02\",\"reason\":\"Fast Downward Stone Soup 2023 is a robust portfolio of multiple heuristic configurations including delete-relaxation, causal-graph and landmark guidance; this makes it highly likely to maximize coverage on storage/logistics-style domains under time and memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790445211-HIGIpsgJtBNL7wBz8aWC",
+  "object": "chat.completion",
+  "created": 1790445211,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P02\",\"reason\":\"Fast Downward Stone Soup 2023 is a robust portfolio of multiple heuristic configurations including delete-relaxation, causal-graph and landmark guidance; this makes it highly likely to maximize coverage on storage/logistics-style domains under time and memory limits.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner likely maximize coverage on domain storage-propositional. We need analyze domain. Need pick ONE planner from catalog. We need reason <=60 words.\n\nWe need understand domain. It's a storage with hoists, crates, storeareas, connected areas, movement, lift/drop. Looks like logistics/storage. Propositional STRIPS with types but grounded. Small instance. Larger instances perhaps many crates/hoists/depots. Need choose planner best for coverage. IPC 2023 portfolios likely robust: Fast Downward Stone Soup 2023, Levitron, Scorpion Maidu, DecStar. Need decide.\n\nDomain features: There is move requiring clear of target and clear effects. Classical planning with delete relax. Heuristics? It's propositional STRIPS, no ADL. It resembles storage domain from IPC? Maybe \"storage-propositional\" from IPC 2014? Let’s infer. Domain has typed objects, many storeareas, hoists, crates, containers/depots/transitareas. Goal crate locations. Need find plans.\n\nPlanners:\n- P02 Fast Downward Stone Soup 2023 portfolio; probably strong general coverage.\n- P03 Fast Downward Remix 2018 strong.\n- P07 Levitron 2023 portfolio with lifted, novelty.\n- P21 Scorpion Maidu 2023 portfolio with novelty, heuristics.\n- P27 LAPKT-BFWS-Preference, width-based novelty.\n- P05 Saarplan decoupled search; P29 DecStar decoupled.\n- P15 Madagascar SAT, could be good for goal reachability, but may scale? \nNeed choose one likely max coverage.\n\nCould be from IPC 2018/2023 planning benchmark. Domain \"Storage\" propositional? There is \"storage-propositional\" maybe from IPC 2006? The catalog includes older. We need choose one. In planning competitions, recent sat/DD portfolios maybe. Need look for clues. The domain has typed objects, many equalities? Moves require clear to and connected. Hoists cannot occupy same clear storearea? Clear is used both for empty storage areas and for hoist positions? Wait `(clear ?x0 - storearea)` means no crate and no hoist? In actions, move from-to: precondition clear to, at h from. effect not clear to, clear from. So hoist occupies storearea. drop precondition clear a1, effect not clear a1, on crate a1. So a storearea is not clear if hoist at it or crate on it. This mutual exclusion. Many numeric-like constraints. Heuristics delete-relaxation may ignore deletes, not too hard. \n\nNeed choose one from catalog. Perhaps P02 Fast Downward Stone Soup 2023 because latest portfolio with multiple configurations. The goal is maximize coverage. IPC 2023 planners intended. We should maybe pick P21 Scorpion Maidu? Let's investigate mentally.\n\nCatalog:\nP02: Fast Downward Stone Soup 2023: portfolio of several planner configurations; delete relaxation + causal graph + landmarks. This is likely strongest general. \nP07 Levitron: same but lifted no grounding; portfolio. \nP21 Scorpion Maidu: forward + width-based/novelty; delete+causal+landmarks; portfolio.\nP03 Fast Downward Remix: IPC 2018.\nP29 DecStar: decoupled star factoring; etc.\n\nIn many classical planning domains, portfolios of Fast Downward based planners are top. But which code? P02 likely latest 2023; includes LAMA, etc. More likely maximize coverage across instances. However domain propositional small, older planners like LAMA 2011 might do well. But prompt asks one planner most likely to maximize coverage on this domain, not plan quality. We need maybe pick P21 or P02. Let's reason on domain structure.\n\nDomain \"storage-propositional\" maybe has many objects but small solutions. A planner with width-based novelty / BFWS may be good? But ground with delete relaxation and landmarks also. P21 Scorpion Maidu uses width-based novelty and causal graph. It might excel if goal with subgoals? Hmm.\n\nNeed identify domain. It includes \"go-out\" and \"go-in\" between transit areas and store areas; containers with crates initially in container, need transfer to depots. This is like \"storage\" domain from IPC 2011? Let's search memory internal. There is a domain called \"Storage\" in IPC 2011? It has hoists and areas, sort of. I recall IPC 2011 has domains: parking, transport, elevators, visit-all, barman, openstacks, etc. Storage maybe IPC 2014? There is \"GED\" etc. PDDL has types hoist, crate, depot, container, loadarea. Many symmetric. It may be from IPC 2008? Actually \"storage\" domain in IPC 2004? Let's recall IPC 2008 benchmarking domains: airport, blocks, depots, driverlog, freecell, logistics, miconic, movie, openstacks, pathways, philosophers, pipesworld, etc. There is a domain \"storage\" maybe from IPC 2004? No.\n\nCould use \"propositional\" variant where no ADL. Maybe from International Planning Competition 2006, featuring \"storage\" with typed objects. If so some planners with propositional STRIPS performed.\n\nNeed maybe consider SAT-based planner Madagascar, C, etc. The domain is all STRIPS. Blackbox? But larger instances maybe complex.\n\nGiven only choose one, newest portfolio likely. Maybe P02 Stone Soup 2023 includes multiple configurations, definitely best coverage in IPC 2023. Let's choose P02. But we need perhaps P21? Need decide.\n\nLet's read catalog description nuances:\nP02 Fast Downward Stone Soup 2023 portfolio of several planner configurations. Likely general and robust.\nP03 Fast Downward Remix: IPC 2018 portfolio.\nP21 Scorpion Maidu: forward + width-based/novelty, portfolio with numerous configs. \nP07 Levitron: lifted no grounding. Domain is grounded STRIPS? Actually PDDL typed but finite. Could be okay. But Lifted may struggle with ground actions? It says representation multi-valued variables + lifted (no grounding). Could be slower.\n\nCoverage criteria with 30 min and 4 GiB. Portfolio configs run in sequence maybe allocate time per config, robust. P02 Stone Soup may be best.\n\nPotential answer:\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio with multiple configurations combining deletion-relaxation, causal-graph and landmark heuristics, which is highly robust on STRIPS storage/logistics-style domains and maximizes solved instances under time/memory limits.\"}\n\nThat's 34 words. Need JSON only. But maybe P03? The catalog lists P02 as IPC 2023 Stone Soup; likely strongest. Use exactly.\n\nNeed ensure no extra prose. Final answer JSON.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner likely maximize coverage on domain storage-propositional. We need analyze domain. Need pick ONE planner from catalog. We need reason <=60 words.\n\nWe need understand domain. It's a storage with hoists, crates, storeareas, connected areas, movement, lift/drop. Looks like logistics/storage. Propositional STRIPS with types but grounded. Small instance. Larger instances perhaps many crates/hoists/depots. Need choose planner best for coverage. IPC 2023 portfolios likely robust: Fast Downward Stone Soup 2023, Levitron, Scorpion Maidu, DecStar. Need decide.\n\nDomain features: There is move requiring clear of target and clear effects. Classical planning with delete relax. Heuristics? It's propositional STRIPS, no ADL. It resembles storage domain from IPC? Maybe \"storage-propositional\" from IPC 2014? Let’s infer. Domain has typed objects, many storeareas, hoists, crates, containers/depots/transitareas. Goal crate locations. Need find plans.\n\nPlanners:\n- P02 Fast Downward Stone Soup 2023 portfolio; probably strong general coverage.\n- P03 Fast Downward Remix 2018 strong.\n- P07 Levitron 2023 portfolio with lifted, novelty.\n- P21 Scorpion Maidu 2023 portfolio with novelty, heuristics.\n- P27 LAPKT-BFWS-Preference, width-based novelty.\n- P05 Saarplan decoupled search; P29 DecStar decoupled.\n- P15 Madagascar SAT, could be good for goal reachability, but may scale? \nNeed choose one likely max coverage.\n\nCould be from IPC 2018/2023 planning benchmark. Domain \"Storage\" propositional? There is \"storage-propositional\" maybe from IPC 2006? The catalog includes older. We need choose one. In planning competitions, recent sat/DD portfolios maybe. Need look for clues. The domain has typed objects, many equalities? Moves require clear to and connected. Hoists cannot occupy same clear storearea? Clear is used both for empty storage areas and for hoist positions? Wait `(clear ?x0 - storearea)` means no crate and no hoist? In actions, move from-to: precondition clear to, at h from. effect not clear to, clear from. So hoist occupies storearea. drop precondition clear a1, effect not clear a1, on crate a1. So a storearea is not clear if hoist at it or crate on it. This mutual exclusion. Many numeric-like constraints. Heuristics delete-relaxation may ignore deletes, not too hard. \n\nNeed choose one from catalog. Perhaps P02 Fast Downward Stone Soup 2023 because latest portfolio with multiple configurations. The goal is maximize coverage. IPC 2023 planners intended. We should maybe pick P21 Scorpion Maidu? Let's investigate mentally.\n\nCatalog:\nP02: Fast Downward Stone Soup 2023: portfolio of several planner configurations; delete relaxation + causal graph + landmarks. This is likely strongest general. \nP07 Levitron: same but lifted no grounding; portfolio. \nP21 Scorpion Maidu: forward + width-based/novelty; delete+causal+landmarks; portfolio.\nP03 Fast Downward Remix: IPC 2018.\nP29 DecStar: decoupled star factoring; etc.\n\nIn many classical planning domains, portfolios of Fast Downward based planners are top. But which code? P02 likely latest 2023; includes LAMA, etc. More likely maximize coverage across instances. However domain propositional small, older planners like LAMA 2011 might do well. But prompt asks one planner most likely to maximize coverage on this domain, not plan quality. We need maybe pick P21 or P02. Let's reason on domain structure.\n\nDomain \"storage-propositional\" maybe has many objects but small solutions. A planner with width-based novelty / BFWS may be good? But ground with delete relaxation and landmarks also. P21 Scorpion Maidu uses width-based novelty and causal graph. It might excel if goal with subgoals? Hmm.\n\nNeed identify domain. It includes \"go-out\" and \"go-in\" between transit areas and store areas; containers with crates initially in container, need transfer to depots. This is like \"storage\" domain from IPC 2011? Let's search memory internal. There is a domain called \"Storage\" in IPC 2011? It has hoists and areas, sort of. I recall IPC 2011 has domains: parking, transport, elevators, visit-all, barman, openstacks, etc. Storage maybe IPC 2014? There is \"GED\" etc. PDDL has types hoist, crate, depot, container, loadarea. Many symmetric. It may be from IPC 2008? Actually \"storage\" domain in IPC 2004? Let's recall IPC 2008 benchmarking domains: airport, blocks, depots, driverlog, freecell, logistics, miconic, movie, openstacks, pathways, philosophers, pipesworld, etc. There is a domain \"storage\" maybe from IPC 2004? No.\n\nCould use \"propositional\" variant where no ADL. Maybe from International Planning Competition 2006, featuring \"storage\" with typed objects. If so some planners with propositional STRIPS performed.\n\nNeed maybe consider SAT-based planner Madagascar, C, etc. The domain is all STRIPS. Blackbox? But larger instances maybe complex.\n\nGiven only choose one, newest portfolio likely. Maybe P02 Stone Soup 2023 includes multiple configurations, definitely best coverage in IPC 2023. Let's choose P02. But we need perhaps P21? Need decide.\n\nLet's read catalog description nuances:\nP02 Fast Downward Stone Soup 2023 portfolio of several planner configurations. Likely general and robust.\nP03 Fast Downward Remix: IPC 2018 portfolio.\nP21 Scorpion Maidu: forward + width-based/novelty, portfolio with numerous configs. \nP07 Levitron: lifted no grounding. Domain is grounded STRIPS? Actually PDDL typed but finite. Could be okay. But Lifted may struggle with ground actions? It says representation multi-valued variables + lifted (no grounding). Could be slower.\n\nCoverage criteria with 30 min and 4 GiB. Portfolio configs run in sequence maybe allocate time per config, robust. P02 Stone Soup may be best.\n\nPotential answer:\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio with multiple configurations combining deletion-relaxation, causal-graph and landmark heuristics, which is highly robust on STRIPS storage/logistics-style domains and maximizes solved instances under time/memory limits.\"}\n\nThat's 34 words. Need JSON only. But maybe P03? The catalog lists P02 as IPC 2023 Stone Soup; likely strongest. Use exactly.\n\nNeed ensure no extra prose. Final answer JSON.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3861,
+   "completion_tokens": 1536,
+   "total_tokens": 5397,
+   "cost": 0.00373152192,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1536,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00373152192,
+    "upstream_inference_prompt_cost": 0.00072341952,
+    "upstream_inference_completions_cost": 0.0030081024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1476,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

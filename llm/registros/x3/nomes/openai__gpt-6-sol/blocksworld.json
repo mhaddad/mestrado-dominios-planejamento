@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "blocksworld",
+ "data_utc": "2026-09-26T17:27:13+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.2,
+ "uso": {
+  "prompt_tokens": 2159,
+  "completion_tokens": 228,
+  "total_tokens": 2387,
+  "cost": 0.007676,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2156,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.007676,
+   "upstream_inference_prompt_cost": 0.005396,
+   "upstream_inference_completions_cost": 0.00228
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 168,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Blocks World requires repeatedly clearing and rearranging stacks, which delete-relaxation heuristics can underestimate. Scorpion Maidu combines novelty search with landmark and other heuristics, and its portfolio offers multiple ways to handle larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Blocks World requires repeatedly clearing and rearranging stacks, which delete-relaxation heuristics can underestimate. Scorpion Maidu combines novelty search with landmark and other heuristics, and its portfolio offers multiple ways to handle larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790443628-jm39ZmmsbI38ZcyUSBob",
+  "object": "chat.completion",
+  "created": 1790443628,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Blocks World requires repeatedly clearing and rearranging stacks, which delete-relaxation heuristics can underestimate. Scorpion Maidu combines novelty search with landmark and other heuristics, and its portfolio offers multiple ways to handle larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquABx86MfGOi2v7ZYX7AboKeuq8S11Bgrj1jQMc-67-ssfjL1FgEgL4RGFle_WRO1rp0IYd5pLSO5OBLXfR_DV50Or7zLTOcaD7A4UjkuEZfXR4DQSX_ojZ9079Mfr7VmYYWSjyZd_NnLTeD4ruDBhQIOHvOyzral61yYGxQ24KkzHn8k9DX_dlscJLQhRfIkqoqwce-6KMpG_c7bgZsDfb2_vCJErZ9rbFDGzsiBc-JT93z4UTEx6ac6oAAn0RQB5XuHh9pxJIElbEUshiBX7LLeFs-OaApzA_w1e-lLawQ4pUCqNbStT6_E252aKemKrfnfOkSKvJyhwLy63GcsLH0Jo10efzU56nc8siT_cDraWfZb_ZHpc7fxFVfBFN6QU98_2Lg3XO2LIzL-5-ELpVbD9rTpc0GEDHAJLq5d8D7SOAvdOW4i0Q-W99_DD-ESwve3oqxIt1dXrIDDSgSbKILFWMol6KdunxUj_HoaFF5BIua4vJ82eAUGPsHyWR4j19oVo--uA3aDgWxsVhRXeGy8Oxr5WKOhLwnYAjuTBwlN9Z9rTim4jxfwqLqhmbv4CAF0xBDc_sei87iJfshAlquQBsVJvassDxfx-IB9tW8zB79GQpOtVdEubC-Ca57yUYU6c1ObHF5W_1RJPYsxl4ZZB2lfPw43GRaMCU08pT8L6hckjr10RYO6LLqEKgrmavBk4tLmiQanA6RK8S-13aYoSdZbb_tjWYIRYJQMx3Apg18SQ2vNamq15q9Zf1oABZKLcxKHesFYbyJJ7z2u5K0G9a0WAspRVVfcvv9tlH72ElHctcr2vsTkBnmoZRW2a3ZMbnz9tRJp20eMLuO-vfxvPBxeUAc3iVMDv9B_x0SjfyIQdRfb90WBUdNDKOxxl_D890jZm44Hw3KdIjjA-kM9wgYq0iq46gcF4NS8b9dcU986uV1id5rrbXS95CJSn-uODkfTGkKr4uQHfot49ZIFBSRioVk-11NjD2oApRP1dnxAZR8ep9G2VL5CMIb4OuPr1MTnwcH2kvdhmfJWAy-gO_FW5YuP8F5UxJrrVu2oQTCoYcbSdUPgl1UmMP8FGr7g6KBQWcDPDh6Np-n17tjZ6m3JzaDgxgPshHV9Ce-19SgCjoYC_XBaFcfe1_nhl_cyq8AtjQtrwtFMGTRjyNUoyY8frfkveNofpSdsuDUKgAIvgpIIF2zVG2ViGajjpomcga6NlWteN564LqLe7bqDdZ4Lccpn_8s77_VfWiv7F5R3qXFA5zLyTU1ExsnANWt5qf42_Gh1CQzzch4aEHLSUh1iE3M7n0jl8AYgay6Ty1sdfj8icY1L82roSyxPAmR4pOfXhCiZREd1A3VT7msF2_n_fwx89NT8SVfkwpY1iMB3aCjbiwRTNxS6WFiy6RsbydEnYsOuLO2he0-adAU24xnFSr8i_5qspVZC7IwCOnfBqUPbltW_toCXVH6c4oPsPTxAEFggzF_FGcyWABw19dwk7FD0VUM4-TMBk9TrJ56t44RnEpWFus1YT7fMu6HRE0FFH7D94C0ScuLnLgelP7zvH4TXp60KZYiIFevr7UO7ntsj-dbhtOfWUVTqdRXRAowyTjKQx6g5tqEE2zfEFj-qwEUhE0nakGWFDjB-CAvWXVwFFlrBhiD40pmjO0J-79Y-EdeLPESR9tTpDZCl2oKOaGr4PuJvSUD2vcdGWn_Wd6daflyLR2DCzo_tLgAbfv8KKRYSxaC9wWLo6OLeNdyr1ZX0lBNfuE9VWB-BQ6nT8OOQ15Y6VKvDEWkYR0zyT5G8khvzZdzL24WUq6_09irtsaVY9NAqwwo5EXWlEOKN5kZZETblbokj9dClqXLD1Nl4EStNOulWvdagUT2f58GJiRV_F4dmcYgNm7HqHK6NBzs5GpSsEPDc8oTCZi_YG8fObsY17ZTm0fi6RLNzhILMEQqI0c0Hu4iuCMnKxJadgg1sTBN7PJ3ckbfJH6njK1aKyQCBeacD6jO41oK8G2N4HCoJ6_ywBqrwPOhsiAkqRffbR2t94O8ASsDn9-CZZUOS35X-uMgbycXqXf8zoYaAO2GXBEJgIXigeFpiUHjgOFO8_slDB6e5br6qIYR6fB1iGp1LyyEKQcyD03X1XTMwpnjajlbfMvFJqJqRPEL3ZwDAXkGgUU9b1sIq_1c5zahFyjlX4L5g7KUy63kytSeW1m-U-QRf1jQ7VqQpgSHVoFyc_QZxOgnmhpPgQeFI5vUHVFJvFQILKd7TYaVDPfJdhjO_9fd9ahqe_rtHeENpyiQmV9JCSLCFrUO5gmLMfFe7V-iAaGAvRnaluyJQGzktgmTvYQi_q_peu0v_WSM=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_07cc6e6b80a83eff016ab8006db49087d18892280df3ace6ae",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2159,
+   "completion_tokens": 228,
+   "total_tokens": 2387,
+   "cost": 0.007676,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2156,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.007676,
+    "upstream_inference_prompt_cost": 0.005396,
+    "upstream_inference_completions_cost": 0.00228
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 168,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

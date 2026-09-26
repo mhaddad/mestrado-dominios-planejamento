@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "organic-synthesis-split",
+ "data_utc": "2026-09-26T17:29:21+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 4.8,
+ "uso": {
+  "prompt_tokens": 21401,
+  "completion_tokens": 215,
+  "total_tokens": 21616,
+  "cost": 0.055651,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 21398,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.055651,
+   "upstream_inference_prompt_cost": 0.053501,
+   "upstream_inference_completions_cost": 0.00215
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 146,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "The domain has many reaction schemas and potentially large numbers of atoms, making grounding a likely bottleneck in larger instances. Levitron combines a lifted configuration with a portfolio of heuristic and novelty-based searches, offering several ways to handle both grounding size and the long reaction sequences.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"The domain has many reaction schemas and potentially large numbers of atoms, making grounding a likely bottleneck in larger instances. Levitron combines a lifted configuration with a portfolio of heuristic and novelty-based searches, offering several ways to handle both grounding size and the long reaction sequences.\"}",
+ "bruto": {
+  "id": "gen-1790443756-IEVt1Yvu4Ljr04bd4KId",
+  "object": "chat.completion",
+  "created": 1790443756,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"The domain has many reaction schemas and potentially large numbers of atoms, making grounding a likely bottleneck in larger instances. Levitron combines a lifted configuration with a portfolio of heuristic and novelty-based searches, offering several ways to handle both grounding size and the long reaction sequences.\"}",
+     "refusal": null,
+     "reasoning": "**Evaluating grounding strategies**\n\nI need to choose a robust grounding approach across a huge domain with many families and stages. Some instances are unreachable due to negative preconditions. I suspect that P07 has improved the portfolio for grounding bottlenecks, or perhaps P02 offers a solid solution for 2023. Evaluating action predicates reveals many unreachable instances due to omissions. The grounding complexity is significant, especially for large schemas, but P07 seems especially effective for combinatorial grounding.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating grounding strategies**\n\nI need to choose a robust grounding approach across a huge domain with many families and stages. Some instances are unreachable due to negative preconditions. I suspect that P07 has improved the portfolio for grounding bottlenecks, or perhaps P02 offers a solid solution for 2023. Evaluating action predicates reveals many unreachable instances due to omissions. The grounding complexity is significant, especially for large schemas, but P07 seems especially effective for combinatorial grounding.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquADxNJ-7raI0qofmWrbW9yziCuIUCMNQ6_55Kx-G6Ajhd5pCBSP6Ow5Y8JKQ6WoDz8kYwKnd6PVN26jElfYFEgNFgiHIHyhpNVBTLW688hfI1OmW7eUSyG3CS-_fUTN0zPkfC26JItk0ZgsMJaEztV6UPEriT71rC9K_UAy1IatPfOgdoUfGwQQG8faTx0f_CNVW2jXcIR1A1eiEKnUPAJSanHPAW5gL9RhP_7jhiQ_N2ojaUOcgDbJTVGJ_KqIXWvQyorGysHglUnxg0X6an8kyt2cXWd1Uwq2eWcyYBokZZwOpwgcpl_Duxg9xDPzDrVcfeLS_6-OMxcij2P2bJqyXQ8FwzuEypS6pRqnAWNTn0eXVsdyCzgQZbGdrR4BK4_IxEZydn8chFlarvwt23-Cc7banWdSMHsRC3qLvGMljzFi-o3E9QjCAaSureVgN_u6vz3A1VDj2ObufrQCaHI5NYd5cRnnPE0TNJp-mHLmPHnDINoQfGqd4q5ObC3qNAL26v47DMFi2ZsgzQ6O228yMfbhiPuDeNJLB1Khf5w5rYXJj-qu752b1vMe8F4-BHs0sW7tFes-4IhnOO9xYsHtEnIH2UHH8jfyG2Kkkgx1OlIq9kkwWB7Ovty7g0WrOf0VB3MWbxkrg8a3sOg8oJzfXhrtTV2rUHbiE1IjmXqyB4sQN0xT6CkXnwD_ait47JOvGN9cN6Z3lKtQ9PNB35AMyd2FoXRlSAMqMBLw9oBRGDQPZqkPk4vFOEEsLCuRJ9mcaQFrqoaJ2xVBmU0ljGMv-s3wkW683AW5HeVAhCd4QegoMEo0Wh2It1CvSk2cpAuv1Ft4j6EHvZpUu__HPgtRj9F3K_kp_9NnseEx0En6wI_uG5SIvyd18buTozbQHsYnIbpocNI8Sc_vWHu2H4-dl8OgK2UkzpK8TGK_uqi7JSy8R5DGkRdpCSuv2MHcIl5iP9T-eneza7xsJi9hkxDcPTFsIMpronL8W8v6YKHrwXDS2Ayw36NK1SxgX78O9rhlXsbfBOmAZPCYZg2_OcCiJopQ8P1NugcACuxpswfjbtix2CMl6NfstpTYXUIaXD5EbO8tHHjbvasal3jx_fVdj-T7sWJ3JRbkbjk1_I776qJAE8M1dwA2kxWNAwLXAfrtW8zhNLg30o31Te5Yonm1YV0luUc8TrpSRPpSHOB6euIGVDB0qx4lYTEEkF-s6TEhUi_qY0DT7JCvyVFBCA08BB3cuSPVIS7HN334GYNdwuVuUG7tHHAzM1mRFxXNhEveEfHkgZmUYvvMoM_JpFOnxyl217gRCLv1vmXDDegt6JSdxoSEHRRI_cXpsC33prRGwLE20oIpnN_Lu3gMu3Zaqe6FW-5GrYLcd4jXNFS18cu-qggOFYqIQsq8wvSsT4L86gTr9n-_I_fkjEyUtn37yAI_szOpOwrfFbjlZz3w_FwMOtSuMaVz1jS0LTQLf-3k-L8E9QlmkUH6TFHAz1ELgPGSqUV1PpmHC4vORghlnlRubrxJ4LHD-56KSJ5kPHOsLpnyd4CIl2l9W9REGgxb1-HQW6RR3yMJT-EZ-BwZIlCsx72YJvKu2POXdKsWdQ29vvYRc4MP9o1c_AjA6cVUiOK9thCzpuDatbW3fqjeJJeZ46UaD1vD4P9VurO3y9AtysuN0XDOx8tewhuzA3EzW2iQCINS6hMmOtf5L8TNWASbT2rFc8gx5p_Xa_nG0txN7qOUlf9wyF5pZf7X-yj12TBOlA-yZQJmjDFmOnfF0cJQF4JgVTMbAbPLOyjgHPXEULlh4eg1DnbArOA5ZFirK_OvbDbkAzgWwIL7_D5lCsg33BUbHjawsBWvrEmNN2i-a7rBi9VGhentJOCTM9eM4Lq_45Yf3KS2XWaNd43UY1fHWuqWYRaVt1KQ51-kFGcopXSnfI4vVeSPs7AeG8XGleTpEz3wwLpklmv49NmHN2Bu3cP4kyzfgtt2QrlZXKvCXN66ig0k69ASEOxZTHNrk2TXwEJLWLE0dyDr6Y7sDtoKzD7mJqnkFzoPqLfeUAbiwb5AvyPXGzj39Q6hyMJL4Z1P8cgbidgmGE0LmHBUs2Z0Th0yDeUHP8bqGmnA6P7hfJOBy-Pt6mOuv8LFXbO5FoB1OLJoCGf6Qoy9N4L98arUb48jj_EyVCox-RxTW4Q3ulr6iOnAjFcpY9Ey6BEatX2_SHr28qZ_Fv3AAwGycdDZX4NJWug-YBbZXz1gb7yUEYIHcMeUYOhGGJW4PGUDLFabkJVs54Ndt2kDhNhA1oNsR-FS12K2LO3Nf-Q4vTWci.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0116fccc876bdb38016ab800edb85887d1868a18b349e0a46f",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 21401,
+   "completion_tokens": 215,
+   "total_tokens": 21616,
+   "cost": 0.055651,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 21398,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.055651,
+    "upstream_inference_prompt_cost": 0.053501,
+    "upstream_inference_completions_cost": 0.00215
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 146,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

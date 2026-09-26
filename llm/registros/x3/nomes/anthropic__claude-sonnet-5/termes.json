@@ -1,0 +1,93 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "termes",
+ "data_utc": "2026-09-26T17:28:32+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 2.9,
+ "uso": {
+  "prompt_tokens": 9043,
+  "completion_tokens": 117,
+  "total_tokens": 9160,
+  "cost": 0.019256,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.019256,
+   "upstream_inference_prompt_cost": 0.018086,
+   "upstream_inference_completions_cost": 0.00117
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P17",
+ "razao": "Termes requires efficient forward search with strong delete-relaxation heuristics and landmarks over grid/block structures; LAMA 2011 is a robust, well-tuned single planner known for high coverage on such large state spaces within time/memory limits, outperforming older or SAT-based approaches on this domain type.",
+ "resposta": "{\"planner\": \"P17\", \"reason\": \"Termes requires efficient forward search with strong delete-relaxation heuristics and landmarks over grid/block structures; LAMA 2011 is a robust, well-tuned single planner known for high coverage on such large state spaces within time/memory limits, outperforming older or SAT-based approaches on this domain type.\"}",
+ "bruto": {
+  "id": "gen-1790443709-BYb8VA93NlYAkSXonDEw",
+  "object": "chat.completion",
+  "created": 1790443709,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P17\", \"reason\": \"Termes requires efficient forward search with strong delete-relaxation heuristics and landmarks over grid/block structures; LAMA 2011 is a robust, well-tuned single planner known for high coverage on such large state spaces within time/memory limits, outperforming older or SAT-based approaches on this domain type.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 9043,
+   "completion_tokens": 117,
+   "total_tokens": 9160,
+   "cost": 0.019256,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.019256,
+    "upstream_inference_prompt_cost": 0.018086,
+    "upstream_inference_completions_cost": 0.00117
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

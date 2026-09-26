@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "satellite",
+ "data_utc": "2026-09-26T17:49:30+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 15.7,
+ "uso": {
+  "prompt_tokens": 2652,
+  "completion_tokens": 1082,
+  "total_tokens": 3734,
+  "cost": 0.00253677312,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00253677312,
+   "upstream_inference_prompt_cost": 0.00041778432,
+   "upstream_inference_completions_cost": 0.0021189888
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1023,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a modern portfolio using delete-relaxation, causal-graph, and landmark heuristics over finite-domain variables, giving robust coverage on satellite-style resource ordering and image-acquisition goals.",
+ "resposta": "{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio using delete-relaxation, causal-graph, and landmark heuristics over finite-domain variables, giving robust coverage on satellite-style resource ordering and image-acquisition goals.\"}",
+ "bruto": {
+  "id": "gen-1790444954-orgA7rRlH13H2iCQz3Ls",
+  "object": "chat.completion",
+  "created": 1790444954,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio using delete-relaxation, causal-graph, and landmark heuristics over finite-domain variables, giving robust coverage on satellite-style resource ordering and image-acquisition goals.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner for satellite domain likely. Need reason max 60 words. Need think carefully. We need identify best planner from catalog for maximizing coverage on this domain, larger instances, 30min 4GiB. Domain is classical planning satellite. Need choose one planner. Could be Fast Downward Stone Soup 2023, LAMA, etc. Need reason.\n\nWe need answer with JSON object, planner code and reason. Must not include extra.\n\nLet's analyze domain. Satellite domain: STRIPS typing, actions turn_to, switch_on, switch_off, calibrate, take_image. Goals have images in modes and pointing. It has no complex numeric, no ADL. Heuristics: delete relaxation, landmarks, causal graph all useful. For IPC satellite domain, LAMA and Fast Downward portfolios often good. Since plan quality doesn't matter, coverage. Portfolio of configurations likely best. P02 Fast Downward Stone Soup 2023, P03 Fast Downward Remix, P21 Scorpion Maidu, P07 Levitron. Need pick one most likely maximize coverage. Modern IPC 2023 planners stronger. P02 is portfolio of several configurations with delete-relaxation, causal graph, landmarks, FD. P21 Scorpion Maidu includes width-based/novelty search, portfolio. Sat domain? Could benefit from Sat? Width-based? Let's assess.\n\nThe catalog includes:\nP02 Fast Downward Stone Soup 2023: portfolio of several planner configurations; IPC 2023. Probably very robust, coverage high.\nP21 Scorpion Maidu: portfolio, forward + width-based, delete-relaxation+causal+landmarks. Also IPC 2023. Maybe better for many domains.\nP07 Levitron: portfolio, lifted, width/novelty, etc. IPC 2023.\nModern planners.\n\nNeed choose one. Without experimentation, likely P02 (Fast Downward Stone Soup 2023) is safe robust portfolio. But question likely from benchmark, expects based on planner descriptions. Need choose one. Let's reason domain characteristics: Satellite domain has no numeric, no costs; need achieve images: turn satellite to directions, calibrate instrument, switch on, take images. It may require ordering and resource constraints (power_avail). It has small branching. Heuristic search works.\n\nPortfolio Fast Downward Stone Soup 2023 uses multiple configurations, likely includes LAMA, FF, etc. This is best.\n\nBut let's not jump. Need maybe P21 Scorpion Maidu is winner? IPC 2023 agile? Let's recall IPC 2023 results? In classical tracks, maybe \"Scorpion Maidu\" was best? \"Fast Downward Stone Soup 2023\" participated? I know IPC 2023 had original and agile. \"Fast Downward Stone Soup 2023\" from Basel maybe very robust. Portfolio with different heuristics. \"Scorpion Maidu\" maybe satisficing, maximum coverage. Need use catalog. Planner P02 code \"Fast Downward Stone Soup 2023\" and description of features. I'd choose P02. Reason: modern portfolio of multiple configurations uses delete-relaxation, causal graph, landmarks, multi-valued variables; likely robust coverage on satellite where images require sequence and resource constraints. Need mention benefit.\n\nBut let's ensure no better option: P05 Saarplan, decoupled search with star-topology factoring maybe suited for satellite? Satellite domain has multiple satellites independent except shared? Actually each satellite independent, star-topology factoring could exploit, but \"power_avail\" only satellite and instruments onboard, no inter-satellite dependencies except maybe all share directions? Directions are global but no resource constraints, so decoupled might help not hurt. But P05 is IPC 2018, could be good on satellite. Yet P02 Stone Soup 2023 may include decoupled? Portfolio maybe no. P29 DecStar (IPC 2023) decoupled search + delete-relaxation; maybe satellite domain has independent satellites, yes possible. But coverage on larger instances may require dealing with many directions/modes. Heuristics likely. Need think of planner performance on IPC benchmark \"satellite\". Historically satellite was hard for many. LAMA 2011 maybe good. Portfolio might schedule.\n\nMaybe there is a known paper: \"Satellite\" domain from IPC 2002. Planners: FF, LPG, MIPS? But modern \"Fast Downward\" with landmarks/causal graph strong. Stone Soup 2023 maybe combines many. So choose P02.\n\nNeed formulate reason <=60 words. JSON with \"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio of multiple strong configurations using delete-relaxation, causal-graph, and landmark heuristics on finite-domain variables; this robustly handles satellite's resource orderings and image goals, maximizing coverage within limits.\"\n\nNeed ensure JSON only. Use double quotes.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner for satellite domain likely. Need reason max 60 words. Need think carefully. We need identify best planner from catalog for maximizing coverage on this domain, larger instances, 30min 4GiB. Domain is classical planning satellite. Need choose one planner. Could be Fast Downward Stone Soup 2023, LAMA, etc. Need reason.\n\nWe need answer with JSON object, planner code and reason. Must not include extra.\n\nLet's analyze domain. Satellite domain: STRIPS typing, actions turn_to, switch_on, switch_off, calibrate, take_image. Goals have images in modes and pointing. It has no complex numeric, no ADL. Heuristics: delete relaxation, landmarks, causal graph all useful. For IPC satellite domain, LAMA and Fast Downward portfolios often good. Since plan quality doesn't matter, coverage. Portfolio of configurations likely best. P02 Fast Downward Stone Soup 2023, P03 Fast Downward Remix, P21 Scorpion Maidu, P07 Levitron. Need pick one most likely maximize coverage. Modern IPC 2023 planners stronger. P02 is portfolio of several configurations with delete-relaxation, causal graph, landmarks, FD. P21 Scorpion Maidu includes width-based/novelty search, portfolio. Sat domain? Could benefit from Sat? Width-based? Let's assess.\n\nThe catalog includes:\nP02 Fast Downward Stone Soup 2023: portfolio of several planner configurations; IPC 2023. Probably very robust, coverage high.\nP21 Scorpion Maidu: portfolio, forward + width-based, delete-relaxation+causal+landmarks. Also IPC 2023. Maybe better for many domains.\nP07 Levitron: portfolio, lifted, width/novelty, etc. IPC 2023.\nModern planners.\n\nNeed choose one. Without experimentation, likely P02 (Fast Downward Stone Soup 2023) is safe robust portfolio. But question likely from benchmark, expects based on planner descriptions. Need choose one. Let's reason domain characteristics: Satellite domain has no numeric, no costs; need achieve images: turn satellite to directions, calibrate instrument, switch on, take images. It may require ordering and resource constraints (power_avail). It has small branching. Heuristic search works.\n\nPortfolio Fast Downward Stone Soup 2023 uses multiple configurations, likely includes LAMA, FF, etc. This is best.\n\nBut let's not jump. Need maybe P21 Scorpion Maidu is winner? IPC 2023 agile? Let's recall IPC 2023 results? In classical tracks, maybe \"Scorpion Maidu\" was best? \"Fast Downward Stone Soup 2023\" participated? I know IPC 2023 had original and agile. \"Fast Downward Stone Soup 2023\" from Basel maybe very robust. Portfolio with different heuristics. \"Scorpion Maidu\" maybe satisficing, maximum coverage. Need use catalog. Planner P02 code \"Fast Downward Stone Soup 2023\" and description of features. I'd choose P02. Reason: modern portfolio of multiple configurations uses delete-relaxation, causal graph, landmarks, multi-valued variables; likely robust coverage on satellite where images require sequence and resource constraints. Need mention benefit.\n\nBut let's ensure no better option: P05 Saarplan, decoupled search with star-topology factoring maybe suited for satellite? Satellite domain has multiple satellites independent except shared? Actually each satellite independent, star-topology factoring could exploit, but \"power_avail\" only satellite and instruments onboard, no inter-satellite dependencies except maybe all share directions? Directions are global but no resource constraints, so decoupled might help not hurt. But P05 is IPC 2018, could be good on satellite. Yet P02 Stone Soup 2023 may include decoupled? Portfolio maybe no. P29 DecStar (IPC 2023) decoupled search + delete-relaxation; maybe satellite domain has independent satellites, yes possible. But coverage on larger instances may require dealing with many directions/modes. Heuristics likely. Need think of planner performance on IPC benchmark \"satellite\". Historically satellite was hard for many. LAMA 2011 maybe good. Portfolio might schedule.\n\nMaybe there is a known paper: \"Satellite\" domain from IPC 2002. Planners: FF, LPG, MIPS? But modern \"Fast Downward\" with landmarks/causal graph strong. Stone Soup 2023 maybe combines many. So choose P02.\n\nNeed formulate reason <=60 words. JSON with \"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a modern portfolio of multiple strong configurations using delete-relaxation, causal-graph, and landmark heuristics on finite-domain variables; this robustly handles satellite's resource orderings and image goals, maximizing coverage within limits.\"\n\nNeed ensure JSON only. Use double quotes.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2652,
+   "completion_tokens": 1082,
+   "total_tokens": 3734,
+   "cost": 0.00253677312,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1536,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00253677312,
+    "upstream_inference_prompt_cost": 0.00041778432,
+    "upstream_inference_completions_cost": 0.0021189888
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1023,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

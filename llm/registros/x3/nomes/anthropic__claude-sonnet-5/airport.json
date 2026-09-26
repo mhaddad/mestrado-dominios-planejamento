@@ -1,0 +1,93 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "airport",
+ "data_utc": "2026-09-26T17:26:49+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 4.0,
+ "uso": {
+  "prompt_tokens": 51377,
+  "completion_tokens": 114,
+  "total_tokens": 51491,
+  "cost": 0.103894,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.103894,
+   "upstream_inference_prompt_cost": 0.102754,
+   "upstream_inference_completions_cost": 0.00114
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P17",
+ "razao": "This is a large, highly grounded STRIPS-like domain with long linear action chains; LAMA 2011's landmark+delete-relaxation heuristic combined with anytime forward search is robust and efficient at scale, giving strong coverage on large logistics/airport-style domains within time/memory limits.",
+ "resposta": "{\"planner\": \"P17\", \"reason\": \"This is a large, highly grounded STRIPS-like domain with long linear action chains; LAMA 2011's landmark+delete-relaxation heuristic combined with anytime forward search is robust and efficient at scale, giving strong coverage on large logistics/airport-style domains within time/memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790443605-A6R58AW12zw4r7YUeLPZ",
+  "object": "chat.completion",
+  "created": 1790443605,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P17\", \"reason\": \"This is a large, highly grounded STRIPS-like domain with long linear action chains; LAMA 2011's landmark+delete-relaxation heuristic combined with anytime forward search is robust and efficient at scale, giving strong coverage on large logistics/airport-style domains within time/memory limits.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 51377,
+   "completion_tokens": 114,
+   "total_tokens": 51491,
+   "cost": 0.103894,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.103894,
+    "upstream_inference_prompt_cost": 0.102754,
+    "upstream_inference_completions_cost": 0.00114
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

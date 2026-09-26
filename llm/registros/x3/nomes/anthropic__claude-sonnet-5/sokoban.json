@@ -1,0 +1,93 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "sokoban",
+ "data_utc": "2026-09-26T17:28:26+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 3.3,
+ "uso": {
+  "prompt_tokens": 6781,
+  "completion_tokens": 132,
+  "total_tokens": 6913,
+  "cost": 0.014882,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.014882,
+   "upstream_inference_prompt_cost": 0.013562,
+   "upstream_inference_completions_cost": 0.00132
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P17",
+ "razao": "Sokoban benefits from strong delete-relaxation+landmark heuristics guiding greedy best-first search with helpful actions; LAMA 2011 is a robust, widely successful single planner combining these, known for strong coverage on Sokoban-like domains in IPC benchmarks, outperforming plain heuristic or portfolio alternatives here.",
+ "resposta": "{\"planner\": \"P17\", \"reason\": \"Sokoban benefits from strong delete-relaxation+landmark heuristics guiding greedy best-first search with helpful actions; LAMA 2011 is a robust, widely successful single planner combining these, known for strong coverage on Sokoban-like domains in IPC benchmarks, outperforming plain heuristic or portfolio alternatives here.\"}",
+ "bruto": {
+  "id": "gen-1790443702-F8sYmpH8DQmdaSa3FqIV",
+  "object": "chat.completion",
+  "created": 1790443702,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P17\", \"reason\": \"Sokoban benefits from strong delete-relaxation+landmark heuristics guiding greedy best-first search with helpful actions; LAMA 2011 is a robust, widely successful single planner combining these, known for strong coverage on Sokoban-like domains in IPC benchmarks, outperforming plain heuristic or portfolio alternatives here.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 6781,
+   "completion_tokens": 132,
+   "total_tokens": 6913,
+   "cost": 0.014882,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014882,
+    "upstream_inference_prompt_cost": 0.013562,
+    "upstream_inference_completions_cost": 0.00132
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

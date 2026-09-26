@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "nomystery",
+ "data_utc": "2026-09-26T17:28:34+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 6.2,
+ "uso": {
+  "prompt_tokens": 18759,
+  "completion_tokens": 468,
+  "total_tokens": 19227,
+  "cost": 0.043134,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.043134,
+   "upstream_inference_prompt_cost": 0.037518,
+   "upstream_inference_completions_cost": 0.005616
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 384,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a highly robust and state-of-the-art portfolio planner that won the satisficing track of IPC 2023. By combining multiple search techniques and heuristics, it performs extremely well in terms of coverage across a wide variety of classical planning domains, including Transport.",
+ "resposta": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly robust and state-of-the-art portfolio planner that won the satisficing track of IPC 2023. By combining multiple search techniques and heuristics, it performs extremely well in terms of coverage across a wide variety of classical planning domains, including Transport.\"}\n```",
+ "bruto": {
+  "id": "gen-1790443708-2XK4OCVh7XPipkk0za01",
+  "object": "chat.completion",
+  "created": 1790443708,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\"planner\": \"P02\", \"reason\": \"Fast Downward Stone Soup 2023 is a highly robust and state-of-the-art portfolio planner that won the satisficing track of IPC 2023. By combining multiple search techniques and heuristics, it performs extremely well in terms of coverage across a wide variety of classical planning domains, including Transport.\"}\n```",
+     "refusal": null,
+     "reasoning": "**Exploring Transport-Strips Strategies**\n\nI'm currently focusing on identifying the most effective search strategies for the transport-strips domain, keeping the 30-minute time and 4 GiB memory constraints firmly in mind. The goal is to maximize coverage, so I'm exploring heuristic search variations that have historically performed well in similar planning competition scenarios.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Exploring Transport-Strips Strategies**\n\nI'm currently focusing on identifying the most effective search strategies for the transport-strips domain, keeping the 30-minute time and 4 GiB memory constraints firmly in mind. The goal is to maximize coverage, so I'm exploring heuristic search variations that have historically performed well in similar planning competition scenarios.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 18759,
+   "completion_tokens": 468,
+   "total_tokens": 19227,
+   "cost": 0.043134,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.043134,
+    "upstream_inference_prompt_cost": 0.037518,
+    "upstream_inference_completions_cost": 0.005616
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 384,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

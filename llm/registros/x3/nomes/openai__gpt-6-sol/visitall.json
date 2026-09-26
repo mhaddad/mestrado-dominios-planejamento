@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "visitall",
+ "data_utc": "2026-09-26T17:31:48+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.2,
+ "uso": {
+  "prompt_tokens": 4975,
+  "completion_tokens": 269,
+  "total_tokens": 5244,
+  "cost": 0.015126,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 4972,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.015126,
+   "upstream_inference_prompt_cost": 0.012436,
+   "upstream_inference_completions_cost": 0.00269
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 210,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Scorpion Maidu combines novelty search with goal-directed heuristics in a portfolio. Visiting locations is monotonic, so novelty can reward reaching new cells, while its other configurations provide alternatives if novelty search struggles on larger grids.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Scorpion Maidu combines novelty search with goal-directed heuristics in a portfolio. Visiting locations is monotonic, so novelty can reward reaching new cells, while its other configurations provide alternatives if novelty search struggles on larger grids.\"}",
+ "bruto": {
+  "id": "gen-1790443902-sv56nQ8IX6aBMqioAZHg",
+  "object": "chat.completion",
+  "created": 1790443902,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Scorpion Maidu combines novelty search with goal-directed heuristics in a portfolio. Visiting locations is monotonic, so novelty can reward reaching new cells, while its other configurations provide alternatives if novelty search struggles on larger grids.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAGDN5rkPkvUY7Ys_ldVO0q_kgIBSw-RBjUTrAsrHW7bsdIZedcxpK_7AUkijs-F9SBmJdSHvDCtde42THvLliluW5n2ohg_BsaNbOQ8OyESCMzj8HMzfS9kQgpEBCPu9wpAU-e-ywATqr3QGYopE24tDDJ95rp1LrTDdhQJGMHA5e2SL8LT_EpG5fglKr09MRUilHp77lYcpYPrL-gHXK2Ab00QsGtoUEoVJ4gCOs2fO6xri2c5r3p69QKFF1I9wCOX0jfX_4yg8bJe4hkaqspzHE-mVOTTaWN4FLwhd-0DzWvPIcdUgfMW31qOuR1EJFb7uegTdSknVTMST4v5u84i6KjW4IHg1Qw5Z47MyhDYbswC1Cn89MFV1B7rkTt44YY2I0HcA3JvAJpCX3UOyEKTnc_sCwJiFKS6B3aPKfh-dISLSXE9urH8uYivAsqZfmQudHr3XB8-RULTOyriukxXDjFGsV0ttlnEmRiQ3nEvrM7G_iU9mUQb990vQQ5BAKsQHfUaelmpQDMx20WuDFXnCAgWnJSn1--jbpo-xysrm1t5obqfymXpmznQ3g7-BjpATSCitWUoS8Cj-AYatqiuqsHlbl7hQojUgfGjSq1NkELyAYYzVv22qtPNLLbHam7NhF-8-HEONGQgA0LrQE75sxrj7qj9HdmzY6B0AdHSjQQnxNjWlcvKyJhQT9bDhKzyOOf7oi77C_zW2NCAfgWqfldqp1xuBgT3f6KooVr2JfOWJmAVexTCK6tUxZD_oOcz2SC-VzI6EBWfTYiLYBIeIZf0eJkHSuWW7AUENDwkvu4h0PeKmvMWJOyoj4_pe57sA37WEZuMRIeNc9R0TBqTMevPw7nCBYswDdrCGDF8S4S2jPRXqYC_theugDEAtHnkYIbnfHZXUBE_zpD_UYRGmu_6616-BEpZRMYJixxtxyj7KBdHBASXyw20oQnRE-2a39YbbaV7D3YZ_yYztXOgFSvdozl2VCPUSQs5efQ5UyfCe0xZKsucyQ3M6RzG1agArjWvHHLKA1xoRXblhrT1qXlqLuzhmdO-mPFxbT4d701VkeFscuKZ0viYmtvvb3Cn0f36jNEGEaVRuyM--bZSG8MpYzdSzMbboftZt7iUyxE2d9E4fnQeV2NvtMsD7w-Rb9e0MYMBxhPL5evKeCwJs9-PPCJnE9UlmfbXGTPCn3U2bRsP7PILgBs6ZjPEXbfoM6bBOr9v2I9ce75QqHIafSXFEk1xfmkvrsPZNQ33nilN_rH_TDkXSUZ-MxBiRKO2bXO55rJJLuaFXw-L3JImCUpvIW3iJu4Gnhw4y05z2nJpJ_u_9UrEV8xSHplLCnX6xdhabPWRgBINjC7SQ81JgeXlPO30KhE7OwwRexYRv3lJBZ_k_eeC1gRtejXHdWzl6PcN6DrkJiRIBr6FB0to4DZ2kIlqo59M9tWJnH8yd9OTRfl8xQ6nrEzbG0VzeCsfkpjZAjMmd0oyJa4UDwJpQRXcZ9vwJdWnykatMHeH06sV3BhTVB2wMN0Uxvy4IyIujpn3vXTzMYC-OtiUv7_sr5QrgHlSktMW4NJbNqF6SHLlRFK0eX7T4u3-OEypvapxj11Im32lxaJ0yFZEXaHaXsWcHYqKYvuXAe7BI64uCL9lpKQb96A5oqMkRGOk8jjeRPjDK6FF4iSoxrQ1TFUHAbKPggcn1AZXZVsxSwYyJT2oPkyP3Hgg7WI3w4ofP2wlgxF2SdATKljvy4U6RbLGn9C_IkeUItZIuX8C5JI8LoI72IONs0X6yVFTJ21TvuIbME77V-vCm-PybeBjqmW8SpCn7alqZ1d_ln0CsplJ2W4qQmWJlI19NB3I59Vfk1bjb7FrBa6pjXBd9yTqmdu_m1FbTqEcfcGD0-zW_NvuiS0VIdWj3ju809dCuxk4tw8AjZQsAuMNt4KJn3gFQH_Q3Ho52W72ZSHBmvxHy_fZrLr3qFoGyx2_YzOVkqj2TWIi2YRXwx7tw4YVFhHb-M1X63J2qoxmqy3g_9A-ddJMn7npU9ZpeQG3FRSWyuAM58NUITm6Om9QN5teOLBb82BIHCvOA2L2ACdZefEARiuFoxoU_NTeIGwO42gucwYk2c8czJihGIJjRFTsTE_Du3ByN6_45fdHGwk5rBqg3s0nNi-NkTveuWuehjfW91ozIyoSBhIdu6WqvT-XLPjWJ46tsTAXk0frb4ySBXfQLu1iqF7va2TABD0x7zx16QjShqPv7qaK0-EDGGqAiSkBgCdNs34HPa9ZdKaxqdJ4BQm9mO5jTopIodjga42I7CmR88PFDWDlJ9qpsqWl-VCBhpMsUo7259yDQw5pgzu3pRenKMJsRGl-H7Um0SYnGY_3L4N5bZLSjy9bxXGHnEoBZ7HJrbWN3mFUvEYguELBTHAXiHTTKOkoFX0sVmOADYmjfMcr3ZbGFvxKWYg8f6Uh0MhDDWyxtYzJP3rWtTWGQOyVFZj7O26im83dyYvJxc37nJSkMsy6GDWMZZfCbmkwPbLCPFMeS5hKNmM21wKR5yCHB18oMEcU5Tu0cs4chbfI8ssMFsqsvH54bKqhX5k2ODObK6wfRVTt0DZLi2P-3_fLV1ok1mkPPhHjm9T9jXDketOkZFumBhEiCmyiff8cIuagLdvK7eXnd8Xgu4_lHesPJKE=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0110eb24a94210b5016ab8017fc57887d1aaa01dff37918db7",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4975,
+   "completion_tokens": 269,
+   "total_tokens": 5244,
+   "cost": 0.015126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4972,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.015126,
+    "upstream_inference_prompt_cost": 0.012436,
+    "upstream_inference_completions_cost": 0.00269
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 210,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

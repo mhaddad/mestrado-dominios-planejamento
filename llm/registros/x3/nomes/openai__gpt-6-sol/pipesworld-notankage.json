@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "pipesworld-notankage",
+ "data_utc": "2026-09-26T17:29:55+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.4,
+ "uso": {
+  "prompt_tokens": 3867,
+  "completion_tokens": 330,
+  "total_tokens": 4197,
+  "cost": 0.012966,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3864,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.012966,
+   "upstream_inference_prompt_cost": 0.009666,
+   "upstream_inference_completions_cost": 0.0033
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 262,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Pipesworld requires coordinating batches as moves displace pipe contents, so delete-relaxation heuristics can be misleading. Scorpion Maidu combines novelty search with multiple heuristics in a portfolio, offering several ways to escape unhelpful search guidance and improve coverage.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Pipesworld requires coordinating batches as moves displace pipe contents, so delete-relaxation heuristics can be misleading. Scorpion Maidu combines novelty search with multiple heuristics in a portfolio, offering several ways to escape unhelpful search guidance and improve coverage.\"}",
+ "bruto": {
+  "id": "gen-1790443789-8noSUshO3ewO5WW3fIz0",
+  "object": "chat.completion",
+  "created": 1790443789,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Pipesworld requires coordinating batches as moves displace pipe contents, so delete-relaxation heuristics can be misleading. Scorpion Maidu combines novelty search with multiple heuristics in a portfolio, offering several ways to escape unhelpful search guidance and improve coverage.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAES7z69rhABjyYGPuDnAqL1doajpZT3NImYSz6_Y7mkh-YB8mzMYxwXALQ3Ji7qfT6mpJoJYGShzYmwu8uqqzyxIs-HA5Hn1D36gzvQLZnYPls-9u0UBT4unvrp0-SY5EBkqB5wEeWwX2-c47odrH1BlGYLqeb4S0h-ygQotdAGEvlElN5ZkvuQtD-lpIeEKR534x1MIl1hrhSMJV-EJtC4FwLxSEt1VhB7TZnJCCA7dcqIQ2ybtBki1svX9Geu8g6ypjGfud57eZY79h_wPB9YWy7GRgweczKsyzahmhidvb2WTpzPuMOQhzZEacKjBpy0jBjoEtiWIbgi7tlBbGUOShrjKSrAl2aLqfWkSYyid9fUyFqEd0C3rG5mhdD2YBuC353b8r6li6-r48t9REbf9LrMFhAi9LA8HNMGApZKSJ3h2umwvoFw4nO7PttwmmPgEhLX0dETd0mSaw-F3eYy7lF1oKeXofiSgHjh-MyHUZJCSYOhdJpCiPTgE69duHT62iJA3zurmBJzKrAxp7bn8O8suBvSg76rst3oPVfFf2zTDwXfAKvUPHf4ohgJRU-HwcGZqm1kUyI1fBXrL3sjdLYFeuUfKmkTnYT6rGKKcsJmQmAMAxrk4J_YWBiK6Orp1rrmEA-_WsJce0P1GZEVpxacvvL13MlVElmy84m6AoGsX7cY3leDSDmRYwLD94mtLfn6SCh5XWvTcGGRvqKHXQdSQwuS1mI6rtxR_RzAKYYyuiCPa-5itTQA7SiiJPA3S-tnzVVmWjrUhEvXTzY7m-K0gP3i33Wrw5F_bD7bjE7cMbt21s_3NRC3M1pd2zlB4DVmQTzVW0IfwaCCkYIqjAPndrXDc3SmqfEgAZk1qeZhkM3DIlla98DkRbeTaQnf4zZVB4xK_PwGH48TX3IflBFZgIJOT1MIHFu6JUpcsgOKRuhfwuoMxqNrK6c9OO7T9gIEPTvOPvAQiQ9rpQtPwNX4nJFByJAa9z7HDOpb6EovUSF-BFrzuOKhNczURG9JsLCoRufS7TJxONNMCHNa-6lksX-C7is8mTJcuPj05i-YcM62FWKk190U1J-mpSi_tj95b3hWwpP-_SIW6g0xWRCac7ORoP__Zvy6x2vAfLNB5a7AmagOuCynX4ZN-ickOHhKec9EuQB2BWXkARJaKquzQ25_8TYvrOo4TDnS8rYst3GbC9ghy3Es6V4f4aiWalB1A50q16WqspYA_klEz0FuOOYDj7Yhg7ghtTfNBUtr1X4MoJJ4GrZdD37UmLHsLqr4hMMWf3wc_vtwSN7RyQ1yz_rYDEdBXy50DkJ_LSxli6u3KqaJK83gqAV8OF21_iaHTwLIJD-sIxb4qqV93nvRfS8LAOhqEwbIlgCGZHdxJYTg0j4s_io-ENel_ftTBfyTncBRibipXjqJ-VEGqs6d9FVJhwGn6PvClhwILvj39vV3L_CsMgbJmvmEKw4v1uzJo1Ubc7YOhRFouDxb2rxqj75y9g2czVJwG6hNx7TtLmmVtPUcBzQt5tOvwtzOHz2j8y0MdJW8aGVa5Q7CYohZM9Hs57DjSKI3ebMQHW73mvQ_Ddy_7LWt28PWXtElv3qSk9vmVtP05e_K_DKNe_n_nlc25do1zDRi6sE3ToYCkfPTiFrJ471IEzUjToQapdLAO6LHi3JoUXS5gEE3B1EscyPEG0IdAoC4T_qrJyFUBbWRbqBu5VSSz_IsCDEAjsqqg4hhCRHMrtCfnmy2kYTgJGsjXebS8RjW8cqSmDayBn2kXj-sy-MezbKx3_fwn6NFcWuZT-rAJGbWggxRyMLP6h4PMI7d40PbjpxSLD12u8NCDO-HVCGjSlqvZpKFzxM1-dsAmr3nZ_nU_-ag78Ndo1Vd1IsouYS-tvG0PQaKjFqFf2nL_RebS5ytwBD5VJS4okLM6Kwwuob9YeH6gkIxGfwAOZfofNCBT1pPo8W0bfaYFIs9rr-RUgTkViQ2j0HJtKMEIQmIjnv7_2ArQVsGt-3XrxRgGSAMmYGzM4AO8sckYI_9KBlD5CruyhL2bbqx6eU_Bf3SEK3S5f4vhSgwNaJbLdirScU20AEmeXeDmjOs8o-wpef_5-lx_eI22F6IwPqJ22tafRqz83C-z59ALWfiisqcxFUoYxOpUJCZ9TTXddENGzRZwMKvLaYKKjvL9ej0I2Ng-i1LtFQEIogUrBUMAMM8bsD40sS8kSBObiu799FhN4-t5Wj_YfyBh0i-oIgAJJBjK0MpscpefNw6xRq3W5Sho-N-WlHpP5mhDWXHmvKAQvg1JCZFygtLwoneSaWz11lJ4DxPSrZNhRRH9mu9voGyg9ust8gNEZLRwo4e9d0IwgdLmiyDs3CH8kTZd640NGAO4usVBP7XB2GJGMpMYbyG6AZl5maUCN_eC9j90GciXD3RjsDa0CGXTWEWieTvIOVBNhf4ezqL7muGGNd9MqeU294r1SWWn7QvFOBKgq7fYVMk8sN5fhW_YG_7DI-APQH432yER8OBnBhOuF9y8-FBFXkbHi9PjrE4x0Ud4eA_Je9-hIFZozOyNceZMOhvZ1FFkW6irklno2hC6pk47Kgm41qgmLxzvOUtQBSxBQsO3jsyu4t_6kgZmnGRfKL8LfrNaY915UHZAlVTxRATedhfuwe1a_Pv-z4ZW-4iJUhDEXuhqpixrzCeOY3CHy81bPucAY4HDAJ8Y7uE0hRdeVst8TQ5wBpES333bIEnczlNEbZnOXXpgiUXLYPfvO8bviVf55mwx_OaXNHy82Nhhnot_947IW-FK7ANgprx4Sf2Y21ye3tMJbGXb0O1UCXjXVj7kuQumM4m3-KWy4pKfJ3U-2AXlZI_a34fhCfM1OjjCMSaTD9Ghd_zppVYRv6YWQUtgyEDcMHebaI19ZdNdBPaVvu9BOfTMcVXbUUAw_W_PDbJTMIhgTNI9D1nmkKARErGqpugkAPzn0nf7R0xhEHNHLAiKZ_Z3zWENsCZQvK-xFjU8e-xw_cH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_08cb5f47aaf4781a016ab8010e06d087d1b40bbd80b45fc3fb",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3867,
+   "completion_tokens": 330,
+   "total_tokens": 4197,
+   "cost": 0.012966,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3864,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012966,
+    "upstream_inference_prompt_cost": 0.009666,
+    "upstream_inference_completions_cost": 0.0033
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 262,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

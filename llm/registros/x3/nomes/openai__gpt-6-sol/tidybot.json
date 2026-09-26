@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "tidybot",
+ "data_utc": "2026-09-26T17:31:21+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 9.1,
+ "uso": {
+  "prompt_tokens": 8227,
+  "completion_tokens": 518,
+  "total_tokens": 8745,
+  "cost": 0.025746,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 8224,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.025746,
+   "upstream_inference_prompt_cost": 0.020566,
+   "upstream_inference_completions_cost": 0.00518
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 459,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Larger grids can produce many grounded movement actions with numerous coordinate parameters. Levitron’s lifted search can avoid that grounding bottleneck, while its portfolio combines heuristic and novelty-based search to handle object rearrangement and obstacles.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Larger grids can produce many grounded movement actions with numerous coordinate parameters. Levitron’s lifted search can avoid that grounding bottleneck, while its portfolio combines heuristic and novelty-based search to handle object rearrangement and obstacles.\"}",
+ "bruto": {
+  "id": "gen-1790443872-ceXtM4BTngx5yQLlMRe1",
+  "object": "chat.completion",
+  "created": 1790443872,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Larger grids can produce many grounded movement actions with numerous coordinate parameters. Levitron’s lifted search can avoid that grounding bottleneck, while its portfolio combines heuristic and novelty-based search to handle object rearrangement and obstacles.\"}",
+     "refusal": null,
+     "reasoning": "**Analyzing object movement**\n\nI need to think about the complexity of swapping four objects in a cramped space. There are obstacles like a global gripper and the current placement of objects, which are all initially filled. I have to move one either to a cart or a spare surface. The cart can hold an unlimited number of items, while the base can only access specific areas. I wonder if I can resolve this efficiently, even if I ignore some obstacles temporarily. Ultimately, I think I'll go with P07 for robustness, as it seems promising.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Analyzing object movement**\n\nI need to think about the complexity of swapping four objects in a cramped space. There are obstacles like a global gripper and the current placement of objects, which are all initially filled. I have to move one either to a cart or a spare surface. The cart can hold an unlimited number of items, while the base can only access specific areas. I wonder if I can resolve this efficiently, even if I ignore some obstacles temporarily. Ultimately, I think I'll go with P07 for robustness, as it seems promising.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAFp7RdWy8mF4YflI8KTA1Bc98D4tXdnOTUcSMpJABiK-ZEpmJ0EA5wPFU5corhG7dNZ46Ds2ZrzYLbT7o_Ji7BT-5ejLyg6AWqiK3Y5LYvkLt5HEvVTfOJVwUyN4NEFris7pGgOf576nEGXhM54uUVt_bW9RCmctMK5eXjkUKnG90u7gu7r7YiHEu4VuLQnVhm1Fe-6UGL0KsaKMs84qxGEGLdOpoXeN4vBEc8gSCzZyJiXnk7-B0m8Plkscq45IKZt_ppTSgp-iFG_g6w2-QNNj2mEBCJRPqSm_fbOvIlPcwls3YkI_5xxFtUCL30-kEjHxUgLgJ-fjXpeBUcOQCergsxQIqldp75IXu8oc1JcHAxQCJiCf2_pSM2Zh_4waCC5PYArSNfuGqvHP6-u94aOYFgF0Qt7jX5D-do7vyE3u1u2wLlmRmZ-wpo1vrlIR6XS2lCbzq7_FPeb4BmiiZKop4j_KVzZBqDQxAnVLHtiw12jRtqxgElpBOCYGKOoDUpqQd3ch_UiYitDLCbbBou6-h5pVEBwukN2n4UTA6qd1gjLcnrRzkseshNt9lFcQt1pacXe7N4LepokjYX3TYKhrQx7Z_KNVBfq991TXtbR2ierE3VnVU4Cu2LrCUwFw8UjJNIpbKfVrSVY3fgTLZMDovX1ScRUxyNJnIt3dTvzWHvsAhPxJuT9ED3GuDTyt_Tknqsln9DOWqD0x6p9riwd4AjCJj8I7NNPqbzosxlxBLm0EYrHu1_M0DeUbM7WT_-cC3XByOLlAf9281HzSO9FP8h1LPaTBI2ASpxSuL6bQyKNTa4QIIDiF9SOAGqOpfD1Lk8cc0EBISxeulQY2j-VtVigqJ1Ausc9LiZGb_65_XxyGbDx_SYTj5wPU-O1cSkTLu1uaYKTtlw6n7IykWXt2B9ik3xlY7lykxR7x6wC3Z4sE2KIJROSU091JxtsRjwPWpTufk9NwKKt8e4zNhVRakD9RVjCAWXxlejxeOlovkhzOtc8WOYeQBxoszg69y8uDNt-dXDP17APw9SRAHyvY3PzxnrZyj46tNx6XI65blUou-c0yBVRolBKtzI5Yew6vLsKO4KR7BYcAu7MiqAz1COKshb6gCSp8jAyl-snQ6luYMCInYN1-e__Mz3K8fnELnFv1jfVYn22lmMyjOK8GzDeecspNPIQ0EypYiQ2JIloT55BzOXhGyD8daWshmoQah5Nthxk9f4xJ3z9vgRYY5NW2tHT5Z-Cgutxn3txw8-VvBHr6ddXN2NFJ3SZdiF9--Z0db2rmM88h1VPtYIEbFOmHVRzGdDxbWHptAiV1i7L_fw9nVUH7XhfDUAIPZmP2u1XTtOchI2FtUI6gMPRGpJR9Uma4j3CxTkHtFJTNSwDdqfMFSvsG-QfpRxGijwJy6nvxfpE660Q5RIDzf2nNHBOrItgeKgDsKSztXSL3OR4iDHA72GAjYqE6o7jh2FRdQTRrYB261wtPCjqUTxpJi-Uet5SKoRVXF90T9h3XrLu8Y3cCqnn7FQdBqfsyFFf9kW3nPocQ3lpihnthsHxFNCXRsCxdy3sQSgKc9j4o08W1U__8bxNgJK7cuvZIWwIidba_6S4UPkYmgysyfw0ShydgsfEANtRi7KNprs1C7NGRFfU-k8rUkBdcQhAblEU8lTgvanbkpwPshW4_TVSqLwKuEI3i-PhPNg246YHq8dzAo7dVswaRTu3cU3xySKlMHt2FNG3SJZyG4speLZ-s2MvazFcfTF69UtlIRKjmVYtjqvWQmiqnnu3NO9moR9gyZjeKwdM79y6R5S66wGU-nT6lsH0yB1ilRtV14pqWkjWEKQdh3mnVchf0RFYJf3YCDrIxY6v0vxmWYwJoH7nuOFMKYqTHpE4SqecwqDnJCoMlbZ8KW6pjDKDcdEqPk0a0jXJrr8XItFsmKWkQKKOoRSNBWEUk5DZkaVvpKaEfnLA4YRk9tc278Ehcahc9otkJdzcKIBWK8TDZFh3qJ_1GDbncqL_pp8Kpiu3ib226h1T9UOcRYPtKHSJWszNbumhy574GhwqK6axRJyCmcspFifZaYNuL87CoK8qu5UfT-Dn-JEZ_hT_NLHeYQrtdPDJJzEOhxuGA5LCxqKSS7aHgjl3foMEGFiUyzQs4W-Be9GpDNFevLDmuDl-4EhN53shTFhlmLh8_rHn_FHvXyfQVvUV6cg_yv4UfFsSAxsUmQ6wJTZgqXHUoU2hiHfix-m4DiA1U4d0me2mQd8idpdFYNkXEaibYZuG0vNHEKBWPnbSpE5IbBpICchpwioJCYDCMYmjVWhZWJNkA5Jxjc2RrUPmioFsctQ1nvHa4q-LlgzdUOrgRqWap3zk1HREjqQxOGCdM8Wqk_H8GmMHFj99O6DDGqP52xP00jZ4c709TWcJH0PR_dNUaBsiSuoiXoKP_a8NGOaujMQjhbGX0gABXVONFD0GzdWxfghosqaFrHVOr-8hGiwCEPiZeaCFLG5hFRABw-aCfz4Cn_cH8tUC5zC7O5iP0lX0FkvpZRLDcS1RKK-X42jdgrDgMbsROh7YyAntJYnyBOC_HzpDsWMRlG8vIaFRJzxlDuIIi07bfOFr1wjA5cwxdqEh7siaLA5pJJGoaZVf-Qg3d8D9g9L5iBLvbsWkMMX2pEilmHq3pqetGrBrdY7sKy-SRR-0ErDhQwSJ9B7m5Gwl_HXVBsLT5F1E1Pa-rM0NKU3ZFSvk_1BLWiyN_CBBTQGLhMBr0O6Qvy_oEt41CYut_Jhb_f_gVFV8thAgylWJeoWpk1uvDtnSnPW4UBJ226sMPwaGYnE0IK1U5gT1mVy53jSUrfEytdWHAcX39HGC1_BCPAE-JAHve4FxHVklJ4j0E4c6mhwR0hC3YqWkT6jEOU-KvYOHznWGz04YGGOF42Gri4hUZ2pisEAn7vGKy0yEdKLiMY2o0_wO69TqFJx-dFbtrMnYe1ZM7IxHpOK5vp4e6M9NSA4ZT4y-UygGJ1PQ7RybFTrAsicO-NqlFehkAD3Ljy9NhbxeBDg8_PLrpJMgnSgRg7aPqBCzxdAjYpsqYxFtC-wlZVFrX5HVizOjlKyZ8VZ9kcT7ObPOhmJ5oObp_Jq5e7M_-0EOrZ3zJyaTYdHYFkFdnXSZ5zQMnYnsjtpkw7D-T811hR5DXaH_3YeSjHYRo_TKZLxrmRYn1GEu0KswYlyAI5yQB-vpcD77iBj2UUR_H-DLQBuyG_olXc_wPj372Wj74n5uX5Lh8WQjDCaNxeolsDgIOukrrjsNF-hoF-eZ86SZE5wLM3hu-9DMfvlqj957n5xzdiAXLwV6lBMFXSagriNQT1WOQovkEwXR7gb-126fBfSanoUl4JTc_tYryLW7FepT-uuJEyjAYigJ6h0DuqmglPSFY13FOVPfHwM_sbdv1bx6DgO-ZjkyOsbF9TUK3G7Gov2QPc5JE5UEboxHMBbZty5aYKJG0Sd6L933ttAhB-TFaSZJlqESHcDqi4aSRvL-uJ2Bf_2dM5vf6qLNwwmwATbDZ5OOjDAAp_SRW8P7MEmPKvdncG0JqouK2GFOygVuQu0lQzCHmZaCK4-iSXXrIFXGrPxCNQJMEoBVgtYXhpWSX5H8PlYsvIuw4FqMz7h6K8kIhteq7W_PZb2dyxRKssq1WozfZM9ViAM5T-crqunGtjXdzvuQ9cxIvxc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0caf90c81d35d1e4016ab80161cd8087d191367612832a4d90",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 8227,
+   "completion_tokens": 518,
+   "total_tokens": 8745,
+   "cost": 0.025746,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 8224,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025746,
+    "upstream_inference_prompt_cost": 0.020566,
+    "upstream_inference_completions_cost": 0.00518
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 459,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

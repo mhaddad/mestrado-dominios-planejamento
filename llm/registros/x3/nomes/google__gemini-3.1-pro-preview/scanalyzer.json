@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "scanalyzer",
+ "data_utc": "2026-09-26T17:29:29+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.5,
+ "uso": {
+  "prompt_tokens": 2918,
+  "completion_tokens": 353,
+  "total_tokens": 3271,
+  "cost": 0.010072,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.010072,
+   "upstream_inference_prompt_cost": 0.005836,
+   "upstream_inference_completions_cost": 0.004236
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 269,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a highly robust, modern portfolio planner. Scanalyzer3D involves complex variable dependencies and permutations that are efficiently handled by a combination of causal-graph, landmarks, and delete-relaxation heuristics within a multi-valued representation, maximizing overall coverage.",
+ "resposta": "```json\n{\n  \"planner\": \"P02\",\n  \"reason\": \"Fast Downward Stone Soup 2023 is a highly robust, modern portfolio planner. Scanalyzer3D involves complex variable dependencies and permutations that are efficiently handled by a combination of causal-graph, landmarks, and delete-relaxation heuristics within a multi-valued representation, maximizing overall coverage.\"\n}\n```",
+ "bruto": {
+  "id": "gen-1790443765-sL5WHIOwA0h5WxOB6fSo",
+  "object": "chat.completion",
+  "created": 1790443765,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\n  \"planner\": \"P02\",\n  \"reason\": \"Fast Downward Stone Soup 2023 is a highly robust, modern portfolio planner. Scanalyzer3D involves complex variable dependencies and permutations that are efficiently handled by a combination of causal-graph, landmarks, and delete-relaxation heuristics within a multi-valued representation, maximizing overall coverage.\"\n}\n```",
+     "refusal": null,
+     "reasoning": "**Exploring Scanalyzer3D Permutations**\n\nI'm currently delving into the Scanalyzer3D domain, specifically focusing on permutations and the generation of analysis flags. My exploration involves understanding how these elements interact within the IPC 2008 and 2011 frameworks, drawing parallels with the approaches used by planners like LAMA and Fast Downward.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Exploring Scanalyzer3D Permutations**\n\nI'm currently delving into the Scanalyzer3D domain, specifically focusing on permutations and the generation of analysis flags. My exploration involves understanding how these elements interact within the IPC 2008 and 2011 frameworks, drawing parallels with the approaches used by planners like LAMA and Fast Downward.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2918,
+   "completion_tokens": 353,
+   "total_tokens": 3271,
+   "cost": 0.010072,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010072,
+    "upstream_inference_prompt_cost": 0.005836,
+    "upstream_inference_completions_cost": 0.004236
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 269,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

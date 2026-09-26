@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "StreamLake",
+ "dominio": "agricola",
+ "data_utc": "2026-09-26T17:27:00+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 19.1,
+ "uso": {
+  "prompt_tokens": 8571,
+  "completion_tokens": 918,
+  "total_tokens": 9489,
+  "cost": 0.0029898,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0029898,
+   "upstream_inference_prompt_cost": 0.002262744,
+   "upstream_inference_completions_cost": 0.000727056
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 847,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Fast Downward Stone Soup 2023 is a modern portfolio combining delete-relaxation, causal-graph, and landmark heuristics across multiple configurations. It robustly handles large propositional STRIPS domains with negative preconditions and resource-like numeric encodings, maximizing coverage under time and memory limits.",
+ "resposta": "{\"planner\":\"P02\",\"reason\":\"Fast Downward Stone Soup 2023 is a modern portfolio combining delete-relaxation, causal-graph, and landmark heuristics across multiple configurations. It robustly handles large propositional STRIPS domains with negative preconditions and resource-like numeric encodings, maximizing coverage under time and memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790443601-evzICfA4vNLkNc5E3giE",
+  "object": "chat.completion",
+  "created": 1790443601,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "StreamLake",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P02\",\"reason\":\"Fast Downward Stone Soup 2023 is a modern portfolio combining delete-relaxation, causal-graph, and landmark heuristics across multiple configurations. It robustly handles large propositional STRIPS domains with negative preconditions and resource-like numeric encodings, maximizing coverage under time and memory limits.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner. Need analyze domain/problem. Need select one planner from catalog likely maximize coverage on this domain. Need reason concise.\n\nWe need understand domain: Agricola-like planning, numeric counters via num objects, negative preconditions, STRIPS+typing+negative. Actions have many numeric preconditions/effects encoded as propositions. Seems complex, many objects, grounded large. Need choose planner robust. Coverage with 30 min/4GiB. Likely modern portfolios with delete relaxation, landmarks, MVD, etc. P02 Fast Downward Stone Soup 2023, P03 FD Remix, P21 Scorpion Maidu, P07 Levitron. Need choose one.\n\nBut domain has negative preconditions and typed objects, propositional STRIPS grounded. Many numeric like num_substract ternary relations; no functions. Could be large branching. Heuristics delete relaxation may struggle due to numeric resource reasoning? Actually no numeric fluents, just propositions for numbers. Delete relaxation ignores deletes; negative preconditions complicate, but modern FD supports. Portfolio helps.\n\nQuestion: \"Choose ONE planner from catalog most likely to maximize coverage on this domain.\" We need infer from IPC techniques. Domain \"agricola\" maybe from IPC? It involves sequential, resource management. Modern planners strong. Stone Soup 2023 is portfolio of several configs likely best generally. But maybe novelty/width-based better? Need evaluate.\n\nThe domain is grounded STRIPS with negative preconditions. Fast Downward Stone Soup 2023 includes multiple configurations incl. lama, etc. Probably best coverage. P21 Scorpion Maidu also portfolio with novelty. P07 Levitron includes lifted, may avoid grounding overhead but domain has many ground actions; but still.\n\nNeed maybe choose P02 Fast Downward Stone Soup 2023 because latest IPC portfolio, broad heuristics, best coverage overall. But could P21 be specifically good? Let's parse catalog:\n\nP02: Fast Downward Stone Soup 2023 (IPC 2023); search forward; heuristic delete-relaxation + causal-graph + landmarks; MVD; portfolio of several planner configurations.\nP03: Fast Downward Remix (IPC 2018); similar portfolio.\nP07: Levitron (IPC 2023); forward + width-based/novelty; heuristic same + landmarks; MVD + lifted (no grounding); portfolio.\nP21: Scorpion Maidu (IPC 2023); forward + width-based/novelty; same heuristics; MVD; portfolio.\n\nThe latest portfolios often dominate. Domain has no functions, but many numeric-like props. Grounding might be large but planner memory 4GB, okay. Lifted might help if large. But need coverage maybe P02.\n\nLet's inspect small instance: 10 rounds, 16 nums, 4 stages, 3 workers, 3 rooms. Larger instances could have more rounds/workers/rooms/nums; state space big. Portfolio with landmarks and delete relaxation. The domain seems a planning competition benchmark maybe from Agricola? Could involve strong goal ordering. Landmarks helpful.\n\nStone Soup 2023 is generally high coverage. But maybe P21 Scorpion Maidu won IPC 2023? Actually IPC 2023 results: planners include Scorpion, Levitron, Fast Downward Stone Soup? Need know. I'm not fully current. But \"Stone Soup\" portfolios are designed to combine different configurations for broad coverage. I'd pick P02.\n\nNeed produce JSON {\"planner\":\"P02\",\"reason\":\"...\"} at most 60 words. Reason: It is a modern portfolio combining multiple heuristics (delete relaxation, causal graph, landmarks) and configurations, robust for resource-management domains with large grounding; IPC 2023 strong coverage. Ensure concise.\n\nBut let's double-check: There may be specific agricola domain in IPC 2014? Some planners specialized. The domain uses negative preconditions and typed objects; no ADL. Fast Downward Stone Soup 2023 supports. Could choose P07 because lifted no grounding to avoid memory? But breadth of portfolio more beneficial.\n\nNeed answer with JSON only.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner. Need analyze domain/problem. Need select one planner from catalog likely maximize coverage on this domain. Need reason concise.\n\nWe need understand domain: Agricola-like planning, numeric counters via num objects, negative preconditions, STRIPS+typing+negative. Actions have many numeric preconditions/effects encoded as propositions. Seems complex, many objects, grounded large. Need choose planner robust. Coverage with 30 min/4GiB. Likely modern portfolios with delete relaxation, landmarks, MVD, etc. P02 Fast Downward Stone Soup 2023, P03 FD Remix, P21 Scorpion Maidu, P07 Levitron. Need choose one.\n\nBut domain has negative preconditions and typed objects, propositional STRIPS grounded. Many numeric like num_substract ternary relations; no functions. Could be large branching. Heuristics delete relaxation may struggle due to numeric resource reasoning? Actually no numeric fluents, just propositions for numbers. Delete relaxation ignores deletes; negative preconditions complicate, but modern FD supports. Portfolio helps.\n\nQuestion: \"Choose ONE planner from catalog most likely to maximize coverage on this domain.\" We need infer from IPC techniques. Domain \"agricola\" maybe from IPC? It involves sequential, resource management. Modern planners strong. Stone Soup 2023 is portfolio of several configs likely best generally. But maybe novelty/width-based better? Need evaluate.\n\nThe domain is grounded STRIPS with negative preconditions. Fast Downward Stone Soup 2023 includes multiple configurations incl. lama, etc. Probably best coverage. P21 Scorpion Maidu also portfolio with novelty. P07 Levitron includes lifted, may avoid grounding overhead but domain has many ground actions; but still.\n\nNeed maybe choose P02 Fast Downward Stone Soup 2023 because latest IPC portfolio, broad heuristics, best coverage overall. But could P21 be specifically good? Let's parse catalog:\n\nP02: Fast Downward Stone Soup 2023 (IPC 2023); search forward; heuristic delete-relaxation + causal-graph + landmarks; MVD; portfolio of several planner configurations.\nP03: Fast Downward Remix (IPC 2018); similar portfolio.\nP07: Levitron (IPC 2023); forward + width-based/novelty; heuristic same + landmarks; MVD + lifted (no grounding); portfolio.\nP21: Scorpion Maidu (IPC 2023); forward + width-based/novelty; same heuristics; MVD; portfolio.\n\nThe latest portfolios often dominate. Domain has no functions, but many numeric-like props. Grounding might be large but planner memory 4GB, okay. Lifted might help if large. But need coverage maybe P02.\n\nLet's inspect small instance: 10 rounds, 16 nums, 4 stages, 3 workers, 3 rooms. Larger instances could have more rounds/workers/rooms/nums; state space big. Portfolio with landmarks and delete relaxation. The domain seems a planning competition benchmark maybe from Agricola? Could involve strong goal ordering. Landmarks helpful.\n\nStone Soup 2023 is generally high coverage. But maybe P21 Scorpion Maidu won IPC 2023? Actually IPC 2023 results: planners include Scorpion, Levitron, Fast Downward Stone Soup? Need know. I'm not fully current. But \"Stone Soup\" portfolios are designed to combine different configurations for broad coverage. I'd pick P02.\n\nNeed produce JSON {\"planner\":\"P02\",\"reason\":\"...\"} at most 60 words. Reason: It is a modern portfolio combining multiple heuristics (delete relaxation, causal graph, landmarks) and configurations, robust for resource-management domains with large grounding; IPC 2023 strong coverage. Ensure concise.\n\nBut let's double-check: There may be specific agricola domain in IPC 2014? Some planners specialized. The domain uses negative preconditions and typed objects; no ADL. Fast Downward Stone Soup 2023 supports. Could choose P07 because lifted no grounding to avoid memory? But breadth of portfolio more beneficial.\n\nNeed answer with JSON only.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 8571,
+   "completion_tokens": 918,
+   "total_tokens": 9489,
+   "cost": 0.0029898,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0029898,
+    "upstream_inference_prompt_cost": 0.002262744,
+    "upstream_inference_completions_cost": 0.000727056
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 847,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

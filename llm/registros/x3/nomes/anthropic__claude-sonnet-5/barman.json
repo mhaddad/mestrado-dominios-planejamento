@@ -1,0 +1,93 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "barman",
+ "data_utc": "2026-09-26T17:26:52+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 3.1,
+ "uso": {
+  "prompt_tokens": 5986,
+  "completion_tokens": 121,
+  "total_tokens": 6107,
+  "cost": 0.013182,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.013182,
+   "upstream_inference_prompt_cost": 0.011972,
+   "upstream_inference_completions_cost": 0.00121
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P17",
+ "razao": "Barman domain is well-suited to LAMA 2011's landmark+heuristic forward search, known to scale well on IPC barman instances with large object counts. It's robust, fast, and reliably handles complex STRIPS domains like this within time/memory limits, outperforming simpler heuristics or SAT-based approaches.",
+ "resposta": "{\"planner\": \"P17\", \"reason\": \"Barman domain is well-suited to LAMA 2011's landmark+heuristic forward search, known to scale well on IPC barman instances with large object counts. It's robust, fast, and reliably handles complex STRIPS domains like this within time/memory limits, outperforming simpler heuristics or SAT-based approaches.\"}",
+ "bruto": {
+  "id": "gen-1790443609-ZUYMlQfIFYL1rZY1K0oX",
+  "object": "chat.completion",
+  "created": 1790443609,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P17\", \"reason\": \"Barman domain is well-suited to LAMA 2011's landmark+heuristic forward search, known to scale well on IPC barman instances with large object counts. It's robust, fast, and reliably handles complex STRIPS domains like this within time/memory limits, outperforming simpler heuristics or SAT-based approaches.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 5986,
+   "completion_tokens": 121,
+   "total_tokens": 6107,
+   "cost": 0.013182,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013182,
+    "upstream_inference_prompt_cost": 0.011972,
+    "upstream_inference_completions_cost": 0.00121
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

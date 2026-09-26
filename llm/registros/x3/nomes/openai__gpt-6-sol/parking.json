@@ -1,0 +1,108 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "parking",
+ "data_utc": "2026-09-26T17:29:37+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 9.9,
+ "uso": {
+  "prompt_tokens": 2975,
+  "completion_tokens": 497,
+  "total_tokens": 3472,
+  "cost": 0.012406,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2972,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.012406,
+   "upstream_inference_prompt_cost": 0.007436,
+   "upstream_inference_completions_cost": 0.00497
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 433,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Parking requires moving cars temporarily to clear curbs, which can mislead delete-relaxation heuristics. Scorpion Maidu combines novelty search with several heuristic configurations, giving it multiple ways to escape these plateaus and improve coverage on larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Parking requires moving cars temporarily to clear curbs, which can mislead delete-relaxation heuristics. Scorpion Maidu combines novelty search with several heuristic configurations, giving it multiple ways to escape these plateaus and improve coverage on larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790443767-TdxmfPa3myGvALWkdWzY",
+  "object": "chat.completion",
+  "created": 1790443767,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Parking requires moving cars temporarily to clear curbs, which can mislead delete-relaxation heuristics. Scorpion Maidu combines novelty search with several heuristic configurations, giving it multiple ways to escape these plateaus and improve coverage on larger instances.\"}",
+     "refusal": null,
+     "reasoning": "**Evaluating planning strategies**\n\nI’m looking up \"Scorpion Maidu\" in relation to IPC 2023 and its approach for independent car mobility focused on parking challenges. Parking often presents difficulties in terms of dead ends and requires temporary solutions, where novelty can be beneficial. I'm considering the best approach, like P21 Scorpion Maidu, with its emphasis on causal graphs. Managing tasks for a larger number of cars leads to increased memory requirements, but I think I need to focus on specific strategies based on novelty. So, I’m leaning towards P21 for its likely advantages.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating planning strategies**\n\nI’m looking up \"Scorpion Maidu\" in relation to IPC 2023 and its approach for independent car mobility focused on parking challenges. Parking often presents difficulties in terms of dead ends and requires temporary solutions, where novelty can be beneficial. I'm considering the best approach, like P21 Scorpion Maidu, with its emphasis on causal graphs. Managing tasks for a larger number of cars leads to increased memory requirements, but I think I need to focus on specific strategies based on novelty. So, I’m leaning towards P21 for its likely advantages.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAEA3gB8_G3110_y38lwkoM5gjFsUkX8qxA81UhPCog_60O6cP3lPcypwMUm1OBXZv5RnGdY4xDhdnWGkC7s75qNnEKFlvnR67Tc1Ng7YrjYrMOzAZKvHwyxqE3FcDYoKPd8Umt_I6o06ge7BN6KPWwSVmJM7uLz_0NbR_j7oewz3hhYRCrbn0wnOMFBsNJqMrpJlb5qRcC87Y0V7qO6ZCCK_fDUIQ9DKGTe-LPNQmeX6KsdHcWIy2bfXPrT_vHPFpa7f_x3QXc4gf272m_4_mPhPSdGZ3H2XP9IEzKqKnJ9ggKVdMiBHjNrgS__gu672eaEky-mj-QiO3nQW2ME9kDEZw6azSgQNy_hCliOeNgHGUlYCUC8ffjLVvQ61MhVr_Y65NGuAa8gFlfiexOoLVJUjZQuyG-V13Ssd73Qm4yPAuhmZ53VhvrEXX1-ebOp9Q3HKxvJwzNHCenW3IObQT-4ktJ8Og5jkmrl4NI0EwNXsdqxhFHu1vnQY8gGmjLLBPnqV_SYmOHR-WNA1cxHvDiI2Gi23grt8GqOEGiIVuzfxNQCN4vz0LJFVX9Dj-zB5j0aorjusKRlADRHYS5VUkPpHYB00DBGOFS6Ir92glbe-9he3lDdX7lJSukxkQXUO2LR_w50EEp1kbZfUAA_QVqHP2HSryQmei6hwBnIgmgfxtPUlAHx-VnlndNrMhaWIA3Ci75_baX_ZwmXs1e8g8b-EJYI45W-btJmjVOh_j3TWPtGdav868Vo6ZivEeK12Br3PMC1rc3TedK1yiTn9QjxGAQoQBOt10_ozc3mYofGX7CE1p5RE-grBMT8XcNkghYAEKJVyMYB8R4VTcquYV4s1HITLSAiPSgK12-PY1ye635fP7fVuPWJ4O27OaMSTd1D6vDRzzZYxY-9B44bGmw1vTRaYBRqP2o16rY6uTz6ZlM90uT_OS_OMuW6KrsHWMw1ZBL_4x0QEtZxHj1vNuAcNbpkM8bTLCgkMkmSAiE6vVP_oIXhDxMxwIGgh0NX5S6fLTVPWTSQCqtNgKrmeZf4dCOh7Bi682UFkpGVWCWBIoPGRC7AypcejNdd5aXEc2JXDv9T3wJ3Ou4wQVt23L1ab6qh-fdJppVsAcM1P1cJYCVpyhLEdtu9jsT7FlSDZnK4P0yz3ISAYPkkgRR2oLuL2Jzmdq_lyohSB4dHYPTFUz-0qrVe26PlmJhFwy5oudpnh_uwLzG2aPU7T6AxBxMj38vxeOsAAQfVvb3YG62NQ_r_fYh9a3YifdHMf7Bl2O9U1ssI6eC1Ik1uCsC1ZLAPIlXzLtnmOLY50rgNcb1ddVRdAxMbQTMvyervwFPWHKLLLjMEQ5Zw2r3t0t1LIHguBSLvX1f6E5SfXo8DTXKOkW0PIOxOVi600O2Jx87OBERgqsODlWPsDNoxy9qr8bfWOf0gWXAhv9zCkc3P_M5R3wXJSozt1iN6VfNDHtLlp4Z0HEEqxJnU4rP23AvZIcFjLYrfvTK0wTejwPmZ_HIoGDffqSP3b_21xU04PS5vJcHEH8NUIyegRIr3fGUHIFZC1Z7WC5s5_m-fMEEzu55IDeUeuHqzLV6TMF0krPyHNGcJCIDvL4i1ZALYbUv7aqXVoB5l18GMeBRTvgPSm5OboOD0RBAoRU3SNMCDwkGVcU5fX3FrcGzlABU3iIKRw7lhqKL7W52OaoktYM5KRU5cC0Nm0q7K-3Ea-7P6aVcsM4Sq9Rvv4UwL1UTEb6UipzbI-m2HaEwHjXXnekVnHh7Df_Y1_Ag_jnC1X9T6-6b0gF9O0p00Q96D_1XM96ifHVbNcOhM1ijwEow9vKGmy4WtJJqsjSf6iEovK5H8-A7wlnS9dPxtMW02JpaDhNPqwYpD1SFuJxYDXZnyCOcjpHBmRpn5udbaNUfCByDrwHtLFzxk7-2nagui3hZZOKBQl-GCnpFmjSSFhqeCUFJ0VlJjAETEPRO7_QFaBpVRcs7m1n_gAx0fEx2HyH1Pxje0AyOu6W3PtpKE2mVshqAtYUQsVv2tjhWkqAfnRTtqGxhRede4hn9XDuL13UBYPC_MoBf4rkhmB8h8yFIIKuzpCoMYon2kSclyJguU1LMYepOH5mt8ptf8FEbucw3TXz-JKq4uWpUYpfGijKuwGNVm6N8Yzx5IWUaV2wfRcLzcWnhVMSyGmKQvH9olFq2LP9J2MW82T55VziFHTfvRsA7c-MwnC49m5qsXF9MxvQ6gbW26k-DbrH6P2T-s4UxTSvj0GyUYi3XP840ED6aeZTbe9KEtTN6SCPl41lbIBW3Op4ZH1RkghbBnBe8B80zYce_ND6MKnw8602FAvEeCCdAYJxeGh4Z-eYSp70KrXI_CH3wKN98f2Hhwme8vD3W8SK7bheftxfvDaC4BnA4t53zdehculcqoMFYvsvEqEyOUuFLXCOX4meq_i0l3EG3WEnqX3cT6GgJgCb4b2OmhbK6Zb0efIGYFFiMkgGDfb3CDDD0uq3velmNaNCCek9Jov9wkrPPdmyehxwHIMeWd4tbd0XjGUx3caT9lz8GhSvZpT4XEnoh1Zt7MKG3utyxvHV1Qxo_w-JB-PMLlev1Fcv2-I3ADM2vxMBHiZCDQvxAUb8VR6LziSWQre5wj11TZbFAB93tVKrgnQvI8JvVCUp5mO97QUPanBvDGxRV5Xps8TdNOOc6rHeHnI_LiWHPisxiiSTbDqiYQz73SNO57qQSOq4awErqLdF00JnaJUfVfnKXPn-frwSl_jeryk55KkygU3EzEmxH7KK39CxZvxX0EXS7-Pr6M0EFRipVsY5ZMlemj1yR_EawEDYrMpeneMKOtzZzdcnslSlIblgVafVrq-bshx-W9pz0GTEtOyyR5KegIXR4Iq2Tc82jinJrTDX9BpcaMn2gRW4AWc_inFrYhXWUygi1LV0xdpHW8lQXZt5zOi2PfCUBihLlaLseG6FqHkXp3WgJb_pIRd6vU9NkFtK-z3g7I11DXFu5LNBnHDmfMX2e-q-lCe-4GJEz8FbuH7E6BspkDZA28725WQ2OUYDkZ9HQcx1ZaSiKrJzntJTFZyfnqZUTa_9oRsf1tQckFL4HKG3Ww7zV3SzTuoD4fc9Ip8vJS5qkL9oibvrGm1lMaa5i7HcCsl4Xvc5TFRxxWzLRZgJ1Try7-JJMkc-fcIFhHeuYcsZP-5wgqC8F-Va-80Ebv0WQHAS1TcLcZcbkAneVsZr4vpUAlEHoYc29cNS5j7hH8NOjRuRZz8EwyystJ7C7IxMAc309zhjF3BwIrSCikGdPYxjx5t8nkT6Ja0pjg0bXE5q8WXvN6tZAvbPAXfNiFkkSjoMaMEPLiYyW8mAnXq18mVqoAqYOHmPlVDgGfbBWXYrolu9lFE8AR8TBTMXxdR8TwNUMaN0kU725FlTWrABzr2UCxoHSBvL77Yd7XUu9viJHviDa973cE1PHQBqQgJz9lG8wMPcMmH-eL88FYEKuvuWkpel7495ieq-d8px1ZEzI6zjweXehGZ2S9zA84ZHGpk5cV0K36gEkkx-EsyLfB5gE8X51ujhMv-6XjexMKrvzTbHic5-q6gsdgMnqwrMCnbhx6sXCoy_ESTNmKEA9NDe0p3CuQvvBQpuUEqXYLsdCIbzx0TTxf2F1fXzcXy_McUJZGNvxRE7b_1DdAhAHXZ9oA0OxgcnhSTVu7hWhJBFA0ULrrNtQOZRJB17MLHNtxuCFO7FK8MuRAJI3FAxzR-TKsfsyng7ajdfiQwQCb7oT0gM-4LW6LWSs5v1in8_tjEWwsT2QxixjN3LtWa6H9wL-qjMqYqoy1t5Zr88xbuZJovC-_NSbVWJ57nq86k-Qgu2ARZ0DdwI-spurYtXwEu2r3HLyfau3pS6BGsZYXQydJlYHwpFuHy422ory1f-NPuiMnZpQ88L98zcB649rIZfDjF3KACOwXqN23NIQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0d2d122c2780740c016ab800f8615c87d19e29c6790490d83f",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2975,
+   "completion_tokens": 497,
+   "total_tokens": 3472,
+   "cost": 0.012406,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2972,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012406,
+    "upstream_inference_prompt_cost": 0.007436,
+    "upstream_inference_completions_cost": 0.00497
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 433,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

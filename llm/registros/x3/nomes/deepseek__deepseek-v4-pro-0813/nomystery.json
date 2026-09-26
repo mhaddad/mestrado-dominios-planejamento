@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "nomystery",
+ "data_utc": "2026-09-26T17:42:49+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 19.9,
+ "uso": {
+  "prompt_tokens": 14510,
+  "completion_tokens": 1286,
+  "total_tokens": 15796,
+  "cost": 0.00593398912,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00593398912,
+   "upstream_inference_prompt_cost": 0.00341548672,
+   "upstream_inference_completions_cost": 0.0025185024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1216,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Levitron uses lifted (no grounding) representation, avoiding the huge ground action blow-up from many fuel-level/sum objects, and combines delete-relaxation, landmarks, and novelty search in a portfolio, making it robust under 30 minutes and 4 GiB memory.",
+ "resposta": "{\"planner\": \"P07\", \"reason\": \"Levitron uses lifted (no grounding) representation, avoiding the huge ground action blow-up from many fuel-level/sum objects, and combines delete-relaxation, landmarks, and novelty search in a portfolio, making it robust under 30 minutes and 4 GiB memory.\"}",
+ "bruto": {
+  "id": "gen-1790444549-k1K7XhPyKp2FpiXpmR84",
+  "object": "chat.completion",
+  "created": 1790444549,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P07\", \"reason\": \"Levitron uses lifted (no grounding) representation, avoiding the huge ground action blow-up from many fuel-level/sum objects, and combines delete-relaxation, landmarks, and novelty search in a portfolio, making it robust under 30 minutes and 4 GiB memory.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner. Domain transport-strips with fuel levels and sum predicates huge numeric-like but STRIPS. Need maximize coverage under time/memory. Need select one planner. We need reason briefly.\n\nWe need infer portfolio? The domain is transport with fuel, packages, trucks. Instance has many fuel levels (0-312) and sum facts. It's a numeric/planning with fuel constraints. Planner needs handle large state spaces, maybe delete-relaxation heuristics. Modern Fast Downward portfolios likely best. P02 Fast Downward Stone Soup 2023 or P03 Fast Downward Remix. IPC 2023/2018. P07 Levitron includes width-based/novelty, lifted, portfolio. P21 Scorpion Maidu also. Need choose ONE most likely maximize coverage. We need consider domain features.\n\nLet's analyze domain. \"transport-strips\" with fuel levels as objects and sum predicate enumerating addition. Instances generated with many fuel levels and connected graph, fuelcost etc. It probably is a logistics-like domain with fuel numeric constraints encoded as PDDL. Need planners capable with many objects and arithmetic via predicates. Delete-relaxation heuristics may struggle because sum facts ground huge. But heuristics can help. Portfolios with multiple configs, including novelty, causal graph, landmarks might be robust. Fast Downward Stone Soup 2023 likely strongest due portfolio of many configs including LAMA, BJOLP, etc? The catalog says P02 Fast Downward Stone Soup 2023, portfolio of several planner configurations. P07 Levitron also portfolio, includes width-based/novelty. P21 Scorpion Maidu similar. Which is best on transportation/numeric? Hmm.\n\nDue to fuel and sum static tuples, not real numeric fluents but grounded sum facts. The problem has many static facts. The delete-relaxation hff/hadd can compute preconditions with fuel levels? Drive has sum as precondition, and fuel transition. The sum predicates are static, all ground, many but finite. Delete relaxation ignores deletes, but fuel is updated non-monotonically; it can use the initial fuel level and sum to get levels; maybe not enough because fuel decreases/increases? Wait drive consumes fuel? Precondition fuel ?t ?fuelpre, sum ?fuelpost ?fueldelta ?fuelpre; effect not fuel pre, fuel post. Need sum relation: post = delta + pre? It's probably cost adds. This is a numeric resource but discretized. Delete-relaxation heuristic might assume fuel can increase somehow? Actually action drive replaces fuel with sum result. Initial fuel assigned level maybe high. The sum facts encode addition, so fuel can decrease/increase? It consumes fuel? Let's check fuelcost maybe cost for edge; sum fuelpost fueldelta fuelpre. likely fuelpre = fueldelta + fuelpost? Actually sum ?fuelpost ?fueldelta ?fuelpre means level fuelpost + fueldelta = fuelpre, so fuelpost = pre - delta. So fuel decreases. It's resource limited. Delete-relaxation heuristic might be informative.\n\nNovelty search/width-based might be useful for large state space? But perhaps standard A* with LM-Cut/FF works.\n\nNeed select between top portfolio systems. We need answer based on catalog. I suspect P07 Levitron (IPC 2023) or P02 Fast Downward Stone Soup 2023. Both are portfolio and use delete-relaxation + causal-graph + landmarks, but P07 adds width-based/novelty and lifted. For coverage on many instances, portfolio with both landmark and novelty can be robust. P21 Scorpion Maidu also similar. Which one likely best? In IPC 2023, optimal? Maybe Levitron won agile track? We need maybe know. Planner descriptions: P02 Fast Downward Stone Soup 2023, P07 Levitron, P21 Scorpion Maidu. P27 LAPKT-BFWS-Preference is width-based too. Need choose maybe P07 because it uses lifted representation, helpful for huge groundings/memory 4GB. Domain has many objects: fuel levels 313 + locations 14 + trucks/packages; ground actions? drive has 14*13*313*313*some? But sum predicates static, applicable drive uses only sum fact with fuelpre, fueldelta, fuelpost. Many ground actions maybe large. 4GB memory. Lifted could reduce grounding. P07 uses lifted no grounding. That seems beneficial for large instances with many fuel levels. P02 FD Stone Soup likely grounds actions; many drive actions can blow memory due to fuel levels and sums. P07 avoids full grounding maybe? Actually Levitron is \"multi-valued (finite-domain) variables + lifted (no grounding)\"; can help memory. The domain has huge ground actions (drive action with location l1, l2, and three fuellevels with sum static, 14*14*313*... could be enormous). Problem has 14 locations, 312 fuel levels, sum facts maybe many; drive actions: 14*14*313? Actually l1,l2 connected limited; fueldelta, fuelpre, fuelpost constrained by fuelcost and sum. If many sum facts, each edge has fuelcost for one fire level? It may be 100n... instance. Grounding might blow due to millions. Lifting might avoid. So P07 likely best. \n\nBut need consider P21 Scorpion Maidu also uses lifted? description says representation multi-valued (finite-domain) variables not lifted. P07 explicitly \"lifted (no grounding)\". P02 not. So P07 is likely answer.\n\nNeed craft reason ≤60 words. Mention lifted handles many fuel-level objects/ground actions without memory explosion; portfolio includes heuristics/novelty. Choose P07.\n\nEnsure JSON only. Need maybe code P07.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner. Domain transport-strips with fuel levels and sum predicates huge numeric-like but STRIPS. Need maximize coverage under time/memory. Need select one planner. We need reason briefly.\n\nWe need infer portfolio? The domain is transport with fuel, packages, trucks. Instance has many fuel levels (0-312) and sum facts. It's a numeric/planning with fuel constraints. Planner needs handle large state spaces, maybe delete-relaxation heuristics. Modern Fast Downward portfolios likely best. P02 Fast Downward Stone Soup 2023 or P03 Fast Downward Remix. IPC 2023/2018. P07 Levitron includes width-based/novelty, lifted, portfolio. P21 Scorpion Maidu also. Need choose ONE most likely maximize coverage. We need consider domain features.\n\nLet's analyze domain. \"transport-strips\" with fuel levels as objects and sum predicate enumerating addition. Instances generated with many fuel levels and connected graph, fuelcost etc. It probably is a logistics-like domain with fuel numeric constraints encoded as PDDL. Need planners capable with many objects and arithmetic via predicates. Delete-relaxation heuristics may struggle because sum facts ground huge. But heuristics can help. Portfolios with multiple configs, including novelty, causal graph, landmarks might be robust. Fast Downward Stone Soup 2023 likely strongest due portfolio of many configs including LAMA, BJOLP, etc? The catalog says P02 Fast Downward Stone Soup 2023, portfolio of several planner configurations. P07 Levitron also portfolio, includes width-based/novelty. P21 Scorpion Maidu similar. Which is best on transportation/numeric? Hmm.\n\nDue to fuel and sum static tuples, not real numeric fluents but grounded sum facts. The problem has many static facts. The delete-relaxation hff/hadd can compute preconditions with fuel levels? Drive has sum as precondition, and fuel transition. The sum predicates are static, all ground, many but finite. Delete relaxation ignores deletes, but fuel is updated non-monotonically; it can use the initial fuel level and sum to get levels; maybe not enough because fuel decreases/increases? Wait drive consumes fuel? Precondition fuel ?t ?fuelpre, sum ?fuelpost ?fueldelta ?fuelpre; effect not fuel pre, fuel post. Need sum relation: post = delta + pre? It's probably cost adds. This is a numeric resource but discretized. Delete-relaxation heuristic might assume fuel can increase somehow? Actually action drive replaces fuel with sum result. Initial fuel assigned level maybe high. The sum facts encode addition, so fuel can decrease/increase? It consumes fuel? Let's check fuelcost maybe cost for edge; sum fuelpost fueldelta fuelpre. likely fuelpre = fueldelta + fuelpost? Actually sum ?fuelpost ?fueldelta ?fuelpre means level fuelpost + fueldelta = fuelpre, so fuelpost = pre - delta. So fuel decreases. It's resource limited. Delete-relaxation heuristic might be informative.\n\nNovelty search/width-based might be useful for large state space? But perhaps standard A* with LM-Cut/FF works.\n\nNeed select between top portfolio systems. We need answer based on catalog. I suspect P07 Levitron (IPC 2023) or P02 Fast Downward Stone Soup 2023. Both are portfolio and use delete-relaxation + causal-graph + landmarks, but P07 adds width-based/novelty and lifted. For coverage on many instances, portfolio with both landmark and novelty can be robust. P21 Scorpion Maidu also similar. Which one likely best? In IPC 2023, optimal? Maybe Levitron won agile track? We need maybe know. Planner descriptions: P02 Fast Downward Stone Soup 2023, P07 Levitron, P21 Scorpion Maidu. P27 LAPKT-BFWS-Preference is width-based too. Need choose maybe P07 because it uses lifted representation, helpful for huge groundings/memory 4GB. Domain has many objects: fuel levels 313 + locations 14 + trucks/packages; ground actions? drive has 14*13*313*313*some? But sum predicates static, applicable drive uses only sum fact with fuelpre, fueldelta, fuelpost. Many ground actions maybe large. 4GB memory. Lifted could reduce grounding. P07 uses lifted no grounding. That seems beneficial for large instances with many fuel levels. P02 FD Stone Soup likely grounds actions; many drive actions can blow memory due to fuel levels and sums. P07 avoids full grounding maybe? Actually Levitron is \"multi-valued (finite-domain) variables + lifted (no grounding)\"; can help memory. The domain has huge ground actions (drive action with location l1, l2, and three fuellevels with sum static, 14*14*313*... could be enormous). Problem has 14 locations, 312 fuel levels, sum facts maybe many; drive actions: 14*14*313? Actually l1,l2 connected limited; fueldelta, fuelpre, fuelpost constrained by fuelcost and sum. If many sum facts, each edge has fuelcost for one fire level? It may be 100n... instance. Grounding might blow due to millions. Lifting might avoid. So P07 likely best. \n\nBut need consider P21 Scorpion Maidu also uses lifted? description says representation multi-valued (finite-domain) variables not lifted. P07 explicitly \"lifted (no grounding)\". P02 not. So P07 is likely answer.\n\nNeed craft reason ≤60 words. Mention lifted handles many fuel-level objects/ground actions without memory explosion; portfolio includes heuristics/novelty. Choose P07.\n\nEnsure JSON only. Need maybe code P07.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 14510,
+   "completion_tokens": 1286,
+   "total_tokens": 15796,
+   "cost": 0.00593398912,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1536,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00593398912,
+    "upstream_inference_prompt_cost": 0.00341548672,
+    "upstream_inference_completions_cost": 0.0025185024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1216,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

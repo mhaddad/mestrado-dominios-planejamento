@@ -1,0 +1,93 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "openstacks",
+ "data_utc": "2026-09-26T17:27:48+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 3.3,
+ "uso": {
+  "prompt_tokens": 4238,
+  "completion_tokens": 122,
+  "total_tokens": 4360,
+  "cost": 0.009696,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.009696,
+   "upstream_inference_prompt_cost": 0.008476,
+   "upstream_inference_completions_cost": 0.00122
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P17",
+ "razao": "Openstacks scales with landmarks+delete-relaxation heuristics well; LAMA 2011's anytime search and strong FD heuristics historically give best coverage on openstacks-sequencedstrips instances among listed planners, outperforming simpler heuristic or SAT-based approaches on larger instances within time limits.",
+ "resposta": "{\"planner\": \"P17\", \"reason\": \"Openstacks scales with landmarks+delete-relaxation heuristics well; LAMA 2011's anytime search and strong FD heuristics historically give best coverage on openstacks-sequencedstrips instances among listed planners, outperforming simpler heuristic or SAT-based approaches on larger instances within time limits.\"}",
+ "bruto": {
+  "id": "gen-1790443665-G9PCutCaTnUSNz6fsun9",
+  "object": "chat.completion",
+  "created": 1790443665,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P17\", \"reason\": \"Openstacks scales with landmarks+delete-relaxation heuristics well; LAMA 2011's anytime search and strong FD heuristics historically give best coverage on openstacks-sequencedstrips instances among listed planners, outperforming simpler heuristic or SAT-based approaches on larger instances within time limits.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4238,
+   "completion_tokens": 122,
+   "total_tokens": 4360,
+   "cost": 0.009696,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.009696,
+    "upstream_inference_prompt_cost": 0.008476,
+    "upstream_inference_completions_cost": 0.00122
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

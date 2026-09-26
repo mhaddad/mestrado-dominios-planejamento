@@ -1,0 +1,102 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "floortile",
+ "data_utc": "2026-09-26T17:27:52+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "condicao": "nomes",
+ "prompt": "x3-nomes-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.6,
+ "uso": {
+  "prompt_tokens": 2796,
+  "completion_tokens": 233,
+  "total_tokens": 3029,
+  "cost": 0.0093185,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2793,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0093185,
+   "upstream_inference_prompt_cost": 0.0069885,
+   "upstream_inference_completions_cost": 0.00233
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 163,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Painting a tile makes it impassable, so action ordering and dead ends are central. Delete-relaxation heuristics can miss this constraint. Scorpion Maidu combines novelty search with landmarks and other heuristics in a portfolio, giving it several ways to handle larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Painting a tile makes it impassable, so action ordering and dead ends are central. Delete-relaxation heuristics can miss this constraint. Scorpion Maidu combines novelty search with landmarks and other heuristics in a portfolio, giving it several ways to handle larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790443667-gqWcCpJ9tscGy37LtZQP",
+  "object": "chat.completion",
+  "created": 1790443667,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Painting a tile makes it impassable, so action ordering and dead ends are central. Delete-relaxation heuristics can miss this constraint. Scorpion Maidu combines novelty search with landmarks and other heuristics in a portfolio, giving it several ways to handle larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquACXY-55_TSvgPUMmDFezbrjE2tJBdtmhMekf6a-Rfms4Mdsa9ZWQHrB8n7KH6NGtsSVFUz3JsPh36xF0RvMM-tDWp0pMG2WoN2nWfa_aQJnIrqgdOuCMpcIEjNM0drfKXef_SWAyf59ZNPNmlopRWe6PK_dzMixJzKgJA7loU3IyxXlHNPJdNDicSZnTpDIZo-qCbwvaGg37tk3nRNyHE_vAdf91RHDHozTWigOOjpPAo-dOJ9fj3PkHjYkDTfr-Ynv-3cE4inHGqeR8joPO6aQ2XA9pI3zTkzlXrlItkeOQmSCznY5XVEuBOE7kq5tgpuQa_MJZT-kbhN0dBLr1-W23uXnR44dvlm-sGE7eiQFspOVgxifPxuXKs1oWJ8_frFdti7WFHe54yjNIG0KrcqBm7TkOuSaXu8rDW0ChbBy63KQ2o7S5h8PLtFaOODMvkVvRd_bTotoDiRQ74dj2bCyKZ2npcjDnWFt2q9HXS_aSxUK7Dq2xuKGcKm3Al0G_L-dfLhuRDsMrQ6KSSnxbf_zWOZczDUx2zJ-n27-g82vNytyb_Q-0cUMh7NIjCISj6AM9eHD9YZp4QEQNQYgLx8IyqvMwdDJIiAhZkg2kE8ZXlRLBxC20butBT7NtZmJXTYZ0Jt_7MJrAVDqDxEVuFdsrHNvO4j_yr3GJhz3YTCP0sdfjnBIgJdTARJqeUANvAr1hBHlSSr3EswRNp5rjoUShmM2iNyui0b550MIh5ZufyKQUE1ZVGKLj5vLdc81IXb5MxK4qfmqgayd9Z8o0bWgY2gZBJw0T1eiCzHP3vvyCABQNRLc0BoR8v9cIp0SClzmeVqbj6G_efVItbOafRMAuQD4Z3fQx6CIP3fQ_ehnivOXy7plbrMPkDpfYRfpleSPi0SCXySviCtYgScFjynCC95ua4ebPadOPFQGUHHmftHwXx2J7dXr1h0FxDJsgj3LFYan0AYYT5EfTvf_Dt2bpj8Kj6_LQ954uXym3XorhEvYaFXJKgESzYUbNSDUXD3suVISmb5ta69pmVW74YJ_V28f-H9VwziNB_3dsYHr_QyLLL4V-oTWHLb_MQjRa96HU-i2Wn62Kt4JW20YDXGRKEXmbzcZ4i8SEwU1rj9U0txDw6d_66ozNK0qv_mBiYbxRNv0oT_l-6EydoeZ2xVSqf6469Hucr2--7VaLNVhdWG6WOlxflORLFIyXWzAX8P8iiq39b_iOfDYZCRWEYj6XNRDOLVmpIgHYR8T2YYaYYwSWUOrZu3EGk8Y2yf0moHzjyqDQKm3zZYoQKT7emEN5PLsDr4vo5JLGe9C976DN3KQPd8VM-mDhp29mBd7ns-diegcwFmYoImE-YueQWS6pDVL9FRGx0e3Ue93aNr5bupdX-sfToq1xYdpAZICmiuL7m1adRjOdVRXZoXqEeLQdgOs5C9sBMuNoq1QyzxMmv0-0-W2MLzbfTHyXID8sjisDH2j99vBQZw9eGPXxJgP_6D5ftE6i4V5pEqITyen5jlnK0y-pgDOz573MGzgWaoWPAXAI_yYCqI5JH5IO3N5VGRqV-JIOloeK3axeBSWdnooNzPE27cyY1ppW2_w2kgiSVNB0Bo1N9so37l4JZxF1FSVaOl26lsj1PzK928How_ruHRatgpjsWWPLUBcQgDDJm4pIN-ATmDy3PVchQUV0De6VMtZJW82H3DXBtynInoa7BovobyGAjbZ6cX4VBiDGXrEXDJzVmLapdx3Ledpk7S5huNVKAuBf4JX_GE9kdpH_HiD0ic_eSeuitcAmzFx0fuL4yzRwGBhFHVPXIBeWjCAmN2tV8tMT0eIz6oiQibOe60w_RXDvqCC4LUQWOy-ZrXC93q_eoqhJ7hfT-dIgl0kuW6qMpr72l1Y0jte2B6qfNFGj-P1w0T9dsB0uwaVPF_FQ4YfIeLRzKmph48JLk8ztoDsrtgoCW3fMD_sbmbb3Xg64mulcOG7ZVXZCd7fXeb7UZPRQDy40wbJsh0k9rPmmWqn9ulrHKKJc3eVLDw0-o0JxAbfcjWx-lz3ojdahSBOl6Qbdc5PVhWej1M1np4QvXpj61Ly0gZ2UiP44lv2ODesGt-pT-iovkVAcxMFLNs56wP0iiKX3nMXFUX2YB_t9rWPaE503Z_w2xM5F8sj24QGKftMu0mE9zXcBUIYG2s6bkhPCm9wcsx1U5IWm4z213T8_QG2xopA9mucMV_eeGzoK6kqGAMf_tid_WgQlssd_Ux1mxaPSllo3LfqnjRnpCJR2Nvrkye-RKS_rGGOrs0XTbUMKidow_iS36QxJlrhMx6vgINSqvSogLHNdQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_01226c76f4e370e6016ab80094b0bc87d19e32d0c8ccc33aa6",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2796,
+   "completion_tokens": 233,
+   "total_tokens": 3029,
+   "cost": 0.0093185,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2793,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0093185,
+    "upstream_inference_prompt_cost": 0.0069885,
+    "upstream_inference_completions_cost": 0.00233
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 163,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}
