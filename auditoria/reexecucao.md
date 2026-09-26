@@ -87,7 +87,7 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-07 | 1 | G19 | `data/2010/eficiencia_planejadores.csv` | rankings e taxa de acerto (definição original) por script | R-02 | média · 🟢 feito (EXP-03 e Nível 0): rankings reproduzidos (diferenças só dentro de empates) |
 | R-08 | 1 | G6 | `data/2010/conferencia/eficiencia_precisa_sql.csv` | regra de conversão eficiência → nota testada | — | média · 🟢 feito (EXP-03): 100 de 100; G6 resolvido |
 | R-09 | 1 | G10 | `data/2010/conferencia/caracteristicas_18_a_20.csv` | registro do que ficou em aberto | decisão do autor (seção 8) | baixa |
-| R-10 | 2 | A6, F4; AF-213, AF-214, AF-285, AF-286, AF-326, AF-328 | `auditoria/taxonomia-tecnicas.md` §3 | Tabelas 18–25 e rankings com taxonomia de 4 dimensões | R-06 | alta |
+| R-10 | 2 | A6, F4; AF-213, AF-214, AF-285, AF-286, AF-326, AF-328 | `auditoria/taxonomia-tecnicas.md` §3 | Tabelas 18–25 e rankings com taxonomia de 4 dimensões | R-06 | alta · 🟢 feito (EXP-06): sem ganho claro sobre a linha de base; codificação C1–C5 a revisar pelo autor |
 | R-11 | 2 | G1; AF-234, AF-281, AF-282, AF-331 | `data/2010/metricas_dominios.csv` | rótulo e interpretação corrigidos | R-06 | média |
 | R-12 | 2 | G17 | `data/2010/correcoes_2010.csv` | discretização e Tabelas 19–25 com as correções aplicadas | R-05 | média |
 | R-13 | 2 | F3; G2, G13; AF-225, AF-283 | `data/2010/conferencia/modelos_itsimple.csv` | critério de Agregação documentado; teste de robustez de classes | R-06 | média |
@@ -102,7 +102,7 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-22 | 3 | F5, A7; AF-303 | planos gerados no Zeno-travel e demais domínios | medida de qualidade do plano | R-17, R-20 | média |
 | R-23 | 3 | F2; AF-327 | planejadores forward-chaining/recursivos adicionais | ranking do Elevator com mais planejadores da família do R | R-17 | baixa |
 | R-24 | 4 | Q1 | *benchmarks* IPC 1998–2023 | ambiente e condições padronizadas montados | R-18, R-19, R-21 | alta |
-| R-25 | 4 | F3; Q2 (*features* a); G2, G11–G13 | PDDL de todos os domínios | extrator automático validado contra 2010 | R-13 | alta |
+| R-25 | 4 | F3; Q2 (*features* a); G2, G11–G13 | PDDL de todos os domínios | extrator automático validado contra 2010 | R-13 | alta · 🟢 feito (EXP-07): 11 de 17 métricas extraíveis; 8 se reproduzem, 3 dependem da modelagem; o R-13 segue pendente |
 | R-26 | 4 | Q2 (*features* b) | PDDL/SAS+ | *features* modernas extraídas (grafo causal, DTG, *treewidth*) | — | média |
 | R-27 | 4 | Q2; A5; AF-310, AF-337 | R-25, R-26 | comparação UML × *features* de PDDL, com controle de serialização | R-25, R-26 | alta |
 | R-28 | 4 | Q1 | R-24, R-25, R-26 | modelos treinados; comparação com *single best*/*virtual best* | R-24, R-25, R-26 | alta |

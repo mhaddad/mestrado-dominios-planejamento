@@ -9,8 +9,8 @@
 | Autor | Matheus Haddad |
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
-| Última atualização | 25/09/2026 |
-| Versão deste documento | 0.28 |
+| Última atualização | 26/09/2026 |
+| Versão deste documento | 0.29 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -248,8 +248,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [ ] Montar ambiente de execução em contêineres — 🟡 máquina OrbStack Ubuntu 22.04 amd64 provisionada por script (`experimentos/containers/orbstack/`); os 10 planejadores de 2010 rodam por QEMU i386 (EXP-01)
 - [ ] Baixar e organizar *benchmarks*
 - [ ] Compilar e testar planejadores — 🟡 os 10 de 2010 testados (EXP-01, `experimentos/execucoes/2026-09-24-teste-orbstack.md`); planejadores atuais pendentes
-- [ ] Implementar extrator das métricas de 2010 a partir do PDDL
-- [ ] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0)
+- [x] Implementar extrator das métricas de 2010 a partir do PDDL — EXP-07 (`experimentos/extratores/metricas_2010_pddl.py`): 11 de 17 métricas têm correspondente no PDDL
+- [x] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0) — EXP-07: tipos e ações se reproduzem (postos 0,69–0,92); atributos, associações e atores não (0,31–0,51)
 - [ ] Implementar ou reutilizar extrator de *features* modernas
 - [ ] Rodar experimentos
 - [ ] Reproduzir o método de 2010 sobre os dados novos (linha de base) — 🟡 sobre os dados de 2010 já feito (Nível 1, EXP-03): 220/221 classes, 100/100 notas, 535/539 células característica × técnica, *rankings* iguais salvo empates; achados G23 e G24
@@ -583,6 +583,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | 3 | Claude Code — Coordenador (claude-opus-5-5) | EXP-04: Nível 2, cenário da discretização pela regra do texto | Referência reproduz o método de 2010 com a aritmética corrigida; efeitos comparados com a linha de base de G20 |
 | 25/09/2026 | 4B | Claude Code (claude-opus-5-5) | Proposta e desenho da Fase 4B a partir da ideia do autor | Chaves citadas conferidas no `referencias.bib`; duas obras sugeridas fora dele marcadas como não citáveis; disponibilidade dos dados das IPCs marcada `[A CONFIRMAR]`. **Desenho a revisar pelo autor** |
 | 25/09/2026 | 3 | Claude Code (claude-opus-5-5) | Operação da rodada no GCP (`gcp.sh`), conferência dos casos sem plano e achado G25 | Cada "sem plano" conferido no log bruto e comparado com os logs de 2010; variante testada localmente (gera as 20 execuções esperadas) |
+| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) marcadas para o autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 
 ---
 
@@ -664,3 +665,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.26 | 25/09/2026 | Nova Fase 4B (panorama das IPCs posteriores a 2010, dados publicados, sem UML.P) entre as Fases 4 e 5; pergunta Q5; expansão de escopo registrada; Fase 5 passa a começar depois da 4B |
 | 0.27 | 25/09/2026 | Marco M2 cancelado; o M3 é o envio da dissertação reescrita por e-mail, com retorno posterior; status geral atualizado |
 | 0.28 | 25/09/2026 | Nível 3 migrado para o GCP (orçamento e desligamento automático); achado G25 (Blackbox com `-M 8192` só no Satellite em 2010) e variante `blackbox-m8192` para o fim da rodada; máquina OrbStack apagada, brutos preservados |
+| 0.29 | 26/09/2026 | EXP-06 (R-10): taxonomia em 4 dimensões aplicada ao método de 2010, sem ganho claro sobre a linha de base; EXP-07 (R-25): extrator das métricas de 2010 a partir do PDDL |
