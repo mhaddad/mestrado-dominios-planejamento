@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.36 |
+| Versão deste documento | 0.37 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -52,7 +52,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
-| 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | ⚪ | | | Resultados comparativos |
+| 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas | 🟡 | 26/09/2026 | | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | ⚪ | | | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (começa depois da Fase 4B) | ⚪ | | | Relatório do piloto + decisão sobre produto |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
@@ -552,6 +552,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | Medida principal de validação (G19): **perda em relação ao *virtual best***; correlação de postos como secundária; acerto por posição só para comparar com 2010; todas reportadas ao lado da linha de base | Recomendação do Coordenador aceita pelo autor: mede a indicação do melhor planejador, não depende de desempate e é a medida do Nível 4 | 3 |
 | 26/09/2026 | **Nível 4 só com dados publicados:** a cobertura por domínio do Planner Museum (29 planejadores × 42 domínios Autoscale, 30 min e 4 GiB), cruzada com as *features* extraídas do PDDL; sem execução própria. *Benchmarks*: Autoscale (substitui, no Nível 4, a recomendação de 23/09 de usar os conjuntos completos das IPCs). Consequências: análise só por domínio e só com cobertura; R-20, R-22 e R-31 ficam fora do Nível 4; a análise por instância (A1, A3) não é possível com esses dados | Decisão do autor sobre a proposta `experimentos/nivel4-proposta.md` (a proposta recomendava o híbrido) | 3 |
 | 26/09/2026 | Codificação dos 29 planejadores do Planner Museum na taxonomia 4D (`auditoria/taxonomia/planejadores_museu_4d.csv`) aprovada sem alteração, incluindo a regra dos portfólios (P1), os componentes inferidos (M2) e os seis valores novos das dimensões (N1–N6) | Revisão do autor (EXP-13) | 3 |
+| 26/09/2026 | **Fase 4 adiantada** enquanto o Nível 3 roda no GCP, começando pelo X3 (LLM como seletor). Modelos pelo **OpenRouter**, com os principais do mercado (seleção proposta em `llm/x3-seletor/protocolo.md`); **teto inicial de US$ 10**, a reavaliar depois | Decisão do autor | 4 |
 
 ---
 
@@ -685,3 +686,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.34 | 26/09/2026 | Preparação do Nível 4: Planner Museum (29 planejadores, Autoscale 42 × 30) localizado; cobertura publicada em `data/planner-museum/`; proposta com decisões pendentes |
 | 0.35 | 26/09/2026 | Nível 4 só com dados publicados (decisão do autor); EXP-12: por domínio, nenhuma característica do PDDL supera o *single best* (Levitron) |
 | 0.36 | 26/09/2026 | EXP-13: 29 planejadores na taxonomia 4D; o método de 2010 por técnica perde para o *single best*; o mapa mostra técnicas antigas vencendo em poucos domínios (System R, SAT) |
+| 0.37 | 26/09/2026 | Fase 4 iniciada (X3, via OpenRouter, teto de US$ 10); protocolo do X3 com proposta de modelos |
