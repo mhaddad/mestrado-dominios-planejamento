@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.35 |
+| Versão deste documento | 0.36 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -594,6 +594,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-11: R-26, *features* SAS+ e comparação com as métricas UML | *Features* fixadas antes de rodar a partir da síntese E2; ajuste do Pathways verificado (só a constante duplicada sai); correlações com teste de permutação de semente fixa |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | Preparação do Nível 4 (R-24): artefato do Planner Museum localizado e inspecionado; Tabela 1 do suplementar extraída; proposta em `experimentos/nivel4-proposta.md` | Links do artefato lidos no PDF do artigo; tabela conferida pela soma das colunas contra a linha Total. **Decisões do autor pendentes** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-12: Nível 4 com dados publicados (Planner Museum × *features* do PDDL) | Mapeamento de nomes dos domínios conferido (41 + Pathways); VBS e SBS recalculados à parte; amostra de instâncias e tempos esgotados registrados |
+| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-13: classificação dos 29 planejadores do Planner Museum na taxonomia 4D e Nível 4 por técnica | 22 planejadores com fonte primária (notas de leitura e resumos oficiais das IPCs de 2018 e 2023), 7 só com fonte secundária, marcados; uma citação não lida (relatório da IPC 2014) retirada antes do commit; contagens do registro conferidas contra o CSV. **Codificação P1, M2 e N1–N6 a revisar pelo autor** |
 
 ---
 
@@ -682,3 +683,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.33 | 26/09/2026 | EXP-11 (R-26): extrator de *features* SAS+ (grafo causal, DTG, *treewidth*); métricas UML sem correlação com elas acima do acaso |
 | 0.34 | 26/09/2026 | Preparação do Nível 4: Planner Museum (29 planejadores, Autoscale 42 × 30) localizado; cobertura publicada em `data/planner-museum/`; proposta com decisões pendentes |
 | 0.35 | 26/09/2026 | Nível 4 só com dados publicados (decisão do autor); EXP-12: por domínio, nenhuma característica do PDDL supera o *single best* (Levitron) |
+| 0.36 | 26/09/2026 | EXP-13: 29 planejadores na taxonomia 4D; o método de 2010 por técnica perde para o *single best*; o mapa mostra técnicas antigas vencendo em poucos domínios (System R, SAT) |

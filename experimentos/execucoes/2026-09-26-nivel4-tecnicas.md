@@ -12,9 +12,9 @@
 
 - **Codificação:** os 29 planejadores do Planner Museum na taxonomia 4D, em `auditoria/taxonomia/planejadores_museu_4d.csv`, com a mesma estrutura do `planejadores_4d.csv` de 2010 e duas colunas a mais: `tipo_fonte` e `codificacao`.
 - **Fontes:**
-  - **18 planejadores com fonte primária lida:**
-    - 13 por nota de leitura já existente;
-    - 7 resumos das IPCs de 2018 e 2023, baixados das páginas oficiais em 26/09/2026. Dois planejadores estão nos dois grupos.
+  - **22 planejadores com fonte primária lida:**
+    - 15 por nota de leitura já existente, em 4 deles somada ao resumo da IPC, ao código ou à descrição secundária;
+    - 7 só pelos resumos das IPCs de 2018 e 2023, baixados das páginas oficiais em 26/09/2026.
   - **7 planejadores só com fonte secundária:** a descrição de `lequen2026planner`, em 5 casos somada à documentação ou ao código do artefato. São eles MIPS, SimPlanner, MIPS-XXL, C3, FFSA, Probe e Mercury (**M1**).
   - Cada linha do CSV diz qual fonte sustenta a classificação.
 - **Decisões de codificação (pendentes de revisão do autor):**
