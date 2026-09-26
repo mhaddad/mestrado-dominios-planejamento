@@ -1,0 +1,45 @@
+planejador,dimensao,valor,base,codificacao
+Blackbox,D1,Busca em grafo de planejamento,"taxonomia-tecnicas.md §3: busca em grafo de planejamento (extração) seguida de compilação para SAT/CSP",
+Blackbox,D1,Compilação para SAT/CSP,"taxonomia-tecnicas.md §3: busca em grafo de planejamento (extração) seguida de compilação para SAT/CSP",
+Blackbox,D2,Sem heurística,taxonomia-tecnicas.md §3,
+Blackbox,D3,Proposicional traduzido em SAT/CNF,taxonomia-tecnicas.md §3,
+Blackbox,D4,Planejador único com componente plugável,taxonomia-tecnicas.md §3,
+IPP,D1,Busca em grafo de planejamento,taxonomia-tecnicas.md §3,
+IPP,D2,Sem heurística,taxonomia-tecnicas.md §3,
+IPP,D3,STRIPS/ADL estendido (grafo de planos),taxonomia-tecnicas.md §3,
+IPP,D4,Planejador único,taxonomia-tecnicas.md §3,
+FF,D1,Busca progressiva no espaço de estados,taxonomia-tecnicas.md §3,
+FF,D2,Heurísticas de relaxação,taxonomia-tecnicas.md §3,
+FF,D3,Proposicional / STRIPS clássico,taxonomia-tecnicas.md §3,
+FF,D4,Planejador único,taxonomia-tecnicas.md §3,
+R,D1,Decomposição recursiva por metas,taxonomia-tecnicas.md §3 e decisão 8,
+R,D2,Sem heurística,taxonomia-tecnicas.md §3,
+R,D3,Proposicional / STRIPS clássico,taxonomia-tecnicas.md §3,
+R,D4,Planejador único,taxonomia-tecnicas.md §3,
+LPG,D1,Busca local,"taxonomia-tecnicas.md §3: busca local no espaço de planos parciais","C1: dois valores na D1, porque o §3 descreve a busca como local e o espaço como de planos parciais"
+LPG,D1,Busca no espaço de planos parciais,"taxonomia-tecnicas.md §3: busca local no espaço de planos parciais","C1: dois valores na D1, porque o §3 descreve a busca como local e o espaço como de planos parciais"
+LPG,D2,Avaliação heurística da vizinhança,"taxonomia-tecnicas.md §3: função de avaliação heurística dos vizinhos (planos parciais candidatos)","C2: nenhum valor da D2 cobre o LPG segundo a fonte lida; valor próprio criado para a codificação"
+LPG,D3,Grafos de ação,taxonomia-tecnicas.md §3,
+LPG,D4,Planejador único,taxonomia-tecnicas.md §3,
+Fast Downward,D1,Busca progressiva no espaço de estados,taxonomia-tecnicas.md §3,
+Fast Downward,D2,Grafo causal,taxonomia-tecnicas.md §3 e decisão 7,
+Fast Downward,D3,Variáveis multivaloradas,taxonomia-tecnicas.md §3,
+Fast Downward,D4,Planejador único,taxonomia-tecnicas.md §3,
+YAHSP,D1,Busca progressiva no espaço de estados,taxonomia-tecnicas.md §3,
+YAHSP,D2,Heurísticas de relaxação,taxonomia-tecnicas.md §3,
+YAHSP,D3,Proposicional / STRIPS clássico,taxonomia-tecnicas.md §3,
+YAHSP,D4,Planejador único,taxonomia-tecnicas.md §3,
+SGPlan,D1,Decomposição/particionamento,"taxonomia-tecnicas.md §3: decomposição por subobjetivo, cada subproblema resolvido por busca progressiva heurística (Metric-FF)","C3: dois valores na D1, porque o §3 acrescenta a busca progressiva do Metric-FF interno"
+SGPlan,D1,Busca progressiva no espaço de estados,"taxonomia-tecnicas.md §3: decomposição por subobjetivo, cada subproblema resolvido por busca progressiva heurística (Metric-FF)","C3: dois valores na D1, porque o §3 acrescenta a busca progressiva do Metric-FF interno"
+SGPlan,D2,Heurísticas de relaxação,taxonomia-tecnicas.md §3,
+SGPlan,D3,Proposicional / STRIPS clássico,"taxonomia-tecnicas.md §3: PDDL2.2 com partição de restrições mutex por subobjetivo","C4: a D3 não tem valor para a partição; codificado pela representação do Metric-FF interno"
+SGPlan,D4,Planejador único,taxonomia-tecnicas.md decisão 3,
+SATPlan,D1,Busca em grafo de planejamento,"taxonomia-tecnicas.md §3: busca em grafo de planejamento até comprimento k, seguida de compilação para SAT/CSP",
+SATPlan,D1,Compilação para SAT/CSP,"taxonomia-tecnicas.md §3: busca em grafo de planejamento até comprimento k, seguida de compilação para SAT/CSP",
+SATPlan,D2,Sem heurística,taxonomia-tecnicas.md §3,
+SATPlan,D3,Proposicional traduzido em SAT/CNF,taxonomia-tecnicas.md §3,
+SATPlan,D4,Planejador único,taxonomia-tecnicas.md §3,
+MaxPlan,D1,Compilação para SAT/CSP,"taxonomia-tecnicas.md §3: compilação para SAT/CSP com decomposição por subobjetivo; direção não aplicável","C5: a decomposição por subobjetivo fica dentro da codificação SAT; não codificada como Decomposição/particionamento, que o §2 define como subproblemas resolvidos por um planejador interno"
+MaxPlan,D2,Sem heurística,taxonomia-tecnicas.md §3,
+MaxPlan,D3,Proposicional traduzido em SAT/CNF,taxonomia-tecnicas.md §3,
+MaxPlan,D4,Planejador único,taxonomia-tecnicas.md §3,

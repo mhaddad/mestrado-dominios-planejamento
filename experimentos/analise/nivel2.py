@@ -10,9 +10,16 @@ Cenários implementados:
                         Médio <= 2v, Alto > 2v, com v = variância amostral dos 10 domínios
                         de treino (decisão do autor, 24/09/2026: aplicar como cenário)
   texto-populacional    idem, com variância populacional
+  tabela4-sem-G24       classes publicadas; uma só atribuição de técnicas (Tabela 4 de 2010)
+                        na relação e na nota dos planejadores, desfazendo o G24
+  4d-todas              R-10: técnicas da taxonomia em 4 dimensões
+                        (auditoria/taxonomia/planejadores_4d.csv), todos os valores juntos
+  4d-D1, 4d-D2, 4d-D3   R-10: uma dimensão por vez (a D4 não entra sozinha: 9 dos 10
+                        planejadores são "Planejador único")
 
 Uso: python experimentos/analise/nivel2.py
-Saída: experimentos/analise/nivel2/cenarios.csv, rankings.csv e resumo na saída padrão.
+Saída: experimentos/analise/nivel2/cenarios.csv, rankings.csv, taxonomia-4d-relacao.csv,
+taxonomia-4d-relevancia.csv e resumo na saída padrão.
 """
 import csv
 import statistics
@@ -51,6 +58,17 @@ def conjunto(tecnicas):
     return tec_de
 
 
+def taxonomia_4d(dimensoes=("D1", "D2", "D3", "D4")):
+    """Atribuição planejador -> técnicas da taxonomia em 4 dimensões. O valor leva o prefixo da
+    dimensão, porque o mesmo rótulo ("Não aplicável") pode existir em mais de uma."""
+    tec_de = defaultdict(set)
+    with (R.RAIZ / "auditoria/taxonomia/planejadores_4d.csv").open(encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            if r["dimensao"] in dimensoes:
+                tec_de[r["planejador"]].add(f"{r['dimensao']}: {r['valor']}")
+    return tec_de
+
+
 def metodo(classes, notas, tec_relacao, tec_planejador):
     """O método de 2010 de ponta a ponta. `tec_relacao` é a atribuição de técnicas usada na
     relação característica × técnica; `tec_planejador`, a usada para compor a nota de cada
@@ -80,7 +98,22 @@ def metodo(classes, notas, tec_relacao, tec_planejador):
         previsto[d] = {p: statistics.mean([media_tec[t] for t in ts if t in media_tec])
                        for p, ts in tec_planejador.items()}
     return previsto, {"metricas_com_mais_de_uma_classe": len(metricas_vivas),
-                      "metricas_total": len({m for (_d, m) in classes})}
+                      "metricas_total": len({m for (_d, m) in classes}),
+                      "tecnicas": len({t for ts in tec_de.values() for t in ts})}, rel
+
+
+def relevancia(rel):
+    """Regra de 2010 (Tabelas 21–23): diferença entre o maior e o menor valor da característica
+    nas técnicas; até 3 não relevante, 4–5 pouco relevante, 6 ou mais muito relevante."""
+    por_carac = defaultdict(list)
+    for (m, c, _t), v in rel.items():
+        por_carac[(m, c)].append(v)
+    linhas = []
+    for (m, c), v in sorted(por_carac.items()):
+        d = max(v) - min(v)
+        linhas.append({"caracteristica": f"{m} {c}", "menor": min(v), "maior": max(v), "diferenca": d,
+                       "classe": "não relevante" if d <= 3 else "pouco relevante" if d <= 5 else "muito relevante"})
+    return linhas
 
 
 def avaliar(previsto, observado, desempate):
@@ -134,14 +167,21 @@ def main():
     tabela4 = conjunto(tecnicas)
     relacao_2010 = conjunto([r for r in tecnicas  # G24: nas Tabelas 19–20, IPP fora de Forward-chaining
                              if not (r["planejador"] == "IPP" and r["tecnica"] == "Forward-chaining")])
+    publicadas = classes_publicadas(metricas)
+    t4d = taxonomia_4d()
     cenarios = {
-        "referencia": classes_publicadas(metricas),
-        "texto-amostral": classes_texto(metricas, statistics.variance),
-        "texto-populacional": classes_texto(metricas, statistics.pvariance),
+        "referencia": (publicadas, relacao_2010, tabela4),
+        "texto-amostral": (classes_texto(metricas, statistics.variance), relacao_2010, tabela4),
+        "texto-populacional": (classes_texto(metricas, statistics.pvariance), relacao_2010, tabela4),
+        "tabela4-sem-G24": (publicadas, tabela4, tabela4),
+        "4d-todas": (publicadas, t4d, t4d),
+        **{f"4d-{d}": (publicadas, taxonomia_4d((d,)), taxonomia_4d((d,))) for d in ("D1", "D2", "D3")},
     }
     resumo, rankings = [], []
-    for nome, classes in cenarios.items():
-        previsto, diag = metodo(classes, notas, relacao_2010, tabela4)
+    for nome, (classes, tec_rel, tec_pl) in cenarios.items():
+        previsto, diag, rel = metodo(classes, notas, tec_rel, tec_pl)
+        if nome == "4d-todas":
+            rel_4d = rel
         aval = avaliar(previsto, observado, desempate)
         for a in aval:
             rankings.append({"cenario": nome, **a})
@@ -149,7 +189,11 @@ def main():
                        **{f"acerto_{a['dominio']}": a["acerto_posicao_exata"] for a in aval},
                        **{f"spearman_{a['dominio']}": a["spearman"] for a in aval}})
     SAIDA.mkdir(parents=True, exist_ok=True)
-    for arq, linhas in (("cenarios.csv", resumo), ("rankings.csv", rankings)):
+    relacao_4d = [{"caracteristica": f"{m} {c}", "tecnica": t, "media_inteira": v}
+                  for (m, c, t), v in sorted(rel_4d.items())]
+    for arq, linhas in (("cenarios.csv", resumo), ("rankings.csv", rankings),
+                        ("taxonomia-4d-relacao.csv", relacao_4d),
+                        ("taxonomia-4d-relevancia.csv", relevancia(rel_4d))):
         with (SAIDA / arq).open("w", encoding="utf-8", newline="") as f:
             w = csv.DictWriter(f, fieldnames=list(linhas[0]), lineterminator="\n")
             w.writeheader()
