@@ -1,0 +1,107 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "blocksworld",
+ "data_utc": "2026-09-26T14:13:27+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 8000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.9,
+ "uso": {
+  "prompt_tokens": 1866,
+  "completion_tokens": 251,
+  "total_tokens": 2117,
+  "cost": 0.0071735,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 1863,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0071735,
+   "upstream_inference_prompt_cost": 0.0046635,
+   "upstream_inference_completions_cost": 0.00251
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 189,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Blocksworld has many interacting subgoals that can mislead delete-relaxation heuristics. P07 combines those heuristics with landmarks and novelty search in a portfolio, while its lifted configuration may help larger instances avoid grounding overhead.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Blocksworld has many interacting subgoals that can mislead delete-relaxation heuristics. P07 combines those heuristics with landmarks and novelty search in a portfolio, while its lifted configuration may help larger instances avoid grounding overhead.\"}",
+ "bruto": {
+  "id": "gen-1790432001-b18K92NJ5vLadlsOjtTe",
+  "object": "chat.completion",
+  "created": 1790432001,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Blocksworld has many interacting subgoals that can mislead delete-relaxation heuristics. P07 combines those heuristics with landmarks and novelty search in a portfolio, while its lifted configuration may help larger instances avoid grounding overhead.\"}",
+     "refusal": null,
+     "reasoning": "**Choosing blocksworld strategies**\n\nI need to evaluate the best options for blocksworld involving P07 lifted novelty portfolio, P21 novelty finite portfolio, and P02/03/23 standard. It seems BW strongly deletes relaxation, and novelty might be beneficial, especially with red-black techniques. The performance of blocksworld with classic FF isn't ideal for larger blocks. Fast Downward LAMA and BFWS are strong contenders. In considering P07 against P21, the former offers a lifted approach that can handle larger scenarios better. So, I'll select P07.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Choosing blocksworld strategies**\n\nI need to evaluate the best options for blocksworld involving P07 lifted novelty portfolio, P21 novelty finite portfolio, and P02/03/23 standard. It seems BW strongly deletes relaxation, and novelty might be beneficial, especially with red-black techniques. The performance of blocksworld with classic FF isn't ideal for larger blocks. Fast Downward LAMA and BFWS are strong contenders. In considering P07 against P21, the former offers a lifted approach that can handle larger scenarios better. So, I'll select P07.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9MG5GQAwktu9-wbWomex09LaJHK98XajFnwe150GRo7SzeNBT3bBDBrcmjFCQ6OFQJSK_D7WevKW3RD-M19NyT3gR8kZZRaMqmJbYEQ-vNAVlSxThMJjrY0_SO5uGveFhOggkEY60iGqaCZ0UimB4NXmuGcOkr_Ae8B8Me7A5FXHK83g0kaNjcWNceTR0OKXkQE8BD0IhCEbRo_KqK2uMQM0zIG5i8m-dIY9nboHbpxs5-QpB3odkwZSJkzCd5d5nJnjKh_bIC2pIaIL4qs-udIBHqAR3LkA6zk9ht56ISc-aFfNfi1Ib_caZKW9eE7n7zBkMHJ1PbW_g1cQV6V-8_-bICGMizA3nT9sUPSe-4MIMcP8zHdySYMu-9HPH7CoYLXIUF6U-qMQ8aVPK7YgE9SrHJtILG1XzKphmJHKCxrLB_6SEBiurprHn3Jagopxdk8wQ7-Tj7nh7SWceVTpEpfJ8zH_vnj-GdZIZCS_o-lPPD14tXycqc8zFSc2A0zvqWsV-7ysGKf8OAcvb50Mm1swlzb3V7xycOQZE0DOpZZqcjmHA6KUlibH2KANyPrUoFrP3hIrEMCuyWmQ9DNWJGYLgz4qmZO94zsYWJW_mbAQ_7lLi_3tn7GA3nnVIUI5AXw3S_m8Sy8oFzRY16FCVKl-hHaw4f5YXOhJo3es6yA0aHNoq-LeCCCqIPjFuZ39eaFl2UfQNOTRr_5IZlSFAhQsYnVyrnELjhRfAWn5xVje8nsht-I5264vweRq8jOGbuXTIb0a63udDTQMxAflToYnHjuvZqDjG1V_uFkLm7VmwS8UiD95lgZHuQPyjZyVaoGhyl0LYpN5NS9KLWlmsf4ZTPa3l0rYKGIVdulfFSRMHH7Anoj0KraxtsENWggYTv3IrIaVYyo9C3AORBaFRvxOzUeolhHk_OUea32588q7KlbiYEvFZs8QmMMb6ghlTFneb5WrT_Njx4OTBZ4spK602eIkMz_qmOAgwNwPN71BhtwuGI7cJEADtGQurrlnxePCJpBZYdIMcK71GuaDJAf1PNE7YlDyuQ07_XUe77H-raOOjh62pNdcmt0R7YbsoQ0VmRF-fVNClz4_0YOJ2ftUfwvPm20Umc_lP4e1Kop4WcRaaGva69WDCex9UYa-Ge7VCMrpgx5gqYb_yilMU0xVV6OCyqieKuq-NWlcMqoYgMlbwT7kKXdEOkMsC9UYALhK4YwzZKZ3ZRFSZWBGxct8DIgd0uuKEM1uVKGtfGuUkqDRawDcTW3AIo_0zWvRdY61OJCBxv-503dXwH-NPvr4BxVytr-8oq6w3BKQwaGdIliIVpUX6jXRPr7sYE3ORV6d-Ph19bpSF-oHlXf8g0OjdVE-YxrjkAjM9T3Dhpmp5IXrjjUnkYiqXB_1Z-fdGw8ig8Zc1uQ9-BFLnu54lYUUJZwKZEiSfcqMEVSXnSnIS2e3odSBojyA-Xkq5IMpEX2LkbXjnJuayXPx-QO-dJpPuab0sWcLsF2sj2_GuSSSOIAnvf4NgN-X0IBBvW9LS6fa3wxcbnrty2W-KSrd9_WFcgZY2DFF8gOn_dwR3RqcqzNVmL3YAq9t5mcc7-cCF-p6BrIrR1JV7Y9rONGznIGDQfx56RvhV_awRGpx0sNS58KHlyEBeu1O99hg587yyfMjdCv_PZ-DIRASaG_WZKgkgOu5TQSqTixeNGC2Ezkkvmrhi1RVex9pnxAL05GVlxDHHnC_iKmySYvN7A3azVs8tPnUeULrhqRhpz0TBhQfmF2MsTtf7s11N5ZOnA6TMvHqwVgP5Otz2rNyaxhub5F-wz-Wk-8-RiRJpgFsiMjebGel4ceQPLUoLFQNw7xDElb4pbXwvemTgw20seOTtETOu2SYluA9xqPOqbGBnT_gQGi-9DLf8XGrjzAzdMgUmNZ_C-DzDZchv7mo5hejTbdmLAzWxShmVghOJcYCf4ptk5C_QABQCuyTtgvaY5qjdLE67qEJ6vN8e0L9-VPZO2onC11iY12EFWzN_KrRSzkXatlH1i0K30h-JChbpHiUYL1nBG1CB04TW99GsHZuflZjHGmpgIlcgiVWNdpqGr9xLcrh940r9KU-zSTeM_ix438aDSPDSd_ES6GzmhU-0yfzl44m3RuH94G8ny8NAycfGB_EJOODQCljiY2XMIzCJk536fXyo2q8JOadEI_4iNEa9d6zsaK5wjYirxx-sp1Tbc-m4eq7aX-VM8LiDWC2stN5_TEfQ1Cq9uigXcwX-NwSPCBf64LJwE69VEDRhjMUt9-34pSF-swAjW8nX-6I6DP-24ixgpdlAZKwtR0HLw8r-dhlKY9ZBeQXi8qjXCprnOApflWY8nVjDo5daOjyNow0M18l20RG26vdDJYYWltBqu2FzuKH8T6DfebbZVvnoKLVk6UpKNKzfFlgWvsQbKSe7588m6JLXXd2GwiaxHy1lhKtpqR4TvR-Bvff5CH7Gdi9HludBVW6A435hQwbDfF.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0730eac47b5ddb60016ab7d302cbb487d19e674ac5803a5d0f",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1866,
+   "completion_tokens": 251,
+   "total_tokens": 2117,
+   "cost": 0.0071735,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 1863,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0071735,
+    "upstream_inference_prompt_cost": 0.0046635,
+    "upstream_inference_completions_cost": 0.00251
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 189,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

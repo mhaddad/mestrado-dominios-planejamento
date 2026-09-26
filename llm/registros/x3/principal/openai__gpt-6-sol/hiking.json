@@ -1,0 +1,107 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "hiking",
+ "data_utc": "2026-09-26T14:17:45+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.3,
+ "uso": {
+  "prompt_tokens": 2788,
+  "completion_tokens": 213,
+  "total_tokens": 3001,
+  "cost": 0.0090985,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2785,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0090985,
+   "upstream_inference_prompt_cost": 0.0069685,
+   "upstream_inference_completions_cost": 0.00213
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 151,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Unrestricted drives create many grounded actions as the number of places, cars, and people grows. P07 combines a lifted option that can avoid this grounding blowup with novelty search and a portfolio of heuristic configurations for the sequential walking goals.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Unrestricted drives create many grounded actions as the number of places, cars, and people grows. P07 combines a lifted option that can avoid this grounding blowup with novelty search and a portfolio of heuristic configurations for the sequential walking goals.\"}",
+ "bruto": {
+  "id": "gen-1790432259-iuqZjbP3ik5C5i9Trnzz",
+  "object": "chat.completion",
+  "created": 1790432259,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Unrestricted drives create many grounded actions as the number of places, cars, and people grows. P07 combines a lifted option that can avoid this grounding blowup with novelty search and a portfolio of heuristic configurations for the sequential walking goals.\"}",
+     "refusal": null,
+     "reasoning": "**Selecting the best hiking planner**\n\nI'm trying to choose the best planner for hiking transport logistics. It can be tricky, especially with things like tent positioning and challenging transports. I'm weighing the P21 and P07 options; P21 offers novelty while P07 avoids grounding issues. I need to compare other options like P02, P03, and P23. I think P07 is the best choice due to its advantages with lifted components, making it scalable for couples and larger groups. I must ensure it can handle constraints effectively.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Selecting the best hiking planner**\n\nI'm trying to choose the best planner for hiking transport logistics. It can be tricky, especially with things like tent positioning and challenging transports. I'm weighing the P21 and P07 options; P21 offers novelty while P07 avoids grounding issues. I need to compare other options like P02, P03, and P23. I think P07 is the best choice due to its advantages with lifted components, making it scalable for couples and larger groups. I must ensure it can handle constraints effectively.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9QIbQZmaD4SjbG3xO_JrBn8LWFO8G0U9KW9v_M3qyYIr9G5TRYlOIjI5MfNQzXz_zh39qJP1zBpXnqfO_mUc6RxLOtGLkPb9gdYR4uRQ9kP0IDeMygTRr5AAvwAs2Yx58t0w0IvWlX3p1J8N2bhgHgkq1osqdfs4559KTw5RZUNymFzPNQ31QYBQ9acpZ2s-cfUaDQ972UJ1drmqTo4CaUrMk8-dBnkj5YSOr1e0XdIAAVpB5znxubyAK8b3_QePCS7NBOg7ZQ1bo_NZ1odwu7C6T8iypUzVfwYZbSOJ5xfOBfsxmT7GCz1e9_FdEsVk0UlN4DpvyIrR3UfOclx1r0vrkKVamLStq-xsLMZoLbJpjmrJuvbWEd0FLqAQxtdsEK-aTk-3mJjO9TZFgJKd9-jjJeMcMDcTtnomiuD0ZMuutGOMtm8iOmTTiIgBdrREVccYB0k5a7eWFNpj89jBm_9q93-nISCUcI2tWlg2ICNq4SXWBMpugBUFIe_H0-wznwmWFI9t5JUfkhMDe1_2v1m8xfvBKeVZu4KiXcvf1j3HN-OtyaCnJMuYNZ3d6au4EP-cGnRsVT9KSM5wau3QCWbtAO78zeNjFU1rMMDxGWmGLUSorgek835JRgrE61sqhK2tB1fOJO3S0xLRnXQ7usAYNJyoCE2SQU4JMxtyMLhCVGojMT92U1hRLuzlEPLoXjoLjnOH40IG89Ge9NYwaGfzQnpNWIPBmFlcWT9BlpgNKtgjpblwE3CmWm1rvfj9d6p3O0znG-UXyFXnTARvdDdomQSFU6BjO4VX_etoEsvQE48xcIbQwt7VJgWyZex-1pJwT_O3n7WtE0QNt2_kPW6cEJiRDooag9WDLA39lKJc5F6dFfBKE9mPMWWYgjcFzLJ5HEZAmLqpDqUfukhvoCjrKIopf9ZkLTMUS0YambA2HcFWat8nMFuWKy6P2R5fE0QqXw1nMaHMY-38L9w5futq-CfK1h7C1Qcq1qSmglOTNHcfxq9egd4E0UM5MbxYkAtLLKF8tvqGD_4lKTaWflO0YDYCDYEGHecnP8R1e9zXd9jmnqf8jFpIN3Pq01-dhyli7GWNK1HGaML80mdN0Ki8gAifnG637Zt2dhyT36n6bSIY_aZlTi6s_VzvOpErwsmcTfBbGEgcIXhWpOxn-5iML9HtYQ0tcwwBO_EoPJyOPJlfjl6X9AJ_qXJP7vlin4y2T3UVGviTQXijsxiq58hlBYWGnT9mfZPYY4sCrDj_ZmcMIMlJSzdErCFNKSU1L16HIeHDmw9Gwly6XApoWfOfH3KNkR4iTxFmXbn6CbrLNHS0LnxdGDOHkgkkywBf54AOOe5112S9fstaAHNcfTalZxhsJLbHqjHMKoXYELB_bdClFCA3bfpjxhl3dmkDLXtVGwAHBTYe7odXyRSBnKBoDqA7AsGfqQSs8HmRd7DeI4-f7qXu3HlJNGufTdkICgmtStlosxyvDqbM7VFnS1AYpJz6A3vPVC7ZqRK9wE4pNnqajjqdDMoE8Pg8mTkXOEwUQkQSVA7yDDitBn0K-T_zprDT2OQf0Y5FfrlZ2EYn33dK4NIceWtHAoe5D9TCr6GWuCe5v0izDUO0ptlQW7sGlIES1iuB1oyHCSMNPMlD9o0hmndDsSTgzszpxDoKGORmELyspwjE9xyfjZo_xrVBj43MtU5niWjYItaQlrTPaxSWmh2iKkEbZzM2tXyYhsncLTPqyZSnZ578R4bbX2pQFMKWchsYhowXWw6NXg9TZrBzedjyezgK8Prcy4tiItQyiRtg-htur7kTyFGRxhhb307jPPVjRDX4cn7E1h7FKLlglbH0cl3FD_WFYJNHcEKkhqDH0LHBgA9-RV1hi4KRvwi1I4waFF364yv8GJaY6bQ6zOJEp5o9W7qRLZQM5kwCZCEmdQOkzUsPQ8VwPjpcmg6GIofqCh36L6hfHX5BKNa_tdnF2xZVY0ZjTbGiKwyy-xgAUdlzPjXY8y-W1FtZu_Gb9P62QPG9IkhuOQo_m080aJd6p9FnfgiXPpkZPHlmIKqaVGz4xhMKquz0eYGfgWY70-DnwPmdd_ZaQsfDx5vXturWQSV-w1enQr6MRcWlh6V1uhAdLFRKxipa5nLPGg88RRmZNdmhm_QwAl_QZ1NuVhlUOLuJgT1bbCZpM_RXi8lBul64IdBRqk3ZcDeIQzESehNZu_QI_r2qiIHVnK4GlaoqVQPOXzx_V_PkS_IhFrH4LjNDHrIrHiWSqjYWPpYHsgI7sI4hIlLQQ-STVxR_ilY2ysei_3Z4CGwPv6zydXSC_HwMoZb8D_SSGRm6w==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0cafc41494e67b7d016ab7d404e03887d1b2b5ddf9e2854f1b",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2788,
+   "completion_tokens": 213,
+   "total_tokens": 3001,
+   "cost": 0.0090985,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2785,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0090985,
+    "upstream_inference_prompt_cost": 0.0069685,
+    "upstream_inference_completions_cost": 0.00213
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 151,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

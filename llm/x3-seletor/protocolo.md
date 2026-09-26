@@ -1,6 +1,6 @@
 # X3 — LLM como seletor: protocolo
 
-Rascunho de 26/09/2026 (Claude Code), para aprovação do autor antes de qualquer chamada paga.
+Rascunho de 26/09/2026 (Claude Code). **Aprovado pelo autor em 26/09/2026** (modelos e condição anônima).
 
 ## Pergunta
 
@@ -19,13 +19,15 @@ Dado o domínio de planejamento em PDDL, um LLM escolhe bem a técnica (ou o pla
   - A condição anônima testa o que interessa à Q3: se o modelo liga a estrutura do domínio à técnica adequada.
 - **Secundária, se houver orçamento: planejadores com nome.** Testa a utilidade prática e dá uma medida indireta da contaminação (a diferença entre as duas condições).
 
+**Descrições idênticas.** Com a codificação 4D, alguns planejadores ficam com a mesma descrição (por exemplo, seis planejadores "busca progressiva, relaxação, STRIPS, planejador único"). Entre eles, o modelo não tem como distinguir. Por isso, quando ele escolhe um código, a cobertura considerada é a **média dos planejadores com a mesma descrição**. Regra fixada antes da primeira chamada (26/09/2026).
+
 ## Resposta pedida
 
 O identificador de um planejador (P01–P29) e uma justificativa curta. A resposta vem em JSON, validado por script. Resposta inválida conta como falha e entra na avaliação com perda de escolha ao acaso.
 
 ## Modelos (proposta)
 
-Um modelo de ponta por fornecedor principal, mais um de pesos abertos. Todos são chamados pelo OpenRouter, com o identificador fixo registrado e a mesma configuração: raciocínio no nível *medium* e no máximo 8.000 *tokens* de saída. Preços do catálogo do OpenRouter em 26/09/2026, em US$ por milhão de *tokens* (entrada / saída):
+Um modelo de ponta por fornecedor principal, mais um de pesos abertos. Todos são chamados pelo OpenRouter, com o identificador fixo registrado e a mesma configuração: raciocínio no nível *medium* e no máximo 16.000 *tokens* de saída. (Na rodada de teste o limite era 8.000; o DeepSeek o esgotou só raciocinando, sem responder, e o limite foi dobrado para todos antes da rodada principal.) Preços do catálogo do OpenRouter em 26/09/2026, em US$ por milhão de *tokens* (entrada / saída):
 
 | Modelo (id no OpenRouter) | Fornecedor | Entrada / saída | Motivo |
 |---|---|---|---|
@@ -42,7 +44,7 @@ A estimativa usa cerca de 4 mil *tokens* de entrada e 3 mil de saída por chamad
 
 | Etapa | Chamadas | Estimativa |
 |---|---|---|
-| Teste com 3 domínios × 4 modelos | 12 | cerca de US$ 0,50 |
+| Teste com 3 domínios × 4 modelos | 12 | cerca de US$ 0,50 (real: US$ 0,10) |
 | Condição anônima, 41 domínios × 4 modelos, 1 repetição | 164 | cerca de US$ 5 |
 | Folga (repetições ou a condição com nomes num subconjunto) | — | até o teto |
 

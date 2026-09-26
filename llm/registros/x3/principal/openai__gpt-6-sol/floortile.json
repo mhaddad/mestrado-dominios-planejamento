@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "floortile",
+ "data_utc": "2026-09-26T14:17:18+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.8,
+ "uso": {
+  "prompt_tokens": 2503,
+  "completion_tokens": 218,
+  "total_tokens": 2721,
+  "cost": 0.002686,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 2500,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.002686,
+   "upstream_inference_prompt_cost": 0.000506,
+   "upstream_inference_completions_cost": 0.00218
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 155,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Painting permanently removes a tile’s clear status, so delete-relaxation heuristics can underestimate how easily a plan becomes blocked. P21’s novelty search can help escape misleading heuristic guidance, while its portfolio offers several search configurations for larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Painting permanently removes a tile’s clear status, so delete-relaxation heuristics can underestimate how easily a plan becomes blocked. P21’s novelty search can help escape misleading heuristic guidance, while its portfolio offers several search configurations for larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790432233-y73mVSmtODVu2C4exgH2",
+  "object": "chat.completion",
+  "created": 1790432233,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Painting permanently removes a tile’s clear status, so delete-relaxation heuristics can underestimate how easily a plan becomes blocked. P21’s novelty search can help escape misleading heuristic guidance, while its portfolio offers several search configurations for larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9Pti4_MpG8a0z9ECl957N24ZUYcwND6Di9O-9vqG30JJgoy3EQtYY2yIbc9QyCWR0_VTGxZPX3Er1c-CrwCAWfvWHpQYaagMyIIoBHolPYfDONmlwGtQCR6mhQUJL9SAYXkLhCtWfRP-uWA-1LLeXcQKIUaw3LUuqctEwWJK9wcjpRKsWxc98d3SlTCZ9BBpOdiK2rQkUCc-1Vgv9xSbPIHZwLgW0_Zc0fAmtKCZZvoWKyqBflY2SmLLXSr47Y2mgfkARfNUEyEhnZKO1KbHcz2hhZdd6gBtRWYc3dWtXvbbqXNtXca9Meo0fz5Ken969NY52YV0E7piGLwidUxb05ppbjrkco39X9q8mtZhONuHFjcNicdKhI2YOSVa_-2cTxvx47y6pSD63P3VFYzCrtfSDU0CSBEM5plcFJ_ASVFnlhfNDWgEsN15XXYgLbkhO9AVOKsasGgSceAt3s2ewoo3dpyUsLYXNePcnks0ZrtUqq86UNvHKW8TaJs9FYHOsAu_xMvF_lmHN3XMi-plHRB9WrTMFT2lkw01FcNFc9FlTfYZRhwCnsrUkCwiJ1mPaTc03nSTE8iR_8QrGTuJVvmQ9En2u9HYnAaeaXcYrUsWLLXgXkdpNa584lsEtq4jW0xXkMdJN27B9SwmT4HCzVR5sNnUoc38JC0WxXiZ6RPHEhVLSfeOF48jivRHaMAC-VDPV5JI52rY4cGf-dLEy1p5d0KO_qbvryPjRjbGtbhtSGbfsvPweS0--OjKwQG44kk1WFduXZzc6bWQeNpq2vVZa9V8lbWElX6z-GPOh5BzxTqjW9V8Szn8EYYWeJ5Hh-OroAw68h99jZ-EghUWH540snm-YcMOSVwgHnYdUXVX16WJtz4eOYwe2wQVPlVH7F3lrI-K4eZi8SpCtzG2IXeeiI_WkKz0QSRfFRvKLpL1_HeU3Dys05U73edIuAXB53CYHAd5jPmoeuJQWZdoieeaNzvp52jxZd92UuqiTyFyLY4TZOUzAHGeuVK1xaKNx5bF1-fvakokkuCuCFkkYi1E0kBgRZRmWg8RM-jtjn9vPWwbNtYAFmlaJfL23Dk_Wmo8DfLiLh2Gslson8R6wuZrvHe8_fR8NCp7uJUyJXK7Zm9t3h5ikeHAWuF-ge_2wOIGaFvmvoxAirDArjxbmGB3Nz3mKxsJgNBd2MPtANXUnvDriHj1ggJZ8uFJSToCsyDreeJNr6c3a7L-x1jjIRss3XE74WcPIYLngsKyC0c6exegfgMBnRVyhpGTv7aPQiDqc6AHS3RLY3YUyI777NUmSI6Kks6DMo2QYEUsM10A8pSx-eWoqNpIbGjy9mz4I8JYPyTgn72CsMhdab2z5EkaodXkjkdm37lVSNQsSPoKoHhqFHsRYkv3uhmUfakjQ83jgepHQQadTxAEWbm-W5KtG9BUycENmrx_sNhZNrdymF6M0x63nQhpv1ol1DuIta8fjfyy_uWoEKhJhUf5jYCClkokw7-aYP_zQIppLAWDvQEEGbAysvAsMgWdoVyV9KXNkDjdnLTTnvNVeGjYRCnoKINky2uBXOCP5ju2zi1YyzLczMDQ8d3OhYCgkaTAXxpsMeGglnyDP7KyoHEjK-o_UZriChR5Cz_3TGv7NMKG1fYoXyxp3gLZbWcHBB-p99I-3W-eRK8YG8yql1OXFjddFVsxd-6kHdNYF-mGeYA-6SzzLdT9irvMschq9kx40XBICzAewSLRE0PCDiWM5cJIXRy2fpanQHEhTH3Um5aAtKC2iBIEQ2aOsFfF1C4cJN86rmgVwyk9NsMIB_dUrr1EToI_2uDVpKnWv1pkN8hOwHlxRJJsQVAnNRdBNEowXdhmhsi8IOQehki4pGNKwaETrfS46BKqzpEGJJkhb6yLAbLjfgUxSQWgw4dInHcJJV5qnK10TndcQyuXSRlBqe8e8Xc05HgFAHm7BPj-6vXfDRLEXRjArr6r1DbVr22DYmO2ARhoBf0qQUfQZ9KWPB5TzxLZppt6M7R67APkbjGXeXCPgEriOtvuBGZobUdzYL6Ywua9qE2DxAA-thvA9v2Mu6nOOmA33WPEB3k8eWup-jCPJ267ZvYs_fVY5INGXDGnNaUqJviQKgWIzEvdq9G8fbjcnOnZ3oonqp8o-OQcgSCmJ6QS9oPBQg_s0aJrEd0DBFyO9EB_90j5QV_X1ACdgmspzEDsRCvBkD0t62-H9alLCJlTQLYOZyaJGmSDw1nUQmM6gsr66dt6w-9jvbYxXYatKsIalYt_1_-Ggt4bG4tp2PteSnL0D3r_TCz6U2Adc6Bt0fcpSL4coNmnR9NwoEOi4Vzps88qVRNmm4tUG6SDKqfo4_Ud89HfnlggqHSD_OP8z9nzBaz7JI9W5p8vqaIvJ9-XKvZT9XCop3nEL8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0d49233966a3701d016ab7d3eac64087d1804289a78df0a46e",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2503,
+   "completion_tokens": 218,
+   "total_tokens": 2721,
+   "cost": 0.002686,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 2500,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002686,
+    "upstream_inference_prompt_cost": 0.000506,
+    "upstream_inference_completions_cost": 0.00218
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 155,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

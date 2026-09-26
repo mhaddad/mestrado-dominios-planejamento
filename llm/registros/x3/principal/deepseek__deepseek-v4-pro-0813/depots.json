@@ -1,0 +1,100 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "depots",
+ "data_utc": "2026-09-26T14:21:52+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 15.5,
+ "uso": {
+  "prompt_tokens": 2797,
+  "completion_tokens": 1411,
+  "total_tokens": 4208,
+  "cost": 0.0032598496,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0032598496,
+   "upstream_inference_prompt_cost": 0.0004965472,
+   "upstream_inference_completions_cost": 0.0027633024
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1342,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Depots combines transportation and stacking, requiring both state-space progression and strong domain-specific heuristics. A multi-valued portfolio using delete-relaxation heuristics, causal-graph reasoning, and landmarks is the most robust and scalable configuration for larger instances within the time and memory limits.",
+ "resposta": "{\"planner\": \"P02\", \"reason\": \"Depots combines transportation and stacking, requiring both state-space progression and strong domain-specific heuristics. A multi-valued portfolio using delete-relaxation heuristics, causal-graph reasoning, and landmarks is the most robust and scalable configuration for larger instances within the time and memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790432497-8yo3fmVOklREF4tEeESW",
+  "object": "chat.completion",
+  "created": 1790432497,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P02\", \"reason\": \"Depots combines transportation and stacking, requiring both state-space progression and strong domain-specific heuristics. A multi-valued portfolio using delete-relaxation heuristics, causal-graph reasoning, and landmarks is the most robust and scalable configuration for larger instances within the time and memory limits.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner. Need analyze domain depots. We need maximize coverage on larger instances. We need pick from catalog. Need reason concise. We need identify best. Domain is classical planning depots, transportation with trucks hoists crates pallets. Problem has typed objects, many depots/distributors/trucks/pallets/crates/hoists. Goal stack crates on pallets. Depots domain is known challenging. Need planner best coverage likely portfolio with delete relaxation, causal graph, landmarks, multi-valued, maybe decoupled/search. Catalog has several overlapping. Need choose one. Let's inspect options. P02 and P03 identical? P02 portfolio multi-valued delete + causal graph + landmarks. P23 same. P21 similar with width-based. P07 forward + width/novelty + delete/causal/landmarks lifted portfolio. P05 decoupled star factoring red-black portfolio. P29 decoupled star delete relaxation single. P12 SAT? Could be good for optimal but coverage? 30 min 4GB. Depots has large branching, delete effects. Known planners like Fast Downward (portfolio? LAMA) works. Which code? P02/P03/P23 maybe portfolio configurations with multi-valued variables, delete relaxation + causal graph + landmarks. That is essentially Fast Downward/LAMA portfolio. Likely strongest general coverage. P07 includes width-based and lifted, portfolio, could be good (BFWS? LAPKT?). But domain depots may have many dead ends; width-based maybe. P05 decoupled star topology might exploit many independent trucks/hoists? Depots has interacting via trucks transport crates; star factoring can decouple around trucks? Might help. Need choose one. Need infer from codes maybe P02=P03 and best. Need select one. But catalog duplicates, maybe there is nuance? P02 and P03 exactly same description, perhaps maybe one is Fast Downward? They might be same. We can choose one.\n\nLet's reason about domain. Depots combines logistics and blocks. Goals require moving crates to specified pallets. Most actions require hoist and truck. There are many places but few crates? Larger instances maybe more. Heuristics delete relaxation poor because of negative interactions like clear, available, loading. Causal graph and landmarks help. Portfolio likely robust. P02/P03/P23 all same technique. P7 adds width and lifted, portfolio. P21 adds width-based novelty + same heuristics multi-valued portfolio. P27 width-based goal counting delete; single. Could be also good. Need maximize coverage. Which is more likely? In IPC, LAMA/LM-Cut etc. Multi-valued portfolio outperforms. Code P02/P03 seems FD. P07 \"forward + width-based/novelty; heuristic delete+causal+landmarks; lifted; portfolio\" might be \"BFWS\" or \"LAPKT-BFWS\" and could be better in some domains, but depots? The small problem has no stack? Actually initial crate0 on pallet12 at depot3 need on pallet3 (same depot but different pallet). crate1 at depot4 to pallet1 at depot1 (requires truck). crate2 at depot1 to pallet15 at depot7 (requires truck). Trucks can drive.\n\nWe need select one. Catalog codes: P01, P04, P11, P13, P24, P28 are basic FF-like. P02/P03/P23 portfolio multi-valued. These portfolio likely most consistent. P06 causal + delete single. P16/P17/P18 delete landmarks. P12/P15 SAT/CSP maybe optimal but not for coverage. P14 novelty goal count. P27 backward? Hmm.\n\nWe need answer one. I lean P03 or P02. Since identical, perhaps choose P07? Need. Let's investigate possible known Fast Downward: It uses forward search, heuristics delete-relaxation + causal graph + landmarks, multi-valued variables, portfolio of configurations. That's exactly P02/P03/P23. They are likely the same planner, maybe duplicates. Usually in such benchmarks, there may be one \"Fast Downward\" among options. P03 arbitrary. Need maybe P23 identical. Which one to choose? Any should be fine? But JSON expected single. If duplicates, might both correct? Need choose one. We can choose P02. But need reason.\n\nHowever, problem statement: \"Choose ONE planner most likely maximize coverage.\" Since P02 and P03 identical, maybe no difference. But maybe catalog says P02/P23 are \"portfolio of several planner configurations\" and P03 same. To avoid weird, choose one with code perhaps first. P02.\n\nBut need reason not more than 60 words. Need mention depots requires state-space forward with delete-relaxation + landmarks/causal-graph and portfolio. Let's answer.\n\nBut before final, consider decoupled search P05: star-topology factoring. Depots has trucks and hoists; a \"star-topology factoring\" can factor path? It may exploit independent mobile agents? The description: decoupled search (star-topology factoring) + forward; heuristic red-black; multi-valued; portfolio. That is maybe planner \"Cedalion\" or \"Fast Downward Star\"? Star-topology factoring can decouple by a \"center\" such as a truck? It might be good for logistics-like domains. However depots also has hoists. Decoupled search could be very effective in transportation. P29 decoupled search star-topology + delete relaxation single. But catalog descriptions vague. Maybe one of P05/P29 is \"OKS\" or \"dentist\"? Need decide.\n\nQuestion asks \"Larger instances of same domain will be given to planner with 30 min/4GiB per instance. Goal coverage; plan quality does not matter.\" Domains: depots. In planning competitions, optimal? satisficing. In IPC 2002, Depots was hard; winners used FF? Causal graph etc. LAMA? In modern IPC Fast Downward LAMA does well. For satisficing, portfolio LAMA is robust. So P02/P03/P23.\n\nNeed perhaps include reason: \"Depots combines transport with stacking; grounded multi-valued FD with LAMA-style portfolio (delete relaxation + landmarks + causal-graph) is robust and scales better than plain delete-relaxation or SAT.\" That's under 60.\n\nLet's final JSON. Ensure no extra. Use double quotes.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner. Need analyze domain depots. We need maximize coverage on larger instances. We need pick from catalog. Need reason concise. We need identify best. Domain is classical planning depots, transportation with trucks hoists crates pallets. Problem has typed objects, many depots/distributors/trucks/pallets/crates/hoists. Goal stack crates on pallets. Depots domain is known challenging. Need planner best coverage likely portfolio with delete relaxation, causal graph, landmarks, multi-valued, maybe decoupled/search. Catalog has several overlapping. Need choose one. Let's inspect options. P02 and P03 identical? P02 portfolio multi-valued delete + causal graph + landmarks. P23 same. P21 similar with width-based. P07 forward + width/novelty + delete/causal/landmarks lifted portfolio. P05 decoupled star factoring red-black portfolio. P29 decoupled star delete relaxation single. P12 SAT? Could be good for optimal but coverage? 30 min 4GB. Depots has large branching, delete effects. Known planners like Fast Downward (portfolio? LAMA) works. Which code? P02/P03/P23 maybe portfolio configurations with multi-valued variables, delete relaxation + causal graph + landmarks. That is essentially Fast Downward/LAMA portfolio. Likely strongest general coverage. P07 includes width-based and lifted, portfolio, could be good (BFWS? LAPKT?). But domain depots may have many dead ends; width-based maybe. P05 decoupled star topology might exploit many independent trucks/hoists? Depots has interacting via trucks transport crates; star factoring can decouple around trucks? Might help. Need choose one. Need infer from codes maybe P02=P03 and best. Need select one. But catalog duplicates, maybe there is nuance? P02 and P03 exactly same description, perhaps maybe one is Fast Downward? They might be same. We can choose one.\n\nLet's reason about domain. Depots combines logistics and blocks. Goals require moving crates to specified pallets. Most actions require hoist and truck. There are many places but few crates? Larger instances maybe more. Heuristics delete relaxation poor because of negative interactions like clear, available, loading. Causal graph and landmarks help. Portfolio likely robust. P02/P03/P23 all same technique. P7 adds width and lifted, portfolio. P21 adds width-based novelty + same heuristics multi-valued portfolio. P27 width-based goal counting delete; single. Could be also good. Need maximize coverage. Which is more likely? In IPC, LAMA/LM-Cut etc. Multi-valued portfolio outperforms. Code P02/P03 seems FD. P07 \"forward + width-based/novelty; heuristic delete+causal+landmarks; lifted; portfolio\" might be \"BFWS\" or \"LAPKT-BFWS\" and could be better in some domains, but depots? The small problem has no stack? Actually initial crate0 on pallet12 at depot3 need on pallet3 (same depot but different pallet). crate1 at depot4 to pallet1 at depot1 (requires truck). crate2 at depot1 to pallet15 at depot7 (requires truck). Trucks can drive.\n\nWe need select one. Catalog codes: P01, P04, P11, P13, P24, P28 are basic FF-like. P02/P03/P23 portfolio multi-valued. These portfolio likely most consistent. P06 causal + delete single. P16/P17/P18 delete landmarks. P12/P15 SAT/CSP maybe optimal but not for coverage. P14 novelty goal count. P27 backward? Hmm.\n\nWe need answer one. I lean P03 or P02. Since identical, perhaps choose P07? Need. Let's investigate possible known Fast Downward: It uses forward search, heuristics delete-relaxation + causal graph + landmarks, multi-valued variables, portfolio of configurations. That's exactly P02/P03/P23. They are likely the same planner, maybe duplicates. Usually in such benchmarks, there may be one \"Fast Downward\" among options. P03 arbitrary. Need maybe P23 identical. Which one to choose? Any should be fine? But JSON expected single. If duplicates, might both correct? Need choose one. We can choose P02. But need reason.\n\nHowever, problem statement: \"Choose ONE planner most likely maximize coverage.\" Since P02 and P03 identical, maybe no difference. But maybe catalog says P02/P23 are \"portfolio of several planner configurations\" and P03 same. To avoid weird, choose one with code perhaps first. P02.\n\nBut need reason not more than 60 words. Need mention depots requires state-space forward with delete-relaxation + landmarks/causal-graph and portfolio. Let's answer.\n\nBut before final, consider decoupled search P05: star-topology factoring. Depots has trucks and hoists; a \"star-topology factoring\" can factor path? It may exploit independent mobile agents? The description: decoupled search (star-topology factoring) + forward; heuristic red-black; multi-valued; portfolio. That is maybe planner \"Cedalion\" or \"Fast Downward Star\"? Star-topology factoring can decouple by a \"center\" such as a truck? It might be good for logistics-like domains. However depots also has hoists. Decoupled search could be very effective in transportation. P29 decoupled search star-topology + delete relaxation single. But catalog descriptions vague. Maybe one of P05/P29 is \"OKS\" or \"dentist\"? Need decide.\n\nQuestion asks \"Larger instances of same domain will be given to planner with 30 min/4GiB per instance. Goal coverage; plan quality does not matter.\" Domains: depots. In planning competitions, optimal? satisficing. In IPC 2002, Depots was hard; winners used FF? Causal graph etc. LAMA? In modern IPC Fast Downward LAMA does well. For satisficing, portfolio LAMA is robust. So P02/P03/P23.\n\nNeed perhaps include reason: \"Depots combines transport with stacking; grounded multi-valued FD with LAMA-style portfolio (delete relaxation + landmarks + causal-graph) is robust and scales better than plain delete-relaxation or SAT.\" That's under 60.\n\nLet's final JSON. Ensure no extra. Use double quotes.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2797,
+   "completion_tokens": 1411,
+   "total_tokens": 4208,
+   "cost": 0.0032598496,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1280,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0032598496,
+    "upstream_inference_prompt_cost": 0.0004965472,
+    "upstream_inference_completions_cost": 0.0027633024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1342,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

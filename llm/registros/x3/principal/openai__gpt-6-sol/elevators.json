@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "elevators",
+ "data_utc": "2026-09-26T14:17:13+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.1,
+ "uso": {
+  "prompt_tokens": 4360,
+  "completion_tokens": 261,
+  "total_tokens": 4621,
+  "cost": 0.0135085,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 4357,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0135085,
+   "upstream_inference_prompt_cost": 0.0108985,
+   "upstream_inference_completions_cost": 0.00261
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 208,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Its portfolio combines several heuristics with novelty search, offering multiple ways to handle passenger transfers and elevator-position constraints. Its lifted configuration may also avoid costly grounding as larger instances add passengers and floors.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Its portfolio combines several heuristics with novelty search, offering multiple ways to handle passenger transfers and elevator-position constraints. Its lifted configuration may also avoid costly grounding as larger instances add passengers and floors.\"}",
+ "bruto": {
+  "id": "gen-1790432228-4PNQPraxOpf4SFauDy90",
+  "object": "chat.completion",
+  "created": 1790432228,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Its portfolio combines several heuristics with novelty search, offering multiple ways to handle passenger transfers and elevator-position constraints. Its lifted configuration may also avoid costly grounding as larger instances add passengers and floors.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9Pp4OvoaxxQR2AIWZoJvnvVZ92Tod70wSXkzTpmewK3Z3DU7OXYVOKvwOSKQatZ5VXziDZHJjBuRLKxvK4bmLkIKxt6TsPgbdLLhits0xzcm82bI90j6CPLP1vEFWWeyOFP0Pkle4_UiqoTadhs8IeTeOaCQIKQY-Qjo282Htgn43PBNsp5n__g5MLrJW-JuVddKpjHLukwNgCv71EU_1PU8Y2qV8tPhBgaHI8rOXNBInOtpkRPZQggOo4VPyU7DeqZ85CkpZ_X6GjUcZomoSagbB6GNCLHpgNeDzOuOmOZo8cR6EhUFNiIhuhV-013bb7-vwzANdx4N7t7GJNBnLuAPC1I3-LA7comlVoYfUVFsWI2f7STAzJ6PrnExX_DRkcbiMsCT6lNDTzsv-v_peeai7fwqzF8L6L4Qjv1w_4gPtyt7mFKNWK0jXUeim2vo_Rf9gOyhmlldLI-tVwSiHKT60m_YPlydp6EPN55vIE5ICy79OjTFqwxqOtXLr5d0VstARUo7cEUf3BXBLm70J-Mt4leGl-zWCHKCdCVNpErO7_MIvb547PBfHxsWPpn_vZtQTQ64zMAqMVpIUHWORfesWwyvzVDI01zqqx9NVGjSYdKkEG4Ab2ErWaZ2gabYN4oq2vOjKIlXTBs307wklXohhnzpqfrfXM3FJHkkW4zgQ2PR4AOfSWMcB_8earZ3drS5AWMhTiXUek3Kzoocy--Oq9nd_7lh7_Np_x4_1AWoZeYWPz1ZN5w6N6FY8ZUwnz8XlOQn0G02XqABB9gjj_UU4UCw2GWRx1ufayUd4EaGefMvqim9JkfZbfX7GtLyVvko6fVvYd4RTCC6PrFrQl9fNKk_hYkvd23IOaiIDVC9XomcR5K5kjp1U0sARIwiEge-DCN6VToTrCxaBMMk8gD-_Ye7xrplkMnz4oFM4TYIneCePG35NYmxxcmpNZTDmgHyIC7B0zLVGpjw863ql4Jxpww__58bSXV1V0Y8GzmzWbPfehnnoFxmQc7YB70yMSgp2UWKpbUdP_34jz8KNc2jKBhwCYRIllT-xg2TiIyd42OxXoB52EGQhqjZNzQnWY3qM3Oq25JYR5kr4ctDXv7ZE8K7n_8djAIOqbNR7uVruxWn2a433BfU7c5U0lI-nwWuQrd17G1-poUK8K4dIIHduskHAvSrddU_XogI9md8FkMQBJ3hiWnn5ZF4xgJ5e2wj3twahtasqKWiv1RVe8NxsARrj_BOhsk27wufD_50GZ0btI68KAUpJRS5jg69UQ7ptpOYS_ZgPf5p9yJPKrzCTvnY6ttSaDQSIfv_4Gbaf-2RDQ7HaCak5dlqIHs-rRgXsgD7b-0zJEdOFtQJiIhNUS8KHiKhgqHgCftIY6JHkfD9BrOOhx7YZbcE4nfuuz5bTcwknJeyllc6SNqYKrMu1c7P2FJr7KwFu55zGe8znT-MTJR1VBRmEsnZH01JhRnB8UKuAIGYNCa1fZA_eLei9f2xU91g3BmhFyURX2l4R2P7tGkMQrDicHVV6SBcjDW6AAYrbAyeiZ7ibDVvPLqhs74X2DcH_E0RvHP8Xbo7tYSBOhDvxt475Le_Z2vCCMwxvxnuHVoSMfFsVtQK9zfJGex3jODGuyFiHwtOpDHFx8c-IRC5NKLjRJ7R2NJA45AcZ8DVgGsovxO8PZLUY4BN9gRVLqFK7qID7l33b3hWn0RLbbBjyFKSFh2-k6ZMCXfpUXPsYg1SowoXtYxFdDXBf_JCx1gSQPzWvAT9U0BbM233P-zAhbquBgkKBVwAhCU6zBF06LtnEqnnue3SeyBTgyeGskCeDnZgvtZdAtwZKkCfTm4cs1-JaQjNw8PgxUY8ZmRpbeZPiRBLJpL-n_DcOhLqb6Mad-Gw8AnqfF20BBtKdkonIV-TK3_OPbUC_0zh-_o-Mjnmx03ePSbgzcneL_poAg6mBA7p0iunkRZuzLURjGCBTa4O4JL8WiWsotyYWf-GCkZqVYj05FyWri0vCy8vJfs3FNZG49lWfK324HRr5K-xfuCTwZ7GlMkasj4TeL6vhwsQqs62-5mhuUbRZP8iSok4L91oP8uFLrMDiUcH3Z3oTrDU7qHj5IFSfE4N9P9FLx8Gk2fjCNTLDNV7hE_Ohs7QhO_Ce_8jqtc2u7CGv09P2NHGFpPb8JwEAwOgEQY1gvKKto6pghGhFV5HG3bTSvlGw7kaTOwpCxvh7CzQDlInMsiV1hXAhqIzsci5KbYiGqNhyYGJ7nQjox_2ToOxPz-3AqfRn9dbUyunoheDUscYZVJAljj_7Rr6KTA8lInJ2bGp3YJu50_EvMAbk01JRxMMctOa3Kg7VzuKLlTHbRie2JT4MqmbiDB_tW_XZ411iz9De6rDf-mKScP5LNaiaWunvWvY4nIAbKlMwr9f-RK43A873COUvkW9B0lYbjw2VG0rQ0L7kgcmicEn_LZsdxjFb-kWSiZ4jZipEDCYjGBtjcvK610bFaZCYvZ.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0a529ba14b9c02ec016ab7d3e591d487d1a98d6bb1b63615c5",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4360,
+   "completion_tokens": 261,
+   "total_tokens": 4621,
+   "cost": 0.0135085,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4357,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0135085,
+    "upstream_inference_prompt_cost": 0.0108985,
+    "upstream_inference_completions_cost": 0.00261
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 208,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

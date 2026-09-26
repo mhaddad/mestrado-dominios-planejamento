@@ -1,0 +1,100 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Sail Research",
+ "dominio": "blocksworld",
+ "data_utc": "2026-09-26T14:14:10+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 8000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 48.6,
+ "uso": {
+  "prompt_tokens": 1851,
+  "completion_tokens": 1098,
+  "total_tokens": 2949,
+  "cost": 0.0054618,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0054618,
+   "upstream_inference_prompt_cost": 0.0007404,
+   "upstream_inference_completions_cost": 0.0047214
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1031,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Blocksworld is a classic delete-domain where delete-relaxation heuristics plus landmarks guide forward search effectively. P07 adds causal-graph, width/novelty, lifted representation, and a portfolio of configs, improving robustness and memory scalability on larger instances.",
+ "resposta": "{\"planner\": \"P07\", \"reason\": \"Blocksworld is a classic delete-domain where delete-relaxation heuristics plus landmarks guide forward search effectively. P07 adds causal-graph, width/novelty, lifted representation, and a portfolio of configs, improving robustness and memory scalability on larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790432001-osFzHz9Qk4LIo365nxFZ",
+  "object": "chat.completion",
+  "created": 1790432001,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Sail Research",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P07\", \"reason\": \"Blocksworld is a classic delete-domain where delete-relaxation heuristics plus landmarks guide forward search effectively. P07 adds causal-graph, width/novelty, lifted representation, and a portfolio of configs, improving robustness and memory scalability on larger instances.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner most likely maximize coverage on blocksworld. Need reason concise. Need analyze domain and catalog. We need pick one planner likely best for blocksworld. We need think.\n\nWe need solve as many instances as possible within 30 min 4GB. Blocksworld is classic. Which planners likely best? We have portfolio with delete relaxation, causal graph, landmarks, multi-valued; SAT; decoupled; novelty; etc. For blocksworld, optimal planners often use heuristic search with delete relaxation + landmarks, maybe FD. Need coverage not quality. Portfolio of configurations likely robust. P02/P03/P23/P07/P21 have delete relaxation + causal graph + landmarks, multi-valued, portfolio. P07 adds width/novelty, lifted. For blocksworld, forward state-space with FF heuristic and landmarks works well. Causal graph maybe less relevant. Portfolio helps. P02/P03/P23 identical? P02 and P03 descriptions same? P23 same too except code? Let's inspect: P02: forward, heuristic: delete-relaxation + causal-graph + landmarks, multi-valued, portfolio. P03 same? P23 same. They're duplicates maybe. Choose one? But maybe P07 includes width/novelty + lifted portfolio, can be stronger for many. Blocksworld has large branching, delete effects. Width-based/novelty can help? Could be. But classical planner Fast Downward with LAMA (landmarks + FF) is strong. A portfolio like FD would be P02/P03/P23. Maybe P07 is something like BFWS? For blocksworld, novelty search can be good? Need decide.\n\nWe need pick ONE. Let's reason from known IPC. Blocksworld is a domain where satisficing planners like LAMA (landmarks + FF, multi-valued) perform very well. Portfolio versions of Fast Downward have strong coverage. P02/P03/P23 likely identical but any. P07 includes \"width-based / novelty search\" with \"delete-relaxation heuristics + causal-graph heuristic + landmarks; representation: multi-valued variables + lifted (no grounding); architecture: portfolio\". This sounds like maybe Madagascar? Or Cerberus? Novelty may not be necessary but can help. Lifted no grounding helps memory for large instances. Blocksworld can have many objects, grounding is not too huge? 9 blocks. Larger instances maybe many. Lifted could reduce memory. Width-based search could solve many quickly. But delete relaxation + landmarks is robust.\n\nCould also choose P12/P15 SAT planning. Blocksworld is notoriously good for SAT/CSP planners? Optimal SAT planners can solve blocksworld well? But coverage within 30 min for large instances? SAT planning often good for optimal but maybe not satisficing coverage? Heuristic search likely better.\n\nNeed maybe use known best planner for blocksworld in satisficing track: LAMA (first in IPC 2008? For blocksworld? Actually LAMA won satisficing track in 2008 though no blocksworld? It handles blocksworld). Portfolio with LAMA configs is strong. P02/P03/P23 are FD with LAMA. P07 might add width. Since goal is coverage, portfolio helps. Duplicates matter? If multiple identical, any. Need select one that is most likely. P07 includes width-based/novelty, lifted. Could have advantage: no grounding, lower memory; width-based may solve some hard instances. But blocksworld has no \"novelty\" particular? Actually width-based planners like BFWS are strong, but sometimes not as robust as LAMA? Portfolio could include LAMA configs too. P07 has all heuristics and portfolio plus lifted. I lean P07.\n\nBut need be careful: The catalog includes P02 and P03 and P23 exact same description. Maybe P07 is also same plus width and lifted. If width hurts? Portfolio can select. It has delete relaxation + causal graph + landmarks. So P07 seems superset of P02/03/23 plus width/novelty and lifted. However lifted no grounding may be slower for some? But portfolio could include. So P07 likely best.\n\nBut there is P21: forward + width/novelty; heuristics same, multi-valued, portfolio but no lifted. P07 has lifted. So P07 maybe better memory. Choose P07.\n\nNeed provide reason at most 60 words. Mention blocksworld suited to heuristic search with landmarks/delete relaxation; portfolio and lifted representation handle larger instances; width/novelty adds robustness. Need one JSON only.\n\nLet's craft: {\"planner\": \"P07\", \"reason\": \"Blocksworld is a classic delete-domain where delete-relaxation heuristics plus landmarks guide forward search effectively. P07 adds causal-graph, width/novelty, lifted representation, and a portfolio of configs, improving robustness and memory scalability on larger instances.\"}\n\nNeed ensure code exactly P07. Final output only JSON.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner most likely maximize coverage on blocksworld. Need reason concise. Need analyze domain and catalog. We need pick one planner likely best for blocksworld. We need think.\n\nWe need solve as many instances as possible within 30 min 4GB. Blocksworld is classic. Which planners likely best? We have portfolio with delete relaxation, causal graph, landmarks, multi-valued; SAT; decoupled; novelty; etc. For blocksworld, optimal planners often use heuristic search with delete relaxation + landmarks, maybe FD. Need coverage not quality. Portfolio of configurations likely robust. P02/P03/P23/P07/P21 have delete relaxation + causal graph + landmarks, multi-valued, portfolio. P07 adds width/novelty, lifted. For blocksworld, forward state-space with FF heuristic and landmarks works well. Causal graph maybe less relevant. Portfolio helps. P02/P03/P23 identical? P02 and P03 descriptions same? P23 same too except code? Let's inspect: P02: forward, heuristic: delete-relaxation + causal-graph + landmarks, multi-valued, portfolio. P03 same? P23 same. They're duplicates maybe. Choose one? But maybe P07 includes width/novelty + lifted portfolio, can be stronger for many. Blocksworld has large branching, delete effects. Width-based/novelty can help? Could be. But classical planner Fast Downward with LAMA (landmarks + FF) is strong. A portfolio like FD would be P02/P03/P23. Maybe P07 is something like BFWS? For blocksworld, novelty search can be good? Need decide.\n\nWe need pick ONE. Let's reason from known IPC. Blocksworld is a domain where satisficing planners like LAMA (landmarks + FF, multi-valued) perform very well. Portfolio versions of Fast Downward have strong coverage. P02/P03/P23 likely identical but any. P07 includes \"width-based / novelty search\" with \"delete-relaxation heuristics + causal-graph heuristic + landmarks; representation: multi-valued variables + lifted (no grounding); architecture: portfolio\". This sounds like maybe Madagascar? Or Cerberus? Novelty may not be necessary but can help. Lifted no grounding helps memory for large instances. Blocksworld can have many objects, grounding is not too huge? 9 blocks. Larger instances maybe many. Lifted could reduce memory. Width-based search could solve many quickly. But delete relaxation + landmarks is robust.\n\nCould also choose P12/P15 SAT planning. Blocksworld is notoriously good for SAT/CSP planners? Optimal SAT planners can solve blocksworld well? But coverage within 30 min for large instances? SAT planning often good for optimal but maybe not satisficing coverage? Heuristic search likely better.\n\nNeed maybe use known best planner for blocksworld in satisficing track: LAMA (first in IPC 2008? For blocksworld? Actually LAMA won satisficing track in 2008 though no blocksworld? It handles blocksworld). Portfolio with LAMA configs is strong. P02/P03/P23 are FD with LAMA. P07 might add width. Since goal is coverage, portfolio helps. Duplicates matter? If multiple identical, any. Need select one that is most likely. P07 includes width-based/novelty, lifted. Could have advantage: no grounding, lower memory; width-based may solve some hard instances. But blocksworld has no \"novelty\" particular? Actually width-based planners like BFWS are strong, but sometimes not as robust as LAMA? Portfolio could include LAMA configs too. P07 has all heuristics and portfolio plus lifted. I lean P07.\n\nBut need be careful: The catalog includes P02 and P03 and P23 exact same description. Maybe P07 is also same plus width and lifted. If width hurts? Portfolio can select. It has delete relaxation + causal graph + landmarks. So P07 seems superset of P02/03/23 plus width/novelty and lifted. However lifted no grounding may be slower for some? But portfolio could include. So P07 likely best.\n\nBut there is P21: forward + width/novelty; heuristics same, multi-valued, portfolio but no lifted. P07 has lifted. So P07 maybe better memory. Choose P07.\n\nNeed provide reason at most 60 words. Mention blocksworld suited to heuristic search with landmarks/delete relaxation; portfolio and lifted representation handle larger instances; width/novelty adds robustness. Need one JSON only.\n\nLet's craft: {\"planner\": \"P07\", \"reason\": \"Blocksworld is a classic delete-domain where delete-relaxation heuristics plus landmarks guide forward search effectively. P07 adds causal-graph, width/novelty, lifted representation, and a portfolio of configs, improving robustness and memory scalability on larger instances.\"}\n\nNeed ensure code exactly P07. Final output only JSON.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1851,
+   "completion_tokens": 1098,
+   "total_tokens": 2949,
+   "cost": 0.0054618,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0054618,
+    "upstream_inference_prompt_cost": 0.0007404,
+    "upstream_inference_completions_cost": 0.0047214
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1031,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

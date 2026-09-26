@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "freecell",
+ "data_utc": "2026-09-26T14:17:24+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.7,
+ "uso": {
+  "prompt_tokens": 3816,
+  "completion_tokens": 251,
+  "total_tokens": 4067,
+  "cost": 0.0120485,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3813,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0120485,
+   "upstream_inference_prompt_cost": 0.0095385,
+   "upstream_inference_completions_cost": 0.00251
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 189,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Freecell has tight space constraints and interactions that delete-relaxation heuristics can underestimate. P07 combines novelty search with multiple heuristic configurations, giving it more ways to escape plateaus; its lifted option may also help on larger instances.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Freecell has tight space constraints and interactions that delete-relaxation heuristics can underestimate. P07 combines novelty search with multiple heuristic configurations, giving it more ways to escape plateaus; its lifted option may also help on larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790432238-79ECU3vE9K0kSszqAroA",
+  "object": "chat.completion",
+  "created": 1790432238,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Freecell has tight space constraints and interactions that delete-relaxation heuristics can underestimate. P07 combines novelty search with multiple heuristic configurations, giving it more ways to escape plateaus; its lifted option may also help on larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9PzJmeg-Yp_yuFqEIhn_QpHeCRv8G2z7Xsv8Xk6aXNAml0V34HvQ0BzGkuTi6Jyd5Iee8B7xOUFalx512T3d4yNMk5PM8n18M6bIfYPorsSBWSW1wWDo8BZ6ynvGo_mikXKHvPep4nKbSQ5lmn8dpsh2duNTaisy5xm6gdIfNcYXLSoDOJt5n7AThOWlKeatn5QqEUXOWLkwdSx60u6iA-w46QCQFhb_QTIQ7KchPfYaMNYgrpa18jgGXK3IEfWKh--2MRjeGdbpUfkTNmJ6gIMXdNU1bkQD9mZd3k40UnjnA77S_BlyhWC6YQlrqSm8FMDK4-j3vrK1tgL79yZG1oDmK1jXu6wuT-o_Fdm7WeeyVhgg9aUltFgArl_rxxkTEIvfdGvY1taxMF03SS4Rk1yMTYjr7fkD4vpWL4CC7qiDZzzxK7gzncwiKXD5Z5s2VUyo1o_3HjQipKeaJm-OvYjt2nkkbzXi3Mg_XnKNwaaMiEXPwqdjhCpY3eY0r5qU5n9DoA4uPVqn9ZsIidZjdJMbKklvmSXD1q5a9h8a_O9BX4VTWoBiD0YLm_ZfKTeZNECOFvjjaeyidH8IAl3NAFQuF1bh0P6R8cTjqe7ldheplcwmFPfhdwRMdJr8V1BheWzH9mfV4hmMug5DxT6JzesXM0NAEMuAacanc6j77sn7y0gIymo2dQsDWzv_BflgtLaZfdhk3E33Wn96wDawnjwg0tv1_aTTml0bpI8e6pW8lT_44lnKNkePrVpZ_yTI-b_XKWbT0vpK4A_Mn5yhZXtSqL1G5kqAkY9_LCLtDrpWmg8s2Dz9O4dyqvtsHKTF-f48PbNzVa3g-GHffU_0W3biURXryQKUtMBS2ROtCPZm3Pz-JsgiMXLomLXAqNUKZgOmODhCpuUwb72sE5BvSAD2usLPeNXHVeZwFFPgVszhLGyeVLZ_5NoORIM7cqiFhmPqvHNbWY_XJ1UphC_qjBleD6EaEUNonWrwLqPOyr4eJRc1yYhD2-LPzlh8wLcPHHaV7OgOnbgRzfXACOu4z62dgwCkNc-dU8vg66Nz6xjyL3qbyIsUyfKpm1Y33mVtjtX_W65I9plXzTYh9Rd4zaiL90l1VunUrCiwzv8hN-ENsr7L98P7CAu85SGFkL_E6pVyH_zbqt0R6GBT9GVH0mREr8zN-LXitfxmwuVPyvWYrZvegI9kCwb1RA1Eh1Xxzneh2AfH2kvh0YYab3hTX0C8P_MiKgYfm1dQ_ZMpIsX4mBf7Tl1uXtrSeuUOWZUzOnnHI1Kp62kNzDSkzTboq9nuXKci9RNmL5eZ_WNwBw8NcubAEh3mWbidBKaiaSd0udfa3lVHQjYYiA4TGIRm2CJa4fo_Slnst_PlLBWH5HA8BjYsfAqZB1Hkf0eio4nun7pqvJ72uKQNPb9paL7_1Xztl619Zpj2yVdd80f08sBlQlWPuUQpYACOlf7JX8ufaVZItecrpFmXcK5yV4ff6BUX1A9p12pJ9MK1scn_NxOp_o2WEtpu-DjqLCAv330-Y7AxsS_5CbeONBPyPi9Z1uyA9FnhXjQx1ToqnZ9oBWZKRmNCvv1553m3zNOyOkd6aEdXMWw_7vEwU3chjN9i60DT5G7PTn9k3lm7K2YqN084PhLcvIjIr-nNILz30Y2woAm9_RV7OTYjngv688aNRz-Qanjjj6UL5FI_Q4Wjxs90wpX8qTcphP8YHclCsMM08r1ST4sC2qsaDdhl6tsLeUCvWfyVCqb6-oEP7Ce3W9ZCG8WHgXKNrT1-A4q_sV05Y3lFeq44Lq9VIVZxYmi2Z1zYGSLJetKmCo4YR8vd2HvHE3VZlI08F1pAtCs6XOJLyy2nf32b6jhgeEnnbs8KorcI9TpWPSg1BTHr5_BdMjcHPuBefwba4fa65UmPKxziUMc4tty5Po57k2g7HC7eNunFxj06zE6JZ9u-7A-_fNg_EMgXWcVV4PO2me36sZmeGn5OA_KlBpKqNAkTra2pkGMhUn6ODU4jULkqajZ78Vc-FA7lsAq8aUn5voFqMyjXL6vs-jeHghN2GChiM7b1Fj_dEG9InjdTJETQVpms6UwCDhuKAOWtJyhevdtR06V-NBNjojoqHc3rJ5adVvetCSBFRIKZsK70GRmAe9N07M69TwmXyk4mG9e677XR3GJuMd9F1dFNtd56Ldju5YwtVFOyxEvIObUqaAQSzSaRrGS2Ov5RMD0-SUP7I-K1ap5Xlhn7K7zEQXwyneDJA_9FRVblw1L5K_Kp9v7yEJLSofUAIKFa38H6U_upO5o56kQcW8hPvfaJao68pTa6F8SEmOu4vICnXINDSz8ZdiJKNu0Flx6BTy7BBli2VJdhURVsLEJNmchDyR8ijO3tch2_YXE8jrf_ng_YUN6aTo82afoQQcbBGv9qj6gfZcxisIykQ62kwBzKDzHYC4P3Cz-oZ6Xj9al9uN1p6Cg4vCeOZ1byQ1U0Lukks_AN0270DslOQMga4T0kGepq27kcv2dkB_q45WJpOQ08KaXvraDgZAS96UMdLjZfe-V8J2bEEUZVch5.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0a0ff890a5435608016ab7d3efcd2487d184f795e948a12f2a",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3816,
+   "completion_tokens": 251,
+   "total_tokens": 4067,
+   "cost": 0.0120485,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3813,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0120485,
+    "upstream_inference_prompt_cost": 0.0095385,
+    "upstream_inference_completions_cost": 0.00251
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 189,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

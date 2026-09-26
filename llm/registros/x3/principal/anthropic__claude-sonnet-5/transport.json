@@ -1,0 +1,92 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "transport",
+ "data_utc": "2026-09-26T14:18:29+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 3.4,
+ "uso": {
+  "prompt_tokens": 15159,
+  "completion_tokens": 123,
+  "total_tokens": 15282,
+  "cost": 0.031548,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.031548,
+   "upstream_inference_prompt_cost": 0.030318,
+   "upstream_inference_completions_cost": 0.00123
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P08",
+ "razao": "Transport domain with large 32-node road networks benefits from partial delete relaxation (red-black) heuristics that handle the fuel/capacity-like resource structure well, avoiding blowup from full delete-relaxation while remaining a single efficient planner without portfolio overhead, maximizing coverage on scaled transport instances.",
+ "resposta": "{\"planner\": \"P08\", \"reason\": \"Transport domain with large 32-node road networks benefits from partial delete relaxation (red-black) heuristics that handle the fuel/capacity-like resource structure well, avoiding blowup from full delete-relaxation while remaining a single efficient planner without portfolio overhead, maximizing coverage on scaled transport instances.\"}",
+ "bruto": {
+  "id": "gen-1790432306-XNeUDQVITqAhvP9TdrVQ",
+  "object": "chat.completion",
+  "created": 1790432306,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P08\", \"reason\": \"Transport domain with large 32-node road networks benefits from partial delete relaxation (red-black) heuristics that handle the fuel/capacity-like resource structure well, avoiding blowup from full delete-relaxation while remaining a single efficient planner without portfolio overhead, maximizing coverage on scaled transport instances.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 15159,
+   "completion_tokens": 123,
+   "total_tokens": 15282,
+   "cost": 0.031548,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.031548,
+    "upstream_inference_prompt_cost": 0.030318,
+    "upstream_inference_completions_cost": 0.00123
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

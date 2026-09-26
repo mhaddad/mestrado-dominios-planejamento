@@ -1,0 +1,92 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "satellite",
+ "data_utc": "2026-09-26T14:17:55+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 2.9,
+ "uso": {
+  "prompt_tokens": 3692,
+  "completion_tokens": 115,
+  "total_tokens": 3807,
+  "cost": 0.008534,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.008534,
+   "upstream_inference_prompt_cost": 0.007384,
+   "upstream_inference_completions_cost": 0.00115
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P23",
+ "razao": "Satellite domain benefits from portfolio search with delete-relaxation, causal-graph heuristics and landmarks over multi-valued representation, which handles typed STRIPS domains efficiently and scales well across problem sizes, maximizing coverage compared to single-heuristic or simpler search planners.",
+ "resposta": "{\"planner\": \"P23\", \"reason\": \"Satellite domain benefits from portfolio search with delete-relaxation, causal-graph heuristics and landmarks over multi-valued representation, which handles typed STRIPS domains efficiently and scales well across problem sizes, maximizing coverage compared to single-heuristic or simpler search planners.\"}",
+ "bruto": {
+  "id": "gen-1790432272-V58h6qXS0YOmNqSxBJRn",
+  "object": "chat.completion",
+  "created": 1790432272,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P23\", \"reason\": \"Satellite domain benefits from portfolio search with delete-relaxation, causal-graph heuristics and landmarks over multi-valued representation, which handles typed STRIPS domains efficiently and scales well across problem sizes, maximizing coverage compared to single-heuristic or simpler search planners.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3692,
+   "completion_tokens": 115,
+   "total_tokens": 3807,
+   "cost": 0.008534,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.008534,
+    "upstream_inference_prompt_cost": 0.007384,
+    "upstream_inference_completions_cost": 0.00115
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

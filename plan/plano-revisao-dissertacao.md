@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.37 |
+| Versão deste documento | 0.38 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -277,7 +277,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 |---|---|---|---|
 | X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | ⚪ |
 | X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | ⚪ |
-| X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | ⚪ |
+| X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | 🟢 EXP-14 (condição anônima): nenhum LLM supera o *single best*; GPT-6 Sol empata (146 × 143) |
 | X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | ⚪ |
 
 **Atividades**
@@ -597,6 +597,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | Preparação do Nível 4 (R-24): artefato do Planner Museum localizado e inspecionado; Tabela 1 do suplementar extraída; proposta em `experimentos/nivel4-proposta.md` | Links do artefato lidos no PDF do artigo; tabela conferida pela soma das colunas contra a linha Total. **Decisões do autor pendentes** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-12: Nível 4 com dados publicados (Planner Museum × *features* do PDDL) | Mapeamento de nomes dos domínios conferido (41 + Pathways); VBS e SBS recalculados à parte; amostra de instâncias e tempos esgotados registrados |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-13: classificação dos 29 planejadores do Planner Museum na taxonomia 4D e Nível 4 por técnica | 22 planejadores com fonte primária (notas de leitura e resumos oficiais das IPCs de 2018 e 2023), 7 só com fonte secundária, marcados; uma citação não lida (relatório da IPC 2014) retirada antes do commit; contagens do registro conferidas contra o CSV. Codificação aprovada pelo autor |
+| 26/09/2026 | 4 | Claude Code (claude-opus-5-5); modelos avaliados via OpenRouter: claude-sonnet-5, gpt-6-sol, gemini-3.1-pro-preview, deepseek-v4-pro-0813 | EXP-14: X3, LLM como seletor, condição anônima; US$ 2,69 | Protocolo aprovado antes das chamadas; regras de avaliação fixadas antes da primeira chamada; respostas brutas versionadas; chave fora do git |
 
 ---
 
@@ -687,3 +688,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.35 | 26/09/2026 | Nível 4 só com dados publicados (decisão do autor); EXP-12: por domínio, nenhuma característica do PDDL supera o *single best* (Levitron) |
 | 0.36 | 26/09/2026 | EXP-13: 29 planejadores na taxonomia 4D; o método de 2010 por técnica perde para o *single best*; o mapa mostra técnicas antigas vencendo em poucos domínios (System R, SAT) |
 | 0.37 | 26/09/2026 | Fase 4 iniciada (X3, via OpenRouter, teto de US$ 10); protocolo do X3 com proposta de modelos |
+| 0.38 | 26/09/2026 | EXP-14 (X3): LLMs como seletores, condição anônima; nenhum supera o *single best*; escolhem quase sempre portfólios; gasto US$ 2,69 de US$ 10 |

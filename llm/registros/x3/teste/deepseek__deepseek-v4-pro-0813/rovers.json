@@ -1,0 +1,100 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "StreamLake",
+ "dominio": "rovers",
+ "data_utc": "2026-09-26T14:16:03+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 8000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 33.5,
+ "uso": {
+  "prompt_tokens": 4635,
+  "completion_tokens": 1705,
+  "total_tokens": 6340,
+  "cost": 0.002574,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.002574,
+   "upstream_inference_prompt_cost": 0.00122364,
+   "upstream_inference_completions_cost": 0.00135036
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1635,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Rover has many redundant cameras and waypoints, so grounding can explode. P07's lifted finite-domain representation avoids this, and its portfolio with delete-relaxation, causal-graph, landmarks, and novelty search robustly handles navigation, sampling, and imaging subgoals.",
+ "resposta": "{\"planner\": \"P07\", \"reason\": \"Rover has many redundant cameras and waypoints, so grounding can explode. P07's lifted finite-domain representation avoids this, and its portfolio with delete-relaxation, causal-graph, landmarks, and novelty search robustly handles navigation, sampling, and imaging subgoals.\"}",
+ "bruto": {
+  "id": "gen-1790432129-7hYSz1SnFrKMtosGFjC4",
+  "object": "chat.completion",
+  "created": 1790432129,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "StreamLake",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P07\", \"reason\": \"Rover has many redundant cameras and waypoints, so grounding can explode. P07's lifted finite-domain representation avoids this, and its portfolio with delete-relaxation, causal-graph, landmarks, and novelty search robustly handles navigation, sampling, and imaging subgoals.\"}",
+     "refusal": null,
+     "reasoning": "We need answer JSON only. Need choose planner. Need think carefully. We need determine best planner for domain rover from catalog. Need maximize coverage. Domain is classical planning, typed STRIPS. Instance has rover with navigation, rock sampling, imaging/calibrate/communicate. Many cameras redundant. Goals require collect rock samples from four waypoints and communicate, plus image objective in three modes. Need planner that handles this.\n\nWe must choose ONE planner from catalog. We need infer likely best. This is reminiscent IPC domains. Rover domain. Planners with delete-relaxation, landmarks, causal graph, multi-valued, portfolios might work. Need maximize coverage. The small instance has many objects, but larger instances maybe bigger. Need consider techniques.\n\nCatalog:\nP01, P04, P11, P13, P18, P24, P28: forward STRIPS delete relaxation single.\nP02/P03/P23: multi-valued portfolios with delete relaxation + causal graph + landmarks.\nP05: decoupled search star-topology + red-black.\nP06: causal graph + delete relaxation multi-valued single.\nP07: forward + width-based/novelty; delete + causal graph + landmarks; multi-valued + lifted; portfolio.\nP08: partial delete relaxation red-black multi-valued single.\nP09: recursive goal decomposition no heuristic STRIPS.\nP10: causal graph heuristic multi-valued single.\nP12: planning graph + SAT/CSP.\nP14: width-based novelty goal counting multi-valued single.\nP15: SAT/CSP planning-specific.\nP16/P17/P18: delete + landmarks.\nP19: Graphplan.\nP20: local search partial plans.\nP21: forward + width/novelty; delete + causal graph + landmarks; multi-valued portfolio.\nP22: symbolic BDD.\nP25/P26 unspecified.\nP27: width/novelty + forward; goal counting + delete; STRIPS.\nP29: decoupled star + delete multi-valued.\n\nNeed pick most likely coverage. Domain rover: has subgoals: navigate, sample rocks, drop? Actually sampling requires empty store. To sample multiple rocks, must after each sample drop at rover store? The drop action only requires store_of and full, no location. So can drop anywhere, then sample another. But communication requires visible with lander. Need navigate to waypoints with rock samples and lander visible. Need image objective: calibrate camera at waypoint visible_from objective; take_image consumes calibration. Need all three modes. Can use same camera? Camera supports multiple modes. We can calibrate one camera, take image in one mode, then recalibrate? Need calibrate each time. Can reuse camera. Goals: image data for objective0 colour, high_res, low_res. Need have_image with modes, then communicate. Many cameras redundant. This is logistics-like with resources. Delete relaxation and landmarks helpful. Maybe portfolios robust. Need choose code from catalog. Which one is most likely to maximize coverage?\n\nWe need think of planners from IPC? Codes maybe correspond to known planners? P02/P03/P23 portfolio multi-valued with delete/causal/landmarks sounds like Fast Downward? Actually Fast Downward uses propositional? It uses finite-domain translation, causal graph, landmarks, merge-and-shrink, etc. Portfolio. P07/P21 include width-based/novelty + lifted, maybe LAPKT? P14 width-based goal counting is BFWS. P27 goal counting + delete relaxation is maybe BFWS(f5) with propositional. P29 decoupled star.\n\nRover domain is not trivial; many redundant objects and numeric? Here strips. Need plan length maybe moderate. Delete relaxation heuristics likely very informative? But there are many cameras causing symmetries. Landmarks may help identify necessary subgoals: communicate rock data at each waypoint, image modes. Causal graph? Maybe.\n\nCoverage on larger instances: likely a portfolio of configurations (P02/P03/P23 or P07/P21) better than single. Need choose among portfolios. P02/P03/P23 same? Actually P02 and P03 identical descriptions? They appear duplicates. P23 same too. P07/P21 differ include width-based/novelty + lifted, portfolio. Could be better due to novelty for many dead-end? Maybe.\n\nNeed answer one planner. We can reason: In IPC, \"rover\" domain solved well by planners using temporal/numeric? But here strips. Many planners. The problem has many cameras (16) but all on board, calibration target same objective, supports modes. That creates huge branching factor? Actually actions instantiated: calibrate can use any camera with calibration_target objective0 at a visible waypoint. Many cameras have same supports, causing symmetries. Delete-relaxation heuristics with propositional grounding may suffer from many ground actions. Lifted representations (P07/P21) avoid grounding overhead. Portfolios help. P07 and P21 include forward + width-based/novelty + delete relaxation + causal graph + landmarks, multi-valued + lifted. That sounds very robust for large instances due to lifted and portfolio. P21 does not say lifted? It says multi-valued (finite-domain) variables, no lifted. P07 says multi-valued + lifted (no grounding). Lifted can handle many objects efficiently. Rover instances can have many waypoints/rovers/cameras; grounding many actions may blow memory. So P07 maybe best due to lifted portfolio and heuristics. But is P07 likely? Let's examine.\n\nP07: search: forward state-space + width-based/novelty search; heuristic: delete-relaxation + causal-graph + landmarks; representation: multi-valued (finite-domain) variables + lifted (no grounding); architecture: portfolio of several planner configurations. This is quite advanced. Likely high coverage.\n\nP21: same but representation multi-valued variables, no lifted, portfolio. Could still ground but finite-domain. P07 lifted is advantage under 4 GiB memory and 30 min. So choose P07? But need ensure width-based/novelty search doesn't hurt? It is included with other heuristics in portfolio, so okay.\n\nAlternative maybe P29 decoupled star topology factoring with delete relaxation for multi-valued. Rover domain has one rover? Actually domain may have multiple rovers/landers, but decoupled star may exploit independent rovers? In larger instances maybe multiple rovers. Star-topology factoring could be strong if rovers independent except shared lander? Maybe. But P29 single, delete relaxation; less robust. P05 decoupled + red-black portfolio. Could be good but less known. P07 likely safe.\n\nNeed answer with JSON only. Include reason at most 60 words. Need mention lifted avoids grounding blowup, portfolio, heuristics handle subgoals. Let's form concise.\n\nNeed be careful: catalog has P02 and P03 identical, P23 identical. Maybe common planner is Fast Downward? P07 includes width-based/novelty + lifted portfolio; perhaps corresponds to \"Cerberus\" or \"SMTPlan\"? Actually lifted planning could be \"Power Lifted\" or \"LAPKT\". Width-based search beneficial in rover? Maybe.\n\nLet's think if there is any domain-specific feature that suggests P07. The instance includes 16 cameras all identical except supports. Grounding will generate many calibrate/take_image actions; lifted representation reduces memory. Portfolio of configurations may include both satisficing and agile. So P07 highly likely.\n\nNeed output single JSON object, no markdown. Include planner and reason <=60 words. Use code P07.\n\nLet's ensure reason not too long. Something like: \"Rover has many redundant cameras and waypoints, so grounding can explode. P07's lifted finite-domain representation avoids this, and its portfolio with delete-relaxation, causal-graph, landmarks, and novelty search robustly handles navigation, sampling, and imaging subgoals.\" Word count ok.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer JSON only. Need choose planner. Need think carefully. We need determine best planner for domain rover from catalog. Need maximize coverage. Domain is classical planning, typed STRIPS. Instance has rover with navigation, rock sampling, imaging/calibrate/communicate. Many cameras redundant. Goals require collect rock samples from four waypoints and communicate, plus image objective in three modes. Need planner that handles this.\n\nWe must choose ONE planner from catalog. We need infer likely best. This is reminiscent IPC domains. Rover domain. Planners with delete-relaxation, landmarks, causal graph, multi-valued, portfolios might work. Need maximize coverage. The small instance has many objects, but larger instances maybe bigger. Need consider techniques.\n\nCatalog:\nP01, P04, P11, P13, P18, P24, P28: forward STRIPS delete relaxation single.\nP02/P03/P23: multi-valued portfolios with delete relaxation + causal graph + landmarks.\nP05: decoupled search star-topology + red-black.\nP06: causal graph + delete relaxation multi-valued single.\nP07: forward + width-based/novelty; delete + causal graph + landmarks; multi-valued + lifted; portfolio.\nP08: partial delete relaxation red-black multi-valued single.\nP09: recursive goal decomposition no heuristic STRIPS.\nP10: causal graph heuristic multi-valued single.\nP12: planning graph + SAT/CSP.\nP14: width-based novelty goal counting multi-valued single.\nP15: SAT/CSP planning-specific.\nP16/P17/P18: delete + landmarks.\nP19: Graphplan.\nP20: local search partial plans.\nP21: forward + width/novelty; delete + causal graph + landmarks; multi-valued portfolio.\nP22: symbolic BDD.\nP25/P26 unspecified.\nP27: width/novelty + forward; goal counting + delete; STRIPS.\nP29: decoupled star + delete multi-valued.\n\nNeed pick most likely coverage. Domain rover: has subgoals: navigate, sample rocks, drop? Actually sampling requires empty store. To sample multiple rocks, must after each sample drop at rover store? The drop action only requires store_of and full, no location. So can drop anywhere, then sample another. But communication requires visible with lander. Need navigate to waypoints with rock samples and lander visible. Need image objective: calibrate camera at waypoint visible_from objective; take_image consumes calibration. Need all three modes. Can use same camera? Camera supports multiple modes. We can calibrate one camera, take image in one mode, then recalibrate? Need calibrate each time. Can reuse camera. Goals: image data for objective0 colour, high_res, low_res. Need have_image with modes, then communicate. Many cameras redundant. This is logistics-like with resources. Delete relaxation and landmarks helpful. Maybe portfolios robust. Need choose code from catalog. Which one is most likely to maximize coverage?\n\nWe need think of planners from IPC? Codes maybe correspond to known planners? P02/P03/P23 portfolio multi-valued with delete/causal/landmarks sounds like Fast Downward? Actually Fast Downward uses propositional? It uses finite-domain translation, causal graph, landmarks, merge-and-shrink, etc. Portfolio. P07/P21 include width-based/novelty + lifted, maybe LAPKT? P14 width-based goal counting is BFWS. P27 goal counting + delete relaxation is maybe BFWS(f5) with propositional. P29 decoupled star.\n\nRover domain is not trivial; many redundant objects and numeric? Here strips. Need plan length maybe moderate. Delete relaxation heuristics likely very informative? But there are many cameras causing symmetries. Landmarks may help identify necessary subgoals: communicate rock data at each waypoint, image modes. Causal graph? Maybe.\n\nCoverage on larger instances: likely a portfolio of configurations (P02/P03/P23 or P07/P21) better than single. Need choose among portfolios. P02/P03/P23 same? Actually P02 and P03 identical descriptions? They appear duplicates. P23 same too. P07/P21 differ include width-based/novelty + lifted, portfolio. Could be better due to novelty for many dead-end? Maybe.\n\nNeed answer one planner. We can reason: In IPC, \"rover\" domain solved well by planners using temporal/numeric? But here strips. Many planners. The problem has many cameras (16) but all on board, calibration target same objective, supports modes. That creates huge branching factor? Actually actions instantiated: calibrate can use any camera with calibration_target objective0 at a visible waypoint. Many cameras have same supports, causing symmetries. Delete-relaxation heuristics with propositional grounding may suffer from many ground actions. Lifted representations (P07/P21) avoid grounding overhead. Portfolios help. P07 and P21 include forward + width-based/novelty + delete relaxation + causal graph + landmarks, multi-valued + lifted. That sounds very robust for large instances due to lifted and portfolio. P21 does not say lifted? It says multi-valued (finite-domain) variables, no lifted. P07 says multi-valued + lifted (no grounding). Lifted can handle many objects efficiently. Rover instances can have many waypoints/rovers/cameras; grounding many actions may blow memory. So P07 maybe best due to lifted portfolio and heuristics. But is P07 likely? Let's examine.\n\nP07: search: forward state-space + width-based/novelty search; heuristic: delete-relaxation + causal-graph + landmarks; representation: multi-valued (finite-domain) variables + lifted (no grounding); architecture: portfolio of several planner configurations. This is quite advanced. Likely high coverage.\n\nP21: same but representation multi-valued variables, no lifted, portfolio. Could still ground but finite-domain. P07 lifted is advantage under 4 GiB memory and 30 min. So choose P07? But need ensure width-based/novelty search doesn't hurt? It is included with other heuristics in portfolio, so okay.\n\nAlternative maybe P29 decoupled star topology factoring with delete relaxation for multi-valued. Rover domain has one rover? Actually domain may have multiple rovers/landers, but decoupled star may exploit independent rovers? In larger instances maybe multiple rovers. Star-topology factoring could be strong if rovers independent except shared lander? Maybe. But P29 single, delete relaxation; less robust. P05 decoupled + red-black portfolio. Could be good but less known. P07 likely safe.\n\nNeed answer with JSON only. Include reason at most 60 words. Need mention lifted avoids grounding blowup, portfolio, heuristics handle subgoals. Let's form concise.\n\nNeed be careful: catalog has P02 and P03 identical, P23 identical. Maybe common planner is Fast Downward? P07 includes width-based/novelty + lifted portfolio; perhaps corresponds to \"Cerberus\" or \"SMTPlan\"? Actually lifted planning could be \"Power Lifted\" or \"LAPKT\". Width-based search beneficial in rover? Maybe.\n\nLet's think if there is any domain-specific feature that suggests P07. The instance includes 16 cameras all identical except supports. Grounding will generate many calibrate/take_image actions; lifted representation reduces memory. Portfolio of configurations may include both satisficing and agile. So P07 highly likely.\n\nNeed output single JSON object, no markdown. Include planner and reason <=60 words. Use code P07.\n\nLet's ensure reason not too long. Something like: \"Rover has many redundant cameras and waypoints, so grounding can explode. P07's lifted finite-domain representation avoids this, and its portfolio with delete-relaxation, causal-graph, landmarks, and novelty search robustly handles navigation, sampling, and imaging subgoals.\" Word count ok.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4635,
+   "completion_tokens": 1705,
+   "total_tokens": 6340,
+   "cost": 0.002574,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002574,
+    "upstream_inference_prompt_cost": 0.00122364,
+    "upstream_inference_completions_cost": 0.00135036
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1635,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "woodworking",
+ "data_utc": "2026-09-26T14:20:10+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.6,
+ "uso": {
+  "prompt_tokens": 4289,
+  "completion_tokens": 233,
+  "total_tokens": 4522,
+  "cost": 0.013051,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 4286,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.013051,
+   "upstream_inference_prompt_cost": 0.010721,
+   "upstream_inference_completions_cost": 0.00233
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 169,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Woodworking combines consumable board sizes with several independent part-finishing goals. Delete-relaxation heuristics may overlook board consumption, so P21’s novelty search offers a useful alternative; its portfolio also provides multiple heuristic search configurations for broader coverage.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Woodworking combines consumable board sizes with several independent part-finishing goals. Delete-relaxation heuristics may overlook board consumption, so P21’s novelty search offers a useful alternative; its portfolio also provides multiple heuristic search configurations for broader coverage.\"}",
+ "bruto": {
+  "id": "gen-1790432405-EXHs53vrNPM1cuvDzWWX",
+  "object": "chat.completion",
+  "created": 1790432405,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Woodworking combines consumable board sizes with several independent part-finishing goals. Delete-relaxation heuristics may overlook board consumption, so P21’s novelty search offers a useful alternative; its portfolio also provides multiple heuristic search configurations for broader coverage.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9Sa0tsEBIQhbbWEB9jUx33tDMz_C5g6UsSFJZ4otZMEuj2XnK8rm4i_dkbBaxfAVT_JZx2R91uPlEAWQhX5D4YnYfWdQtqsy23Zt-KW2zucoVVNATAql3xTu2L2LhCZzotvnKlMW9HqrVJ9rz84ml0fgJ78ihGFdTQbm4Yz1_Bdo6Q9H_kBvhJmbRopjnTaBRtLNOogvLE8ebuFp1xLwQVm4ScaSnqTnsqZdhi0AvSrKNeF-Hv5AdNmNZE7THcD4eXB9Xjc1p2jxkGmD0f_UeG7p-f-ovADRa0wrDoj6dxGw6I6VJ8ieweIlPMEonNR8JfN_oR4m4VKTBOXU2-_EyTRsiVD4VehnRB5UKi6pcjE0A0pUqA46rTcSnSffTKsiiRRbsyT8sL2RmqSl4bb0UI1dGVd7VyKYqkohOsV_noLjw0rCxei8jHg7B31XHMYTTLZ5G2kx2S6AueaHuNAD2YFFbRY8IpsfultefqdgbmNHViKCZkvTg_tAlTM272nKZSZkemQxMuXOXaHbKq9Ja1TOGyxqMRLXkqb9fc06dWICIff2rqF54e-aVbXHcrLtmfsKiV10gvShUPNklFjHbn6buGBq4o2NRElJjQMdr1RVAErTJTnH1pooU98v0CN1MSwTpdCFkXvYHZ-DZ745VaUSV8qB0Dwvk6B7wcReCXYyzdJGdZdSOKPfagzXJxFePIC3sl5Qnhbd7XT7lOOh-MPYOoBi-UOYNtMn31I8GQCDb3AbJv7ysKqbTHbK9Z6-hgqgct4Mk_tL8vFTkzUipDBF3FmCfRKsi1vK7uW8okpL5YEycwXx728RClWCl7K5URNqRkMbdvfjpH_I_DdztzbSv0mmQGjVt5f8xJ7zy0ftVQfiQIqdtyluM9IK3rclOUEsRaMuNLgSGrDJRHHnzNAK8O6ZV9ZjUeEfGQahJinAtnyYOuLDLEVXWaINylOx67DhP5ys8t7qU66_Xu4bFaK3Tpjt5u-47YguaBWdsB7B8V3V0vT785TH_EDjxJ9F13b_SXSR307YQHEGen9sfqOQ1qiLKhlVaAbCirvgf5DoMYFVl50_t-qHfO4KZxn-75cfRsgJ0rN2UkulGdSRAf-WLQcS24ad0Za9cj3GBdhIUUjCOcrHwr-ztKgU2Wpp2JbExHFtLvH1phSBOLiKtS1sGA-o9B-vBCi7WNnHkViLs00ThZ5PeMMv_a-G2vNZh74VscIsEK_nlAfgcCIH6fnm-wlSfd7-0bHqBWSggpoWjJx12eF_XMfUe5qymM5l1UoKPgIJi3Xssb3k3WOsL1qjtNPVbQ6mh4R3Vo6aLayH-EYBBttBErVWJOWHlADpMUk4Swd6xMfM5fiz5wwtaxtE5sm4Dsd8pkUazfqH4rU5DsegMDR0KfONTnIaqvSOVjDMhlzzUlO6462QS3bDxWdWl-IuW2UFc5Kin47Z5jjqDG7bp14o0VcsGP_Pw41IeVVRW2oV7LDeijaHlS8d_W1ce3KYmriP_-vyBYw-hY11dIzZGMnCiXFcyH992blY1DvkquANDYHjZTmrRn5NdLzfOUZGVOOZ9OxbYJn2PNFhEUNKYoSdpW1JE5O0RVd7m_nhVnkCesyQ3XQxbfS8vPcb-7bS9Wx9MSI9I4gM-iqI5gInXOzJfFQmq-w80nyStUWyhp5imKS0A2kzj59VEMxyhSx3cJgav3gPi2IltxUpG69F716r_iXeO0Nksp9VPXadC34HfoU64YsTo-7nSJBDp4wKmmH4g-Xd5o7EzgmjQ-Pkg92M18nqrwSmgARG_iE5O1HhJC4BIZYp9L-jjLCzsNRQLB-WCYGpGQfHHoLgfX4QPSdm8IFOguI15dNg076Uhk92aqlLSBDfmicRPAq2DfQRfYmgYNIZuZMJ-ba96-MeJiX4JjURvqbNGDw5TL_KgWn3kauzyIh46N5oYurcfn0i5aKCsP7OTGyeap_z6wLgIHpOqNo9kyRdSsln64xPVjHWOMx7jX9a2acCTly2gOVAAT1DnCNP6dLPZ5NzDFwBPq3wGoziTbDx0ZJ6TrOU3L5c6rPykcWeMEmjiyWx0Qxf9A-gkjMgTqrbRkPsKE5wCJlCKwmbVAYdwPZihckcTYcMmM0lR2oQw__ImV8a8KzvrqYS6i1qZPtPL6CcnDi_DwmHbR4QHafKl6iB1DUdG2l0cg0W3MQEiArBZa40X-DxO6Bz6KP9-0eaTTWpHQkSiP6hgyRwh6z0v6pqFnJLnLpvufxagLaOvBnLNu3u3Tn6xyGa-w8a1_XHFNTW6az8-w6oBxF2okgmyWckKr0J0OnkYcinSyLof8m_cXMZ3zIGPWV9jjtP_kn95MxmyM8KUdq_-lvIoSTo1_kJJdEORAjAVus4TpBTyAvXPLY3dGxeBGp4YQR4FLIig6Qv-3eIwUJ-UWeXaX-XElJEpEDsV2DnqZvLHQd9wXG8Ldy9KWK4X89qFMxG7bAw4QbopQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_07e7ef6355c54289016ab7d496486887d1a3fb7cb6982671aa",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4289,
+   "completion_tokens": 233,
+   "total_tokens": 4522,
+   "cost": 0.013051,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4286,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013051,
+    "upstream_inference_prompt_cost": 0.010721,
+    "upstream_inference_completions_cost": 0.00233
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 169,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

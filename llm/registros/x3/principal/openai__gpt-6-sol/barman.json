@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "barman",
+ "data_utc": "2026-09-26T14:16:43+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 7.9,
+ "uso": {
+  "prompt_tokens": 3526,
+  "completion_tokens": 357,
+  "total_tokens": 3883,
+  "cost": 0.0123835,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3523,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0123835,
+   "upstream_inference_prompt_cost": 0.0088135,
+   "upstream_inference_completions_cost": 0.00357
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 292,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Barman has many interchangeable shots and repeated resource-management subgoals, which can mislead delete-relaxation heuristics. P07 combines novelty search with several heuristics in a portfolio, while its lifted option may help larger instances avoid excessive grounding.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Barman has many interchangeable shots and repeated resource-management subgoals, which can mislead delete-relaxation heuristics. P07 combines novelty search with several heuristics in a portfolio, while its lifted option may help larger instances avoid excessive grounding.\"}",
+ "bruto": {
+  "id": "gen-1790432195-ueFw8lqXVX3ukgDPnaX4",
+  "object": "chat.completion",
+  "created": 1790432195,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Barman has many interchangeable shots and repeated resource-management subgoals, which can mislead delete-relaxation heuristics. P07 combines novelty search with several heuristics in a portfolio, while its lifted option may help larger instances avoid excessive grounding.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9PKHZA0Z9iZid71MVcBJjMgge2MBX9c0qOLmyKR56jUmkf3TWylln27YpUX_RnIqufmFbWwmSYZtn5-IQkw5GjHQ_yjjHumqP3TtWK1gMihAl_bQKEM3y7NCNaI7tx4EXHGJgUiY2potpn37g2W_1p_ulT2H3jg1okO4dh0QJi9LoDApS_I980zAebYqHbU33CD1FDm4eFX1PFwffhmTBju7TOxfdAATM1R3rHdxH-IiU25rIYDvF2fchjCOT4kpWEJ8O_WlrA_Xxc7QhI22qZ4150r7Pgww3FJviIxhy15Hak2kxraaKDxKEZ6RGlNTgyd5o3M7o_g51YBLGQ0cw8HQf5div-atJaBFwiKO4EoL8QQDaSwWbPaCSsodL54BxufDSEKaEGQwOQuxPVLMVjzG68kDyxkIBKnzqJxl1LluLufd5A51RpYggH4RG019NKsVYqSuncoprq2EgmmZf-RX_tUKl5DLJBoYF9pLyudMA_xGg93wBpKNN35fePpJTm5YNEN7Jw4QYrQWvsFLuieZgDq5fZ2KD9D_2XfueAVRFg86w9lOvw-ppZMWFzx1frFp8j11b-qhcr9r8MQOULneshc7r93-9iBhJcPCcB9sA551r8WvITShODiCstd7Emnm_LL8wJq51dPxJK-L5xXroa6pa4sjT4KEPFqg6yj7j9QuJ_Hydu-3IlXNu-y8NT0P__EYtqYkT7Q0AVSy3Uy3Mo0GODKxjdukqyTRClfjQGozGZYqwmnhHVwEDDUsGPWJqJ3y0o2DXe66FHnEkCc5gHjIuj-vUvoMlbHSpzO45mzDpgH2z7Ig_uypJy7jz-FpqfenEC6ax4pE_uBWLiWJ-u4eBeCKHJm4awcbKaHMDyjyxUdZ5kK2BM5X4csoGqFuXeRItRRh_7B3CbhxxL-f2iSSM_bZkgyu8vdJ9lehxw_WNvDZPw7nNpKK2z9MrXmeKKdmDs5X2pFZUH9-RnkFWS5FGkTyZGlZv0PoW0RqrUuRwPkC6q3FFMk5ID1c1SpMQ4405YzvYhvM8gHhWQ0ZpPwzckCHD6NvbNV36l62JEpBUWiuBaPR0twxianMSUEEFHxeVi-gA3ubuXrDkl09vsFuCAthPtGDj0qMbUprzCfPjvihUgdrAK9Q-lpwtEms26LTYus58Sfx3lJQKIb7XtTXI7zuetI2YhwOUKskf5JjrJPMtklm7eGLtmOPEApiv97kMeRr7Icz2GmJqRTqVyGOFeefJfJrHBvekg25PNXBa2KaMVbZuUFXFiW5lQFsaYa81Hlatb_Q3TOIgpOI8ifS4k4mCkjFngByqav20Brmpa8XixlPBXy0LUFq7HNYcdcYmMpTvW9ZzbcyLgAsOW5sozPWJxrFKpXi0ZXNc9wRjNE2D5pZKvMhcqIjaESge9Mt464XBN1mj80Ma9OCgJ7dz_0j6TL_Ad6AMe9oUF4sXi57_dodv1bHwvGx3OVnCbVNQ8XKsrpvoB4UcS4ntwXdv3vVggWWIWBU7clO_FFpbGFtuCBcjldl-U--qvxG4MI9x7uaEhXAqnLpfba5HfDIR-mVSUJ_f2O5gUq9snGbf4XGQtJn5OsTl5QtiWfTrBZlsnrxE6nzwdn2soGPecZzpmiXnEif6UI2IVJV0cVilLl_yOC3Hv-tzJu0O2mhXq8--pjKFw03h5vuEhdG01vk9qYVlTx2qrg3t6JI8PIvrStUsZJ-2A9Vj_gi6GTM1lKFT_Ij3YztEqgyNE44eqVNuK0F_f4A7NfhTwxjqzl3ADptro4RiSDLKz656l17x9fp1bk1TD5Lzx-WhzMigzWA3O8qlLAQocNRC_i_O2-iZfelbtcLRBQyb1UGUW5QeFCVYNg7HoYkkXFu08e0M4dMCGYBtvNsqfjm9ejluoNYxpgOgK24LwelcF9sS_SP8BIKvz47hqbTLFugQTvXdzwNb1oU8mRnp4Y8KbsNH6x7qp0gQX_CEbCF6IfVkWWtahqR99xay0aMa_Zsh2OjVJGAGM8sznlNXKV5Ws6sa5YIJNH2wP15ndlYreMwtngAj4SvLWJAGgKS3sXtRnrlB6QikMpCCE-EpUwcbBiZ2V6xUHH09IGiUoxJKFSKaTwYg_sNZdpK5Eg5mx2Lyi10ek8fQ3y0feIrymgbFlnBJ3bzCcHU-0LauM8d0eFESlJgoZSrHBan58tVV-ysDpcraPdgJJoiar_kh3lR8wABXftKyS-Y6efCL0T2wgF1sd41gVdL6niqa7nmQlAmBh7V5Y-8o8knJHVExJryQLvAkR6FctMLi3j1flv0z4CVfqSpNBIqOrmH02QD2i49jCKTxRe3a5R6jBgg7_z5581RvPC0TpLvGym0YjZL-1MlcfYK_AZ_xeNKNfxBo4-LmtzUBCU95UtEr1lKTRAR1RAXSTvwUAq33pU4K2jfEuXN5L701Jzj-KL0-ERo9pak-N1uA7BRILUVOAO3YYgiUPi3XiwwKtuW7eCQ6AEe1Zf65Hp1xxV7WV74nRwJmjTc5Hnl4TUcvLseoiPW6N8JqZfrNjhw56XSbKLfLhZ34RV85T-EstGaV3IgOsB-3n9OiUuBm5HgaHYDncqjxUk_NNDb3coY5Bb5pOVFzWJy7Uux_NHQwgBtwTnKb4CmR0vyNEuyNhkStsvwvBzCWZddI-ybI8xVIwwCGiA-7kG487rdcvb4fOge7DBu39GYUZ0L9Hh50XM5EZ90j8HYGRG3Mw1s--Wq8Oc8IhAVV9TceWm9t95XHmyFTIpR3Noo16i0HGEsjiImPjDWK_f9UiXkEZ-VczxhifrufhH_XiBw-QaVZI2CzXhqv8puB0_HW3kmfR99YYuI_6CLrUTAVjJwZUdE22HZHdSkWDbEgTHvtedcNXRCYFtlts2YAQcSIzWKSBxb8ga712K5RftA_nPwaIJcg2-THm0eBp3BICXAOv4qosEV4cSdHwB4NJ2qu6GmFGemx6l8y4ZopwPV3zwHfYHRtqgGjLk83QgIryKklktUHmXeIVbEnzFR8yu_w7m50nCyfFKynBgGa2Xdrm-HijZtNnUp0eFLBZJByUGN6aSsrSKWSi7UwlBq4sKVlpqwzRM5a9iMQ4XylkGKLi1Vs4mJkfyiC1sErTD39r8LRxurgXeQOHK62RjnUBFfnLvekiPNa6h_QzRUUDUK-H4MFo5jGg=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_08c47fb5f0130086016ab7d3c4b1b087d1860334ef3e47459c",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3526,
+   "completion_tokens": 357,
+   "total_tokens": 3883,
+   "cost": 0.0123835,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3523,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0123835,
+    "upstream_inference_prompt_cost": 0.0088135,
+    "upstream_inference_completions_cost": 0.00357
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 292,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

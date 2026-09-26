@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "grid",
+ "data_utc": "2026-09-26T14:17:35+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.0,
+ "uso": {
+  "prompt_tokens": 5471,
+  "completion_tokens": 274,
+  "total_tokens": 5745,
+  "cost": 0.016416,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 5468,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.016416,
+   "upstream_inference_prompt_cost": 0.013676,
+   "upstream_inference_completions_cost": 0.00274
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 210,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Grid navigation with keys and locks creates plateaus and misleading delete-relaxation estimates, especially when keys must be carried or exchanged. P07 combines novelty search with several heuristics in a portfolio, while its lifted configuration may help on larger grids.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Grid navigation with keys and locks creates plateaus and misleading delete-relaxation estimates, especially when keys must be carried or exchanged. P07 combines novelty search with several heuristics in a portfolio, while its lifted configuration may help on larger grids.\"}",
+ "bruto": {
+  "id": "gen-1790432249-SRmchheshxDO5zJUGDnA",
+  "object": "chat.completion",
+  "created": 1790432249,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Grid navigation with keys and locks creates plateaus and misleading delete-relaxation estimates, especially when keys must be carried or exchanged. P07 combines novelty search with several heuristics in a portfolio, while its lifted configuration may help on larger grids.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9P-nRLPFmxTjizeEMVlNgGyPI5WnKWjmEhIhSTTx5ae8DkRwFa63PTYs0rNecsnjLFAPyhNFuOnDPopT14mBcFPo4mrwzSgtjn35mU5w6IN7ir6Wl4_LKRklOooj7RWdW5YzWkIbVzFsxyGFy7Y9tE9kU-Kg4qJ1sSSt5nA9YTAL-Tchb188SN29LL7idceBtIFSWmXeGUdCnM2mMclgGRA03rjMUyA3jVIgUu7Z-_NseQeCpfWa1JXv208vpkqx77ZrLr6mMfMmarsHnGk4YddmjgTfEtjMQ3KDYjpj6GjiL6GKkWpj22P2qeBryNKpjvZx_DSXepZ3KFTXJWwY9Qm993U6DEN1TbUEU_iS53E4r_AHdFfSq1xP3x8a29BIw_EwieCwVA-YGX38-f93Li6qP7oustEfzgZhpJNOISy8eHBZoJWjS-fG1zMPaMHiQZoYGjIAn6EKtHtzUluYHlj3j738EJlfeIqKGFNDVbroWfomVNs8HRwx9BXge8fZ0f-8QptZ-QEUMqFW7b4jbpMvp74oYU3FtbovDx8QsI2X_Lbu8s3bLZEPxwpyivVcvEtbWq1TJx_mx5CShHf79xFYwmA2B9OjLKRWgRVqsMvyWYT_zOeqTliVfr8SK2txeaNJ3eYg74CCIH8j1z0m7hTyD_za2z_3zf-7u8aJ8qYhdhemjc9yNtgRbubYE4eQXZE3FfQTz34Ilg5hBeshvXhmxFdpIqu9TbdK-5Q0FHfmkakCWAAR32P3_O5VJa19vl0f4Wsb-yL9m89b_ZaTNyC3DBkroA7cN_kZUGqtr_faAJ4E-5v9s1Lwsj9wdGlDVnLmcX60W-B-UyEDwIM7pYC-TOde85oGk2wAn4DlNhTEgRhWUqgF4eLJ6Nm4H2wGDr1m2YV3TiK-t7GNBoXI0qRA66GP_7muiQuicF-sITyA4NvTqqvcYsCUahpTdQAj4gzTrTGhhc2FYbkI1Dl97KUuLz-R44Be-caNCPIGnRFX_flF7t7UW-rKvtjssPSVKqjsGBS3OYyXvQYy6JsH6bGiJtGqHmG5FaPo2_pTeO6GbB_f-UfKqVdVrU0ZWxRO_hgjvWZwmXkNrtjlTF9xip4_lBoSh_ghQcfbCeZ_3DKYP5_UPB7TH98O-_ARO8S6Tpjx4oPkAqtoSxwafJR7wj47Micxw-ui7PuqodmKyeN_K55hS7mNE_ouRY2GQJ3mkUEgNMAV8N5ZrxABMt15gbINS_NyRdo0zURTGa8MCGjKFDRasn2jxGnoHIRcTeKvkKaPd3caqQpeLprkgSMQs-7fUaa00XHntSMwzUsNiz98lHGn1fggZXTL5IepRLyssCYJ-6QM3blwUUWmtnQedhjFCQVVbe5C1Ytx8yCD6Dm6elh8Go3oAMgAD6yOVKSjkRCIJ-IPF4C53RMMVt34JeumtPBdRZpkDZTcQByh4LSodR2_ytToFMt6tN6j320VHOti8_HSfAl1ZvdnQlkljIpdRVinsoDQNQxJ-IFpLF2QItvhZPZzlzZWY9fymKrfdV51jcH8XA9xBc--MiZBvK_Pz4mbjyO4gGM2O-EmzHqBzEpAW4hz_sYkRGLYE5HZKLM_S8tpkRY2fn7NuW-1FO6eGPSnzlxUSkd9kiVZ7-ERT1Zvds-lQNtbvX9D-YVbc-EX95Y8ZfvjY1_bLLT_svy602CTD82w8GfRbU6sRFoDyHrpmXW-vbv_teWq9fZJlZLCIrZxgMQttx7MuoSvzaBb5ndUrL_1CWxKIAHyNvkb5WbTfp0kqIaNGOqZF9-hMJBaS4OX7ObrMhIufRMTXI06L3zSTly8Z02c-LXxA3P9dXUbyB4AjcN_KjXC97tkQvnBfVIAvLsh9XFPklpCKg_dJmZsf6DbPzgA0iXhjUshlFcBcTOWz7jeDJB61EfSA8st_w0OX5XevWwRjUoYk5Rxo6TrA9KK5HMppq0qeYJj9P_11MlqDl6YkD2ANgT2yL_mth-lv3F6Mbiqph2uGgmonmOpwVRFW_c_RpXdjdicMkS57TMGY9bwSia8egh-TxZeEvqHE0XmmCJ6Ot_ZVGfRHv_U5AnMWlCXJXzVII4jQ4614FBUB0ZGRUHPgNNH6i2rBveNuX-Xx3g1Wa5zcpBUJVUOQ_hbKZZezG4Kv_ZXv3Su2IT8M0aonKnNukXz1Zt4hPg9A-DxkmLoSNPiSRja91Ga9TYvCWOcb0OftYpLTUKJyZUtjdaCMw6-vPj5NJWSkkpsppxoT4ZBRCjbAjwwmauix7Z9_le5CSltwlyoIyy4eTwYxi19x_yG_va1gD7ov7KVpPVpkI0N7jIQVFCStA4gBA-kza7CaD3jMNCm14zBcpYrydoD1WMSQcpze7PnE59ebvpAIUAJHYg_maV2uvfjF8QQz1YEyEeuKKWPOpfvGK0RcgcuWeu7K_6Pld0fGI_0h4ryhTwUEuzbSKVyP0rVVht5uLq0Svcjkxp_Vr7ykq58iwifojGNQctHS8pqy5ehqUaeaanQOdeffsEAfA7G8io_JcJaYtwit9W69eX204brKnB8FqPcLPj0X9sBfZQ-ipRqh_kok-aLHnifOWK1Q-2xd3JBdu7A1ItoG6r-mgHiHRZFO3p1VO-qBxvVc5moL-6meRKJDmgnMeHoBY18hmqWEDHs2s1vUFpfuqH06JASl23KqqAaaZdjh6oIIXHYoTxW7gifmZs1NoeOw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0b65815a4b5b4e41016ab7d3fa426c87d1a6e743ab88156526",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 5471,
+   "completion_tokens": 274,
+   "total_tokens": 5745,
+   "cost": 0.016416,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 5468,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.016416,
+    "upstream_inference_prompt_cost": 0.013676,
+    "upstream_inference_completions_cost": 0.00274
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 210,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "termes",
+ "data_utc": "2026-09-26T14:19:28+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.2,
+ "uso": {
+  "prompt_tokens": 5943,
+  "completion_tokens": 176,
+  "total_tokens": 6119,
+  "cost": 0.016616,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 5940,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.016616,
+   "upstream_inference_prompt_cost": 0.014856,
+   "upstream_inference_completions_cost": 0.00176
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 109,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Building target heights requires repeated trips from the depot, while deleting height facts and consuming blocks make delete-relaxation estimates misleading. A portfolio combining novelty search with several heuristics is well suited to these plateaus; its lifted configuration may also help on larger grids.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Building target heights requires repeated trips from the depot, while deleting height facts and consuming blocks make delete-relaxation estimates misleading. A portfolio combining novelty search with several heuristics is well suited to these plateaus; its lifted configuration may also help on larger grids.\"}",
+ "bruto": {
+  "id": "gen-1790432364-VPnHheO5vSdEnMvqKkKo",
+  "object": "chat.completion",
+  "created": 1790432364,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Building target heights requires repeated trips from the depot, while deleting height facts and consuming blocks make delete-relaxation estimates misleading. A portfolio combining novelty search with several heuristics is well suited to these plateaus; its lifted configuration may also help on larger grids.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9RvBFo9hhkvI6Cq7_z6X11edoIPIoSZoqUu696D-hyZEgp6EYay_c5d_tLSWXYuwyoc5P8CMt3grSudaoLR3hhy33Pgks6BYQNfqLTRsCOjflxEdk8pf076WauB8a1xy9Z68wcv2vWQQswIX8Fj5VLfURBbrrQE_msLmU_7Y0Jma-p-J2MurHE4Tu204EbMvvKxuJRHXfSdtuTQ3QYRiS4oRVDXJFjpnW_xRU0gJyKYHjaQNvGezt_FNYMDG5xdwook9L_Juiqfvq2cTQxPI88muC_THyZwdx9Y0AZ37c34QMYqbCvUVaPuT6pT33hq9w1K-GNVfNfmLM6yEh1d0A0GZ5Rv2KlC8sK5ss6vRsFi2F1KcqnuN_endDSLcncmuYk5AwVVH8FWMFzl9ddyWsmpWbE7XZ_hhJHg5yQFS5tYapyaTefKYZk7uOjdUqaJ2yW7AsSRVB1ALYKWEqrucAiup7-QEYJ11txdJ3-lQnhMKKihDMyDrMI1_ZBTA6MPKgpSPVrMksNpPvMJMm9oPIDVJvK4mdlxmM5CXyBvVY8Xh_rrxXO7aT6WCppmRQozTwktt3vG8F6p1LxEfq3x-7aDhJ9bRy8MyFwtjb6o3Bv5Dbz8f2sh2qo_OOoDheMiJVBR6hX6tN6BWyOH3YQO10elX8ABv_eREsqvSyLEubeRZQGLHxYCFM1nGUfQ-Hc4YtblcI1s59qFIRm0jBgb8-OmY0fLxKTPYzc7J99aOqWGrkgvTklvPjC3KIMhtMHBgcclyO94fNBnh7nE_NsGYBdYywwhUs0HdOtDj_vQs5m5QX--mEAFtP_mxF7b0bsyX0hQ50F2YKdf0C2jFPwXuQY5EYJgHp4oxWUWkr2qZ8A8IPrWIsNtBYbQGOazoHngs8iLkrzxm1MAU0HWIe6QDfSxqEQcQJm_ADgI8DSqBjzRHvhNnM-vCAr2Or6X39veVKb4PywoN1Qa6yl_Zp6wPOwFuwN5YZSejKhZt4-qvRBxOaw8ubkuC7lRNM22oqzELKyuHj-1KmUkheY8KnHtAVPdvJhc32fMcYJyyqbWw4VteVqJgCO4FGdWG3xgKxIWm8owNOESNIW9vTEXbxyG_-vGwFBovbowmW1tkJLOwy7Pfwlz5SiLXkd2Wq-6JdS_S3PTuoN8T61fPa2v1I-gauYZCMa0zv-_spljtAUz_dv5MUS9oJtkDOkhxmPRoz3o8xvsz_zwztwfPs8fNIkzNyGGfq8uabGPyaxTdJ-hkiofaUGTPdrUaH48MW0h-vAOnCmKcXO6qomDAMQHzra4iXnonQzuSaFzz2vEHTh9sJfVOQmh0hfvUgOTgPHDvBk6a23DRpY3r7hql67DJxocVROI9jv3vL4eZBvKlu2_QLtqYWIV3vnhgtqlKY68a4WeUB6Tvx474ZM12tXX6kEZOlb1lrkJ_YdT4qy6dtlnEpj3uIW9ZsqejxjERdUpICivrvikKYsoV4I9Mg_cZ1gOFDQmid0aM6VdRdxBjd9cdwW8a0eW47yljSbVC_2lBP9Vdr8Sqh8nCh7ITDe6s3V-5u1nUyPZGBbKmk4vLlCjCCuapDIzHXHL8KPpUWxu6bRmOy0o0GQn2gf9VGCqckPip5GqiiBbt_6nQLs-AVsZRwLJUetmy9Ru1BCcXeopqejgn1gS5vxXEYhG-skUPQ-1LgTLfpvZLbyhQQoefePJKlPY8IX1CeV6Cc9rMgAABLx-eP_K7TmlsSswN78sxTZ3vkHSGJvX5Z0cP1m3niitRHKXmWe3AzV5od_ddC9ynz1KQV1PKiKgrZi1WB8O3ixy1gNX4EKre3VWfS0GF6KiDb3xGtBwskhai-6YxPVXSlHJyakm7Hj7aDszKAXTkBpbaNLusQf4QdIYqSzVoizSfmaa1r3u32FoQCVpt9AJUjL5ms_kFd8QQOiV6LSkMLNrrKvZrFJMrfqaHS1ebA6tECp8D-b8y17-u_b9NQh3ot1c0r0N4T69O6DNLQSMeIlVIPhpxSKrV4DJpiW-M0y8p9UV70S_JZgA22Ulfne73mm3CLxoj9arxd8pV3El2OxFxQP99g==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0433cd569561caf1016ab7d46d3fb087d1a98e39895fdc20a3",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 5943,
+   "completion_tokens": 176,
+   "total_tokens": 6119,
+   "cost": 0.016616,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 5940,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.016616,
+    "upstream_inference_prompt_cost": 0.014856,
+    "upstream_inference_completions_cost": 0.00176
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 109,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

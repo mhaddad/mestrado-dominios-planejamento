@@ -1,0 +1,100 @@
+{
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+ "provedor": "Ionstream",
+ "dominio": "transport",
+ "data_utc": "2026-09-26T14:51:55+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 23.4,
+ "uso": {
+  "prompt_tokens": 11882,
+  "completion_tokens": 1381,
+  "total_tokens": 13263,
+  "cost": 0.0054977856,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1280,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0054977856,
+   "upstream_inference_prompt_cost": 0.0027932352,
+   "upstream_inference_completions_cost": 0.0027045504
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1331,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "This logistics domain benefits from heuristic and landmark guidance, while P07’s portfolio of configurations, lifted representation, and width/novelty search improve robustness and avoid grounding bottlenecks on larger instances.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"This logistics domain benefits from heuristic and landmark guidance, while P07’s portfolio of configurations, lifted representation, and width/novelty search improve robustness and avoid grounding bottlenecks on larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790434292-NmTMFsAseFyDMljUyq6x",
+  "object": "chat.completion",
+  "created": 1790434292,
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "provider": "Ionstream",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"This logistics domain benefits from heuristic and landmark guidance, while P07’s portfolio of configurations, lifted representation, and width/novelty search improve robustness and avoid grounding bottlenecks on larger instances.\"}",
+     "refusal": null,
+     "reasoning": "We need answer only JSON. Need choose planner. Need reason at most 60 words. Need analyze domain. This is transport/logistics. Need coverage larger instances. Need choose from catalog likely best. We need identify planner. Options include many. Need think. Domain has typed strips, capacity via numeric-ish using predicate successor. Transportation with packages, trucks. It's a classic logistics-like with delete effects, multiple vehicles/packages. Need solve large instances maybe 2 trucks 4 packages but locations many 3 cities. The problem instance small. Larger instances same domain might scale. Need choose planner maximizing coverage under 30min/4GiB. Likely portfolio with delete-relaxation + landmarks + FDR. P02/P03/P07/P21/P23 etc. Need decide. Domain has typed objects and capacity, no complex numeric. Could be best with sat/csp maybe P12? But transport/logistics large maybe heuristic search.\n\nWe need answer JSON only. Need maybe P07 due lifted + portfolio + width-based/novelty search; known coverage in IPC? Let's reason deeply.\n\nCatalog has planners:\nP01, P04, P11, P13, P18, P24, P28 etc are basic ff/delete-relax. P02/03/23 portfolio with delete relax+causal graph+landmarks, multi-valued. P05 decoupled star. P07 forward+width, lifted, portfolio. P21 similar. P27 width.\nTransport domain: likely one of benchmarks. For coverage, portfolios with LAMA-style are strong. P03/P23 include delete-relaxation + causal-graph + landmarks; multi-valued; portfolio. P02 and P03 identical? They are same description maybe duplicates. P23 same. P07 includes width-based/novelty and lifted no grounding + portfolio. Large problems memory/lifted may help. Width-based may be advantageous? But package capacity, goals are simple. However novelty may not be needed. Classical logistics with roads and 2 trucks, 4 packages: FF/LAMA should solve easily. The challenge is many locations, but only small trucks/packages. On larger instances maybe more packages/trucks/nodes. Portfolio better.\n\nWhich one of P02/P03/P23 vs P21/P07. We need choose one. Since P07 includes width-based/novelty + lifted no grounding and portfolio of configurations. For coverage across larger instances, P07 maybe robust. But benchmark transport? Let's inspect hints from problem name \"transport-three-cities-sequential-32nodes-1000size-5degree-100mindistance-2trucks-4packages-2019seed\". Could be generated for IPC? Domain \"transport\" maybe from AI planning? There are 3 cities, 32 nodes each, 1000size maybe road edges. 2 trucks 4 packages. That is relatively small. Larger instances maybe same structure with more cities/nodes? The goal asks one package per target. The main difficulty is route planning and capacity interplay.\n\nNeed evaluate heuristics. Deleting effects: in delete-relaxation all at/in stay true, capacity? Delete relaxation ignores negative effects (not at, not in, capacity not), so pickup doesn't delete capacity? Actually it adds capacity ?s1 and deletes ?s2. In delete-relaxation capacity accumulates maybe not realistic but fine. Landmarks helpful. Causal graph maybe helpful.\n\nCould also be optimal planner? Not needed. Plan quality doesn't matter.\n\nMaybe P12 or P15 SAT/CSP for strips may solve large instances with 30min, but likely NOT due to plan length maybe long routes. For transport, heuristic search better.\n\nP05 decoupled star-topology factoring: truck and package? In logistics, factoring around vehicles? Multi-valued with red-black; maybe strong for large fleets, but problem has two trucks only. Star-topology maybe not.\n\nP14 novelty search goal counting IW; perhaps can solve easy width 1? But not as robust.\n\nP20 local search partial plans: LPG maybe but no.\n\nP22 symbolic BDD: sometimes good in large transport. But memory and time? Could be not.\n\nWe need answer one planner code and reason. Need maybe P02 or P07. Let's infer from descriptions. P02/P03 identical? Why duplicate? Maybe because list includes all competitors. P03 maybe \"Fast Downward alias\" portfolio. P07 maybe \"Dual-BFWS\" or \"BFWS/FF\"? It includes forward + width/novelty; delete-relaxation+causal+landmarks; multi-valued + lifted (no grounding); portfolio. This sounds like \"ENHSP\" maybe? It might handle lifts and avoid ground bottleneck. For 4GB memory, lifted might solve large instances. But grounded FDR with 96 locations, 6 vehicles/objects easy. Larger maybe more packages/trucks maybe capacity states explode. Lifted may mitigate.\n\nLet's think of planner coverage for classical IPC domains. The transport domain as given with capacities likely was originally \"Transport\" from IPC 2014? There are two variants: sequential satisfying. Many state-of-the-art planners. \"Fast Downward\" with LAMA often strong. \"Cerberus\" portfolio, \"SaarPlan\" etc. Catalog codes maybe:\nP07 (forward+width, delete+causal+landmarks, lifted, portfolio) maybe \"Cerberus\" in IPC 2023? \"BFStar\" portfolio. \nP21 portfolio with width/novelty and multi-valued but not lifted. \nCoverage likely P07 best.\n\nBut we need answer one. Let's not overcomplicate. We can choose P07. Reason: portfolio of configurations, width-based/novelty and heuristics, lifted to avoid grounding, good for diverse scaling. At most 60 words.\n\nNeed ensure JSON only. Final: {\"planner\":\"P07\",\"reason\":\"...\"} No extra. Use concise.\n\nLet's craft reason maybe \"This logistics domain benefits from heuristic+landmark guidance and portfoliorobustness. P07 adds lifted search avoiding grounding memory issues and width/novelty fallback, improving coverage on larger instances.\" That's about 30 words.\n\nCheck if there is any chance \"P02/P03\" with portfolio of several configs identical. But if P07 and P02 same underlying but P07 lifted and width; I'd choose P07. Let's answer.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer only JSON. Need choose planner. Need reason at most 60 words. Need analyze domain. This is transport/logistics. Need coverage larger instances. Need choose from catalog likely best. We need identify planner. Options include many. Need think. Domain has typed strips, capacity via numeric-ish using predicate successor. Transportation with packages, trucks. It's a classic logistics-like with delete effects, multiple vehicles/packages. Need solve large instances maybe 2 trucks 4 packages but locations many 3 cities. The problem instance small. Larger instances same domain might scale. Need choose planner maximizing coverage under 30min/4GiB. Likely portfolio with delete-relaxation + landmarks + FDR. P02/P03/P07/P21/P23 etc. Need decide. Domain has typed objects and capacity, no complex numeric. Could be best with sat/csp maybe P12? But transport/logistics large maybe heuristic search.\n\nWe need answer JSON only. Need maybe P07 due lifted + portfolio + width-based/novelty search; known coverage in IPC? Let's reason deeply.\n\nCatalog has planners:\nP01, P04, P11, P13, P18, P24, P28 etc are basic ff/delete-relax. P02/03/23 portfolio with delete relax+causal graph+landmarks, multi-valued. P05 decoupled star. P07 forward+width, lifted, portfolio. P21 similar. P27 width.\nTransport domain: likely one of benchmarks. For coverage, portfolios with LAMA-style are strong. P03/P23 include delete-relaxation + causal-graph + landmarks; multi-valued; portfolio. P02 and P03 identical? They are same description maybe duplicates. P23 same. P07 includes width-based/novelty and lifted no grounding + portfolio. Large problems memory/lifted may help. Width-based may be advantageous? But package capacity, goals are simple. However novelty may not be needed. Classical logistics with roads and 2 trucks, 4 packages: FF/LAMA should solve easily. The challenge is many locations, but only small trucks/packages. On larger instances maybe more packages/trucks/nodes. Portfolio better.\n\nWhich one of P02/P03/P23 vs P21/P07. We need choose one. Since P07 includes width-based/novelty + lifted no grounding and portfolio of configurations. For coverage across larger instances, P07 maybe robust. But benchmark transport? Let's inspect hints from problem name \"transport-three-cities-sequential-32nodes-1000size-5degree-100mindistance-2trucks-4packages-2019seed\". Could be generated for IPC? Domain \"transport\" maybe from AI planning? There are 3 cities, 32 nodes each, 1000size maybe road edges. 2 trucks 4 packages. That is relatively small. Larger instances maybe same structure with more cities/nodes? The goal asks one package per target. The main difficulty is route planning and capacity interplay.\n\nNeed evaluate heuristics. Deleting effects: in delete-relaxation all at/in stay true, capacity? Delete relaxation ignores negative effects (not at, not in, capacity not), so pickup doesn't delete capacity? Actually it adds capacity ?s1 and deletes ?s2. In delete-relaxation capacity accumulates maybe not realistic but fine. Landmarks helpful. Causal graph maybe helpful.\n\nCould also be optimal planner? Not needed. Plan quality doesn't matter.\n\nMaybe P12 or P15 SAT/CSP for strips may solve large instances with 30min, but likely NOT due to plan length maybe long routes. For transport, heuristic search better.\n\nP05 decoupled star-topology factoring: truck and package? In logistics, factoring around vehicles? Multi-valued with red-black; maybe strong for large fleets, but problem has two trucks only. Star-topology maybe not.\n\nP14 novelty search goal counting IW; perhaps can solve easy width 1? But not as robust.\n\nP20 local search partial plans: LPG maybe but no.\n\nP22 symbolic BDD: sometimes good in large transport. But memory and time? Could be not.\n\nWe need answer one planner code and reason. Need maybe P02 or P07. Let's infer from descriptions. P02/P03 identical? Why duplicate? Maybe because list includes all competitors. P03 maybe \"Fast Downward alias\" portfolio. P07 maybe \"Dual-BFWS\" or \"BFWS/FF\"? It includes forward + width/novelty; delete-relaxation+causal+landmarks; multi-valued + lifted (no grounding); portfolio. This sounds like \"ENHSP\" maybe? It might handle lifts and avoid ground bottleneck. For 4GB memory, lifted might solve large instances. But grounded FDR with 96 locations, 6 vehicles/objects easy. Larger maybe more packages/trucks maybe capacity states explode. Lifted may mitigate.\n\nLet's think of planner coverage for classical IPC domains. The transport domain as given with capacities likely was originally \"Transport\" from IPC 2014? There are two variants: sequential satisfying. Many state-of-the-art planners. \"Fast Downward\" with LAMA often strong. \"Cerberus\" portfolio, \"SaarPlan\" etc. Catalog codes maybe:\nP07 (forward+width, delete+causal+landmarks, lifted, portfolio) maybe \"Cerberus\" in IPC 2023? \"BFStar\" portfolio. \nP21 portfolio with width/novelty and multi-valued but not lifted. \nCoverage likely P07 best.\n\nBut we need answer one. Let's not overcomplicate. We can choose P07. Reason: portfolio of configurations, width-based/novelty and heuristics, lifted to avoid grounding, good for diverse scaling. At most 60 words.\n\nNeed ensure JSON only. Final: {\"planner\":\"P07\",\"reason\":\"...\"} No extra. Use concise.\n\nLet's craft reason maybe \"This logistics domain benefits from heuristic+landmark guidance and portfoliorobustness. P07 adds lifted search avoiding grounding memory issues and width/novelty fallback, improving coverage on larger instances.\" That's about 30 words.\n\nCheck if there is any chance \"P02/P03\" with portfolio of several configs identical. But if P07 and P02 same underlying but P07 lifted and width; I'd choose P07. Let's answer.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 11882,
+   "completion_tokens": 1381,
+   "total_tokens": 13263,
+   "cost": 0.0054977856,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1280,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0054977856,
+    "upstream_inference_prompt_cost": 0.0027932352,
+    "upstream_inference_completions_cost": 0.0027045504
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1331,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

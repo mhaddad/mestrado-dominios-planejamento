@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "tetris",
+ "data_utc": "2026-09-26T14:19:35+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 6.6,
+ "uso": {
+  "prompt_tokens": 3520,
+  "completion_tokens": 299,
+  "total_tokens": 3819,
+  "cost": 0.0117885,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3517,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0117885,
+   "upstream_inference_prompt_cost": 0.0087985,
+   "upstream_inference_completions_cost": 0.00299
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 224,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "The actions have many position parameters and geometric constraints, so grounding may become expensive on larger grids. P07 combines a lifted configuration with a portfolio of heuristic and novelty-based searches, offering broad coverage. Its delete-relaxation heuristics can also quickly identify instances where immovable squares make the goal unreachable.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"The actions have many position parameters and geometric constraints, so grounding may become expensive on larger grids. P07 combines a lifted configuration with a portfolio of heuristic and novelty-based searches, offering broad coverage. Its delete-relaxation heuristics can also quickly identify instances where immovable squares make the goal unreachable.\"}",
+ "bruto": {
+  "id": "gen-1790432368-FBUGhnhqtKFBWDDV76c3",
+  "object": "chat.completion",
+  "created": 1790432368,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"The actions have many position parameters and geometric constraints, so grounding may become expensive on larger grids. P07 combines a lifted configuration with a portfolio of heuristic and novelty-based searches, offering broad coverage. Its delete-relaxation heuristics can also quickly identify instances where immovable squares make the goal unreachable.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9R1wXjILxTVkJffPMeqyaME3xatt7iMmWAf7UXSGxlOZip_RHMB7MrfcV7hY9gMtc9ho64HxFiMy_toKDLXhmFI29ChJS4ZFR8iPGWcCHgtTz1Lm7Iejw7MYFSBCwUaF8g09nVGxI4sXxJwcnmly1JXXZT_KJb1DeH38OtgJuRw7wsPjC3Lpz1IzHGCIBE3AvynDmiEp1OkIPt5Onb6jHqUB5QkhOCSoNGWYLSc-91pb0yv451vjjQVpahk43lLG1Z7GEOOCVg9JxiwgaOb2Oec-71oRuv2jUOvhXTPfN5EOzHYGz04bWhaxmSP7oEJrVBpSAc1-WzITeS4iu8iYLxSW4Vur_ErYfqE56seuGE_v0e-treiHMba7EirT9D8ugb6RvqZcQcw7sDpTsyc_ya_TMqnlAp6vDzVoD1-At2VKzNj64k7NhMBmjJxuXkOs-R89-oPRuT7rNXs9ts1x2thT8jIDDlJcY95eDwYeB8iPlKm1kYwkDEyqDWYN7cq_9D7bV03RCF0cU-hC3yuOyoPhrKUajENft-GyADg94yqLosmIJoEUN5VB_GJTamKwUSPYALIaIh1HjK47iHZHWs9nY-GkDFpst6aJ6O5V8M5WDKZuT1hrvei5kvpSVvT6SqBG-yM2Oh90_8OqLdTAXhGRjnC3U3P8PPzsNjumAwxr5crN5eZpAdrCopxr-al18G8hJZ5t3DINVvk770GuwCJaKG28gQc9Als-tfOVjbwf4LDrcYEiw_9_SYTbFHY2PbrRuTv5q_QMBJUg16rBrdRqFExgkTI1BbxBPpazJ9qOtuPbwDn4KpItlVDJYgwYHC1oxJtuxLvsw7EPwkM2YIJW8c34sEDWBxcde4kmj9uZsUtVd6gz5WyfxOqy5H0CE5XlECJTBOuOvx0yUjlZyZj0e5VSjZ6ncmAFH5lyksVhqSvhZmiHC-7wQwd80FaP3KZCrGdZ6JdifFyzxXuhsyvqIZmdGz4t4QgU4sjntR7qeyv5YM5L4hebhucXlxYfM04k405pUklu3fiKWDRAEi-A_JwqW9jNfpbbWSwhYYZDlaNedMIdlHX6-cRjtnJGIa1P_flBOnoQeYhBavZkdulQkSLOOsTdnAaXiiM_s5ZV5Qs2ft-GvRGu4CfzPRbNDFXW_rbvBvTASow40PzLl8DM6qLCWZ3y5eYpNCZPeBqlloqwllmQbZhEZKuqN5ZeXjmXm3mUYpoE3Wf9_e_-SSnTl7xdl-lUMeKw0YRmIEJy6xYQsTJdJfK0mk4lkUcuI6moQJRoNuxLVpn6TTccI5qV06A_ZFRsQz9Nf5VJJBkIjbyCaBihNlO8z46-L6Nyvbx-Add-nRt400_GHppozzizLnY-rgY7r7A8qjzA8I-K7VI-XE0Fst37pLJwxlIw_MisCRFgVn4TCN93d7REzjIBFi8P86TLoj1um6kWeroV6V6JNyEl4KUkQhd-VhaqoxkFuSehqmn8qLeUbqgE7QndCSQxKt8rubudIJp_OlqUnuCw0lmjEJQD_tt9-TgMKtG0ce25IV7oV-5JOnKdJcbLdwZanYXGd-lgD_RRWl6VV5uL-uMt9i9gHjYVNavYVd7lZIUvPjkG90DTHUeC6H4_MKBpmPShig-60h7FUIiFLdPV8pC_ujDTDj54fVvPgbU5V7HTVUzAz9ZvB8SQDwpZpsQSsXGNE7cr0KgFNAPDGLZNZTGMEn9quN5yEGIKwknRddkSJayZFEgrrdadaxK7j5Ar4WVePHtNUYB78iTku96mmbFooAPDu0W1o2TSs0sCm2StzmJJkUXLT-dYcRNbdoXihq9Qey1PORidj4XS3LClEy-Rmv9cRG123WAvbDxHypw0KzhdUnvlfPkPVizLmTB-w9T_v3qxQ3BDazfdxDgR-npXwU1h77u8C1i2sw3hJ5hH-PlHb1T-R__8TrkvkHB-CPFcWKR1LL09Uma4oxMJ2CpOT94C7cb6oYwNIdzyeTcJNzNnVuLrJQbCm7i22-7AHo-MVwtvnBc-DYiUrBOET_f9WxQMauBcXp7bgh-vFCKfMpjUFKcRG-NILKsprI7l-Y0S1GrBobrk9i_UpDjGSh8RBiX4jWZ7VadRrckbfdEVTkqKZ93Cr4rWJoMD3hSq-8xOem5KvwXLLP-LnJb3LKOw1ej0HSYG6zJnx5TAUJSs_MT8jNfM2-MOy6qyX3l_DDmVGWDkq-WbDf3TgI3ODgNeGILeib9qXkJ9haE6IYZ53TuxaAm0E6hJWuXiJq01B4MxEk6GfoMEIjIBb6djCRf3A2jQM_LdjOj1S1o28KkK1wUyEov7rmoZIlTXPi6TqJyUu0l1LEjvsHBuiRtD3tOWsPcGHPLe3XfZ1KHASBXoNgJ5cXSWViorp3nuk1Rl49pz5PNewlkMWBHAIIznTKdokTEEAEwuJD2YcYrI9XyFEPHP1bVaEjLalwMI61BO-O3Reem7XxcT8xkYxZZcI0ERLk6mQdL8SnyCBkk9Wt3Pq_b3qWqJfhpuwKfpDJr4UHa6FhPqV1qQrMbJSTKOfwJ_WJfBA1HMuYfMglC_WMIdKMguHrvUPbUqoUKIkb3HZueITW9DXLf6G6JprP2eLp1ssqMl-T9a_yUnhbI6YF_nD2PoF1yZpelmYvCpEJHdNLms4cP1tGSMzvlWvjmG7DxT2g2tNjPkd5ocqA_qfJmK__uzA0uXK9iXPsFaQark_osew7fa1GngWj4PkVo2HsV0ySjovwrkLNN0hU3YbCeap89dFgWgzb6vHJK3z_u1IFc08DyS2PzRuAbBmcrSVctF8JstBv0EgsgDPoK.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0a225055dec720bd016ab7d471756c87d1be4945bc9324ba71",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3520,
+   "completion_tokens": 299,
+   "total_tokens": 3819,
+   "cost": 0.0117885,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3517,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0117885,
+    "upstream_inference_prompt_cost": 0.0087985,
+    "upstream_inference_completions_cost": 0.00299
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 224,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

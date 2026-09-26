@@ -1,0 +1,107 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "sokoban",
+ "data_utc": "2026-09-26T14:19:19+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.8,
+ "uso": {
+  "prompt_tokens": 4358,
+  "completion_tokens": 205,
+  "total_tokens": 4563,
+  "cost": 0.0129435,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 4355,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0129435,
+   "upstream_inference_prompt_cost": 0.0108935,
+   "upstream_inference_completions_cost": 0.00205
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 140,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Sokoban’s pushes create dead ends that delete-relaxation heuristics can miss. P07 combines novelty search with multiple heuristic-guided configurations, giving it more ways to escape misleading search regions; its lifted option may also help on larger instances.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Sokoban’s pushes create dead ends that delete-relaxation heuristics can miss. P07 combines novelty search with multiple heuristic-guided configurations, giving it more ways to escape misleading search regions; its lifted option may also help on larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790432354-Jot5RL8LAYzezuLkKQOA",
+  "object": "chat.completion",
+  "created": 1790432354,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Sokoban’s pushes create dead ends that delete-relaxation heuristics can miss. P07 combines novelty search with multiple heuristic-guided configurations, giving it more ways to escape misleading search regions; its lifted option may also help on larger instances.\"}",
+     "refusal": null,
+     "reasoning": "**Evaluating sokoban strategies**\n\nI need to choose between the strongest sokoban options, like P07/P21 versus red-black. P07, with its lifted additions, might be modest but effective for larger scenarios, while P21 has a novelty portfolio with multi-valued options. Although P07 seems to dominate P21 due to its lifted features, there could be overhead issues. P07 offers broader coverage. I wonder if SAT could be the best for Sokoban? Novelty strategies generally help, but deadlocks might be a weakness. I think P07 is the safest choice.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating sokoban strategies**\n\nI need to choose between the strongest sokoban options, like P07/P21 versus red-black. P07, with its lifted additions, might be modest but effective for larger scenarios, while P21 has a novelty portfolio with multi-valued options. Although P07 seems to dominate P21 due to its lifted features, there could be overhead issues. P07 offers broader coverage. I wonder if SAT could be the best for Sokoban? Novelty strategies generally help, but deadlocks might be a weakness. I think P07 is the safest choice.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9RmswLZ3o1GYbMYw9YQoJMC39zjEB_IW9m5-SmcVXJssN8TJGNlBD1-uBpVkCcWL1ygdSr-gGL54vkRrmrjM-2047iBIVPcYOwd7ZHzcaorPjHqgDsTg9mBralLAdb1zBxIRHysHOc0hpK7nKCeO8tShIXb8B8wp-nZzUcLevKUxFIN7KmPGQEoiM_Mi0yJQioWZhk5tuGidY3PasqvS23AFxqyAUQPJ_HLvvKDPoVBclmCnCtOxxmKZsZKYPKubP-145iytQJOZo-iyAtuVQeGiGZNDEcs4jcgD544udHLX5GPqEHlKdV90ym8dQMprCdHYOPAro3Ap9tGHNHy3drVE5_6RJVo5iEFzmR5-j5r-otW-8OdnxiGgoRo7O3eIz-1Tc40XnNPUDNnW0j6yn9dMgyEfFfg9Zyil-4HchWZVEmiWr4rg04kknzBypwoCT0m_R_bxebBWTBqL_Hgo0GKFbldehnsFnfCEycVrjhll8RuHe5xRLX9qowbDVnl0r_r_vZnD80U3fQsX0Kl6dKDlB1DnRrG-2ErX1vPD7Xp_A27Kj2cEJbzgZ5ud_AuSp9b1iX1mYZ5ohyBSJgObvZ3g3vT5KZf0GoWmoTGhnHypKpfkoK-Q_Q58Q5dRlsSAet0NH8Tw097J3N15bQABQ-ezhBjrwx-fkxuPqBRFyWnJHcQ_zlASESb8WnvQUBBU_eV3qhOyO5exVSPorD55XpaO7_2l1uxhcPtEsEgWVWwaJExuzrC0Jk4y8ulNdj-kX9ZLE0H5aY6niZR1jEVf24sWmoxRh58yBR5jWjjeVhOnJoPCq0LdVs0SUNDwa2oiYS-YRgJiGqRc_SMqsmLAtnbTUbHjvAhKGx9jA2HmQAQG_ljWnMrxWirTAWGB2POnAZWF-qrV5ukuw7-fJ5YFzsBXUQHBYEyILoAB-hoOIRS0jjfzF9i30ni5Cgp8QwR-zh-YcEwz4sNzuFPGE4JbXsoHpANyO-t7fbJ5tTsIw3yBIm1rDtQt1Hyo_6OLRDeeCe--uyfA9Ju-XqhdYD-T-YpdsyOiKnOmPGk_oq6-ypTW9jXMOyIIqfkHxMB_9uh8W87XbiBxPBpCqoCMx2dPNHd9IJFVvTtcxln1_gAyjdDHwr-2R-2GRLwOUVKcIomjcYbfLoy1gMEyvGNP4CzYlmhKLGAXXTC7DtzE64OOE_-FJLuVk0CLvePKpNJK5J5NgLud8nutRmIZ0kwCQMWe297Y-I2hJUGlXCKm6iAKvoJlW05o_f4LF6kRxDvNolKA4yD3_SrkwqamhyT8f2mQd6pHTs695O30IvCy65Ge7M6-lE-kLvnWU-G8QjIqykPyTBZbGjCohD95tpWM68JnYdPa_PE8Hk2XBSd3w2GcjGwPiMZDix3ED5s30P1XKflXliqxqiDbR9q2FfhDmLTxg8AalDAEzuzsyd3xxYgV1YMRnUNIxr1f6zKBJhCTolFnB3sLV8UG1LJvdW-IQVJNJpjh0B_iN2t_3y62_7JBnDAIZPlhd721yRIhDYwaBAgL00HIoHSRkkKMPggAgcPW5w19Uz9igv9g1LVgNwdlQkEUTJTDVb4XpV9T8RWubdv_u2pXBM9r7NTOawCEmK97HlA61tcqe9SdH_9QGdLZPoxVfZ-TyXE03OvoSXXJE8vu60GddH-MDWgR0FY_0nmQHI8p5LWq2RIjavd2EE8yVD-Zrt1NxEvgJ_HFmfbOUg2GvMAfsxOX7XZb26SxjxsSw0t6NBNNTK9aqV3SmEWN4nN2ea9YVhYVu3_zVGeCwMcc7IigdKGn2JnEWVmPY_xxak_O_9hpqIrAor_hxeMi_DaPeTtpPC1yeH1AWfWEn1FQJDDVZMYV07Bm-1Q1uOas9Wlw0E5563Ff65VIRKpOzgACTvZsSaPc6nrlzTdmbDrgm5a7AorfnoHlNJuXYsu2ny_pd4Hvic1M64ZPU2-A_li8kddiivqMXahX7vjCepHMcXstl4MgmVH3CCntfiVUHaR_6zbXLjj_kCHjnKZkHRCIfJ8rng1O1Pg5Vk6Rcjf7LEV6blWT1lm2BI_r5LUUooQNwPwbB23nJ1-1eP7Tkl76OOXLioO-ohkLWMjPeDSNRMhDJrrHXdHOmtvFUHQPo3SXVewI2pL2Dc06NwNa18l76SSSJ2FUvURi9j6jYhxVtKyIEMwl0up3ZNFMX_e4nazTg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_02d668acbfefbf0b016ab7d463113887d1b7a0d758f3fc32c5",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4358,
+   "completion_tokens": 205,
+   "total_tokens": 4563,
+   "cost": 0.0129435,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 4355,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0129435,
+    "upstream_inference_prompt_cost": 0.0108935,
+    "upstream_inference_completions_cost": 0.00205
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 140,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

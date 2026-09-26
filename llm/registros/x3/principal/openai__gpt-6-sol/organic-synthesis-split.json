@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "organic-synthesis-split",
+ "data_utc": "2026-09-26T14:18:19+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 4.4,
+ "uso": {
+  "prompt_tokens": 21108,
+  "completion_tokens": 189,
+  "total_tokens": 21297,
+  "cost": 0.0546585,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 21105,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0546585,
+   "upstream_inference_prompt_cost": 0.0527685,
+   "upstream_inference_completions_cost": 0.00189
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 133,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "The domain has many reaction schemas and long sequences of control predicates. P07 combines a portfolio of heuristics with novelty search for difficult plateaus, while its lifted configuration may avoid expensive grounding on larger instances.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"The domain has many reaction schemas and long sequences of control predicates. P07 combines a portfolio of heuristics with novelty search for difficult plateaus, while its lifted configuration may avoid expensive grounding on larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790432295-xPELr7ReOedvFPajJKoh",
+  "object": "chat.completion",
+  "created": 1790432295,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"The domain has many reaction schemas and long sequences of control predicates. P07 combines a portfolio of heuristics with novelty search for difficult plateaus, while its lifted configuration may avoid expensive grounding on larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9QqIZ2Pqw8JihSPH3cO8PP0PGjryP5pERXaQnDqBs4qmIdxCppucFbtQep0_6WMEuxUpIXgijlG4_SjjYKQ4_fPeiR8fSXpmxlDc2kG4NAQ0woBcI1vUPjJHaEz0ScOUHPuRFSDc6ZqurM_UYybkJRX3PBvq5uEkdvtzqPxnJgGi9P0brzsOD2ETaxbUMmkvohBgXkROa0REMs64MjdsNog8UfFzkftGJvVKdeokRASShK6z1-M9suH5Oqw5gqpIgssH-jkBeJUxcFPEfflKcPNZHzPGmLrllYQHfGBy0pOLRXXYPw5NbS_UCtUjfzLKeBT1sPmxroCZz-hQWgnnEEyP2VPrrQgEhnWGAw87slpgCpchUGKBEAbdkmQW-LnKk4ojvYLgh0VLlTlf6v7eUzxBfMNamQah4kXgaBJm1tL93dDcw5RO1YueWwecBtgRKNMnvgjw6tJbNp4fI_7EpmrDA2wFzT_nZGSXBh74Dy48gDxharrAYdO6k2RSx1n_c7Mk1n97cssJ0kmZTLntoyN1BwtxEYY9WibiZtxNKQlP7eCt2lSe2NdgOzYEBpxGAJu6OH-yUwwbFKAmpetpvEIO3SRA1claPTNyCvOlAy8lyY15rkch6ilXsr4n8LQXCB2ApJdCZ_ZfmuiUxA0QDeCIIPMFcMhaTSaqV6yfQnMTLbXXwS0_OUCHjy_IMXgfgaecOB9iROtswqPD9xoJl4x6QGeyp_Ft6i8a_KDKlFhcmNwDPDcnblDheSD_GaOK4dEgJ2Ee2sKx_tJh3tJPKWPUsyfVvo12PyWxITItHeH4Aj-JNa8orC7Viou1Nb6ESL3nmLLOP_Cp7hn1n104YCQVRPM54HAYroFHN0tZEY49RkUIQ6WgUea_WnGoN5YA270Ub1IT1yctCA6L_i4Ehujhfr4NjZJa0xm_f8DqW8BAu-KnUCL4uun-DQF8vTdmuXMTbekeDaCJFBn7s2vN4-XBfZG2N-MYWyy9Vz6Wx9BPgZ1L8bzZpLEgcEDor3drET3LiIhEgsStuQv6jUbEqXQKzC6A3_wmxNFnluWZfq7XtH6IuYl0W8i4ol6a4-FUoZoFRJrukyRnrp5pmW5b7iQtsfpyrEasxIGdnpvt-Tool6iJMt6drw8EUlTHRjDsq848x84LKDzdX1d69Ir8hflu-uDvH6Si66qsS6JXiPFln5C8zaHPERAbj-snqUbrulT6oFUwFmAzYpbHQrkmyNNeO9UsGB40wCa0u9YBzL89evVpG6zR9jo_jNI5zqLw6a0oShtN6MdxlePWmfiie7zUKFSCRorEYAEWRcPiUYs42qr3Ak_uh2NLNGXvetEhbZvYpaxQy8h76FTutnLAu0Ie27MgZS80RtcOX1XUD5i8PGgf3mCaiuJgjGXt8wuYld6nWYPKVZXDx--OLAK8pJ-mLzeHzrBWNPAOINvVgVibPw7kRxchOZ3p7ZNaYGtGrbpOtAO7ConSk4krsQ3_KGqWO5MiZeYWsR9iG_nrJI2VR0C2LWy-UjzHTjSMwZhvN_bMTNVHJsylBf-_I-LWs_Ntypc2SpHbVcjU1nB1hLL5k2nNj68ARoJMx1MsGgT0AOIhY4gsOztgxEDw0UWvVv0C8TwQKFHcmv02nSq7fMSioHBiEaMq0EwCYkwxMcbpnUvaUZarFsDygnYO3ZDSHdS4iwuf0BHgHYG2hc3LO3w0rdaKyY_yNcDsT09ucIVvmlIpF3mCeJBG9hjbE-Y7eJlmWxW-9_mf4zQDyPOhWcA6eKjI7K7VcR4LV_3HvSuX3QAGmMWqp8nOpmof7AKtAOjvyLY97Rrt8W7opWEbef8KAZYbYI6bWdEt3hgbz5fSa09LUDwLrlcPw2WzhMtdGFvOr8zrvDNWSgI5aU9Q1itox31ZcZV6FmOqyBCP71k436tiymNIK9HZ79iKDaSKQuHLPFvUC6l0zNayZLhgXd0Mc25TU7SJOfS8oBcTxP3otmyVgHnWgKP50GwaI4yj_6Qum2fYXBa1rlcFYAxrtxiwQKQwmFiFTgXF1QYl3cge64GZzkV4eMx3GG6Y1A0ehwjcGJ45hZd252sQmuzHeGv6pXB0URljoL2cJC-_THsVkPxgA8eXA0KqBU-lwQfdzwZd8Atr3udrNYkFsdDW7jyI_EDXJ8GPxfpmp9Kw1icjshUXWdVFDBDo4bjftrjzGo5WPFJ9wLY04E--qnkgx6dt40=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_06c611e798f1b952016ab7d4287f5c87d189640e2d05877a7d",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 21108,
+   "completion_tokens": 189,
+   "total_tokens": 21297,
+   "cost": 0.0546585,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 21105,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0546585,
+    "upstream_inference_prompt_cost": 0.0527685,
+    "upstream_inference_completions_cost": 0.00189
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 133,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

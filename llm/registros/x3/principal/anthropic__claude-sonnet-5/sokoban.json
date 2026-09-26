@@ -1,0 +1,92 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "sokoban",
+ "data_utc": "2026-09-26T14:18:05+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 3.0,
+ "uso": {
+  "prompt_tokens": 6326,
+  "completion_tokens": 115,
+  "total_tokens": 6441,
+  "cost": 0.013802,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.013802,
+   "upstream_inference_prompt_cost": 0.012652,
+   "upstream_inference_completions_cost": 0.00115
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P08",
+ "razao": "Sokoban's high branching factor and deceptive delete-relaxation heuristics benefit from partial delete relaxation (red-black), which better captures stone-pushing constraints than plain delete-relaxation, improving search guidance and coverage on this domain compared to portfolios or simpler heuristics.",
+ "resposta": "{\"planner\": \"P08\", \"reason\": \"Sokoban's high branching factor and deceptive delete-relaxation heuristics benefit from partial delete relaxation (red-black), which better captures stone-pushing constraints than plain delete-relaxation, improving search guidance and coverage on this domain compared to portfolios or simpler heuristics.\"}",
+ "bruto": {
+  "id": "gen-1790432282-VoPyQMHIst0DpkBDjKjr",
+  "object": "chat.completion",
+  "created": 1790432282,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P08\", \"reason\": \"Sokoban's high branching factor and deceptive delete-relaxation heuristics benefit from partial delete relaxation (red-black), which better captures stone-pushing constraints than plain delete-relaxation, improving search guidance and coverage on this domain compared to portfolios or simpler heuristics.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 6326,
+   "completion_tokens": 115,
+   "total_tokens": 6441,
+   "cost": 0.013802,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013802,
+    "upstream_inference_prompt_cost": 0.012652,
+    "upstream_inference_completions_cost": 0.00115
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

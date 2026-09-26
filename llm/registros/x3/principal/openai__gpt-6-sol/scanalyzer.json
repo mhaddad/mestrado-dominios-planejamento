@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "scanalyzer",
+ "data_utc": "2026-09-26T14:19:08+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 7.7,
+ "uso": {
+  "prompt_tokens": 2375,
+  "completion_tokens": 417,
+  "total_tokens": 2792,
+  "cost": 0.010106,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2372,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.010106,
+   "upstream_inference_prompt_cost": 0.005936,
+   "upstream_inference_completions_cost": 0.00417
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 342,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "The goal requires analyzing every car while returning all cars to their original segments. Delete-relaxation heuristics can underestimate the difficulty of those swaps and reversals. P07’s novelty search and portfolio provide alternatives when heuristic search stalls, while its lifted configuration may avoid the large number of grounded swap actions.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"The goal requires analyzing every car while returning all cars to their original segments. Delete-relaxation heuristics can underestimate the difficulty of those swaps and reversals. P07’s novelty search and portfolio provide alternatives when heuristic search stalls, while its lifted configuration may avoid the large number of grounded swap actions.\"}",
+ "bruto": {
+  "id": "gen-1790432340-KHHLjc9LH9Pro22dGOB0",
+  "object": "chat.completion",
+  "created": 1790432340,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"The goal requires analyzing every car while returning all cars to their original segments. Delete-relaxation heuristics can underestimate the difficulty of those swaps and reversals. P07’s novelty search and portfolio provide alternatives when heuristic search stalls, while its lifted configuration may avoid the large number of grounded swap actions.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9Rb43bsF8MXjaVeSR1R7Blua8EQWe2dyEWcWjtAXozlHB1QV7Q9EKj4nxXusO3-qlMETWTHiHHzbN07MdkTU_ZqSYs-rYb17ynY9F98eAdSzPmdULYb3FCeiBZ1WNgFdgzPzrQLnhCCCuJA0E1z0dbX2Nr0S6sqLNUYkWDVjmFLOOmmAwkmwpyakVQCfCydxtk1pymsUySsAQ7dXTw2UIhAg6k9fUMa73s6wdHl_TTX_zWyPl23bDSG515kejT8Isv23cFsTDrE7Xum3a-nkAlx-CsUDDaBgL4dQIEkkLJ-bJ683fCUhoC1twlykE7jSbt6MQTmLzi-fRPjh_omshl_r5SxMO1rhaD4hwbZ-gSlvgAfy9TxpbT7U40I-KP7taTa2ysE014TX_IPEOqytMV4B-rUcbSu6FY6dGBGHwNRtzYLm4olShP51TFzpJ_Ow_3D_Imf5pvCI4n7PbWxBBO6AnQ5zX1kDDvfXu7xuYg2sCE5_gdI_WVEhtU6K5d4Jw14bWEsKB5u6Eus6P4hKob5CKS-2MyoUimOB9ID9K4yAk4RCyS0K0hXU5yknvp9CuiAdwZNmHaApDWY6lXVibdJo-1rKpUN7p1nyIoQyD1vtv2HkqD1tkqh8zHyDwZepXr0rchQaYp0q8kgaVFXNMoX-xmqH24bGYoxfONN5v4bAnbqEzphIFGW0EpDnMyBXJrf3xdWGWu79kG7zIC1pm2txBqOYXJfx1Vunkn9N13KLa7Yfn2owjiSbsX_nlw4Ic5Tput8tJycS5N-Ymc9Mp9U2t62BYyqqga1TgDnokJunc4xDAxqSasMexRQ9E-Mp9Hf_lGOFQouhj9oo7qhnT5ckEMQMDMXpyxIVMtK8b_t4IXV1BikZS98g5fDC3uC6HP7tOXjAdQ3F8i1vzGX3EkLWeKGfhOVinxQLOWbneVHrMfCIfq4yNa6VfQNRHwhWiwzm9nno5ihEVzXQo8iDUDc--jjQWZkJMINQRPHZZ2apmaG09iLiGYEKHz0PmRAw3_m3UyFze0z3It3dJhcNNdUgIOgsDieINpdaW4FfWzTX-Y_aGi0cOuNaPlXYG0xWCRHVSGvVvQDJ5Rn3B9xuEUTpfvEPJgf8ac_M9rgSu2KgVIg-9i-i50pJmZysnmzrIzPTq6c-26F78IKsisBSRYaACAEX_xTfk1P1CF0INuHKvcWi3lvBvxT6zTF50trnXM-U1jIqp0CmBieVas2V1sTFlvf4_PbZERgegVnKIsq9T5CXvQEMULK-j8jcLRxzl_eRhpz-AOdgpteywKbPGs1ROQO7NhyQKiRGbpi5ez6VSZZRHXCMJeDJoqaKT__cs51HAU5s21ckCdZBeSFpyVFlK3hw2kCHZfx4DRidCBhpfmLimkrfZTMa7WJXFbGGmJq-Gom2oqdED9gj_X2DgWFEmNqSUf_ZMLH5Z2NpLZeI5btyVQMfJ124Sk_sPtNKqEZhDPDswkxNplvzdLY-qbOUEZSUYK6S0iwfvxCi8RlbW3HMjMjyNH2v1LYuTinbjgYw1mzEeFxrCZz26OW0zbkDti6wlZr9DM5y-rZ1Gqn0PE124qNjx_hZ8cAyIlQy2Mkfqf8Mq6xyV_kiHlXUx67aSc54x21RTadCxuQJarqKlY5KDfZoxltBZaYBwgJ3wcHEnPxNSo7UXw6lVHKJts8x4NPjxWgs-Wm--tkmYnUa198OvBNdK8NqJorf95P_8qp27xi09h6s-ZdtoUUfCrRRLZd3MRQELekImGpc1S_uueM6sk1b0A-1KkGYlazujMF9LHQ01QCjr03Z3OPtlQq17fpYgbOmvjtFMtzWuisuS8W19H2VFgLuxqYNJfQ7LKyj9NUW6LfTVYlBc1PZ_USdm3HN2vKC9TV4X5jjyFxmW6ULxx3aFtxcpkNTEBkw_2ItnlSR7LvN-h1OyBaHvw00KGH-R-0jD9qJ9kAQlXQ-j_e_J8cmaFwjL0Cl1YMBowmmO-6LUC_SNHUtRdAGRfubgm6qHixJwGRsUb3pjvepXUkyIvkttB2KYWEukDhvdG_vSXMAoFOzzszLEkX_Pr-D2aQzYzjZFrzf2UVK4KmuUM0Rtn1ATwGV-Ry5eMNVRg3jRTc05O27hDDUMi_zf0M38Ym-uW6hITeFTOM5vLoX9jwdSByoZjt_8-iEnIkIJ3RxOyjP0HyzLdLtRv-1LDK_ecPRxpQVdm1vsAiC-JG5IzOFZV_6ox5am_jXMlJ7Z_44V5IsYbS8iApXMfcjGr9K0hqGBSpH8ZHs_NcpSvU6qcStRWuL9kBL5b-3XzB7UIci6Bv5ZPig7Gnr1u5iChAwiVW2DsXzLBxkJaIZimDsGrBxVaFfzeDfkB9iPQpponrbXt6eb_8CGhEDJ3LYpEOHGRd1KV61pE7xFXEjIUujc5vJ5uMKtIWYo2xFQeTYADJKrQkpTrcUvfDvrF-7ZRkCuB-IBmR0H6tkMmJRltggYU56xGTVA0NWYdDHL2hJRdOg5XTmCMUPQiXAiRTH2iK20xIS9mh8vRqb-Mt-Rqy5Ep0XFV8QfxU80zZQW2VLD933pPHDDJ2PwbCf61rgWJITdVIKarh88kgSL1kTl4_PjpF1HjzGEtGGLKUgWT8nd-Zq1weKjknEVCg9MAlNXWZDw3K3cKGX7Zne24CSOv42Y7hPB8OeWQiRBkabvm3PKv1GYhLY71QkNhYUhhj-7L8_1lofUr6zUBDXUViYKf_dQJdH5Ol_S4o-nMXxkSJoFmCQqlMTKoplplWHQ_tDtCpRFq3UaqMzSPf5GbfadKOllPEHD-rVczdOlwFddmlRCzakO77gLi_i93crzHKig7uRQ3d5OYHDKmYg0Y90k_lhvzWa4ZwmmBWFsK729Jh4ZpM-EWILud6sZYYC_YphaGGz--XClIw2tef953nKFjibSpE1ELKiKQhKbEsuwt3P71lrx6zNl-WbKWZS8Se0HZp3p_22CwPb5i6DRT9toIMtAcD1fG1bLM9AuFbX5h65bPgmVG1QgQgKsxuWFpcTUldA0hSyMU01TWyJMQKGARk131bPhWVFHS4KdGNNz358WeLCXL87aer_7PPgZJUAibIpxShJYP4X3JZ7gvkK1GigN3h8vS0gzY15oJ95_jz0d0CJ2XPeygcpdUgPaIHErc7k4QYoZtcgwBa4AHAAwWDhKlbMa6xRbM5TK-K3dNew_-4Fo-atj9dbOJG4HslVhMQkwcilapfbAahyIlMg6FWzTWjiXcuIPEiBs2iV1xwrcGBd5nsqJIZ0QUX1HAwsR-BxJtEvYzTPpVdrabkeiycAldvqimehi45MBd-FIAPBoulVet9-BJpfrtmpZhzYyP-ALC3gvKHxCkgGnPK5dCRDL8V2_1d5b9TQAsyTBJSkTztGmJXXKfOMUB6-nnsyTdJ_eVVS4zZfzAWP1gH_9L9a60as73yoPqFme6cyqs3k0OIQfVEYbJOQj3IIkON8VsYSm8b68-oS7pNYp7AkZhTQzgwQ5FT683g4053T1oLUukehr5egQknKGUUwShVZrO8yTT640MqN8ciZweosSxxitQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0518e3e1f0a51ac5016ab7d455c50087d1baa7dae4f1cf7464",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2375,
+   "completion_tokens": 417,
+   "total_tokens": 2792,
+   "cost": 0.010106,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2372,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010106,
+    "upstream_inference_prompt_cost": 0.005936,
+    "upstream_inference_completions_cost": 0.00417
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 342,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

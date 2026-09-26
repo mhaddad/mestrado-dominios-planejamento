@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "depots",
+ "data_utc": "2026-09-26T14:17:03+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.8,
+ "uso": {
+  "prompt_tokens": 2740,
+  "completion_tokens": 248,
+  "total_tokens": 2988,
+  "cost": 0.0093285,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 2737,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0093285,
+   "upstream_inference_prompt_cost": 0.0068485,
+   "upstream_inference_completions_cost": 0.00248
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 186,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Its portfolio combines heuristic forward search with novelty search, giving it several ways to handle crate-stacking interactions. Lifted search may also help on larger instances where grounding the many crate, surface, hoist, and place combinations becomes expensive.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Its portfolio combines heuristic forward search with novelty search, giving it several ways to handle crate-stacking interactions. Lifted search may also help on larger instances where grounding the many crate, surface, hoist, and place combinations becomes expensive.\"}",
+ "bruto": {
+  "id": "gen-1790432217-gvtHnoQ5iqYnInSMx5BM",
+  "object": "chat.completion",
+  "created": 1790432217,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Its portfolio combines heuristic forward search with novelty search, giving it several ways to handle crate-stacking interactions. Lifted search may also help on larger instances where grounding the many crate, surface, hoist, and place combinations becomes expensive.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9PeUaZM33DqsHFmKPv_fC3pOzeByDOei0Ty7qDKOb_KVNPSPgA04nz_kKqvoLYmnOEn-FiFkmG3bkFoRsyRlb-F6M4oCEBIPK4_eSz-6Q6ZCttke4wBqYLI4CsroNrAIh_Xpop9xSjgqF9MpAfslHw7pKUGb8IKFSsta7asnkKj_B-iJrMruRoyEf-GPa74Z9J1YQ_UWhxDsKfFjYiQ1j4yL5XmB_Qv281qqkPYGV6H1D8rhR0rRnaJPs55f8PKWiYB46XgfTVXu6wpgDklVG0J9AyGxGziH1WbC-rlB0V5kj7TOBwfSeKrpXYuAGhnyjzrsKlZ_ym410ybuiE1UlCPYlfLZl0uahVJa9SGLQCuEpHjla2LYyGJtM-go38h5oUODKk3wIQEP_qYS21bU8H81z7XeyrrrDFJycSFUzPqksTA9J3AzT2zJ2XIOGBKkakaQ0QVAymRWwt962vZZ3MZ2M1rrCWsOhB10ZLrpBnYHH1-iFsjiRzgxvGdk__OxyMYjTSz-PVU3xTbfUL6Zq0yiCHe0TpKnQKBWDJ8JBxDghuaYQItWgIvtET08s2QTyS2epvMq9wt6FGK8tByZDHhIt8KYVeqdoVgwZwRtObhsntfCH1_TouJGPGzPVeeenbXDOJeHoCVR4UOw4bu3cBIMAfqtKeBC7n5QCliWKSBN3vr6D9TrcEX0Cf0Th_66xk9K-RNiieGK6eYZFPnp6das23_Uoo6rW0sMx0pg279eSCkwqx4agzEAzZOaGoQuYsOMVxWYsyX6e7fQn4pwUcUTdde_h7_wiLLnmrNdsOajKKwHEzcdq6-tA5lgrDkBDGnnsd5pwCU8Gg_x6-ZVbp4d0Q1NlXKtREmrAZQWC7Mf14V_u78mQ1LOMHc2c6y9lqCCNeBJuoF268yh9oppRmHfvN6hTyaCUOAG_NuFLB5X4cqcIbkqQkTjXggMud1dvD0CkvwVyqLLh2hhTD3UQB9kSSuapMQQxXlhLotDn2vh7rMtsvqhPz0uV_WTDRjIrQI2ZecRYmWlcoDoOzu-u0AYyvm6AW8oqO6IbwBzXnbTkUNjn3PRokFdVk4t1USITNENLZLxisvCaQ8eez9ERUNfvo8AnCi-LIcKnlp6w4OH8xlY2dX4dmP-jOTrsU75QXCoQYE0hJPrE3wcRGTfC5PkDPbNe_YGj_sQNrkzz64k09uAw7eUTv05KO8VWAb50YfKHav_jVhPORFmHDHIbZMau9lC6z0TMNQ1wVR9G-6d-x-X5Z1dfXY9BvxOSR15QLhkMAV3CnimpeJFHNhcpe_Us3Uu2bAqKDERnTClo5y-Y_RLcyZ1Zny1a9KRGn7n12RPaQr7elQ667RJQ1WAPl3fdjxUEyvkZIo31AKXay7j_k4YLkmf40vspKAKaw-vvKQfwNfOzjZBF_I6xhqs9GKEydUzrW22JnhP1PX76PCnzecyQvWWP-nRmKkYSiBSewfB7ijEudXmjIzuVDjlkSG9sWyTRLndDMWHbu34mMWpP9tKLnb2LC99WWjDYIx0N2c0rI222YkduI2UXNGqDoeLaRl_ncTjn-lxonaYujAb-8wA865nrjBnhahNMnS3yY3DE04COyZtoVawZ25xffu-2lO-px4iDPA9AhrQALq78UefBArsOtiHAaXnGoSJ_Dw2RgnoAIbneJ7RePqBrR9smrtpphdVutE5OVkWWGsz4FTCzm5kM3Rdg0mC77BNAD7g4j4v0loIJ0JTKlUuvDFCDg3cvGECsNybHDUFDqDZZmrHVcOOtaZA_QlV-BFtXtJmRQTFy2NWGUUjymdre0xPw8ZELn75Bl9Dzn7GbpTAm0DkjuNzmeMTEIZKeXIlVE8MMojKDX3OeRFFCLYKWVOWhUJqcoeHF7A895JGFuuqQaJydvPNUvkbxkQUNh928ELLjFAMEoU9JR_7edrRl4xkZ6j5TMF5zqi4lgA6efU3uH_xeuGMlWyuCM34XU0MLdHRi3mZ5zWmlHuv7mY8GagBrkyPqFjLYYX1oaJKmLM9DKiqQOqObuY7Pne188spEi2cnsmC-SxFOfGAHFE3mC3wBCLZaf20KSFLzOfvBa7H5SlnNV410v-MWpZxRPMTQXra22A7ox0lZece2hwCcM-jd3ZcWILhuDAKngRNvywZi52uAf2otzG9wX6LSaQ5LuMcJtcBY1n6lR3oED6WzNNk17Hy2Spk8TvhmzW8cs1daHrHU295arF-6QFvGGq6ZqBvag7f1P3fiDz6IpShr4itFFGvBkYCVU1Tih9FlFEnpM13u9j6Ck8wptAQ3tTxdPYtkhVi7b_rpy5PgUUfAakIENNbLt2UwZYHNRsRo-D3GDniWxJIWaSP7DcIr5CmD-6vU5Ql4YEiZl1hx3wpqPhQIhvmzFztGNcqUsb_a_C7dS4V-zrxJ5FjDvkXW98iz3k2q8IiA3ql6JNmiRjI4SPGBwmFoizjqwVMQ2gJR3ZIuLnjIJqQev_HF8CHqpNY9Y0UuZ8RMW6_nPXY_-2BY3JvA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0494fab33c6f124e016ab7d3db31d887d19bfd21e9b06b498c",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2740,
+   "completion_tokens": 248,
+   "total_tokens": 2988,
+   "cost": 0.0093285,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 2737,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0093285,
+    "upstream_inference_prompt_cost": 0.0068485,
+    "upstream_inference_completions_cost": 0.00248
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 186,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

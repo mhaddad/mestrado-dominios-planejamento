@@ -1,0 +1,92 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "rovers",
+ "data_utc": "2026-09-26T14:13:31+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 8000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 3.3,
+ "uso": {
+  "prompt_tokens": 7230,
+  "completion_tokens": 146,
+  "total_tokens": 7376,
+  "cost": 0.01592,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.01592,
+   "upstream_inference_prompt_cost": 0.01446,
+   "upstream_inference_completions_cost": 0.00146
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P02",
+ "razao": "Rover domain benefits from portfolio planners combining delete-relaxation, causal-graph, and landmark heuristics on multi-valued encodings, offering robust coverage across varied problem sizes. This configuration handles the typed STRIPS structure and moderate branching factor of rover tasks efficiently, balancing search speed and informedness better than single heuristics or pure novelty-based approaches.",
+ "resposta": "{\"planner\": \"P02\", \"reason\": \"Rover domain benefits from portfolio planners combining delete-relaxation, causal-graph, and landmark heuristics on multi-valued encodings, offering robust coverage across varied problem sizes. This configuration handles the typed STRIPS structure and moderate branching factor of rover tasks efficiently, balancing search speed and informedness better than single heuristics or pure novelty-based approaches.\"}",
+ "bruto": {
+  "id": "gen-1790432008-4wprx4xzqss149Dvohfg",
+  "object": "chat.completion",
+  "created": 1790432008,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P02\", \"reason\": \"Rover domain benefits from portfolio planners combining delete-relaxation, causal-graph, and landmark heuristics on multi-valued encodings, offering robust coverage across varied problem sizes. This configuration handles the typed STRIPS structure and moderate branching factor of rover tasks efficiently, balancing search speed and informedness better than single heuristics or pure novelty-based approaches.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 7230,
+   "completion_tokens": 146,
+   "total_tokens": 7376,
+   "cost": 0.01592,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01592,
+    "upstream_inference_prompt_cost": 0.01446,
+    "upstream_inference_completions_cost": 0.00146
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "snake",
+ "data_utc": "2026-09-26T14:19:14+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 5.6,
+ "uso": {
+  "prompt_tokens": 3370,
+  "completion_tokens": 272,
+  "total_tokens": 3642,
+  "cost": 0.0111435,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3367,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0111435,
+   "upstream_inference_prompt_cost": 0.0084235,
+   "upstream_inference_completions_cost": 0.00272
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 202,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "Snake movement creates changing obstacles and long dependencies between moves, which can mislead delete-relaxation heuristics. P07 combines novelty search with heuristic-guided forward search, uses a portfolio for robustness, and includes lifted search that may help on larger instances where grounding becomes costly.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"Snake movement creates changing obstacles and long dependencies between moves, which can mislead delete-relaxation heuristics. P07 combines novelty search with heuristic-guided forward search, uses a portfolio for robustness, and includes lifted search that may help on larger instances where grounding becomes costly.\"}",
+ "bruto": {
+  "id": "gen-1790432348-xBvTTqoBdbmiJvneEV7V",
+  "object": "chat.completion",
+  "created": 1790432348,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"Snake movement creates changing obstacles and long dependencies between moves, which can mislead delete-relaxation heuristics. P07 combines novelty search with heuristic-guided forward search, uses a portfolio for robustness, and includes lifted search that may help on larger instances where grounding becomes costly.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9RhFrUjjYmqf5UjS1zt3yYtLFcrH6TZF0gY1fikqsttPTFS3EjIlHFpSW6mSbhNbU39ANvE2RCCAXmrzgCDQUvxZnJuvsNfbX5NkfsTDKZYzZnIGtbAYoSmP0MXpZk0cbSz5jUuzN5ZG83Rx0_SD45boU2po4JgTzjlNjwj5VLB_P_z1HaqaDWJD3qmuiCI4kb6JMP3Uuq762PIUw70WxlZRJnKOnAA3XDOwYiYKl9HzwkWBk37U6RGJO2pcCAd4YtQ-ckXCSioTqDVxvoHkUeoz4qAZ8yW5u7voSajmVfSd-h_zfactoy4tspvpBqsNj95vn5M_GwqiPJ91ZaKSkEaAw7dowNPHKNBKfTwVdMcSpFJtka7or_3ObS6Q7sI4gtIpVW-y469682VO6GP7drlvo9YUdBVxWljPKSRz8fgg4L-kg6Av4IhdX2JccbvULdCXbCGKQb7PDHjISLkNwCn1-HCZCD-O2R6F2aTCPWhchMTddzKdK10exn7z775VOERoncsC9snLRtcDA_fJLN0UJNkppEGA13WKd9z9LfvrRh8n7fBFJGutQBQLmtc7axN9BZyUE_TdcYv917SJnoBq6a49at2a-fZ0GkXoFJR6dUcJ2eSdHdqbL2mphsRfER_QuhUMbpi9DYay05AgxVIvbYnm_S-ORicwWJDa7sNICxR3JS2VV4Pk8PlD1rN2u_CyUOO0Ey9eZkgL35TGU_d7DJUqHQFFnXsmsPhFdevmmcO0t9UiMS0_cG6L3dAX3Omu--Xjt2p-7Y5sxqN1jPPU0mb9PRVrpGHUlOyu0MPQvInd8afUnHFlBTfi5wQBxFbNpDVBXvjRyi2nZUTFc_V4EzAYn6TAlc7WWBix0sveK0_6qFiqxYyCzuenrFU6tU2WSLsxM4M2dIKkoAqQJIGll5-aXyuDf8HTyr3a6mZQC98V9-bWnqCvtXRvloIwLazRV8uquvhK7iNwIfvSxoMVo5PG43JfXqvV2AkZLP-M8cn2_8_V79-JjcabUc19DeBDJDkqT1iS8ZGUbVVnAMeUwr7aUQp8UnRzcPmyeR3sg62EG8sepTAZZ--8f5pheNJEVLbhH-4CmOy6LFK8dco0f7SY81s5k5-ArgeqUNsQMpUtwx4T4G9wLWSSE0c6lDmNpXKhI7EKrCY4C0MCs-DJrO-4DImVF0_CFK6VgZnNjHM1EtCxNcjxFUst0KzsHglnC_VtWtOWKpg5xqqPsPlI2IuRZ2flsdWdqNqLSeeQGbrMfTn2mqDbggWZTFeiZteWpTyrRvsnIiCTS6ckpjIoktnD4FXWfzUOF74JXLK1rYFKiZusWpvgdZVAbvyvXXoTYjcyO_KFAk5xT0JKGhHwb-gqm9l0fb7AbDepioGL3u9nUzxNpDbdSpgwZvF8i_JEkvtcsngoTFHDfd-N-lsPrQjH2Y0e1BPCP5BNjK8IllIv0-seBs7sJe_9nMnG1n1sefAXY2l2RHXPdIBHuaaFN29QOusX6cTsjYt_Jcmn3HnQUmvDKsFDwLN3yy7iy2MOv9gA-UCWOOakTy01FpdfoiiUm1bs0U3sqNm0xbVwfwXSKgStjMEuj92uPcZDVslcK8hr6yr370zMK4N5a5KTIu4RmFfwTgBhKlJNO-wpVF_1c1lTvtF9okNsb4y_11WHlti3Eum8DSxfLm902rV6nkAluISYWyIjUo6tXYn4dEsoogyO9eTlA-YINkabn5PXbEnIj22CG03HgvVGPYm_BQIX5Mnxf1nQHslZO_iuElyCL8yvCV7I1_Y6c4aI2YTYBFXi_KcM4Ri6dy909kdn3GVC3rUzlNUHnKdH74zn4Hht-eCbTHPLhHy-MWNNF6267yrMaQ88Y51v-PqNBCq6WKSWN5cVl3vGykydO8bvFRki257MVkGvuXzQ2AXFmSQ_JXwRxjD3gy1BVoG0kD_EkhQUxiU7uugL8WmkHSXwZtY4WvpE-8MnP0EFQjyVa29o1D1a_CoUtsJCrfrhmjf2Ul2yms8IBeouF9iSvIk2b-1SufR_0CZrhWbPrRgVUn5hoqw0hNBAsv6NiHW_Iq5MPrIOuKp4qq9wHSaJPH1du1KOzUOo_csILvBu7BtBqHxjGHl4q7VGNFDT5Mz7lxRH6DDjL9Cqvda5d9RBIhm0C1bzDlWeg168FXrLZcb1Yf1-9XCXq0-ApFCxJXCtSOcawTS3pIRA8FcC_gWsFl8aysf1jLohHlpLsbsjlqYkJiR2dY87Ot5tmceKdl3qij9wBgdKb0CctyQj7q9Wd02aXywKJwE_dct5UbPS82Z8WKRM7PPHW1yUvSdJMC5660mVfbAHJXCXI4Q28lLiHCWOAbXsI23INnqDDZsxZ1-aYniYE1x-QMstPHrE_JSs0c8cI-TiGyHhrSuoprlgCS53o_VPvI4N32GYtnsbv-cJs-fW5AKAf_MYdIFaqVWAwUr1PGmZ3vhY08HiazArS8_s3EzIKYHWGvL8eQc5D-sjUbeebP6L_Uqrya65oGu-K6tvQkEf8jE5PxyceM6HRcxr4W9wFvgfOwaqvhav4DIaz8E.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_02b31a21ad26e083016ab7d45d7fbc87d19f07e7f4b965b7a1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3370,
+   "completion_tokens": 272,
+   "total_tokens": 3642,
+   "cost": 0.0111435,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3367,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0111435,
+    "upstream_inference_prompt_cost": 0.0084235,
+    "upstream_inference_completions_cost": 0.00272
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 202,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

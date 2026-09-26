@@ -1,0 +1,92 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "airport",
+ "data_utc": "2026-09-26T14:16:31+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 3.9,
+ "uso": {
+  "prompt_tokens": 50922,
+  "completion_tokens": 120,
+  "total_tokens": 51042,
+  "cost": 0.103044,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.103044,
+   "upstream_inference_prompt_cost": 0.101844,
+   "upstream_inference_completions_cost": 0.0012
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P08",
+ "razao": "This domain has huge grounded action sets with long linear corridor structures; partial delete-relaxation (red-black) heuristics handle such large propositional/multi-valued encodings efficiently in a single focused planner without portfolio overhead, giving best scalability for large airport instances with many segments and precise sequential dependencies.",
+ "resposta": "{\"planner\": \"P08\", \"reason\": \"This domain has huge grounded action sets with long linear corridor structures; partial delete-relaxation (red-black) heuristics handle such large propositional/multi-valued encodings efficiently in a single focused planner without portfolio overhead, giving best scalability for large airport instances with many segments and precise sequential dependencies.\"}",
+ "bruto": {
+  "id": "gen-1790432187-n13LMJbGXrY99Ykjihgo",
+  "object": "chat.completion",
+  "created": 1790432187,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\": \"P08\", \"reason\": \"This domain has huge grounded action sets with long linear corridor structures; partial delete-relaxation (red-black) heuristics handle such large propositional/multi-valued encodings efficiently in a single focused planner without portfolio overhead, giving best scalability for large airport instances with many segments and precise sequential dependencies.\"}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 50922,
+   "completion_tokens": 120,
+   "total_tokens": 51042,
+   "cost": 0.103044,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.103044,
+    "upstream_inference_prompt_cost": 0.101844,
+    "upstream_inference_completions_cost": 0.0012
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

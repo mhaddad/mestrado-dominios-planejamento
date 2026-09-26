@@ -1,0 +1,100 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "satellite",
+ "data_utc": "2026-09-26T14:20:10+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 11.6,
+ "uso": {
+  "prompt_tokens": 2465,
+  "completion_tokens": 426,
+  "total_tokens": 2891,
+  "cost": 0.010042,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.010042,
+   "upstream_inference_prompt_cost": 0.00493,
+   "upstream_inference_completions_cost": 0.005112
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 345,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Satellite is a standard classical planning domain without complex features. A state-of-the-art portfolio planner combining multiple heuristic search strategies (like landmarks and delete-relaxation) with novelty/width-based search (P21) provides the highest robustness and is most likely to maximize coverage across instances of varying difficulty.",
+ "resposta": "```json\n{\"planner\": \"P21\", \"reason\": \"Satellite is a standard classical planning domain without complex features. A state-of-the-art portfolio planner combining multiple heuristic search strategies (like landmarks and delete-relaxation) with novelty/width-based search (P21) provides the highest robustness and is most likely to maximize coverage across instances of varying difficulty.\"}\n```",
+ "bruto": {
+  "id": "gen-1790432399-tU9LZm7ypwbI7qS6keGw",
+  "object": "chat.completion",
+  "created": 1790432399,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\"planner\": \"P21\", \"reason\": \"Satellite is a standard classical planning domain without complex features. A state-of-the-art portfolio planner combining multiple heuristic search strategies (like landmarks and delete-relaxation) with novelty/width-based search (P21) provides the highest robustness and is most likely to maximize coverage across instances of varying difficulty.\"}\n```",
+     "refusal": null,
+     "reasoning": "**Evaluating Planners Now**\n\nI'm currently assessing planner performance against the Satellite domain and problem set, aiming to identify the one that maximizes coverage within the specified resource constraints. My focus is on understanding how their distinct search and heuristic configurations impact success rates and execution times.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Evaluating Planners Now**\n\nI'm currently assessing planner performance against the Satellite domain and problem set, aiming to identify the one that maximizes coverage within the specified resource constraints. My focus is on understanding how their distinct search and heuristic configurations impact success rates and execution times.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2465,
+   "completion_tokens": 426,
+   "total_tokens": 2891,
+   "cost": 0.010042,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010042,
+    "upstream_inference_prompt_cost": 0.00493,
+    "upstream_inference_completions_cost": 0.005112
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 345,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

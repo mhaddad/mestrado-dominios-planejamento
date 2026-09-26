@@ -1,0 +1,107 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "nomystery",
+ "data_utc": "2026-09-26T14:18:08+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": true,
+ "segundos": 6.0,
+ "uso": {
+  "prompt_tokens": 14548,
+  "completion_tokens": 211,
+  "total_tokens": 14759,
+  "cost": 0.0384785,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 14545,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0384785,
+   "upstream_inference_prompt_cost": 0.0363685,
+   "upstream_inference_completions_cost": 0.00211
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 143,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P07",
+ "razao": "The many fuel levels and static sum facts can make grounding drive actions expensive. P07 includes lifted search that can avoid full grounding, alongside several finite-domain heuristic and novelty-search configurations. That combination offers the best chance of covering larger instances within the time and memory limits.",
+ "resposta": "{\"planner\":\"P07\",\"reason\":\"The many fuel levels and static sum facts can make grounding drive actions expensive. P07 includes lifted search that can avoid full grounding, alongside several finite-domain heuristic and novelty-search configurations. That combination offers the best chance of covering larger instances within the time and memory limits.\"}",
+ "bruto": {
+  "id": "gen-1790432282-3IbI94b4QEIvnIbfke6s",
+  "object": "chat.completion",
+  "created": 1790432282,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P07\",\"reason\":\"The many fuel levels and static sum facts can make grounding drive actions expensive. P07 includes lifted search that can avoid full grounding, alongside several finite-domain heuristic and novelty-search configurations. That combination offers the best chance of covering larger instances within the time and memory limits.\"}",
+     "refusal": null,
+     "reasoning": "**Evaluating planners and fuel levels**\n\nI need to decide between planner P07 and P21. The fuel levels are huge, with 313 and a sum of about 5000. Actually, calculating 313 multiplied by 17 gives me around 5300, which is quite a lot! P07 ensures there's no grounding, using a width heuristic. P21 handles portfolio without lifting. I think selecting P07 is better, but I need to keep in mind the nuances of fuel management and flexibility for multi-truck arrangements.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating planners and fuel levels**\n\nI need to decide between planner P07 and P21. The fuel levels are huge, with 313 and a sum of about 5000. Actually, calculating 313 multiplied by 17 gives me around 5300, which is quite a lot! P07 ensures there's no grounding, using a width heuristic. P21 handles portfolio without lifting. I think selecting P07 is better, but I need to keep in mind the nuances of fuel management and flexibility for multi-truck arrangements.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9QfDHi2vl8ZS5z8YpFHdZLgb4IxCtCBitfC2jAoXBLP-fcCyYcJRxzkT5NLVGNWB1pfr1MtDodp5U2VQJ8NyVshygHJDl3g8ESeVxdAirh3On4T7-MECfMO1ptBUegSEl_8LhToWRX8k5LxlvTEbReJZLlTzkSfpwcY_eJORJI4DnNbNEJnBbxPyqIjnYFZ8eFiqvCFpZ6NuFqxqI4p6pvEBlojvZu4lorqIRJE-rq4pDjF91gpHLm0I-6TDcp_qRUiZK8TOj-N_sTdvQWnMi9nWYQNlo5jtkhPBQ_LYVjv9TLnHl8bA05Yjz7LKcVkFhyFtqf56gHZjkP5qwDBLZlBXSCXrtx80BWAN08QsNsbT34V95TjCf9h-YhZxcTBwY0ot4OjVfXPKD5G-e1vjw4FR4RPhaG6YMqXtDAL0mkOVEnqV2lTFlhZmxkI4pWiJc90Jv-t8dTdUXYNLFFEnNXmjA0-LXgZav9U6m1jt0jrOIhYQXz3XiJybgS0-3SCfPUXnjmd6oHkmfsHNKQfdHuNruLoDov1khsRd-ZIeYn_lE65J8KnYFAjKj2iIFVWf4tFqlSASF7HwhIoPvSUf5i3C4r6pm4dvpp_soXIIykEgDkcSxflsYk4x-i15O0-f9Ya-AAHRP3tlDHF5jsKn6IsIia-24lJyoJZZAio9qLpGJDw1F2VBN5Ld1lsbHxPUNCWQVLCbnlruvZnUm-1cQ9aZrWSEvz_Pv3S01GnMWm1Ci65qvPrQHKg2LzeiFvfZm3uYS9xHdCSJ8uBeWCu7sOxuMdWwmc-Gx7ta7Cd_rX95oyOaCHa9-qvYoWCQ0V9-EYG-f1XtVOtXo5zjwUwqYYiTmQzu5NKaFZxpDkok72oEDHrspRlxRv4U1LXcKYiZxBVkEe1y4ufNfJ-mMmELcXD1ra4ptB_FyCAORwHm0NXaUtd-l86pZqRiAoOJtUqHgP_LTuBY6KJmBfPiSq9Lp6-kPunGVZbEWgC0en3l66idErDA9-GPTuPiChDfhtkg50nrTgwXunsBhK_MiZinAFpqdM7GohiCg9FLn7GtadrM79gENuC1_CEo0NruUy3_KSonMjxgJikTiF_8Q9TKmuCF-wL04eIJL1J5_5uL7tmGOSQZjzE7EafCGB92IZX2iDXEqLKRgyhHYk0Aleerm2vvCCe5OjCKprrlI4oMUXlvijK5rppVB9WJiOCYPX3C_Be-ZBXiEgjav2nJV5kG3udv8_Fj3TLdXk4B0MXzABU028GCaQijrYEf_eJQh3fZhJjYfP1tgFdp_SkeDw3JkrpGhijI1t6ZYEWEnGqDxhizfSV6kHMRVPb10tuLw1pqCWvyqT-tus2IrTvstks_cu8e0O1cEboq8QWz1L7CGJHwExiQQYO57wW3YAzWkJXdYiSeKgX2EWN64VA6a0q0Zd9hLj3JT_kE8r8oJhH6Ik40mcSCHe0tfIDhz9tGhNNu9mDI-ywBhWc90_k5AGpC9i1CXoh7sdVea_8hGs1une4L_G8OSnlVdAh7qJ45DS-qgH_ZrwC-w3gFMm03Uob0UEbpx92RnIQgDk9O3aqj5LwlEl8EjfgZvc8bykOkieUdiC3UbkUgUlEoPoHTPRfYX2m3khFd9H11TTGpyCTC7UsghlhtWshDxq56yYkz2ogyyMg5chCzbqhk8NJrY0rWjwVV8n1_5HXMadnEEyB8DEcJOIqvXTl9TUDtgotVPOb2gvv78QSqOVDFWstHdH2i-EFIdtbIVqe7wNvNpudjvf3doVre9JtebwBbwklYL2wSlDVlCMqY3XHBUTYVNcby2bKi_N742iCBpq_3to-76vkMkr6uzm_2VsOiQQVQ0fxdDvMz38Bv7jkLo-36y2nHwuZ5YfHLHqkNyiv48SYoiY8QUKJGdm05KYxcWC5pz7iUedDYUL8lKEBJAY8MHyd95XeohtqyWeBtkdqnKIgAUWW2jwKq58FW5pQlGt9y0lR0XttSUwOp2llnJfSxi49C_oxxO_LJWF24iBYLuFy5GnpkYlcQS9tYxuzCd_dr2CThNu4YjWwYMSuXONVfowhmBqZ4npqKcxpHouECSgYjxxp_Iwzh3-mXNwoLOwH0eLPd13sZ0kf91hx5iZ8VHwjXzSvRg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_00dc3d04be632386016ab7d41bfc4487d18ad06055eb1b1bd9",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 14548,
+   "completion_tokens": 211,
+   "total_tokens": 14759,
+   "cost": 0.0384785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 14545,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0384785,
+    "upstream_inference_prompt_cost": 0.0363685,
+    "upstream_inference_completions_cost": 0.00211
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 143,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

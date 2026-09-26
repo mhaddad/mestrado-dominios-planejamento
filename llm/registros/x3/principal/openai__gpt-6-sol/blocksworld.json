@@ -1,0 +1,101 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "blocksworld",
+ "data_utc": "2026-09-26T14:16:47+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x3-anonimo-v1.md",
+ "semente_catalogo": 2026,
+ "truncado": false,
+ "segundos": 4.9,
+ "uso": {
+  "prompt_tokens": 1866,
+  "completion_tokens": 222,
+  "total_tokens": 2088,
+  "cost": 0.0025986,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1863,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0025986,
+   "upstream_inference_prompt_cost": 0.0003786,
+   "upstream_inference_completions_cost": 0.00222
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 161,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "escolha": "P21",
+ "razao": "Blocksworld has strong ordering constraints that delete-relaxation heuristics can underestimate. P21 combines novelty search to escape heuristic plateaus with causal-graph and landmark guidance, while its portfolio offers several ways to tackle larger instances.",
+ "resposta": "{\"planner\":\"P21\",\"reason\":\"Blocksworld has strong ordering constraints that delete-relaxation heuristics can underestimate. P21 combines novelty search to escape heuristic plateaus with causal-graph and landmark guidance, while its portfolio offers several ways to tackle larger instances.\"}",
+ "bruto": {
+  "id": "gen-1790432203-Dd1ZJ5crLdLkjD6eV8xL",
+  "object": "chat.completion",
+  "created": 1790432203,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"planner\":\"P21\",\"reason\":\"Blocksworld has strong ordering constraints that delete-relaxation heuristics can underestimate. P21 combines novelty search to escape heuristic plateaus with causal-graph and landmark guidance, while its portfolio offers several ways to tackle larger instances.\"}",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABqt9PPGLe0pZWvBoMKOlnTbO563nIGpg_Rcoj4Zq9wA1EgKS7XPsDMbV8Oz7yzsHUNEVB7e2WOZztB43mm3orw9U0I2jtH4iOijs0jbW0rupf00fjrOePCdasW4KpYDN_f9rd29zrmaanW1n50LiRJ-tc37AdHLOFuKQV_eDfO4aY0H9hVaCpfYcCZVYs_wK7ULa5NC54ESp5KSd2ULoyxg92kupGI1ScggRSQrv7NLcVI7OLuxR7UcvBPNefPnfQu_EJF0b-hI2iK3kmKelCr8Q-HvhJ-e6jBwR3IXfNyGb_kbpMdn6M5tD9toi5iwdIAdtCO2YaKNK7lkZGX4DBk4ETlmr3fk2ieX1LXtpi_tcySV0LuPiWbm2bunMF701HleHrr7q8VhyBOHIU3Kyqp0XyWzH6zZNRYEpxv1CvpgyDTFKL4ykBEZMKDq4lDDpBbL1et3GJMdUqMaLQEe8IpdQG8uHrA48mneoe7ZrWHyW_2E1IZkK_CUve1iHr9cT3TYtDapekpLni-PTFlymtA8UxZsLN8v7LYYJxLQJiHC1AGzba8_SM_BCv-gdTq7eQzsxBoWy57hWwnTyQ_CXIOkamU7qVJNfiamQrEEWmJH6PzYJKp4D04_oRJwbRG9sqj404DMh2ZbWlEPpA03zcjMENUricJFBAovSanwn7N0R8bMffQh2qJisKI6YdXs25PP0rnyiudxvKjyEZzvD527y0BA7ioUcM8MLsWftDbOPTqMW2eCvcgMofhEQ6Fkbq5RueJifZ1QNFJjU9c97H9_IfQ8-RifGHyMJdj0qsr6pDZFyNicsHJ7l8LMujMlOKlGBSbC9MehAM8pnKHNtfWH1n8rCuQ4yfIjaTQeJfFXCCgOarN-Cr3pc9M_SMNMdR_OlgGxbaXuGlat6ey4jg_lcqn9t_k2_LGiD1ANsXd3AWtg-4uwGWLj8SO-7VgKRwwwovcmL3GQMAiEr8SZUAhypjn2W6Ko8qBqZEW0UkrCe-4wYQKbRLW8scZo9doqimgNtsrU01d_NLz208fI0-brbaUJO5XaH_mTgqK9CC7zBHHGhycVMvXkGKXwKppKrxjYoZf95egrcK4lr0kzUF_jJxQZKzzq_EjKUC-ItpuxeUmMIGVPMmnCdb97FT9TtE0Ei5f-EDSd-xOZEDxDN-F7_a-5hUnY4vM04g14_atR73nQbIAX0ST40oUcm6_B8CnVBsU5Gwgm3Zbi5rT04YH5hJh0KMMp9GaT-qecEJ0UA2IevXYQL6w5TyoKq6d1ZZnVF2eHa8Ed5DxZM0butHh8b83NBQcu3hAAkoo2g97adW96hiO36iHm4d09I-xlbE0SbNfg117JHGjcFqiyCkCev7BP9VDItAbqkqzLzDLq3OOC1yHBAIrQIa38HCt3qivGI-tjMP_BXd_B3mm7xEkCa0XaFVVIGmBNeShVHV4GHGpWz4rWD7b9N-lfGLtghDIWCaCEIXvC7AWQHS-m2XhCM8XOr94pNLwJdGto6vmJZ_duHv8PhuUTOULz5V5KbOOnBpmwFBuOIDpWsc4Az-0FXvHlEltNTDQ6jkbFvIWJ91BqSEU9_hfcI_wuj-EiyInI5QOxyRy3ga89_Sof8tD4izsS5K5hT0V4FmYtIOc_x2GWfou3M1HLDG6yGn5BN3OFPqFTHG-upJFP8TdfuZatM_TmcjOgJUjvGEsqoynbeFAeTahnj1Dx2LWekxMqfepdT6kh4tuvvhzoZ_UN6_N9SaWXA55sPh3tHoR-X__qL80_7K_CcuwJ4T8kYBlMZKBxLKBjgzQ69VlmdNcDPdc3vJr-vKDqxJgDaIruuQNbNwGP7CyKW0NQv7sjuPDg-aqo8WpUSUI_FBLxJPzXcVd9L25alQNlN-MOncB2i1uDLKUPZ8CkxVnuMQHrYeyhrOzLO0O7pJWf0bJcGExGfv9LRjpbHyKDa-RZa8PencsLGPfe4eibqNpnQUZ2f8e4ybkN3VOz76zEwlapegKVmQpuBYzq0f-rkFE_oXh7iYrlUAp8mueleil7SiRCjicXLjuDDjf5x2iyoKvK_gSppxiFM4ZTTzPTCecbWE8Z-YvufLopqHiy8eJ6Mj3rwYMZ9axgpP6CFAAMEQaJD0z2PhNtqO1JIhLPUsu34j7QU-ROKWeIZYxl15_zMP4pzdcmJ3gSKtkxPHhvpE7Q7QSppxYNFcqpCMaDMGc3X9pecJ8BJTGZZRpi8vOG5h0ds17_GbDUj6a9HHMM9wRQSonUx_ZcCDprg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0cce76fd04303f17016ab7d3cbf19887d1b3949b9e1a5375d4",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1866,
+   "completion_tokens": 222,
+   "total_tokens": 2088,
+   "cost": 0.0025986,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1863,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0025986,
+    "upstream_inference_prompt_cost": 0.0003786,
+    "upstream_inference_completions_cost": 0.00222
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 161,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}
