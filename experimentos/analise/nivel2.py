@@ -137,9 +137,12 @@ def relevancia(rel):
 
 
 def avaliar(previsto, observado, desempate):
-    """Mesmas medidas de auditoria/scripts/conferir_rankings.py. Como em 2010, as notas
-    previstas são comparadas com duas casas decimais; empates seguem a ordem publicada em
-    2010 (`desempate`), igual em todos os cenários."""
+    """Medidas de auditoria/scripts/conferir_rankings.py mais a perda em relação ao *virtual
+    best* (R-14; medida principal por decisão do autor, 26/09/2026): nota observada do melhor
+    planejador menos a nota observada do planejador que o método põe em 1.º lugar; se vários
+    empatam em 1.º na previsão, a média entre eles. Como em 2010, as notas previstas são
+    comparadas com duas casas decimais; no acerto por posição, empates seguem a ordem
+    publicada em 2010 (`desempate`), igual em todos os cenários."""
     linhas = []
     for d in VALIDACAO:
         prev = sorted(previsto[d], key=lambda p: (-round(previsto[d][p], 2), desempate[d][p]))
@@ -149,7 +152,11 @@ def avaliar(previsto, observado, desempate):
         top5 = len(set(prev[:5]) & set(ordem_obs[:5])) / 5
         pp = [previsto[d][p] for p in prev]
         po = [obs[p][1] for p in prev]
-        linhas.append({"dominio": d, "acerto_posicao_exata": round(exata, 2), "top5": round(top5, 2),
+        topo = max(round(v, 2) for v in previsto[d].values())
+        escolhidos = [p for p in previsto[d] if round(previsto[d][p], 2) == topo]
+        perda = max(o[1] for o in obs.values()) - statistics.mean(obs[p][1] for p in escolhidos)
+        linhas.append({"dominio": d, "perda_vbs": round(perda, 2), "empatados_no_topo_previsto": len(escolhidos),
+                       "acerto_posicao_exata": round(exata, 2), "top5": round(top5, 2),
                        "spearman": round(spearman(pp, po), 2), "ranking_previsto": " > ".join(prev)})
     return linhas
 
@@ -211,6 +218,7 @@ def main():
             rankings.append({"cenario": nome, **a})
         resumo.append({"cenario": nome, **diag, "classes_diferentes_da_referencia":
                        sum(classes[k] != publicadas[k] for k in publicadas),
+                       **{f"perda_{a['dominio']}": a["perda_vbs"] for a in aval},
                        **{f"acerto_{a['dominio']}": a["acerto_posicao_exata"] for a in aval},
                        **{f"spearman_{a['dominio']}": a["spearman"] for a in aval}})
     treino = defaultdict(list)
@@ -221,6 +229,7 @@ def main():
     rankings += [{"cenario": "linha-de-base", **a} for a in aval]
     resumo.append({"cenario": "linha-de-base", "metricas_com_mais_de_uma_classe": "", "metricas_total": "",
                    "tecnicas": "", "classes_diferentes_da_referencia": "",
+                   **{f"perda_{a['dominio']}": a["perda_vbs"] for a in aval},
                    **{f"acerto_{a['dominio']}": a["acerto_posicao_exata"] for a in aval},
                    **{f"spearman_{a['dominio']}": a["spearman"] for a in aval}})
     SAIDA.mkdir(parents=True, exist_ok=True)
