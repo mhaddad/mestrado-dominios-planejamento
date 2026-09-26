@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.40 |
+| Versão deste documento | 0.41 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -278,7 +278,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | 🟢 EXP-16: 28 de 32 planos válidos (VAL) nas instâncias p01 de 8 domínios; planos em geral mais curtos que os do LAMA |
 | X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | ⚪ |
 | X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | 🟢 EXP-14 (anônima): nenhum LLM supera o *single best*; GPT-6 Sol empata (146 × 143). EXP-15 (com nomes): piora em 3 de 4 modelos; escolhas seguem a reputação (LAMA, FDSS), sem sinal de lembrança dos resultados por domínio |
-| X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | ⚪ |
+| X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | 🟡 EXP-17 (p05, 4 domínios; parcial, parado pela trava): 8 de 14 válidos na 1ª tentativa, 11 de 14 ao final; o GPT e o Gemini resolvem o Floortile p05, que o LAMA não resolveu em 300 s |
 
 **Atividades**
 
@@ -554,6 +554,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | Codificação dos 29 planejadores do Planner Museum na taxonomia 4D (`auditoria/taxonomia/planejadores_museu_4d.csv`) aprovada sem alteração, incluindo a regra dos portfólios (P1), os componentes inferidos (M2) e os seis valores novos das dimensões (N1–N6) | Revisão do autor (EXP-13) | 3 |
 | 26/09/2026 | **Fase 4 adiantada** enquanto o Nível 3 roda no GCP, começando pelo X3 (LLM como seletor). Modelos pelo **OpenRouter**, com os principais do mercado (seleção proposta em `llm/x3-seletor/protocolo.md`); **teto inicial de US$ 10**, a reavaliar depois | Decisão do autor | 4 |
 | 26/09/2026 | X3: rodar a condição com nomes dos planejadores, para medir quanto os modelos lembram dos resultados públicos | Decisão do autor | 4 |
+| 26/09/2026 | X4 em instâncias maiores (p05), restrito aos 4 domínios de técnica antiga por orçamento; trava própria de US$ 8,90 para reservar o X2 | Escolha do autor (instâncias maiores); recorte e trava pelo Coordenador, dentro do teto de US$ 10 | 4 |
 
 ---
 
@@ -601,6 +602,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); modelos avaliados via OpenRouter: claude-sonnet-5, gpt-6-sol, gemini-3.1-pro-preview, deepseek-v4-pro-0813 | EXP-14: X3, LLM como seletor, condição anônima; US$ 2,69 | Protocolo aprovado antes das chamadas; regras de avaliação fixadas antes da primeira chamada; respostas brutas versionadas; chave fora do git |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os mesmos 4 modelos via OpenRouter | EXP-15: X3, condição com nomes; US$ 2,64 | Única diferença para o EXP-14 é o nome e a IPC no catálogo; código commitado antes das chamadas; rodada anônima repontuada e conferida |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-16: X1, LLM como planejador; VAL e Fast Downward compilados no Mac; US$ 1,21 | Validador testado com plano embaralhado e incompleto; referência do LAMA validada; falhas de formato separadas das de conteúdo |
+| 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-17: X4, ciclo LLM + VAL nas instâncias p05; US$ 2,35 | Checagem do VAL reforçada (linha exata) e X1 reavaliado sem mudança; conversas cortadas pela trava marcadas; alarme falso do VAL investigado (meta satisfeita no estado inicial) |
 
 ---
 
@@ -694,3 +696,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.38 | 26/09/2026 | EXP-14 (X3): LLMs como seletores, condição anônima; nenhum supera o *single best*; escolhem quase sempre portfólios; gasto US$ 2,69 de US$ 10 |
 | 0.39 | 26/09/2026 | EXP-15 (X3 com nomes): sem sinal de lembrança dos resultados por domínio; escolhas por reputação; gasto acumulado US$ 5,34 |
 | 0.40 | 26/09/2026 | EXP-16 (X1): 28 de 32 planos válidos nas instâncias menores; acumulado US$ 6,56 |
+| 0.41 | 26/09/2026 | EXP-17 (X4, parcial): o retorno do VAL recupera 3 de 6 falhas; LLMs resolvem o Floortile p05; acumulado US$ 8,92; X2 preparado, sem rodar |
