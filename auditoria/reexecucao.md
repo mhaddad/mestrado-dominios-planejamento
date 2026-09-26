@@ -88,11 +88,11 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-08 | 1 | G6 | `data/2010/conferencia/eficiencia_precisa_sql.csv` | regra de conversão eficiência → nota testada | — | média · 🟢 feito (EXP-03): 100 de 100; G6 resolvido |
 | R-09 | 1 | G10 | `data/2010/conferencia/caracteristicas_18_a_20.csv` | registro do que ficou em aberto | decisão do autor (seção 8) | baixa |
 | R-10 | 2 | A6, F4; AF-213, AF-214, AF-285, AF-286, AF-326, AF-328 | `auditoria/taxonomia-tecnicas.md` §3 | Tabelas 18–25 e rankings com taxonomia de 4 dimensões | R-06 | alta · 🟢 feito (EXP-06): sem ganho claro sobre a linha de base; codificação C1–C5 aprovada pelo autor em 26/09/2026 |
-| R-11 | 2 | G1; AF-234, AF-281, AF-282, AF-331 | `data/2010/metricas_dominios.csv` | rótulo e interpretação corrigidos | R-06 | média |
-| R-12 | 2 | G17 | `data/2010/correcoes_2010.csv` | discretização e Tabelas 19–25 com as correções aplicadas | R-05 | média |
-| R-13 | 2 | F3; G2, G13; AF-225, AF-283 | `data/2010/conferencia/modelos_itsimple.csv` | critério de Agregação documentado; teste de robustez de classes | R-06 | média |
+| R-11 | 2 | G1; AF-234, AF-281, AF-282, AF-331 | `data/2010/metricas_dominios.csv` | rótulo e interpretação corrigidos | R-06 | média · 🟢 feito (EXP-08): `data/2010/rotulos_corrigidos.csv`; leitura do exemplo da AF-234 invertida |
+| R-12 | 2 | G17 | `data/2010/correcoes_2010.csv` | discretização e Tabelas 19–25 com as correções aplicadas | R-05 | média · 🟢 feito (EXP-08): 6 classes mudam, nenhum ranking muda |
+| R-13 | 2 | F3; G2, G13; AF-225, AF-283 | `data/2010/conferencia/modelos_itsimple.csv` | critério de Agregação documentado; teste de robustez de classes | R-06 | média · 🟡 EXP-08: robustez de classes feita (nenhum ranking muda); critério da Agregação não reconstruível dos XML, depende de confirmação do autor |
 | R-14 | 2 | G19; AF-299, AF-322, AF-334 | `data/2010/validacao_ranking.csv` | medidas de acerto com tratamento de empate | R-07; decisão do autor (seção 8) | alta |
-| R-15 | 2 | G20; AF-006, AF-300, AF-312, AF-329, AF-330 | `auditoria/extracao/conferencia-rankings.csv` | comparação sistemática com a linha de base | R-03 | média |
+| R-15 | 2 | G20; AF-006, AF-300, AF-312, AF-329, AF-330 | `auditoria/extracao/conferencia-rankings.csv` | comparação sistemática com a linha de base | R-03 | média · 🟢 feito (EXP-08): linha de base em todo resultado do `nivel2.py` |
 | R-16 | 2 | F7, G10; AF-250 | PDDL de domínios adicionais no acervo | discretização testada com mais pontos | R-05 | baixa |
 | R-17 | 3 | F5, F6; AF-264, AF-324 | planejadores e domínios de 2010 | tempo e cobertura por par, condição padronizada | R-06 | alta |
 | R-18 | 3 | G9, G16 | resultados oficiais das IPCs ou reexecução | 100 células sob condição única | R-17 | alta |

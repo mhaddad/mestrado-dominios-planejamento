@@ -47,7 +47,7 @@ uv run --no-project python experimentos/analise/nivel2.py
 | Associações com extremo de agregação ou composição | 1 de 13 |
 | Atributos cujo tipo é outra classe | 2 de 13 |
 | Autoassociações (a classe se liga a ela mesma) | 6 de 13 |
-| Total de associações | 0 de 13 |
+| Total de associações | 1 de 13 (Logistics) |
 
 ## Interpretação
 
