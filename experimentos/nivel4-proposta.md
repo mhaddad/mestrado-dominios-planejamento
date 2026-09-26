@@ -1,6 +1,6 @@
 # Nível 4 (R-24): proposta de desenho
 
-Rascunho de trabalho de 26/09/2026 (Claude Code), para decisão do autor. O desenho aprovado da Fase 3 está no plano (seção 7) e em `auditoria/reexecucao.md` §6.
+Rascunho de trabalho de 26/09/2026 (Claude Code). **Decisão do autor (26/09/2026): opção A, só dados publicados; *benchmarks* Autoscale; limites de 30 min e 4 GiB (os dos dados publicados).** O desenho aprovado da Fase 3 está no plano (seção 7) e em `auditoria/reexecucao.md` §6.
 
 ## 1. O que já existe
 

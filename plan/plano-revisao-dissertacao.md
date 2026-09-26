@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.34 |
+| Versão deste documento | 0.35 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -246,14 +246,14 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 **Atividades**
 
 - [ ] Montar ambiente de execução em contêineres — 🟡 máquina OrbStack Ubuntu 22.04 amd64 provisionada por script (`experimentos/containers/orbstack/`); os 10 planejadores de 2010 rodam por QEMU i386 (EXP-01)
-- [ ] Baixar e organizar *benchmarks*
+- [x] Baixar e organizar *benchmarks* — IPC 1998–2014 (`potassco`, `cf19edf`) e Autoscale do Planner Museum (`723a31c0`), fora do git
 - [ ] Compilar e testar planejadores — 🟡 os 10 de 2010 testados (EXP-01, `experimentos/execucoes/2026-09-24-teste-orbstack.md`); planejadores atuais pendentes
 - [x] Implementar extrator das métricas de 2010 a partir do PDDL — EXP-07 (`experimentos/extratores/metricas_2010_pddl.py`): 11 de 17 métricas têm correspondente no PDDL
 - [x] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0) — EXP-07: tipos e ações se reproduzem (postos 0,69–0,92); atributos, associações e atores não (0,31–0,51)
 - [x] Implementar ou reutilizar extrator de *features* modernas — EXP-11 (`experimentos/extratores/features_sas.py`, tradutor do Fast Downward 26.6): 17 *features* SAS+ nas 354 instâncias de 2010
 - [ ] Rodar experimentos
 - [ ] Reproduzir o método de 2010 sobre os dados novos (linha de base) — 🟡 sobre os dados de 2010 já feito (Nível 1, EXP-03): 220/221 classes, 100/100 notas, 535/539 células característica × técnica, *rankings* iguais salvo empates; achados G23 e G24
-- [ ] Treinar e avaliar modelos de seleção
+- [x] Treinar e avaliar modelos de seleção — EXP-12, por domínio e com dados publicados: nenhum seletor (método de 2010, kNN, *random forest*) supera o *single best*
 - [ ] Testar robustez das métricas UML a variações de modelagem (F3)
 - [ ] Analisar importância das *features* e responder Q1 e Q2
 
@@ -550,6 +550,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | Codificação dos 10 planejadores na taxonomia em 4 dimensões (`auditoria/taxonomia/planejadores_4d.csv`), com as decisões C1–C5, aprovada sem alteração | Revisão do autor (EXP-06) | 3 |
 | 26/09/2026 | "Número total de Agregação" registrada como métrica **não reproduzível**: em 2010 foi contada de forma visual e manual nos diagramas UML.P, sem regra escrita; a AF-331 leva essa ressalva | Resposta do autor; EXP-08 mostrou que nenhum critério contado nos XML reproduz a Tabela 9 | 3, 6 |
 | 26/09/2026 | Medida principal de validação (G19): **perda em relação ao *virtual best***; correlação de postos como secundária; acerto por posição só para comparar com 2010; todas reportadas ao lado da linha de base | Recomendação do Coordenador aceita pelo autor: mede a indicação do melhor planejador, não depende de desempate e é a medida do Nível 4 | 3 |
+| 26/09/2026 | **Nível 4 só com dados publicados:** a cobertura por domínio do Planner Museum (29 planejadores × 42 domínios Autoscale, 30 min e 4 GiB), cruzada com as *features* extraídas do PDDL; sem execução própria. *Benchmarks*: Autoscale (substitui, no Nível 4, a recomendação de 23/09 de usar os conjuntos completos das IPCs). Consequências: análise só por domínio e só com cobertura; R-20, R-22 e R-31 ficam fora do Nível 4; a análise por instância (A1, A3) não é possível com esses dados | Decisão do autor sobre a proposta `experimentos/nivel4-proposta.md` (a proposta recomendava o híbrido) | 3 |
 
 ---
 
@@ -592,6 +593,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-10: R-16, robustez da discretização com 18 domínios adicionais das IPCs 1998–2008 | Regra de seleção fixada antes de rodar; revisão (exclusão de variantes aterradas) registrada com o resultado anterior; variantes conferidas por contagem de ações |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-11: R-26, *features* SAS+ e comparação com as métricas UML | *Features* fixadas antes de rodar a partir da síntese E2; ajuste do Pathways verificado (só a constante duplicada sai); correlações com teste de permutação de semente fixa |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | Preparação do Nível 4 (R-24): artefato do Planner Museum localizado e inspecionado; Tabela 1 do suplementar extraída; proposta em `experimentos/nivel4-proposta.md` | Links do artefato lidos no PDF do artigo; tabela conferida pela soma das colunas contra a linha Total. **Decisões do autor pendentes** |
+| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-12: Nível 4 com dados publicados (Planner Museum × *features* do PDDL) | Mapeamento de nomes dos domínios conferido (41 + Pathways); VBS e SBS recalculados à parte; amostra de instâncias e tempos esgotados registrados |
 
 ---
 
@@ -679,3 +681,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.32 | 26/09/2026 | EXP-10 (R-16): a classe Alto/Médio/Baixo depende da amostra de domínios; **Nível 2 concluído** |
 | 0.33 | 26/09/2026 | EXP-11 (R-26): extrator de *features* SAS+ (grafo causal, DTG, *treewidth*); métricas UML sem correlação com elas acima do acaso |
 | 0.34 | 26/09/2026 | Preparação do Nível 4: Planner Museum (29 planejadores, Autoscale 42 × 30) localizado; cobertura publicada em `data/planner-museum/`; proposta com decisões pendentes |
+| 0.35 | 26/09/2026 | Nível 4 só com dados publicados (decisão do autor); EXP-12: por domínio, nenhuma característica do PDDL supera o *single best* (Levitron) |

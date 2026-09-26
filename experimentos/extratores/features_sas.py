@@ -21,12 +21,17 @@ Ajuste: no Pathways, os problemas redeclaram em :objects constantes que o domín
 o tradutor recusa a duplicata. O problema é copiado sem esses nomes em :objects, o que não muda
 a tarefa; a coluna `ajuste` registra cada caso.
 
-Instâncias: as mesmas de 2010 (faixa `instancias_usadas` de data/2010/benchmarks_ipc_mapa_final.csv).
+Instâncias (--conjunto): `2010` = as mesmas de 2010 (faixa `instancias_usadas` de
+data/2010/benchmarks_ipc_mapa_final.csv); `autoscale` = os 42 domínios × 30 instâncias do
+Autoscale de custo unitário do Planner Museum (experimentos/ferramentas/planner-museum), as
+mesmas da cobertura publicada em data/planner-museum/ (Nível 4). No Autoscale, o tamanho cresce
+com o número da instância e as maiores levam minutos para traduzir; usa-se uma amostra fixa de
+10 instâncias por domínio espalhadas pela escala (p01, p04, ..., p28).
 Tradutor: Fast Downward release-26.6.0 em experimentos/ferramentas/downward (ver README.md).
 
-Uso: python experimentos/extratores/features_sas.py [--limite SEGUNDOS] [--processos N]
-Requer networkx. Saídas: experimentos/extratores/features-sas/{instancias.csv, dominios.csv}
-(dominios.csv = mediana por domínio).
+Uso: python experimentos/extratores/features_sas.py [--conjunto 2010|autoscale] [--limite SEGUNDOS] [--processos N]
+Requer networkx. Saídas: experimentos/extratores/features-sas/ (2010) ou features-sas-autoscale/,
+com instancias.csv e dominios.csv (mediana por domínio).
 """
 import argparse
 import csv
@@ -45,6 +50,7 @@ RAIZ = Path(__file__).resolve().parents[2]
 BENCH = RAIZ / "experimentos/benchmarks/ipc/pddl-instances"
 FD = RAIZ / "experimentos/ferramentas/downward/src/translate"
 SAIDA = RAIZ / "experimentos/extratores/features-sas"
+AUTOSCALE = RAIZ / "experimentos/ferramentas/planner-museum/benchmarks/autoscale-unit-cost"
 DOMINIO_POR_INSTANCIA = {"pathways"}
 
 
@@ -55,6 +61,14 @@ def tarefas():
         for n in range(a, b + 1):
             dom = pasta / (f"domains/domain-{n}.pddl" if r["dominio"] in DOMINIO_POR_INSTANCIA else "domain.pddl")
             yield r["dominio"], n, dom, pasta / f"instances/instance-{n}.pddl"
+
+
+def tarefas_autoscale():
+    for pasta in sorted(p for p in AUTOSCALE.iterdir() if p.is_dir()):
+        for n in range(1, 31, 3):
+            prob = pasta / f"p{n:02d}.pddl"
+            dom = pasta / f"domain-{prob.name}"
+            yield pasta.name, int(prob.stem[1:]), dom if dom.exists() else pasta / "domain.pddl", prob
 
 
 def ler_sas(texto):
@@ -171,10 +185,14 @@ def processar(args):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--conjunto", choices=("2010", "autoscale"), default="2010")
     ap.add_argument("--limite", type=int, default=300)
     ap.add_argument("--processos", type=int, default=max(1, (os.cpu_count() or 2) - 2))
     a = ap.parse_args()
-    lista = [(*t, a.limite) for t in tarefas()]
+    global SAIDA
+    if a.conjunto == "autoscale":
+        SAIDA = SAIDA.with_name("features-sas-autoscale")
+    lista = [(*t, a.limite) for t in (tarefas() if a.conjunto == "2010" else tarefas_autoscale())]
     with ProcessPoolExecutor(a.processos) as ex:
         linhas = list(ex.map(processar, lista))
     campos = list(next(l for l in linhas if l["status"] == "ok"))
