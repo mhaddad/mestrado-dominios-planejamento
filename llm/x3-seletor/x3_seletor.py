@@ -9,7 +9,11 @@ bruta em llm/registros/x3/<rodada>/ e, com `avaliar`, calcula as medidas do EXP-
 Uso:
   python llm/x3-seletor/x3_seletor.py rodar --rodada teste --dominios blocksworld floortile rovers
   python llm/x3-seletor/x3_seletor.py rodar --rodada principal
-  python llm/x3-seletor/x3_seletor.py avaliar --rodada principal
+  python llm/x3-seletor/x3_seletor.py avaliar --rodada principal [--pontuacao grupo|exata]
+  python llm/x3-seletor/x3_seletor.py rodar --rodada nomes --condicao nomes
+
+Condições (protocolo): "anonimo" (P01–P29 descritos só por técnicas) e "nomes" (os mesmos códigos,
+ordem e descrições, mais nome do planejador e edição da IPC).
 
 Chave: OPENROUTER_API_KEY no .env da raiz (fora do git). Trava de orçamento: antes de cada
 chamada, lê o uso da chave no OpenRouter e para se passar de TETO_USD.
@@ -29,7 +33,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ / "experimentos/analise"))
 AUTOSCALE = RAIZ / "experimentos/ferramentas/planner-museum/benchmarks/autoscale-unit-cost"
-PROMPT = RAIZ / "llm/prompts/x3-anonimo-v1.md"
+PROMPTS = {"anonimo": RAIZ / "llm/prompts/x3-anonimo-v1.md", "nomes": RAIZ / "llm/prompts/x3-nomes-v1.md"}
 REGISTROS = RAIZ / "llm/registros/x3"
 MODELOS = ["anthropic/claude-sonnet-5", "openai/gpt-6-sol", "google/gemini-3.1-pro-preview",
            "deepseek/deepseek-v4-pro-0813"]
@@ -71,13 +75,14 @@ INGLES = {
 DIMENSAO = {"D1": "search", "D2": "heuristic", "D3": "representation", "D4": "architecture"}
 
 
-def catalogo():
+def catalogo(condicao="anonimo"):
     """Devolve (texto do catálogo, código -> sigla, código -> códigos com a mesma descrição).
     Ordem sorteada com semente fixa."""
-    tec = {}
+    tec, nome = {}, {}
     with (RAIZ / "auditoria/taxonomia/planejadores_museu_4d.csv").open(encoding="utf-8") as f:
         for r in csv.DictReader(f):
             tec.setdefault(r["sigla"], {}).setdefault(r["dimensao"], []).append(INGLES[r["valor"]])
+            nome[r["sigla"]] = f"{r['planejador']} (IPC {r['ipc']})"
     siglas = sorted(tec)
     random.Random(SEMENTE_CATALOGO).shuffle(siglas)
     codigo = {f"P{i + 1:02d}": s for i, s in enumerate(siglas)}
@@ -85,7 +90,7 @@ def catalogo():
     for c, s in codigo.items():
         partes = [f"{DIMENSAO[d]}: {' + '.join(tec[s][d]) if d in tec[s] else 'not specified'}" for d in DIMENSAO]
         descr[c] = "; ".join(partes)
-        linhas.append(f"{c}: " + descr[c])
+        linhas.append(f"{c}: " + (f"{nome[s]}; " if condicao == "nomes" else "") + descr[c])
     iguais = {c: [c2 for c2 in codigo if descr[c2] == descr[c]] for c in codigo}
     return "\n".join(linhas), codigo, iguais
 
@@ -97,8 +102,8 @@ def ler(arq):
     return t, False
 
 
-def montar_prompt(dominio, texto_catalogo):
-    md = PROMPT.read_text(encoding="utf-8")
+def montar_prompt(dominio, texto_catalogo, condicao):
+    md = PROMPTS[condicao].read_text(encoding="utf-8")
     sistema, usuario = re.findall(r"```\n(.*?)```", md, re.S)
     pasta = AUTOSCALE / dominio
     arq_dom = pasta / "domain.pddl" if (pasta / "domain.pddl").exists() else pasta / "domain-p01.pddl"
@@ -138,13 +143,13 @@ def extrair_escolha(texto):
         return (m.group(0) if m else None), None
 
 
-def chamar(k, modelo, dominio, rodada, texto_catalogo):
+def chamar(k, modelo, dominio, rodada, texto_catalogo, condicao):
     destino = REGISTROS / rodada / modelo.replace("/", "__") / f"{dominio}.json"
     if destino.exists():
         return "já registrado"
     if uso_da_chave(k) >= TETO_USD:
         return "teto atingido"
-    sistema, usuario, truncado = montar_prompt(dominio, texto_catalogo)
+    sistema, usuario, truncado = montar_prompt(dominio, texto_catalogo, condicao)
     corpo = {"model": modelo, "messages": [{"role": "system", "content": sistema}, {"role": "user", "content": usuario}],
              **CONFIG}
     inicio = time.time()
@@ -163,7 +168,7 @@ def chamar(k, modelo, dominio, rodada, texto_catalogo):
     destino.write_text(json.dumps({
         "modelo_pedido": modelo, "modelo_respondeu": resp.get("model"), "provedor": resp.get("provider"),
         "dominio": dominio, "data_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "config": CONFIG, "prompt": PROMPT.name, "semente_catalogo": SEMENTE_CATALOGO, "truncado": truncado,
+        "config": CONFIG, "condicao": condicao, "prompt": PROMPTS[condicao].name, "semente_catalogo": SEMENTE_CATALOGO, "truncado": truncado,
         "segundos": round(time.time() - inicio, 1), "uso": resp.get("usage"), "escolha": escolha, "razao": razao,
         "resposta": texto, "bruto": resp}, ensure_ascii=False, indent=1), encoding="utf-8")
     return f"{escolha} (US$ {((resp.get('usage') or {}).get('cost') or 0):.4f})"
@@ -174,12 +179,12 @@ def rodar(a):
     _p, cob, _pddl, sas = N.carregar()
     doms = a.dominios or sorted(d for d in cob if cob[d].max() > 0 and d in sas)
     k = chave()
-    texto_catalogo, _codigo, _iguais = catalogo()
+    texto_catalogo, _codigo, _iguais = catalogo(a.condicao)
     print(f"uso da chave antes: US$ {uso_da_chave(k):.4f}; {len(doms)} domínios × {len(MODELOS)} modelos")
 
     def por_modelo(modelo):
         for d in doms:
-            r = chamar(k, modelo, d, a.rodada, texto_catalogo)
+            r = chamar(k, modelo, d, a.rodada, texto_catalogo, a.condicao)
             print(f"{modelo:36s} {d:26s} {r}", flush=True)
             if r == "teto atingido":
                 return
@@ -215,6 +220,9 @@ def avaliar(a):
                 invalidas += 1
                 cobertura = float(Y[i].mean())  # resposta inválida: cobertura esperada de uma escolha ao acaso
                 grupo = []
+            elif a.pontuacao == "exata":
+                grupo = [sigla]
+                cobertura = float(Y[i, planejadores.index(sigla)])
             else:
                 # descrições idênticas não se distinguem: vale a cobertura média do grupo (protocolo)
                 grupo = [codigo[c] for c in iguais[r["escolha"]]]
@@ -233,7 +241,7 @@ def avaliar(a):
                        "dominios_perda_zero": int((perdas[ok] == 0).sum()),
                        "wilcoxon_p_vs_sbs": round(float(wilcoxon(dif).pvalue), 3) if ok.sum() > 5 and np.any(dif != 0) else "",
                        "custo_usd": round(custo, 4)})
-    saida = RAIZ / "llm/x3-seletor/resultados" / a.rodada
+    saida = RAIZ / "llm/x3-seletor/resultados" / f"{a.rodada}-{a.pontuacao}"
     saida.mkdir(parents=True, exist_ok=True)
     for nome, ls in (("escolhas.csv", linhas), ("resumo.csv", resumo)):
         if ls:
@@ -250,9 +258,12 @@ def main():
     ap.add_argument("acao", choices=("rodar", "avaliar", "catalogo"))
     ap.add_argument("--rodada", default="teste")
     ap.add_argument("--dominios", nargs="*")
+    ap.add_argument("--condicao", choices=("anonimo", "nomes"), default="anonimo")
+    ap.add_argument("--pontuacao", choices=("grupo", "exata"), default="grupo",
+                    help="grupo: média dos planejadores de descrição igual (condição anônima); exata: o planejador escolhido")
     a = ap.parse_args()
     if a.acao == "catalogo":
-        texto, codigo, iguais = catalogo()
+        texto, codigo, iguais = catalogo(a.condicao)
         print(texto)
         print(codigo)
         print({c: g for c, g in iguais.items() if len(g) > 1})

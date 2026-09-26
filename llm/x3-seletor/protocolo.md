@@ -18,6 +18,8 @@ Dado o domínio de planejamento em PDDL, um LLM escolhe bem a técnica (ou o pla
   - Motivo: o artigo do Planner Museum e a tabela de cobertura são públicos desde março de 2026. Um modelo treinado depois disso pode lembrar os resultados em vez de raciocinar sobre o domínio.
   - A condição anônima testa o que interessa à Q3: se o modelo liga a estrutura do domínio à técnica adequada.
 - **Secundária, se houver orçamento: planejadores com nome.** Testa a utilidade prática e dá uma medida indireta da contaminação (a diferença entre as duas condições).
+  - **Desenho (decidido pelo autor em 26/09/2026, depois do EXP-14):** a mesma rodada da condição anônima (domínios, modelos, parâmetros, códigos P01–P29, ordem e descrições por técnica), com uma só diferença: cada linha do catálogo ganha o nome do planejador e a edição da IPC em que competiu (`llm/prompts/x3-nomes-v1.md`). O *prompt* não menciona o Planner Museum.
+  - **Avaliação:** com nomes, a regra das descrições iguais não se aplica, e vale a cobertura do planejador escolhido (pontuação "exata"). Para comparar, a rodada anônima também é pontuada assim, além da pontuação por grupo.
 
 **Descrições idênticas.** Com a codificação 4D, alguns planejadores ficam com a mesma descrição (por exemplo, seis planejadores "busca progressiva, relaxação, STRIPS, planejador único"). Entre eles, o modelo não tem como distinguir. Por isso, quando ele escolhe um código, a cobertura considerada é a **média dos planejadores com a mesma descrição**. Regra fixada antes da primeira chamada (26/09/2026).
 
