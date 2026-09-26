@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.33 |
+| Versão deste documento | 0.34 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -591,6 +591,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-09: R-14, perda em relação ao *virtual best* | Perdas conferidas contra as notas observadas de `validacao_ranking.csv` (máximo, empates, perda ao acaso) |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-10: R-16, robustez da discretização com 18 domínios adicionais das IPCs 1998–2008 | Regra de seleção fixada antes de rodar; revisão (exclusão de variantes aterradas) registrada com o resultado anterior; variantes conferidas por contagem de ações |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-11: R-26, *features* SAS+ e comparação com as métricas UML | *Features* fixadas antes de rodar a partir da síntese E2; ajuste do Pathways verificado (só a constante duplicada sai); correlações com teste de permutação de semente fixa |
+| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | Preparação do Nível 4 (R-24): artefato do Planner Museum localizado e inspecionado; Tabela 1 do suplementar extraída; proposta em `experimentos/nivel4-proposta.md` | Links do artefato lidos no PDF do artigo; tabela conferida pela soma das colunas contra a linha Total. **Decisões do autor pendentes** |
 
 ---
 
@@ -677,3 +678,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.31 | 26/09/2026 | Agregação registrada como não reproduzível (contagem visual e manual); G19 decidido (perda em relação ao *virtual best*); EXP-09 (R-14): no Storage, único domínio discriminante, o método de 2010 perde para a linha de base |
 | 0.32 | 26/09/2026 | EXP-10 (R-16): a classe Alto/Médio/Baixo depende da amostra de domínios; **Nível 2 concluído** |
 | 0.33 | 26/09/2026 | EXP-11 (R-26): extrator de *features* SAS+ (grafo causal, DTG, *treewidth*); métricas UML sem correlação com elas acima do acaso |
+| 0.34 | 26/09/2026 | Preparação do Nível 4: Planner Museum (29 planejadores, Autoscale 42 × 30) localizado; cobertura publicada em `data/planner-museum/`; proposta com decisões pendentes |
