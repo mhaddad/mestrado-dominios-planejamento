@@ -52,7 +52,7 @@ Rodar de novo não reproduz as respostas, porque os modelos mudam. As respostas 
 | Claude Sonnet 5 | 259 | 11 | p = 0,003 (pior) | FDSS23 (20), Mercury (10) |
 | Melhor seletor por características (EXP-12, *random forest*, pddl+sas) | 148 | 15 | p = 0,57 | — |
 
-- **Portfólios em quase todas as escolhas:** 158 das 163 respostas válidas apontam para um portfólio. As exceções são o Mercury (10 vezes, Sonnet) e o LAPKT-BFWS (4 vezes, Gemini).
+- **Portfólios em quase todas as escolhas:** 149 das 163 respostas válidas apontam para um portfólio. As exceções são o Mercury (10 vezes, Sonnet) e o LAPKT-BFWS (4 vezes, Gemini).
 - **Nos quatro domínios em que uma técnica antiga é a melhor** (System R no Blocks World e no TPP, SAT no Floortile, ANS no Pipesworld sem tanques), nenhum modelo escolhe o planejador vencedor nem a sua técnica.
 
 ## Interpretação
@@ -66,5 +66,5 @@ Rodar de novo não reproduz as respostas, porque os modelos mudam. As respostas 
 
 - Uma repetição por par domínio × modelo. A variação entre repetições não foi medida.
 - Condição anônima só: a condição com nomes (contaminação) não foi rodada.
-- As descrições 4D são grossas: 29 planejadores caem em 20 descrições distintas.
+- As descrições 4D são grossas: 29 planejadores caem em 21 descrições distintas.
 - O desempenho vem da cobertura publicada (só por domínio), como no EXP-12.
