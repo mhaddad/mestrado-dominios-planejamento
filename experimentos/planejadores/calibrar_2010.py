@@ -51,11 +51,17 @@ def comando(pl, dom, prob, base=None):
     `base` troca a cópia de trabalho dos planejadores (uma por processo paralelo)."""
     W = base or globals()["W"]
     d = T.COMP / dom
-    D, P = str(d / "domain.pddl"), str(d / prob)
+    dominio = "domain.pddl"
+    if dom == "pathways":
+        # Pathways não tem domain.pddl: cada problema tem o seu domínio em Strips/, e os
+        # scripts de 2010 usam Strips/domain_pNN.pddl com Strips/pNN.pddl (os arquivos da
+        # raiz são outra versão). O R espera domain.pddl no diretório: fica para a decisão do R.
+        d, dominio = d / "Strips", f"domain_{prob}"
+    D, P = str(d / dominio), str(d / prob)
     return {
         "Blackbox": (W / "scripts/blackbox", ["./blackbox", "-o", D, "-f", P]),
         "IPP": (W / "scripts/ipp", ["./ipp", "-o", D, "-f", P]),
-        "FF": (W / "scripts/ff", ["./ff", "-p", str(d) + "/", "-o", "domain.pddl", "-f", prob]),
+        "FF": (W / "scripts/ff", ["./ff", "-p", str(d) + "/", "-o", dominio, "-f", prob]),
         "LPG": (W / "scripts/lpg", ["./lpg-td-1.0", "-o", D, "-f", P, "-speed", "-noout"]),
         "YAHSP": (W / "scripts/yahsp", ["./yahsp", D, P]),
         "SGPlan": (W, ["./sgplan6", "-o", D, "-f", P]),

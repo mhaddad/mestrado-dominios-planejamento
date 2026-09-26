@@ -77,6 +77,9 @@ slots_livres = []
 # Variantes de chamada: (planejador, domínio) -> opções acrescentadas à chamada dos scripts finais
 VARIANTES = {"blackbox-m8192": {("Blackbox", "sattelite"): ["-M", "8192"]}}
 variante = {}
+# Sem chamada válida: o R espera domain.pddl no diretório, e o Pathways tem um domínio por
+# problema (em 2010 o script do R no Pathways chamava o Blackbox). Decide-se com o R.
+SEM_CHAMADA = {("R", "pathways")}
 
 
 def preparar_slots():
@@ -200,6 +203,8 @@ def main():
         for prob in problemas(dom):
             for pl in [p for p in PLANEJADORES if p not in adiados]:
                 if variante and (pl, dom) not in variante:
+                    continue
+                if (pl, dom) in SEM_CHAMADA:
                     continue
                 for s in (SEMENTES_LPG if pl == "LPG" else ("",)):
                     if (pl, dom, prob, str(s)) not in feitas:
