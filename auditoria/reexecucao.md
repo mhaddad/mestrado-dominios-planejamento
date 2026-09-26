@@ -93,7 +93,7 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-13 | 2 | F3; G2, G13; AF-225, AF-283 | `data/2010/conferencia/modelos_itsimple.csv` | critério de Agregação documentado; teste de robustez de classes | R-06 | média · 🟡 EXP-08: robustez de classes feita (nenhum ranking muda); critério da Agregação: contagem visual e manual nos diagramas UML.P, sem regra escrita (autor, 26/09/2026); métrica registrada como não reproduzível |
 | R-14 | 2 | G19; AF-299, AF-322, AF-334 | `data/2010/validacao_ranking.csv` | medidas de acerto com tratamento de empate | R-07; decisão do autor (seção 8) | alta · 🟢 feito (EXP-09): perda em relação ao *virtual best* como principal; no Storage, 2010 perde 3 e a linha de base 1 |
 | R-15 | 2 | G20; AF-006, AF-300, AF-312, AF-329, AF-330 | `auditoria/extracao/conferencia-rankings.csv` | comparação sistemática com a linha de base | R-03 | média · 🟢 feito (EXP-08): linha de base em todo resultado do `nivel2.py` |
-| R-16 | 2 | F7, G10; AF-250 | PDDL de domínios adicionais no acervo | discretização testada com mais pontos | R-05 | baixa |
+| R-16 | 2 | F7, G10; AF-250 | PDDL de domínios adicionais no acervo | discretização testada com mais pontos | R-05 | baixa · 🟢 feito (EXP-10): com 18 domínios a mais, 17% (extremos) e 45% (texto) das classes dos 13 domínios mudam |
 | R-17 | 3 | F5, F6; AF-264, AF-324 | planejadores e domínios de 2010 | tempo e cobertura por par, condição padronizada | R-06 | alta |
 | R-18 | 3 | G9, G16 | resultados oficiais das IPCs ou reexecução | 100 células sob condição única | R-17 | alta |
 | R-19 | 3 | G14, G15, G16 | `data/2010/benchmarks_ipc_instancias.csv` | conjunto de instâncias fixado | decisão do autor (seção 8) | alta |

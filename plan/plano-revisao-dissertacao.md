@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.31 |
+| Versão deste documento | 0.32 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -589,6 +589,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) aprovadas pelo autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-08: Nível 2, R-11, R-12, R-13 e R-15 | Classes alteradas e efeito nas notas previstas conferidos por script; critérios de Agregação contados nos 13 XML e comparados com a Tabela 9 |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-09: R-14, perda em relação ao *virtual best* | Perdas conferidas contra as notas observadas de `validacao_ranking.csv` (máximo, empates, perda ao acaso) |
+| 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-10: R-16, robustez da discretização com 18 domínios adicionais das IPCs 1998–2008 | Regra de seleção fixada antes de rodar; revisão (exclusão de variantes aterradas) registrada com o resultado anterior; variantes conferidas por contagem de ações |
 
 ---
 
@@ -673,3 +674,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.29 | 26/09/2026 | EXP-06 (R-10): taxonomia em 4 dimensões aplicada ao método de 2010, sem ganho claro sobre a linha de base; EXP-07 (R-25): extrator das métricas de 2010 a partir do PDDL |
 | 0.30 | 26/09/2026 | Codificação 4D aprovada pelo autor; EXP-08: R-11 (rótulo G1), R-12 (correções G17), R-13 (classes com auxiliares; Agregação não reconstruível) e R-15 (linha de base); nenhum ranking de 2010 muda |
 | 0.31 | 26/09/2026 | Agregação registrada como não reproduzível (contagem visual e manual); G19 decidido (perda em relação ao *virtual best*); EXP-09 (R-14): no Storage, único domínio discriminante, o método de 2010 perde para a linha de base |
+| 0.32 | 26/09/2026 | EXP-10 (R-16): a classe Alto/Médio/Baixo depende da amostra de domínios; **Nível 2 concluído** |
