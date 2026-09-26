@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "barman",
+ "data_utc": "2026-09-26T19:28:13+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 16.7,
+ "uso": {
+  "prompt_tokens": 1783,
+  "completion_tokens": 2290,
+  "total_tokens": 4073,
+  "cost": 0.026466,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.026466,
+   "upstream_inference_prompt_cost": 0.003566,
+   "upstream_inference_completions_cost": 0.0229
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 13,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain barman)\n(:requirements :typing)\n(:types\n    hand shaker shot ingredient cocktail dispenser level - object\n    container - object\n)\n(:constants)\n(:predicates\n    (ontable ?c - container)\n    (holding ?h - hand ?c - container)\n    (handempty ?h - hand)\n    (clean ?c - container)\n    (empty ?c - container)\n    (contains ?c - container ?b - object)\n    (dispenses ?d - dispenser ?i - ingredient)\n    (shaker-empty-level ?s - shaker ?l - level)\n    (shaker-level ?s - shaker ?l - level)\n    (next ?l1 - level ?l2 - level)\n    (unshaked ?s - shaker)\n    (shaked ?s - shaker)\n    (cocktail-part1 ?c - cocktail ?i - ingredient)\n    (cocktail-part2 ?c - cocktail ?i - ingredient)\n    (used ?s - shaker)\n)\n\n(:action grasp\n    :parameters (?h - hand ?c - container)\n    :precondition (and (handempty ?h) (ontable ?c))\n    :effect (and (holding ?h ?c) (not (ontable ?c)) (not (handempty ?h)))\n)\n\n(:action leave\n    :parameters (?h - hand ?c - container)\n    :precondition (holding ?h ?c)\n    :effect (and (ontable ?c) (not (holding ?h ?c)) (handempty ?h))\n)\n\n(:action fill-shot\n    :parameters (?h - hand ?s - shot ?i - ingredient ?d - dispenser ?other - hand)\n    :precondition (and (holding ?h ?s) (handempty ?other) (empty ?s) (clean ?s) (dispenses ?d ?i) (not (= ?h ?other)))\n    :effect (and (not (empty ?s)) (contains ?s ?i) (not (clean ?s)))\n)\n\n(:action refill-shot\n    :parameters (?h - hand ?s - shot ?i - ingredient ?d - dispenser ?other - hand)\n    :precondition (and (holding ?h ?s) (handempty ?other) (empty ?s) (contains ?s ?i) (dispenses ?d ?i) (not (= ?h ?other)))\n    :effect (and (not (empty ?s)) (contains ?s ?i))\n)\n\n(:action empty-shot\n    :parameters (?h - hand ?s - shot ?b - object)\n    :precondition (and (holding ?h ?s) (contains ?s ?b))\n    :effect (and (not (contains ?s ?b)) (empty ?s))\n)\n\n(:action clean-shot\n    :parameters (?h - hand ?s - shot ?other - hand)\n    :precondition (and (holding ?h ?s) (empty ?s) (handempty ?other) (not (= ?h ?other)))\n    :effect (and (clean ?s))\n)\n\n(:action pour-shot-to-clean-shaker\n    :parameters (?h - hand ?s - shot ?i - ingredient ?sh - shaker ?l - level ?nl - level)\n    :precondition (and (holding ?h ?s) (contains ?s ?i) (empty ?sh) (clean ?sh) (shaker-level ?sh ?l) (next ?l ?nl))\n    :effect (and (not (contains ?s ?i)) (empty ?s) (contains ?sh ?i) (not (empty ?sh)) (not (clean ?sh))\n                 (unshaked ?sh) (used ?sh)\n                 (not (shaker-level ?sh ?l)) (shaker-level ?sh ?nl))\n)\n\n(:action pour-shot-to-used-shaker\n    :parameters (?h - hand ?s - shot ?i - ingredient ?sh - shaker ?l - level ?nl - level ?maxl - level)\n    :precondition (and (holding ?h ?s) (contains ?s ?i) (used ?sh) (unshaked ?sh)\n                        (shaker-level ?sh ?l) (next ?l ?nl) (not (shaker-empty-level ?sh ?l))\n                        (not (= ?l ?maxl)))\n    :effect (and (not (contains ?s ?i)) (empty ?s) (contains ?sh ?i)\n                 (not (shaker-level ?sh ?l)) (shaker-level ?sh ?nl))\n)\n\n(:action empty-shaker\n    :parameters (?h - hand ?sh - shaker ?b - cocktail ?l - level ?el - level)\n    :precondition (and (holding ?h ?sh) (contains ?sh ?b) (shaked ?sh) (shaker-level ?sh ?l) (shaker-empty-level ?sh ?el))\n    :effect (and (not (contains ?sh ?b)) (empty ?sh) (not (shaked ?sh))\n                 (not (shaker-level ?sh ?l)) (shaker-level ?sh ?el))\n)\n\n(:action clean-shaker\n    :parameters (?h - hand ?sh - shaker ?other - hand)\n    :precondition (and (holding ?h ?sh) (empty ?sh) (handempty ?other) (not (= ?h ?other)))\n    :effect (and (clean ?sh) (not (used ?sh)))\n)\n\n(:action shake\n    :parameters (?h - hand ?sh - shaker ?other - hand ?i1 - ingredient ?i2 - ingredient ?c - cocktail)\n    :precondition (and (holding ?h ?sh) (handempty ?other) (unshaked ?sh)\n                        (contains ?sh ?i1) (contains ?sh ?i2)\n                        (cocktail-part1 ?c ?i1) (cocktail-part2 ?c ?i2) (not (= ?h ?other)))\n    :effect (and (not (contains ?sh ?i1)) (not (contains ?sh ?i2))\n                 (contains ?sh ?c) (shaked ?sh) (not (unshaked ?sh)))\n)\n\n(:action pour-shaker-to-shot\n    :parameters (?h - hand ?sh - shaker ?s - shot ?c - cocktail ?l - level ?nl - level)\n    :precondition (and (holding ?h ?sh) (contains ?sh ?c) (shaked ?sh) (empty ?s) (clean ?s)\n                        (shaker-level ?sh ?l) (next ?nl ?l))\n    :effect (and (contains ?s ?c) (not (empty ?s)) (not (clean ?s))\n                 (shaker-level ?sh ?nl) (not (shaker-level ?sh ?l)))\n)\n\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450877-NZbrdlbeVIhm3KfNgvEt",
+  "object": "chat.completion",
+  "created": 1790450877,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain barman)\n(:requirements :typing)\n(:types\n    hand shaker shot ingredient cocktail dispenser level - object\n    container - object\n)\n(:constants)\n(:predicates\n    (ontable ?c - container)\n    (holding ?h - hand ?c - container)\n    (handempty ?h - hand)\n    (clean ?c - container)\n    (empty ?c - container)\n    (contains ?c - container ?b - object)\n    (dispenses ?d - dispenser ?i - ingredient)\n    (shaker-empty-level ?s - shaker ?l - level)\n    (shaker-level ?s - shaker ?l - level)\n    (next ?l1 - level ?l2 - level)\n    (unshaked ?s - shaker)\n    (shaked ?s - shaker)\n    (cocktail-part1 ?c - cocktail ?i - ingredient)\n    (cocktail-part2 ?c - cocktail ?i - ingredient)\n    (used ?s - shaker)\n)\n\n(:action grasp\n    :parameters (?h - hand ?c - container)\n    :precondition (and (handempty ?h) (ontable ?c))\n    :effect (and (holding ?h ?c) (not (ontable ?c)) (not (handempty ?h)))\n)\n\n(:action leave\n    :parameters (?h - hand ?c - container)\n    :precondition (holding ?h ?c)\n    :effect (and (ontable ?c) (not (holding ?h ?c)) (handempty ?h))\n)\n\n(:action fill-shot\n    :parameters (?h - hand ?s - shot ?i - ingredient ?d - dispenser ?other - hand)\n    :precondition (and (holding ?h ?s) (handempty ?other) (empty ?s) (clean ?s) (dispenses ?d ?i) (not (= ?h ?other)))\n    :effect (and (not (empty ?s)) (contains ?s ?i) (not (clean ?s)))\n)\n\n(:action refill-shot\n    :parameters (?h - hand ?s - shot ?i - ingredient ?d - dispenser ?other - hand)\n    :precondition (and (holding ?h ?s) (handempty ?other) (empty ?s) (contains ?s ?i) (dispenses ?d ?i) (not (= ?h ?other)))\n    :effect (and (not (empty ?s)) (contains ?s ?i))\n)\n\n(:action empty-shot\n    :parameters (?h - hand ?s - shot ?b - object)\n    :precondition (and (holding ?h ?s) (contains ?s ?b))\n    :effect (and (not (contains ?s ?b)) (empty ?s))\n)\n\n(:action clean-shot\n    :parameters (?h - hand ?s - shot ?other - hand)\n    :precondition (and (holding ?h ?s) (empty ?s) (handempty ?other) (not (= ?h ?other)))\n    :effect (and (clean ?s))\n)\n\n(:action pour-shot-to-clean-shaker\n    :parameters (?h - hand ?s - shot ?i - ingredient ?sh - shaker ?l - level ?nl - level)\n    :precondition (and (holding ?h ?s) (contains ?s ?i) (empty ?sh) (clean ?sh) (shaker-level ?sh ?l) (next ?l ?nl))\n    :effect (and (not (contains ?s ?i)) (empty ?s) (contains ?sh ?i) (not (empty ?sh)) (not (clean ?sh))\n                 (unshaked ?sh) (used ?sh)\n                 (not (shaker-level ?sh ?l)) (shaker-level ?sh ?nl))\n)\n\n(:action pour-shot-to-used-shaker\n    :parameters (?h - hand ?s - shot ?i - ingredient ?sh - shaker ?l - level ?nl - level ?maxl - level)\n    :precondition (and (holding ?h ?s) (contains ?s ?i) (used ?sh) (unshaked ?sh)\n                        (shaker-level ?sh ?l) (next ?l ?nl) (not (shaker-empty-level ?sh ?l))\n                        (not (= ?l ?maxl)))\n    :effect (and (not (contains ?s ?i)) (empty ?s) (contains ?sh ?i)\n                 (not (shaker-level ?sh ?l)) (shaker-level ?sh ?nl))\n)\n\n(:action empty-shaker\n    :parameters (?h - hand ?sh - shaker ?b - cocktail ?l - level ?el - level)\n    :precondition (and (holding ?h ?sh) (contains ?sh ?b) (shaked ?sh) (shaker-level ?sh ?l) (shaker-empty-level ?sh ?el))\n    :effect (and (not (contains ?sh ?b)) (empty ?sh) (not (shaked ?sh))\n                 (not (shaker-level ?sh ?l)) (shaker-level ?sh ?el))\n)\n\n(:action clean-shaker\n    :parameters (?h - hand ?sh - shaker ?other - hand)\n    :precondition (and (holding ?h ?sh) (empty ?sh) (handempty ?other) (not (= ?h ?other)))\n    :effect (and (clean ?sh) (not (used ?sh)))\n)\n\n(:action shake\n    :parameters (?h - hand ?sh - shaker ?other - hand ?i1 - ingredient ?i2 - ingredient ?c - cocktail)\n    :precondition (and (holding ?h ?sh) (handempty ?other) (unshaked ?sh)\n                        (contains ?sh ?i1) (contains ?sh ?i2)\n                        (cocktail-part1 ?c ?i1) (cocktail-part2 ?c ?i2) (not (= ?h ?other)))\n    :effect (and (not (contains ?sh ?i1)) (not (contains ?sh ?i2))\n                 (contains ?sh ?c) (shaked ?sh) (not (unshaked ?sh)))\n)\n\n(:action pour-shaker-to-shot\n    :parameters (?h - hand ?sh - shaker ?s - shot ?c - cocktail ?l - level ?nl - level)\n    :precondition (and (holding ?h ?sh) (contains ?sh ?c) (shaked ?sh) (empty ?s) (clean ?s)\n                        (shaker-level ?sh ?l) (next ?nl ?l))\n    :effect (and (contains ?s ?c) (not (empty ?s)) (not (clean ?s))\n                 (shaker-level ?sh ?nl) (not (shaker-level ?sh ?l)))\n)\n\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": "This looks like a standard bartender/IPC naming domain question.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "This looks like a standard bartender/IPC naming domain question.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "Eq4CCrABCBIYAipA/xcDobmN/gg/b/Zokv7rwh2s7QR5j4TbS6mYLKJ2MbWLls/QQXNrK33Jwd+ddAAb/IcAfD+ALa6pwSunIXTu+TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmOUI0Z00yODN0eUFWZTVHcEZ1VKgBwLng1QYSDO8G+1ISbjHgjEuoGBoMo5+2WICMClQLswUfIjCsIj6IjCCDesxoK8Q+UZVjH4e3v8VCHv43+ZYHmKd4/VtKv7Zx7/P6s+LAQEz6yREqK7cC/b6UulJw1D4NhiwiUCVSVPp2hSZ/rNdZv+/1Lx4GWLKWcOEyA7oJwgcYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1783,
+   "completion_tokens": 2290,
+   "total_tokens": 4073,
+   "cost": 0.026466,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.026466,
+    "upstream_inference_prompt_cost": 0.003566,
+    "upstream_inference_completions_cost": 0.0229
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

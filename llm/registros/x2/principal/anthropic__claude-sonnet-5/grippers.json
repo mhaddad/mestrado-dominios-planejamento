@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "grippers",
+ "data_utc": "2026-09-26T19:28:33+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 5.4,
+ "uso": {
+  "prompt_tokens": 789,
+  "completion_tokens": 510,
+  "total_tokens": 1299,
+  "cost": 0.006678,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.006678,
+   "upstream_inference_prompt_cost": 0.001578,
+   "upstream_inference_completions_cost": 0.0051
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 68,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain gripper-strips)\n(:requirements :strips)\n(:types robot gripper room object)\n(:predicates\n(at-robby ?r - robot ?x - room)\n(free ?r - robot ?g - gripper)\n(at ?o - object ?x - room)\n(carry ?r - robot ?g - gripper ?o - object)\n)\n\n(:action move\n:parameters (?r - robot ?from - room ?to - room)\n:precondition (at-robby ?r ?from)\n:effect (and (at-robby ?r ?to)\n(not (at-robby ?r ?from))))\n\n(:action pick\n:parameters (?r - robot ?g - gripper ?o - object ?x - room)\n:precondition (and (at ?o ?x) (at-robby ?r ?x) (free ?r ?g))\n:effect (and (carry ?r ?g ?o)\n(not (at ?o ?x))\n(not (free ?r ?g))))\n\n(:action drop\n:parameters (?r - robot ?g - gripper ?o - object ?x - room)\n:precondition (and (carry ?r ?g ?o) (at-robby ?r ?x))\n:effect (and (not (carry ?r ?g ?o))\n(at ?o ?x)\n(free ?r ?g)))\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450908-TPPoNjduhU3TR6JqAQt9",
+  "object": "chat.completion",
+  "created": 1790450908,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain gripper-strips)\n(:requirements :strips)\n(:types robot gripper room object)\n(:predicates\n(at-robby ?r - robot ?x - room)\n(free ?r - robot ?g - gripper)\n(at ?o - object ?x - room)\n(carry ?r - robot ?g - gripper ?o - object)\n)\n\n(:action move\n:parameters (?r - robot ?from - room ?to - room)\n:precondition (at-robby ?r ?from)\n:effect (and (at-robby ?r ?to)\n(not (at-robby ?r ?from))))\n\n(:action pick\n:parameters (?r - robot ?g - gripper ?o - object ?x - room)\n:precondition (and (at ?o ?x) (at-robby ?r ?x) (free ?r ?g))\n:effect (and (carry ?r ?g ?o)\n(not (at ?o ?x))\n(not (free ?r ?g))))\n\n(:action drop\n:parameters (?r - robot ?g - gripper ?o - object ?x - room)\n:precondition (and (carry ?r ?g ?o) (at-robby ?r ?x))\n:effect (and (not (carry ?r ?g ?o))\n(at ?o ?x)\n(free ?r ?g)))\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": "I need the domain to match the object types and predicates used here—robots, grippers, rooms, objects, tracking robot location, gripper availability, object location, and carrying status.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I need the domain to match the object types and predicates used here—robots, grippers, rooms, objects, tracking robot location, gripper availability, object location, and carrying status.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "Et0DCrABCBIYAipAAKEoV/ZgJdQEnrf0llk3XLj/GCnqa4H37fPrYalH0+aZFkjdBSndfupd/i5EoWrfGHH98kiaBuo0MMFiU9MPOTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmOUI0Z00yODN0eUFWZTVHcEZ1VKgB4Lng1QYSDGPTtWcqEkg3sIpqcxoMs43P0UMsN7f8q+HnIjCuRhPKymE3G3ulEdeNS1AccceLkha5CDsh5LDajLa+fiw0uEKKaWBVb+RSfSKtN5Qq2QFaWhKkFtYxt/7GcE/EO5jcDProF5PJTvdAXdpUWRi+43Mm/IhqFogfA8kwYdEk8lUDVssz5f/c6/GTaobBv6uxG8diOIHB5HGOoU1SSlpkgBcBIA3rlcAtppTpCpsX1KKV4uW/2P6wYDVhQmaETCd1I5lFjp+iG1bbYGfJBoNZcPpKikJcyUReoGnteyyFSfTJtPReDJPslTvTKVD3MYVigPJ/0q3rcgCY6Ov3lIjpllau8J8T5NMTjy+4FQZyNlWHXxtki9RP8vzxCzgfqbjG509eXR/bSGvXGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 789,
+   "completion_tokens": 510,
+   "total_tokens": 1299,
+   "cost": 0.006678,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006678,
+    "upstream_inference_prompt_cost": 0.001578,
+    "upstream_inference_completions_cost": 0.0051
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 68,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

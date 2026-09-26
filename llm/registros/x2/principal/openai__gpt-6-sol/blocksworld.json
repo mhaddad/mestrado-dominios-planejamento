@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "blocksworld",
+ "data_utc": "2026-09-26T19:28:49+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 6.2,
+ "uso": {
+  "prompt_tokens": 487,
+  "completion_tokens": 508,
+  "total_tokens": 995,
+  "cost": 0.006054,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.006054,
+   "upstream_inference_prompt_cost": 0.000974,
+   "upstream_inference_completions_cost": 0.00508
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 161,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain blocksworld-4ops)\n  (:requirements :strips)\n\n  (:predicates\n    (on ?top ?bottom)\n    (on-table ?block)\n    (clear ?block)\n    (holding ?block)\n    (arm-empty)\n  )\n\n  (:action pickup\n    :parameters (?block)\n    :precondition (and (on-table ?block) (clear ?block) (arm-empty))\n    :effect (and\n      (holding ?block)\n      (not (on-table ?block))\n      (not (clear ?block))\n      (not (arm-empty)))\n  )\n\n  (:action putdown\n    :parameters (?block)\n    :precondition (holding ?block)\n    :effect (and\n      (on-table ?block)\n      (clear ?block)\n      (arm-empty)\n      (not (holding ?block)))\n  )\n\n  (:action stack\n    :parameters (?top ?bottom)\n    :precondition (and (holding ?top) (clear ?bottom))\n    :effect (and\n      (on ?top ?bottom)\n      (clear ?top)\n      (arm-empty)\n      (not (holding ?top))\n      (not (clear ?bottom)))\n  )\n\n  (:action unstack\n    :parameters (?top ?bottom)\n    :precondition (and (on ?top ?bottom) (clear ?top) (arm-empty))\n    :effect (and\n      (holding ?top)\n      (clear ?bottom)\n      (not (on ?top ?bottom))\n      (not (clear ?top))\n      (not (arm-empty)))\n  )\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450923-EwLhZCcBqY4gkZQkVYMf",
+  "object": "chat.completion",
+  "created": 1790450923,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain blocksworld-4ops)\n  (:requirements :strips)\n\n  (:predicates\n    (on ?top ?bottom)\n    (on-table ?block)\n    (clear ?block)\n    (holding ?block)\n    (arm-empty)\n  )\n\n  (:action pickup\n    :parameters (?block)\n    :precondition (and (on-table ?block) (clear ?block) (arm-empty))\n    :effect (and\n      (holding ?block)\n      (not (on-table ?block))\n      (not (clear ?block))\n      (not (arm-empty)))\n  )\n\n  (:action putdown\n    :parameters (?block)\n    :precondition (holding ?block)\n    :effect (and\n      (on-table ?block)\n      (clear ?block)\n      (arm-empty)\n      (not (holding ?block)))\n  )\n\n  (:action stack\n    :parameters (?top ?bottom)\n    :precondition (and (holding ?top) (clear ?bottom))\n    :effect (and\n      (on ?top ?bottom)\n      (clear ?top)\n      (arm-empty)\n      (not (holding ?top))\n      (not (clear ?bottom)))\n  )\n\n  (:action unstack\n    :parameters (?top ?bottom)\n    :precondition (and (on ?top ?bottom) (clear ?top) (arm-empty))\n    :effect (and\n      (holding ?top)\n      (clear ?bottom)\n      (not (on ?top ?bottom))\n      (not (clear ?top))\n      (not (arm-empty)))\n  )\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquBzvF6Hiux812X92rNz3dcPvAgP0Pi777faM-Xmrjb2O0WC0ddzIt08sK_RwKo1A9Xm1qQX4QVAq_r_Rgb_KmIGemK3Idv8wF_dCibxw5VPv4ylAwR0mKSoXOJQcDsHrIjmizH5-tFKs4zpG14DSll4rCGGo4KjVJ3fcTyQ-4HK3MFU_5_IuF3GHQVizO92vtQ67vytzYfFf73B8QDuTRu0HjBnfMf673U7vk28ym03BSvq7iOqQDgYGeRn8TKtMT1PKwxZoJuZwxGSU2mPBTvV7cU3yTNDbqSOBAxYg8KWC2TGlREQ8QZ-2WZetdG76IhWrsoZ4n2i6JwrnY7UzsNTBAhlt7-bDUssy5e7Q5L8EAX2KjKlSmpeV5fAtPJzYjEA-bNgH1Tdtb9KRTc-h40g_-u_IvippHwmeEJwZ3WYxQkrkm4QMG8EO1nWUFowC8frdX6LRnL9cZM4Vqtx6qg6hv6DwNhYKj1YXjZmC1Tp09VOlPMMAl7KraA6_zNdIOl7NFi4BrmNyesf3g8oIbr2NBxzhMjR0fJ0ggrvLhTr_EP90eEtge6DdZFLcohWysEu-Zs8CwcwjZB3sbVsrcUTvwP7bViOWFYZZ--Ns3p13QdXtomYDc3_dLH73MPa6ODBBZHh_K7nZLQUDnrJbYMf66uy3dEK4oxR_z25rpE-hA1OCp1fvOt3oSQNoqa6vm8MnCbBhb4sSKUk52XbaL5oPN-ke8ufirN-ExuTvtMY-Ny6t7lBhLkt3xFKjfwLrLJVQZZpbWSoMxQibTZGPTX2p_lGHKPj9IBotvyBOIb80ynucKipLbzFZfo6i0EYfPsYAX70VXS0ibIFLlSjrBEwspWUfBLkEcspKEr8bpcwvLEDpugeaAiL4tuYuqExcFxwKVxvqKY6uEeo0nHUplyF5u0NxlYVwLXmK2L4xbfjzptogxDkmzfaoQzSmCbjMhIE3M5ual6-ZNuAOWDPZFcXnd66DL_PF_KYyA5npUKCyJvv5TZQK5S2mv-ir_Y5gzRUHj76nIO8wSaUId0rP4JgbK6u1aimWCy2u0JqXigJN9hhjHTPDtr7A8_I8QRTfixwq03ypOFguZ6dGcHBJA4lj0VxxNW0Xqd56FkXzqpAu9agTpTkWKBRXSp2FctR_msabjVhb2fEy8oUnE0DiBvrX4xgIEs0o9ahmuVf7w8XMcUD93fFj0MSEidkVAJO_Ckf0xaMr7YVPtx391yj79FvBCxwnwyHqJe6-_u0sOxRyd3Np5Lw9YmtMgyXhlzTr3r8cR4jLjH-ek0B8VRXsS3USQmvIbtTVVz7ppIDLYHHKCmmaN4yrYnZI2sqY57tPwxfLHbSIi37_ipp3LQqyVdWE0RVKal3npSRnHvG3Q6rBpg10vdG5f16U_mSq4iwB9ua4S8XZJW5xRu8dfZV4Zoe1fX51zEGKFcmUWwPMjaHCKgN_bGTiV-v7qSuiEeBnQkPA2Ua7bUXjOB8cf6wCjEdwVDFn42PXfvmMmRlP24_58wNR784t9asqRZsOFOj9rHN-wjxbIBGUEwfRQSDkEScuXBiMQTJInDqlN9gib9ljZtyFnfkYoIkJ1NptuVVYrS-vNj3KiAxcYt8xdoNdGPI9dgvg1g0Bzf7LXqsPof0JSUMNmBQAZDWEgOuS22KvHxcuKp4NWa9E8M9jShIo1JoR-UChSVSbXh5eYEbB_STpa0R_I5uTEwLS_x30dRSvmF24umhR-cDJECR5f2Wy--o81pTMUklOeZpJE0BDT6brGJP6cCQyaCLcAwtD2xuAJLYAxCossYJ3vSqPJ9wSZwaJFkUlrV_PcIQ4JAB2q4ePyF3SdhHNHEfT9jMwSi5dydLLwc8_YXFRl3yhwSySqSAqpLqU-1e_uf9jhlWm5CV0Wb2_w0goMMgmlM9AsVOyhN6N2k-hVErCaon6fBl8lckmjh1ZtGB9jPWtuZZm4z0lUxRnWbNFD8nlKVePQcwMW0frFZx5FVBmP6XAu36cgBggVXGd8k1Rw1btiVjMi3ooPhjQnwWUHqb0RnNbtgiQ54FuJMif4mlx4U_eqPyhT1nHcqg0DzHTxBLnCY4La_eJ8C34kLc_yzVBvW5XcxgRn3jEK_fuDT4x5qiMaKBJCIxldZXxK2s-ZSShhF_GKhcy8SWS7yP91xbEtIM1SB9keUgxSQ6XR9BnTaP8f3CF6L_naNUTIIziTqz5hCMz9Ma0zGkYgybNz4rckR8r4t5mzkpvLbmX744vLQ9yvrNdrZVw4w==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_01278ed04053fe4c016ab81cecc03887d19aec8daba0d6e4e1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 487,
+   "completion_tokens": 508,
+   "total_tokens": 995,
+   "cost": 0.006054,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006054,
+    "upstream_inference_prompt_cost": 0.000974,
+    "upstream_inference_completions_cost": 0.00508
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 161,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

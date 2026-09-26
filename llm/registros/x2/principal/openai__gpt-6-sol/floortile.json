@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "floortile",
+ "data_utc": "2026-09-26T19:29:04+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 14.2,
+ "uso": {
+  "prompt_tokens": 1379,
+  "completion_tokens": 1269,
+  "total_tokens": 2648,
+  "cost": 0.016136,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 1376,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.016136,
+   "upstream_inference_prompt_cost": 0.003446,
+   "upstream_inference_completions_cost": 0.01269
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 437,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain floor-tile)\n  (:requirements :strips :typing :action-costs)\n\n  (:types robot tile color)\n\n  (:predicates\n    (robot-at ?r - robot ?t - tile)\n    (robot-has ?r - robot ?c - color)\n    (available-color ?c - color)\n    (clear ?t - tile)\n    (painted ?t - tile ?c - color)\n    (up ?from - tile ?to - tile)\n    (down ?from - tile ?to - tile)\n    (right ?to - tile ?from - tile)\n    (left ?to - tile ?from - tile)\n  )\n\n  (:functions (total-cost))\n\n  (:action change-color\n    :parameters (?r - robot ?old - color ?new - color)\n    :precondition (and (robot-has ?r ?old) (available-color ?new))\n    :effect (and\n      (not (robot-has ?r ?old))\n      (robot-has ?r ?new)\n      (increase (total-cost) 1))\n  )\n\n  (:action paint-up\n    :parameters (?r - robot ?from - tile ?to - tile ?c - color)\n    :precondition (and\n      (robot-at ?r ?from) (up ?from ?to)\n      (robot-has ?r ?c) (clear ?to))\n    :effect (and\n      (painted ?to ?c)\n      (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action paint-down\n    :parameters (?r - robot ?from - tile ?to - tile ?c - color)\n    :precondition (and\n      (robot-at ?r ?from) (down ?from ?to)\n      (robot-has ?r ?c) (clear ?to))\n    :effect (and\n      (painted ?to ?c)\n      (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-up\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (up ?from ?to) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-down\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (down ?from ?to) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-right\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (right ?to ?from) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-left\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (left ?to ?from) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450929-YFyi2ZrApHkTj4TDWy4T",
+  "object": "chat.completion",
+  "created": 1790450929,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain floor-tile)\n  (:requirements :strips :typing :action-costs)\n\n  (:types robot tile color)\n\n  (:predicates\n    (robot-at ?r - robot ?t - tile)\n    (robot-has ?r - robot ?c - color)\n    (available-color ?c - color)\n    (clear ?t - tile)\n    (painted ?t - tile ?c - color)\n    (up ?from - tile ?to - tile)\n    (down ?from - tile ?to - tile)\n    (right ?to - tile ?from - tile)\n    (left ?to - tile ?from - tile)\n  )\n\n  (:functions (total-cost))\n\n  (:action change-color\n    :parameters (?r - robot ?old - color ?new - color)\n    :precondition (and (robot-has ?r ?old) (available-color ?new))\n    :effect (and\n      (not (robot-has ?r ?old))\n      (robot-has ?r ?new)\n      (increase (total-cost) 1))\n  )\n\n  (:action paint-up\n    :parameters (?r - robot ?from - tile ?to - tile ?c - color)\n    :precondition (and\n      (robot-at ?r ?from) (up ?from ?to)\n      (robot-has ?r ?c) (clear ?to))\n    :effect (and\n      (painted ?to ?c)\n      (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action paint-down\n    :parameters (?r - robot ?from - tile ?to - tile ?c - color)\n    :precondition (and\n      (robot-at ?r ?from) (down ?from ?to)\n      (robot-has ?r ?c) (clear ?to))\n    :effect (and\n      (painted ?to ?c)\n      (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-up\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (up ?from ?to) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-down\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (down ?from ?to) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-right\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (right ?to ?from) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n\n  (:action move-left\n    :parameters (?r - robot ?from - tile ?to - tile)\n    :precondition (and (robot-at ?r ?from) (left ?to ?from) (clear ?to))\n    :effect (and\n      (not (robot-at ?r ?from)) (robot-at ?r ?to)\n      (clear ?from) (not (clear ?to))\n      (increase (total-cost) 1))\n  )\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquBz6ZH69QJrQM1t88jPARml-h7MVXYhKGshG1nA1TToN2YUJGJtZ-_lbEHLDkzuH5QXVT1x1-UHuH3bKigijD5QN_521BEAfAdsvtdrd2xdovSPVJnent1ekh1qSHmBAHTeUJQSNDgFUFhnBKsUJ77gxRW-3yFL5ohPwSMSXjKeJGunSkcgU_zNIelQRarAeA905GYOTmTm8h_8OEbNTjBSIl8q8IgcwrIFoLwG-vMXaHDpSBQWMcXHkEO6TvxtQBLIV126X_81VdQyvdLUtVXWMNy7VxuFUOnp_AQnLEUsfA2IkaN-HmjhvJehVacFQ6RutkmAt9IvPzeu-A4BMJ8DDTfFW394Vi8zFfYcaDAAvsfu6HqneU4l76FK8X0HYQkmM2YXs0bQX9N2a79PR3W7blU14IyruY9uKrOuG-seRX06-DQCuyFnnpTgqq9GfJ6Fl0-S-gxs-d7KtE3ahNZUdx3Bve6sIOXfbj6RC5WW59NivWlv08jjSngBEQJgHO6qIaSA9CuJ5yPhHKqYrvkhIdhYwEeJ3mzAlpSuqwZ30o7eZBIlqMfkr9g_M1uLb6IJ2mr_kuVTeScYoFbNsZemgeOxD00j3RDsg20vwHx4QP_mEOt7DuYdYRWENEsV-cP0KZz1GcKdz4YAtRPrR_wiiJHvcrP6UvYZPyibEXgAfubMXilY6dR-YlgPSToj9Wh6wtICnmyX4XPw3fQRX3V7-_8YDrFDLLPGmLNxkFpwFwNv1bZ5KI6bM6RWM5FxzirJBKTqEEGjolX63n029_kBreyLu4E6a1Old_VmoLwmVMMvR1VTYmaFO55nD8LBNowav5blMolZEVZ85aOuCBKG6SG6fYHyVoh6oyUJQu0K6WvO0R-DMsmjC0A7Cem5w4P2YCFgG2Bvo5mKQYP6JWn9jJisYq6oPnGd5ZjQCbnknrMWVSV2y6gsXJTLXnyg9f564k2aSSMF8XmJNbIDO_WGPIXY2CJBnFJnbzDZaEmQXer0_ey9fgjzdWhjfycnENJBnSrobhw4fB8zuuTVoP9N-dchGo6mGr5biTMCjWb_2mVm_k2itWL4anCMAp5n2VV5cItIRn6GqUVdIPyjKzRU9OR3mqUVUJRja4Wq4E9Q9neZDKCQvt8WSfzcqhgCODCEtffhcwgrGJckgp6UPutYyZxojvPmYJ8-xGifIvgIwr2ulLdMOWEhJcAE0U5AVkU6BLHXqK05l26x2kQjDkaBOBfwiqN73hyq2WV2Rpbiuo-hJpOvAjZKG1VTDY9GSm6xqCyRUN4dYGKWuWzn1ixvPIeUL1bD4AwWgOYbsDVqnwyX9IUn-qLNfQ1kHQ4Cs-E7D5b_bVNE4kvnMKBwqKiO22tkEniG-Fisgwal240e7uVJuNqOfsI0f7dYcQVZ9bhvAmBK-V78bbKczfNp8-kYhxlTxLouTj-zpFMPo2h4LU_nX_M4b_rs0WyZJ37c7dMqnfElW-DGZURcmbiMZeKbP8ti9dhAQ9aeV0iQl2weXuV-zdMM2VCgz2HKHHU2AiJJ2NYj-njMl5Db7bQi1QqhDFc5A7uVb7iN8UN2iw0VahQBwSxbL3Kq40K4kZOi983aI95ByHftFWQkiufKcMz2LMuiWwydKKoG-Le1aYKljgc-Ag0pOM3oy2VdxK75s77DZ1fikh7QLiVEHSForM64knJhvy8EWwWPIxSyzY4wv3mmZdQHABJUs-XfWVjUK1Ah3cI951yqShRTjCWhi-akbWHpQgphxIqsWFEvyu4ypyTz0GUn7gVxEQT3U4KOKMUDhnH1HDmTTDn-71rKQ_BNnfLuxvtl3Ugw4mmyjQeMne-nkzmftFEFKtfy7zpY__J478FcDR7Nn_HpY8UORz3brtwKzplJ6Az_nuArdi20hoHfHYpsfvXh8zOGmopRQ7LTbtNGq9mxbReSSaOS9SWAacy7boNKKG0W3Qc1VxyRolqOm-gnLd1Kj2ixGF7GD_T3OXyV-eg36g-xim5UJ44bPwugzN0EM9lD_q6bUtCUgcWfbTmZaJwm8DtzfUISdva9RhpaVWNgi1C6xN6ZcRKP_InsNXvajF5xnTptQPbn-v6V3YevgqoObTAsTmE4STtxCZTL8Zs0nPuOuSvo2e7GGZ-s9sxv2WIkz8l52bEt8vzSB-duSgvx7qCd2R-__fHYwSf6-1JAyIk-pO2Qxg-f9j1RAXu9E-17r0vm_iiotG-q_UvOFD7w4pMF6cWtFvY0PRpdh6hNSKGUJmH11009i9iRKwShjbUK6ETUYaSNmRjfSPj0Tu-Wqvx9nSiqPhb9jpMlqkXEb08tdHvw-DQFCkqHU9jfFouFq_vR-Q9y7KqpmAChmWAh7jYkW6I__r-pgYr0OHlAGVUVSCCQ9qROhNkSqPcu-e-kDxgF0zg3QtSpmCZO9WEzwxup1opHYdXb-5xGOZ8BKB2dyxpCovimpHN9tLbGuEpdevYpwVAToiVUbT1ao4enKFZsd26N_VFgna1bdjVQSj_7X_q9Cgh11nOv2MxNA7ejhPxRyOKQep9_dQNOeK41RyK-AF4xTLtkbqWqlJPmNZ9ndtPI-eYE7HhgvA-7LzaYlE1UOdudKxTdxx5X46CnYHAlZIKlmJXRwCyYcXapexSVrd16nV-UUEgY2NVln8GJHlwjhfjvKp5StTs0Byw3so-lqtLJydefPQE0pBYfi6XxM2DgUNs4Fk2hLXpPLw6JBuATl4L3wbeJwswL36mU0bDhb4bPr1ZLF1TRqBVEz-OqgS4qd2OgX65NKSM9Xy2L8pt2XyO83AZ7ZBgJzJ_spfdW0vL2KwmMMHkTa-V_4fEmS1mqa4v5kv4TMp0YEXIN8lynj3uxez8CcwgMlC4Kz2hw2MmWkl7KKZd9SYDTT4t6RuYWlY5fZ2ZMFzfsjzg4N6qGU9olvC47cxAk9xUJGn-XPTJyeMluEVEln98Yavz8fFpCDkWUX832GrrNF4tguAZZfLMMySnWt08BrWjsdgJ7Lp049s5TIOAJy-j3z2o9ZgHvhIQH7Ht9u4SvYiHu6xf5el6Pk7udbKN4S9LSCvDknoOhyZIcm5pe5lu_U2YIrA90ZRh2lhvKzXNJ5CBfWEwQsP2G99g6-nmqrUbCcJyw99SRheFpe8qoaWkYUUE372Say_-PDcltm7i4-kI51w7nuv9SbV2HqjoHtU80-_Qlzj5z2gOddO3Z95GWrNa5BBXcA9qlDb1pJMpMzin8jSGc3KIdDNAWdBubyEKJhw1k-tvwuuqPLBe-7J2bx9_eTnnb7oOwV9fYol0j5yTw5TjTlzUskFnNxaWhSo5vhWKvOiZRrHvqMAgLg2FCoCowyT_mgipu9HpVcgB267aAfUPehTHHuwMklZ2veMR2HfqvBnPPkymDAmu0e2aXTsk6nY7TDLx8BJS9VOhZfll0cIF7DpQjiUqdemOPdra4uCdXuJr5vPLNLqMsbxOLJW5K4wWDxM6Q99VavNebkSiNBvSTvsfZh-41YZQPI8Z80mgP9G2gMKUyNJR5S_XaFXvnHu46Zovb6RxVMmOTXYBP2bhQGGMY1WNkOa_PHVB2Jhc4Us4tManahZbSeQ_35GGN4gZ1XVDFFNHIlNMteQsgL6y87ztKQw-C2xCOMJsKmCUSYIgyJLMstRlsr6BMu86T2kM6csbsTLRKiiaRDToP2ru1SBnwyDCAZzH7p6fbfzpe8RdnTa-hhXmrbuDzuttzULL-IIoURoW4UFAjv9UzKtWhLx252TeU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0582ee3394607f19016ab81cf2c37c87d18dfebe8e48c3968c",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1379,
+   "completion_tokens": 1269,
+   "total_tokens": 2648,
+   "cost": 0.016136,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 1376,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.016136,
+    "upstream_inference_prompt_cost": 0.003446,
+    "upstream_inference_completions_cost": 0.01269
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 437,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

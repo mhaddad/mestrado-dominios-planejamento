@@ -278,7 +278,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | 🟢 EXP-16: 28 de 32 planos válidos (VAL) nas instâncias p01 de 8 domínios; planos em geral mais curtos que os do LAMA |
 | X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | ⚪ |
 | X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | 🟢 EXP-14 (anônima): nenhum LLM supera o *single best*; GPT-6 Sol empata (146 × 143). EXP-15 (com nomes): piora em 3 de 4 modelos; escolhas seguem a reputação (LAMA, FDSS), sem sinal de lembrança dos resultados por domínio |
-| X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | 🟡 EXP-17 (p05, 4 domínios; parcial, parado pela trava): 8 de 14 válidos na 1ª tentativa, 11 de 14 ao final; o GPT e o Gemini resolvem o Floortile p05, que o LAMA não resolveu em 300 s |
+| X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | 🟢 EXP-17 (p05, 4 domínios): 8 de 16 válidos na 1ª tentativa, 13 de 16 com o retorno do VAL; as 3 falhas restantes são por limite de *tokens*; o GPT e o Gemini resolvem o Floortile p05, que o LAMA não resolveu em 300 s |
 
 **Atividades**
 

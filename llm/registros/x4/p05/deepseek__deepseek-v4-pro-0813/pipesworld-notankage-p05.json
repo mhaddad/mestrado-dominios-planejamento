@@ -15,7 +15,77 @@
  "rodadas": [
   {
    "rodada": 0,
-   "parada": "teto do X4 atingido"
+   "retomada_utc": "2026-09-26T20:17:56+00:00"
+  },
+  {
+   "rodada": 0,
+   "data_utc": "2026-09-26T20:22:23+00:00",
+   "segundos": 266.7,
+   "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+   "provedor": "Baidu",
+   "uso": {
+    "prompt_tokens": 2523,
+    "completion_tokens": 16000,
+    "total_tokens": 18523,
+    "cost": 0.01260447804,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.01260447804,
+     "upstream_inference_prompt_cost": 0.00062943804,
+     "upstream_inference_completions_cost": 0.01197504
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 16000,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "length",
+   "valido": false,
+   "diagnostico": "sem plano na resposta",
+   "resposta": null,
+   "retorno_enviado": "The plan you gave is not valid. No plan was found between the lines BEGIN PLAN and END PLAN.\n\n\n\nPlease provide a corrected, complete plan for the same problem, from the initial state,\nbetween the lines BEGIN PLAN and END PLAN, one action per line in PDDL syntax."
+  },
+  {
+   "rodada": 1,
+   "data_utc": "2026-09-26T20:25:12+00:00",
+   "segundos": 168.5,
+   "modelo_respondeu": "deepseek/deepseek-v4-pro-0813",
+   "provedor": "Wafer",
+   "uso": {
+    "prompt_tokens": 2585,
+    "completion_tokens": 33473,
+    "total_tokens": 36058,
+    "cost": 0.11780175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.11780175,
+     "upstream_inference_prompt_cost": 0.00064625,
+     "upstream_inference_completions_cost": 0.1171555
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 32706,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "fim": "stop",
+   "valido": true,
+   "diagnostico": "válido",
+   "resposta": "BEGIN PLAN\n(push-start s12 b7 a1 a2 b2 gasoleo lco)\n(push-end s12 a1 a2 b9 b2)\n(push-start s12 b8 a1 a2 b7 oc1b gasoleo)\n(push-end s12 a1 a2 b2 b7)\n(pop-start s12 b4 a1 a2 b7 rat-a gasoleo)\n(pop-end s12 a1 a2 b8 b7)\n(pop-start s12 b9 a1 a2 b4 lco rat-a)\n(pop-end s12 a1 a2 b7 b4)\n(pop-start s12 b13 a1 a2 b9 oc1b lco)\n(pop-end s12 a1 a2 b4 b9)\n(pop-start s12 b2 a1 a2 b13 lco oc1b)\n(pop-end s12 a1 a2 b9 b13)\n(pop-start s13 b5 a1 a3 b14 oc1b oca1)\n(pop-end s13 a1 a3 b15 b14)\n(push-start s12 b8 a1 a2 b13 oc1b oc1b)\n(push-end s12 a1 a2 b2 b13)\n(pop-unitarypipe s34 b3 a3 a4 b1 oc1b gasoleo)\n(pop-unitarypipe s34 b10 a3 a4 b3 oc1b oc1b)\n(pop-start s13 b3 a1 a3 b5 oc1b oc1b)\n(pop-end s13 a1 a3 b14 b5)\n(pop-start s13 b6 a1 a3 b3 gasoleo oc1b)\n(pop-end s13 a1 a3 b5 b3)\n(pop-start s13 b1 a1 a3 b6 gasoleo gasoleo)\n(pop-end s13 a1 a3 b3 b6)\n(push-start s12 b3 a1 a2 b8 oc1b oc1b)\n(push-end s12 a1 a2 b13 b8)\n(push-start s12 b7 a1 a2 b3 gasoleo oc1b)\n(push-end s12 a1 a2 b8 b3)\n(push-start s12 b4 a1 a2 b7 rat-a gasoleo)\n(push-end s12 a1 a2 b3 b7)\n(pop-start s12 b11 a1 a2 b7 oc1b gasoleo)\n(pop-end s12 a1 a2 b4 b7)\n(pop-start s12 b13 a1 a2 b11 oc1b oc1b)\n(pop-end s12 a1 a2 b7 b11)\n(pop-start s12 b8 a1 a2 b13 oc1b oc1b)\n(pop-end s12 a1 a2 b11 b13)\n(push-start s13 b11 a1 a3 b6 oc1b gasoleo)\n(push-end s13 a1 a3 b1 b6)\n(push-start s13 b5 a1 a3 b11 oc1b oc1b)\n(push-end s13 a1 a3 b6 b11)\n(push-start s13 b14 a1 a3 b5 oca1 oc1b)\n(push-end s13 a1 a3 b11 b5)\n(push-unitarypipe s34 b11 a3 a4 b10 oc1b oc1b)\n(push-unitarypipe s34 b1 a3 a4 b11 gasoleo oc1b)\nEND PLAN",
+   "retorno_enviado": ""
   }
  ]
 }

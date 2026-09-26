@@ -70,6 +70,9 @@ def chamar(k, modelo, dominio, rodada):
     else:
         return f"erro de rede, sem registro: {erro[:120]}"
     texto = resp["choices"][0]["message"].get("content") if resp.get("choices") else None
+    if (resp.get("choices") or [{}])[0].get("finish_reason") == "error":
+        # erro do provedor no meio da resposta (sem cobrança): tratado como erro de rede, sem registro
+        return "erro do provedor (finish_reason = error), sem registro; rodar de novo tenta outra vez"
     destino.parent.mkdir(parents=True, exist_ok=True)
     destino.write_text(json.dumps({
         "modelo_pedido": modelo, "modelo_respondeu": resp.get("model"), "provedor": resp.get("provider"),

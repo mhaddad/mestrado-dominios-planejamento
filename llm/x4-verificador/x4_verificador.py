@@ -68,15 +68,27 @@ def diagnostico(dominio, texto):
 
 def conversa(k, modelo, dominio, rodada):
     destino = REGISTROS / rodada / modelo.replace("/", "__") / f"{dominio}-{X1.INSTANCIA}.json"
-    if destino.exists():
-        return "já registrado"
     md = X1.PROMPT.read_text(encoding="utf-8")
     sistema, usuario = re.findall(r"```\n(.*?)```", md, re.S)
     dom, prob = X1.arquivos(dominio)
     usuario = usuario.replace("{dominio}", X3.ler(dom)[0]).replace("{instancia}", X3.ler(prob)[0])
     mensagens = [{"role": "system", "content": sistema.strip()}, {"role": "user", "content": usuario}]
     rodadas = []
-    for n in range(MAX_CORRECOES + 1):
+    if destino.exists():
+        # Retomada: conversa cortada pela trava de orçamento continua de onde parou; o histórico é
+        # reconstruído das respostas e dos retornos gravados, sem repetir chamadas já feitas.
+        rodadas = json.loads(destino.read_text(encoding="utf-8"))["rodadas"]
+        if not (rodadas and rodadas[-1].get("parada", "").startswith("teto")):
+            return "já registrado"
+        rodadas[-1:] = [{"rodada": rodadas[-1]["rodada"], "retomada_utc": datetime.now(timezone.utc).isoformat(timespec="seconds")}]
+        rodadas = [r for r in rodadas if "valido" in r] + [rodadas[-1]]
+        for r in rodadas[:-1]:
+            mensagens += [{"role": "assistant", "content": r["resposta"] or ""}, {"role": "user", "content": r["retorno_enviado"]}]
+        marca_retomada = rodadas.pop()
+    inicio_n = len(rodadas)
+    if destino.exists():
+        rodadas.append(marca_retomada)
+    for n in range(inicio_n, MAX_CORRECOES + 1):
         if X3.uso_da_chave(k) >= TETO_X4_USD:
             rodadas.append({"rodada": n, "parada": "teto do X4 atingido"})
             break
@@ -131,7 +143,9 @@ def avaliar(a):
             arq = REGISTROS / a.rodada / modelo.replace("/", "__") / f"{d}-{X1.INSTANCIA}.json"
             if not arq.exists():
                 continue
-            rs = [r for r in json.loads(arq.read_text(encoding="utf-8"))["rodadas"] if "valido" in r]
+            todas = json.loads(arq.read_text(encoding="utf-8"))["rodadas"]
+            rs = [r for r in todas if "valido" in r]
+            cortada = any(r.get("parada", "").startswith("teto") for r in todas[-1:])
             valida_em = next((r["rodada"] for r in rs if r["valido"]), "")
             final = rs[-1] if rs else {}
             plano = X1.extrair_plano(final.get("resposta")) or []
@@ -139,6 +153,7 @@ def avaliar(a):
                            "valido_ao_final": bool(final.get("valido")), "valido_na_rodada": valida_em,
                            "rodadas": len(rs), "diagnosticos": " → ".join(r["diagnostico"] for r in rs),
                            "passos_final": len(plano) if final.get("valido") else "", "passos_lama": ref[d],
+                           "retomada": any("retomada_utc" in r for r in todas), "cortada_pela_trava": cortada,
                            "custo_usd": round(sum(float((r.get("uso") or {}).get("cost") or 0) for r in rs), 4)})
     RESULTADOS.mkdir(parents=True, exist_ok=True)
     with (RESULTADOS / f"{a.rodada}.csv").open("w", encoding="utf-8", newline="") as f:

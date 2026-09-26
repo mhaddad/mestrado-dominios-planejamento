@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "termes",
+ "data_utc": "2026-09-26T19:29:38+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 9.4,
+ "uso": {
+  "prompt_tokens": 1548,
+  "completion_tokens": 878,
+  "total_tokens": 2426,
+  "cost": 0.0126485,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 1545,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0126485,
+   "upstream_inference_prompt_cost": 0.0038685,
+   "upstream_inference_completions_cost": 0.00878
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 137,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain termes)\n  (:requirements :strips :typing :negative-preconditions)\n\n  (:types\n    position numb\n  )\n\n  (:predicates\n    (at ?p - position)\n    (height ?p - position ?h - numb)\n    (has-block)\n    (SUCC ?higher - numb ?lower - numb)\n    (NEIGHBOR ?from - position ?to - position)\n    (IS-DEPOT ?p - position)\n  )\n\n  (:action move\n    :parameters (?from ?to - position ?h - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (height ?from ?h)\n      (height ?to ?h)\n    )\n    :effect (and\n      (not (at ?from))\n      (at ?to)\n    )\n  )\n\n  (:action move-up\n    :parameters (?from ?to - position ?lower ?higher - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (height ?from ?lower)\n      (height ?to ?higher)\n      (SUCC ?higher ?lower)\n    )\n    :effect (and\n      (not (at ?from))\n      (at ?to)\n    )\n  )\n\n  (:action move-down\n    :parameters (?from ?to - position ?higher ?lower - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (height ?from ?higher)\n      (height ?to ?lower)\n      (SUCC ?higher ?lower)\n    )\n    :effect (and\n      (not (at ?from))\n      (at ?to)\n    )\n  )\n\n  (:action place-block\n    :parameters (?from ?to - position ?old ?new - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (has-block)\n      (height ?from ?old)\n      (height ?to ?old)\n      (SUCC ?new ?old)\n      (not (IS-DEPOT ?to))\n    )\n    :effect (and\n      (not (has-block))\n      (not (height ?to ?old))\n      (height ?to ?new)\n    )\n  )\n\n  (:action remove-block\n    :parameters (?from ?to - position ?new ?old - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (not (has-block))\n      (height ?from ?new)\n      (height ?to ?old)\n      (SUCC ?old ?new)\n      (not (IS-DEPOT ?to))\n    )\n    :effect (and\n      (has-block)\n      (not (height ?to ?old))\n      (height ?to ?new)\n    )\n  )\n\n  (:action create-block\n    :parameters (?p - position)\n    :precondition (and\n      (at ?p)\n      (IS-DEPOT ?p)\n      (not (has-block))\n    )\n    :effect (has-block)\n  )\n\n  (:action destroy-block\n    :parameters (?p - position)\n    :precondition (and\n      (at ?p)\n      (IS-DEPOT ?p)\n      (has-block)\n    )\n    :effect (not (has-block))\n  )\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450968-SW6YFpSxiGsify3jZ3G5",
+  "object": "chat.completion",
+  "created": 1790450968,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain termes)\n  (:requirements :strips :typing :negative-preconditions)\n\n  (:types\n    position numb\n  )\n\n  (:predicates\n    (at ?p - position)\n    (height ?p - position ?h - numb)\n    (has-block)\n    (SUCC ?higher - numb ?lower - numb)\n    (NEIGHBOR ?from - position ?to - position)\n    (IS-DEPOT ?p - position)\n  )\n\n  (:action move\n    :parameters (?from ?to - position ?h - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (height ?from ?h)\n      (height ?to ?h)\n    )\n    :effect (and\n      (not (at ?from))\n      (at ?to)\n    )\n  )\n\n  (:action move-up\n    :parameters (?from ?to - position ?lower ?higher - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (height ?from ?lower)\n      (height ?to ?higher)\n      (SUCC ?higher ?lower)\n    )\n    :effect (and\n      (not (at ?from))\n      (at ?to)\n    )\n  )\n\n  (:action move-down\n    :parameters (?from ?to - position ?higher ?lower - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (height ?from ?higher)\n      (height ?to ?lower)\n      (SUCC ?higher ?lower)\n    )\n    :effect (and\n      (not (at ?from))\n      (at ?to)\n    )\n  )\n\n  (:action place-block\n    :parameters (?from ?to - position ?old ?new - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (has-block)\n      (height ?from ?old)\n      (height ?to ?old)\n      (SUCC ?new ?old)\n      (not (IS-DEPOT ?to))\n    )\n    :effect (and\n      (not (has-block))\n      (not (height ?to ?old))\n      (height ?to ?new)\n    )\n  )\n\n  (:action remove-block\n    :parameters (?from ?to - position ?new ?old - numb)\n    :precondition (and\n      (at ?from)\n      (NEIGHBOR ?from ?to)\n      (not (has-block))\n      (height ?from ?new)\n      (height ?to ?old)\n      (SUCC ?old ?new)\n      (not (IS-DEPOT ?to))\n    )\n    :effect (and\n      (has-block)\n      (not (height ?to ?old))\n      (height ?to ?new)\n    )\n  )\n\n  (:action create-block\n    :parameters (?p - position)\n    :precondition (and\n      (at ?p)\n      (IS-DEPOT ?p)\n      (not (has-block))\n    )\n    :effect (has-block)\n  )\n\n  (:action destroy-block\n    :parameters (?p - position)\n    :precondition (and\n      (at ?p)\n      (IS-DEPOT ?p)\n      (has-block)\n    )\n    :effect (not (has-block))\n  )\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquB0d2-WfFTeoEDngDZS6l6SBAG0jO91bczZviCKhzms_mQiLV2QGos86iFZPBc2pw5l60JfcjsTXrG-Y0T-RIfmnIV187_fVx9b9yNgEH9UdUaYZO9s5zCiyYDilWJ9zT4ayhStCo9VkHWjoCYMPVGSxhm_XR845L51JlJquKO9DRoJ5VgROh0Z-ZTmvmw3XYePpPdfRllaxxg0G3XW02GfAwchAlL8x-3zTZQL1bqiNmsY7mcJ5jdTCgMvmQv9X8iD2DI-1ohYW9yb1kA_1iFxSRk25pS-O0B3RcQZtzKmVDGAxXGK3ClzWY0JHpr-IgJFSF1NyPQNiJLmZPHlT__0yJ-GHbTwXv3BJnckDEzbyfV-qofrRoTZehJqY1WeMAwLu8f7ilKpALHpQrgdf6AeiQYPArurvniJF1J-OY2l6kaOaOs3-ERUgA6kFKNgMxNEynJs35UZpOxo-qwpsl_TTGwppCNYPbhSMSkpsj3qnAky6rNaV2JpVFtqHhV-_-Up9lMgQFARJQ896fhgvyvnC17VbqRyAEQQRsBSzaK-qlmchP1_obbpT7-dItHpp95YkJ6O-kn7ZonHbPE3BBuF6_5dlrUV7pH5NPSCaLSUPbko5hNWC-AU8XUS1eZBwb0X1GIEAXtOHFzWGCMaYGf7A8glRUDTU9KdHGWLHAfIWlqO7xhNuIMnbUkmLN6xe4vxqGTr8b670VOgAr9CYksAWLvSjgp10QJ8IDMtcI0r-diPVexAAgRd3oRG3fZw17FB9D1icK0q5gdfIXxLByk2xl_u-6AyoC90ttjhdO7Zt6x_ZM3v2prKo_ZFWrVLB-P30Y0C-C0HBFE-eLaLrzZaw45YcROLv8M4ryJ--TKsn3ENNBSs3XNFDmGgAMFT_CFrPjMLMt6us3aUiQgVI7GuNBNQ_sG0E7VXncElxZwuUIROXKc0GkzwMkjtsOSaPlCEncVIyl7IxzaXuDJyu3xl7oXQv_jPhk_qNVtq3z-ue0WS5Ov4L9xTPNKKOPk-YlfD0r_X3-KSmxDNWqNjrRAO0hFPXEvswOdJdmACRmmM9rEzg_qAdVXseJ1GRvkWl-q2AHkQW5AKdjwmhjCspUtgg57ZxUSVvovjqgqI9L9WxZDUmdlLv2qcFDoo9WsWgLIfHke7BRcFVNHizSyaBrrdGpmveRCnYwR9WRTsAc7zQ06oysYl_onGW-AINHPjr3Ap9qPvoRbZG8SIhMF3ovwSqBBXj2zsIwqM6eh4Eu_Y1UiOWdpWeovxFD16bpN4HZJeN22I_jvtwDGNlKJaf_HbSyJ-YbAZKXFtfedPfRMW0AkaeAf_NFNdg4R0kiQljrSM1l4bWPNmK-uxrP1qgC5HzL4Uq-2cv8s_hfaxGEdBRtTETJMCzU7XXOSP2tzCYP8WEIqgJymqSVn9Xeb9bcwSy-UJ1Zld_SuRh6AzVLDIbt2cKXgwyuXVCqXpzq8plnHA-Vx3J9fF7ciOHYBUBFA7F03Sb3hoEmCy1KyX3M_3ZatTFlNmErsu1f3md7ZlGfvPiMM5J_IiAjB_8Xl_DCYQURwWIGzRIbTDF3APEvV127_0XQMsv26_BZdMY1cClHeObpUSL9pY2NFl9i3Fxt4XOw8Bo764LCRInfKIWyxTvVKQ8yhtUeZE_4QCthAMp9hRMtndua5XS_is7id-qmIcSsF5hS01MaklKyao9YbQckduEWpuClIeK2A1wL9xAuiWQx57lGw33ZUT4TsDM5joRpJQoxfYd60cn0fyIx5R5otfZLnEgB5bFsXy_zcbAtx9ds0jZmqblL7nmvdDOvr90c6KkYSeY43hsRViND5SUcQOOKK78hX7WSGRVQkGbBVwJ-IqLleID66QMBBlOr6cinNQunCNDsTnxyBlFR6TwDgK6QkA8_yqyLy9I-F1sH8Q7wTMrCSuzb7X14ZwOJIlmlNtdHXVATeR_lLOWtlexkRAGNnWrHdxQFrKPhiK8-Wmm93TNtY4WzfvfjOXUsE1hBkIlFE4-oksam_t0uNruQbvURCsGEFFqjMlQFhNErt12n_rTTAKcIT07klz7xiUA9MlAXXbwOLnpQLSnCmADKDHJSaa5A9NjJk-yoThxIxi8sui5JmEQRQmlceEym-v71Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_001dcdd45cf8a291016ab81d1ace8087d191611cdb27f9d552",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1548,
+   "completion_tokens": 878,
+   "total_tokens": 2426,
+   "cost": 0.0126485,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 1545,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0126485,
+    "upstream_inference_prompt_cost": 0.0038685,
+    "upstream_inference_completions_cost": 0.00878
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 137,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

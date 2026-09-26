@@ -1,0 +1,104 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "storage",
+ "data_utc": "2026-09-26T19:29:28+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 19.1,
+ "uso": {
+  "prompt_tokens": 958,
+  "completion_tokens": 1724,
+  "total_tokens": 2682,
+  "cost": 0.019156,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.019156,
+   "upstream_inference_prompt_cost": 0.001916,
+   "upstream_inference_completions_cost": 0.01724
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1034,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain Storage-Propositional)\n  (:requirements :strips :typing)\n  (:types\n    hoist crate place area - object\n    depot container - place\n    storearea transitarea - area\n  )\n\n  (:predicates\n    (at ?h - hoist ?a - area)\n    (on ?c - crate ?a - storearea)\n    (in ?x - (either crate storearea) ?p - place)\n    (connected ?a1 - area ?a2 - area)\n    (available ?h - hoist)\n    (lifting ?h - hoist ?c - crate)\n    (clear ?a - storearea)\n  )\n\n  (:action lift\n    :parameters (?h - hoist ?c - crate ?source - storearea\n                 ?destination - area ?p - place)\n    :precondition (and\n      (available ?h)\n      (at ?h ?destination)\n      (on ?c ?source)\n      (in ?source ?p)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (on ?c ?source))\n      (clear ?source)\n      (not (available ?h))\n      (lifting ?h ?c)\n      (not (in ?c ?p))\n    )\n  )\n\n  (:action drop\n    :parameters (?h - hoist ?c - crate ?destination - storearea\n                 ?source - area ?p - place)\n    :precondition (and\n      (at ?h ?source)\n      (lifting ?h ?c)\n      (clear ?destination)\n      (in ?destination ?p)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (lifting ?h ?c))\n      (available ?h)\n      (not (clear ?destination))\n      (on ?c ?destination)\n      (in ?c ?p)\n    )\n  )\n\n  (:action move\n    :parameters (?h - hoist ?source ?destination - storearea)\n    :precondition (and\n      (at ?h ?source)\n      (clear ?destination)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (at ?h ?source))\n      (at ?h ?destination)\n      (clear ?source)\n      (not (clear ?destination))\n    )\n  )\n\n  (:action go-out\n    :parameters (?h - hoist ?source - storearea\n                 ?destination - transitarea)\n    :precondition (and\n      (at ?h ?source)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (at ?h ?source))\n      (at ?h ?destination)\n      (clear ?source)\n    )\n  )\n\n  (:action go-in\n    :parameters (?h - hoist ?source - transitarea\n                 ?destination - storearea)\n    :precondition (and\n      (at ?h ?source)\n      (connected ?source ?destination)\n      (clear ?destination)\n    )\n    :effect (and\n      (not (at ?h ?source))\n      (at ?h ?destination)\n      (not (clear ?destination))\n    )\n  )\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450949-Xad5uQpAiOsh7KMEBhGW",
+  "object": "chat.completion",
+  "created": 1790450949,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain Storage-Propositional)\n  (:requirements :strips :typing)\n  (:types\n    hoist crate place area - object\n    depot container - place\n    storearea transitarea - area\n  )\n\n  (:predicates\n    (at ?h - hoist ?a - area)\n    (on ?c - crate ?a - storearea)\n    (in ?x - (either crate storearea) ?p - place)\n    (connected ?a1 - area ?a2 - area)\n    (available ?h - hoist)\n    (lifting ?h - hoist ?c - crate)\n    (clear ?a - storearea)\n  )\n\n  (:action lift\n    :parameters (?h - hoist ?c - crate ?source - storearea\n                 ?destination - area ?p - place)\n    :precondition (and\n      (available ?h)\n      (at ?h ?destination)\n      (on ?c ?source)\n      (in ?source ?p)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (on ?c ?source))\n      (clear ?source)\n      (not (available ?h))\n      (lifting ?h ?c)\n      (not (in ?c ?p))\n    )\n  )\n\n  (:action drop\n    :parameters (?h - hoist ?c - crate ?destination - storearea\n                 ?source - area ?p - place)\n    :precondition (and\n      (at ?h ?source)\n      (lifting ?h ?c)\n      (clear ?destination)\n      (in ?destination ?p)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (lifting ?h ?c))\n      (available ?h)\n      (not (clear ?destination))\n      (on ?c ?destination)\n      (in ?c ?p)\n    )\n  )\n\n  (:action move\n    :parameters (?h - hoist ?source ?destination - storearea)\n    :precondition (and\n      (at ?h ?source)\n      (clear ?destination)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (at ?h ?source))\n      (at ?h ?destination)\n      (clear ?source)\n      (not (clear ?destination))\n    )\n  )\n\n  (:action go-out\n    :parameters (?h - hoist ?source - storearea\n                 ?destination - transitarea)\n    :precondition (and\n      (at ?h ?source)\n      (connected ?source ?destination)\n    )\n    :effect (and\n      (not (at ?h ?source))\n      (at ?h ?destination)\n      (clear ?source)\n    )\n  )\n\n  (:action go-in\n    :parameters (?h - hoist ?source - transitarea\n                 ?destination - storearea)\n    :precondition (and\n      (at ?h ?source)\n      (connected ?source ?destination)\n      (clear ?destination)\n    )\n    :effect (and\n      (not (at ?h ?source))\n      (at ?h ?destination)\n      (not (clear ?destination))\n    )\n  )\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquB0N197XNCT-7Kur2nki31iOV_zpWtsYkEc7U4ZqzquOlCND7z6MWp05_IhMSjH9hOLNAJ2_c_BCW2Ja3Vrhyl_E2gHq2UQtsHMpQhBosHzib2A1JuIQ7imEDXVVR166CXt8bmMAqqDXxYAcSfdrYON_G3Pgsh300qn7IaVBfHlXnrrGD20cr6V3j3t1lNO02Yb6vmUJPQPIEKAzCN1cz5elyEfpXj4-IJlUO98C_jb7KzV1Bt-y6BEXjTtike7pVZE1m39wu-mkJqTnUNEIxQ_NPKqlEqUs0YWtwqpEPGJILGyWcNYxwRCar7gtU4CXkxl4JFfZtdYfEndjsdMpFhX5rs0m7DABu9f4aGZO7kzKEAjEW6W_i_s_g5edGJuC0CbhCPVkk_Em73uzliFDezb_gSZA6SVr8rnyY5EzanilpfZ3RPj0VJmop8BGE5nzW-JzQqt1xXAT20cw1vdXXky6GukGdrIokqy0uwgryE0NfPRgps7CbCr3AEFZ0gt5UoUuLNfHh-r1A4RUAVEIQ2hCauju1B2lUZwDHAkLxdDMVIf3ODChF7iq2uNsQybmZcBp9MWWQYfzHUxICYDAPJTiChQuFS3_3zOqLHd3A28G00bsIj4FiSRcz6DGTOoQUUoBq07ondawiw9SzxwKSVkGFTJmCSfM3izTqsPeEl6WKUNH6j3XHrPPC_4vFTX3rvBN9oXiteJC31Ure_lz3Ws5k68_Q7KyAgBAuqUbKurHzR4cP8R-Uxfk0C7W0rV-2jcOvctfihQLDCxB3n4xRBPWOIieMG20WFYR7kcWIRqU6d0N-tWx-oQSGf_G88M-jRu-Z1tKCWNFWMs5baTbJH7nQ4AXhpCzrYAdQoLaMvk0IpCdd6_ygxWG0Ul0akS0f30oHN1TXylbxhUNSzw3mKD7i2kU0y3MsxgwQ0zZj5R4kqOgfojV77BKAVp-3dPSNPb9edwZp1g0kf3HEmiYEFgV4l-UBNwdUBAgfHCFTXSHAj60mVm4idyabATy1CUgZmIOXF9148rEnimKUOexQIZrw_GJKwqcq1zVGX-lKlgAWOMAlN-Lgiavj5aVk8-TQx4pMWnHavedparA_Tdm901o-_10yMPWsbOo7ejpcan43bQ5MTpRTg7or1fAu8ZMvR6xSGZkF6WSbAOmAyAhWSkgxuFOgHEENe6GOUKRmdFd-WN2voqXxWe9yvo9OnmtUS-PlZJqkbYdyk00AC_W5_Ch27u5UyF2LoZB56ib7nvwxOMdHMxNBUMzT7ZKN0U-ixTF3PtkEkmh0WCI8C3c5jsg3eSpXt3_THClTI5v4vXBkSKmN_rJQ6lEygyuwTmG8mVUgN1d2xPNpJemhkq0zuCHH7Mg2C6y4pWq75fv6AIT_nVKamkg67w-Vnm3ig4LRuinE6V9t2fhaPkoBqcqfxZWK--14rIYu-YNNoHldCpzEmzJXGgnXj8QPzmLfop3lwsHIveiK3IR03Mm_e2rGM_NtCPaE11VALXVuybcfBQK93BWgv2eOYf5IbCF53YBGMKHCOfTf16G5b8BCzpyaOeZUx9gWBRp39gtT-YgQgE21riq9XT1zJa1PvMy6i5rPf2g0w7cvuA4gXoEybjEmkiKRJryiMmd6XcSvaJ8JDAuJJOPbf-O1bSz7Kg2qSSWqNEekZeIRkxFpStRQSiWNrCl7_teZ74aE2BtvxYLBzpVEfYKyoqQzdqCNQWU3oJon8vIE7dmhKEK4X6B870SGjd0EH-MfWu2plWx5HsZ4stzOge2__9lwo0_2m4M5EAT7skSUAQj6auBIaxNk4DtS1gKVyG_PqtfyYaAGrpydOBeyozDKWaBgqBxGl0Ws2p_lioiNDXbuc9n9uwUAR8_Y5PeifYYctZwAGDp3i67YS5-0HwfTY9E0onzABM43Wxh4Rl5sXLo0FEGSe83D5BSimzcDoqC-XHPZemNkrGyM4N5fW7TlVfFtLnLnut32dCAvzZDCcdfkMio3d2vfU98afFcpdTKiad3opGTyp7ksFJ_LLBIc8sbFO35kEBeSjQMWsEFq230wXVfrfDxNNqseGNste7nRHInW-vs4ymgGoQEMgak99Hjtbt7L45dTRwX9ppN-hUKn-jwTW-6iU4MKzNvXx6c85JsA5I1dAuqJmKib2o23eUSaYdoUHw6ZWziyyfhsNSbSwKKHipT0A54OuoYPQ7uVLwqqD4ENbJrJJCpWhEKEOk1JBWCZOUUEdDqOlQASX0VAaU0W_fh5Pe1AYeEneIKzmUrVTtga1brNV9vbtQDZvcDurKuxuTXvujfzMHrCleNKMA_FlurfkTlesrekkXBlbYIVOoJzVAHwyx294E4NLoOBaZbeomh74Y_vuF8fBAdLkrW6NaWHSDcUk9JmdhpgBvZhIzUQdEN5HtSL2SFCAqnBtd9qRG1XKGkM8O43sX1c5_Pat1_Mj7f0FU1VGhBe_st95vYteak8n7ha7mEiJwnwHRTXw4THOKCbE0w1TxFfM3nx7r0gItAUBhCLaLKPk2-8VMNlhkd0mJvrsWSC6hQhq0DLj-cifwIhfD5kFlZAYkTC15O6NovSc5ep65joj6Rm0JMeg9EeeS7P-eqMCSTz9FsSSE39GmXpkbMnx1fWIymF4Ov2HiHPfvBSOKu8dOSHVEnHG3HZ2eRn0pBLBbdwDkKYJQZbBqUvhbtaEUdr77F3HZks3Mm2hwf_Pka1OM9OxOT6a25cs4boRyudgijkXsGbrb8ruqmJFRy39lUn9mu_2BmoU3q6h4mysWdkTvqNaP059ssHTtzKpid9oROhMOXXGozdosYGDpIcZaw7-XbJWB6hwc1-7GVCIkF-hXkveXH3z9bOpDBLi-jbduO6jIY6pBD6F4FWJ0kEfNfb1bzz3oUrATVorE8Slq4_uIALsbrFCPnqw2JZ9eONsL5YXtnjXYEom6Q-mJJVr3UtB5aDlBWwT270Sikm-_gsrSlMEQRQ4eX0qa8poYA8Bemfx1b9SCV4Jy4IUyTT3E51ViZYZy38nZFZrW4LKYvTBp3hQN1LFCVu5pfSnu60Ya4CUm773CocHR3DSsraJ5IAj1XoBDEm_QzPMH56IMJKlUysT05wywEfT8--TE92YtvpsCWvs6PU4qylHCsZLuYWU81S5uSixMeK8IQ5WtYpt3PYwJmlmzLdmmn61jfiyY1jTkUBGNJCX55fNs8H-VWz5mdRhxvigntGUlQguUaNH3D2q6ZG-T9JLht3Rq2fFBzI0YRaG2q1FFl4vzd-JM6Uu1aoiRgy1u5qeqBBeqe9CQxhZ51CGyh5LHFVUSkVPZCwhNHLmrZjkiCvvNG_KRYQV6lnOqplbow0S914OjirGXdvcBNLHYC0vf7Awao65K9KrUsvqhl1-XnDVn3DMfg3qz0v6KzYqalwjOpPu0NVhQUVwjgNQwUovxYyvwqu_bS7dxbKhUK_mZHp1Pw8w9v10EmMAFliEIEf4xGMIY2e7k8qimy19VxIGhCapE4kOrw2PVExxhCYsq6oUF-c7QcyyQAiMcbF2Zf3FUMcpfRXF6abAH-u08HbC9HIQazlts4o147zyPzvoVZ8VDONC_U4k_jZaLkL0j5BMIBiEa8Pm1z9c0SC2pF7dbvT1gsZOaWev-HLDl6CgsNYSB54WJuPBhhxQEJpekwHu5pcFUEWb9L4xcb2fKggLdQMe1q1UxZq9rkZzu9GAFdWo9z6azJ6DeFJaeXmikl5OJAz34KexEUQDNxuWR73R-KhsLkCXQoS1cvsP38Z4ddH4BLEDU5ncbB1nD4DoUakZXZhBiBgW1APEG-MwpDeBtYIymaVuPLKTCRSLdcgu6hNEMgK4mmaim9Ec1i_69yAKX3CL5T3iPSuOJQhBS854p32FphIYIWWu0ibonkUrLGNff1ch1sl0nGZill9FdIgz7EqmSM6SB_ofLjr59AK1Z-MZlI6OkSwZ_u9I0Sb798fyimufQl9AeX4GTkLKNrFBEuw7B84260rLd2IqQ9k39vTt7Of4TOcTDoHPivALE8fv7jgzSRfaLA_YCgxi2ATNFn9cfAPR-qSzLw4i4lTBcRdYZ9Z_W_bT884PxeHWqGRCzb2LABG_JoMssCSZl-vt5uZQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_091bc24dde574281016ab81d069c8087d1b7a31a0023e1add0",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquB0UOqMqUA6rAWKA8tqkKo2Sfg3zcUJTZb-c1VVb6-z-HH83ntjCt6inCgNqBUL_jYq6Q_FeeaFfE9SsnBjAhiZnQzAt96fDKYlPaR_qQNYT7C4JPiSAuWN-_R2ybkhhtD-r6aiMr4qf7d85tHu6fRzOidhjrmu9H26mB_FmcJYmcAGFIPneb20OC1cxZHcHKo69JBbU5I7F-yXZ9vI4a1i8QrOvKdkMZ0DuwNJcoeQkPQncyI7KgitH2xydeflfAy5bY42VEvvXB5hxmqw8T-Lp2N84Tx8k-rTnWDoLd9hQPTCVN4-FWaQpkATvqhqOu-xvhUdLzmxrBj0ypD7G38ZVTC-KFPpAh-Uk0nC9QyMi_OMCl5NkucZxO06geCk921y4l26-q5b2gtBGEZfF8GMXzGl7D1K-OCKtrwdAspXB71xrYR98y1jKNG8nf3GgNP-ndtEYt4f35FoOfOXjIG06ytPOa0TOK4y17WQqy1ffEInKxuNF50oGLERIxPPDKFlVKiN0cQ866O9vUGhS7ulNArYgOOD7CunUa4gNy-BIMV4K15YqaHjXoSwK7vrLHCX2Kbo7Ses3HSc2iPtcsv8k_v_QXwIDur9jaynlGQhJ45oyZ_NxEqJ_pr_4-qQKBD9u64mjzRiQF0pLynBRGFzsiqmURsTwVw70YaHIaSVDOalcHbHPh-xrfR-DHff1ggbRh9kZjfxNn62EbekEi_i1whsYpL4EMBtdYWmT5wQSctUEJ6UvRIxaBlIvSQzV5MAnH0n0SExb7ZyS_GfpD9vnqicLxCFph7H43DurdZz0cMp5QESyF3uYhYkBiv9KP-9TSVUQ45s9RM84DbnXXFtthUVwCya5YpYHFOEu4m2B5nuc9IdhaJADTXxQa2aLRpXWkq9SlQok1kgGzL3koRgxr9ZdOqDE5iFjYjGNSsj3sKtTM9sNK9GBP-pHgWyajKOdWlQ3EYODtmrHRYWsUTr-U_up1i9BJAcx32dRKuT9EmHo_LYD02CE8jVj13HLcqo0LxsQ5fqP0uTF5hbSFKlzeE_G1DKnJP6lwPL1ZRVurrvsay7Z_tIhy99UIC-mdKRsejbeHimxlHBWO-SK5q5XdOFRFEleQe2wFIfc-5B1Bvpmx02ExVqfiBzrWQCCujntWDl-vLldHyl_uBQw_66ZiCjnlOZp83kfBKRANEO_aWdKuiRiGcp1UaOMj_gl4ZyiwRmiHY9eQuxfupBBReowxm3TcD9VKp9DUbjZXLWTj5LPVEWzFDMmSepdiI0DZT8uTYpRz71ctxPBZFeTCCGd3If9DEyWBwSTzQKZAAa7q7SAGj2OIHXxYdis492iPW39rhcgWtbrpwtpyUpTJXVIztBrYFlDqNGejqMF5JP2mH3tf4PfUa4rKC8_62UM6cTY6tXKpvp3-OZ5Sw5CpQhlqu39JbUVabiWmVrtYTI6v-ORD5mG8VUtV_KetROFlc3mFXd6C_A6-IhJ6Ic04hgU8MLAB8FFXZiA0UIkDAubqXQZWTP4457xosXx5ZC0XXxs4wjtEsQqZG3aHQFRPr9Fm4O1QpmkFHTweSiFLsiI5ovkFMVuJLujFbz4DACaauEZAIdbtPVFRCcdunrQwboWyef-CVWFvwkAo-GUkmybxjYlr_A3BE362DzKdMoAMR_rL_9OYGm3qA6gSKswnPTQ3f8ppjY05WRqBOa_2M5_OxFq4sqhH0VYAq6wKH7qrNV9RmC_ZoFB5H1oaWGlDsXoRYoxXfwsEF1jWotVcwDDNQu2dEevESD-rPG41QBCDhkgZd3-T_0-OPJ30P7tVzRZ7yDLRxOzzl4cs54WG3uoydgwb4g6gMxoD5KyCj9XsyMnhG7HoRlYw4HHtRIQbbVpNnVnFVIc4jQ7l6C0CUhQp1njPpbhMwvLXvL8qEXv3wheCYL3hONIIm8KyG4tvPmXT7LnPzt5xCL72fVcyyjU5o4KGP_cD1NDOFDL80pEYC2ImgclufibWRp1dLvaZ_MzcrS8YBkcl97761MJ32z_pUUvk_uJ9y4XUkhp4pBI43LxhnlccY13KcGwozf7z5ogUt2p8nQpcmS1WLtaERRQkRn4rUkee3cnu5mUZ9ZidxVD-kSk3BfhP0cn7N7JtAsdYPBjyf6lnAoaJzZG4qB9aHjd6Y0zDIXfvP38LYd3lhtzz_VNmElRdiA2BwgFTw3J2VAQ-uqaNwA2ur_md1Pnm-0_XaO3sVkpSiFz9PLmojz8fz7WWyNXCbMAWCbNc1iB8ezHF1YXV5wTJvQmnmcPl2I64jQc4LUZcdJ9avxZhVMC3fj-zRV9ogj9Oixtr_RW5_uw0aVzmCw2bpekMhBYiad4mxC81cA_NC_NXSPG-zNtfakklHeDn9ky4qnm6GJq_iWppDgRDM2lNWqwq0T1bWsSyvDimlSaFrg-p6LpAy9uX9OtP2WHLqfFUwHofhwBBXgcGQw-xV8XgADFOPrK2YNKQAS4m1BBiFU_Xm-fIyZOWVBgjCVNKE01f6d7fUPqTP5ZK6NjVXbhm9usxqAYr7UEjFW1VX4uby_9qtR6K1PtUqAbOb-isUQM6JcqqlLh8iq4-aJyB-ooQwMAapKzrlsDdkeJEQitOauwzswpAi4JbvYU7nv6OP5YwLEsTzpNJ3FqVDeeRjGak3H3M9b3DFOxznEY1V5ih5BOpIgcA9BJH7lefvaeld8kSRbaH2tlbrA4XlZLIiks6Rp3Xfp6zANyMwoaHoSjpplVTG5eOlvq2fh0doADMWk886HzWP9NXxojYxAcgPcO2_TB_w1x0WZ_uM63ce0iluLkWSMU0D66qtsaYXjIeXhJimeuHHCzd1CT41aps8wxYLa4mScrvzZa_4VsYxUL_CarXUAnhWYWov5XT9izWzEagxqSNiCZbTAUPWKL2t758mUd76sQPvr-Q9dt1H1tZmkAFZ2Pb7RGq5ji5dZkC5B8rAa0_C4RVPaTDYkZ4MS2L-B5OVqvoqKO16GzmxOZv8CvgYFotbx1DOifHy05mrJIjLGxXT_PD1CpoGRwY9pEYHgp1HroCZceBxrn4cm5Ugb8gwEFqe4fNsWzmGZRkeNsIAS5wFX22m234_xW6nGl1f_T4cJgc7eMXE_Tizz5StqhmC82MNDYxfZnHFs1o_xyizvWbP17jQRhqIQxOch8yG83Eth1S6Hw-PdulsF3I7QAZ1CXudL3IZ7DKMhPh3glRchM1X6Ku5Jd1EHrENdIKDnHhy3oNPnRtg-XY6ZmfRBXyy6NtIGSuCwmAkBr0tvJt0JeXRVOdh4dXaoUugoANEKIkSMkWDiK4-ZvRS6O5nB80yBFiy8KFTmSXLumRRBg82SuKz6YoVAlppm3zqqF2aXeYv8_f-xDWYkC3MaOiERjFE4UQw0HO4YpnHeQptdk4EvBm4HObWkey8AI6CiQHItbgmScVYxDoPLjcAjrw4piWFmYxWORRLf3X7-Zt76rsIxoOlYN0jNiqhbhMxxiMTx6SKKZBT-tDa0pGCrLUM9zIK2blQ_fvybvX6qY0Gg4ekqJBY59GbyzERr3f26L0ZGvGvByWyo4KbyitGxB5MiUEIO4Bd2tLt4eo-hEAUzQJEPzh1ikgyAJie2KhNP5n0TkEJ-pkLaUPzPDvS6rgJwPOKrpKpJCqfXnq8rSXEjx7Wlg4LAscSjYG0r2suNTsMOkSiOY1MJarDBS9yt9-72Hd9kbBk3iMnKZ3Z0ek4cIWedFgp_U4muVpSMtYG8VdaNGBrfHCDhjHjb_L4gItXGNnFfeaarX8b01oU2vyAtf_wch2eB6v2WQ9XtC21mQXrln7K7U4B2Std0g686xyeArnD9fTjn8bFFywbKXs_Z4v2x7JdAiLug9J8UpkwUEOSaipedBF_WqeCJbR_LaFFenMVDlDADEX26fqrRJSKi_xIQjAnrqApKIdLpNb2sd2nlf1GgoNwur6wHk__Mhs24esNbLJdufgRZwAVHDIO5HBYuyylqntwNYtWVtDblKV_lo697OA-nI3hb9X--9UE28ECjXRAUhyqsZnK6dwpDfHXDhkd4qYowJzFQT2VFAFX_vuUrAUH5u2tDpBr8HDHUeJl3OW59reeiGPQsWF0r5qY-vHnXk9lOuoWAu8NDxvpY01GCdn4HXxkpnSaLWQJXz6RxtH1PV.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_091bc24dde574281016ab81d0d4eec87d185eddc3ca9c55b06",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 958,
+   "completion_tokens": 1724,
+   "total_tokens": 2682,
+   "cost": 0.019156,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.019156,
+    "upstream_inference_prompt_cost": 0.001916,
+    "upstream_inference_completions_cost": 0.01724
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1034,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

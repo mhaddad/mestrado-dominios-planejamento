@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "grippers",
+ "data_utc": "2026-09-26T19:29:09+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x2-tradutor-v1.md",
+ "segundos": 5.5,
+ "uso": {
+  "prompt_tokens": 570,
+  "completion_tokens": 495,
+  "total_tokens": 1065,
+  "cost": 0.00609,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00609,
+   "upstream_inference_prompt_cost": 0.00114,
+   "upstream_inference_completions_cost": 0.00495
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 127,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN DOMAIN\n(define (domain gripper-strips)\n  (:requirements :strips :typing)\n\n  (:types robot gripper room object)\n\n  (:predicates\n    (at-robby ?r - robot ?room - room)\n    (at ?o - object ?room - room)\n    (free ?r - robot ?g - gripper)\n    (carry ?r - robot ?o - object ?g - gripper)\n  )\n\n  (:action move\n    :parameters (?r - robot ?from - room ?to - room)\n    :precondition (at-robby ?r ?from)\n    :effect (and\n      (not (at-robby ?r ?from))\n      (at-robby ?r ?to)\n    )\n  )\n\n  (:action pick\n    :parameters (?r - robot ?o - object ?room - room ?g - gripper)\n    :precondition (and\n      (at ?o ?room)\n      (at-robby ?r ?room)\n      (free ?r ?g)\n    )\n    :effect (and\n      (carry ?r ?o ?g)\n      (not (at ?o ?room))\n      (not (free ?r ?g))\n    )\n  )\n\n  (:action drop\n    :parameters (?r - robot ?o - object ?room - room ?g - gripper)\n    :precondition (and\n      (carry ?r ?o ?g)\n      (at-robby ?r ?room)\n    )\n    :effect (and\n      (not (carry ?r ?o ?g))\n      (at ?o ?room)\n      (free ?r ?g)\n    )\n  )\n)\nEND DOMAIN",
+ "bruto": {
+  "id": "gen-1790450944-MB8YGkwGmpUJ18AnjE60",
+  "object": "chat.completion",
+  "created": 1790450944,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN DOMAIN\n(define (domain gripper-strips)\n  (:requirements :strips :typing)\n\n  (:types robot gripper room object)\n\n  (:predicates\n    (at-robby ?r - robot ?room - room)\n    (at ?o - object ?room - room)\n    (free ?r - robot ?g - gripper)\n    (carry ?r - robot ?o - object ?g - gripper)\n  )\n\n  (:action move\n    :parameters (?r - robot ?from - room ?to - room)\n    :precondition (at-robby ?r ?from)\n    :effect (and\n      (not (at-robby ?r ?from))\n      (at-robby ?r ?to)\n    )\n  )\n\n  (:action pick\n    :parameters (?r - robot ?o - object ?room - room ?g - gripper)\n    :precondition (and\n      (at ?o ?room)\n      (at-robby ?r ?room)\n      (free ?r ?g)\n    )\n    :effect (and\n      (carry ?r ?o ?g)\n      (not (at ?o ?room))\n      (not (free ?r ?g))\n    )\n  )\n\n  (:action drop\n    :parameters (?r - robot ?o - object ?room - room ?g - gripper)\n    :precondition (and\n      (carry ?r ?o ?g)\n      (at-robby ?r ?room)\n    )\n    :effect (and\n      (not (carry ?r ?o ?g))\n      (at ?o ?room)\n      (free ?r ?g)\n    )\n  )\n)\nEND DOMAIN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquB0DiFnnonhe7GGqBEyhYd8u42eoXG0w0AYFI4MAJJvGVUki_FSx-FQgyNdaNVkvDViGccZrC8KRS_YFKWjfMrKTmUoqehgbJjogHYKgBnL_Fjam3m9xdnqzVdOh6s44DCX5E_m83Wn_fQEwqZLEymv1Eeo7qTpR8hZwgQ00pJ-HMhrt-ZAb2TkfYISEyC6yKMNJnk5AZ3idT07Id1Xz4PDMRijeplXxUDTDUjn94vScyjEeIsTS5SHDJafiOUk86cGQTiZJ3Q_4VPFJCBcFmk9qBHMYjD6bhGDUOONtT_GOeHw9XvlJkeDXZUAH8Ol-wWVq-aJ5w0qBd4EWRMpofzGejBmSneBrVdFK-oZlwJUSJhC5LlPlJt0USkp7BpNfNY3YQHrXuKYNVa9xonQ3hpV20vrXaOdrVCyuqaGsBQxjhDUEWYrLSjxUsGTCgEX2SxahLyv63NlrFz8WaOUKB0mZ7l7yioBvN9dPS3iyCvCkL2EN6GIc2sdqWSFEKru9yoSbZR5dwn4umQXWJhPXYxN19818XbnvGYjCca329Y7OSJAjLRtxhkeNGGSF0LIc4f5N4XDaWKNHl97t_edztm8QNUBRd2lzP58MTw6kmfCdnDIpivPbN7Avb0dCmfZUqkPgZKExKaJJJXqIMh6LOJlvCfb5aoCrlil3Lgj6QWno5mUROemQyaDJM0KcP62rD8xTPetGxXiAPexNU6ZKeIN-y40T1ILLyKcflZAqI6VWi66JkPoMGuyt92cHSevOjeToVMvnhodSVSinF8bFYo-GiXktd_O06lnZL9oJWIv4oMxW5f4pvZq3dzOr2tG9f3jExX-eojGgCtUbyBzxFmN6hpCBUfYWJ1yoKrAq4gqYFz5_3ZuhZ3u-j-miwU8jmsBVGpMP5ifc9kGMWggp4RhobjnpcZI8MfPIGsP-cbdGuBTq1vjkun81fADp38hL6Bi_nTa3izYJ6VQqKMQkUEpfar-XDTksJmUH4Zfj3mF93TRUNL1V6oxDXtIkkv1adzl6eQhC7YCWIzUbGBSECPb3mQdCTnNX9vgH9gpH_dAHnsqXmn4CPPtMcd1gbxEKBIeoN-R0PvdsWptVQXwoz6taRuh9MvHvIWkDVKHWFRKxQBwV1-0zWr3GWDCbmwsscOaw9ND_4rwpG1JfvW1S0CjYpwv6PqzUcJbTzCKwWEOG3C_4lTGUCFhGc-cuM2AQ-vv-I3G6WgenRpwIgHMGRL7CERdoh5Va6M4QZagcZiWEiwVq-zxB2b5Hm3xbILKP2m-eLus3Aexf_zmERL_fIbM4HVlk7gxAeeLoe1SFBrJWSXxiQGEwXwCuRj8UXjAcHFVWXJX-qsdb3iEHMxKazw8Vvwq8LgBLW174x1-U4OQDc9zk7Wmv89zlWGJ2ZQeoRkfFKfv769xQ-s5W8EVnyJsBXexBAhK-zBftgi0bHAtmD69yQp56hzEira3NdHluGsyQgIMkZpBjL0_6Bi4IoIkSZngsIzBBg0pZPSlodaTEOwJz_o7rcjR9MIHKoDULOIiNXDb1XMj_liFSwQvRdQwVxSC8LERRAa_lQuWewQxf87UelLdFpyEEo6KsuaBJ60-26OJXQc77bWNxxK-zxn_YzKWCLK1fdUvXQaHf1F9tGqHwlfmuVn1pUfqOo8Fdt5--asbLpFaPIwekkZmyNFg0xyMUgVIlecijLGUii1FoIaNehgApt8eKCrBaCshrvRyNI1R1UNoCnOx4ROyQMQBndgWzMPfM6fIJ74l-IwnYyEFrNCjIkc5I4H9BnK7Ya1128V3IXx7z9E_deMEq5sGMo14L6AemPA8EmSaEgERdmqdlqWbeDAGTR1C_Ix3qGNz7clnnNBOhfMi_qdK16FIP7NmlgTshYYBWFLlsaZOqcZJMU9moUyeMJzyf0TlomukEo1qQ0k3GQ_T-Ja7AgUnwaOsaV2mFpX5cVvEPZEfxF7A=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0ded354519149aed016ab81d01249487d1b8b97aea63fd4660",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 570,
+   "completion_tokens": 495,
+   "total_tokens": 1065,
+   "cost": 0.00609,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00609,
+    "upstream_inference_prompt_cost": 0.00114,
+    "upstream_inference_completions_cost": 0.00495
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 127,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}
