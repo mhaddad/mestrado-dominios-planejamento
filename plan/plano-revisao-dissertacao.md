@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 26/09/2026 |
-| Versão deste documento | 0.39 |
+| Versão deste documento | 0.40 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
 
 ---
@@ -275,7 +275,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | # | Experimento | Pergunta | Status |
 |---|---|---|---|
-| X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | ⚪ |
+| X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | 🟢 EXP-16: 28 de 32 planos válidos (VAL) nas instâncias p01 de 8 domínios; planos em geral mais curtos que os do LAMA |
 | X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | ⚪ |
 | X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | 🟢 EXP-14 (anônima): nenhum LLM supera o *single best*; GPT-6 Sol empata (146 × 143). EXP-15 (com nomes): piora em 3 de 4 modelos; escolhas seguem a reputação (LAMA, FDSS), sem sinal de lembrança dos resultados por domínio |
 | X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | ⚪ |
@@ -600,6 +600,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-13: classificação dos 29 planejadores do Planner Museum na taxonomia 4D e Nível 4 por técnica | 22 planejadores com fonte primária (notas de leitura e resumos oficiais das IPCs de 2018 e 2023), 7 só com fonte secundária, marcados; uma citação não lida (relatório da IPC 2014) retirada antes do commit; contagens do registro conferidas contra o CSV. Codificação aprovada pelo autor |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); modelos avaliados via OpenRouter: claude-sonnet-5, gpt-6-sol, gemini-3.1-pro-preview, deepseek-v4-pro-0813 | EXP-14: X3, LLM como seletor, condição anônima; US$ 2,69 | Protocolo aprovado antes das chamadas; regras de avaliação fixadas antes da primeira chamada; respostas brutas versionadas; chave fora do git |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os mesmos 4 modelos via OpenRouter | EXP-15: X3, condição com nomes; US$ 2,64 | Única diferença para o EXP-14 é o nome e a IPC no catálogo; código commitado antes das chamadas; rodada anônima repontuada e conferida |
+| 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-16: X1, LLM como planejador; VAL e Fast Downward compilados no Mac; US$ 1,21 | Validador testado com plano embaralhado e incompleto; referência do LAMA validada; falhas de formato separadas das de conteúdo |
 
 ---
 
@@ -692,3 +693,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.37 | 26/09/2026 | Fase 4 iniciada (X3, via OpenRouter, teto de US$ 10); protocolo do X3 com proposta de modelos |
 | 0.38 | 26/09/2026 | EXP-14 (X3): LLMs como seletores, condição anônima; nenhum supera o *single best*; escolhem quase sempre portfólios; gasto US$ 2,69 de US$ 10 |
 | 0.39 | 26/09/2026 | EXP-15 (X3 com nomes): sem sinal de lembrança dos resultados por domínio; escolhas por reputação; gasto acumulado US$ 5,34 |
+| 0.40 | 26/09/2026 | EXP-16 (X1): 28 de 32 planos válidos nas instâncias menores; acumulado US$ 6,56 |

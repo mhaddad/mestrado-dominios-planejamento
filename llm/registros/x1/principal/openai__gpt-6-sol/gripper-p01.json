@@ -1,0 +1,98 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "gripper",
+ "instancia": "p01",
+ "data_utc": "2026-09-26T18:17:15+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x1-planejador-v1.md",
+ "segundos": 4.4,
+ "uso": {
+  "prompt_tokens": 1036,
+  "completion_tokens": 453,
+  "total_tokens": 1489,
+  "cost": 0.0071185,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 1033,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0071185,
+   "upstream_inference_prompt_cost": 0.0025885,
+   "upstream_inference_completions_cost": 0.00453
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 28,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN PLAN\n(pick ball1 rooma left)\n(pick ball2 rooma right)\n(move rooma roomb)\n(drop ball1 roomb left)\n(drop ball2 roomb right)\n(move roomb rooma)\n(pick ball3 rooma left)\n(pick ball4 rooma right)\n(move rooma roomb)\n(drop ball3 roomb left)\n(drop ball4 roomb right)\n(move roomb rooma)\n(pick ball5 rooma left)\n(pick ball6 rooma right)\n(move rooma roomb)\n(drop ball5 roomb left)\n(drop ball6 roomb right)\n(move roomb rooma)\n(pick ball7 rooma left)\n(pick ball8 rooma right)\n(move rooma roomb)\n(drop ball7 roomb left)\n(drop ball8 roomb right)\n(move roomb rooma)\n(pick ball9 rooma left)\n(pick ball10 rooma right)\n(move rooma roomb)\n(drop ball9 roomb left)\n(drop ball10 roomb right)\n(move roomb rooma)\n(pick ball11 rooma left)\n(pick ball12 rooma right)\n(move rooma roomb)\n(drop ball11 roomb left)\n(drop ball12 roomb right)\n(move roomb rooma)\n(pick ball13 rooma left)\n(pick ball14 rooma right)\n(move rooma roomb)\n(drop ball13 roomb left)\n(drop ball14 roomb right)\n(move roomb rooma)\n(pick ball15 rooma left)\n(pick ball16 rooma right)\n(move rooma roomb)\n(drop ball15 roomb left)\n(drop ball16 roomb right)\n(move roomb rooma)\n(pick ball17 rooma left)\n(pick ball18 rooma right)\n(move rooma roomb)\n(drop ball17 roomb left)\n(drop ball18 roomb right)\n(move roomb rooma)\n(pick ball19 rooma left)\n(pick ball20 rooma right)\n(move rooma roomb)\n(drop ball19 roomb left)\n(drop ball20 roomb right)\nEND PLAN",
+ "bruto": {
+  "id": "gen-1790446631-zEgkhjknOQ2P4vBbsOC4",
+  "object": "chat.completion",
+  "created": 1790446631,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN PLAN\n(pick ball1 rooma left)\n(pick ball2 rooma right)\n(move rooma roomb)\n(drop ball1 roomb left)\n(drop ball2 roomb right)\n(move roomb rooma)\n(pick ball3 rooma left)\n(pick ball4 rooma right)\n(move rooma roomb)\n(drop ball3 roomb left)\n(drop ball4 roomb right)\n(move roomb rooma)\n(pick ball5 rooma left)\n(pick ball6 rooma right)\n(move rooma roomb)\n(drop ball5 roomb left)\n(drop ball6 roomb right)\n(move roomb rooma)\n(pick ball7 rooma left)\n(pick ball8 rooma right)\n(move rooma roomb)\n(drop ball7 roomb left)\n(drop ball8 roomb right)\n(move roomb rooma)\n(pick ball9 rooma left)\n(pick ball10 rooma right)\n(move rooma roomb)\n(drop ball9 roomb left)\n(drop ball10 roomb right)\n(move roomb rooma)\n(pick ball11 rooma left)\n(pick ball12 rooma right)\n(move rooma roomb)\n(drop ball11 roomb left)\n(drop ball12 roomb right)\n(move roomb rooma)\n(pick ball13 rooma left)\n(pick ball14 rooma right)\n(move rooma roomb)\n(drop ball13 roomb left)\n(drop ball14 roomb right)\n(move roomb rooma)\n(pick ball15 rooma left)\n(pick ball16 rooma right)\n(move rooma roomb)\n(drop ball15 roomb left)\n(drop ball16 roomb right)\n(move roomb rooma)\n(pick ball17 rooma left)\n(pick ball18 rooma right)\n(move rooma roomb)\n(drop ball17 roomb left)\n(drop ball18 roomb right)\n(move roomb rooma)\n(pick ball19 rooma left)\n(pick ball20 rooma right)\n(move rooma roomb)\n(drop ball19 roomb left)\n(drop ball20 roomb right)\nEND PLAN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAwpdPxz7-Tn03-dyk_l8_7kY9QpI0Nfqb5HFF8EgUFucC-2eCEbaqNVHfrBWIFHC9Z5WE68fTyjmKxcJpiZwWUDgx5tcRvxtHX3b1u7OWjd022Gy2EYZzxaP8mC-FbHC7dZWbnZBfNlXaUZD45If3Ormt3jgVTOm2Ya19O5diUiOTB7h5g-PYLzakxzouVPTp8cTgKsDFDdA7HwMv6oa6ucqyWrRsR4C2XP-jgOmxyj3l87dbfyW0fj5T7ulzSBVqzNkMlqrNVczjo7F6WEk6Veo8WE95JxeB6GGnQTEfONGvaX5x6BTu290xmN_uGpskR3EtL1aRX3zfSs_Q-j3N7rj3y71bHB6rGGwIj-2g4fLhoDPkoBMnVO1TaLh_ljqZjiWvqwAfP1hMpFgHhtcnehOCHjhqXGXSzO_BjW2F4kCHBl6H2bAnaO4cFyKuyk4iuJYcamqLFBXhD-iX5nlP8GtiUWlCmfv6BNbJRQmUYgZ9Lsu6I8cS11DltLkmGMU5Nwq89a65ozHlj1SlI9q5g1XXNFBWey3pe7DghWyrHmC7LFLH4jCf9VfIK7ONnSuFhzJFYQ3bGTAzypvVLAxSl2G5EZr3pwiVCkUw6Z1qSMY4hS1X6kzkRqytnrnrvfdwIk2C7S41J7C91ySJO-72K-YvQ-pbNU-xtZJGS71ENxil2XT9irACIlyAsHY_nNHDmW2fsLdqEbZa0rHctGx0jhc5p8fCSfoglWb7ZnFE0tO6nlqS-euNN_KSwOC1lH58goiO6wFu8heHysqqL_0zfX28hcTzeGAx41tMvXK_kKNg-BGSynjkDVTD_79Hv7hVZrxXwEFKeik3LfxoV6mPq_P3mOcXipRBHpZwjAlwWksibhADTehuskpNqC4tsW-HV77WU-Ej17uBxJIdrKB2_HYJt-Ix6a7ufzltDcjKRCdfAK1k0KraQ_LAaRMmUkcSUk2IPm-uCLbTAk5RKmy74v_ljCoz37HfNBbXcoeSz17fpkuSfigpLYkxC276uuEFYXNSh2rwNm6F2v5hzO4TEZ_mE8dF1QyAxsHe1W7LT3oU3z-BsH0rqXY55N3rXik0C1FBKydRnUNajNhsyZF07HdXnmEwbeDGwflRHOUD4igcra3dPvIRO2rib0yGN6AuWL46iK0fhGYax1hIAY52OLYjQp8P8ZdfET3DGiBvjkH6bUTxjHfmbrULZDaAAPNymtYAdlAZsootsBAOvT9PhKh9ceIyMkuPvP8ydQIwq6KN75nqzbcqShMcx9a_A1ChlCI5_xlRnqsJSfPKb6pk7PsHO6DRXje4W6CjKnn2Cd3wYbC1d7SE-rl6A4bqoIW6tDS5MJ4-d_iRF9fCoQ3ClSG3YIGZK733sfsJ9q4zNJ8pg9_quyTz0uldDW6FhmJg6yZzhiYOygjkjfm8UvkOvBdcBZo1_LF6NEYqlorARTC6Q=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_003f0deb2d22c15d016ab80c27e6d487d18674bddd209d7b9a",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1036,
+   "completion_tokens": 453,
+   "total_tokens": 1489,
+   "cost": 0.0071185,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 1033,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0071185,
+    "upstream_inference_prompt_cost": 0.0025885,
+    "upstream_inference_completions_cost": 0.00453
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 28,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

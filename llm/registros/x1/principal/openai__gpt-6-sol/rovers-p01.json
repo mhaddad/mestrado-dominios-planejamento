@@ -1,0 +1,104 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "rovers",
+ "instancia": "p01",
+ "data_utc": "2026-09-26T18:17:44+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x1-planejador-v1.md",
+ "segundos": 10.5,
+ "uso": {
+  "prompt_tokens": 3136,
+  "completion_tokens": 845,
+  "total_tokens": 3981,
+  "cost": 0.0162885,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3133,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0162885,
+   "upstream_inference_prompt_cost": 0.0078385,
+   "upstream_inference_completions_cost": 0.00845
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 491,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN PLAN\n(sample_rock rover0 rover0store waypoint8)\n(communicate_rock_data rover0 general waypoint8 waypoint8 waypoint7)\n(drop rover0 rover0store)\n(navigate rover0 waypoint8 waypoint3)\n(navigate rover0 waypoint3 waypoint4)\n(sample_rock rover0 rover0store waypoint4)\n(navigate rover0 waypoint4 waypoint3)\n(communicate_rock_data rover0 general waypoint4 waypoint3 waypoint7)\n(drop rover0 rover0store)\n(navigate rover0 waypoint3 waypoint8)\n(navigate rover0 waypoint8 waypoint5)\n(navigate rover0 waypoint5 waypoint9)\n(sample_rock rover0 rover0store waypoint9)\n(communicate_rock_data rover0 general waypoint9 waypoint9 waypoint7)\n(drop rover0 rover0store)\n(calibrate rover0 camera0 objective0 waypoint9)\n(take_image rover0 waypoint9 objective0 camera0 colour)\n(communicate_image_data rover0 general objective0 colour waypoint9 waypoint7)\n(calibrate rover0 camera9 objective0 waypoint9)\n(take_image rover0 waypoint9 objective0 camera9 high_res)\n(communicate_image_data rover0 general objective0 high_res waypoint9 waypoint7)\n(calibrate rover0 camera1 objective0 waypoint9)\n(take_image rover0 waypoint9 objective0 camera1 low_res)\n(communicate_image_data rover0 general objective0 low_res waypoint9 waypoint7)\n(navigate rover0 waypoint9 waypoint5)\n(navigate rover0 waypoint5 waypoint8)\n(navigate rover0 waypoint8 waypoint1)\n(navigate rover0 waypoint1 waypoint0)\n(sample_rock rover0 rover0store waypoint0)\n(communicate_rock_data rover0 general waypoint0 waypoint0 waypoint7)\nEND PLAN",
+ "bruto": {
+  "id": "gen-1790446653-kVl0iZSn2X9BrcwU7RYR",
+  "object": "chat.completion",
+  "created": 1790446653,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN PLAN\n(sample_rock rover0 rover0store waypoint8)\n(communicate_rock_data rover0 general waypoint8 waypoint8 waypoint7)\n(drop rover0 rover0store)\n(navigate rover0 waypoint8 waypoint3)\n(navigate rover0 waypoint3 waypoint4)\n(sample_rock rover0 rover0store waypoint4)\n(navigate rover0 waypoint4 waypoint3)\n(communicate_rock_data rover0 general waypoint4 waypoint3 waypoint7)\n(drop rover0 rover0store)\n(navigate rover0 waypoint3 waypoint8)\n(navigate rover0 waypoint8 waypoint5)\n(navigate rover0 waypoint5 waypoint9)\n(sample_rock rover0 rover0store waypoint9)\n(communicate_rock_data rover0 general waypoint9 waypoint9 waypoint7)\n(drop rover0 rover0store)\n(calibrate rover0 camera0 objective0 waypoint9)\n(take_image rover0 waypoint9 objective0 camera0 colour)\n(communicate_image_data rover0 general objective0 colour waypoint9 waypoint7)\n(calibrate rover0 camera9 objective0 waypoint9)\n(take_image rover0 waypoint9 objective0 camera9 high_res)\n(communicate_image_data rover0 general objective0 high_res waypoint9 waypoint7)\n(calibrate rover0 camera1 objective0 waypoint9)\n(take_image rover0 waypoint9 objective0 camera1 low_res)\n(communicate_image_data rover0 general objective0 low_res waypoint9 waypoint7)\n(navigate rover0 waypoint9 waypoint5)\n(navigate rover0 waypoint5 waypoint8)\n(navigate rover0 waypoint8 waypoint1)\n(navigate rover0 waypoint1 waypoint0)\n(sample_rock rover0 rover0store waypoint0)\n(communicate_rock_data rover0 general waypoint0 waypoint0 waypoint7)\nEND PLAN",
+     "refusal": null,
+     "reasoning": "**Planning communication paths**\n\nI need to establish efficient communication paths to waypoint 7. It looks like I have visibility to several waypoints, including 8, 3, and 5. Waypoints 1 and 4 aren’t visible, but waypoint 2 is. I’ll start sample communications at waypoint 8 and map out movement through waypoints 3 and 4 before communicating from there. I’m also considering imaging at various waypoints while calibrating equipment. I wonder if I should drop previous samples before the next ones. Alright, I’ll proceed with the plan!**Optimizing movement paths**\n\nI can optimize movement between waypoints using either path: 8 to 3 to 4 back to 3, then to 8, 5, 9, 5, 8, 1, and finally 0, which would take 10 moves. Alternatively, I might choose the route 8 to 3 to 4 back to 3, then to 8, 1, 0, 1, 8, 5, 9, also taking 10 moves. I'll calibrate my cameras next: camera 2 for color, camera 9 for high res, and camera 1 for low res. Everything seems in order!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Planning communication paths**\n\nI need to establish efficient communication paths to waypoint 7. It looks like I have visibility to several waypoints, including 8, 3, and 5. Waypoints 1 and 4 aren’t visible, but waypoint 2 is. I’ll start sample communications at waypoint 8 and map out movement through waypoints 3 and 4 before communicating from there. I’m also considering imaging at various waypoints while calibrating equipment. I wonder if I should drop previous samples before the next ones. Alright, I’ll proceed with the plan!**Optimizing movement paths**\n\nI can optimize movement between waypoints using either path: 8 to 3 to 4 back to 3, then to 8, 5, 9, 5, 8, 1, and finally 0, which would take 10 moves. Alternatively, I might choose the route 8 to 3 to 4 back to 3, then to 8, 1, 0, 1, 8, 5, 9, also taking 10 moves. I'll calibrate my cameras next: camera 2 for color, camera 9 for high res, and camera 1 for low res. Everything seems in order!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAxGlVloF5MNccqgJtm5jgexw1WCGpZ-BUp9FXKyuhQNLsI6BUHOi46sMyeBdiXQDV8qbjJGAG0QbTLGWcm_Y0ni9HqB3em4VMeMjK_zSS5s6vDEE_mxZYxVa3s6B5a7pQgYBkpqnw1fd43p50PIdAjBsLG1faMguouLvkDPpR4fUFcKvbYjS0Dk9Nqd5aHLbjvRC4sR0WLrt3mgTU5-nXTjkl4hjrENP-1btrQldqBlHe2WwYkXu-PxAMOnFP21IDRSFpJW9c2Jcs5Yw43OEzkwFcBFZEztxpVipV8QUNOuQPVFNDb2aKUy7MMstv-mPmqQfzs6TrrQwc7olc3gXqhccWjUDqimmLbhTlVV6Sc1uoBi6s5daNCWGzrceofl3k5-gIlYwMWkwyYtgZp7KqB0gxZ9wbNFD4DlfFtW2NE4-tENyZ5rG2IZ2rVMy-m1hzdNzb1JMrISD4lfl6vrbSBHZab4zhDoDSu-i0hU85O0GGS0XNID66zjHoinGoLqoSK2ss6smmPxF9k4yLU07gzY8fl96wZfqCs9adYsHggYaQ2bA0vatcwem-n78uhMQk1HIoAOaeTwNufolUBVxH7dGAkVpIgXkMxFAEjTdL7LWczhihahqDlk9MaPKupaqybvKG4G7wtzerQllwsixn_SIwzzs3AdP3o9VZZnALVSsO0nABB5PRwFSwE9jbI8rGMefrJ6nK6B6mJzPoiy383Ze6MmyzFyhQkAJMxaP-2fVqnrInX4IegR-53GR9viYHqxmL0qY4gsJmTAWdkpGAi0hd3XPCTLL48QD-8ii99VSt7HalQffop8DKzs9Mg49zp9ZSuKO7Gul4ORAccbPCdtPFBCbRX9ixbKQfi0HSi2CXigvB6eCA_GEn7Ghc7fr3rR1qT7plbqGIPHaQyuOpPueY8B4u1ZUcntfYMHtOIUmE7OY77PuLmWHTdKI1GxZwZYTBCHMjro58vzJp1x3mBLoVu1espJQMYBoEXnhmWxwjDOT9RSKdgAC_Fz0rNnwGf6Cy7GDSjJA20N0NS70z97QGyWiwND8GIcTM5cQNCBJmfnReJmee0xtqu_LF_SRR62UF89ca6HfHlTOx4H6WyThDUaA2260QbzDbvVpyD9n0mTqtm-v3Sx8hS2Ysbny5yhJCya9AX26qZ2tIeZYZIRQGOAw1AdyKaPEtU1wAMhc9ompbYdWzQg5Fy6xK9MqRhlGatBVUm_xHoUSiQhuWbnKtqms8Q9kALbf1eGk4YGDMvVxP8gmSTYtQirun5Zma1ufElS_JweMAJhi0EGSJhNeUrx9Rnk8rIDttcgj0_ZUEcluEYs1JdBjJYEtEymf0431jR87Q6MFpj8xz7REUyWEzabkEscC5fyhhywpNaf1HdLlJ7YMefVIq9gkJoUCk70RLgV5CHLAKjF5LRadLjbf23oWTvZzDqgkW5GHnmTQDUU8pbC01ckjScT9LjD1ZT3vuaZsZzwiFf1mrHeRmhw2Jh7a3kWisbyVmICPqtTKTwCRZiK_Zi5Ohi8HSslWUTlHmMz_ailBQdPPrv72MdpcHDU034VOG-20W1shdocPKYxACGV6SIYo_3N8Ai4v79IvNLlj6Tap7aGpiqbXHTwxqnkIQ7eLC42s3BOaxMG1ug8oZA2v_HGiOezso5uH4bKbCeAWeC8wp6kqmiN_YcbI9uCHSwnPYPspwx4sruaAf-DtgGtwYrYtJXOC7RtX9qK0RNXqZp3d_S71bIAm1tCtx4jePj7YlGKl1KBAF1L9L48udBh96_c2E-m4G2yHzopyLDxomESkGB8ygfv9c4bdb32e8j6BLiOWGfhgznxOZxPLoFJZl38fkMue2kok4KKRIKYjp1a3VPg5Nklo22mHQhj1r7GVBH3855meO1MGtS4Yd9d-oEurxb1QjDwzUZI9LO_WcA7V8-3C9B9mLs7dpaIzXL8YmFVNnDI6r3ygDue7L3SGHzgRHoa3j-Y3R80wMUBbsJMXSSgfCRhpTJbOzvhj7vuW1qoj6Xn2Xwp3dkwuowtdA55FqAe7qr8vpfxWLePP60WxeHi1Tjsba5R-djVXdZ-JZ-MJtxkRUl7l0KMQ2061_n37LxkDpc9NQALwcHp8la3XOForKTRH4emJ-5K0ieRWek_eEnpdLYES9zdfsxrWTak1jTWZ1NazxG_lWFJWnOUsq-tirrGTqN5BKEY6JzWzoXnhrwdUDMdwV159S6f8Y5u3v8r9c5Q0AMnqFsj25qamnHao5_vqfmrSqI-ILJKoay28COMflohVm8jBQ_9QVbKjqgelY_mVfbEM2Xps-eWpxqa836_IqnK7e0rt5xSwNlAN7Q_8l0iSArWaGYuT8_lI1klbfJP-7-86P_vR6abgjTGcQwP0aCPjXmvB0PoDCJAeOjJp0rMvyG4us1vGNHZ6Z-mpczfghWpMMzcSBW42Qjedqx7V8Xi14tyjWjuNylL4A5XGO3FbylUY1y2GEqzCsp6cGBVUjlzd5XSVP1pMnpPKoGn3cF98nzTQpzPLe-42sV0gY4-jg3AhG0RDdC6aKgVO44_oVzL5KN5KWgkN7SQC0S0uqP9YEmz5ufRRq0UvBWce5v50oC6eCEvnJT4SThlQWqcggXpAVRpc6glBwesuvOZBT4r1-sX2U6PQ5aRVFSke4ZWdJz3IIoZJ4MK6V9nkZ_UFdEB33hFyoEjCjrlRR9YAFBiPaOxIvmsI7_SSI0cXvMvm6M19jHm6UIRJFFel8ThqaWRXxalQ-if60s-J1XZAxvvcqVnh5ABnOTD93JjNX2XBXM6pOLrrjhy6T6G86lRXCPgX4XpU4zTeIpAac1rNGajEQof56Ci_zQoEp5OZ3PwJm6XvVz8TBbn_EJCavyQrZPNDJiilCtvQpQiTFlTQVZSAi4plaowefbJ2kFAhRxDP1VPuOp6D8KacbiBS9wYYBjFpSpKcJvNBYxdG30S475Hdr681nMzaqCRCBi80WMBYXjlOfwbLgU1lZH8C_TCmfyo4cUxXu3yAOYoR6vItBOJMcQ30NtreWnMhrlQ-S3SFPjiZS2VQoR8dSiFJstSyRqYX1LyotofHSlddDec3b_j26icfqdDAX-2aF2ul_E9KbBOuX6EiPb2XY6JbyFw_L2kOLD8IhEpU2pZAeTm-w2yNeEnPDr1xhKHIIIsZgQTmTOmkq1_ZKcBo5zI6qADaFUshuX07UOFjLa6WSD_xIC6SA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_06ee212fad38cd56016ab80c3ea03487d180f423695cda7d45",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3136,
+   "completion_tokens": 845,
+   "total_tokens": 3981,
+   "cost": 0.0162885,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3133,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0162885,
+    "upstream_inference_prompt_cost": 0.0078385,
+    "upstream_inference_completions_cost": 0.00845
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 491,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

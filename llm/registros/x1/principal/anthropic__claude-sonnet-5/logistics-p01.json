@@ -1,0 +1,98 @@
+{
+ "modelo_pedido": "anthropic/claude-sonnet-5",
+ "modelo_respondeu": "anthropic/claude-sonnet-5",
+ "provedor": "Claude Platform on AWS",
+ "dominio": "logistics",
+ "instancia": "p01",
+ "data_utc": "2026-09-26T18:23:06+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x1-planejador-v1.md",
+ "segundos": 27.0,
+ "uso": {
+  "prompt_tokens": 5223,
+  "completion_tokens": 3332,
+  "total_tokens": 8555,
+  "cost": 0.043766,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.043766,
+   "upstream_inference_prompt_cost": 0.010446,
+   "upstream_inference_completions_cost": 0.03332
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 2703,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN PLAN\n(drive-truck t5 l5-13 l5-8 c5)\n(load-truck p0 t5 l5-8)\n(drive-truck t5 l5-8 l5-2 c5)\n(load-truck p1 t5 l5-2)\n(drive-truck t5 l5-2 l5-0 c5)\n(unload-truck p0 t5 l5-0)\n(unload-truck p1 t5 l5-0)\n(load-airplane p0 a1 l5-0)\n(fly-airplane a1 l5-0 l2-0)\n(unload-airplane p0 a1 l2-0)\n(load-airplane p1 a4 l5-0)\n(fly-airplane a4 l5-0 l0-0)\n(unload-airplane p1 a4 l0-0)\n(load-truck p2 t2 l2-12)\n(drive-truck t2 l2-12 l2-0 c2)\n(unload-truck p2 t2 l2-0)\n(fly-airplane a2 l1-0 l2-0)\n(load-airplane p2 a2 l2-0)\n(fly-airplane a2 l2-0 l1-0)\n(unload-airplane p2 a2 l1-0)\n(load-truck p0 t2 l2-0)\n(drive-truck t2 l2-0 l2-12 c2)\n(unload-truck p0 t2 l2-12)\n(drive-truck t0 l0-7 l0-0 c0)\n(load-truck p1 t0 l0-0)\n(drive-truck t0 l0-0 l0-4 c0)\n(unload-truck p1 t0 l0-4)\n(drive-truck t1 l1-5 l1-0 c1)\n(load-truck p2 t1 l1-0)\n(drive-truck t1 l1-0 l1-4 c1)\n(unload-truck p2 t1 l1-4)\nEND PLAN",
+ "bruto": {
+  "id": "gen-1790446959-dpK92WTxvnKuLdCtXIiV",
+  "object": "chat.completion",
+  "created": 1790446959,
+  "model": "anthropic/claude-sonnet-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN PLAN\n(drive-truck t5 l5-13 l5-8 c5)\n(load-truck p0 t5 l5-8)\n(drive-truck t5 l5-8 l5-2 c5)\n(load-truck p1 t5 l5-2)\n(drive-truck t5 l5-2 l5-0 c5)\n(unload-truck p0 t5 l5-0)\n(unload-truck p1 t5 l5-0)\n(load-airplane p0 a1 l5-0)\n(fly-airplane a1 l5-0 l2-0)\n(unload-airplane p0 a1 l2-0)\n(load-airplane p1 a4 l5-0)\n(fly-airplane a4 l5-0 l0-0)\n(unload-airplane p1 a4 l0-0)\n(load-truck p2 t2 l2-12)\n(drive-truck t2 l2-12 l2-0 c2)\n(unload-truck p2 t2 l2-0)\n(fly-airplane a2 l1-0 l2-0)\n(load-airplane p2 a2 l2-0)\n(fly-airplane a2 l2-0 l1-0)\n(unload-airplane p2 a2 l1-0)\n(load-truck p0 t2 l2-0)\n(drive-truck t2 l2-0 l2-12 c2)\n(unload-truck p0 t2 l2-12)\n(drive-truck t0 l0-7 l0-0 c0)\n(load-truck p1 t0 l0-0)\n(drive-truck t0 l0-0 l0-4 c0)\n(unload-truck p1 t0 l0-4)\n(drive-truck t1 l1-5 l1-0 c1)\n(load-truck p2 t1 l1-0)\n(drive-truck t1 l1-0 l1-4 c1)\n(unload-truck p2 t1 l1-4)\nEND PLAN",
+     "refusal": null,
+     "reasoning": "I'm working through each package's route: p0 needs a truck from c5 to the airport, a flight to c2, then delivery to l2-12; p1 similarly needs to get from c5 to l0-4 in c0, and I'm considering using truck t5 in c5 to handle both p0 and p1 pickups since they share a city. Now I'm figuring out p2's starting point and destination.\n\nFor p2 going from l2-12 to l1-4 in c1, I need t2 (already at l2-12) to move it to airport l2-0, then find a plane heading to l1-0, likely a2 which is already stationed there and can shuttle over to l2-0 and back. I'm laying out the sequence for t5: drive to l5-8, load p0, drive to l5-2, load p1, continue to l5-0, unload both packages there, then load p0 onto plane a1 and fly it to l2-0, unloading it there. Now I need to figure out which truck in c2 will pick up p0 from the airport to complete its delivery.\n\nActually a1 could handle both p0 and p2 in sequence since it's already at l2-0 after dropping p0 - fly to l1-0, unload p2, then reuse the plane for other legs like p1's c5→c0 trip, possibly with a4 instead. I need to map out the full plan carefully, tracking each object's starting location and required moves.\n\nI'll also route t1 to pick up p2 at l1-0 and deliver it to l1-4. Now I'm assembling the full action sequence, starting with driving t5 and loading p0, and continuing step by step to satisfy every precondition in order.\n\nContinuing to route p0 back to l2-12 via t2, then getting p1 and p2 delivered through t0 and t1 respectively to their final locations. I'm now double-checking for ordering conflicts, since t2 needs to be at l2-0 when p0 loads in step 21 but it just finished a delivery there in step 16.\n\nVerifying step 18: loading p2 onto a2 requires both at l2-0, which checks out from the prior unload and flight steps. Everything appears consistent.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working through each package's route: p0 needs a truck from c5 to the airport, a flight to c2, then delivery to l2-12; p1 similarly needs to get from c5 to l0-4 in c0, and I'm considering using truck t5 in c5 to handle both p0 and p1 pickups since they share a city. Now I'm figuring out p2's starting point and destination.\n\nFor p2 going from l2-12 to l1-4 in c1, I need t2 (already at l2-12) to move it to airport l2-0, then find a plane heading to l1-0, likely a2 which is already stationed there and can shuttle over to l2-0 and back. I'm laying out the sequence for t5: drive to l5-8, load p0, drive to l5-2, load p1, continue to l5-0, unload both packages there, then load p0 onto plane a1 and fly it to l2-0, unloading it there. Now I need to figure out which truck in c2 will pick up p0 from the airport to complete its delivery.\n\nActually a1 could handle both p0 and p2 in sequence since it's already at l2-0 after dropping p0 - fly to l1-0, unload p2, then reuse the plane for other legs like p1's c5→c0 trip, possibly with a4 instead. I need to map out the full plan carefully, tracking each object's starting location and required moves.\n\nI'll also route t1 to pick up p2 at l1-0 and deliver it to l1-4. Now I'm assembling the full action sequence, starting with driving t5 and loading p0, and continuing step by step to satisfy every precondition in order.\n\nContinuing to route p0 back to l2-12 via t2, then getting p1 and p2 delivered through t0 and t1 respectively to their final locations. I'm now double-checking for ordering conflicts, since t2 needs to be at l2-0 when p0 loads in step 21 but it just finished a delivery there in step 16.\n\nVerifying step 18: loading p2 onto a2 requires both at l2-0, which checks out from the prior unload and flight steps. Everything appears consistent.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 5223,
+   "completion_tokens": 3332,
+   "total_tokens": 8555,
+   "cost": 0.043766,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.043766,
+    "upstream_inference_prompt_cost": 0.010446,
+    "upstream_inference_completions_cost": 0.03332
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2703,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

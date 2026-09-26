@@ -1,0 +1,97 @@
+{
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "modelo_respondeu": "google/gemini-3.1-pro-preview",
+ "provedor": "Google",
+ "dominio": "miconic",
+ "instancia": "p01",
+ "data_utc": "2026-09-26T18:18:45+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x1-planejador-v1.md",
+ "segundos": 20.5,
+ "uso": {
+  "prompt_tokens": 1767,
+  "completion_tokens": 3029,
+  "total_tokens": 4796,
+  "cost": 0.039882,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.039882,
+   "upstream_inference_prompt_cost": 0.003534,
+   "upstream_inference_completions_cost": 0.036348
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 2591,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN PLAN\n(board f0 p17)\n(board f0 p18)\n(up f0 f1)\n(board f1 p3)\n(board f1 p14)\n(board f1 p15)\n(up f1 f2)\n(depart f2 p17)\n(depart f2 p14)\n(depart f2 p15)\n(board f2 p1)\n(board f2 p11)\n(up f2 f3)\n(board f3 p4)\n(board f3 p12)\n(up f3 f4)\n(board f4 p10)\n(board f4 p16)\n(up f4 f5)\n(depart f5 p12)\n(board f5 p5)\n(board f5 p9)\n(up f5 f6)\n(depart f6 p9)\n(depart f6 p11)\n(up f6 f7)\n(depart f7 p4)\n(board f7 p6)\n(board f7 p7)\n(up f7 f9)\n(depart f9 p3)\n(depart f9 p18)\n(board f9 p8)\n(board f9 p13)\n(up f9 f10)\n(depart f10 p6)\n(depart f10 p7)\n(depart f10 p16)\n(board f10 p0)\n(board f10 p2)\n(down f10 f8)\n(depart f8 p2)\n(down f8 f3)\n(depart f3 p10)\n(depart f3 p13)\n(down f3 f1)\n(depart f1 p0)\n(depart f1 p5)\n(depart f1 p8)\n(down f1 f0)\n(depart f0 p1)\nEND PLAN",
+ "bruto": {
+  "id": "gen-1790446704-s9HJISSVk6zNqX0UkPgE",
+  "object": "chat.completion",
+  "created": 1790446704,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN PLAN\n(board f0 p17)\n(board f0 p18)\n(up f0 f1)\n(board f1 p3)\n(board f1 p14)\n(board f1 p15)\n(up f1 f2)\n(depart f2 p17)\n(depart f2 p14)\n(depart f2 p15)\n(board f2 p1)\n(board f2 p11)\n(up f2 f3)\n(board f3 p4)\n(board f3 p12)\n(up f3 f4)\n(board f4 p10)\n(board f4 p16)\n(up f4 f5)\n(depart f5 p12)\n(board f5 p5)\n(board f5 p9)\n(up f5 f6)\n(depart f6 p9)\n(depart f6 p11)\n(up f6 f7)\n(depart f7 p4)\n(board f7 p6)\n(board f7 p7)\n(up f7 f9)\n(depart f9 p3)\n(depart f9 p18)\n(board f9 p8)\n(board f9 p13)\n(up f9 f10)\n(depart f10 p6)\n(depart f10 p7)\n(depart f10 p16)\n(board f10 p0)\n(board f10 p2)\n(down f10 f8)\n(depart f8 p2)\n(down f8 f3)\n(depart f3 p10)\n(depart f3 p13)\n(down f3 f1)\n(depart f1 p0)\n(depart f1 p5)\n(depart f1 p8)\n(down f1 f0)\n(depart f0 p1)\nEND PLAN",
+     "refusal": null,
+     "reasoning": "**Analyzing Elevator Passenger Flows**\n\nI'm currently dissecting the movement patterns of 19 passengers across 11 floors. My focus is on mapping individual origins and destinations, starting from the base floor. This foundational step is crucial for understanding the complex demands on the elevator system.\n\n**Optimizing Elevator Trajectories**\n\nI've analyzed individual passenger trip data, and now I'm strategizing the most efficient up and down sweeps. My current focus is on minimizing stops by grouping passengers with similar origin-destination profiles for a single traversal.\n\n**Validating Passenger Assignments**\n\nI'm now meticulously checking if every passenger's origin and destination are accounted for within the planned elevator movements. My current focus is on cross-referencing individual journeys with the recorded board and depart logs.\n\n**Confirming Movement Logs**\n\nI'm diligently verifying each passenger's recorded boarding and alighting floors against their assigned journeys. My current focus is on validating the directional consistency of these movements.\n\n**Refining Passenger Routes**\n\nI'm now meticulously logging and verifying individual passenger movements, focusing on down sweeps from floors 8 to 1, and up sweeps from floors 0 to 10. I'm also scrutinizing skipped floors to ensure accuracy.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Elevator Passenger Flows**\n\nI'm currently dissecting the movement patterns of 19 passengers across 11 floors. My focus is on mapping individual origins and destinations, starting from the base floor. This foundational step is crucial for understanding the complex demands on the elevator system.\n\n**Optimizing Elevator Trajectories**\n\nI've analyzed individual passenger trip data, and now I'm strategizing the most efficient up and down sweeps. My current focus is on minimizing stops by grouping passengers with similar origin-destination profiles for a single traversal.\n\n**Validating Passenger Assignments**\n\nI'm now meticulously checking if every passenger's origin and destination are accounted for within the planned elevator movements. My current focus is on cross-referencing individual journeys with the recorded board and depart logs.\n\n**Confirming Movement Logs**\n\nI'm diligently verifying each passenger's recorded boarding and alighting floors against their assigned journeys. My current focus is on validating the directional consistency of these movements.\n\n**Refining Passenger Routes**\n\nI'm now meticulously logging and verifying individual passenger movements, focusing on down sweeps from floors 8 to 1, and up sweeps from floors 0 to 10. I'm also scrutinizing skipped floors to ensure accuracy.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1767,
+   "completion_tokens": 3029,
+   "total_tokens": 4796,
+   "cost": 0.039882,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.039882,
+    "upstream_inference_prompt_cost": 0.003534,
+    "upstream_inference_completions_cost": 0.036348
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2591,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

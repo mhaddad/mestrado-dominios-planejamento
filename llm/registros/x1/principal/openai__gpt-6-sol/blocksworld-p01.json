@@ -1,0 +1,111 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "blocksworld",
+ "instancia": "p01",
+ "data_utc": "2026-09-26T18:16:16+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x1-planejador-v1.md",
+ "segundos": 12.8,
+ "uso": {
+  "prompt_tokens": 653,
+  "completion_tokens": 984,
+  "total_tokens": 1637,
+  "cost": 0.011146,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.011146,
+   "upstream_inference_prompt_cost": 0.001306,
+   "upstream_inference_completions_cost": 0.00984
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 798,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN PLAN\n(unstack b9 b1)\n(putdown b9)\n(unstack b1 b7)\n(putdown b1)\n(unstack b6 b3)\n(putdown b6)\n(unstack b3 b4)\n(putdown b3)\n(unstack b4 b5)\n(putdown b4)\n(pickup b7)\n(stack b7 b4)\n(pickup b9)\n(stack b9 b7)\n(unstack b5 b2)\n(putdown b5)\n(unstack b2 b8)\n(putdown b2)\n(pickup b8)\n(stack b8 b9)\n(pickup b3)\n(stack b3 b8)\n(pickup b1)\n(stack b1 b3)\n(pickup b6)\n(stack b6 b1)\n(pickup b5)\n(stack b5 b6)\nEND PLAN",
+ "bruto": {
+  "id": "gen-1790446563-gdQPVQEKE8GNgAGHJXTr",
+  "object": "chat.completion",
+  "created": 1790446563,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN PLAN\n(unstack b9 b1)\n(putdown b9)\n(unstack b1 b7)\n(putdown b1)\n(unstack b6 b3)\n(putdown b6)\n(unstack b3 b4)\n(putdown b3)\n(unstack b4 b5)\n(putdown b4)\n(pickup b7)\n(stack b7 b4)\n(pickup b9)\n(stack b9 b7)\n(unstack b5 b2)\n(putdown b5)\n(unstack b2 b8)\n(putdown b2)\n(pickup b8)\n(stack b8 b9)\n(pickup b3)\n(stack b3 b8)\n(pickup b1)\n(stack b1 b3)\n(pickup b6)\n(stack b6 b1)\n(pickup b5)\n(stack b5 b6)\nEND PLAN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAvrb00G0TrHYvND0vX9x5UZnC4FGQH2_banzWTGpNdFQBpRs8G3PjWpDWKvilEkBIo-mEuPks7LvBumT68AJSzlWGO7KVUKoaQdFy1plgYlp3XqOqAa2H-2hGQl-gU8u_Nb2Q5Fb8MBCMXDdSkgDIXYnaxWA_J3t8l_IDYnjbj-CYiJnrFWU40_XABLc1n-W_Gz9m0OxJTK_DnwnZhDwTZdJfxLicWirFf0NAPyn6fIPWeDq7MidYgD3E-xXUCg4N0JZ4Zmc_qklMySwg-Sbv93OMtfwaN9qbAHD1dxaqvSdUTfz6y5c3D2q97mf_c3j22hc8TcZPzvBXRtIHBJPQN4ZARNbc8qm2xSYro-0pcW7Ii1lRcuRTD87N9TjLUF8YrPbN3L-4zDgTEojycyolGWoH0rcg_TguzzGGGaxNDLFGhJt-6AqxXSVR_jPUxaLoWQs3CVuwHG1DltSL4guCESXYbYA-YogNGwi4Eyj-MLnSv7Gvbi8FYjBSv7IbNmaXMUUA5Bk2wCNOYIo2vX1eHiXSPXlPkOQ6sJXOO_i0DN_6K8nQos4OHayosJA7BXCQMT9VScWjiZz1_nmJ_MjxLxNVcv6g_nANnRHFNMm5xtxbvjGyDUiDgX3VMxbzZuSquvvmbVZHtXbI4_tyt-Gwo7cdhqBw-ewC0b7iCsZKxvx4Fb5_I618zB1ndvYIPBxyobWZWrHRAN-3B00WNnkRXZ6duy-GIcq92sNPIsbK4zTHrKKrKHUs9siCjs_sm2RELXwVh3Bi91tfNi52cXGOXuVj1rEsv85Y_M9in_tMVcP1nITlo2JLicp-oYZSz5HzYa4hRTdJZof1nSI8BoiKu98-JivATmMfLvdpydonRxKkvevSxnnNLjbVScEWozOrEMhVWK-00OV37fIXAv4TQLe6ZQvyhIYOrOjUCCPmhKJ-XbY8la8iS6upSIWsHBGUCiIOmDDp5uxkeWBAvM2HQ7i_INEc1_VnmTgSIU9lcPrQxp6aUI9wPHNrselPf1lMWDnLraeE5s5YlhUKuXlThxuOXQJqWQBX3g0JC6-1nMxSEMEypYv9wL1Ns9g9WcHDewCX-_K9OLESPm_DnQPjp88uqoDc9EsMLM6IdzaK4Ef4s_LpYdaj39j4FVu4KWVaLYdY69WfJ4hEvEvNrDGX9EOUxKIKoI47bAhmlMuX2BpApWKzgUeCFGkw3bGWJAkZK0zWakuOqXSiMFKid2triHSqFRFRqmYKg8whkGSZ11g7vusFYNSFcqgQ7HslyX-7amrZqzwPZTDb-0gfJyDEcVs0WmVZzwEhZYtp5B84wcRDIT7Y7nMI_Tc7a8ORcQ47YZ32TvgeE4Qb2SW7JYThVczOvnrJsOrXJvuSFitBf5eMHnQXx86BBKR-SBiCMKYH0UP1olyJ8uBx03cH13n07Hafr-lBKQB56hnFwk95RF0HjsGNc6cpNcsPPVFBzyMqmDhsi-noqPz-MUsb4vp_NnjjbEucoSjtkLvEx_GHDG5hFeibhIA3NCf0ol1AzVCrJ8MGLDzNHZCEK2gYFtBL7w5KPLR6bX2k_pt3_18GgxFnHRfxRIr58MWBBD8q3_oaQW58b5EgrmBSOPSgWH7p94Ffim4QNwLGovQ7q62Joc-FjpxZi-RRKoZTavlJPfaYzVuUUDbONJYRMPropLYh9LFKk8LMOiGWAeEPd9nSKbCcKtJ4wt0z-3IHFsikLxPN442aJ0ZIysChzN8l7S0zapboSDlDlwSIUL3xAQ-7wOIsacCNZ8FFQLDYPr9a82nB6GGJfxmIn_r8b6y6RBc-sJGmn8IBNEHIa1pqodW9j_HBvcDEPs2GaRm_cv6ACtRnjcOuobor-5r1GqeNSBI1-y5opIK8XaNV2fvsX_zFbixyhTRwmxfXH5Sv_G_5_XDk5IGwOyQ490E5b4j7fDlYm1RBb0m0O2cTWtsA9vQuPEDrXNTmqWLjgRlYvdDb1KZnGgN3i-uybQ3MTBScxMYY6QX4LByWjAyGE0ZeE0JEHS_S_fpSOdapPBYwkEXvOXrw_dyLZRcFTkzC0QhWznYRTrQXY_F8tR7TH59qjSbAKmWzIJG4Vkarw_cqvmTD5VDgJntKF6tnZdWusGTgScq2qOc9vBHrz5bTAjI_LtjRbnANhY4vzoRjEIOlsktwIwHxT9Mg8tzb7JdVvixQGTAuUhsM70JYsfF3CMjSqGynnOyOUchmNeE_ryaGRiVNRk581uk85Uq6bv0-z8B-FueVUlbocopOAmbPY3yJ0slxg8PgMtyya_EAXDvsNeF68DbiPfxiMxj9P7-M_KX5oO9bUoI51j7D1l3QkChel9YTh1pdxrS7wJl_HEm1XsNJM0pejpyW5Rv8fhMWegQvW32NieYKi8TR_oI9JDj9rBX9-0nA5r9UNtLzJYbO9rGiZ17iirXw3pbN9ql1wDL39Y024b4tlg3Hdn2wPqLpX8JFeeajVyyMfgQ72iXl6BhYUtgOJyPwDb3flNwZj5YwHrxkzrn9SqRNYOZ8obiiWjMN6MuhyzlOIrGQOGDgGx63tHPS7NdU_JUsUsvKsNrP-XEYP8ZpNs72SESXHzF_MVHeKw3SO7tHAvbz-kQlvbt6gR1iVBhVAbSzLjqeuStS0X456jpK1HVKrGgTJh2_CLQZhST1ZK-13iK2fV3_Q3WsxcUYfRU8ut910iJs6l7hzAyx2bMNCe1dpv24T5Psyw4t44wlowskzYLXz_OOuYCIMU1Jk3dTXN5MG2FV6h6hTOIRp6vHeB84wqSQJ03qeTx7Xepb6T3NTKUmm5sH93-xhdBhsEIkNDHM8oCcEqqrDdW0gA79wmOhlh3qSKmrkh6mWiyTHE-LU35n0FDSbHnbdJbqQpqcNkPAETbzVD7GPMB2SMZ-mCGybvDb-g3Y97lR7FQ8Qt2TiwjkCTMVmoPp0UhPcm-REFiLA1GYt2RNjvIhizv1wA0wSc9B1lcS-rY3fvfwqU2c9eJaD-d_kMAXcMFaqSpYdlrWAVc9Pb7rXybas51-X6YLJw3qUNv6UDiEm3jL4HtcJCivUM3ycPnAUI8O12TeapwKEVyfbArRJkvAsHyKvAufNa-yHVvCGF3rm-rMikP1J-EXqnWPSKbk4DWIoG8xqHzEby1emUcianI-K6YYkeNTJcPkADVCrn0Z-C_mGrdkVXQ1xANOPxUqg39yOOUv0i2eoIEvDgaVq_gC_ybQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0232d018a34d9a15016ab80be4f04087d18e1dcb8ef4754665",
+       "index": 0
+      },
+      {
+       "type": "reasoning.summary",
+       "summary": "**Planning tasks clarity**\n\nI need to ensure that after removing b4, b5 is clear. I'll also check that b9 and b1 are cleared, and ensure b1 is clear once b9 is removed. It feels like I’m working through a bit of a sequence here, and I want to make sure everything is organized correctly. Having clarity in each step will help the overall plan come together!",
+       "format": "openai-responses-v1",
+       "index": 1
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquAvvlRWBHNyC-QojQgEyv3r8J-FyK4w6fTCEGxjg_bmlCBlWxO4SKEO6fU2twFmJYJkV4iNO_AHj1m5SecTPVKuYVcYTrm2YkCFeSSZRqEtqyAo6J8P_OLJwgw0Fmg-cdpGv1CaRAXN8NlDznDIbMoGFArm7y9BPQjKzbR7F9ZgQbFmY_x_ynaZihPEEeMDBEtrHM08JcEd4BwH_peOohA9Ks0zFQSyr-5MO_IQe03NhM7xw1CiIEa0nx208vJhfhlI-aH4LyxgrXYYT2-Db-SNzEnGVS3NR18vcFZKpHLHW_1NaIGlWjOur1D7XYVMqy55eMNg4gOoJUmlVAUqEhMSB5d7LB4mY1MKvrqIf5cbirdd1HWIr6c-n2lqSEGs9naZ_HZYUQBljgPBCFyaTvLa4gEitG85MAj-Ujy5S2QlwyNEqZJRTiyGocg6b78g7U0Xke5CxJnltcjdULft9q_JMJjSg_-NewGmxqILlvHn2p7ceKMDKucWe0IG39zE_USMWmW7zG1nqCZtR4UjLLl0vC9lsaBemZMmd2ZRqWu3JfO-NQX3T0M8ix6ewNrP57zq2op2EvSXl4yMKGM0752vz6iQ24liI7Dp7QM2H8V1TBCxVdbiTXkJkTzxgjnyztLzG_PqFVlifFLMXXy0Wvl6yYWXkTCbUGVpQOPdaZ9PQ5nTHL_M15KeiMu6k6wGOmqOMK0fpo9WGPmEv7duabsZ1oGHmVFkzzQzEnRKscn4YTdEvyKfsGcO_IIPSojmAPuWtl-b7zJCgFWY25-RUrF5LslLWfNI2jOBaWj5Ew-RLk-xGYb4dsnB0Ny7JKzzqgR0sH__DIweVYLtSXS9Lo45bCFov87vY8Nwpj_zP99Y8IZyRDo7xgkAW6n7RQr7cpAnXXnOWCzBqzzKmI_2b76kBRo-1v0lOEMPOahWjcxT4Fs3S5m01mhfO65DcMpUJ7X1jLxds_Dt56DV6_tZFgNwN7-r4Q6siCHft67Bbd2-b7l3KRmVxbcsgepZjBXuFGZu2M7XxXeTCYOO5M98wu-dBAch05z7quti-odTt49K20fh9Anjc1CH8xOQCxEVBZ6qXtuV31F5IqqIjGqrNClHAP0FXZmmo0ngb8KbTTM6a-A_L4ocTOkJtU9h69O8n1B9ehC90iWPoxkvSgUnCa8xCU02ZbXVmTrvMyge20HT28usWmaUbLU7uK_ItrZ7Ds-UwNm5pPXNYEgw9uTjFYSGHkzldjMPGp0tby5-amliVNeu1fPxbkdlpIE-U8H-h8CZ3O1jBQ0bUBvrjCk1ktJMUGcxzc1w2WFSe9wCIhqeBRx04iGTZDO98uQ6KMMLzzDp5Mz3AsgBZyY6Fkk_yK87mh5BA423R-XRSh17yQFf9VcKf9RFBQCV8KAsr4tbXdgdg2LQg_tu5_IQPzmHtqtrYoUq5oplBMNneGOsdiFkGF9lLu6uzq1IhBxRIzbp3mwJsaN1PM_raFikYGZhpIxXPnNnRr82CKnS97UwVaC4vOUNJrfQ_Ihd7FJi1UI4ACRGgx6D1Cv_mH82jH9UX1JW0TLZEWn7-qUyEQ8fCr5Qpq9suDCAG476mJl8T1bztYqoF7W84bqGVl3aRKGxHWYDOtjQhMExJ5FeQd6_uoytQtcsSm6e_JG-ENYHj3s6KK3z6T7ML9Ebf1juQdgc77eCW0ZoXODDRqswP6JbzxRy6KwoXt6mc5j4rfbVJKeLzS64-KSGYNRDVlX0vd0M24a_dD4KEIFGsobD_FNDHysipZkTKZVVZPtUi-1vQwGPdwqyDqej4-Yeb_ZBy6KoP3Ufkx94pRb0pzHn5FfhyOaT92FvdpdkAQYzWkG4A6Dqt0rxLZowjVdsrMtJhP5KB4GIImVovpmviWlYaW-QyCYRRCC40bkBGVtV9gO2zdpOh7VPGPLm1Vek4aTfsR2LyxJm_7I1bCx6yitWkbRDR4o59KTNMPHgMaHflTwqUahGuZWBHwJzeA5bmbv6n_rIoZvgG_Kc6vXUg8N-1fCwkpZfX9SgODEX8Wy5iYEgqGR0RgqBU1pbwlHEtTIWWxdoi4dkIgsWjizfFQvQ1dNwDRecfykgTKBDbhWBV9Vdw0s6mkOGDS7O_R_S_JiDR5TdQjM6zDa4BR_ZVyjtJMwQ21rPyAc9HOfRj-grX17SD7Ifa7McwSEKWsmCz1iR9mTgIxlON2zo0cWsuvW4sJUtIzJBBb9xfYDqRbzAr-5jxPb3kNpOdqJV7yTACULCGBV2t2puG4BYJhBs8_j5smLRcdBzuAAS58nuukc_YJPOCDn6sw9c1vV3oxNgC_9h8DvbjPgGCgphc_vGi2wyflB5UhBmiPOr4NNAAsBRa3ESh-C07kGpx.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0232d018a34d9a15016ab80bebda9487d1811debc4b37460fe",
+       "index": 2
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 653,
+   "completion_tokens": 984,
+   "total_tokens": 1637,
+   "cost": 0.011146,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.011146,
+    "upstream_inference_prompt_cost": 0.001306,
+    "upstream_inference_completions_cost": 0.00984
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 798,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}
