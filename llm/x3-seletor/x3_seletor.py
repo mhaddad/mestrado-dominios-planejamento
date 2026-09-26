@@ -39,7 +39,7 @@ MODELOS = ["anthropic/claude-sonnet-5", "openai/gpt-6-sol", "google/gemini-3.1-p
            "deepseek/deepseek-v4-pro-0813"]
 # max_tokens: 8000 na rodada de teste; 16000 a partir da principal (o DeepSeek esgotou 8000 no raciocínio)
 CONFIG = {"reasoning": {"effort": "medium"}, "max_tokens": 16000, "usage": {"include": True}}
-TETO_USD = 9.50
+TETO_USD = 11.50  # 9.50 até 26/09/2026; o autor subiu o limite da chave de US$ 10 para US$ 12
 LIMITE_ARQUIVO = 40_000  # caracteres; acima disso o arquivo é truncado (protocolo)
 SEMENTE_CATALOGO = 2026
 INGLES = {

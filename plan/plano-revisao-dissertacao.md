@@ -555,6 +555,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | **Fase 4 adiantada** enquanto o Nível 3 roda no GCP, começando pelo X3 (LLM como seletor). Modelos pelo **OpenRouter**, com os principais do mercado (seleção proposta em `llm/x3-seletor/protocolo.md`); **teto inicial de US$ 10**, a reavaliar depois | Decisão do autor | 4 |
 | 26/09/2026 | X3: rodar a condição com nomes dos planejadores, para medir quanto os modelos lembram dos resultados públicos | Decisão do autor | 4 |
 | 26/09/2026 | X4 em instâncias maiores (p05), restrito aos 4 domínios de técnica antiga por orçamento; trava própria de US$ 8,90 para reservar o X2 | Escolha do autor (instâncias maiores); recorte e trava pelo Coordenador, dentro do teto de US$ 10 | 4 |
+| 26/09/2026 | Teto da Fase 4 elevado de US$ 10 para **US$ 12** (limite da chave no OpenRouter); travas dos scripts em US$ 11,50. Uso: rodar o X2 e completar as conversas do X4 cortadas pela trava | Decisão do autor | 4 |
 
 ---
 
