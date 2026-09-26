@@ -9,6 +9,7 @@ Uso:
   python llm/x1-planejador/x1_planejador.py referencia
   python llm/x1-planejador/x1_planejador.py rodar --rodada principal
   python llm/x1-planejador/x1_planejador.py avaliar --rodada principal
+  python llm/x1-planejador/x1_planejador.py referencia --instancia p05   (instâncias maiores, X4)
 """
 import argparse
 import csv
@@ -75,12 +76,17 @@ def referencia(_a):
             dom, prob = arquivos(d)
             subprocess.run([sys.executable, str(FD), "--overall-time-limit", "300", "--alias", "lama-first",
                             str(dom), str(prob)], cwd=tmp, capture_output=True, text=True)
-            plano = [l for l in (Path(tmp) / "sas_plan").read_text().splitlines() if l.startswith("(")]
+            arq = Path(tmp) / "sas_plan"
+            if not arq.exists():
+                linhas.append({"dominio": d, "instancia": INSTANCIA, "passos_lama": "", "val": "LAMA sem plano em 300 s"})
+                continue
+            plano = [l for l in arq.read_text().splitlines() if l.startswith("(")]
             ok, msg = validar(d, plano)
             linhas.append({"dominio": d, "instancia": INSTANCIA, "passos_lama": len(plano), "val": msg})
-            (Path(tmp) / "sas_plan").unlink()
+            arq.unlink()
     RESULTADOS.mkdir(parents=True, exist_ok=True)
-    with (RESULTADOS / "referencia-lama.csv").open("w", encoding="utf-8", newline="") as f:
+    nome = "referencia-lama.csv" if INSTANCIA == "p01" else f"referencia-lama-{INSTANCIA}.csv"
+    with (RESULTADOS / nome).open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(linhas[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(linhas)
@@ -137,7 +143,9 @@ def rodar(a):
 
 
 def avaliar(a):
-    ref = {r["dominio"]: int(r["passos_lama"]) for r in csv.DictReader((RESULTADOS / "referencia-lama.csv").open(encoding="utf-8"))}
+    nome = "referencia-lama.csv" if INSTANCIA == "p01" else f"referencia-lama-{INSTANCIA}.csv"
+    ref = {r["dominio"]: int(r["passos_lama"]) if r["passos_lama"] else None
+           for r in csv.DictReader((RESULTADOS / nome).open(encoding="utf-8"))}
     linhas = []
     for modelo in X3.MODELOS:
         for d in DOMINIOS:
@@ -148,7 +156,7 @@ def avaliar(a):
             plano = extrair_plano(r["resposta"])
             ok, msg = (False, "sem plano na resposta") if not plano else validar(d, plano)
             linhas.append({"modelo": modelo, "dominio": d, "passos": len(plano or []), "valido": ok, "val": msg,
-                           "passos_lama": ref[d], "razao_comprimento": round(len(plano) / ref[d], 2) if ok else "",
+                           "passos_lama": ref[d], "razao_comprimento": round(len(plano) / ref[d], 2) if ok and ref[d] else "",
                            "custo_usd": round(float((r.get("uso") or {}).get("cost") or 0), 4),
                            "fim": (r["bruto"].get("choices") or [{}])[0].get("finish_reason")})
     RESULTADOS.mkdir(parents=True, exist_ok=True)
@@ -165,7 +173,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("acao", choices=("referencia", "rodar", "avaliar"))
     ap.add_argument("--rodada", default="principal")
+    ap.add_argument("--instancia", default="p01", help="instância do Autoscale (p01 no X1; p05 no X4)")
     a = ap.parse_args()
+    global INSTANCIA
+    INSTANCIA = a.instancia
     {"referencia": referencia, "rodar": rodar, "avaliar": avaliar}[a.acao](a)
 
 
