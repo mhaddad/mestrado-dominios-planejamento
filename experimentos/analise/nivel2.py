@@ -16,6 +16,13 @@ Cenários implementados:
                         (auditoria/taxonomia/planejadores_4d.csv), todos os valores juntos
   4d-D1, 4d-D2, 4d-D3   R-10: uma dimensão por vez (a D4 não entra sozinha: 9 dos 10
                         planejadores são "Planejador único")
+  correcoes-G17         R-12: valores corrigidos de Pathways/Associações e TPP/Generalização;
+                        as duas métricas são rediscretizadas pela regra aplicada em 2010
+                        (extremos do treino, G23); as demais mantêm as classes publicadas
+  classes-com-auxiliares  R-13: "Número total de Classes" contada com as classes auxiliares
+                        (Utility, Global) do modelo itSIMPLE, rediscretizada da mesma forma
+  linha-de-base         R-15: sem características; cada planejador recebe a média das suas
+                        notas nos 10 domínios de treino, igual nos 3 domínios de validação (G20)
 
 Uso: python experimentos/analise/nivel2.py
 Saída: experimentos/analise/nivel2/cenarios.csv, rankings.csv, taxonomia-4d-relacao.csv,
@@ -48,6 +55,19 @@ def classes_texto(metricas, variancia):
     for r in metricas:
         x, c = R.num(r["valor"]), v[r["metrica"]]
         out[(r["dominio"], r["metrica"])] = "Baixo" if x <= c else "Médio" if x <= 2 * c else "Alto"
+    return out
+
+
+def classes_com_valores(metricas, novos):
+    """Classes publicadas, exceto nas métricas de `novos` ({(dominio, metrica): valor}), que são
+    rediscretizadas inteiras pela regra de 2010 (extremos do treino): trocar um valor de treino
+    pode mover o mínimo ou o máximo e mudar a classe de outros domínios."""
+    out = classes_publicadas(metricas)
+    for m in {m for (_d, m) in novos}:
+        linhas = [{**r, "valor": str(novos.get((r["dominio"], m), r["valor"]))}
+                  for r in metricas if r["metrica"] == m]
+        for r in R.discretizar(linhas):
+            out[(r["dominio"], m)] = r["classe_reproduzida"]
     return out
 
 
@@ -169,6 +189,8 @@ def main():
                              if not (r["planejador"] == "IPP" and r["tecnica"] == "Forward-chaining")])
     publicadas = classes_publicadas(metricas)
     t4d = taxonomia_4d()
+    corrigidos = {(r["dominio"], r["metrica"]): r["valor_corrigido"] for r in metricas if r["valor_corrigido"]}
+    com_aux = {(r["dominio"], "Número total de Classes"): r["classes_xml"] for r in R.ler("modelos_itsimple_2010.csv")}
     cenarios = {
         "referencia": (publicadas, relacao_2010, tabela4),
         "texto-amostral": (classes_texto(metricas, statistics.variance), relacao_2010, tabela4),
@@ -176,6 +198,8 @@ def main():
         "tabela4-sem-G24": (publicadas, tabela4, tabela4),
         "4d-todas": (publicadas, t4d, t4d),
         **{f"4d-{d}": (publicadas, taxonomia_4d((d,)), taxonomia_4d((d,))) for d in ("D1", "D2", "D3")},
+        "correcoes-G17": (classes_com_valores(metricas, corrigidos), relacao_2010, tabela4),
+        "classes-com-auxiliares": (classes_com_valores(metricas, com_aux), relacao_2010, tabela4),
     }
     resumo, rankings = [], []
     for nome, (classes, tec_rel, tec_pl) in cenarios.items():
@@ -185,9 +209,20 @@ def main():
         aval = avaliar(previsto, observado, desempate)
         for a in aval:
             rankings.append({"cenario": nome, **a})
-        resumo.append({"cenario": nome, **diag,
+        resumo.append({"cenario": nome, **diag, "classes_diferentes_da_referencia":
+                       sum(classes[k] != publicadas[k] for k in publicadas),
                        **{f"acerto_{a['dominio']}": a["acerto_posicao_exata"] for a in aval},
                        **{f"spearman_{a['dominio']}": a["spearman"] for a in aval}})
+    treino = defaultdict(list)
+    for (d, p), n in notas.items():
+        treino[p].append(n)
+    base = {d: {p: statistics.mean(v) for p, v in treino.items()} for d in VALIDACAO}
+    aval = avaliar(base, observado, desempate)
+    rankings += [{"cenario": "linha-de-base", **a} for a in aval]
+    resumo.append({"cenario": "linha-de-base", "metricas_com_mais_de_uma_classe": "", "metricas_total": "",
+                   "tecnicas": "", "classes_diferentes_da_referencia": "",
+                   **{f"acerto_{a['dominio']}": a["acerto_posicao_exata"] for a in aval},
+                   **{f"spearman_{a['dominio']}": a["spearman"] for a in aval}})
     SAIDA.mkdir(parents=True, exist_ok=True)
     relacao_4d = [{"caracteristica": f"{m} {c}", "tecnica": t, "media_inteira": v}
                   for (m, c, t), v in sorted(rel_4d.items())]

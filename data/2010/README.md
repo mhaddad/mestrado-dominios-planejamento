@@ -13,6 +13,7 @@ Status: gerado e conferido por máquina em 21/09/2026. **Conferência manual pel
 | `metricas.csv` | 17 | As 17 métricas e o diagrama UML de origem | 5, 6, 7 |
 | `metricas_dominios.csv` | 221 | Valor bruto, classe (Baixo/Médio/Alto) e `valor_corrigido` (vazio, exceto nas 2 correções abaixo) de cada métrica em cada domínio (13 × 17) | 8–11, 26, 32, 38 |
 | `correcoes_2010.csv` | 2 | Correções aprovadas pelo autor em 21/09/2026: Pathways/Associações 4→2 e TPP/Generalização 2→4, com a fonte e o impacto provável na classe. O valor publicado não é sobrescrito. | 9, Figuras 26 e 27 |
+| `rotulos_corrigidos.csv` | 1 | Rótulo corrigido de métrica cujo nome publicado não corresponde aos valores (G1, item R-11). Os arquivos acima mantêm o rótulo publicado | 5, 8 |
 | `benchmarks_ipc.csv` | 34 | De qual IPC e variante (repositório `potassco/pddl-instances`) vieram os problemas de cada domínio; ver [docs/benchmarks-ipc-ate-2008.md](../../docs/benchmarks-ipc-ate-2008.md) | — |
 | `benchmarks_ipc_mapa_final.csv` | 13 | A variante da IPC escolhida para cada um dos 13 domínios, com faixa de instâncias e base da escolha (`identico`, `equivalente` ou `confirmado_pelo_autor`) | — |
 | `benchmarks_ipc_instancias.csv` | 425 | Um registro por arquivo PDDL do acervo, com a instância correspondente da IPC | — |
