@@ -82,9 +82,9 @@ Para mudar qualquer decisão: troque a marca (`[x]` promove, `[ ]` não promove)
 - [ ] `jiang2026toward` — JIANG, J.; ZHANG, J.; MO, F.; LI, L.; ZENG, D. Toward Secure and Reliable PDDL Formalization of Large Language Models with Planner-in-the-Loop Feedback., 2026. Disponível em: <https://arxiv.org/abs/2606.29700>.
   - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
   - **Citações:** 0 citações · citada 1× no capítulo
-- [ ] `son2026swerouter` — SON, S.; YOON, S.; TANG, J.; et al. SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks., 2026. Disponível em: <https://arxiv.org/abs/2607.00053>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
-  - **Citações:** 0 citações · citada 3× no capítulo
+- [x] `son2026swerouter` — SON, S.; YOON, S.; TANG, J.; et al. SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks., 2026. Disponível em: <https://arxiv.org/abs/2607.00053>.
+  - **Ressalva:** preprint recente; usar como evidência complementar e identificar como trabalho de fronteira. O estudo avalia custo e resolução em *benchmarks*, não eficácia em organizações. **Aprovado pelo autor em 27/09/2026.**
+  - **Citações:** 0 citações · ainda não citado em capítulo.
 - [ ] `zhou2026agentasarouter` — ZHOU, P.; TANG, Z.; MA, Y.; et al. Agent-as-a-Router: Agentic Model Routing for Coding Tasks., 2026. Disponível em: <https://arxiv.org/abs/2606.22902>.
   - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
   - **Citações:** 0 citações · citada 4× no capítulo
@@ -281,8 +281,8 @@ As 122 aprovadas pelo autor, mais 2 obras confirmadas depois, pelos mesmos crit�
 
 ### E8 — IA no desenvolvimento de software (19)
 
-- [ ] `becattini2025sallma` — BECATTINI, M.; VERDECCHIA, R.; VICARIO, E. SALLMA: A Software Architecture for LLM-Based Multi-Agent Systems. 2025 IEEE/ACM International Workshop on New Trends in Software Architecture (SATrends). Anais... p. 5–8, 2025. IEEE. Disponível em: <https://doi.org/10.1109/SATrends66715.2025.00006>.
-  - **Ressalva:** artigo de workshop revisado por pares; propõe arquitetura e prova de conceito, não demonstra seleção de configuração de agentes de código.
+- [x] `becattini2025sallma` — BECATTINI, M.; VERDECCHIA, R.; VICARIO, E. SALLMA: A Software Architecture for LLM-Based Multi-Agent Systems. 2025 IEEE/ACM International Workshop on New Trends in Software Architecture (SATrends). Anais... p. 5–8, 2025. IEEE. Disponível em: <https://doi.org/10.1109/SATrends66715.2025.00006>.
+  - **Ressalva:** artigo de workshop revisado por pares; propõe arquitetura e prova de conceito, não demonstra seleção de configuração de agentes de código. **Aprovado pelo autor em 27/09/2026** como apoio arquitetural, não como evidência de eficácia.
   - **Citações:** 0 citações · ainda não citado em capítulo.
 - [ ] `chen2026risa` — CHEN, K.; NIAN, J.; CAO, Y.; JIANG, Y. Disagree to Explore, Agree to Commit: Routing-Guided Test-Time Scaling for Software Agents. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2608.22191>.
   - **Ressalva:** preprint recente; avalia trajetórias e arbitragem de *patches* no SWE-bench Verified, não roteamento entre configurações em ambiente de trabalho.

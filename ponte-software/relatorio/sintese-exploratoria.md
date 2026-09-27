@@ -40,7 +40,9 @@ O [dossiê para o Capítulo 7](dossie-capitulo-7.md) aprofunda a arquitetura arg
 
 [FATO] A seleção de algoritmos pode se beneficiar de informação sobre ambos os lados da relação. AS-LLM combina *features* do problema com representação do algoritmo extraída do código; no estudo de ablação, retirar as *features* do algoritmo causa a maior perda, e o método supera comparadores em oito dos dez cenários do ASLib [@wu2024large].
 
-[HIPÓTESE] Para agentes de software, isso sugere descrever uma configuração como um objeto composto — modelo, ferramentas, permissões, estratégia, verificador, orçamento e critério de escalonamento — e não apenas pelo nome do modelo. A hipótese não foi testada pelo AS-LLM em agentes de código.
+[FATO] SALLMA oferece um referente arquitetural limitado para essa separação: organiza sistemas multiagente em uma camada operacional, responsável por orquestração, e uma camada de conhecimento, que cataloga fluxos e configurações de agentes. Sua prova de conceito é funcional e qualitativa; não demonstra uma política de seleção de agentes de código [@becattini2025sallma].
+
+[FATO] Em um preprint de engenharia de software, o SWE-Router deixa um modelo barato executar alguns turnos exploratórios e usa a trajetória parcial para decidir entre continuar ou escalar. Os autores relatam melhor eficiência de custo mantendo a maior parte do desempenho do modelo forte nos *benchmarks* avaliados [@son2026swerouter]. [HIPÓTESE] Juntas, essas fontes sugerem descrever uma configuração como um objeto composto — modelo, ferramentas, permissões, estratégia, verificador, orçamento e critério de escalonamento — e não apenas pelo nome do modelo. Essa hipótese não foi testada pelo AS-LLM nem pelo SALLMA em agentes de código implantados.
 
 ### 2.3 Medidas agregadas escondem o que importa
 

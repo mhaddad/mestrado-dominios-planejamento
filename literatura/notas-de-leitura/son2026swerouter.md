@@ -3,11 +3,11 @@ tipo: nota-de-leitura
 eixo: E8
 citekey: son2026swerouter
 prioridade: A
-status: lido
+status: verificado
 profundidade: texto-integral
 fonte-lida: https://arxiv.org/abs/2607.00053
-metadados: verificada-por-agente
-referencia-verificada: false
+metadados: verificada-na-fonte-primaria
+referencia-verificada: true
 afirmacoes-2010: [A1, A3]
 fragilidades: []
 perguntas: [Q4]
@@ -16,7 +16,7 @@ perguntas: [Q4]
 # SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks
 
 **Son, S.; Yoon, S.; Tang, J.; Wang, S.; Wolf, L.; Bogunovic, I. · 2026 (5th Deep Learning for Code Workshop, ICML 2026) · arXiv**
-**Link/DOI:** https://arxiv.org/abs/2607.00053 (sem DOI Crossref no momento da leitura)
+**Link/DOI:** https://arxiv.org/abs/2607.00053 (sem DOI Crossref no momento da leitura; versão arXiv v1, 30/06/2026)
 
 ## Extração estruturada
 
@@ -41,4 +41,4 @@ perguntas: [Q4]
 
 ## Uso de IA nesta nota
 
-Claude Code, subagente claude-sonnet-5, 22/09/2026. Leitura de texto integral em https://arxiv.org/abs/2607.00053 (PDF baixado do arXiv, extraído com pdftotext). Conferência humana: pendente.
+Claude Code, subagente claude-sonnet-5, 22/09/2026. Leitura de texto integral em https://arxiv.org/abs/2607.00053 (PDF baixado do arXiv, extraído com pdftotext). Metadados e escopo reconferidos no HTML primário do arXiv em 27/09/2026; promoção aprovada pelo autor na mesma data.

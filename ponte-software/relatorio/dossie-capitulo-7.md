@@ -45,7 +45,7 @@ O que se transfere, portanto, é a pergunta investigativa: há regiões de taref
 
 ### 3.2 A unidade de análise muda
 
-[HIPÓTESE] Um domínio PDDL é uma descrição relativamente estável de ações, estados e objetivos. Uma tarefa de software é situada e aberta: começa com uma especificação possivelmente incompleta, exige localizar contexto em um repositório que evolui e pode produzir novas informações durante a execução. Por isso, “o domínio” da ponte não é apenas o repositório nem apenas a *issue*: é a combinação tarefa–repositório–configuração–momento.
+[HIPÓTESE] Um domínio PDDL é uma descrição relativamente estável de ações, estados e objetivos. Uma tarefa de software é situada e aberta: começa com uma especificação possivelmente incompleta, exige localizar contexto em um repositório que evolui e pode produzir novas informações durante a execução. Por isso, “o domínio” da ponte não é apenas o repositório nem apenas a *issue*: é a combinação tarefa–repositório–configuração–momento. O SWE-Router é evidência de fronteira para esta última dimensão: em vez de decidir só pela descrição inicial, ele condiciona o escalonamento à trajetória parcial de uma execução barata [@son2026swerouter].
 
 Essa distinção explica por que não basta adaptar as métricas de 2010. O contexto pode ser descoberto durante a execução. O SWE-bench já demonstra que mais contexto recuperado não equivale automaticamente a melhor resultado: no estudo original, aumentar a janela de contexto reduziu o desempenho do Claude 2, embora aumentasse o *recall* dos arquivos corretos [@jimenez2024swebench]. A característica relevante pode ser a qualidade do contexto selecionado, não seu volume bruto.
 
@@ -61,7 +61,7 @@ Em planejamento clássico, um planejador é uma implementação relativamente id
 - orçamento de *tokens*, tempo e custo;
 - critério de parar, escalar ou devolver a tarefa.
 
-[HIPÓTESE] A variável comparável ao planejador é a configuração inteira, não o modelo isolado. Essa é uma consequência analítica da natureza composta dos agentes; é também coerente com AS-LLM, que encontra ganho ao representar o algoritmo além de representar o problema [@wu2024large]. A obra não testa agentes de software, por isso a ligação permanece hipotética.
+[HIPÓTESE] A variável comparável ao planejador é a configuração inteira, não o modelo isolado. Essa é uma consequência analítica da natureza composta dos agentes; é também coerente com AS-LLM, que encontra ganho ao representar o algoritmo além de representar o problema [@wu2024large]. SALLMA oferece uma arquitetura para distinguir orquestração da execução e manter configurações em um catálogo; sua prova de conceito não demonstra que essa separação melhora seleção em desenvolvimento de software [@becattini2025sallma].
 
 ### 3.4 O resultado não cabe em uma única coluna
 
@@ -208,7 +208,7 @@ Essas frases são material de trabalho, não texto final. A integração dispon�
 
 Uma busca complementar identificou fontes que tornam a formulação mais concreta sem mudar seu estatuto. A principal evolução é separar a decisão em **triagem pré-agente**, **escalonamento após exploração parcial** e **orquestração**. [HIPÓTESE] Essa decomposição é mais adequada do que um seletor estático porque acomoda tanto características iniciais da tarefa quanto sinais produzidos durante a execução — testes, trajetória, custo, incerteza e necessidade de revisão.
 
-O memorando [curadoria-fontes-se-ia.md](curadoria-fontes-se-ia.md) registra a matriz de evidências e os limites de cada nova fonte. Elas permanecem fora desta lista de referências até aprovação do autor; assim, esta seção não altera a escada de inferência nem transforma preprints em evidência estabelecida. Se as fontes prioritárias forem aprovadas, a inclusão recomendada é uma subseção sobre **política de escalonamento**, não uma alegação de seletor pronto.
+O memorando [curadoria-fontes-se-ia.md](curadoria-fontes-se-ia.md) registra a matriz de evidências e os limites de cada nova fonte. O autor aprovou SALLMA como apoio arquitetural e SWE-Router como evidência complementar de fronteira. A inclusão recomendada é uma subseção sobre **política de escalonamento**, não uma alegação de seletor pronto: SALLMA não testa roteamento de tarefas de programação e SWE-Router ainda é preprint baseado em *benchmarks*.
 
 ## Referências usadas
 

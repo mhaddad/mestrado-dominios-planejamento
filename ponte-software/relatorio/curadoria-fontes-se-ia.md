@@ -2,7 +2,7 @@
 tipo: curadoria-de-fontes
 fase: 5
 data: 2026-09-27
-status: fontes-primarias-verificadas-aguarda-aprovacao-do-autor
+status: duas-fontes-promovidas-demais-candidatas
 ---
 
 # Curadoria dirigida — engenharia de software com IA, roteamento e orquestração
@@ -30,11 +30,11 @@ Esse desdobramento torna mais precisa a conexão com a dissertação. Caracterí
 | Fonte | Tipo e proximidade | O que de fato examina | Uso potencial na dissertação | Limite que não pode ser ocultado | Situação |
 |---|---|---|---|---|---|
 | Fan, Yin e Chen (2026), *DepFixRouter* | Evidência direta; preprint | Roteia *pull requests* de atualização de dependência antes de chamar diagnóstico/reparo. Com 497 casos rotulados e piloto de 60 casos, mede chamadas e *tokens*. | Sustenta a noção de **triagem pré-agente**: uma política pode economizar recursos sem tentar resolver toda tarefa com o mesmo agente. | Recorte estreito (dependências); mede diagnóstico, não qualidade final do *patch*; preprint muito recente. | Candidata `fan2026dependencyrouter` — prioridade A |
-| Son et al. (2026), *SWE-Router* | Evidência direta; preprint/workshop | Executa alguns turnos baratos, usa a trajetória parcial e só então continua ou escala. | Sustenta a distinção entre *features* estáticas e **sinais de execução**. É o contraponto mais claro à hipótese de que métricas estruturais bastariam. | Resultado descrito no preprint; não demonstra benefício em uma organização real. | Candidata existente `son2026swerouter` — prioridade A |
+| Son et al. (2026), *SWE-Router* | Evidência direta; preprint/workshop | Executa alguns turnos baratos, usa a trajetória parcial e só então continua ou escala. | Sustenta a distinção entre *features* estáticas e **sinais de execução**. É o contraponto mais claro à hipótese de que métricas estruturais bastariam. | Resultado descrito no preprint; não demonstra benefício em uma organização real. | **Promovida** `son2026swerouter` — evidência de fronteira |
 | Zhou et al. (2026), *Agent-as-a-Router* | Evidência direta; relatório técnico vivo | Formula roteamento de tarefas de programação como ciclo contexto–ação–feedback e avalia arrependimento acumulado em *benchmark* de cerca de 10 mil tarefas. | Dá vocabulário para **memória de desempenho** e para avaliação sequencial, não só acurácia de um classificador. | Relatório vivo, não revisão por pares; o *benchmark* não equivale a fluxo de trabalho humano. | Candidata existente `zhou2026agentasarouter` — prioridade A |
 | Chen et al. (2026), *Risa* | Evidência direta, mas de outro nível; preprint | Usa traços de roteamento de MoE para diversificar trajetórias e arbitrar *patches* em SWE-bench Verified. | Mostra que sinais internos/da trajetória podem apoiar **exploração e compromisso**, além do texto da *issue*. | Não é roteamento entre configurações de agente; usa arquitetura MoE e *benchmark*. | Candidata `chen2026risa` — prioridade B |
 | Madeyski (2026), *Triage* | Protocolo propositivo; preprint | Propõe usar saúde do código e metadados para encaminhar tarefas a níveis de modelo e define condições falsificáveis para que isso compense. | Útil como hipótese concorrente: métricas de qualidade podem ser candidatas a sinal, mas não presumidas como seletor pronto. | O próprio resumo apresenta protocolo/condições, não uma demonstração empírica concluída. | Candidata existente `madeyski2026triage` — prioridade B |
-| Becattini, Verdecchia e Vicario (2025), *SALLMA* | Arquitetura de software; artigo de workshop revisado | Propõe camadas operacional (intenção e orquestração) e de conhecimento (metamodelos e configurações) para sistemas LLM multiagente. | Ajuda a converter a hipótese em arquitetura: separar decisão de roteamento, execução e memória/configuração. | Prova de conceito; não testa a seleção condicional para tarefas de programação. | Candidata `becattini2025sallma` — prioridade B |
+| Becattini, Verdecchia e Vicario (2025), *SALLMA* | Arquitetura de software; artigo de workshop revisado | Propõe camadas operacional (intenção e orquestração) e de conhecimento (metamodelos e configurações) para sistemas LLM multiagente. | Ajuda a converter a hipótese em arquitetura: separar decisão de roteamento, execução e memória/configuração. | Prova de conceito; não testa a seleção condicional para tarefas de programação. | **Promovida** `becattini2025sallma` — apoio arquitetural |
 | Cheikh Tourad e Lachgar (2026), *Multi-LLM Prototype* | Infraestrutura adjacente; artigo em periódico | Decompõe pedidos, pontua modelos por critérios interpretáveis e trata desacordo por uma sequência explícita. | Referência de desenho para tornar a política auditável: critérios, conflitos e rastros de decisão. | Não é estudo de engenharia de software nem evidência de eficácia de roteamento de agentes de código. | Candidata `tourad2026multillm` — prioridade C |
 
 ## Conexões que a nova evidência torna mais fortes
@@ -75,7 +75,7 @@ Isso preserva a contribuição crítica da dissertação: a pergunta “há sina
 
 ## Decisão editorial recomendada
 
-Quando o autor aprovar as fontes de prioridade A e, se desejar, B, o Capítulo 7 pode ganhar uma subseção intitulada **“Da escolha de agente à política de escalonamento”**. Ela deve:
+Com as duas fontes aprovadas pelo autor, o Capítulo 7 pode ganhar uma subseção intitulada **“Da escolha de agente à política de escalonamento”**. Ela deve:
 
 - usar as fontes atuais para estabelecer seleção condicional, heterogeneidade de tarefas e limites empíricos;
 - usar as fontes A como evidência contemporânea de triagem e roteamento em tarefas de software;
@@ -85,9 +85,9 @@ Quando o autor aprovar as fontes de prioridade A e, se desejar, B, o Capítulo 7
 
 ## Próximo passo de pesquisa, sem piloto
 
-1. O autor decide quais candidatas da prioridade A/B promover para a bibliografia citável.
-2. Para cada fonte aprovada, produzir nota de leitura integral e extrair somente afirmações compatíveis com seu desenho e população.
-3. Revisar a escada de inferência do dossiê: acrescentar evidência direta de roteamento, mas preservar como hipótese a eficácia em qualquer equipe ou repositório específico.
+1. ~~O autor decide quais candidatas da prioridade A/B promover para a bibliografia citável~~ — feito em 27/09/2026: `becattini2025sallma` e `son2026swerouter`.
+2. ~~Para cada fonte aprovada, produzir nota de leitura integral e extrair somente afirmações compatíveis com seu desenho e população~~ — feito em 27/09/2026; notas em `literatura/notas-de-leitura/`.
+3. ~~Revisar a escada de inferência do dossiê~~ — feito em 27/09/2026: acrescentada evidência complementar de roteamento e apoio arquitetural, preservando como hipótese a eficácia em qualquer equipe ou repositório específico.
 4. ~~Integrar a síntese final disponível da Fase 4B~~ — feito em 27/09/2026. Os EXP-21 e EXP-24 reforçam, no recorte de planejamento, a exigência de política sequencial e validação por unidade mantida fora; não demonstram que sinais estáticos sejam inúteis nem antecipam o comportamento de agentes de software.
 
 ## Registros primários

@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.71 |
+| Versão deste documento | 0.72 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B em andamento · 🟡 Fase 5 exploratória iniciada em 27/09/2026 |
 
 ---
@@ -370,7 +370,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - [x] Delimitar a analogia: correspondências úteis e limites entre domínio/tarefa, técnica/configuração e eficiência/resultado — `ponte-software/relatorio/sintese-exploratoria.md` (27/09/2026)
 - [x] Revisitar os resultados das Fases 1–4 para extrair evidências a favor, contra e neutras para H1–H3 — síntese exploratória, seções 2–5 (27/09/2026)
-- [x] Revisar as fontes já verificadas dos eixos E7 e E8 sobre roteamento, orquestração e avaliação de agentes de código — 8 chaves citáveis conferidas por `checar_citacoes.py` (27/09/2026)
+- [x] Revisar as fontes já verificadas dos eixos E7 e E8 sobre roteamento, orquestração e avaliação de agentes de código — 10 chaves citáveis conferidas por `checar_citacoes.py`; `becattini2025sallma` e `son2026swerouter` promovidas por aprovação do autor (27/09/2026)
 - [x] Mapear oportunidades de pesquisa e aplicação, distinguindo o que é sustentado por evidência do que depende de validação futura — síntese exploratória, seção 6 (27/09/2026)
 - [x] Elaborar uma agenda de pesquisa com possíveis desenhos empíricos, sem iniciar piloto — síntese exploratória, seções 5–6 (27/09/2026)
 - [x] Ampliar a curadoria com fontes primárias sobre triagem, roteamento por trajetória e orquestração de agentes em engenharia de software — `ponte-software/relatorio/curadoria-fontes-se-ia.md`; quatro candidatas novas registradas, ainda não citáveis (27/09/2026)
@@ -386,6 +386,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - 27/09/2026 — Dossiê para o futuro Capítulo 7 em `ponte-software/relatorio/dossie-capitulo-7.md`: tese editorial, escada de inferência, conexão com os resultados negativos, três níveis de aplicabilidade, auditoria conceitual, hipóteses falseáveis e arquitetura de redação. Não é capítulo final e aguarda a síntese da 4B.
 - 27/09/2026 — Curadoria dirigida de fontes de engenharia de software com IA em `ponte-software/relatorio/curadoria-fontes-se-ia.md`: a formulação é refinada de seletor estático para política sequencial de triagem, escalonamento e orquestração. Quatro fontes primárias novas foram registradas como candidatas; preprints e infraestrutura adjacente não sustentam, por si, aplicabilidade industrial.
 - 27/09/2026 — Integração da 4B concluída na Ponte: o EXP-21 final mostra que as 16 *features* SAS+ quase não antecipam famílias fora do domínio; o EXP-24 não encontra ganho contra o *single best* no recorte completo. O indício favorável sem portfólios na *agile* de 2018 não resiste à correção global. A Fase 5 está pronta para revisão do autor e decisão bibliográfica, sem recomendação de produto.
+- 27/09/2026 — O autor aprovou a promoção de `becattini2025sallma` e `son2026swerouter`. As notas de leitura foram verificadas, o `referencias.bib` foi regenerado com 153 obras e a síntese/dossiê passaram a usar as fontes com ressalvas explícitas. A Fase 5 está pronta para a revisão final do autor.
 
 ---
 
@@ -658,6 +659,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 5 | Codex (GPT-5) + skills editoriais `chief-editor` e `conceptual-challenger` | Aprofundamento da Ponte em dossiê para o Capítulo 7: escada de inferência, aplicabilidade, hipóteses concorrentes, alegações permitidas/proibidas e arquitetura de redação | Treze chaves verificadas por `checar_citacoes.py`; auditoria conceitual separa associação, causalidade e aplicação; não há alegação de produto, piloto ou eficácia local |
 | 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Busca dirigida e curadoria de fontes primárias sobre roteamento/escalonamento de agentes de software; registro de candidatas e atualização do dossiê | Quatro registros primários novos em `candidatas.bib` e no protocolo; matriz distingue evidência direta, arquitetura adjacente e hipótese; nenhuma candidata foi promovida ou citada no capítulo |
 | 27/09/2026 | 5 | Codex (GPT-5) + skills editoriais `chief-editor` e `source-auditor` | Integração dos resultados finais disponíveis da 4B (EXP-21 e EXP-24) na síntese e no dossiê da Ponte | Formulação calibrada contra os registros: sem ganho robusto de *features* SAS+ ou seletor por instância; exceção local marcada como indício; nenhuma inferência sobre eficácia em software |
+| 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Promoção autorizada de SALLMA e SWE-Router, leitura/conferência de fontes primárias e atualização das sínteses | SALLMA entra apenas como apoio arquitetural; SWE-Router como preprint de fronteira baseado em *benchmarks*; 10 e 14 chaves citáveis verificadas, respectivamente, na síntese e no dossiê |
 
 ---
 
@@ -784,3 +786,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.69 | 27/09/2026 | Fase 4B: EXP-21 final (Q5; permutação e Holm) e EXP-24 (R-29 por instância); ligação de 2011 completa |
 | 0.70 | 27/09/2026 | Fase 5: curadoria dirigida de fontes de engenharia de software com IA; quatro candidatas primárias registradas, e a Ponte refinada para triagem, escalonamento por sinais de execução e orquestração — sem promover preprints nem alegar eficácia local |
 | 0.71 | 27/09/2026 | Fase 5: integração dos resultados finais disponíveis da 4B (EXP-21 e EXP-24); síntese e dossiê fecham a argumentação exploratória e aguardam revisão do autor e decisão sobre fontes candidatas |
+| 0.72 | 27/09/2026 | Fase 5: autor aprova SALLMA e SWE-Router; referências promovidas e integração editorial concluída com limites de evidência explícitos |
