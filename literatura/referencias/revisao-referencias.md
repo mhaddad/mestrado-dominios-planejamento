@@ -332,6 +332,17 @@ Acrescentadas na resolução das pendências da auditoria (relatórios oficiais 
 - [x] `bonet2001heuristic` — Bonet, Blai and Geffner, Hector. Heuristic Search Planner 2.0. AI Magazine, v. 22, p. 77-80, 2001. Disponível em: <https://doi.org/10.1609/aimag.v22i3.1576>.
 - [x] `weld1994introduction` — Weld, Daniel S.. An Introduction to Least Commitment Planning. AI Magazine, v. 15, p. 27-61, 1994. Disponível em: <https://doi.org/10.1609/aimag.v15i4.1109>.
 
+## Fase 4B — booklet da IPC 2014 (3)
+
+Acrescentadas em 27/09/2026 com autorização do autor. Metadados tirados do próprio PDF do booklet (folha de rosto, sumário e primeira página de cada resumo), cópia fornecida pelo autor. Literatura cinza oficial (resumos de planejadores de IPC), no mesmo critério de `rintanen2014madagascar` e `seipp2014fast`. **Aguardam aprovação do autor.** Sem editora nem URL estável: o site citado no prefácio saiu do ar. Observação: `seipp2014fast`, já aprovada, usa outro título para o mesmo volume ("International Planning Competition (IPC) 2014 -- Planner Abstracts"); convém uniformizar no acabamento ABNT.
+
+- [ ] `vallati2014eighth` — VALLATI, M.; CHRPA, L.; MCCLUSKEY, T. L. (Org.). The Eighth International Planning Competition: Description of Participant Planners of the Deterministic Track. Huddersfield, jun. 2014.
+  - Uso previsto: *hardware* e contagens da IPC 2014 (prefácio); fonte das descrições para a taxonomia 4D e a regra dos portfólios (Fase 4B).
+- [ ] `cenamor2014ibacop` — CENAMOR, I.; DE LA ROSA, T.; FERNÁNDEZ, F. IBaCoP and IBaCoP2 Planner. In: VALLATI, M.; CHRPA, L.; MCCLUSKEY, T. L. (Org.). The Eighth International Planning Competition: Description of Participant Planners of the Deterministic Track. Huddersfield, 2014. p. 35–38.
+  - Uso previsto: vencedor da *satisficing* de 2014; portfólio com seleção por *features* do PDDL. A versão de periódico (`cenamor2016ibacop`) já está no `referencias.bib`.
+- [ ] `malitsky2014allpaca` — MALITSKY, Y.; WANG, D.; KARPAS, E. The AllPACA Planner: All Planners Automatic Choice Algorithm. In: VALLATI, M.; CHRPA, L.; MCCLUSKEY, T. L. (Org.). The Eighth International Planning Competition: Description of Participant Planners of the Deterministic Track. Huddersfield, 2014. p. 71–73.
+  - Uso previsto: portfólio da trilha ótima com seleção por *features* da tarefa, treinado nos planejadores da IPC 2011 (Q5).
+
 ## Obra revisada
 
 - [x] `haddad2010relacao` — HADDAD, M. Relação entre características de domínios e técnicas de planejamento. Dissertação (Mestrado em Engenharia Elétrica) — Centro Universitário da FEI, São Bernardo do Campo, 2010.

@@ -18,6 +18,7 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 - **IPC 2023:** `index.md` do repositório `ipc2023-classical/ipc2023-classical.github.io` (tabelas por domínio). Limites de tempo e memória transcritos do mesmo arquivo (seção *Tracks*).
 - **IPC 2023, suporte a PDDL:** receitas `Apptainer.*` da branch `ipc2023-classical` dos 24 repositórios `ipc2023-classical/plannerN`, lidas em 27/09/2026. É o que os autores declararam, sem verificação independente.
 - **IPC 2011:** *dump* `ipc.json` do WebPlan (`bitbucket.org/lohre/webplan_ipc_data`, repositório Mercurial apagado em 2020), baixado do Software Heritage. Proveniência em `brutos/2011/webplan/PROVENIENCIA.txt`. Sem tempo de execução; ausência de registro = não resolveu. Validação no próprio script (ordem oficial dos *slides* e `coles2012survey`). Licença não declarada `[A CONFIRMAR]`.
+- **IPC 2014, PDDL:** `benchmarksV1.1.zip` fornecido pelo autor em 27/09/2026, idêntico à cópia arquivada do site oficial (SHA-256 `477c2b7c…172635`). Guardado em `brutos/2014/` (fora do Git). Só PDDL, sem resultados.
 - **IBM/IPC-graph-data** (`ferber2019ipc`, ainda não citável): `problems/problem-names-{train,valid,test}.txt`, licença Apache-2.0.
 
 ## Como reproduzir
