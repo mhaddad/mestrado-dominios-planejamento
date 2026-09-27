@@ -82,7 +82,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 - **Nível 4 só por domínio e só cobertura:** a seleção por instância, onde a literatura mostra ganhos, não foi testada.
 - **Versões dos binários:** parte das notas do Nível 3 mede limitações das versões de 2010 (ex.: o Blackbox declara insolúveis todos os problemas do Logistics e do Depots) `[HIPÓTESE]`.
 - **Satellite** (G25) e **R no Pathways** (G26) ficam fora da comparação célula a célula com 2010.
-- **Ordem do PDDL não testada:** o controle de serialização previsto para o R-27 foi dispensado (27/09/2026, com o orientador). A hipótese da Fase 1 (a ordem da exportação do itSIMPLE confundiria o efeito do domínio) não se aplica: os planejadores de 2010 rodaram os arquivos das IPCs (`docs/benchmarks-ipc-ate-2008.md`), e as métricas UML são contagens. Fica sem medida a robustez do *ranking* de 2010 a uma ordem arbitrária do PDDL [@vallati2021importance].
+- **Ordem do PDDL não testada:** o controle de serialização previsto para o R-27 foi dispensado (27/09/2026, com o orientador). A hipótese da Fase 1 (a ordem da exportação do itSIMPLE confundiria o efeito do domínio) não se aplica: os planejadores de 2010 rodaram os arquivos das IPCs (`docs/benchmarks-ipc-ate-2008.md`), com exceção do domínio do Satellite (G25, origem não documentada), e as métricas UML são contagens. Fica sem medida a robustez do *ranking* de 2010 a uma ordem arbitrária do PDDL [@vallati2021importance].
 
 ## 8. O que isto muda na dissertação
 
