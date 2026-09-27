@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.45 |
+| Versão deste documento | 0.46 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -612,6 +612,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Levantamento das fontes de resultados das IPCs 2011–2023 (sites oficiais, Internet Archive, GitHub, Zenodo); script de contagem; reconferência de metadados de `ferber2019ipc` e `ferber2022explainable` | Contagens de 2018, 2023 e IBM geradas por script e conferidas com os totais publicados (18 × 280 = 5.040; 2.439 × 17); números de 2011 e 2014 tirados dos *slides*, sem script; indisponibilidade dos arquivos de 2011 e 2014 conferida no DNS e no índice do Internet Archive |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Leitura do texto integral de `vallati2018what` (PDF do autor): nota reescrita; `eid` e páginas no `.bib`; levantamento da 4B atualizado | Trechos literais copiados do PDF; números conferidos contra as tabelas do artigo; três inconsistências internas do artigo registradas na nota; metadados de López et al. (2015) conferidos no Crossref |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Verificação do site da IPC 2023 e dos *slides*; script de suporte a PDDL declarado (65 receitas) | Somas das tabelas conferidas; contagem de receitas conferida com os *slides* (65) e com as tabelas (66 entradas, FSM em duas trilhas); extração dos rótulos repetida por dois caminhos (API do GitHub e script) com o mesmo resultado |
+| 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Recuperação dos resultados por instância da IPC 2011 a partir do *dump* do WebPlan arquivado no Software Heritage (pista do autor); script de exportação e validação | Ordem oficial reproduzida em duas trilhas e fato de `coles2012survey` conferido dentro do script (falha se não bater); *multi-core* não confere e foi excluída; erro anterior do levantamento ("*slides* com placar por domínio") encontrado ao renderizar a página e corrigido |
 
 ---
 
@@ -710,3 +711,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.43 | 27/09/2026 | **Fase 4B iniciada** em paralelo ao Nível 3 (decisão do autor); levantamento das fontes das IPCs 2011–2023 (`docs/resultados-ipc-2011-2023.md`, `data/ipc-2011-2023/`) |
 | 0.44 | 27/09/2026 | `vallati2018what` lido em texto integral: a IPC 2014 só tem totais por trilha publicados; protocolo de seleção de instâncias pelos competidores registrado como viés para a 4B |
 | 0.45 | 27/09/2026 | Site da IPC 2023 verificado: dados por instância existem e são oferecidos sob pedido; suporte a PDDL declarado por planejador em `data/ipc-2011-2023/suporte_pddl_2023.csv` |
+| 0.46 | 27/09/2026 | IPC 2011 por instância recuperada do WebPlan (Software Heritage), validada contra a ordem oficial; correção: os *slides* de 2011 não têm números |

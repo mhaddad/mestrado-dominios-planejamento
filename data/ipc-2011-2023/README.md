@@ -8,13 +8,16 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 |---|---|---|
 | `resumo_fontes.csv` | Uma linha por edição e trilha: granularidade, execuções, planejadores, linhas de base, domínios, tarefas por domínio, limites e execuções resolvidas | `scripts/levantar_fontes.py` |
 | `suporte_pddl_2023.csv` | Uma linha por receita Apptainer da IPC 2023 (65): repositório, entrada, nome, trilhas e os nove rótulos de suporte a PDDL (`sim`, `não`, `parcial`), como declarados pelos autores | `scripts/suporte_pddl_2023.py` |
-| `brutos/` | Arquivos baixados das fontes (fora do Git) | os dois scripts |
+| `ipc2011_problemas.csv` | Problemas das trilhas *satisficing* e ótima da IPC 2011: trilha, domínio, problema (hash do conteúdo no WebPlan) e número, quando o *dump* o registra. 560 linhas (2 × 14 × 20) | `scripts/webplan_2011.py` |
+| `ipc2011_resultados.csv` | Um plano válido por linha: trilha, domínio, problema, planejador (nome oficial e nome no WebPlan), custo, melhor custo da trilha e nota da IPC 2011 recalculada | `scripts/webplan_2011.py` |
+| `brutos/` | Arquivos baixados das fontes (fora do Git) | os scripts |
 
 ## Origem
 
 - **IPC 2018:** `https://ipc2018-classical.bitbucket.io/results/{optimal,satisficing,agile}-results.tar.bz2` (JSON do *downward lab*), baixados em 27/09/2026. Sem licença declarada.
 - **IPC 2023:** `index.md` do repositório `ipc2023-classical/ipc2023-classical.github.io` (tabelas por domínio). Limites de tempo e memória transcritos do mesmo arquivo (seção *Tracks*).
 - **IPC 2023, suporte a PDDL:** receitas `Apptainer.*` da branch `ipc2023-classical` dos 24 repositórios `ipc2023-classical/plannerN`, lidas em 27/09/2026. É o que os autores declararam, sem verificação independente.
+- **IPC 2011:** *dump* `ipc.json` do WebPlan (`bitbucket.org/lohre/webplan_ipc_data`, repositório Mercurial apagado em 2020), baixado do Software Heritage. Proveniência em `brutos/2011/webplan/PROVENIENCIA.txt`. Sem tempo de execução; ausência de registro = não resolveu. Validação no próprio script (ordem oficial dos *slides* e `coles2012survey`). Licença não declarada `[A CONFIRMAR]`.
 - **IBM/IPC-graph-data** (`ferber2019ipc`, ainda não citável): `problems/problem-names-{train,valid,test}.txt`, licença Apache-2.0.
 
 ## Como reproduzir
@@ -22,6 +25,7 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 ```sh
 .venv/bin/python data/ipc-2011-2023/scripts/levantar_fontes.py
 .venv/bin/python data/ipc-2011-2023/scripts/suporte_pddl_2023.py
+.venv/bin/python data/ipc-2011-2023/scripts/webplan_2011.py
 ```
 
 Os scripts baixam os arquivos para `brutos/` só se ainda não estiverem lá.
