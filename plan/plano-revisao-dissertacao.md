@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.46 |
+| Versão deste documento | 0.47 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -712,3 +712,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.44 | 27/09/2026 | `vallati2018what` lido em texto integral: a IPC 2014 só tem totais por trilha publicados; protocolo de seleção de instâncias pelos competidores registrado como viés para a 4B |
 | 0.45 | 27/09/2026 | Site da IPC 2023 verificado: dados por instância existem e são oferecidos sob pedido; suporte a PDDL declarado por planejador em `data/ipc-2011-2023/suporte_pddl_2023.csv` |
 | 0.46 | 27/09/2026 | IPC 2011 por instância recuperada do WebPlan (Software Heritage), validada contra a ordem oficial; correção: os *slides* de 2011 não têm números |
+| 0.47 | 27/09/2026 | IPC 2014: *slides* e *booklet* dos participantes conferidos (sem resultados por domínio; *hardware* de 2014 registrado; *booklet* como fonte para a 4D e a regra dos portfólios) |
