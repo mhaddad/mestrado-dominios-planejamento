@@ -1,0 +1,98 @@
+{
+ "modelo_pedido": "openai/gpt-6-sol",
+ "modelo_respondeu": "openai/gpt-6-sol",
+ "provedor": "OpenAI",
+ "dominio": "gripper",
+ "instancia": "p01",
+ "data_utc": "2026-09-27T14:04:14+00:00",
+ "config": {
+  "reasoning": {
+   "effort": "medium"
+  },
+  "max_tokens": 16000,
+  "usage": {
+   "include": true
+  }
+ },
+ "prompt": "x1-planejador-v1.md",
+ "segundos": 8.3,
+ "uso": {
+  "prompt_tokens": 1292,
+  "completion_tokens": 858,
+  "total_tokens": 2150,
+  "cost": 0.0118085,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 1289,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0118085,
+   "upstream_inference_prompt_cost": 0.0032285,
+   "upstream_inference_completions_cost": 0.00858
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 181,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "resposta": "BEGIN PLAN\n(nemok palec pexaw robej)\n(nemok jufow pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok palec hoqaf robej)\n(nokok jufow hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok cisuc pexaw robej)\n(nemok jocid pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok cisuc hoqaf robej)\n(nokok jocid hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok haleb pexaw robej)\n(nemok mucol pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok haleb hoqaf robej)\n(nokok mucol hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok duhuv pexaw robej)\n(nemok xukoc pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok duhuv hoqaf robej)\n(nokok xukoc hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok wikuq pexaw robej)\n(nemok sakab pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok wikuq hoqaf robej)\n(nokok sakab hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok rowas pexaw robej)\n(nemok zeheh pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok rowas hoqaf robej)\n(nokok zeheh hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok weviq pexaw robej)\n(nemok lesab pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok weviq hoqaf robej)\n(nokok lesab hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok paguv pexaw robej)\n(nemok kogih pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok paguv hoqaf robej)\n(nokok kogih hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok tufeb pexaw robej)\n(nemok qatox pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok tufeb hoqaf robej)\n(nokok qatox hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok nupax pexaw robej)\n(nemok bikaq pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok nupax hoqaf robej)\n(nokok bikaq hoqaf cihul)\nEND PLAN",
+ "bruto": {
+  "id": "gen-1790517846-irbI0eEKVus0W9rMnX2a",
+  "object": "chat.completion",
+  "created": 1790517846,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "BEGIN PLAN\n(nemok palec pexaw robej)\n(nemok jufow pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok palec hoqaf robej)\n(nokok jufow hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok cisuc pexaw robej)\n(nemok jocid pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok cisuc hoqaf robej)\n(nokok jocid hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok haleb pexaw robej)\n(nemok mucol pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok haleb hoqaf robej)\n(nokok mucol hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok duhuv pexaw robej)\n(nemok xukoc pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok duhuv hoqaf robej)\n(nokok xukoc hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok wikuq pexaw robej)\n(nemok sakab pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok wikuq hoqaf robej)\n(nokok sakab hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok rowas pexaw robej)\n(nemok zeheh pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok rowas hoqaf robej)\n(nokok zeheh hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok weviq pexaw robej)\n(nemok lesab pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok weviq hoqaf robej)\n(nokok lesab hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok paguv pexaw robej)\n(nemok kogih pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok paguv hoqaf robej)\n(nokok kogih hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok tufeb pexaw robej)\n(nemok qatox pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok tufeb hoqaf robej)\n(nokok qatox hoqaf cihul)\n(cazuf hoqaf pexaw)\n(nemok nupax pexaw robej)\n(nemok bikaq pexaw cihul)\n(cazuf pexaw hoqaf)\n(nokok nupax hoqaf robej)\n(nokok bikaq hoqaf cihul)\nEND PLAN",
+     "refusal": null,
+     "reasoning": null,
+     "reasoning_details": [
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABquSJZ67lKpJSE2_m8AXWVz4R97E71d2Pm-wRfEptthdO65HUl9kzCyEAH3ogc-JVIWwNYoH-u2ZHOVGbULuhz5ZQ59948BeN3Vegjsl4On6yvkrQaDJF32bhs0NWAOEf4vlE6QcrRXtk0uWIdQyxY-yYGF4l26c3CC1mj1owh6TkOnfj-mSOfGDsSyNogH2RXEWzte6YjkCiMhewO1wTzARgO04CCDx2qjz0t5_1cZmeMRmrDvQE0lpVWYTu6EG-3i0GbFjYUNLuvzJ2mVDPllqo8uaUtMKJMkEzKauvCXEIyTMbtq1e6dsChPqvQM6dbDAtv7OmLUcdwBvt6hGBfpHARZS7XFJs7-7PkSWIkZ0BeWPwxNEDM78k09GweX7zTXqm4CebckdsvD5RSeb1SCsJatkCfyEid0lYadnO1eU9FJqEfHoK_i-Xx1TYsw3szns87YnBUYbwSPcfiF2LcyUFk7yuA888OD6L6QrNdRP3L4NB3smv6GiFUQZ3kfDxGRX-EuZb2p4M3aJmhzMaqHe_onG3mudaGlzPsd29V4Gy5q6FSc7UYMRQeEsCpwuJxojhy74ZE9Cw7RkHgEP_h3OQeT51tbZQuNsSWSgSg6B79gdw1qKPYTq5o-IhrCQkqQnbu6nnUjO4gEimG8UOca83OY2o5JPx4mXRnC3nsBIgFUTZvG-MTAyyEPbVKWsTSJtyD9RVpSf8eBwULOJI1WyBcLhIxJrQXqWpTvxCwfqNT7RbMb5rcj-9efJdK-mdJAMpWRtQmA8jL6rGWIqCabjuwxK59XCHTYDKWsA2SFYw0yi2zExshnwXmwYey_GxzZomVdoCnKj4LFSVnofqLJ1mUT4M-apU0h-7quTWMSmT7BT_eIPtHSBT0IW9W3wSq1n2nEnXQbr1-7BazMdSujlGrEWdsDlzuGcvjgDdx4aDZAnSjmYDGfjBH3HtiyPylvlItYA9JFdeTMgrlFSs0sJqPOpx2koKvROxVbZNN2q4OfXbhfV0guPL0AYz62y8wP_v1OIdUUR5YwZT1RSC5DAU-Cc2EcuoqfkrDWDQL5ylilGzMW_5wAKiA4VOs7pLhMs_fW-6UyC71fnGsnBgSvJEfmrhVtkAW2z_qd9fLBNsu5BXbEsUTrT77bm2EAIfYUaiL3q1FfS5CydQNzafUlGQbH2GgdqYXXef-uSKn6-H5Yk_UAmxXQz_7q7kxVsyo3YgQqTJfvOftQWQym9yoMPM4LDH4pVJ0T_659DKBb6kH92zb49MRL6f899KJNSKCq64oGdE4d290rjxqrvlHwXtBa2wZXV_Qp-_pl6YdNYkzG75OjZcKXcevYamXKYsKofm9NNkWM06q_lbS5SdraVf2l3j-bzU91T7v1jCHVCVGHLjQu5OdMz5bUKsnWZ6_hcBZrmJStbbjO_EKogiLE-cRckc6R2Vh1n3pMGYZpCr2z4-sAhYrVSUZEQylCOyxhwJzIS1qE7u3LqE_VTuhfCp7znXDWMHIyQu09tM5FsY9x4aQncHhp15E3_0cykhUUUcsIECCrOMFfJye32uogiz_O6jel135RU0WFlavjG1-RFuN2zDS12QCiLZCtKBGqP6PrQhJ1duSE_q1J40bsA9uVUX7bL_O7b8aKv2okYL41-6GxrV4x4hfes7hIiNeEELg7ET6UrCaQ0EmupMy1vT66zInbNWE_v31BrIhim_oJWyAcXrgJA5coqus8U2rrr03Yt7E_OLzHEcJiYzwTFjSSTxo8jOrwdt7bjNIy5gkNpOChvv8Wfdyk74AvBdAqAyJUMYfhoI4Durvsa_LEDfbkbWyadF6I6ADwXatSofY3g3yBgrm_5Gp9KUFZ1hFDBFEQhq8S63t-PX3g01JexPa0CuxFKIMxRhJlFegmAQjX2kurj9Y7L3GsqZT6gcaKLS-BxLxADHGFN8x9o8jzl89-Vyb7VTfDpJOnPL5MxrPUK4MXm0yqz-r5CdDzLcHRGymyuowwp7s1u2zNxfmI7UWwdOSYLmUfOstU3ORXTGRhopXlqDd91ogUfe2uZ2ltvM2ncBrgNVXGEElKQ8fv2jO1w==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+       "format": "openai-responses-v1",
+       "id": "rs_0f9855d8837917aa016ab92256e54887d1a6fe4fa3dcbec6d7",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1292,
+   "completion_tokens": 858,
+   "total_tokens": 2150,
+   "cost": 0.0118085,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 1289,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0118085,
+    "upstream_inference_prompt_cost": 0.0032285,
+    "upstream_inference_completions_cost": 0.00858
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 181,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}
