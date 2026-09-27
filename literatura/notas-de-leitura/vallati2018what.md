@@ -46,7 +46,7 @@ perguntas: [Q1, Q5]
 
 - A Tabela 8 atribui ao IBaCoP2 placar individual de 153,3 na *satisficing*; a Tabela 3 dá 166,2. O valor de 153,3 é o do ArvandHerd na *multi-core* (Tabela 5). `[HIPÓTESE]` erro de transcrição na Tabela 8.
 - O texto da p. 15 diz que o primeiro grupo de cobertura resolve "entre 192 e 168" instâncias (70,7–60,0%); a Tabela 3 dá 198 para o IBaCoP2, e 198/280 = 70,7%.
-- As submissões citadas na seção 2.1.1 (21 na *satisficing*, 16 na *agile*) diferem das linhas das Tabelas 3 e 4 (20 e 15). O artigo não explica a diferença.
+- As submissões citadas na seção 2.1.1 (21 na *satisficing*, 16 na *agile*) diferem das linhas das Tabelas 3 e 4 (20 e 15). O artigo não explica a diferença. **Resolvido em parte pelos *slides* oficiais** (p. 10, conferidos em 27/09/2026): na *satisficing*, "21 submitted, 1 withdrawn"; na *agile*, "15 submitted". O "16" do texto do artigo é provavelmente erro.
 
 ## Trechos literais
 
