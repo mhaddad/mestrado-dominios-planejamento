@@ -26,6 +26,10 @@ Saídas (experimentos/analise/q5-ipc/):
                      fora da amostra. Referências: AUC da taxa da família por domínio de treino
                      (= 0,5, sem informação) e AUC de um modelo só com o tamanho da tarefa
                      (variáveis, operadores), para separar "estrutura" de "tamanho".
+                     Teste: permutação do rótulo entre as instâncias (hipótese nula: as features
+                     não têm relação com o resultado), p unilateral da AUC da logística; 199
+                     permutações e, se p < 0,05, 1.999 (semente 2010). Correção de Holm entre os
+                     modelos de cada recorte (mesma função de correcao_multipla.py).
   importancias.csv   coeficientes da logística ajustada em todos os domínios
 
 Recortes: "todos" e "sem-portfolios" (D4 diferente de Portfólio).
@@ -55,6 +59,7 @@ CONTAGENS = {"variaveis", "dominio_max", "operadores", "metas", "axiomas", "cg_a
 TAMANHO = ["variaveis", "operadores"]
 FORMULACOES_2018 = {"caldera", "caldera-split", "organic-synthesis", "organic-synthesis-split"}
 MIN_POSITIVOS = 10  # família precisa resolver e falhar em pelo menos isto para ter modelo
+PERMUTACOES = (199, 1999)
 
 
 def ler(nome):
@@ -129,12 +134,37 @@ def auc_lodo(X, y, grupos, modelo):
     return roc_auc_score(y, p) if len(np.unique(y)) == 2 else float("nan")
 
 
+def p_permutacao(X, y, grupos, observado, rng):
+    maiores, n = 0, 0
+    for total in PERMUTACOES:
+        while n < total:
+            maiores += auc_lodo(X, rng.permutation(y), grupos, "logistica") >= observado
+            n += 1
+        p = (1 + maiores) / (1 + n)
+        if p >= 0.05:
+            break
+    return p, n
+
+
+def holm(pvals):
+    """p-valores ajustados por Holm (step-down), na ordem de entrada."""
+    m = len(pvals)
+    ordem = sorted(range(m), key=lambda i: pvals[i])
+    ajust = [0.0] * m
+    corrente = 0.0
+    for k, i in enumerate(ordem):
+        corrente = max(corrente, min(1.0, (m - k) * pvals[i]))
+        ajust[i] = corrente
+    return ajust
+
+
 def main():
     feats = carregar_features()
     tec = carregar_tecnicas()
     res, plan = resolvidos()
     SAIDA.mkdir(parents=True, exist_ok=True)
     mapa, modelos, imps = [], [], []
+    rng = np.random.default_rng(2010)
     for (ed, tr), instancias in sorted(res.items()):
         trilha_feat = "seq-sat" if tr == "seq-agl" else tr
         for recorte in ("todos", "sem-portfolios"):
@@ -173,13 +203,15 @@ def main():
                          "dominios": len(np.unique(grupos)), "taxa": round(y.mean(), 3) if len(y) else ""}
                 if y.sum() < MIN_POSITIVOS or (len(y) - y.sum()) < MIN_POSITIVOS:
                     linha.update(auc_base="", auc_tamanho="", auc_logistica="", auc_arvore="",
-                                 obs="sem variação suficiente")
+                                 p_permutacao="", permutacoes="", p_holm="", obs="sem variação suficiente")
                 else:
                     linha.update(
                         auc_base=round(auc_lodo(X, y, grupos, "base"), 3),
                         auc_tamanho=round(auc_lodo(X[:, idx_tam], y, grupos, "logistica"), 3),
                         auc_logistica=round(auc_lodo(X, y, grupos, "logistica"), 3),
-                        auc_arvore=round(auc_lodo(X, y, grupos, "arvore"), 3), obs="")
+                        auc_arvore=round(auc_lodo(X, y, grupos, "arvore"), 3))
+                    pp, n = p_permutacao(X, y, grupos, auc_lodo(X, y, grupos, "logistica"), rng)
+                    linha.update(p_permutacao=round(pp, 4), permutacoes=n, p_holm="", obs="")
                     mu, sd = X.mean(0), X.std(0)
                     sd[sd == 0] = 1
                     m = LogisticRegression(C=1.0, max_iter=2000).fit((X - mu) / sd, y)
@@ -187,6 +219,10 @@ def main():
                         imps.append({"edicao": ed, "trilha": tr, "recorte": recorte, "dimensao": dim,
                                      "familia": v, "feature": f, "coeficiente": round(c, 3)})
                 modelos.append(linha)
+    for recorte in ("todos", "sem-portfolios"):
+        testados = [l for l in modelos if l["recorte"] == recorte and l["p_permutacao"] != ""]
+        for l, a in zip(testados, holm([l["p_permutacao"] for l in testados])):
+            l["p_holm"] = round(a, 4)
     for nome, linhas in (("mapa_familias.csv", mapa), ("modelos.csv", modelos), ("importancias.csv", imps)):
         with (SAIDA / nome).open("w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(linhas[0]), lineterminator="\n")
@@ -198,7 +234,7 @@ def main():
         if l["recorte"] == "todos" and l["auc_logistica"] != "":
             print(f"  {l['edicao']} {l['trilha']} {l['dimensao']} {l['familia'][:40]:40s} "
                   f"n={l['instancias']:4d} taxa={l['taxa']:.2f} tam={l['auc_tamanho']:.2f} "
-                  f"log={l['auc_logistica']:.2f} arv={l['auc_arvore']:.2f}")
+                  f"log={l['auc_logistica']:.2f} arv={l['auc_arvore']:.2f} p={l['p_permutacao']} holm={l['p_holm']}")
 
 
 if __name__ == "__main__":
