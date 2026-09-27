@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.50 |
+| Versão deste documento | 0.51 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -245,16 +245,16 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Atividades**
 
-- [ ] Montar ambiente de execução em contêineres — 🟡 máquina OrbStack Ubuntu 22.04 amd64 provisionada por script (`experimentos/containers/orbstack/`); os 10 planejadores de 2010 rodam por QEMU i386 (EXP-01)
+- [x] Montar ambiente de execução em contêineres — OrbStack (EXP-01, emulado, lento demais) e depois VM no GCP, x86_64 nativo (`experimentos/containers/gcp/gcp.sh`, EXP-05); nenhum recurso no GCP após 27/09/2026
 - [x] Baixar e organizar *benchmarks* — IPC 1998–2014 (`potassco`, `cf19edf`) e Autoscale do Planner Museum (`723a31c0`), fora do git
-- [ ] Compilar e testar planejadores — 🟡 os 10 de 2010 testados (EXP-01, `experimentos/execucoes/2026-09-24-teste-orbstack.md`); planejadores atuais pendentes
+- [x] Compilar e testar planejadores — os 10 de 2010 testados (EXP-01) e rodados (EXP-05); planejadores atuais dispensados: a ampliação usa dados publicados das IPCs (R-24, decisão de 26/09/2026)
 - [x] Implementar extrator das métricas de 2010 a partir do PDDL — EXP-07 (`experimentos/extratores/metricas_2010_pddl.py`): 11 de 17 métricas têm correspondente no PDDL
 - [x] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0) — EXP-07: tipos e ações se reproduzem (postos 0,69–0,92); atributos, associações e atores não (0,31–0,51)
 - [x] Implementar ou reutilizar extrator de *features* modernas — EXP-11 (`experimentos/extratores/features_sas.py`, tradutor do Fast Downward 26.6): 17 *features* SAS+ nas 354 instâncias de 2010
-- [ ] Rodar experimentos
-- [ ] Reproduzir o método de 2010 sobre os dados novos (linha de base) — 🟡 sobre os dados de 2010 já feito (Nível 1, EXP-03): 220/221 classes, 100/100 notas, 535/539 células característica × técnica, *rankings* iguais salvo empates; achados G23 e G24
+- [x] Rodar experimentos — Nível 3 (EXP-05): 3.390 execuções; qualidade dos planos (EXP-20)
+- [x] Reproduzir o método de 2010 sobre os dados novos (linha de base) — sobre os dados de 2010 (Nível 1, EXP-03: 220/221 classes, 100/100 notas, 535/539 células, achados G23 e G24) e com as notas do Nível 3 (EXP-19)
 - [x] Treinar e avaliar modelos de seleção — EXP-12, por domínio e com dados publicados: nenhum seletor (método de 2010, kNN, *random forest*) supera o *single best*
-- [ ] Testar robustez das métricas UML a variações de modelagem (F3)
+- [x] Testar robustez das métricas UML a variações de modelagem (F3) — EXP-08 (classes com e sem auxiliares: nenhum ranking muda) e EXP-10 (discretização com mais domínios); Agregação não reproduzível (R-13)
 - [ ] Analisar importância das *features* e responder Q1 e Q2
 
 **Como a IA acelera:** Claude Code para infraestrutura, scripts de execução, extratores e análise. A IA escreve o código; o autor valida resultados e decisões de método. Estimativa de redução: de 8–12 para 4–6 semanas.
@@ -556,6 +556,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **R sem tratamento adicional**: fica com os resultados do Nível 3 como estão (Pipesworld 0/50, igual a 2010, causa não investigada além do teste das constantes) e sem o Pathways, registrado como limitação | Decisão do autor | 3 |
 | 27/09/2026 | **Sem validação dos planos com VAL** no Nível 3: os planos gerados são considerados corretos | Decisão do autor | 3 |
 | 27/09/2026 | **Método de 2010 com as notas do Nível 3 usa o ranking real de 2010 na validação** (os domínios de validação não são reexecutados) | Decisão do autor | 3 |
+| 27/09/2026 | **Conjunto de instâncias do Nível 3 (R-19):** os subconjuntos do acervo de 2010 (G14), os mesmos da execução própria de 2010, com o Gripper gerado (G15) | Já usado no EXP-05; formalizado com o autor | 3 |
+| 27/09/2026 | **Dispensados na Fase 3:** R-23 (mais planejadores da família do R), R-30 (discretização × regressão), R-31 (heurística aprendida) e planejadores atuais compilados (substituídos por dados publicados, R-24) | Baixa prioridade; foco na síntese de Q1 e Q2 | 3 |
 | 26/09/2026 | Codificação dos 10 planejadores na taxonomia em 4 dimensões (`auditoria/taxonomia/planejadores_4d.csv`), com as decisões C1–C5, aprovada sem alteração | Revisão do autor (EXP-06) | 3 |
 | 26/09/2026 | "Número total de Agregação" registrada como métrica **não reproduzível**: em 2010 foi contada de forma visual e manual nos diagramas UML.P, sem regra escrita; a AF-331 leva essa ressalva | Resposta do autor; EXP-08 mostrou que nenhum critério contado nos XML reproduz a Tabela 9 | 3, 6 |
 | 26/09/2026 | Medida principal de validação (G19): **perda em relação ao *virtual best***; correlação de postos como secundária; acerto por posição só para comparar com 2010; todas reportadas ao lado da linha de base | Recomendação do Coordenador aceita pelo autor: mede a indicação do melhor planejador, não depende de desempate e é a medida do Nível 4 | 3 |
@@ -604,6 +606,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 25/09/2026 | 3 | Claude Code (claude-opus-5-5) | Operação da rodada no GCP (`gcp.sh`), conferência dos casos sem plano e achado G25 | Cada "sem plano" conferido no log bruto e comparado com os logs de 2010; variante testada localmente (gera as 20 execuções esperadas) |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-05: fim da rodada, conferência das chamadas de 2010, refação do TPP e resumo agora × 2010 | Cada divergência conferida nos logs brutos e nos scripts de 2010; hipótese das constantes do Pipesworld testada e descartada; resumo por script |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-19: método de 2010 com as notas do Nível 3 | Regra da nota conferida contra as 100 notas de 2010 (99 iguais); reuso do método do Nível 2 sem alteração; maior mudança (Blackbox × Logistics) conferida nos logs |
+| 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-20: qualidade dos planos do Nível 3 | Leitores de plano conferidos entre planejadores no mesmo problema; resumo do LPG-TD conferido contra 765 planos; casos extremos (R, SATPlan) conferidos nos logs |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) aprovadas pelo autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-08: Nível 2, R-11, R-12, R-13 e R-15 | Classes alteradas e efeito nas notas previstas conferidos por script; critérios de Agregação contados nos 13 XML e comparados com a Tabela 9 |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-09: R-14, perda em relação ao *virtual best* | Perdas conferidas contra as notas observadas de `validacao_ranking.csv` (máximo, empates, perda ao acaso) |
@@ -725,3 +728,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.48 | 27/09/2026 | Nível 3 concluído (EXP-05): 3.390 execuções no GCP, 50 de 63 pares iguais a 2010; G25 ampliado (domínio do Satellite de 2010) e G26 (chamadas de 2010 no TPP e no Pathways); VM apagada |
 | 0.49 | 27/09/2026 | Fase 4B: *booklet* de 2014 e resumos do IBaCoP e do AllPACA no `candidatas.bib`; resultados por execução da IPC 2018 exportados e validados contra o relatório oficial; ZIP de 2014 movido para `brutos/` |
 | 0.50 | 27/09/2026 | EXP-19: método de 2010 com as notas do Nível 3 (23 de 100 notas mudam, quase todas de competição; perda × VBS igual; Spearman sobe no Elevator); decisões: R sem tratamento, sem VAL, validação com o ranking de 2010 |
+| 0.51 | 27/09/2026 | Fase 3: checkboxes atualizados; R-19 decidido; R-22 feito (EXP-20, qualidade dos planos); R-23, R-30 e R-31 dispensados; falta a síntese de Q1 e Q2 |

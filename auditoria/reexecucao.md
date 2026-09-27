@@ -86,29 +86,29 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-06 | 1 | G1, G11–G13 | `data/2010/metricas_dominios.csv`, `planejadores_tecnicas.csv` | Tabelas 18–25 recalculadas por script | R-05 | alta · 🟢 feito (EXP-03): Tabelas 19–25 e validação reproduzidas; ver G24 |
 | R-07 | 1 | G19 | `data/2010/eficiencia_planejadores.csv` | rankings e taxa de acerto (definição original) por script | R-02 | média · 🟢 feito (EXP-03 e Nível 0): rankings reproduzidos (diferenças só dentro de empates) |
 | R-08 | 1 | G6 | `data/2010/conferencia/eficiencia_precisa_sql.csv` | regra de conversão eficiência → nota testada | — | média · 🟢 feito (EXP-03): 100 de 100; G6 resolvido |
-| R-09 | 1 | G10 | `data/2010/conferencia/caracteristicas_18_a_20.csv` | registro do que ficou em aberto | decisão do autor (seção 8) | baixa |
+| R-09 | 1 | G10 | `data/2010/conferencia/caracteristicas_18_a_20.csv` | registro do que ficou em aberto | decisão do autor (seção 8) | baixa · 🟢 registrado (27/09/2026): as características 18–20 do SQL seguem sem definição e não foram publicadas; o método reproduzido usa só as 17 publicadas (Nível 1), então não o afetam. Sem consulta ao orientador (M2 cancelado) |
 | R-10 | 2 | A6, F4; AF-213, AF-214, AF-285, AF-286, AF-326, AF-328 | `auditoria/taxonomia-tecnicas.md` §3 | Tabelas 18–25 e rankings com taxonomia de 4 dimensões | R-06 | alta · 🟢 feito (EXP-06): sem ganho claro sobre a linha de base; codificação C1–C5 aprovada pelo autor em 26/09/2026 |
 | R-11 | 2 | G1; AF-234, AF-281, AF-282, AF-331 | `data/2010/metricas_dominios.csv` | rótulo e interpretação corrigidos | R-06 | média · 🟢 feito (EXP-08): `data/2010/rotulos_corrigidos.csv`; leitura do exemplo da AF-234 invertida |
 | R-12 | 2 | G17 | `data/2010/correcoes_2010.csv` | discretização e Tabelas 19–25 com as correções aplicadas | R-05 | média · 🟢 feito (EXP-08): 6 classes mudam, nenhum ranking muda |
-| R-13 | 2 | F3; G2, G13; AF-225, AF-283 | `data/2010/conferencia/modelos_itsimple.csv` | critério de Agregação documentado; teste de robustez de classes | R-06 | média · 🟡 EXP-08: robustez de classes feita (nenhum ranking muda); critério da Agregação: contagem visual e manual nos diagramas UML.P, sem regra escrita (autor, 26/09/2026); métrica registrada como não reproduzível |
+| R-13 | 2 | F3; G2, G13; AF-225, AF-283 | `data/2010/conferencia/modelos_itsimple.csv` | critério de Agregação documentado; teste de robustez de classes | R-06 | média · 🟢 encerrado (27/09/2026). EXP-08: robustez de classes feita (nenhum ranking muda); critério da Agregação: contagem visual e manual nos diagramas UML.P, sem regra escrita (autor, 26/09/2026); métrica registrada como não reproduzível |
 | R-14 | 2 | G19; AF-299, AF-322, AF-334 | `data/2010/validacao_ranking.csv` | medidas de acerto com tratamento de empate | R-07; decisão do autor (seção 8) | alta · 🟢 feito (EXP-09): perda em relação ao *virtual best* como principal; no Storage, 2010 perde 3 e a linha de base 1 |
 | R-15 | 2 | G20; AF-006, AF-300, AF-312, AF-329, AF-330 | `auditoria/extracao/conferencia-rankings.csv` | comparação sistemática com a linha de base | R-03 | média · 🟢 feito (EXP-08): linha de base em todo resultado do `nivel2.py` |
 | R-16 | 2 | F7, G10; AF-250 | PDDL de domínios adicionais no acervo | discretização testada com mais pontos | R-05 | baixa · 🟢 feito (EXP-10): com 18 domínios a mais, 17% (extremos) e 45% (texto) das classes dos 13 domínios mudam |
-| R-17 | 3 | F5, F6; AF-264, AF-324 | planejadores e domínios de 2010 | tempo e cobertura por par, condição padronizada | R-06 | alta |
-| R-18 | 3 | G9, G16 | resultados oficiais das IPCs ou reexecução | 100 células sob condição única | R-17 | alta |
-| R-19 | 3 | G14, G15, G16 | `data/2010/benchmarks_ipc_instancias.csv` | conjunto de instâncias fixado | decisão do autor (seção 8) | alta |
-| R-20 | 3 | `condicoes-de-execucao-2010.md` | planos gerados nos itens acima | planos validados (VAL); causas de falha discriminadas | R-17 | média |
-| R-21 | 3 | `condicoes-de-execucao-2010.md` | ambiente de execução (Fase 3) | limite de memória definido e registrado | — | média |
-| R-22 | 3 | F5, A7; AF-303 | planos gerados no Zeno-travel e demais domínios | medida de qualidade do plano | R-17, R-20 | média |
-| R-23 | 3 | F2; AF-327 | planejadores forward-chaining/recursivos adicionais | ranking do Elevator com mais planejadores da família do R | R-17 | baixa |
+| R-17 | 3 | F5, F6; AF-264, AF-324 | planejadores e domínios de 2010 | tempo e cobertura por par, condição padronizada | R-06 | alta · 🟢 feito (EXP-05): 3.390 execuções no GCP, limite calibrado por planejador; 50 de 63 pares com contagem de 2010 iguais |
+| R-18 | 3 | G9, G16 | resultados oficiais das IPCs ou reexecução | 100 células sob condição única | R-17 | alta · 🟢 feito por reexecução (EXP-05, EXP-19): 99 de 100 células sob condição única (falta R × Pathways, G26); Satellite com a versão da IPC (G25) |
+| R-19 | 3 | G14, G15, G16 | `data/2010/benchmarks_ipc_instancias.csv` | conjunto de instâncias fixado | decisão do autor (seção 8) | alta · 🟢 decidido (27/09/2026): subconjuntos do acervo de 2010 (G14), os mesmos da execução própria de 2010; Gripper gerado (G15) |
+| R-20 | 3 | `condicoes-de-execucao-2010.md` | planos gerados nos itens acima | planos validados (VAL); causas de falha discriminadas | R-17 | média · ⚪ dispensado (decisão do autor, 27/09/2026): planos considerados corretos; causas de falha discriminadas nos logs (EXP-05) |
+| R-21 | 3 | `condicoes-de-execucao-2010.md` | ambiente de execução (Fase 3) | limite de memória definido e registrado | — | média · 🟢 registrado (EXP-05): sem limite imposto (32 GB na VM); binários de 32 bits param perto de 4 GB; memória máxima registrada por execução |
+| R-22 | 3 | F5, A7; AF-303 | planos gerados no Zeno-travel e demais domínios | medida de qualidade do plano | R-17, R-20 | média · 🟢 feito nos domínios de treino (EXP-20): escore de qualidade por tamanho do plano; Zeno-travel não medido (validação não reexecutada) |
+| R-23 | 3 | F2; AF-327 | planejadores forward-chaining/recursivos adicionais | ranking do Elevator com mais planejadores da família do R | R-17 | baixa · ⚪ dispensado (27/09/2026) |
 | R-24 | 4 | Q1 | *benchmarks* IPC 1998–2023 | ambiente e condições padronizadas montados | R-18, R-19, R-21 | alta · 🟢 substituído por dados publicados (decisão do autor, 26/09/2026): Planner Museum, Autoscale 42 × 30, 30 min e 4 GiB (EXP-12) |
 | R-25 | 4 | F3; Q2 (*features* a); G2, G11–G13 | PDDL de todos os domínios | extrator automático validado contra 2010 | R-13 | alta · 🟢 feito (EXP-07): 11 de 17 métricas extraíveis; 8 se reproduzem, 3 dependem da modelagem; o R-13 segue pendente |
 | R-26 | 4 | Q2 (*features* b) | PDDL/SAS+ | *features* modernas extraídas (grafo causal, DTG, *treewidth*) | — | média · 🟢 feito (EXP-11): 354 de 354 instâncias; nenhuma métrica UML se correlaciona com as *features* acima do acaso |
 | R-27 | 4 | Q2; A5; AF-310, AF-337 | R-25, R-26 | comparação UML × *features* de PDDL, com controle de serialização | R-25, R-26 | alta |
 | R-28 | 4 | Q1 | R-24, R-25, R-26 | modelos treinados; comparação com *single best*/*virtual best* | R-24, R-25, R-26 | alta · 🟢 por domínio (EXP-12): nenhum seletor supera o SBS (Levitron) |
 | R-29 | 4 | Q1, A1, A3; AF-329, AF-335 | R-28 | relatório por domínio e por instância, separados | R-28 | média |
-| R-30 | 4 | Q1, T6; AF-346 | R-25, R-26 | discretização comparada com regressão | R-25, R-26 | baixa |
-| R-31 | 4 | Q1, A2; AF-332, AF-333 | ambiente da Fase 3 | ao menos um planejador com heurística aprendida incluído, se viável | R-24 | baixa |
+| R-30 | 4 | Q1, T6; AF-346 | R-25, R-26 | discretização comparada com regressão | R-25, R-26 | baixa · ⚪ dispensado (27/09/2026) |
+| R-31 | 4 | Q1, A2; AF-332, AF-333 | ambiente da Fase 3 | ao menos um planejador com heurística aprendida incluído, se viável | R-24 | baixa · ⚪ dispensado (27/09/2026) |
 
 ## 8. Perguntas ao autor
 
