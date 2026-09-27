@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.65 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
+| Versão deste documento | 0.66 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B em andamento · 🟡 Fase 5 exploratória iniciada em 27/09/2026 |
 
 ---
 
@@ -22,8 +22,8 @@ Revisar a dissertação de 2010 para **evoluir o trabalho**: atualizar o estado 
 Desdobramentos possíveis, não obrigatórios:
 
 - **Compartilhar com o orientador original** (Flavio Tonidandel) e, se houver interesse mútuo, continuar a conversa ou produzir algo em conjunto.
-- **Aplicar no desenvolvimento de software dirigido por IA**: se a ideia de ajuste entre características do problema e técnica de solução se mostrar útil, experimentar no Ateliê de Software.
-- **Produto**: se o experimento no Ateliê gerar evidência, avaliar um produto para esse contexto. Este item é hipótese e só é considerado depois da Fase 5.
+- **Aplicar no desenvolvimento de software dirigido por IA**: investigar oportunidades e formular hipóteses sobre como o ajuste entre características do problema e técnica de solução pode ser útil nesse contexto.
+- **Produto**: possibilidade futura, fora do escopo desta revisão; só pode ser considerada após validação empírica independente.
 
 **Princípio de aceleração:** usar LLMs e outras ferramentas de IA em todas as fases para comprimir o trabalho operacional (busca, leitura, código, experimentos, rascunhos). As decisões, a verificação e a autoria continuam humanas.
 
@@ -54,7 +54,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas (executada em 4 dias) | 🟢 | 24/09/2026 | 27/09/2026 | Dataset, código, resultados; respostas a Q1 e Q2 em `experimentos/relatorio-fase3.md` |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟡 | 27/09/2026 | | Dataset, mapa característica × técnica, resposta a Q5 |
-| 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (começa depois da Fase 4B) | ⚪ | | | Relatório do piloto + decisão sobre produto |
+| 5 | Ponte para desenvolvimento de software dirigido por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` | 🟡 | 27/09/2026 | | Síntese exploratória, agenda de pesquisa e hipóteses |
 | 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Nova versão + material para o orientador |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
@@ -98,7 +98,7 @@ Desdobramentos possíveis, não obrigatórios:
 | Q1 | As conclusões de 2010 se sustentam com mais planejadores, mais domínios e método estatístico adequado? | Replicação | 3 |
 | Q2 | Métricas estruturais de modelagem, no estilo orientado a objetos, acrescentam poder preditivo às *features* modernas extraídas de PDDL? | Continuidade | 3 |
 | Q3 | Onde os LLMs entram no mapa: como técnica de planejamento, como tradutores de domínio ou como seletores? | Atualização | 4 |
-| Q4 | O princípio de ajuste entre características da tarefa e estratégia de solução ajuda a escolher configurações de agentes de IA no desenvolvimento de software? | Transferência | 5 |
+| Q4 | Que conexões, oportunidades e hipóteses de pesquisa ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software dirigido por IA? | Exploratória | 5 |
 | Q5 | Nos resultados publicados das IPCs posteriores a 2010, quais características estruturais do domínio, extraídas automaticamente do PDDL (sem UML.P), explicam o desempenho relativo das famílias de técnicas de planejamento? | Ampliação | 4B |
 
 **Observação sobre Q4.** As métricas usadas em 2010 para diagramas de classes e de estados (Genero & Piattini; In, Kim & Barry) vieram da **engenharia de software**. No desenvolvimento de software essas métricas estão em seu terreno de origem, o que torna a ponte da Fase 5 mais natural do que parece à primeira vista. `[HIPÓTESE]`
@@ -343,11 +343,11 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 ### Fase 5 — Ponte para desenvolvimento de software dirigido por IA
 
-**Objetivo:** responder Q4 com um piloto no Ateliê de Software e decidir se há base para um produto.
+**Objetivo:** responder Q4 por investigação exploratória: explicitar conexões entre o que foi estudado sobre características de domínios e técnicas de planejamento e o desenvolvimento de software dirigido por IA; identificar oportunidades e formular hipóteses testáveis. Não há piloto, coleta de dados no Ateliê nem decisão de produto nesta fase.
 
-**Início:** depois da conclusão da Fase 4B, inclusive a conversa com o Ateliê e o desenho do piloto (decisão de 25/09/2026).
+**Início:** em paralelo à conclusão da Fase 4B (decisão do autor, 27/09/2026). A síntese da 4B entra como evidência complementar antes do fechamento da Fase 5.
 
-**Entrada:** a síntese para a Ponte da Fase 4B orienta a escolha das características da tarefa, das configurações de agente e das hipóteses do piloto.
+**Entrada:** resultados das Fases 1–4, especialmente as sínteses E7 e E8, a taxonomia em quatro dimensões, os resultados negativos de seleção das Fases 3 e 4, e a síntese para a Ponte da Fase 4B quando estiver concluída.
 
 **Analogia de trabalho** `[HIPÓTESE]`
 
@@ -360,33 +360,24 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | Eficiência (problemas resolvidos) | Tarefa aceita, retrabalho, tempo, custo, defeitos posteriores |
 | Ranking de planejadores | Recomendação de configuração para uma nova tarefa |
 
-**Hipóteses do piloto**
+**Hipóteses de pesquisa** `[HIPÓTESE]`
 
-- **H1:** nenhuma configuração de agente é a melhor para todos os tipos de tarefa.
-- **H2:** características observáveis da tarefa e do repositório ajudam a prever qual configuração tende a funcionar melhor.
-- **H3:** métricas estruturais do código, derivadas das mesmas famílias usadas em 2010, contribuem para essa previsão.
+- **H1:** nenhuma configuração de agente é a melhor para todos os tipos de tarefa de desenvolvimento.
+- **H2:** características observáveis da tarefa e do repositório podem ajudar a explicar ou prever qual configuração tende a funcionar melhor.
+- **H3:** métricas estruturais de código podem ser candidatas a *features*, mas sua utilidade preditiva precisa de teste empírico próprio; a transferência das métricas UML de 2010 não é evidência suficiente.
 
 **Atividades**
 
-- [ ] Conversar com a equipe do Ateliê sobre o piloto e obter adesão (coerente com a cultura de autogestão)
-- [ ] Definir as características da tarefa a registrar e como coletá-las (automaticamente quando possível)
-- [ ] Definir as configurações de agente a comparar
-- [ ] Definir as medidas de resultado
-- [ ] Rodar o piloto com 50–100 tarefas reais ao longo de algumas semanas
-- [ ] Analisar H1–H3
-- [ ] Levantar soluções existentes de roteamento e orquestração de agentes
-- [ ] Decidir: **adotar internamente / seguir experimentando / avaliar produto / arquivar**
+- [ ] Delimitar a analogia: correspondências úteis e limites entre domínio/tarefa, técnica/configuração e eficiência/resultado
+- [ ] Revisitar os resultados das Fases 1–4 para extrair evidências a favor, contra e neutras para H1–H3
+- [ ] Revisar as fontes já verificadas dos eixos E7 e E8 sobre roteamento, orquestração e avaliação de agentes de código
+- [ ] Mapear oportunidades de pesquisa e aplicação, distinguindo o que é sustentado por evidência do que depende de validação futura
+- [ ] Elaborar uma agenda de pesquisa com possíveis desenhos empíricos, sem iniciar piloto
+- [ ] Incorporar a síntese para a Ponte da Fase 4B antes de fechar a interpretação
 
-**Critérios para considerar um produto** (todos precisam ser atendidos)
+**Entregáveis:** síntese exploratória · mapa de conexões e limites · hipóteses testáveis · oportunidades e agenda de pesquisa.
 
-- [ ] H1 e H2 com evidência consistente no piloto
-- [ ] Ganho mensurável de tempo, custo ou qualidade em relação à configuração padrão
-- [ ] Diferencial claro em relação a soluções existentes
-- [ ] Interesse validado com pelo menos algumas equipes fora do Ateliê
-
-**Entregáveis:** protocolo do piloto · dados · relatório · decisão registrada
-
-**Critério de conclusão:** piloto analisado e decisão registrada na seção 10.
+**Critério de conclusão:** síntese revisada pelo autor, com toda inferência marcada como `[HIPÓTESE]` e sem alegação de validação empírica no desenvolvimento de software.
 
 **Notas:**
 
@@ -435,13 +426,13 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | # | Risco | Probabilidade | Impacto | Mitigação |
 |---|---|---|---|---|
-| R1 | Expansão de escopo (a Fase 5 pode virar um projeto próprio; o autor liberou ampliar a revisão para além de 2010) | Alta | Alto | Manter o piloto enxuto; decisões de produto só depois do piloto; **registrar cada expansão na seção 10 com motivo e fase afetada** |
+| R1 | Expansão de escopo (a Fase 5 pode virar um projeto próprio; o autor liberou ampliar a revisão para além de 2010) | Alta | Alto | Manter a Fase 5 como síntese exploratória; trabalho empírico ou produto exigem decisão posterior; **registrar cada expansão na seção 10 com motivo e fase afetada** |
 | R2 | Referências inventadas ou erradas por IA | Alta | Alto | Princípio 1; verificação obrigatória na seção 13 |
 | R3 | Volatilidade dos LLMs torna resultados obsoletos | Alta | Médio | Congelar versões e datar resultados |
 | R4 | Planejadores antigos não compilam | Média | Médio | Usar imagens das IPCs; registrar o que não foi possível reproduzir |
 | R5 | Custo computacional | Média | Médio | Subconjunto representativo de domínios; limites de tempo definidos |
-| R6 | Confusão entre analogia e evidência na Fase 5 | Média | Alto | Marcas `[FATO]`/`[HIPÓTESE]`; conclusões só a partir dos dados do piloto |
-| R7 | Piloto atrapalhar a rotina do Ateliê | Média | Médio | Coleta automática sempre que possível; adesão voluntária da equipe |
+| R6 | Confusão entre analogia e evidência na Fase 5 | Média | Alto | Marcas `[FATO]`/`[HIPÓTESE]`; não apresentar hipótese como resultado de aplicação |
+| R7 | Inferir causalidade ou eficácia no desenvolvimento de software sem dados próprios | Média | Alto | Limitar a fase a conexões, oportunidades e hipóteses; definir validação futura como trabalho posterior |
 
 ---
 
@@ -469,6 +460,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
 | 18 | Incluir os relatórios oficiais das IPCs no `candidatas.bib` | 2, 6 | Coordenador | 23/09/2026 | 🟢 incluídos e promovidos, com Bonet e Geffner (2001) e Weld (1994) |
 | 19 | Decidir o limite de tempo da reexecução dos planejadores de 2010 (Nível 3) | 3 | Matheus | 24/09/2026 | 🟢 opção 1, limite calibrado por planejador (EXP-02): de 38 min (SGPlan) a 137 min (R); LPG-TD com o fator comum (76 min) e várias sementes; `experimentos/execucoes/fatores-2010.csv` |
+| 20 | Delimitar e executar a síntese exploratória da Ponte, sem piloto no Ateliê | 5 | Matheus + IA | | 🟡 iniciada em 27/09/2026; aguarda a síntese da 4B para o fechamento |
 
 ---
 
@@ -548,6 +540,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 24/09/2026 | Referência do Nível 2 = método de 2010 recalculado sem os erros aritméticos de G18; com isso, o acerto do Elevator cai de 50% para 40% e o do Zeno-travel de 40% para 30% | EXP-04 | 3 |
 | 25/09/2026 | **Expansão de escopo (R1): nova Fase 4B**, panorama das IPCs posteriores a 2010 com os resultados publicados, características extraídas do PDDL sem UML.P e nova pergunta Q5. Fica depois da Fase 4 e antes da Fase 5; numerada com sufixo para não renumerar as fases seguintes | Decisão do autor: ter uma avaliação geral antes de desenhar a Ponte | 4B, 5 |
 | 25/09/2026 | **A Fase 5 começa depois da Fase 4B**, e não mais em paralelo à Fase 3; vale também para a conversa com o Ateliê e o desenho do piloto | Decisão do autor: considerar os achados da 4B no desenho da Ponte | 5 |
+| 27/09/2026 | **Fase 5 redefinida como investigação exploratória e iniciada em paralelo à 4B.** Não haverá piloto, coleta de dados no Ateliê nem decisão sobre produto; a fase produzirá conexões, oportunidades e hipóteses testáveis. A síntese da 4B permanece insumo obrigatório para fechar a interpretação | Decisão do autor: entender a aplicabilidade potencial da pesquisa antes de qualquer experimento no desenvolvimento de software | 5 |
 | 25/09/2026 | **Marco M2 cancelado.** Depois do M1, o próximo contato com o orientador é o M3: a dissertação reescrita inteira, enviada por e-mail, com retorno posterior | Decisão do autor | 6 |
 | 25/09/2026 | **Nível 3 migrado para o GCP**: VM `fase3-2010` (c2d-standard-8 Spot, 4 núcleos, us-central1-c), binários de 2010 em x86_64 nativo, limites recalibrados no próprio ambiente (`fatores-2010-gcp.csv`, 7 a 13 min) e resultados em `nivel3-2010-gcp.csv`; R por último na fila. As 259 execuções do OrbStack ficam como registro do ambiente emulado, sem misturar com as do GCP. Proteção de custo: orçamento de R$ 1.500 com avisos e desligamento automático da VM em 28/09/2026 | No OrbStack (QEMU i386) a rodada levaria ~17 dias; autor tem US$ 300 de crédito de avaliação e não quer ultrapassá-lo | 3 |
 | 25/09/2026 | **Blackbox no Satellite (G25):** a rodada principal mantém a chamada dos scripts finais (sem `-M`); ao fim, roda-se a variante `blackbox-m8192` (Blackbox no Satellite com `-M 8192`, como nos logs de 2010), com resultados em `nivel3-2010-gcp-blackbox-m8192.csv`, e os dois são registrados | Em 2010 só o Satellite usou `-M 8192`; sem ela, o Blackbox falha nos problemas 11 a 20. Decisão do autor | 3 |
@@ -774,3 +767,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.63 | 27/09/2026 | EXP-23: X1 com nomes ofuscados (16 de 25 válidos contra 23; perdas sobretudo por *tokens*); teto da Fase 4 ultrapassado em US$ 0,08; relatório da Fase 4 atualizado |
 | 0.64 | 27/09/2026 | EXP-23 completo (32 pares): 20 de 32 planos válidos com nomes ofuscados, contra 28; limite da chave em US$ 13 (autor); uso final US$ 12,49 |
 | 0.65 | 27/09/2026 | Fase 4B: EXP-21 (Q5), primeira rodada provisória; *features* de 2011 e 2014 refeitas nas fontes novas (todas traduzidas); ligação de 2011 com 307 de 560 conferidos |
+| 0.66 | 27/09/2026 | Fase 5 redefinida e iniciada: investigação exploratória, sem piloto no Ateliê nem decisão de produto; Q4, atividades, riscos e entregáveis ajustados para conexões, oportunidades e hipóteses testáveis |
