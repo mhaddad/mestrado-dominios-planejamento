@@ -46,6 +46,11 @@ CHAVE = {"Blackbox": "blackbox", "IPP": "ipp", "FF": "ff", "LPG": "lpg", "YAHSP"
          "SATPlan": "satplan", "MaxPlan": "maxplan", "Fast Downward": "fastdownward", "R": "r"}
 
 
+# Planejadores cujos scripts de 2010 no TPP usam tpp/Strips/ (o FF usava o binário ff2, que não
+# está no acervo; aqui roda o ff). Os demais usaram a raiz ou não têm script de TPP em 2010.
+STRIPS_TPP = {"Blackbox", "IPP", "LPG", "YAHSP", "FF"}
+
+
 def comando(pl, dom, prob, base=None):
     """(diretório, comando) com as chamadas dos scripts finais de 2010 (ver teste_2010.sh).
     `base` troca a cópia de trabalho dos planejadores (uma por processo paralelo)."""
@@ -56,6 +61,10 @@ def comando(pl, dom, prob, base=None):
         # Pathways não tem domain.pddl: cada problema tem o seu domínio em Strips/, e os
         # scripts de 2010 usam Strips/domain_pNN.pddl com Strips/pNN.pddl (os arquivos da
         # raiz são outra versão). O R espera domain.pddl no diretório: fica para a decisão do R.
+        d, dominio = d / "Strips", f"domain_{prob}"
+    if dom == "tpp" and pl in STRIPS_TPP:
+        # TPP: a raiz tem a versão Propositional da IPC 5 (tipos em hierarquia, que o Blackbox
+        # não lê); em 2010 estes planejadores usaram as versões instanciadas de Strips/.
         d, dominio = d / "Strips", f"domain_{prob}"
     D, P = str(d / dominio), str(d / prob)
     return {

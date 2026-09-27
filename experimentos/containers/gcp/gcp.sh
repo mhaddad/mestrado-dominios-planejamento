@@ -38,7 +38,8 @@ case "${1:-}" in
   enviar)
     # Só o que os scripts usam: código, dados de 2010 e a pasta comp do acervo (não se altera o acervo)
     pacote="$(mktemp -d)/repo.tgz"
-    tar -C "$RAIZ" -czf "$pacote" experimentos data/2010 \
+    tar -C "$RAIZ" -czf "$pacote" --exclude experimentos/execucoes/brutos \
+      --exclude experimentos/benchmarks --exclude experimentos/ferramentas experimentos data/2010 \
       acervo-2010/planejadores_analise_resultados/comp
     gcloud compute scp "$pacote" "$NOME:~/repo.tgz" --zone "$ZONA" --project "$PROJETO"
     ssh_vm "mkdir -p $REMOTO && tar -C $REMOTO -xzf ~/repo.tgz && cd $REMOTO && \
