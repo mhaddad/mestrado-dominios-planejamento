@@ -122,6 +122,17 @@ Isso significa que qualquer célula das Tabelas 18–25 que cruze uma caracterí
 - **Busca simbólica (Gamer, SymBA-2)**: Dimensão 1 — valor novo, não previsto nos 10 planejadores de 2010 (busca simbólica bidirecional); Dimensão 3 — representação simbólica (BDD) em vez de estados explícitos [@torralba2017efficient; @bocchese2018performance].
 - **Busca por largura/novidade (IW, BFWS)**: Dimensão 1 — valor novo, ausente da tabela da seção 2 acima porque nenhum dos 10 planejadores de 2010 o usa; precisaria ser acrescentado como valor adicional da Dimensão 1 para cobrir o estado da arte pós-2012 [@lipovetzky2012width; @lipovetzky2017bestfirst].
 
+### 6.1 Extensão aos LLMs (revisão de 27/09/2026)
+
+**Extensão da revisão**, aceita pelo autor em 27/09/2026, a partir dos experimentos da Fase 4 (`llm/relatorio-fase4.md`, EXP-14 a EXP-18). Não faz parte da taxonomia validada pelo orientador em 24/09/2026.
+
+| Papel do LLM | D1 Algoritmo e busca | D2 Heurística | D3 Representação | D4 Arquitetura |
+|---|---|---|---|---|
+| Planejador | **Valor novo:** geração do plano pelo modelo de linguagem, sem busca explícita | Não aplicável | **Valor novo:** domínio e problema lidos como texto (PDDL) | Planejador único |
+| Planejador com verificador | Idem | Idem | Idem | **Valor novo:** gerar e testar com verificador formal externo (ex.: VAL) [@kambhampati2024llms] |
+| Seletor | Não aplicável | Não aplicável | Não aplicável | Seletor de portfólio sem treino, pela descrição do domínio |
+| Tradutor (linguagem natural → PDDL) | Fora do mapa: etapa de modelagem, anterior ao planejador | | | |
+
 ## 7. Pontos para decisão do autor
 
 1. **Partial-order/Total-order como atributo do plano, fora das quatro dimensões da técnica.** Nesta reclassificação, tratei os dois como propriedades do plano resultante, não como técnica de busca, e por isso não apareceram como valor de nenhuma das quatro dimensões na seção 3. Confirmar se esse tratamento é aceitável ou se o autor prefere reintroduzi-los como um quinto eixo ("propriedades do plano"), separado das quatro dimensões da técnica.

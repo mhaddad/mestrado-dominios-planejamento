@@ -1,6 +1,6 @@
 # Relatório da Fase 4 — camada LLM e resposta a Q3
 
-> **Rascunho de IA para revisão do autor.** Claude Code (claude-opus-5-5), 27/09/2026. Cada número vem de um registro de experimento (EXP-14 a EXP-18, em `experimentos/execucoes/`) e do script nele indicado. O texto da dissertação é do autor; este relatório é material de trabalho.
+> **Rascunho de IA; resposta a Q3 e propostas da seção 8 aceitas pelo autor em 27/09/2026.** Claude Code (claude-opus-5-5), 27/09/2026. Cada número vem de um registro de experimento (EXP-14 a EXP-18, em `experimentos/execucoes/`) e do script nele indicado. O texto da dissertação é do autor; este relatório é material de trabalho.
 
 ## 1. A pergunta
 
@@ -53,7 +53,7 @@ Isso contrasta com as avaliações de 2023, em que os LLMs raramente produziam p
 
 ## 5. Posição dos LLMs no mapa das técnicas
 
-`[HIPÓTESE]` Proposta, para decisão do autor, nas quatro dimensões da taxonomia (`auditoria/taxonomia-tecnicas.md`):
+Aceita pelo autor em 27/09/2026 como extensão da revisão (`auditoria/taxonomia-tecnicas.md`, seção 6.1), nas quatro dimensões da taxonomia (`auditoria/taxonomia-tecnicas.md`):
 
 | Papel | D1 Algoritmo e busca | D2 Heurística | D3 Representação | D4 Arquitetura |
 |---|---|---|---|---|
@@ -66,7 +66,7 @@ Os valores novos na D1 e na D3 são do mesmo tipo dos já previstos para a busca
 
 ## 6. Resposta a Q3
 
-`[HIPÓTESE, a confirmar pelo autor]` Os LLMs entram no mapa **como técnica de planejamento**, não como seletores:
+(Aceita pelo autor em 27/09/2026.) Os LLMs entram no mapa **como técnica de planejamento**, não como seletores:
 
 1. **Como planejador, com verificador formal:** é o papel em que se mostram fortes. Nas instâncias pequenas e médias testadas, produzem planos válidos na maioria dos casos, mais curtos que os do LAMA, e resolvem uma instância que o LAMA não resolveu em 5 minutos. O verificador recupera a maior parte das falhas. O limite é a escala, não testada.
 2. **Como tradutor:** úteis para produzir PDDL sintaticamente válido, mas o resultado precisa de verificação contra uma referência ou contra problemas conhecidos. Ficam fora do mapa das técnicas, como etapa de modelagem, o mesmo lugar que as ferramentas de modelagem UML ocupavam em 2010.
@@ -83,7 +83,7 @@ Os valores novos na D1 e na D3 são do mesmo tipo dos já previstos para a busca
 
 ## 8. O que isto muda na dissertação
 
-Proposta, para decisão do autor:
+Aceito pelo autor em 27/09/2026:
 
 1. Um capítulo ou seção nova sobre LLMs, com os três papéis separados e a conclusão de que o lugar deles no mapa é o de técnica de planejamento com verificador.
 2. A taxonomia em 4 dimensões ganha os valores novos da seção 5, marcados como extensão da revisão.

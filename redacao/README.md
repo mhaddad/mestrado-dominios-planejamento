@@ -66,8 +66,8 @@ O plano prevê oito capítulos. O mapa abaixo mostra de onde cada um poderia vir
 | 2. Fundamentos e estado da arte | Cap. 2 | **Refazer** a partir da Fase 1 (seleção de algoritmos, portfólios, *features*, IPCs 2008–2023, aprendizado, LLMs) |
 | 3. Revisitando 2010 — auditoria | Cap. 3, 4 e 5 (leitura crítica) | **Novo**: resultado da Fase 2 (mantém / reformula / descarta) |
 | 4. Método | Cap. 5 (Método) | Reescrever: extração automática de métricas, replicação com mais planejadores e domínios |
-| 5. Resultados experimentais | Cap. 5 (Relação, testes) | **Novo**: resultados da Fase 3 |
-| 6. LLMs no mapa das técnicas | — | **Novo**: Fase 4 |
+| 5. Resultados experimentais | Cap. 5 (Relação, testes) | **Novo**: resultados da Fase 3 (`experimentos/relatorio-fase3.md`). A discussão das métricas de modelagem (F3) inclui o resultado do X2: a descrição em linguagem natural não determina o modelo PDDL, como a do domínio não determinava o modelo UML (decisão do autor, 27/09/2026) |
+| 6. LLMs no mapa das técnicas | — | **Novo**: Fase 4 (`llm/relatorio-fase4.md`). Três papéis em seções separadas (planejador, tradutor, seletor), com a conclusão de que o lugar dos LLMs no mapa é o de técnica de planejamento com verificador formal (decisão do autor, 27/09/2026) |
 | 7. Do domínio de planejamento ao desenvolvimento de software dirigido por IA | — | **Novo**: Fase 5 |
 | 8. Conclusões e próximos passos | Cap. 6 | Reescrever |
 

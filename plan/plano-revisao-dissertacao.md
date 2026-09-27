@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.54 |
+| Versão deste documento | 0.55 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -285,7 +285,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Selecionar subconjunto de domínios — 41 domínios do Nível 4 no X3; p01 de 8 domínios no X1; p05 de 4 no X4; 6 do LLM+P no X2
 - [x] Definir modelos e congelar versões — Claude Sonnet 5, GPT-6 Sol, Gemini 3.1 Pro e DeepSeek V4 Pro, via OpenRouter; raciocínio *medium*, 16.000 *tokens*
 - [x] Rodar X1–X4 com registro de custos e *prompts* — EXP-14 a EXP-18; US$ 10,51 de US$ 12
-- [ ] Analisar e posicionar LLMs no mapa das técnicas — 🟡 `llm/relatorio-fase4.md` (rascunho de IA): LLMs entram como técnica de planejamento com verificador; como tradutores, fora do mapa (modelagem); como seletores, sem ganho. **Aguarda validação do autor**
+- [x] Analisar e posicionar LLMs no mapa das técnicas — `llm/relatorio-fase4.md`: técnica de planejamento com verificador; tradutor fora do mapa (modelagem); seletor sem ganho. Aceito pelo autor em 27/09/2026; valores novos na taxonomia (`auditoria/taxonomia-tecnicas.md`, seção 6.1)
 
 **Entregáveis:** resultados X1–X4 · resposta a Q3
 
@@ -559,6 +559,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **Conjunto de instâncias do Nível 3 (R-19):** os subconjuntos do acervo de 2010 (G14), os mesmos da execução própria de 2010, com o Gripper gerado (G15) | Já usado no EXP-05; formalizado com o autor | 3 |
 | 27/09/2026 | **Dispensados na Fase 3:** R-23 (mais planejadores da família do R), R-30 (discretização × regressão), R-31 (heurística aprendida) e planejadores atuais compilados (substituídos por dados publicados, R-24) | Baixa prioridade; foco na síntese de Q1 e Q2 | 3 |
 | 27/09/2026 | **Respostas a Q1 e Q2 validadas; Fase 3 concluída.** Q1: a pergunta de 2010 se mantém, mas a conclusão de que as métricas de modelagem permitem escolher o planejador não se sustenta. Q2: nem as métricas UML nem as *features* SAS+ acrescentam poder preditivo por domínio. O relatório por instância (R-29) passa para a Fase 4B | Decisão do autor sobre `experimentos/relatorio-fase3.md` | 3 |
+| 27/09/2026 | **Resposta a Q3 e propostas da Fase 4 aceitas:** (1) capítulo 6 sobre LLMs, com os três papéis separados e a conclusão de que o lugar deles no mapa é o de técnica de planejamento com verificador; (2) a taxonomia em 4 dimensões ganha os valores novos para LLMs, marcados como extensão da revisão; (3) a ligação entre X2 e F3 (a descrição não determina o modelo) entra na discussão das métricas de modelagem | Decisão do autor sobre `llm/relatorio-fase4.md` | 4, 6 |
+| 27/09/2026 | **Expansão de escopo:** valores novos na taxonomia em 4 dimensões para LLMs (D1, D3, D4), fora da versão validada pelo orientador em 24/09/2026 | Resultados da Fase 4 | 4 |
 | 26/09/2026 | Codificação dos 10 planejadores na taxonomia em 4 dimensões (`auditoria/taxonomia/planejadores_4d.csv`), com as decisões C1–C5, aprovada sem alteração | Revisão do autor (EXP-06) | 3 |
 | 26/09/2026 | "Número total de Agregação" registrada como métrica **não reproduzível**: em 2010 foi contada de forma visual e manual nos diagramas UML.P, sem regra escrita; a AF-331 leva essa ressalva | Resposta do autor; EXP-08 mostrou que nenhum critério contado nos XML reproduz a Tabela 9 | 3, 6 |
 | 26/09/2026 | Medida principal de validação (G19): **perda em relação ao *virtual best***; correlação de postos como secundária; acerto por posição só para comparar com 2010; todas reportadas ao lado da linha de base | Recomendação do Coordenador aceita pelo autor: mede a indicação do melhor planejador, não depende de desempate e é a medida do Nível 4 | 3 |
@@ -735,3 +737,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.52 | 27/09/2026 | Relatório da Fase 3 (`experimentos/relatorio-fase3.md`) com as respostas a Q1 e Q2, para validação do autor; R-27 feito por domínio |
 | 0.53 | 27/09/2026 | **Fase 3 concluída**: Q1 e Q2 validadas pelo autor; R-29 por instância passa para a Fase 4B; restaurada no painel a linha da Fase 6, substituída por engano pela ação 6 no commit `535131c` |
 | 0.54 | 27/09/2026 | Fase 4: checkboxes atualizados; relatório com a resposta a Q3 e a posição dos LLMs na taxonomia (`llm/relatorio-fase4.md`), para validação do autor |
+| 0.55 | 27/09/2026 | Fase 4 fechada: resposta a Q3 aceita; capítulo 6 definido; taxonomia estendida aos LLMs (seção 6.1); ligação X2–F3 no capítulo 5 |
