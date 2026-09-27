@@ -91,10 +91,10 @@ def tempo_agora(pl, cwd, saida, prob):
         t = re.search(r"Total time:\s*([\d.]+)", saida)
         return float(t.group(1)) if t and "Solution found" in saida else None
     if chave == "r":
-        for linha in saida.splitlines():
-            p = linha.split(",")
-            if len(p) > 3:
-                return float(p[1])
+        # Linha de resultado do R: problema,tempo,100,(ação),(ação),...  Outras linhas com
+        # vírgulas (ex.: exceção do Prolog que lista o plano parcial) não são resultado.
+        t = re.search(r"^[^,\s]+,([\d.]+),\d+,\(", saida, re.M)
+        return float(t.group(1)) if t else None
     return None
 
 
