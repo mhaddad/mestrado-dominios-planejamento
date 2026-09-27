@@ -14,7 +14,8 @@ Uso:
 
 Com --ofuscado, domínio e instância vêm de experimentos/ferramentas/x1-ofuscado/ (gerados por ofuscar.py):
 mesmos arquivos, com os nomes trocados por rótulos sem significado. --teto substitui a trava de custo do X3
-só nesta execução (nunca acima do limite da chave, US$ 12).
+só nesta execução (nunca acima do limite da chave, US$ 13 desde 27/09/2026). --sequencial faz uma chamada
+de cada vez, para a trava valer antes de cada chamada (em paralelo, chamadas em curso passam dela; EXP-23).
 """
 import argparse
 import csv
@@ -148,7 +149,7 @@ def rodar(a):
             print(f"{modelo:36s} {d:22s} {r}", flush=True)
             if r == "teto atingido":
                 return
-    with ThreadPoolExecutor(len(X3.MODELOS)) as ex:
+    with ThreadPoolExecutor(1 if a.sequencial else len(X3.MODELOS)) as ex:
         list(ex.map(por_modelo, X3.MODELOS))
     print(f"uso da chave depois: US$ {X3.uso_da_chave(k):.4f}")
 
@@ -186,14 +187,15 @@ def main():
     ap.add_argument("--rodada", default="principal")
     ap.add_argument("--instancia", default="p01", help="instância do Autoscale (p01 no X1; p05 no X4)")
     ap.add_argument("--ofuscado", action="store_true", help="usa as instâncias ofuscadas (EXP-23)")
-    ap.add_argument("--teto", type=float, help="trava de custo desta execução, em US$ (máximo 12)")
+    ap.add_argument("--teto", type=float, help="trava de custo desta execução, em US$ (máximo 13)")
+    ap.add_argument("--sequencial", action="store_true", help="uma chamada de cada vez")
     a = ap.parse_args()
     global INSTANCIA, OFUSCADO
     INSTANCIA = a.instancia
     OFUSCADO = a.ofuscado
     if a.teto is not None:
-        if a.teto > 12:
-            raise SystemExit("--teto acima do limite da chave (US$ 12)")
+        if a.teto > 13:
+            raise SystemExit("--teto acima do limite da chave (US$ 13)")
         X3.TETO_USD = a.teto
     {"referencia": referencia, "rodar": rodar, "avaliar": avaliar}[a.acao](a)
 

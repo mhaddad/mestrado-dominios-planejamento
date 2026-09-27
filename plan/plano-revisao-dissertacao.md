@@ -585,6 +585,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **Capítulo 3 atualizado só na Fase 6**: os achados G22 a G26 entram no capítulo de método, com remissão no capítulo 3 | Decisão do autor | 6 |
 | 27/09/2026 | **`sette2008are` excluída** (não lida, não citada); **Ghostscript mantido** no Mac do autor | Decisões do autor | 1 |
 | 27/09/2026 | **Ocorrência: teto da Fase 4 ultrapassado em US$ 0,08** no EXP-23 (uso da chave em US$ 12,08). A chave fica acima do limite; nenhuma chamada nova sem decisão do autor. 7 pares do EXP-23 sem chamada | A trava confere o uso antes de cada chamada, e as chamadas em paralelo já em curso passaram dela; o OpenRouter não as bloqueou. Registro do Coordenador | 4 |
+| 27/09/2026 | **Limite da chave elevado para US$ 13** para completar os 7 pares do EXP-23, em sequência (uma chamada de cada vez), com trava de US$ 12,80 | Decisão do autor | 4 |
 
 ---
 
