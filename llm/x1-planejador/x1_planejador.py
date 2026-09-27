@@ -10,6 +10,11 @@ Uso:
   python llm/x1-planejador/x1_planejador.py rodar --rodada principal
   python llm/x1-planejador/x1_planejador.py avaliar --rodada principal
   python llm/x1-planejador/x1_planejador.py referencia --instancia p05   (instâncias maiores, X4)
+  python llm/x1-planejador/x1_planejador.py rodar --rodada ofuscado --ofuscado --teto 11.90   (EXP-23)
+
+Com --ofuscado, domínio e instância vêm de experimentos/ferramentas/x1-ofuscado/ (gerados por ofuscar.py):
+mesmos arquivos, com os nomes trocados por rótulos sem significado. --teto substitui a trava de custo do X3
+só nesta execução (nunca acima do limite da chave, US$ 12).
 """
 import argparse
 import csv
@@ -35,9 +40,13 @@ VAL = RAIZ / "experimentos/ferramentas/planner-museum/tools/VAL/build/mac/bin/Va
 FD = RAIZ / "experimentos/ferramentas/downward/fast-downward.py"
 DOMINIOS = ["blocksworld", "tpp", "floortile", "pipesworld-notankage", "gripper", "logistics", "miconic", "rovers"]
 INSTANCIA = "p01"
+OFUSCADO = False
+OFUSCADOS = RAIZ / "experimentos/ferramentas/x1-ofuscado"
 
 
 def arquivos(dominio):
+    if OFUSCADO:
+        return OFUSCADOS / dominio / "domain.pddl", OFUSCADOS / dominio / f"{INSTANCIA}.pddl"
     pasta = AUTOSCALE / dominio
     dom = pasta / "domain.pddl" if (pasta / "domain.pddl").exists() else pasta / f"domain-{INSTANCIA}.pddl"
     return dom, pasta / f"{INSTANCIA}.pddl"
@@ -86,6 +95,8 @@ def referencia(_a):
             arq.unlink()
     RESULTADOS.mkdir(parents=True, exist_ok=True)
     nome = "referencia-lama.csv" if INSTANCIA == "p01" else f"referencia-lama-{INSTANCIA}.csv"
+    if OFUSCADO:
+        nome = nome.replace(".csv", "-ofuscado.csv")
     with (RESULTADOS / nome).open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(linhas[0]), lineterminator="\n")
         w.writeheader()
@@ -174,9 +185,16 @@ def main():
     ap.add_argument("acao", choices=("referencia", "rodar", "avaliar"))
     ap.add_argument("--rodada", default="principal")
     ap.add_argument("--instancia", default="p01", help="instância do Autoscale (p01 no X1; p05 no X4)")
+    ap.add_argument("--ofuscado", action="store_true", help="usa as instâncias ofuscadas (EXP-23)")
+    ap.add_argument("--teto", type=float, help="trava de custo desta execução, em US$ (máximo 12)")
     a = ap.parse_args()
-    global INSTANCIA
+    global INSTANCIA, OFUSCADO
     INSTANCIA = a.instancia
+    OFUSCADO = a.ofuscado
+    if a.teto is not None:
+        if a.teto > 12:
+            raise SystemExit("--teto acima do limite da chave (US$ 12)")
+        X3.TETO_USD = a.teto
     {"referencia": referencia, "rodar": rodar, "avaliar": avaliar}[a.acao](a)
 
 
