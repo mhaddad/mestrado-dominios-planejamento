@@ -324,7 +324,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [ ] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar — metadados de `ferber2019ipc` e `ferber2022explainable` reconferidos em 27/09/2026; promoção aguarda o autor
 - [ ] Montar o dataset em `data/` com `README.md` de origem e método — em curso: 2011 (WebPlan) e 2018 por instância em `data/ipc-2011-2023/`, ambos validados contra o placar oficial (27/09/2026); falta o recorte (decisão do autor) e 2023 por domínio
 - [ ] Classificar os planejadores na taxonomia e decidir a regra dos portfólios
-- [ ] Extrair as características dos domínios
+- [ ] Extrair as características dos domínios — em curso: *features* SAS+ de 2011, 2014 e 2018 (1.817 de 1.856 tarefas; `data/ipc-2011-2023/features_sas_ipc.csv`, 27/09/2026); faltam 2023 e as propriedades teóricas (topologia de busca etc.)
 - [ ] Analisar e montar o mapa característica × técnica; responder Q5
 - [ ] Escrever a síntese para a Ponte: o que se transfere como hipótese para a Fase 5 e o que não se transfere
 

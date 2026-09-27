@@ -12,6 +12,7 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 | `ipc2011_resultados.csv` | Um plano válido por linha: trilha, domínio, problema, planejador (nome oficial e nome no WebPlan), custo, melhor custo da trilha e nota da IPC 2011 recalculada | `scripts/webplan_2011.py` |
 | `ipc2011_arquivos.csv` | Liga cada problema de 2011 no WebPlan ao arquivo `instance-N.pddl` do `pddl-instances` (`experimentos/benchmarks/ipc/`): trilha, domínio, problema, número, arquivo e tipo de ligação (`sha1` conferido; `texto` igual depois de normalizar; `numero` ainda não conferido, pelo nome original) | `scripts/webplan_2011_arquivos.py` |
 | `ipc2018_resultados.csv` | Uma execução por linha, IPC 2018, trilhas ótima, *satisficing* e *agile* (17.640): trilha, domínio, domínio original, `oficial` (domínio do placar oficial da trilha), problema, algoritmo, equipe, planejador, linha de base, cobertura, custo, tempo total (s), memória (KiB), erro, nota da trilha (cobertura na ótima, `sat_score`, `agl_score`) e expansões | `scripts/ipc2018.py` |
+| `features_sas_ipc.csv` | *Features* SAS+ por tarefa (1.856): edição, trilha, domínio, problema, `ajuste`, `status` e as 16 *features* de tamanho, grafo causal e DTG do extrator da Fase 3 (`experimentos/extratores/features_sas.py`). 2011: *seq-opt* e *seq-sat*; 2014: *seq-opt*, *seq-sat* e *seq-agl*; 2018: as 24 pastas `*-opt18-*`/`*-sat18-*` (a *agile* usou as tarefas da *satisficing*) | `scripts/features_ipc.py` |
 | `brutos/` | Arquivos baixados das fontes (fora do Git) | os scripts |
 
 ## Origem
@@ -30,6 +31,7 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 .venv/bin/python data/ipc-2011-2023/scripts/suporte_pddl_2023.py
 .venv/bin/python data/ipc-2011-2023/scripts/webplan_2011.py
 .venv/bin/python data/ipc-2011-2023/scripts/ipc2018.py
+uv run --no-project --with networkx python data/ipc-2011-2023/scripts/features_ipc.py --limite 300 --processos 6   # ~75 min
 .venv/bin/python data/ipc-2011-2023/scripts/webplan_2011_arquivos.py   # 120 consultas/h ao Software Heritage; rodar até não restar `numero`
 ```
 
@@ -42,3 +44,4 @@ Os scripts baixam os arquivos para `brutos/` só se ainda não estiverem lá.
 - `ipc2018_resultados.csv`: o placar oficial usa 10 domínios por trilha; as linhas com `oficial` = `não` são as formulações alternativas (`caldera`, `caldera-split`, `organic-synthesis`, `organic-synthesis-split`) e, na ótima, o flashfill. O script confere, para cada algoritmo, cobertura, nota e contagens de erro contra a tabela *Summary* do relatório final e falha se algo não bater.
 - `erro` = `whitelisted-error` (2.314 execuções) é uma categoria do relatório de 2018 cujo critério não está documentado nos arquivos baixados `[A CONFIRMAR]`. Não tratar como "não suporta" sem confirmar.
 - `ipc2011_arquivos.csv` (27/09/2026): 74 de 560 ligações conferidas por SHA-1, incluindo os 40 do visitall, e um ou mais problemas em 21 dos 26 outros pares trilha × domínio, sem nenhuma divergência do número original. No visitall, o número do WebPlan é o índice do `instance-N`, e não o número do nome original. Em elevators e openstacks (nas duas trilhas) e em floortile (ótima), o SHA-1 do WebPlan não casa com nenhum arquivo local; falta baixar esses textos para comparar. O *vault* do Software Heritage, que empacotaria a pasta inteira, falhou por falta de espaço em disco no servidor deles.
+- `features_sas_ipc.csv` (27/09/2026, 6 processos, limite de 300 s por tradução): 1.817 de 1.856 tarefas traduzidas. Todas as de 2011 e 2014; em 2018, 227/240 na ótima e 214/240 na *satisficing*. As 39 falhas são por tempo, no organic-synthesis normal (13 na ótima, 17 na *satisficing*), no flashfill (5) e no caldera normal (4); as formulações `split` traduziram todas.
