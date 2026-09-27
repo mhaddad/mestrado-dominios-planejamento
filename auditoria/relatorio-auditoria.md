@@ -91,7 +91,7 @@ Nenhuma é conclusão central. As três primeiras são números da revisão hist
 ## 7. O que ainda depende de verificação
 
 - **16 afirmações com confiança baixa**, nenhuma com ação "CONFERIR". Para todas há uma decisão registrada: retirar da versão revisada (detalhes periféricos, como Aristóteles ou Siau e Cao), trocar citação direta por paráfrase com fonte aprovada, ou apresentar como hipótese.
-- **G10** (segundo bloco de características do SQL) segue em aberto; a pergunta está no material do M1.
+- **G10** (segundo bloco de características do SQL) segue em aberto; a pergunta está no material do M1. *Atualização de 27/09/2026:* registrado como limitação, sem consulta ao orientador (R-09): as características 18–20 não foram publicadas e não afetam o método reproduzido.
 - **Leitura do autor.** As classificações foram revisadas pelo Coordenador por delegação do autor; a leitura humana continua recomendada antes da redação, a começar pelas 84 "reformula" e "descarta".
 
 ## 8. Limites desta auditoria

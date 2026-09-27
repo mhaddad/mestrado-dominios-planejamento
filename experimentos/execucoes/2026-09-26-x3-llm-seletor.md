@@ -55,6 +55,8 @@ Rodar de novo não reproduz as respostas, porque os modelos mudam. As respostas 
 - **Portfólios em quase todas as escolhas:** 148 das 163 respostas válidas apontam para um portfólio. As exceções são o Mercury (10 vezes, Sonnet), o LAPKT-BFWS (4 vezes, Gemini) e o ANS (1 vez, DeepSeek, no Visitall).
 - **Nos quatro domínios em que uma técnica antiga é a melhor** (System R no Blocks World e no TPP, SAT no Floortile, ANS no Pipesworld sem tanques), nenhum modelo escolhe o planejador vencedor nem a sua técnica.
 
+**Correção para comparações múltiplas (27/09/2026):** com a correção de Holm para os 4 modelos, os três piores continuam significativamente piores que o SBS na pontuação por grupo, a do protocolo (p ajustado de 0,002 a 0,022). Na pontuação exata (EXP-15), só o Gemini fica significativamente pior (0,016). `experimentos/analise/correcao_multipla.py`.
+
 ## Interpretação
 
 - **Nenhum LLM escolhe melhor que o *single best*.** O GPT-6 Sol empata na prática (146 contra 143, sem diferença significativa). Os outros três ficam significativamente piores. `[FATO]`

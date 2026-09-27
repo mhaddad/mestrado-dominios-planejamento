@@ -61,7 +61,7 @@ A tabela completa está em `experimentos/analise/uml-x-sas/resumo.csv`.
 - **Nenhuma métrica UML de 2010 se relaciona com as estruturas SAS+ acima do que o acaso daria.** A maior correlação de cada uma fica abaixo do percentil 95 do acaso (p entre 0,21 e 0,95). `[FATO]`
 - **Isso inclui as métricas do diagrama de estados.** Estados, ações de entrada e de saída, e transições pareciam candidatas a aproximar os DTGs, e não se relacionam com eles. `[FATO]`
 - **Leitura cautelosa:** com 13 domínios, o teste tem pouco poder. A ausência de correlação não prova que as métricas UML sejam independentes da estrutura das tarefas. `[HIPÓTESE]` O resultado é coerente com a crítica de Hoffmann (2011) às *features* sintáticas e com os EXP-07 e EXP-10: as métricas UML medem o modelo e a amostra, não a estrutura que a literatura liga à dificuldade.
-- **Para a Q2:** as métricas UML e as *features* SAS+ não são redundantes nesta amostra. O R-27 terá de medir o que cada conjunto acrescenta ao prever desempenho, com os dados do Nível 4.
+- **Para a Q2:** não há evidência, nesta amostra, de que as métricas UML e as *features* SAS+ meçam a mesma coisa (com 13 domínios, isso não prova que meçam coisas diferentes). O R-27 terá de medir o que cada conjunto acrescenta ao prever desempenho, com os dados do Nível 4.
 
 ## Problemas e desvios
 

@@ -1,6 +1,6 @@
 # Relatório da Fase 3 — replicação experimental e respostas a Q1 e Q2
 
-> **Rascunho de IA; respostas a Q1 e Q2 validadas pelo autor em 27/09/2026.** Claude Code (claude-opus-5-5), 27/09/2026. Cada número vem de um registro de experimento (EXP-nn, em `experimentos/execucoes/`) e do script nele indicado. O texto da dissertação é do autor; este relatório é material de trabalho.
+> **Rascunho de IA; respostas a Q1 e Q2 validadas pelo autor em 27/09/2026.** Redação de Q2 e dos testes estatísticos precisada no mesmo dia, depois da avaliação das Fases 1 a 4, sem mudar a substância das respostas (correção de Holm em `experimentos/analise/correcao-multipla/holm.csv`). Claude Code (claude-opus-5-5), 27/09/2026. Cada número vem de um registro de experimento (EXP-nn, em `experimentos/execucoes/`) e do script nele indicado. O texto da dissertação é do autor; este relatório é material de trabalho.
 
 ## 1. As perguntas
 
@@ -54,11 +54,11 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 - A Agregação foi contada visualmente, sem regra escrita, e não é reproduzível.
 - A característica que 2010 apontou como a de maior impacto tem o nome invertido (G1): é "Número Médio de Atores por Caso de Uso".
 
-**As métricas UML não se relacionam com a estrutura SAS+.** `[FATO]` (EXP-11) Nenhuma das métricas de 2010 se correlaciona com as 17 *features* SAS+ acima do acaso (p entre 0,21 e 0,95), em 13 domínios. Não são redundantes; também não há sinal de que meçam a estrutura que a literatura liga à dificuldade [@hoffmann2011analyzing].
+**As métricas UML não se relacionam com a estrutura SAS+.** `[FATO]` (EXP-11) Nenhuma das métricas de 2010 se correlaciona com as 17 *features* SAS+ acima do acaso (p entre 0,21 e 0,95), em 13 domínios. Com 13 domínios, isso não mostra que as duas famílias meçam coisas diferentes: mostra que não há evidência de que meçam a mesma coisa. Também não há sinal de que as métricas UML meçam a estrutura que a literatura liga à dificuldade [@hoffmann2011analyzing].
 
-**Como preditores, nenhum conjunto supera a escolha fixa.** `[FATO]` (EXP-12) Com *random forest*, por domínio: métricas do PDDL perdem 151 instâncias, *features* SAS+ perdem 189 (significativamente pior que o melhor planejador único, p = 0,011) e as duas juntas perdem 148, contra 143 do melhor planejador único.
+**Como preditores, nenhum conjunto supera a escolha fixa.** `[FATO]` (EXP-12) Com *random forest*, por domínio: métricas do PDDL perdem 151 instâncias, *features* SAS+ perdem 189 e as duas juntas perdem 148, contra 143 do melhor planejador único. Nenhuma diferença é significativa depois da correção de Holm para as 7 comparações do EXP-12 (a das *features* SAS+ tem p = 0,011 sem correção e 0,068 com ela).
 
-**Resposta a Q2** (validada pelo autor em 27/09/2026): nesta amostra, as métricas estruturais de 2010 não acrescentam poder preditivo às *features* SAS+, e estas não acrescentam às métricas de 2010; nenhum conjunto ajuda a escolher o planejador por domínio. Com planejadores recentes, vários deles portfólios, o melhor planejador único já resolve 87% do que o oráculo resolve, e o espaço para a seleção por domínio encolheu, em linha com [@cenamor2016ibacop]. A permanência de planejadores antigos como melhores em alguns domínios é o mesmo fenômeno descrito em [@lequen2026planner].
+**Resposta a Q2** (validada pelo autor em 27/09/2026): nesta amostra, as métricas de 2010 na forma em que se extraem do PDDL (11 das 17; entre elas, só as de tipos e de ações reproduzem as contagens UML, EXP-07) não acrescentam poder preditivo às *features* SAS+, e estas não acrescentam a elas; nenhum conjunto ajuda a escolher o planejador por domínio. Com planejadores recentes, vários deles portfólios, o melhor planejador único já resolve 87% do que o oráculo resolve, e o espaço para a seleção por domínio encolheu, em linha com [@cenamor2016ibacop]. A permanência de planejadores antigos como melhores em alguns domínios é o mesmo fenômeno descrito em [@lequen2026planner]. As métricas UML contadas em 2010, com atributos, associações, atores e agregação, só existem nos 13 domínios originais, amostra pequena demais para um teste preditivo; sobre elas, o que se tem é a ausência de relação com as *features* SAS+ (EXP-11) e a validação de 2010, sem ganho sobre a linha de base.
 
 ## 5. Achados novos sobre o material de 2010 (Fase 3)
 
@@ -79,6 +79,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 
 - **Amostra de validação de 2010:** 3 domínios, 1 discriminante. Nenhum resultado dos Níveis 1 a 3 tem poder estatístico para distinguir o método da linha de base; as diferenças estão dentro do acaso.
 - **Validação não reexecutada:** o ranking real de Storage, Zeno-travel e Elevator é o de 2010 (decisão do autor, 27/09/2026).
+- **Comparações múltiplas:** os testes contra o melhor planejador único não foram corrigidos nos registros originais. Com a correção de Holm, nenhum seletor do EXP-12 fica significativamente pior; o método por técnica (D1 e D2, EXP-13) continua significativamente pior (`experimentos/analise/correcao_multipla.py`).
 - **Nível 4 só por domínio e só cobertura:** a seleção por instância, onde a literatura mostra ganhos, não foi testada.
 - **Versões dos binários:** parte das notas do Nível 3 mede limitações das versões de 2010 (ex.: o Blackbox declara insolúveis todos os problemas do Logistics e do Depots) `[HIPÓTESE]`.
 - **Satellite** (G25) e **R no Pathways** (G26) ficam fora da comparação célula a célula com 2010.

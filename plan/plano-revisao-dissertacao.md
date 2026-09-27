@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.59 |
+| Versão deste documento | 0.60 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -453,11 +453,11 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 3 | Criar repositório | 0 | Matheus + IA | 21/09/2026 | 🟢 concluída (Obsidian descartado) |
 | 4 | Definir protocolo de busca da Fase 1 | 1 | Matheus + IA | 22/09/2026 | 🟢 concluída (v1.1, com o critério X7) |
 | 5 | Decidir o formato da nova versão | 0 | Matheus | 21/09/2026 | 🟢 dissertação revisada, ABNT |
-| 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | ⚪ |
+| 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 OrbStack (23/09/2026), depois VM Spot no GCP (25/09/2026); VM apagada em 27/09/2026 |
 | 7 | Validar a conversão Markdown → Pandoc → documento ABNT | 1, 6 | Matheus + IA | 23/09/2026 | 🟡 Pandoc 3.11 instalado; corpo e referências convertem, inclusive no capítulo inteiro (`redacao/teste-abnt/relatorio-teste.md`). Falta: escolher a variante do CSL (a genérica não imprime o nome do evento; a UFPR imprime), conferir a caixa alta da NBR 10520 e testar os elementos pré-textuais |
 
 | 8 | Confirmar a triagem da Fase 1 | 1 | Coordenador (delegado pelo autor) | 23/09/2026 | 🟢 122 confirmadas, 29 com ressalva, 3 não citáveis (não lidas), GIPO excluído; critérios no protocolo, seção 9 |
-| 9 | Revisar as referências e gerar o `referencias.bib` | 1, 6 | Matheus + Coordenador | 23/09/2026 | 🟢 **129 obras citáveis**: as 122 confirmadas aprovadas pelo autor, 5 ressalvas com ≥ 50 citações e 2 confirmadas a partir dos PDFs do autor. O capítulo 2 tem 14 chaves não citáveis a substituir ou retirar |
+| 9 | Revisar as referências e gerar o `referencias.bib` | 1, 6 | Matheus + Coordenador | 23/09/2026 | 🟢 **129 obras citáveis**: as 122 confirmadas aprovadas pelo autor, 5 ressalvas com ≥ 50 citações e 2 confirmadas a partir dos PDFs do autor. O capítulo 2 tem 14 chaves não citáveis a substituir ou retirar (situação de 23/09/2026; hoje 151 obras, e os capítulos 1 a 3 citam só chaves do `referencias.bib`) |
 | 10 | Obras sem acesso | 1 | Matheus | 23/09/2026 | 🟢 `nunez2015automatic` e `tonidandel2006reading` lidas a partir dos PDFs do autor; `strobel2014planning` acrescentada; só `sette2008are` segue sem leitura (não citável). GIPO excluído |
 | 11 | Decidir as quatro questões da Fase 2 listadas em `auditoria/insumos-fase1.md`, seção 5 | 2 | Matheus | 23/09/2026 | 🟢 decididas (seção 10): taxonomia em 4 dimensões; análise por domínio e por instância; UML testada contra *features* de PDDL; itSIMPLE 2005 como origem da pergunta |
 | 12 | Conversar com o Tonidandel sobre o artigo do itSIMPLE de 2005 como origem da pergunta | 2, 6 | Matheus | 24/09/2026 | 🟢 coberto pelo M1 |
@@ -585,7 +585,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 |---|---|---|---|---|
 | 21/09/2026 | 0 | Claude | Leitura da dissertação, diagnóstico inicial e elaboração deste plano | Revisão do autor pendente |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Reorganização do repositório, criação da estrutura por fase, templates e catálogo do acervo de 2010 (`docs/catalogo-acervo-2010.md`) | Contagens e achados conferidos por comando no disco; catálogo pendente de revisão do autor |
-| 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Extração do texto e das 44 tabelas do docx; construção do dataset de 2010 em CSV; conferência contra `script.sql`, planilhas e XML do itSIMPLE; documentação das condições de execução; `MEMORY.md` | Conferência automática entre fontes independentes (SQL, planilha, XML); duas leituras iniciais erradas foram detectadas e corrigidas. **Conferência manual do autor pendente** |
+| 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Extração do texto e das 44 tabelas do docx; construção do dataset de 2010 em CSV; conferência contra `script.sql`, planilhas e XML do itSIMPLE; documentação das condições de execução; `MEMORY.md` | Conferência automática entre fontes independentes (SQL, planilha, XML); duas leituras iniciais erradas foram detectadas e corrigidas. **Conferência manual do autor concluída em 21/09/2026** |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Leitura visual das Figuras 26 e 27 (diagramas de classes de TPP e Pathways) para identificar os modelos itSIMPLE; avaliação das pastas `itsimple-*` | Figuras lidas e conferidas contra o XML; contagens automáticas reproduzíveis por script. **Leitura visual das figuras: confirmada pelo autor em 21/09/2026** |
 | 21/09/2026 | 0 | Claude Code (claude-sonnet-5) | Comparação de conteúdo entre os PDDL do acervo e o repositório `potassco/pddl-instances` (IPCs 1998–2008); construção do script e do documento | Correspondências verificadas por comparação de conteúdo e reproduzíveis por script (repositório externo em commit fixo). Variantes de Zeno-travel e Elevator: hipóteses, a confirmar |
 
@@ -639,6 +639,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 1–4 | Claude Code (claude-opus-5-5) | Avaliação geral das Fases 1 a 4 como Coordenador (feito, pendências, problemas não percebidos); estimativa do custo do teste de serialização | Citações conferidas por `checar_citacoes.py`; Nível 1, Nível 3, EXP-19 e EXP-12 reexecutados sem diferença nos CSVs; custo estimado pelas horas de `nivel3-2010-gcp.csv`; origem do PDDL de 2010 conferida em `docs/benchmarks-ipc-ate-2008.md`. **As demais correções de registro apontadas aguardam o autor** |
 | 27/09/2026 | 6 | Claude Code (claude-opus-5-5) | Ajuste do capítulo 2 (rascunho de IA) para não contradizer a resposta a Q3: introdução, fecho da seção de modelos de linguagem e parágrafo de Q3 | Posição conferida na nota de `kambhampati2024llms` (LLM-Modulo com VAL); nenhuma chave nova; 83 chaves conferidas por `checar_citacoes.py`; números do capítulo 6 não trazidos para o capítulo 2. **Texto final é do autor** |
 | 27/09/2026 | 6 | Claude Code (claude-opus-5-5) | Ajuste do capítulo 2 (rascunho de IA) à dispensa do controle de serialização: introdução, hipótese da seção de engenharia do conhecimento, parágrafo de Q2 e síntese final | Origem do PDDL de 2010 conferida em `docs/benchmarks-ipc-ate-2008.md` e no G25 (exceção do Satellite acrescentada); nenhuma chave nova; 83 chaves conferidas por `checar_citacoes.py`. **Texto final é do autor** |
+| 27/09/2026 | 3, 4 | Claude Code (claude-opus-5-5) | Correção de Holm para as comparações com o *single best* (EXP-12, EXP-13, X3); calibração da redação de Q2 e Q3 nos relatórios e registros; limpeza de registros desatualizados | p-valores brutos recalculados a partir das escolhas por domínio e iguais aos registros; famílias de comparação fixadas antes de ver os ajustados; cada frase alterada conferida contra o registro do experimento; substância das respostas validadas não mudou. **Mudanças de redação a confirmar pelo autor** |
 
 ---
 
@@ -660,31 +661,33 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 > Levantadas no diagnóstico inicial a partir de conhecimento geral. **Nenhuma deve ser citada antes de verificada.**
 >
 > **Atualização de 23/09/2026:** as 22 referências desta lista foram localizadas e conferidas no registro primário durante a Fase 1, junto de outras 133. A lista viva passa a ser `literatura/protocolo/verificacao-metadados.csv` e o arquivo `literatura/referencias/candidatas.bib`. Elas continuam **não citáveis** até entrarem no `referencias.bib` exportado do Zotero pelo autor.
+>
+> **Atualização de 27/09/2026:** as 22 estão no `referencias.bib` (conferido por chave). O fluxo de aprovação não usa mais o Zotero (decisão de 23/09/2026).
 
 | Referência (provisória) | Eixo | Status |
 |---|---|---|
-| Rice (1976) — The algorithm selection problem | E1 | ⚪ a verificar |
-| Roberts & Howe (c. 2008–2009) — predição de desempenho de planejadores | E2 | ⚪ a verificar |
-| Gerevini, Saetti & Vallati — PbP (portfolio-based planner) | E1 | ⚪ a verificar |
-| Helmert, Röger et al. (2011) — Fast Downward Stone Soup | E1 | ⚪ a verificar |
-| Cenamor, de la Rosa & Fernández — IBaCoP | E1 | ⚪ a verificar |
-| Sievers et al. (c. 2019) — Delfi | E1 | ⚪ a verificar |
-| Fawcett et al. (2014) — *features* para predição de desempenho de planejadores | E2 | ⚪ a verificar |
-| Richter & Westphal (2010) — LAMA | E3 | ⚪ a verificar |
-| Helmert & Domshlak (2009) — LM-cut | E3 | ⚪ a verificar |
-| Lipovetzky & Geffner (2012, 2017) — busca por largura, BFWS | E3 | ⚪ a verificar |
-| Toyer et al. (2018) — ASNets | E4 | ⚪ a verificar |
-| Ståhlberg, Bonet & Geffner (c. 2022) — GNNs para políticas generalizadas | E4 | ⚪ a verificar |
-| Valmeekam et al. (2023) — PlanBench | E5 | ⚪ a verificar |
-| Liu et al. (2023) — LLM+P | E5 | ⚪ a verificar |
-| Kambhampati et al. (2024) — LLM-Modulo | E5 | ⚪ a verificar |
-| Vaquero et al. — evolução do itSIMPLE | E6 | ⚪ a verificar |
-| Unified Planning Framework (AIPlan4EU) | E6 | ⚪ a verificar |
-| Wolpert & Macready (1997) — No Free Lunch | E7 | ⚪ a verificar |
-| Lawrence & Lorsch (1967) — teoria da contingência | E7 | ⚪ a verificar |
-| Goodhue & Thompson (1995) — *task-technology fit* | E7 | ⚪ a verificar |
-| Ong et al. (2024) — RouteLLM | E7 | ⚪ a verificar |
-| Jimenez et al. (2024) — SWE-bench | E8 | ⚪ a verificar |
+| Rice (1976) — The algorithm selection problem | E1 | 🟢 no `referencias.bib` |
+| Roberts & Howe (c. 2008–2009) — predição de desempenho de planejadores | E2 | 🟢 no `referencias.bib` |
+| Gerevini, Saetti & Vallati — PbP (portfolio-based planner) | E1 | 🟢 no `referencias.bib` |
+| Helmert, Röger et al. (2011) — Fast Downward Stone Soup | E1 | 🟢 no `referencias.bib` |
+| Cenamor, de la Rosa & Fernández — IBaCoP | E1 | 🟢 no `referencias.bib` |
+| Sievers et al. (c. 2019) — Delfi | E1 | 🟢 no `referencias.bib` |
+| Fawcett et al. (2014) — *features* para predição de desempenho de planejadores | E2 | 🟢 no `referencias.bib` |
+| Richter & Westphal (2010) — LAMA | E3 | 🟢 no `referencias.bib` |
+| Helmert & Domshlak (2009) — LM-cut | E3 | 🟢 no `referencias.bib` |
+| Lipovetzky & Geffner (2012, 2017) — busca por largura, BFWS | E3 | 🟢 no `referencias.bib` |
+| Toyer et al. (2018) — ASNets | E4 | 🟢 no `referencias.bib` |
+| Ståhlberg, Bonet & Geffner (c. 2022) — GNNs para políticas generalizadas | E4 | 🟢 no `referencias.bib` |
+| Valmeekam et al. (2023) — PlanBench | E5 | 🟢 no `referencias.bib` |
+| Liu et al. (2023) — LLM+P | E5 | 🟢 no `referencias.bib` |
+| Kambhampati et al. (2024) — LLM-Modulo | E5 | 🟢 no `referencias.bib` |
+| Vaquero et al. — evolução do itSIMPLE | E6 | 🟢 no `referencias.bib` |
+| Unified Planning Framework (AIPlan4EU) | E6 | 🟢 no `referencias.bib` |
+| Wolpert & Macready (1997) — No Free Lunch | E7 | 🟢 no `referencias.bib` |
+| Lawrence & Lorsch (1967) — teoria da contingência | E7 | 🟢 no `referencias.bib` |
+| Goodhue & Thompson (1995) — *task-technology fit* | E7 | 🟢 no `referencias.bib` |
+| Ong et al. (2024) — RouteLLM | E7 | 🟢 no `referencias.bib` |
+| Jimenez et al. (2024) — SWE-bench | E8 | 🟢 no `referencias.bib` |
 
 ---
 
@@ -751,3 +754,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.57 | 27/09/2026 | Avaliação geral das Fases 1 a 4; controle de serialização do R-27 dispensado com o orientador e registrado como limitação da Fase 3 |
 | 0.58 | 27/09/2026 | Capítulo 2 alinhado à resposta a Q3: LLM como gerador de planos com verificador externo (LLM-Modulo) e tradução como etapa de modelagem; nota de atualização no §2.5 do relatório da Fase 1 |
 | 0.59 | 27/09/2026 | Capítulo 2: hipótese da serialização reescrita como limitação da medida de desempenho (ranking numa única ordem do PDDL), com a exceção do Satellite (G25); a mesma ressalva na decisão do R-27 e no relatório da Fase 3 |
+| 0.60 | 27/09/2026 | Pendências da avaliação das Fases 1 a 4: correção de Holm (`experimentos/analise/correcao_multipla.py`); redação de Q2 e de Q3 calibrada nos relatórios; registros desatualizados corrigidos (ações 6 e 9, seção 13, G10, R-25, `MEMORY.md`) |

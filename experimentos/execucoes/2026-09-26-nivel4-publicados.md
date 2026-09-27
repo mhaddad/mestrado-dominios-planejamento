@@ -71,7 +71,7 @@ Requer o clone do Planner Museum (ver `experimentos/nivel4-proposta.md`) e o tra
 
 - **Por domínio, nenhuma característica extraída do PDDL ajuda a escolher o planejador melhor do que usar sempre o *single best*.** `[FATO]`
   - Os seletores que se afastam do Levitron trocam por outros planejadores do topo (Saarplan, FDSS23), e cada troca custa cobertura.
-  - Nas *features* SAS+, o kNN e o *random forest* ficam significativamente piores que o SBS.
+  - Nas *features* SAS+, o kNN e o *random forest* ficam significativamente piores que o SBS sem correção (p = 0,009 e 0,011). **Com a correção de Holm para as 7 comparações da tabela (27/09/2026), nenhuma diferença é significativa** (p = 0,062 e 0,068; `experimentos/analise/correcao_multipla.py`).
   - O método de 2010 empata com o SBS quando escolhe sempre o Levitron e fica um pouco pior com as métricas do PDDL.
 - **A lacuna a fechar é pequena.** O SBS já resolve 87% do que o VBS resolve (953 de 1.096). `[FATO]` `[HIPÓTESE]` Com planejadores recentes, vários deles portfólios, o espaço para a seleção por domínio encolheu. Isso é coerente com `cenamor2016ibacop`, em que o ganho do portfólio vem da diversidade do conjunto, não dos modelos preditivos.
 - **Ainda assim, planejadores antigos são os melhores em alguns domínios:** o System R em 8 e o FF em 5, contando empates. `[FATO]` É o mesmo fenômeno que `lequen2026planner` descreve. A pergunta de 2010 (que técnica, para que domínio) se sustenta como fenômeno, mas estas características, neste nível de agregação, não o capturam. `[HIPÓTESE]`
