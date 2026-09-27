@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.55 |
+| Versão deste documento | 0.56 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -321,10 +321,10 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 **Atividades**
 
 - [x] Levantar o que cada IPC publicou (resultados por instância, limites, hardware, domínios, planejadores) — 27/09/2026, `docs/resultados-ipc-2011-2023.md`
-- [ ] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar — metadados de `ferber2019ipc` e `ferber2022explainable` reconferidos em 27/09/2026; promoção aguarda o autor
-- [ ] Montar o dataset em `data/` com `README.md` de origem e método — em curso: 2011 (WebPlan) e 2018 por instância em `data/ipc-2011-2023/`, ambos validados contra o placar oficial (27/09/2026); falta o recorte (decisão do autor) e 2023 por domínio
-- [ ] Classificar os planejadores na taxonomia e decidir a regra dos portfólios
-- [ ] Extrair as características dos domínios — em curso: *features* SAS+ de 2011, 2014 e 2018 (1.817 de 1.856 tarefas; `data/ipc-2011-2023/features_sas_ipc.csv`, 27/09/2026); faltam 2023 e as propriedades teóricas (topologia de busca etc.)
+- [x] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar — 27/09/2026: o autor decidiu **não** promover `ferber2019ipc`, `ferber2022explainable` nem as entradas do *booklet* de 2014 (seção 10)
+- [ ] Montar o dataset em `data/` com `README.md` de origem e método — em curso: 2011 (WebPlan) e 2018 por instância em `data/ipc-2011-2023/`, ambos validados contra o placar oficial (27/09/2026); recorte decidido em 27/09/2026 (`docs/fase4b-desenho.md`, D2); falta a ligação completa de 2011 aos PDDL
+- [x] Classificar os planejadores na taxonomia e decidir a regra dos portfólios — 27/09/2026: regra P1 + G1/G2 (`docs/fase4b-desenho.md`, D1); 78 codificações de 2011 e 2018 em `data/ipc-2011-2023/planejadores_4d.csv`
+- [ ] Extrair as características dos domínios — em curso: *features* SAS+ de 2011, 2014, 2018 e 2023 (`data/ipc-2011-2023/features_sas_ipc.csv`, 27/09/2026); PDDL de 2011 trocado para o `downward-benchmarks` e de 2014 para o ZIP oficial (o `pddl-instances` tem o floortile ótimo de 2011 errado); faltam as propriedades teóricas (topologia de busca etc.)
 - [ ] Analisar e montar o mapa característica × técnica; responder Q5
 - [ ] Escrever a síntese para a Ponte: o que se transfere como hipótese para a Fase 5 e o que não se transfere
 
@@ -571,6 +571,10 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | X4 em instâncias maiores (p05), restrito aos 4 domínios de técnica antiga por orçamento; trava própria de US$ 8,90 para reservar o X2 | Escolha do autor (instâncias maiores); recorte e trava pelo Coordenador, dentro do teto de US$ 10 | 4 |
 | 26/09/2026 | Teto da Fase 4 elevado de US$ 10 para **US$ 12** (limite da chave no OpenRouter); travas dos scripts em US$ 11,50. Uso: rodar o X2 e completar as conversas do X4 cortadas pela trava | Decisão do autor | 4 |
 | 27/09/2026 | **A Fase 4B começa com a Fase 3 ainda em curso** (Nível 3 no GCP). Só a comparação final com a Fase 3 espera o Nível 3 | Decisão do autor: aproveitar o tempo de espera do GCP | 3, 4B |
+| 27/09/2026 | **Dados por instância de 2023 não serão pedidos** aos organizadores, e **as referências pendentes não serão promovidas** (`ferber2019ipc`, `ferber2022explainable`, `vallati2014eighth`, `cenamor2014ibacop`, `malitsky2014allpaca`) | Decisão do autor | 4B |
+| 27/09/2026 | **Regra dos portfólios da 4B:** P1 do EXP-13 mais o critério G1 (portfólio = se descreve como tal ou faz execuções separadas de componentes completos; fases dentro de um planejador não contam) e o tipo G2 (`fixo`, `selecao`, `paralelo`); resultados sempre com e sem portfólios. Valor novo N7 na D2 | Coordenador, por delegação do autor ("optando pelas decisões mais coerentes"); `docs/fase4b-desenho.md`, D1 | 4B |
+| 27/09/2026 | **Recorte do dataset da 4B:** análise principal em 2011 (ótima e *satisficing*) e 2018 (ótima, *satisficing*, *agile*), por instância agregada por domínio e só dentro de cada edição × trilha; 2014 e 2023 só descritivas; IBM fora; formulações de caldera e organic-synthesis de 2018 como domínios separados | Coordenador, por delegação do autor; `docs/fase4b-desenho.md`, D2 | 4B |
+| 27/09/2026 | **Fonte do PDDL da 4B:** `downward-benchmarks` (Planner Museum) para 2011, 2018 e 2023; ZIP oficial para 2014. O `pddl-instances` fica fora da 4B | O `pddl-instances` tem o floortile ótimo de 2011 igual ao da *satisficing*; o SHA-1 do WebPlan confirma o `downward-benchmarks` | 4B |
 
 ---
 
@@ -630,6 +634,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Verificação do site da IPC 2023 e dos *slides*; script de suporte a PDDL declarado (65 receitas) | Somas das tabelas conferidas; contagem de receitas conferida com os *slides* (65) e com as tabelas (66 entradas, FSM em duas trilhas); extração dos rótulos repetida por dois caminhos (API do GitHub e script) com o mesmo resultado |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Recuperação dos resultados por instância da IPC 2011 a partir do *dump* do WebPlan arquivado no Software Heritage (pista do autor); script de exportação e validação | Ordem oficial reproduzida em duas trilhas e fato de `coles2012survey` conferido dentro do script (falha se não bater); *multi-core* não confere e foi excluída; erro anterior do levantamento ("*slides* com placar por domínio") encontrado ao renderizar a página e corrigido |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Conferência dos *slides* e do *booklet* da IPC 2014; inclusão de três entradas no `candidatas.bib`; exportação dos resultados por execução da IPC 2018 (`scripts/ipc2018.py`) | Metadados das entradas tirados do PDF do *booklet*; números de *features* (35 e 65) conferidos no texto; somas de cobertura, nota e erros de cada algoritmo de 2018 conferidas contra a tabela *Summary* do relatório oficial dentro do script (falha se não bater); correção do levantamento sobre variantes do `settlers` |
+| 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | *Features* SAS+ das IPCs (`scripts/features_ipc.py`); ligação dos problemas de 2011 aos PDDL por SHA-1 (Software Heritage); decisões D1 e D2 por delegação do autor; codificação 4D de 78 planejadores × trilha a partir dos resumos oficiais (*booklet* de 2011 recuperado do Internet Archive; resumos de 2018) | Extrator da Fase 3 reaproveitado sem mudança; ligação de 2011 conferida por SHA-1, sem divergência; erro do `pddl-instances` (floortile ótimo de 2011) encontrado pela ligação e confirmado arquivo por arquivo; critério G1 revisto antes do uso por contradizer o EXP-13; o script da taxonomia falha se algum planejador dos resultados ficar sem codificação; afirmações sem fonte retiradas antes do commit |
 
 ---
 
@@ -738,3 +743,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.53 | 27/09/2026 | **Fase 3 concluída**: Q1 e Q2 validadas pelo autor; R-29 por instância passa para a Fase 4B; restaurada no painel a linha da Fase 6, substituída por engano pela ação 6 no commit `535131c` |
 | 0.54 | 27/09/2026 | Fase 4: checkboxes atualizados; relatório com a resposta a Q3 e a posição dos LLMs na taxonomia (`llm/relatorio-fase4.md`), para validação do autor |
 | 0.55 | 27/09/2026 | Fase 4 fechada: resposta a Q3 aceita; capítulo 6 definido; taxonomia estendida aos LLMs (seção 6.1); ligação X2–F3 no capítulo 5 |
+| 0.56 | 27/09/2026 | Fase 4B: decisões D1 (portfólios) e D2 (recorte) por delegação do autor; codificação 4D de 2011 e 2018; *features* SAS+ das IPCs; ligação de 2011 aos PDDL; fonte do PDDL trocada para o `downward-benchmarks` e o ZIP oficial de 2014 |
