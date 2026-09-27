@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.61 |
+| Versão deste documento | 0.62 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -648,6 +648,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 6 | Claude Code (claude-opus-5-5) | Ajuste do capítulo 2 (rascunho de IA) para não contradizer a resposta a Q3: introdução, fecho da seção de modelos de linguagem e parágrafo de Q3 | Posição conferida na nota de `kambhampati2024llms` (LLM-Modulo com VAL); nenhuma chave nova; 83 chaves conferidas por `checar_citacoes.py`; números do capítulo 6 não trazidos para o capítulo 2. **Texto final é do autor** |
 | 27/09/2026 | 6 | Claude Code (claude-opus-5-5) | Ajuste do capítulo 2 (rascunho de IA) à dispensa do controle de serialização: introdução, hipótese da seção de engenharia do conhecimento, parágrafo de Q2 e síntese final | Origem do PDDL de 2010 conferida em `docs/benchmarks-ipc-ate-2008.md` e no G25 (exceção do Satellite acrescentada); nenhuma chave nova; 83 chaves conferidas por `checar_citacoes.py`. **Texto final é do autor** |
 | 27/09/2026 | 3, 4 | Claude Code (claude-opus-5-5) | Correção de Holm para as comparações com o *single best* (EXP-12, EXP-13, X3); calibração da redação de Q2 e Q3 nos relatórios e registros; limpeza de registros desatualizados | p-valores brutos recalculados a partir das escolhas por domínio e iguais aos registros; famílias de comparação fixadas antes de ver os ajustados; cada frase alterada conferida contra o registro do experimento; substância das respostas validadas não mudou. **Mudanças de redação a confirmar pelo autor** |
+| 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-22: tempo e memória do Nível 3 | Método (escore T\*/T com piso de 1 s, Spearman por domínio, teto de 3,5 GB) fixado antes de rodar; contagens de memória conferidas por situação e domínio; uma frase sobre líderes retirada por depender de desempate |
 
 ---
 
@@ -764,3 +765,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.59 | 27/09/2026 | Capítulo 2: hipótese da serialização reescrita como limitação da medida de desempenho (ranking numa única ordem do PDDL), com a exceção do Satellite (G25); a mesma ressalva na decisão do R-27 e no relatório da Fase 3 |
 | 0.60 | 27/09/2026 | Pendências da avaliação das Fases 1 a 4: correção de Holm (`experimentos/analise/correcao_multipla.py`); redação de Q2 e de Q3 calibrada nos relatórios; registros desatualizados corrigidos (ações 6 e 9, seção 13, G10, R-25, `MEMORY.md`) |
 | 0.61 | 27/09/2026 | Decisões do autor sobre a avaliação das Fases 1 a 4: R-29 por instância na 4B; tempo e memória (EXP-22) e X1 ofuscado (EXP-23) a fazer; *gradient boosting* dispensado; delegação aceita para as 265 "mantém"; registro de IA atualizado; capítulo 3 na Fase 6; `sette2008are` excluída; Ghostscript mantido; custo do GCP (US$ 36,42) |
+| 0.62 | 27/09/2026 | EXP-22: tempo e memória do Nível 3; o tempo não muda os *rankings* de 2010 (Spearman 0,78–1,00 em 9 de 10 domínios), a qualidade muda mais; 36 dos 393 "sem plano" são memória de 32 bits |

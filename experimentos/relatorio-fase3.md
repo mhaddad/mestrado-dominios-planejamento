@@ -73,7 +73,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 ## 6. Medidas que 2010 não tinha
 
 - **Qualidade dos planos** (EXP-20): cobertura e qualidade não andam juntas. IPP e Blackbox fazem os planos mais curtos quando resolvem; o R resolve 133 de 255 problemas com os planos mais longos (100 ações no DriverLog pfile1, contra 7 a 8). SATPlan e MAXPLAN incluem ações inúteis. A nota de 2010, só por cobertura, esconde isso.
-- **Tempo por execução e memória máxima** estão em `experimentos/execucoes/nivel3-2010-gcp.csv` e não foram analisados.
+- **Tempo e memória** (EXP-22, 27/09/2026): tempo e cobertura ordenam os planejadores quase da mesma forma (correlação de postos de 0,78 a 1,00 em 9 dos 10 domínios; 0,57 no Mystery), então a omissão do tempo em 2010 não distorce os *rankings*; a qualidade do plano (EXP-20) muda mais a ordem. 36 dos 393 "sem plano" são do IPP e do MAXPLAN no teto de memória dos binários de 32 bits.
 
 ## 7. Limites
 
