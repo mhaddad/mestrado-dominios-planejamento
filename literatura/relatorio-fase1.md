@@ -44,6 +44,8 @@ Foram 45 execuções de subagentes. Duas interrupções por limite de uso da API
 
 ### 2.5 Os LLMs entram como tradutores, não como planejadores
 
+> **Atualização de 27/09/2026:** a Fase 4 revisou esta leitura. Com os modelos de 2026, a resposta aceita a Q3 põe os LLMs no mapa como geradores de planos com verificador formal externo (LLM-Modulo), e a tradução para PDDL fora dele, como etapa de modelagem (`llm/relatorio-fase4.md`). O texto abaixo registra o que a literatura lida na Fase 1 indicava.
+
 `[FATO]` Como planejador autônomo, o desempenho é baixo; acoplado a um planejador clássico como tradutor para PDDL, sobe muito. O ganho de confiabilidade vem sempre de um verificador externo, não da autocrítica do modelo. `[FATO]` E a variação por domínio é o achado mais replicado do eixo: trocar os nomes de um domínio por rótulos sem significado, mantendo a lógica idêntica, derruba o desempenho em ordens de grandeza — inclusive nos modelos de raciocínio de 2024. `[HIPÓTESE]` Isso confirma o espírito da tese de 2010 e ao mesmo tempo mostra que, para LLMs, o que pesa é familiaridade lexical, dimensão que nenhuma métrica UML captura.
 
 ### 2.6 A ponte para desenvolvimento de software é hipótese, e a literatura delimita bem o quanto

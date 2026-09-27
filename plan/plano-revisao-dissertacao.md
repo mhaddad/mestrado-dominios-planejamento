@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.57 |
+| Versão deste documento | 0.58 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -637,6 +637,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Conferência dos *slides* e do *booklet* da IPC 2014; inclusão de três entradas no `candidatas.bib`; exportação dos resultados por execução da IPC 2018 (`scripts/ipc2018.py`) | Metadados das entradas tirados do PDF do *booklet*; números de *features* (35 e 65) conferidos no texto; somas de cobertura, nota e erros de cada algoritmo de 2018 conferidas contra a tabela *Summary* do relatório oficial dentro do script (falha se não bater); correção do levantamento sobre variantes do `settlers` |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | *Features* SAS+ das IPCs (`scripts/features_ipc.py`); ligação dos problemas de 2011 aos PDDL por SHA-1 (Software Heritage); decisões D1 e D2 por delegação do autor; codificação 4D de 78 planejadores × trilha a partir dos resumos oficiais (*booklet* de 2011 recuperado do Internet Archive; resumos de 2018) | Extrator da Fase 3 reaproveitado sem mudança; ligação de 2011 conferida por SHA-1, sem divergência; erro do `pddl-instances` (floortile ótimo de 2011) encontrado pela ligação e confirmado arquivo por arquivo; critério G1 revisto antes do uso por contradizer o EXP-13; o script da taxonomia falha se algum planejador dos resultados ficar sem codificação; afirmações sem fonte retiradas antes do commit |
 | 27/09/2026 | 1–4 | Claude Code (claude-opus-5-5) | Avaliação geral das Fases 1 a 4 como Coordenador (feito, pendências, problemas não percebidos); estimativa do custo do teste de serialização | Citações conferidas por `checar_citacoes.py`; Nível 1, Nível 3, EXP-19 e EXP-12 reexecutados sem diferença nos CSVs; custo estimado pelas horas de `nivel3-2010-gcp.csv`; origem do PDDL de 2010 conferida em `docs/benchmarks-ipc-ate-2008.md`. **As demais correções de registro apontadas aguardam o autor** |
+| 27/09/2026 | 6 | Claude Code (claude-opus-5-5) | Ajuste do capítulo 2 (rascunho de IA) para não contradizer a resposta a Q3: introdução, fecho da seção de modelos de linguagem e parágrafo de Q3 | Posição conferida na nota de `kambhampati2024llms` (LLM-Modulo com VAL); nenhuma chave nova; 83 chaves conferidas por `checar_citacoes.py`; números do capítulo 6 não trazidos para o capítulo 2. **Texto final é do autor** |
 
 ---
 
@@ -747,3 +748,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.55 | 27/09/2026 | Fase 4 fechada: resposta a Q3 aceita; capítulo 6 definido; taxonomia estendida aos LLMs (seção 6.1); ligação X2–F3 no capítulo 5 |
 | 0.56 | 27/09/2026 | Fase 4B: decisões D1 (portfólios) e D2 (recorte) por delegação do autor; codificação 4D de 2011 e 2018; *features* SAS+ das IPCs; ligação de 2011 aos PDDL; fonte do PDDL trocada para o `downward-benchmarks` e o ZIP oficial de 2014 |
 | 0.57 | 27/09/2026 | Avaliação geral das Fases 1 a 4; controle de serialização do R-27 dispensado com o orientador e registrado como limitação da Fase 3 |
+| 0.58 | 27/09/2026 | Capítulo 2 alinhado à resposta a Q3: LLM como gerador de planos com verificador externo (LLM-Modulo) e tradução como etapa de modelagem; nota de atualização no §2.5 do relatório da Fase 1 |
