@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.49 |
+| Versão deste documento | 0.50 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -554,6 +554,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **Satellite no Nível 3 com a versão da IPC** (`domain.pddl` da raiz), e não com o domínio de 2010 (hoje em `antigo/`, G25); o Satellite não é comparável célula a célula com 2010 | Decisão do autor | 3 |
 | 27/09/2026 | **TPP refeito** com as chamadas de 2010 (`Strips/`) em Blackbox, IPP, LPG-TD, YAHSP e FF, numa segunda VM criada só para isso e apagada ao fim; FF com `ff` (o `ff2` de 2010 não está no acervo, G26) | Autorização do autor; erro de chamada meu | 3 |
 | 27/09/2026 | **R sem tratamento adicional**: fica com os resultados do Nível 3 como estão (Pipesworld 0/50, igual a 2010, causa não investigada além do teste das constantes) e sem o Pathways, registrado como limitação | Decisão do autor | 3 |
+| 27/09/2026 | **Sem validação dos planos com VAL** no Nível 3: os planos gerados são considerados corretos | Decisão do autor | 3 |
+| 27/09/2026 | **Método de 2010 com as notas do Nível 3 usa o ranking real de 2010 na validação** (os domínios de validação não são reexecutados) | Decisão do autor | 3 |
 | 26/09/2026 | Codificação dos 10 planejadores na taxonomia em 4 dimensões (`auditoria/taxonomia/planejadores_4d.csv`), com as decisões C1–C5, aprovada sem alteração | Revisão do autor (EXP-06) | 3 |
 | 26/09/2026 | "Número total de Agregação" registrada como métrica **não reproduzível**: em 2010 foi contada de forma visual e manual nos diagramas UML.P, sem regra escrita; a AF-331 leva essa ressalva | Resposta do autor; EXP-08 mostrou que nenhum critério contado nos XML reproduz a Tabela 9 | 3, 6 |
 | 26/09/2026 | Medida principal de validação (G19): **perda em relação ao *virtual best***; correlação de postos como secundária; acerto por posição só para comparar com 2010; todas reportadas ao lado da linha de base | Recomendação do Coordenador aceita pelo autor: mede a indicação do melhor planejador, não depende de desempate e é a medida do Nível 4 | 3 |
@@ -601,6 +603,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 25/09/2026 | 4B | Claude Code (claude-opus-5-5) | Proposta e desenho da Fase 4B a partir da ideia do autor | Chaves citadas conferidas no `referencias.bib`; duas obras sugeridas fora dele marcadas como não citáveis; disponibilidade dos dados das IPCs marcada `[A CONFIRMAR]`. **Desenho a revisar pelo autor** |
 | 25/09/2026 | 3 | Claude Code (claude-opus-5-5) | Operação da rodada no GCP (`gcp.sh`), conferência dos casos sem plano e achado G25 | Cada "sem plano" conferido no log bruto e comparado com os logs de 2010; variante testada localmente (gera as 20 execuções esperadas) |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-05: fim da rodada, conferência das chamadas de 2010, refação do TPP e resumo agora × 2010 | Cada divergência conferida nos logs brutos e nos scripts de 2010; hipótese das constantes do Pipesworld testada e descartada; resumo por script |
+| 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-19: método de 2010 com as notas do Nível 3 | Regra da nota conferida contra as 100 notas de 2010 (99 iguais); reuso do método do Nível 2 sem alteração; maior mudança (Blackbox × Logistics) conferida nos logs |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) aprovadas pelo autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-08: Nível 2, R-11, R-12, R-13 e R-15 | Classes alteradas e efeito nas notas previstas conferidos por script; critérios de Agregação contados nos 13 XML e comparados com a Tabela 9 |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-09: R-14, perda em relação ao *virtual best* | Perdas conferidas contra as notas observadas de `validacao_ranking.csv` (máximo, empates, perda ao acaso) |
@@ -721,3 +724,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.47 | 27/09/2026 | IPC 2014: *slides* e *booklet* dos participantes conferidos (sem resultados por domínio; *hardware* de 2014 registrado; *booklet* como fonte para a 4D e a regra dos portfólios) |
 | 0.48 | 27/09/2026 | Nível 3 concluído (EXP-05): 3.390 execuções no GCP, 50 de 63 pares iguais a 2010; G25 ampliado (domínio do Satellite de 2010) e G26 (chamadas de 2010 no TPP e no Pathways); VM apagada |
 | 0.49 | 27/09/2026 | Fase 4B: *booklet* de 2014 e resumos do IBaCoP e do AllPACA no `candidatas.bib`; resultados por execução da IPC 2018 exportados e validados contra o relatório oficial; ZIP de 2014 movido para `brutos/` |
+| 0.50 | 27/09/2026 | EXP-19: método de 2010 com as notas do Nível 3 (23 de 100 notas mudam, quase todas de competição; perda × VBS igual; Spearman sobe no Elevator); decisões: R sem tratamento, sem VAL, validação com o ranking de 2010 |
