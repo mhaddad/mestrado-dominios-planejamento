@@ -6,7 +6,7 @@
 
 **Q3.** Onde os LLMs entram no mapa: como técnica de planejamento, como tradutores de domínio ou como seletores?
 
-Quatro experimentos, um para cada papel, com os mesmos quatro modelos de 2026 (Claude Sonnet 5, GPT-6 Sol, Gemini 3.1 Pro e DeepSeek V4 Pro, via OpenRouter), raciocínio no nível *medium* e limite de 16.000 *tokens* por resposta. Custo da fase: US$ 10,51 nos EXP-14 a EXP-18; com o EXP-23 (27/09/2026, US$ 1,59), o uso da chave chegou a US$ 12,08, US$ 0,08 acima do teto de US$ 12 (chamadas em paralelo passaram da trava; ver o registro do EXP-23).
+Quatro experimentos, um para cada papel, com os mesmos quatro modelos de 2026 (Claude Sonnet 5, GPT-6 Sol, Gemini 3.1 Pro e DeepSeek V4 Pro, via OpenRouter), raciocínio no nível *medium* e limite de 16.000 *tokens* por resposta. Custo da fase: US$ 10,51 nos EXP-14 a EXP-18; com o EXP-23 (27/09/2026, US$ 2,04), o uso da chave chegou a US$ 12,49. Na primeira rodada do EXP-23, chamadas em paralelo passaram da trava e o uso foi a US$ 12,08, acima do teto de US$ 12; o autor subiu o limite para US$ 13 para completar a rodada.
 
 | Papel | Experimento | Registro |
 |---|---|---|
@@ -38,7 +38,7 @@ Quatro experimentos, um para cada papel, com os mesmos quatro modelos de 2026 (C
 - planos bem mais curtos que os do LAMA (Blocks World: 86 a 90 contra 160; TPP: 73 a 75 contra 106);
 - no Floortile p05, o GPT-6 Sol e o Gemini acham planos válidos (206 e 204 passos) onde o LAMA não achou em 300 s. O LAMA não é a referência forte nesse domínio: no Nível 4, o Floortile é vencido por planejadores SAT, que não foram rodados nessa instância.
 
-`[FATO]` (EXP-23) Com todos os nomes trocados por rótulos sem significado, nos 25 pares que rodaram (7 ficaram sem chamada pela trava de custo), 16 planos são válidos, contra 23 dos mesmos pares com os nomes originais. Das 7 perdas, 5 são respostas que gastaram os 16.000 *tokens* raciocinando, sem chegar ao plano (Sonnet e DeepSeek), e 2 são planos errados. GPT-6 Sol e Gemini quase não mudam (13 de 16 contra 15 de 16), e o Blocks World ofuscado continua resolvido por todos os modelos que responderam.
+`[FATO]` (EXP-23) Com todos os nomes trocados por rótulos sem significado, 20 de 32 planos são válidos, contra 28 de 32 com os nomes originais; nenhum par inválido passou a válido. Das 8 perdas, 5 são respostas que gastaram os 16.000 *tokens* raciocinando, sem chegar ao plano (Sonnet e DeepSeek), e 3 são planos errados. Gemini e GPT-6 Sol perdem 1 par cada, e o Blocks World ofuscado continua resolvido por todos os modelos que responderam.
 
 Isso contrasta com as avaliações de 2023, em que os LLMs raramente produziam planos válidos [@valmeekam2023planbench], e é coerente com o efeito previsto pela arquitetura com verificador externo [@kambhampati2024llms], numa amostra de uma instância por domínio.
 
@@ -70,7 +70,7 @@ Os valores novos na D1 e na D3 são do mesmo tipo dos já previstos para a busca
 
 (Aceita pelo autor em 27/09/2026.) Os LLMs entram no mapa **como técnica de planejamento**, não como seletores:
 
-1. **Como planejador, com verificador formal:** é o papel em que se saem melhor nesta amostra. Nas instâncias pequenas e médias testadas, uma por domínio e uma chamada por modelo, produzem planos válidos na maioria dos casos, mais curtos que os do `lama-first`, e o verificador recupera a maior parte das falhas. A instância do Floortile que o LAMA não resolveu em 5 minutos não foi comparada com o vencedor do domínio. Com nomes ofuscados (EXP-23), o desempenho cai de 23 para 16 planos válidos em 25: a familiaridade dos nomes pesa, sobretudo como custo de raciocínio, mas bem menos que a queda do Mystery Blocksworld na literatura de 2023 [@valmeekam2023planbench]. Fica sem teste a escala.
+1. **Como planejador, com verificador formal:** é o papel em que se saem melhor nesta amostra. Nas instâncias pequenas e médias testadas, uma por domínio e uma chamada por modelo, produzem planos válidos na maioria dos casos, mais curtos que os do `lama-first`, e o verificador recupera a maior parte das falhas. A instância do Floortile que o LAMA não resolveu em 5 minutos não foi comparada com o vencedor do domínio. Com nomes ofuscados (EXP-23), o desempenho cai de 28 para 20 planos válidos em 32: a familiaridade dos nomes pesa, sobretudo como custo de raciocínio, mas bem menos que a queda do Mystery Blocksworld na literatura de 2023 [@valmeekam2023planbench]. Fica sem teste a escala.
 2. **Como tradutor:** úteis para produzir PDDL sintaticamente válido, mas o resultado precisa de verificação contra uma referência ou contra problemas conhecidos. Ficam fora do mapa das técnicas, como etapa de modelagem, o mesmo lugar que as ferramentas de modelagem UML ocupavam em 2010.
 3. **Como seletor:** não acrescentam nada à escolha fixa do melhor planejador. Escolhem por regra geral ou por reputação, sem ler o ajuste entre técnica e domínio, o que é coerente com a resposta a Q1 (`experimentos/relatorio-fase3.md`): nem as características de domínio nem os LLMs antecipam os poucos domínios em que uma técnica antiga vence.
 
@@ -78,7 +78,7 @@ Os valores novos na D1 e na D3 são do mesmo tipo dos já previstos para a busca
 
 - **Uma chamada por par** modelo × domínio (ou instância), sem repetição: a variação entre repetições não foi medida.
 - **Amostras pequenas no X1 e no X4:** uma instância por domínio (p01 em 8 domínios; p05 em 4). O X2 tem 6 domínios.
-- **Instâncias conhecidas:** domínios como Blocks World e Gripper são muito divulgados; o modelo pode ter visto instâncias parecidas. A condição com nomes ofuscados (EXP-23) cobre só o X1 (não o X4) e 25 dos 32 pares.
+- **Instâncias conhecidas:** domínios como Blocks World e Gripper são muito divulgados; o modelo pode ter visto instâncias parecidas. A condição com nomes ofuscados (EXP-23) cobre só o X1, não o X4.
 - **Referência do planejador clássico:** `lama-first` com 300 s, que não otimiza o tamanho do plano e não é o melhor planejador em todos os domínios testados.
 - **Limite de 16.000 *tokens*:** as falhas restantes do X4 indicam que um limite maior mudaria o resultado, com custo maior.
 - **Seletor avaliado só por domínio e só por cobertura**, como no Nível 4 da Fase 3.

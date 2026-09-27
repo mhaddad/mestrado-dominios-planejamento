@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.63 |
+| Versão deste documento | 0.64 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -275,7 +275,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 | # | Experimento | Pergunta | Status |
 |---|---|---|---|
-| X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | 🟢 EXP-16: 28 de 32 planos válidos (VAL) nas instâncias p01 de 8 domínios; planos em geral mais curtos que os do `lama-first`. EXP-23 (nomes ofuscados): 16 de 25 válidos contra 23 dos mesmos pares; 5 das 7 perdas por limite de *tokens* |
+| X1 | LLM como planejador | Qual é o desempenho do LLM em relação aos planejadores clássicos num subconjunto de domínios? | 🟢 EXP-16: 28 de 32 planos válidos (VAL) nas instâncias p01 de 8 domínios; planos em geral mais curtos que os do `lama-first`. EXP-23 (nomes ofuscados): 20 de 32 válidos, contra 28; 5 das 8 perdas por limite de *tokens* |
 | X2 | LLM como tradutor | O LLM gera PDDL correto a partir de descrição em linguagem natural? Com que taxa de erro? | 🟢 EXP-18: sintaxe válida em 23 de 24; só 10 pares comparáveis (assinatura igual), dos quais 6 corretos; a descrição em linguagem natural deixa livres nomes, ordem e tipos dos parâmetros |
 | X3 | LLM como seletor | Dada a descrição do domínio, o LLM escolhe bem o planejador? Comparar com o seletor da Fase 3 | 🟢 EXP-14 (anônima): nenhum LLM supera o *single best*; GPT-6 Sol empata (146 × 143). EXP-15 (com nomes): piora em 3 de 4 modelos; escolhas seguem a reputação (LAMA, FDSS), sem sinal de lembrança dos resultados por domínio |
 | X4 | LLM + verificador | Arquitetura com validador formal (ex.: VAL) melhora X1? | 🟢 EXP-17 (p05, 4 domínios): 8 de 16 válidos na 1ª tentativa, 13 de 16 com o retorno do VAL; as 3 falhas restantes são por limite de *tokens*; o GPT e o Gemini resolvem o Floortile p05, que o LAMA não resolveu em 300 s |
@@ -284,7 +284,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - [x] Selecionar subconjunto de domínios — 41 domínios do Nível 4 no X3; p01 de 8 domínios no X1; p05 de 4 no X4; 6 do LLM+P no X2
 - [x] Definir modelos e congelar versões — Claude Sonnet 5, GPT-6 Sol, Gemini 3.1 Pro e DeepSeek V4 Pro, via OpenRouter; raciocínio *medium*, 16.000 *tokens*
-- [x] Rodar X1–X4 com registro de custos e *prompts* — EXP-14 a EXP-18; US$ 10,51 de US$ 12. EXP-23 (27/09/2026): US$ 1,59; uso da chave em US$ 12,08, acima do teto
+- [x] Rodar X1–X4 com registro de custos e *prompts* — EXP-14 a EXP-18; US$ 10,51 de US$ 12. EXP-23 (27/09/2026): US$ 2,04; a primeira rodada levou a chave a US$ 12,08, acima do teto; o autor subiu o limite para US$ 13 (uso final: US$ 12,49)
 - [x] Analisar e posicionar LLMs no mapa das técnicas — `llm/relatorio-fase4.md`: técnica de planejamento com verificador; tradutor fora do mapa (modelagem); seletor sem ganho. Aceito pelo autor em 27/09/2026; valores novos na taxonomia (`auditoria/taxonomia-tecnicas.md`, seção 6.1)
 
 **Entregáveis:** resultados X1–X4 · resposta a Q3
@@ -652,6 +652,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 3, 4 | Claude Code (claude-opus-5-5) | Correção de Holm para as comparações com o *single best* (EXP-12, EXP-13, X3); calibração da redação de Q2 e Q3 nos relatórios e registros; limpeza de registros desatualizados | p-valores brutos recalculados a partir das escolhas por domínio e iguais aos registros; famílias de comparação fixadas antes de ver os ajustados; cada frase alterada conferida contra o registro do experimento; substância das respostas validadas não mudou. **Mudanças de redação a confirmar pelo autor** |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-22: tempo e memória do Nível 3 | Método (escore T\*/T com piso de 1 s, Spearman por domínio, teto de 3,5 GB) fixado antes de rodar; contagens de memória conferidas por situação e domínio; uma frase sobre líderes retirada por depender de desempate |
 | 27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-23: X1 com nomes ofuscados; US$ 1,59 | Código commitado antes das chamadas; equivalência dos arquivos ofuscados conferida pelo VAL nos dois sentidos (o primeiro critério, tamanho do plano do LAMA, foi trocado antes das chamadas e registrado); respostas cortadas conferidas pelos *tokens* de raciocínio; número da literatura conferido na nota de `valmeekam2023planbench`. **Teto ultrapassado em US$ 0,08 por chamadas em paralelo** |
+| 27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-23, complemento: 7 pares em sequência; US$ 0,45 | Modo sequencial commitado antes das chamadas; trava de US$ 12,80 respeitada (uso final US$ 12,49); os 32 pares reavaliados pelo VAL; resposta de formato do DeepSeek (Gripper) conferida no registro bruto |
 
 ---
 
@@ -770,3 +771,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.61 | 27/09/2026 | Decisões do autor sobre a avaliação das Fases 1 a 4: R-29 por instância na 4B; tempo e memória (EXP-22) e X1 ofuscado (EXP-23) a fazer; *gradient boosting* dispensado; delegação aceita para as 265 "mantém"; registro de IA atualizado; capítulo 3 na Fase 6; `sette2008are` excluída; Ghostscript mantido; custo do GCP (US$ 36,42) |
 | 0.62 | 27/09/2026 | EXP-22: tempo e memória do Nível 3; o tempo não muda os *rankings* de 2010 (Spearman 0,78–1,00 em 9 de 10 domínios), a qualidade muda mais; 36 dos 393 "sem plano" são memória de 32 bits |
 | 0.63 | 27/09/2026 | EXP-23: X1 com nomes ofuscados (16 de 25 válidos contra 23; perdas sobretudo por *tokens*); teto da Fase 4 ultrapassado em US$ 0,08; relatório da Fase 4 atualizado |
+| 0.64 | 27/09/2026 | EXP-23 completo (32 pares): 20 de 32 planos válidos com nomes ofuscados, contra 28; limite da chave em US$ 13 (autor); uso final US$ 12,49 |
