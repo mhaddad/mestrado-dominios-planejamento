@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.52 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
+| Versão deste documento | 0.53 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
 
@@ -51,11 +51,11 @@ Desdobramentos possíveis, não obrigatórios:
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
 | 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
-| 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
+| 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas (executada em 4 dias) | 🟢 | 24/09/2026 | 27/09/2026 | Dataset, código, resultados; respostas a Q1 e Q2 em `experimentos/relatorio-fase3.md` |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟡 | 27/09/2026 | | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (começa depois da Fase 4B) | ⚪ | | | Relatório do piloto + decisão sobre produto |
-| 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
+| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Nova versão + material para o orientador |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
 
@@ -255,7 +255,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Reproduzir o método de 2010 sobre os dados novos (linha de base) — sobre os dados de 2010 (Nível 1, EXP-03: 220/221 classes, 100/100 notas, 535/539 células, achados G23 e G24) e com as notas do Nível 3 (EXP-19)
 - [x] Treinar e avaliar modelos de seleção — EXP-12, por domínio e com dados publicados: nenhum seletor (método de 2010, kNN, *random forest*) supera o *single best*
 - [x] Testar robustez das métricas UML a variações de modelagem (F3) — EXP-08 (classes com e sem auxiliares: nenhum ranking muda) e EXP-10 (discretização com mais domínios); Agregação não reproduzível (R-13)
-- [ ] Analisar importância das *features* e responder Q1 e Q2 — 🟡 síntese em `experimentos/relatorio-fase3.md` (rascunho de IA): Q1, a conclusão de 2010 não se sustenta como método de seleção; Q2, métricas UML e *features* SAS+ não acrescentam poder preditivo por domínio. **Aguarda validação do autor**
+- [x] Analisar importância das *features* e responder Q1 e Q2 — `experimentos/relatorio-fase3.md`: Q1, a conclusão de 2010 não se sustenta como método de seleção; Q2, métricas UML e *features* SAS+ não acrescentam poder preditivo por domínio. **Validadas pelo autor em 27/09/2026**
 
 **Como a IA acelera:** Claude Code para infraestrutura, scripts de execução, extratores e análise. A IA escreve o código; o autor valida resultados e decisões de método. Estimativa de redução: de 8–12 para 4–6 semanas.
 
@@ -558,6 +558,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **Método de 2010 com as notas do Nível 3 usa o ranking real de 2010 na validação** (os domínios de validação não são reexecutados) | Decisão do autor | 3 |
 | 27/09/2026 | **Conjunto de instâncias do Nível 3 (R-19):** os subconjuntos do acervo de 2010 (G14), os mesmos da execução própria de 2010, com o Gripper gerado (G15) | Já usado no EXP-05; formalizado com o autor | 3 |
 | 27/09/2026 | **Dispensados na Fase 3:** R-23 (mais planejadores da família do R), R-30 (discretização × regressão), R-31 (heurística aprendida) e planejadores atuais compilados (substituídos por dados publicados, R-24) | Baixa prioridade; foco na síntese de Q1 e Q2 | 3 |
+| 27/09/2026 | **Respostas a Q1 e Q2 validadas; Fase 3 concluída.** Q1: a pergunta de 2010 se mantém, mas a conclusão de que as métricas de modelagem permitem escolher o planejador não se sustenta. Q2: nem as métricas UML nem as *features* SAS+ acrescentam poder preditivo por domínio. O relatório por instância (R-29) passa para a Fase 4B | Decisão do autor sobre `experimentos/relatorio-fase3.md` | 3 |
 | 26/09/2026 | Codificação dos 10 planejadores na taxonomia em 4 dimensões (`auditoria/taxonomia/planejadores_4d.csv`), com as decisões C1–C5, aprovada sem alteração | Revisão do autor (EXP-06) | 3 |
 | 26/09/2026 | "Número total de Agregação" registrada como métrica **não reproduzível**: em 2010 foi contada de forma visual e manual nos diagramas UML.P, sem regra escrita; a AF-331 leva essa ressalva | Resposta do autor; EXP-08 mostrou que nenhum critério contado nos XML reproduz a Tabela 9 | 3, 6 |
 | 26/09/2026 | Medida principal de validação (G19): **perda em relação ao *virtual best***; correlação de postos como secundária; acerto por posição só para comparar com 2010; todas reportadas ao lado da linha de base | Recomendação do Coordenador aceita pelo autor: mede a indicação do melhor planejador, não depende de desempate e é a medida do Nível 4 | 3 |
@@ -731,3 +732,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.50 | 27/09/2026 | EXP-19: método de 2010 com as notas do Nível 3 (23 de 100 notas mudam, quase todas de competição; perda × VBS igual; Spearman sobe no Elevator); decisões: R sem tratamento, sem VAL, validação com o ranking de 2010 |
 | 0.51 | 27/09/2026 | Fase 3: checkboxes atualizados; R-19 decidido; R-22 feito (EXP-20, qualidade dos planos); R-23, R-30 e R-31 dispensados; falta a síntese de Q1 e Q2 |
 | 0.52 | 27/09/2026 | Relatório da Fase 3 (`experimentos/relatorio-fase3.md`) com as respostas a Q1 e Q2, para validação do autor; R-27 feito por domínio |
+| 0.53 | 27/09/2026 | **Fase 3 concluída**: Q1 e Q2 validadas pelo autor; R-29 por instância passa para a Fase 4B; restaurada no painel a linha da Fase 6, substituída por engano pela ação 6 no commit `535131c` |

@@ -1,6 +1,6 @@
 # Relatório da Fase 3 — replicação experimental e respostas a Q1 e Q2
 
-> **Rascunho de IA para revisão do autor.** Claude Code (claude-opus-5-5), 27/09/2026. Cada número vem de um registro de experimento (EXP-nn, em `experimentos/execucoes/`) e do script nele indicado. O texto da dissertação é do autor; este relatório é material de trabalho.
+> **Rascunho de IA; respostas a Q1 e Q2 validadas pelo autor em 27/09/2026.** Claude Code (claude-opus-5-5), 27/09/2026. Cada número vem de um registro de experimento (EXP-nn, em `experimentos/execucoes/`) e do script nele indicado. O texto da dissertação é do autor; este relatório é material de trabalho.
 
 ## 1. As perguntas
 
@@ -45,7 +45,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 
 **O fenômeno que motivou 2010 existe, mas as características não o antecipam.** `[FATO]` Planejadores antigos ainda são os melhores em alguns domínios: o System R em 8 dos 41 e o FF em 5, contando empates (EXP-12); o System R tem cobertura total no Blocks World e no TPP (EXP-13). `[HIPÓTESE]` Há ajuste entre técnica e domínio em poucos domínios, e a implementação e a época do planejador pesam mais que a família de técnica.
 
-**Resposta a Q1** `[HIPÓTESE, a confirmar pelo autor]`: a pergunta de 2010 (que técnica funciona em que tipo de domínio) continua pertinente, mas a conclusão de que as métricas de modelagem permitem escolher o planejador não se sustenta. O resultado de 2010 é reproduzível, mas equivale ao de uma linha de base sem características na amostra de 2010 e fica abaixo da escolha fixa do melhor planejador numa amostra quatro vezes maior. Com 3 domínios de validação, e só 1 discriminante, a validação de 2010 não tinha poder para mostrar o contrário.
+**Resposta a Q1** (validada pelo autor em 27/09/2026): a pergunta de 2010 (que técnica funciona em que tipo de domínio) continua pertinente, mas a conclusão de que as métricas de modelagem permitem escolher o planejador não se sustenta. O resultado de 2010 é reproduzível, mas equivale ao de uma linha de base sem características na amostra de 2010 e fica abaixo da escolha fixa do melhor planejador numa amostra quatro vezes maior. Com 3 domínios de validação, e só 1 discriminante, a validação de 2010 não tinha poder para mostrar o contrário.
 
 ## 4. Resposta a Q2: as métricas UML não acrescentam poder preditivo, mas as *features* modernas também não
 
@@ -58,7 +58,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 
 **Como preditores, nenhum conjunto supera a escolha fixa.** `[FATO]` (EXP-12) Com *random forest*, por domínio: métricas do PDDL perdem 151 instâncias, *features* SAS+ perdem 189 (significativamente pior que o melhor planejador único, p = 0,011) e as duas juntas perdem 148, contra 143 do melhor planejador único.
 
-**Resposta a Q2** `[HIPÓTESE, a confirmar pelo autor]`: nesta amostra, as métricas estruturais de 2010 não acrescentam poder preditivo às *features* SAS+, e estas não acrescentam às métricas de 2010; nenhum conjunto ajuda a escolher o planejador por domínio. Com planejadores recentes, vários deles portfólios, o melhor planejador único já resolve 87% do que o oráculo resolve, e o espaço para a seleção por domínio encolheu, em linha com [@cenamor2016ibacop]. A permanência de planejadores antigos como melhores em alguns domínios é o mesmo fenômeno descrito em [@lequen2026planner].
+**Resposta a Q2** (validada pelo autor em 27/09/2026): nesta amostra, as métricas estruturais de 2010 não acrescentam poder preditivo às *features* SAS+, e estas não acrescentam às métricas de 2010; nenhum conjunto ajuda a escolher o planejador por domínio. Com planejadores recentes, vários deles portfólios, o melhor planejador único já resolve 87% do que o oráculo resolve, e o espaço para a seleção por domínio encolheu, em linha com [@cenamor2016ibacop]. A permanência de planejadores antigos como melhores em alguns domínios é o mesmo fenômeno descrito em [@lequen2026planner].
 
 ## 5. Achados novos sobre o material de 2010 (Fase 3)
 
@@ -94,5 +94,4 @@ Proposta, para decisão do autor:
 
 ## 9. Pendências da Fase 3
 
-- Validação do autor das respostas a Q1 e Q2 (seções 3 e 4).
-- Relatório por instância (R-29): depende de resultados por execução das IPCs, em levantamento na Fase 4B.
+- Relatório por instância (R-29): passa para a Fase 4B, que levanta os resultados por execução das IPCs.

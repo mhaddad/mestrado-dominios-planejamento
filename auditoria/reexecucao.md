@@ -106,7 +106,7 @@ O desenho já aprovado da Fase 3 (plano, seção "Fase 3"), ligado a cada afirma
 | R-26 | 4 | Q2 (*features* b) | PDDL/SAS+ | *features* modernas extraídas (grafo causal, DTG, *treewidth*) | — | média · 🟢 feito (EXP-11): 354 de 354 instâncias; nenhuma métrica UML se correlaciona com as *features* acima do acaso |
 | R-27 | 4 | Q2; A5; AF-310, AF-337 | R-25, R-26 | comparação UML × *features* de PDDL, com controle de serialização | R-25, R-26 | alta · 🟢 feito por domínio (EXP-11 e EXP-12): sem correlação UML × SAS+; como preditores, pddl, sas e pddl+sas não superam o SBS. Síntese em `experimentos/relatorio-fase3.md` |
 | R-28 | 4 | Q1 | R-24, R-25, R-26 | modelos treinados; comparação com *single best*/*virtual best* | R-24, R-25, R-26 | alta · 🟢 por domínio (EXP-12): nenhum seletor supera o SBS (Levitron) |
-| R-29 | 4 | Q1, A1, A3; AF-329, AF-335 | R-28 | relatório por domínio e por instância, separados | R-28 | média · 🟡 por domínio feito (EXP-12, EXP-13, `experimentos/relatorio-fase3.md`); por instância depende dos resultados por execução das IPCs (Fase 4B) |
+| R-29 | 4 | Q1, A1, A3; AF-329, AF-335 | R-28 | relatório por domínio e por instância, separados | R-28 | média · 🟡 por domínio feito (EXP-12, EXP-13, `experimentos/relatorio-fase3.md`); por instância transferido para a Fase 4B (decisão de 27/09/2026) |
 | R-30 | 4 | Q1, T6; AF-346 | R-25, R-26 | discretização comparada com regressão | R-25, R-26 | baixa · ⚪ dispensado (27/09/2026) |
 | R-31 | 4 | Q1, A2; AF-332, AF-333 | ambiente da Fase 3 | ao menos um planejador com heurística aprendida incluído, se viável | R-24 | baixa · ⚪ dispensado (27/09/2026) |
 
