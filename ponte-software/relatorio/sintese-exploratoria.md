@@ -3,7 +3,7 @@ tipo: sintese-exploratoria
 fase: 5
 pergunta: Q4
 data: 2026-09-27
-status: preliminar-aguarda-integracao-4b
+status: concluida-aguarda-revisao-do-autor
 ---
 
 # Fase 5 — da seleção de planejadores ao desenvolvimento de software dirigido por IA
@@ -12,7 +12,7 @@ status: preliminar-aguarda-integracao-4b
 
 [FATO] Há uma conexão substantiva, embora não uma transferência demonstrada, entre a pergunta da dissertação e o desenvolvimento de software dirigido por IA. Estudos de reparo de programas e de agentes implantados mostram que o desempenho do mesmo agente varia com propriedades observáveis da tarefa, como a origem do *bug*, a riqueza da especificação e o contexto do repositório [@rondon2025evaluating; @takerngsaksiri2025humanintheloop]. Sistemas de roteamento de LLMs também mostram que escolher condicionalmente entre modelos pode reduzir custo sem sacrificar a qualidade na distribuição em que foram treinados [@ong2024routellm; @chen2023frugalgpt].
 
-[FATO] A revisão e os experimentos deste projeto impõem uma ressalva tão importante quanto a conexão. Nas Fases 3 e 4, métricas UML e *features* SAS+ não acrescentaram poder preditivo suficiente para selecionar planejadores por domínio, e o LLM não superou a linha de base como seletor. A segunda rodada da Fase 4B aponta provisoriamente na mesma direção para 16 *features* SAS+ e famílias de técnicas. Esses resultados não falam diretamente sobre software, mas tornam implausível tratar métricas estruturais estáticas como solução suficiente.
+[FATO] A revisão e os experimentos deste projeto impõem uma ressalva tão importante quanto a conexão. Nas Fases 3 e 4, métricas UML e *features* SAS+ não acrescentaram poder preditivo suficiente para selecionar planejadores por domínio, e o LLM não superou a linha de base como seletor. Na rodada final da Fase 4B, as 16 *features* SAS+ quase não anteciparam, fora do domínio, qual família resolveria uma instância nas IPCs de 2011 e 2018: a AUC mediana da logística foi 0,59, praticamente igual aos 0,58 do modelo só com tamanho. Na seleção por instância, nenhum seletor superou o melhor planejador único com todos os planejadores disponíveis; o único ganho local não sobreviveu à correção conjunta. Esses resultados não falam diretamente sobre software, mas tornam implausível tratar métricas estruturais estáticas como solução suficiente.
 
 [HIPÓTESE] A oportunidade não é reproduzir o método de 2010 sobre código. É formular um problema mais completo de escolha de configuração: caracterizar a tarefa, o repositório, a configuração do agente e, quando existir, a trajetória parcial de execução; otimizar resultado, custo, tempo e qualidade; e comparar a política condicional com uma configuração fixa forte. O resultado desta fase é uma agenda de pesquisa, não uma recomendação de produto nem uma alegação de eficácia.
 
@@ -20,7 +20,7 @@ status: preliminar-aguarda-integracao-4b
 
 Q4 pergunta quais conexões, oportunidades e hipóteses ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software dirigido por IA. A resposta desta síntese não é “sim, o ajuste funciona”: não houve experimento próprio em tarefas de software, nem piloto no Ateliê.
 
-O que foi feito aqui foi uma consolidação das fontes verificadas dos eixos E7 e E8, dos relatórios das Fases 3 e 4 e do EXP-21 da Fase 4B. A síntese da 4B ainda está incompleta; por isso este documento é preliminar e deverá ser integrado antes do encerramento da fase.
+O que foi feito aqui foi uma consolidação das fontes verificadas dos eixos E7 e E8, dos relatórios das Fases 3 e 4 e dos EXP-21 e EXP-24 da Fase 4B. A integração usa os resultados finais disponíveis para as 16 *features* SAS+ e a cobertura nas IPCs de 2011 e 2018; ela não presume que propriedades teóricas ainda não avaliadas teriam o mesmo comportamento.
 
 O [dossiê para o Capítulo 7](dossie-capitulo-7.md) aprofunda a arquitetura argumentativa, as objeções conceituais, os limites de inferência e os subsídios de redação.
 
@@ -102,13 +102,15 @@ Um estudo posterior teria de construir uma matriz de tarefas reais ou *benchmark
 
 [FATO] A evidência consultada mostra que roteamento e cascatas podem funcionar em distribuições e métricas bem definidas [@ong2024routellm; @chen2023frugalgpt]. [HIPÓTESE] Isso não constitui base para produto de desenvolvimento de software: faltam validação no contexto alvo, tratamento de qualidade e segurança, comparação com uma configuração fixa forte e evidência de estabilidade quando modelos, repositórios e processos mudam. Esta fase, portanto, não recomenda produto.
 
-## 7. Integração pendente da Fase 4B
+## 7. Integração da Fase 4B
 
-O EXP-21 fornece, até aqui, um contrapeso útil: em IPCs de 2011 e 2018, 16 *features* SAS+ quase não antecipam, fora do domínio, a família de técnica que resolve uma instância; os poucos sinais que permanecem após a correção estatística se concentram em famílias pequenas ou planejadores específicos. O resultado ainda é provisório porque a rodada de 2018 e as propriedades teóricas previstas pela 4B não estão fechadas.
+[FATO] O EXP-21 final confirma, no seu recorte, que há heterogeneidade por domínio e trilha, mas que as 16 *features* SAS+ não a antecipam robustamente fora do domínio. Nos 40 modelos por família do recorte completo, a AUC mediana da regressão logística foi 0,59, contra 0,58 usando apenas tamanho; a árvore rasa teve mediana 0,49. Depois de Holm, os poucos modelos sobreviventes se concentram sobretudo em famílias de um a três planejadores. A exceção com vários planejadores — *landmarks* na ótima de 2018, sem portfólios — ocorre em um só recorte e não se reproduz com portfólios nem na árvore rasa.
 
-[HIPÓTESE] Se a conclusão se mantiver após R-29 e as propriedades teóricas, ela reforçará quatro exigências desta Ponte: não supor que *features* estáticas bastam; comparar contra uma linha de base fixa; separar efeitos de configuração específica de efeitos de família; e privilegiar a unidade tarefa/instância. A integração final deve registrar também qualquer resultado da 4B que limite ou contrarie essa leitura.
+[FATO] O EXP-24 testa a consequência mais próxima para a Ponte: escolher um planejador por instância, deixando um domínio de fora. Com todos os planejadores, nenhum seletor supera o melhor planejador único em nenhuma das dez unidades edição × trilha × recorte. Sem portfólios, o seletor 4D melhora a *agile* de 2018 numa correção local, mas o resultado deixa de ser significativo quando as 60 comparações são corrigidas juntas. É um indício de condição de contorno — há mais espaço para seleção quando a linha de base fixa é fraca —, não uma demonstração de política útil.
 
-## 8. Conclusão provisória
+[INFERÊNCIA] A 4B reforça quatro exigências da Ponte: não supor que *features* estáticas bastam; comparar contra uma linha de base fixa forte; separar efeito de família, planejador e portfólio; e validar por tarefa/instância fora de repositórios ou domínios observados. Ela não autoriza concluir que nenhum sinal poderá funcionar em software: o recorte mede 16 *features* SAS+ e cobertura, não características de código, trajetória de agentes, segurança ou qualidade de manutenção.
+
+## 8. Conclusão
 
 [FATO] O desenvolvimento de software dirigido por IA já fornece evidência de heterogeneidade por tarefa e de mecanismos de roteamento entre modelos. [FATO] O trabalho desta dissertação mostra que essa heterogeneidade não é automaticamente capturada por métricas estruturais nem convertida em um seletor útil. 
 

@@ -88,7 +88,7 @@ Quando o autor aprovar as fontes de prioridade A e, se desejar, B, o Capítulo 7
 1. O autor decide quais candidatas da prioridade A/B promover para a bibliografia citável.
 2. Para cada fonte aprovada, produzir nota de leitura integral e extrair somente afirmações compatíveis com seu desenho e população.
 3. Revisar a escada de inferência do dossiê: acrescentar evidência direta de roteamento, mas preservar como hipótese a eficácia em qualquer equipe ou repositório específico.
-4. Integrar a síntese final da Fase 4B: se ela confirmar fraca generalização de *features* estáticas, o capítulo deverá justificar explicitamente a preferência por política sequencial e validação por repositório.
+4. ~~Integrar a síntese final disponível da Fase 4B~~ — feito em 27/09/2026. Os EXP-21 e EXP-24 reforçam, no recorte de planejamento, a exigência de política sequencial e validação por unidade mantida fora; não demonstram que sinais estáticos sejam inúteis nem antecipam o comportamento de agentes de software.
 
 ## Registros primários
 
