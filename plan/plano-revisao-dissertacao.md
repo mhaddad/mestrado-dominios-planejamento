@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.51 |
+| Versão deste documento | 0.52 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -255,7 +255,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Reproduzir o método de 2010 sobre os dados novos (linha de base) — sobre os dados de 2010 (Nível 1, EXP-03: 220/221 classes, 100/100 notas, 535/539 células, achados G23 e G24) e com as notas do Nível 3 (EXP-19)
 - [x] Treinar e avaliar modelos de seleção — EXP-12, por domínio e com dados publicados: nenhum seletor (método de 2010, kNN, *random forest*) supera o *single best*
 - [x] Testar robustez das métricas UML a variações de modelagem (F3) — EXP-08 (classes com e sem auxiliares: nenhum ranking muda) e EXP-10 (discretização com mais domínios); Agregação não reproduzível (R-13)
-- [ ] Analisar importância das *features* e responder Q1 e Q2
+- [ ] Analisar importância das *features* e responder Q1 e Q2 — 🟡 síntese em `experimentos/relatorio-fase3.md` (rascunho de IA): Q1, a conclusão de 2010 não se sustenta como método de seleção; Q2, métricas UML e *features* SAS+ não acrescentam poder preditivo por domínio. **Aguarda validação do autor**
 
 **Como a IA acelera:** Claude Code para infraestrutura, scripts de execução, extratores e análise. A IA escreve o código; o autor valida resultados e decisões de método. Estimativa de redução: de 8–12 para 4–6 semanas.
 
@@ -607,6 +607,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-05: fim da rodada, conferência das chamadas de 2010, refação do TPP e resumo agora × 2010 | Cada divergência conferida nos logs brutos e nos scripts de 2010; hipótese das constantes do Pipesworld testada e descartada; resumo por script |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-19: método de 2010 com as notas do Nível 3 | Regra da nota conferida contra as 100 notas de 2010 (99 iguais); reuso do método do Nível 2 sem alteração; maior mudança (Blackbox × Logistics) conferida nos logs |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-20: qualidade dos planos do Nível 3 | Leitores de plano conferidos entre planejadores no mesmo problema; resumo do LPG-TD conferido contra 765 planos; casos extremos (R, SATPlan) conferidos nos logs |
+| 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | Relatório da Fase 3: síntese de Q1 e Q2 a partir dos EXP-03 a EXP-20 | Cada número tirado de um registro de experimento; chaves citadas conferidas no `referencias.bib`; respostas marcadas como hipótese até a validação do autor |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) aprovadas pelo autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-08: Nível 2, R-11, R-12, R-13 e R-15 | Classes alteradas e efeito nas notas previstas conferidos por script; critérios de Agregação contados nos 13 XML e comparados com a Tabela 9 |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-09: R-14, perda em relação ao *virtual best* | Perdas conferidas contra as notas observadas de `validacao_ranking.csv` (máximo, empates, perda ao acaso) |
@@ -729,3 +730,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.49 | 27/09/2026 | Fase 4B: *booklet* de 2014 e resumos do IBaCoP e do AllPACA no `candidatas.bib`; resultados por execução da IPC 2018 exportados e validados contra o relatório oficial; ZIP de 2014 movido para `brutos/` |
 | 0.50 | 27/09/2026 | EXP-19: método de 2010 com as notas do Nível 3 (23 de 100 notas mudam, quase todas de competição; perda × VBS igual; Spearman sobe no Elevator); decisões: R sem tratamento, sem VAL, validação com o ranking de 2010 |
 | 0.51 | 27/09/2026 | Fase 3: checkboxes atualizados; R-19 decidido; R-22 feito (EXP-20, qualidade dos planos); R-23, R-30 e R-31 dispensados; falta a síntese de Q1 e Q2 |
+| 0.52 | 27/09/2026 | Relatório da Fase 3 (`experimentos/relatorio-fase3.md`) com as respostas a Q1 e Q2, para validação do autor; R-27 feito por domínio |
