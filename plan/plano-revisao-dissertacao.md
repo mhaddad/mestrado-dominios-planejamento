@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.66 |
+| Versão deste documento | 0.67 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B em andamento · 🟡 Fase 5 exploratória iniciada em 27/09/2026 |
 
 ---
@@ -368,11 +368,11 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Atividades**
 
-- [ ] Delimitar a analogia: correspondências úteis e limites entre domínio/tarefa, técnica/configuração e eficiência/resultado
-- [ ] Revisitar os resultados das Fases 1–4 para extrair evidências a favor, contra e neutras para H1–H3
-- [ ] Revisar as fontes já verificadas dos eixos E7 e E8 sobre roteamento, orquestração e avaliação de agentes de código
-- [ ] Mapear oportunidades de pesquisa e aplicação, distinguindo o que é sustentado por evidência do que depende de validação futura
-- [ ] Elaborar uma agenda de pesquisa com possíveis desenhos empíricos, sem iniciar piloto
+- [x] Delimitar a analogia: correspondências úteis e limites entre domínio/tarefa, técnica/configuração e eficiência/resultado — `ponte-software/relatorio/sintese-exploratoria.md` (27/09/2026)
+- [x] Revisitar os resultados das Fases 1–4 para extrair evidências a favor, contra e neutras para H1–H3 — síntese exploratória, seções 2–5 (27/09/2026)
+- [x] Revisar as fontes já verificadas dos eixos E7 e E8 sobre roteamento, orquestração e avaliação de agentes de código — 8 chaves citáveis conferidas por `checar_citacoes.py` (27/09/2026)
+- [x] Mapear oportunidades de pesquisa e aplicação, distinguindo o que é sustentado por evidência do que depende de validação futura — síntese exploratória, seção 6 (27/09/2026)
+- [x] Elaborar uma agenda de pesquisa com possíveis desenhos empíricos, sem iniciar piloto — síntese exploratória, seções 5–6 (27/09/2026)
 - [ ] Incorporar a síntese para a Ponte da Fase 4B antes de fechar a interpretação
 
 **Entregáveis:** síntese exploratória · mapa de conexões e limites · hipóteses testáveis · oportunidades e agenda de pesquisa.
@@ -380,6 +380,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 **Critério de conclusão:** síntese revisada pelo autor, com toda inferência marcada como `[HIPÓTESE]` e sem alegação de validação empírica no desenvolvimento de software.
 
 **Notas:**
+
+- 27/09/2026 — Síntese exploratória preliminar concluída em `ponte-software/relatorio/sintese-exploratoria.md`. Há evidência de heterogeneidade por tarefa em agentes de código e de roteamento de LLMs; a transferência para um seletor de agentes em software permanece hipótese. Os resultados negativos das Fases 3 e 4 entram como limite: *features* estruturais estáticas não devem ser presumidas suficientes. Falta integrar a síntese da 4B antes de fechar a Fase 5.
 
 ---
 
@@ -460,7 +462,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
 | 18 | Incluir os relatórios oficiais das IPCs no `candidatas.bib` | 2, 6 | Coordenador | 23/09/2026 | 🟢 incluídos e promovidos, com Bonet e Geffner (2001) e Weld (1994) |
 | 19 | Decidir o limite de tempo da reexecução dos planejadores de 2010 (Nível 3) | 3 | Matheus | 24/09/2026 | 🟢 opção 1, limite calibrado por planejador (EXP-02): de 38 min (SGPlan) a 137 min (R); LPG-TD com o fator comum (76 min) e várias sementes; `experimentos/execucoes/fatores-2010.csv` |
-| 20 | Delimitar e executar a síntese exploratória da Ponte, sem piloto no Ateliê | 5 | Matheus + IA | | 🟡 iniciada em 27/09/2026; aguarda a síntese da 4B para o fechamento |
+| 20 | Delimitar e executar a síntese exploratória da Ponte, sem piloto no Ateliê | 5 | Matheus + IA | | 🟡 síntese preliminar concluída em `ponte-software/relatorio/sintese-exploratoria.md`; aguarda a síntese da 4B para o fechamento |
 
 ---
 
@@ -647,6 +649,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-22: tempo e memória do Nível 3 | Método (escore T\*/T com piso de 1 s, Spearman por domínio, teto de 3,5 GB) fixado antes de rodar; contagens de memória conferidas por situação e domínio; uma frase sobre líderes retirada por depender de desempate |
 | 27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-23: X1 com nomes ofuscados; US$ 1,59 | Código commitado antes das chamadas; equivalência dos arquivos ofuscados conferida pelo VAL nos dois sentidos (o primeiro critério, tamanho do plano do LAMA, foi trocado antes das chamadas e registrado); respostas cortadas conferidas pelos *tokens* de raciocínio; número da literatura conferido na nota de `valmeekam2023planbench`. **Teto ultrapassado em US$ 0,08 por chamadas em paralelo** |
 | 27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-23, complemento: 7 pares em sequência; US$ 0,45 | Modo sequencial commitado antes das chamadas; trava de US$ 12,80 respeitada (uso final US$ 12,49); os 32 pares reavaliados pelo VAL; resposta de formato do DeepSeek (Gripper) conferida no registro bruto |
+| 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `chief-editor` | Consolidação exploratória da Ponte a partir das sínteses E7/E8, relatórios das Fases 3–4 e EXP-21; atualização do README da fase | Oito chaves verificadas por `checar_citacoes.py`; fatos, inferências e hipóteses separados no relatório; sem fontes fora do `referencias.bib`; integração da 4B permanece pendente |
 
 ---
 
@@ -768,3 +771,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.64 | 27/09/2026 | EXP-23 completo (32 pares): 20 de 32 planos válidos com nomes ofuscados, contra 28; limite da chave em US$ 13 (autor); uso final US$ 12,49 |
 | 0.65 | 27/09/2026 | Fase 4B: EXP-21 (Q5), primeira rodada provisória; *features* de 2011 e 2014 refeitas nas fontes novas (todas traduzidas); ligação de 2011 com 307 de 560 conferidos |
 | 0.66 | 27/09/2026 | Fase 5 redefinida e iniciada: investigação exploratória, sem piloto no Ateliê nem decisão de produto; Q4, atividades, riscos e entregáveis ajustados para conexões, oportunidades e hipóteses testáveis |
+| 0.67 | 27/09/2026 | Fase 5: síntese exploratória preliminar e README da Ponte atualizados; conexão com agentes de código e roteamento consolidada com limites explícitos; integração da síntese da 4B permanece pendente |

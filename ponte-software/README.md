@@ -1,27 +1,23 @@
 # Fase 5 — Ponte para desenvolvimento de software dirigido por IA
 
-**Objetivo:** responder Q4 com um piloto no Ateliê de Software e decidir se há base para um produto.
-**Critério de conclusão:** piloto analisado e decisão registrada na seção 10 do [plano](../plan/plano-revisao-dissertacao.md).
+**Objetivo:** responder Q4 por investigação exploratória: explicitar conexões, limites, oportunidades e hipóteses entre características de tarefas, estratégias de solução e desenvolvimento de software dirigido por IA.
+**Critério de conclusão:** síntese revisada pelo autor, com inferências marcadas como `[HIPÓTESE]` e sem alegação de validação empírica no desenvolvimento de software. Ver a [Fase 5 no plano](../plan/plano-revisao-dissertacao.md#fase-5--ponte-para-desenvolvimento-de-software-dirigido-por-ia).
 
-> **Toda a analogia desta fase é `[HIPÓTESE]`.** Conclusões saem só dos dados do piloto.
+> Esta fase não terá piloto, coleta de dados no Ateliê nem decisão de produto. A síntese da Fase 4B é insumo obrigatório antes do fechamento da interpretação.
 
 | Pasta | Conteúdo |
 |---|---|
-| `protocolo/` | Características da tarefa a registrar, configurações de agente a comparar, medidas de resultado |
-| `dados/` | Dados do piloto (50–100 tarefas reais). **Sem dados sensíveis do Ateliê ou de clientes.** |
-| `relatorio/` | Análise de H1–H3 e decisão final |
+| `protocolo/` | Futuras propostas de validação empírica; não executadas nesta fase |
+| `dados/` | Reservada para estudos futuros; não há dados do Ateliê nesta fase |
+| `relatorio/` | Síntese exploratória, mapa de conexões, oportunidades e hipóteses |
 
-## Hipóteses do piloto
+## Hipóteses de pesquisa `[HIPÓTESE]`
 
-- **H1:** nenhuma configuração de agente é a melhor para todos os tipos de tarefa.
-- **H2:** características observáveis da tarefa e do repositório ajudam a prever qual configuração funciona melhor.
-- **H3:** métricas estruturais do código, das mesmas famílias usadas em 2010, contribuem para essa previsão.
-
-## Decisão possível
-
-Adotar internamente · seguir experimentando · avaliar produto · arquivar. Produto só é considerado se **todos** os critérios do plano forem atendidos.
+- **H1:** nenhuma configuração de agente é a melhor para todos os tipos de tarefa de desenvolvimento.
+- **H2:** características observáveis da tarefa e do repositório podem ajudar a explicar ou prever qual configuração tende a funcionar melhor.
+- **H3:** métricas estruturais de código podem ser candidatas a *features*, mas sua utilidade preditiva precisa de teste empírico próprio.
 
 ## Cuidados
 
-- Adesão da equipe é voluntária; coletar automaticamente sempre que possível (risco R7).
-- O repositório é privado, mas trate os dados como se pudessem ser vistos por terceiros: anonimize antes de commitar.
+- A analogia entre planejamento e desenvolvimento de software é uma hipótese de trabalho, não evidência de causalidade ou eficácia.
+- Um estudo futuro exigirá decisão própria, protocolo, proteção de dados e critérios de avaliação que incluam qualidade, custo e segurança — não só taxa de conclusão.
