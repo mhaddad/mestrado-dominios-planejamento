@@ -31,7 +31,9 @@ Contagens de 2018, 2023 e IBM: `data/ipc-2011-2023/scripts/levantar_fontes.py` �
 
 - Arquivos `{optimal,satisficing,agile}-results.tar.bz2`, cada um com um `properties` (JSON do *downward lab*) e um relatório HTML. Execuções: 5.040 (ótima), 6.440 (*satisficing*), 6.160 (*agile*). `[FATO]`
 - Campos por execução: `algorithm`, `domain`, `problem`, `coverage`, `cost`, `total_time`, `memory`, `out-of-memory`, `timeout`, `unexplained_errors`, `sat_score`/`agl_score`, `expansions`, `evaluated`, entre outros. `[FATO]`
-- Os domínios `caldera`, `organic-synthesis` e `settlers` aparecem em formulações alternativas (`-split`, `-combined`). A regra de pontuação de cada variante está `[A CONFIRMAR]` no relatório HTML antes de agregar.
+- **Placar oficial = 10 domínios por trilha** (conferido no relatório HTML em 27/09/2026): `caldera` e `organic-synthesis` entram só como `-combined`; as formulações `caldera`, `caldera-split`, `organic-synthesis` e `organic-synthesis-split` rodaram mas ficam fora do placar. Na ótima, `petri-net-alignment` entra no lugar do `flashfill`. `settlers` não tem variante (correção: a primeira versão deste levantamento dizia que tinha). `[FATO]`
+- **Dataset por execução montado:** `scripts/ipc2018.py` → `ipc2018_resultados.csv` (17.640 execuções). Para cada algoritmo, cobertura, nota e contagens de erro nos domínios oficiais reproduzem a tabela *Summary* do relatório final. Maiores notas: Delfi1 (ótima, 126 resolvidos), Fast Downward Stone Soup 2018 (*satisficing*, 123,27), LAPKT-BFWS-Preference (*agile*, 56,08; a linha de base LAMA 2011 vem logo depois, com 52,67). `[FATO]`
+- A categoria de erro `whitelisted-error` (2.314 execuções, concentradas em alien, freelunch-doubly-relaxed e Saarplan) não tem critério documentado nos arquivos baixados. `[A CONFIRMAR]` antes de usá-la para separar "não suporta" de "não resolveu".
 - Logs brutos das execuções também estão publicados (0,5 a 2,8 GB descompactados por trilha); não foram baixados.
 - Os PDDL estão em `bitbucket.org/ipc2018-classical/domains` e em `downward-benchmarks`, incluído no zip do Planner Museum. `[FATO]`
 - O site não declara licença para os resultados. `[FATO]`

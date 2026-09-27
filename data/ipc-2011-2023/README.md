@@ -10,6 +10,7 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 | `suporte_pddl_2023.csv` | Uma linha por receita Apptainer da IPC 2023 (65): repositório, entrada, nome, trilhas e os nove rótulos de suporte a PDDL (`sim`, `não`, `parcial`), como declarados pelos autores | `scripts/suporte_pddl_2023.py` |
 | `ipc2011_problemas.csv` | Problemas das trilhas *satisficing* e ótima da IPC 2011: trilha, domínio, problema (hash do conteúdo no WebPlan) e número, quando o *dump* o registra. 560 linhas (2 × 14 × 20) | `scripts/webplan_2011.py` |
 | `ipc2011_resultados.csv` | Um plano válido por linha: trilha, domínio, problema, planejador (nome oficial e nome no WebPlan), custo, melhor custo da trilha e nota da IPC 2011 recalculada | `scripts/webplan_2011.py` |
+| `ipc2018_resultados.csv` | Uma execução por linha, IPC 2018, trilhas ótima, *satisficing* e *agile* (17.640): trilha, domínio, domínio original, `oficial` (domínio do placar oficial da trilha), problema, algoritmo, equipe, planejador, linha de base, cobertura, custo, tempo total (s), memória (KiB), erro, nota da trilha (cobertura na ótima, `sat_score`, `agl_score`) e expansões | `scripts/ipc2018.py` |
 | `brutos/` | Arquivos baixados das fontes (fora do Git) | os scripts |
 
 ## Origem
@@ -27,6 +28,7 @@ Dataset da Fase 4B, em construção. Por enquanto contém só o levantamento das
 .venv/bin/python data/ipc-2011-2023/scripts/levantar_fontes.py
 .venv/bin/python data/ipc-2011-2023/scripts/suporte_pddl_2023.py
 .venv/bin/python data/ipc-2011-2023/scripts/webplan_2011.py
+.venv/bin/python data/ipc-2011-2023/scripts/ipc2018.py
 ```
 
 Os scripts baixam os arquivos para `brutos/` só se ainda não estiverem lá.
@@ -35,3 +37,5 @@ Os scripts baixam os arquivos para `brutos/` só se ainda não estiverem lá.
 
 - `execucoes_resolvidas` de 2018 conta as execuções com `coverage` = 1, incluindo linhas de base e formulações alternativas (`-split`, `-combined`). Não é o placar oficial.
 - `planejadores` exclui as linhas de base (nomes com `baseline`).
+- `ipc2018_resultados.csv`: o placar oficial usa 10 domínios por trilha; as linhas com `oficial` = `não` são as formulações alternativas (`caldera`, `caldera-split`, `organic-synthesis`, `organic-synthesis-split`) e, na ótima, o flashfill. O script confere, para cada algoritmo, cobertura, nota e contagens de erro contra a tabela *Summary* do relatório final e falha se algo não bater.
+- `erro` = `whitelisted-error` (2.314 execuções) é uma categoria do relatório de 2018 cujo critério não está documentado nos arquivos baixados `[A CONFIRMAR]`. Não tratar como "não suporta" sem confirmar.

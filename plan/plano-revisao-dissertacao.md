@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.48 |
+| Versão deste documento | 0.49 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -322,7 +322,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - [x] Levantar o que cada IPC publicou (resultados por instância, limites, hardware, domínios, planejadores) — 27/09/2026, `docs/resultados-ipc-2011-2023.md`
 - [ ] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar — metadados de `ferber2019ipc` e `ferber2022explainable` reconferidos em 27/09/2026; promoção aguarda o autor
-- [ ] Montar o dataset em `data/` com `README.md` de origem e método
+- [ ] Montar o dataset em `data/` com `README.md` de origem e método — em curso: 2011 (WebPlan) e 2018 por instância em `data/ipc-2011-2023/`, ambos validados contra o placar oficial (27/09/2026); falta o recorte (decisão do autor) e 2023 por domínio
 - [ ] Classificar os planejadores na taxonomia e decidir a regra dos portfólios
 - [ ] Extrair as características dos domínios
 - [ ] Analisar e montar o mapa característica × técnica; responder Q5
@@ -335,6 +335,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 **Notas:**
 
 - 27/09/2026 — Fase iniciada com a Fase 3 ainda em curso (Nível 3 no GCP), por decisão do autor. Só a comparação com a Fase 3 depende do Nível 3.
+- 27/09/2026 — **Atualização do mesmo dia:** a nota abaixo ficou desatualizada. 2011 foi recuperada por instância (WebPlan, custo sem tempo); 2014 tem totais por trilha de todos os planejadores (`vallati2018what`) e o PDDL; 2023 tem os dados por instância sob pedido. Estado corrente em `docs/resultados-ipc-2011-2023.md`.
 - 27/09/2026 — Levantamento das fontes (`docs/resultados-ipc-2011-2023.md`): **só a IPC 2018 tem resultados por instância acessíveis**; 2011 e 2023 só por domínio; 2014 só o total dos 5 primeiros por trilha (os arquivos de resultados de 2011 e 2014 saíram do ar e não foram arquivados). Fonte derivada por instância: IBM/Delfi (`ferber2019ipc`), 17 planejadores ótimos, 2.439 tarefas de 1998–2018. O Planner Museum não publicou dados por instância.
 
 ---
@@ -617,6 +618,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Leitura do texto integral de `vallati2018what` (PDF do autor): nota reescrita; `eid` e páginas no `.bib`; levantamento da 4B atualizado | Trechos literais copiados do PDF; números conferidos contra as tabelas do artigo; três inconsistências internas do artigo registradas na nota; metadados de López et al. (2015) conferidos no Crossref |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Verificação do site da IPC 2023 e dos *slides*; script de suporte a PDDL declarado (65 receitas) | Somas das tabelas conferidas; contagem de receitas conferida com os *slides* (65) e com as tabelas (66 entradas, FSM em duas trilhas); extração dos rótulos repetida por dois caminhos (API do GitHub e script) com o mesmo resultado |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Recuperação dos resultados por instância da IPC 2011 a partir do *dump* do WebPlan arquivado no Software Heritage (pista do autor); script de exportação e validação | Ordem oficial reproduzida em duas trilhas e fato de `coles2012survey` conferido dentro do script (falha se não bater); *multi-core* não confere e foi excluída; erro anterior do levantamento ("*slides* com placar por domínio") encontrado ao renderizar a página e corrigido |
+| 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Conferência dos *slides* e do *booklet* da IPC 2014; inclusão de três entradas no `candidatas.bib`; exportação dos resultados por execução da IPC 2018 (`scripts/ipc2018.py`) | Metadados das entradas tirados do PDF do *booklet*; números de *features* (35 e 65) conferidos no texto; somas de cobertura, nota e erros de cada algoritmo de 2018 conferidas contra a tabela *Summary* do relatório oficial dentro do script (falha se não bater); correção do levantamento sobre variantes do `settlers` |
 
 ---
 
@@ -718,3 +720,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.46 | 27/09/2026 | IPC 2011 por instância recuperada do WebPlan (Software Heritage), validada contra a ordem oficial; correção: os *slides* de 2011 não têm números |
 | 0.47 | 27/09/2026 | IPC 2014: *slides* e *booklet* dos participantes conferidos (sem resultados por domínio; *hardware* de 2014 registrado; *booklet* como fonte para a 4D e a regra dos portfólios) |
 | 0.48 | 27/09/2026 | Nível 3 concluído (EXP-05): 3.390 execuções no GCP, 50 de 63 pares iguais a 2010; G25 ampliado (domínio do Satellite de 2010) e G26 (chamadas de 2010 no TPP e no Pathways); VM apagada |
+| 0.49 | 27/09/2026 | Fase 4B: *booklet* de 2014 e resumos do IBaCoP e do AllPACA no `candidatas.bib`; resultados por execução da IPC 2018 exportados e validados contra o relatório oficial; ZIP de 2014 movido para `brutos/` |
