@@ -204,6 +204,12 @@ Fechar dizendo que a aplicação é uma agenda empírica. Não houve piloto, nã
 
 Essas frases são material de trabalho, não texto final. A redação do capítulo deve incorporar a síntese final da 4B e passar pela revisão de estilo e de referências da Fase 6.
 
+## 12. Ampliação dirigida de evidência em engenharia de software com IA
+
+Uma busca complementar identificou fontes que tornam a formulação mais concreta sem mudar seu estatuto. A principal evolução é separar a decisão em **triagem pré-agente**, **escalonamento após exploração parcial** e **orquestração**. [HIPÓTESE] Essa decomposição é mais adequada do que um seletor estático porque acomoda tanto características iniciais da tarefa quanto sinais produzidos durante a execução — testes, trajetória, custo, incerteza e necessidade de revisão.
+
+O memorando [curadoria-fontes-se-ia.md](curadoria-fontes-se-ia.md) registra a matriz de evidências e os limites de cada nova fonte. Elas permanecem fora desta lista de referências até aprovação do autor; assim, esta seção não altera a escada de inferência nem transforma preprints em evidência estabelecida. Se as fontes prioritárias forem aprovadas, a inclusão recomendada é uma subseção sobre **política de escalonamento**, não uma alegação de seletor pronto.
+
 ## Referências usadas
 
 - @chen2023frugalgpt

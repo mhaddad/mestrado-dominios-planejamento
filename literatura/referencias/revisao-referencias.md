@@ -279,7 +279,17 @@ As 122 aprovadas pelo autor, mais 2 obras confirmadas depois, pelos mesmos crit�
 - [x] `wolpert1997no` — WOLPERT, D. H.; MACREADY, W. G. No free lunch theorems for optimization. IEEE Transactions on Evolutionary Computation, v. 1, n. 1, p. 67–82, 1997. Institute of Electrical and Electronics Engineers (IEEE). Disponível em: <https://doi.org/10.1109/4235.585893>.
 - [x] `wu2024large` — WU, X.; ZHONG, Y.; WU, J.; JIANG, B.; TAN, K. C. Large Language Model-Enhanced Algorithm Selection: Towards Comprehensive Algorithm Representation. Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence (IJCAI 2024).Anais... . p.5235–5244, 2024. International Joint Conferences on Artificial Intelligence Organization. Disponível em: <https://doi.org/10.24963/ijcai.2024/579>.
 
-### E8 — IA no desenvolvimento de software (15)
+### E8 — IA no desenvolvimento de software (19)
+
+- [ ] `becattini2025sallma` — BECATTINI, M.; VERDECCHIA, R.; VICARIO, E. SALLMA: A Software Architecture for LLM-Based Multi-Agent Systems. 2025 IEEE/ACM International Workshop on New Trends in Software Architecture (SATrends). Anais... p. 5–8, 2025. IEEE. Disponível em: <https://doi.org/10.1109/SATrends66715.2025.00006>.
+  - **Ressalva:** artigo de workshop revisado por pares; propõe arquitetura e prova de conceito, não demonstra seleção de configuração de agentes de código.
+  - **Citações:** 0 citações · ainda não citado em capítulo.
+- [ ] `chen2026risa` — CHEN, K.; NIAN, J.; CAO, Y.; JIANG, Y. Disagree to Explore, Agree to Commit: Routing-Guided Test-Time Scaling for Software Agents. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2608.22191>.
+  - **Ressalva:** preprint recente; avalia trajetórias e arbitragem de *patches* no SWE-bench Verified, não roteamento entre configurações em ambiente de trabalho.
+  - **Citações:** 0 citações · ainda não citado em capítulo.
+- [ ] `fan2026dependencyrouter` — FAN, L.; YIN, J.; CHEN, Y. When Should Dependency Updates Invoke Repair Agents? A Lightweight Routing Study. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2609.25911>.
+  - **Ressalva:** preprint muito recente e recorte estreito; é a evidência mais próxima de uma triagem pré-agente em manutenção de software.
+  - **Citações:** 0 citações · ainda não citado em capítulo.
 
 - [x] `cui2024effects` — CUI, K. Z.; DEMIRER, M.; JAFFE, S.; et al. The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers. Management Science, 2026. Institute for Operations Research and the Management Sciences (INFORMS). Disponível em: <https://doi.org/10.1287/mnsc.2025.00535>.
   - Verificação: O registro consultado (SSRN) é posted-content, não revisado por pares. Existe versão publicada: Management Science, 2026, DOI 10.1287/mnsc.2025.00535 (INFORMS). O nome do primeiro autor aparece como "Cui, Kevin Zheyuan" …
@@ -304,6 +314,9 @@ As 122 aprovadas pelo autor, mais 2 obras confirmadas depois, pelos mesmos crit�
 - [x] `wu2023autogen` — WU, Q.; BANSAL, G.; ZHANG, J.; et al. AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations. First Conference on Language Modeling (COLM 2024).Anais... , 2024. Disponível em: <https://openreview.net/forum?id=BAakY1hNKS>.
   - Verificação: Existe versão publicada: COLM 2024 (Conference on Language Modeling), sem DOI (COLM não emite DOI). O título da versão publicada usa "Conversations" (plural); o preprint arXiv usa "Conversation" (singular). BibTeX gerado…
 - [x] `xia2025demystifying` — XIA, C. S.; DENG, Y.; DUNN, S.; ZHANG, L. Demystifying LLM-Based Software Engineering Agents. Proceedings of the ACM on Software Engineering, v. 2, n. FSE, p. 801–824, 2025. Association for Computing Machinery (ACM). Disponível em: <https://doi.org/10.1145/3715754>.
+- [ ] `tourad2026multillm` — CHEIKH TOURAD, M.; LACHGAR, M. Multi-LLM Prototype: Open-source Software for Adaptive Orchestration, Conflict Resolution, and Cost-aware Routing across Heterogeneous Large Language Models. SoftwareX, v. 35, 102782, 2026. Disponível em: <https://doi.org/10.1016/j.softx.2026.102782>.
+  - **Ressalva:** artigo em periódico, mas infraestrutura geral de múltiplos LLMs; não avalia tarefas de engenharia de software.
+  - **Citações:** 0 citações · ainda não citado em capítulo.
 - [x] `yang2024sweagent` — YANG, J.; JIMENEZ, C.; WETTIG, A.; et al. SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering. In: A. Globerson; L. Mackey; D. Belgrave; et al. (Org.); Advances in Neural Information Processing Systems 37 (NeurIPS 2024).Anais... . v. 37, p.50528–50652, 2024. Curran Associates, Inc. Disponível em: <https://proceedings.neurips.cc/paper_files/paper/2024/file/5a7c947568c1b1328ccc5230172e1e7c-Paper-Conference.pdf>.
   - Verificação: Existe versão publicada: NeurIPS 2024 (Advances in Neural Information Processing Systems 37), DOI 10.52202/079017-1601, p. 50528-50652. BibTeX gerado a partir da versão publicada (NeurIPS), conforme exemplo citado no pro…
 

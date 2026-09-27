@@ -21,3 +21,7 @@
 
 - A analogia entre planejamento e desenvolvimento de software é uma hipótese de trabalho, não evidência de causalidade ou eficácia.
 - Um estudo futuro exigirá decisão própria, protocolo, proteção de dados e critérios de avaliação que incluam qualidade, custo e segurança — não só taxa de conclusão.
+
+## Curadoria complementar
+
+Além das fontes já citáveis na síntese e no dossiê, a [curadoria dirigida](relatorio/curadoria-fontes-se-ia.md) separa evidência sobre triagem pré-agente, escalonamento por trajetória e orquestração multiagente. As novas fontes ainda são candidatas: não entram no capítulo até a aprovação bibliográfica do autor.

@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.69 |
+| Versão deste documento | 0.70 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B em andamento · 🟡 Fase 5 exploratória iniciada em 27/09/2026 |
 
 ---
@@ -373,6 +373,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Revisar as fontes já verificadas dos eixos E7 e E8 sobre roteamento, orquestração e avaliação de agentes de código — 8 chaves citáveis conferidas por `checar_citacoes.py` (27/09/2026)
 - [x] Mapear oportunidades de pesquisa e aplicação, distinguindo o que é sustentado por evidência do que depende de validação futura — síntese exploratória, seção 6 (27/09/2026)
 - [x] Elaborar uma agenda de pesquisa com possíveis desenhos empíricos, sem iniciar piloto — síntese exploratória, seções 5–6 (27/09/2026)
+- [x] Ampliar a curadoria com fontes primárias sobre triagem, roteamento por trajetória e orquestração de agentes em engenharia de software — `ponte-software/relatorio/curadoria-fontes-se-ia.md`; quatro candidatas novas registradas, ainda não citáveis (27/09/2026)
 - [ ] Incorporar a síntese para a Ponte da Fase 4B antes de fechar a interpretação
 
 **Entregáveis:** síntese exploratória · mapa de conexões e limites · hipóteses testáveis · oportunidades e agenda de pesquisa.
@@ -383,6 +384,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - 27/09/2026 — Síntese exploratória preliminar concluída em `ponte-software/relatorio/sintese-exploratoria.md`. Há evidência de heterogeneidade por tarefa em agentes de código e de roteamento de LLMs; a transferência para um seletor de agentes em software permanece hipótese. Os resultados negativos das Fases 3 e 4 entram como limite: *features* estruturais estáticas não devem ser presumidas suficientes. Falta integrar a síntese da 4B antes de fechar a Fase 5.
 - 27/09/2026 — Dossiê para o futuro Capítulo 7 em `ponte-software/relatorio/dossie-capitulo-7.md`: tese editorial, escada de inferência, conexão com os resultados negativos, três níveis de aplicabilidade, auditoria conceitual, hipóteses falseáveis e arquitetura de redação. Não é capítulo final e aguarda a síntese da 4B.
+- 27/09/2026 — Curadoria dirigida de fontes de engenharia de software com IA em `ponte-software/relatorio/curadoria-fontes-se-ia.md`: a formulação é refinada de seletor estático para política sequencial de triagem, escalonamento e orquestração. Quatro fontes primárias novas foram registradas como candidatas; preprints e infraestrutura adjacente não sustentam, por si, aplicabilidade industrial.
 
 ---
 
@@ -653,6 +655,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-23, complemento: 7 pares em sequência; US$ 0,45 | Modo sequencial commitado antes das chamadas; trava de US$ 12,80 respeitada (uso final US$ 12,49); os 32 pares reavaliados pelo VAL; resposta de formato do DeepSeek (Gripper) conferida no registro bruto |
 | 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `chief-editor` | Consolidação exploratória da Ponte a partir das sínteses E7/E8, relatórios das Fases 3–4 e EXP-21; atualização do README da fase | Oito chaves verificadas por `checar_citacoes.py`; fatos, inferências e hipóteses separados no relatório; sem fontes fora do `referencias.bib`; integração da 4B permanece pendente |
 | 27/09/2026 | 5 | Codex (GPT-5) + skills editoriais `chief-editor` e `conceptual-challenger` | Aprofundamento da Ponte em dossiê para o Capítulo 7: escada de inferência, aplicabilidade, hipóteses concorrentes, alegações permitidas/proibidas e arquitetura de redação | Treze chaves verificadas por `checar_citacoes.py`; auditoria conceitual separa associação, causalidade e aplicação; não há alegação de produto, piloto ou eficácia local |
+| 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Busca dirigida e curadoria de fontes primárias sobre roteamento/escalonamento de agentes de software; registro de candidatas e atualização do dossiê | Quatro registros primários novos em `candidatas.bib` e no protocolo; matriz distingue evidência direta, arquitetura adjacente e hipótese; nenhuma candidata foi promovida ou citada no capítulo |
 
 ---
 
@@ -777,3 +780,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.67 | 27/09/2026 | Fase 5: síntese exploratória preliminar e README da Ponte atualizados; conexão com agentes de código e roteamento consolidada com limites explícitos; integração da síntese da 4B permanece pendente |
 | 0.68 | 27/09/2026 | Fase 5 aprofundada em dossiê para o futuro Capítulo 7: escada de inferência, aplicabilidade em três níveis, auditoria conceitual, hipóteses falseáveis e arquitetura de redação; síntese da 4B ainda pendente |
 | 0.69 | 27/09/2026 | Fase 4B: EXP-21 final (Q5; permutação e Holm) e EXP-24 (R-29 por instância); ligação de 2011 completa |
+| 0.70 | 27/09/2026 | Fase 5: curadoria dirigida de fontes de engenharia de software com IA; quatro candidatas primárias registradas, e a Ponte refinada para triagem, escalonamento por sinais de execução e orquestração — sem promover preprints nem alegar eficácia local |
