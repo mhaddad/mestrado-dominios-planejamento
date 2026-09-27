@@ -52,6 +52,8 @@ Contagens de 2018, 2023 e IBM: `data/ipc-2011-2023/scripts/levantar_fontes.py` �
 
 - Relatórios publicados: `vallati2018what` (KER, citável, lido em texto integral; ver a nota de leitura) e o artigo da AI Magazine (Vallati et al., 2015), **fora dos `.bib`**.
 - `vallati2018what` tem os totais por trilha de todos os planejadores (Tabelas 3–7), a complementaridade por portfólio-oráculo (Tabela 8) e agregados por domínio em figuras. **Não tem resultados por domínio e planejador.** Há inconsistências internas (Tabela 8 × Tabela 3), registradas na nota.
+- **`benchmarksV1.1.zip` (fornecido pelo autor em 27/09/2026, em `data/IPC-2014/`):** idêntico à cópia arquivada do site oficial (SHA-256 `477c2b7c…172635`, conferido em 27/09/2026). Tem **só PDDL** (1.438 arquivos: domínios e problemas das trilhas `seq-sat`, `seq-opt`, `seq-agl`, `seq-mco` e `tempo-sat`), **nenhum resultado**. Serve para extrair as características dos domínios de 2014. `[FATO]`
+- Na trilha ótima do V1.1, Barman tem 14 problemas, Maintenance 5 e Tetris 17: são 20 menos as tarefas insolúveis que `vallati2018what` (p. 23) relata (6, 15 e 3). A versão 1.1 retirou as insolúveis. As demais trilhas têm 20 por domínio; o Openstacks traz um arquivo de domínio por problema. `[FATO]`
 - Os PDFs `table_seq_*.pdf` informam que recursos do PDDL cada planejador suporta. É útil para separar "não resolveu" de "não suporta" (cuidado listado no plano).
 
 ### IPC 2023 (por domínio; por instância sob pedido)
