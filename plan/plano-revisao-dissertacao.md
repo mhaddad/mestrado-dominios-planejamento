@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.53 |
+| Versão deste documento | 0.54 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -282,10 +282,10 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Atividades**
 
-- [ ] Selecionar subconjunto de domínios
-- [ ] Definir modelos e congelar versões
-- [ ] Rodar X1–X4 com registro de custos e *prompts*
-- [ ] Analisar e posicionar LLMs no mapa das técnicas
+- [x] Selecionar subconjunto de domínios — 41 domínios do Nível 4 no X3; p01 de 8 domínios no X1; p05 de 4 no X4; 6 do LLM+P no X2
+- [x] Definir modelos e congelar versões — Claude Sonnet 5, GPT-6 Sol, Gemini 3.1 Pro e DeepSeek V4 Pro, via OpenRouter; raciocínio *medium*, 16.000 *tokens*
+- [x] Rodar X1–X4 com registro de custos e *prompts* — EXP-14 a EXP-18; US$ 10,51 de US$ 12
+- [ ] Analisar e posicionar LLMs no mapa das técnicas — 🟡 `llm/relatorio-fase4.md` (rascunho de IA): LLMs entram como técnica de planejamento com verificador; como tradutores, fora do mapa (modelagem); como seletores, sem ganho. **Aguarda validação do autor**
 
 **Entregáveis:** resultados X1–X4 · resposta a Q3
 
@@ -609,6 +609,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-19: método de 2010 com as notas do Nível 3 | Regra da nota conferida contra as 100 notas de 2010 (99 iguais); reuso do método do Nível 2 sem alteração; maior mudança (Blackbox × Logistics) conferida nos logs |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-20: qualidade dos planos do Nível 3 | Leitores de plano conferidos entre planejadores no mesmo problema; resumo do LPG-TD conferido contra 765 planos; casos extremos (R, SATPlan) conferidos nos logs |
 | 27/09/2026 | 3 | Claude Code (claude-opus-5-5) | Relatório da Fase 3: síntese de Q1 e Q2 a partir dos EXP-03 a EXP-20 | Cada número tirado de um registro de experimento; chaves citadas conferidas no `referencias.bib`; respostas marcadas como hipótese até a validação do autor |
+| 27/09/2026 | 4 | Claude Code (claude-opus-5-5) | Relatório da Fase 4: resposta a Q3 a partir dos EXP-14 a EXP-18 e proposta de posição dos LLMs na taxonomia 4D | Cada número tirado de um registro de experimento; chaves citadas conferidas no `referencias.bib`; comparação com seletores da literatura marcada como não feita; resposta marcada como hipótese até a validação do autor |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-06 (R-10: método de 2010 com a taxonomia em 4 dimensões) e EXP-07 (R-25: extrator das métricas de 2010 a partir do PDDL) | Codificação da taxonomia rastreada ao §3 de `taxonomia-tecnicas.md`, com 5 decisões (C1–C5) aprovadas pelo autor; regras do extrator fixadas antes da comparação; divergências conferidas nos arquivos PDDL. **Revisão do autor pendente** |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-08: Nível 2, R-11, R-12, R-13 e R-15 | Classes alteradas e efeito nas notas previstas conferidos por script; critérios de Agregação contados nos 13 XML e comparados com a Tabela 9 |
 | 26/09/2026 | 3 | Claude Code (claude-opus-5-5) | EXP-09: R-14, perda em relação ao *virtual best* | Perdas conferidas contra as notas observadas de `validacao_ranking.csv` (máximo, empates, perda ao acaso) |
@@ -733,3 +734,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.51 | 27/09/2026 | Fase 3: checkboxes atualizados; R-19 decidido; R-22 feito (EXP-20, qualidade dos planos); R-23, R-30 e R-31 dispensados; falta a síntese de Q1 e Q2 |
 | 0.52 | 27/09/2026 | Relatório da Fase 3 (`experimentos/relatorio-fase3.md`) com as respostas a Q1 e Q2, para validação do autor; R-27 feito por domínio |
 | 0.53 | 27/09/2026 | **Fase 3 concluída**: Q1 e Q2 validadas pelo autor; R-29 por instância passa para a Fase 4B; restaurada no painel a linha da Fase 6, substituída por engano pela ação 6 no commit `535131c` |
+| 0.54 | 27/09/2026 | Fase 4: checkboxes atualizados; relatório com a resposta a Q3 e a posição dos LLMs na taxonomia (`llm/relatorio-fase4.md`), para validação do autor |
