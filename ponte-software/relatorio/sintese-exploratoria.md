@@ -22,6 +22,8 @@ Q4 pergunta quais conexões, oportunidades e hipóteses ligam o ajuste entre car
 
 O que foi feito aqui foi uma consolidação das fontes verificadas dos eixos E7 e E8, dos relatórios das Fases 3 e 4 e do EXP-21 da Fase 4B. A síntese da 4B ainda está incompleta; por isso este documento é preliminar e deverá ser integrado antes do encerramento da fase.
 
+O [dossiê para o Capítulo 7](dossie-capitulo-7.md) aprofunda a arquitetura argumentativa, as objeções conceituais, os limites de inferência e os subsídios de redação.
+
 ## 2. O que já é evidência
 
 ### 2.1 O desempenho de agentes de código varia com a tarefa e o contexto
