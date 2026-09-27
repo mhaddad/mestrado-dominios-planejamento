@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.43 |
+| Versão deste documento | 0.44 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
@@ -610,6 +610,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-17: X4, ciclo LLM + VAL nas instâncias p05; US$ 2,35 | Checagem do VAL reforçada (linha exata) e X1 reavaliado sem mudança; conversas cortadas pela trava marcadas; alarme falso do VAL investigado (meta satisfeita no estado inicial) |
 | 26–27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-18: X2, LLM como tradutor; US$ 0,65; fechamento da Fase 4 (US$ 10,51 no total, conferido pela soma dos registros) | Dois artefatos da medida (assinatura das ações; checagem de tipos do VAL) e dois erros do classificador encontrados e corrigidos antes do registro |
 | 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Levantamento das fontes de resultados das IPCs 2011–2023 (sites oficiais, Internet Archive, GitHub, Zenodo); script de contagem; reconferência de metadados de `ferber2019ipc` e `ferber2022explainable` | Contagens de 2018, 2023 e IBM geradas por script e conferidas com os totais publicados (18 × 280 = 5.040; 2.439 × 17); números de 2011 e 2014 tirados dos *slides*, sem script; indisponibilidade dos arquivos de 2011 e 2014 conferida no DNS e no índice do Internet Archive |
+| 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Leitura do texto integral de `vallati2018what` (PDF do autor): nota reescrita; `eid` e páginas no `.bib`; levantamento da 4B atualizado | Trechos literais copiados do PDF; números conferidos contra as tabelas do artigo; três inconsistências internas do artigo registradas na nota; metadados de López et al. (2015) conferidos no Crossref |
 
 ---
 
@@ -706,3 +707,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.41 | 26/09/2026 | EXP-17 (X4, parcial): o retorno do VAL recupera 3 de 6 falhas; LLMs resolvem o Floortile p05; acumulado US$ 8,92; X2 preparado, sem rodar |
 | 0.42 | 27/09/2026 | EXP-18 (X2); X4 completo; **Fase 4 concluída** (X1–X4 registrados; US$ 10,51 de US$ 12) |
 | 0.43 | 27/09/2026 | **Fase 4B iniciada** em paralelo ao Nível 3 (decisão do autor); levantamento das fontes das IPCs 2011–2023 (`docs/resultados-ipc-2011-2023.md`, `data/ipc-2011-2023/`) |
+| 0.44 | 27/09/2026 | `vallati2018what` lido em texto integral: a IPC 2014 só tem totais por trilha publicados; protocolo de seleção de instâncias pelos competidores registrado como viés para a 4B |
