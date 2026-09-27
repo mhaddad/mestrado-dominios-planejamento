@@ -20,6 +20,7 @@ resto.
 
 Ligação na saída:
   sha1    o SHA-1 do problem.pddl do WebPlan é igual ao do arquivo local (conferido)
+  sha1+numero  o SHA-1 casa com mais de um arquivo idêntico da pasta; vale o do número
   texto   o SHA-1 difere, mas o problem.pddl do WebPlan (baixado para brutos/2011/webplan/
           problemas/) é igual ao arquivo do número original depois de tirar comentários,
           espaços e diferenças de maiúsculas
@@ -123,7 +124,11 @@ def main():
         if sha1:
             candidatos = [a for a in locais.get(sha1, []) if a.parent == pasta(p["trilha"], p["dominio"])]
             texto = TEXTOS / f"{sha1}.pddl"
-            if len(candidatos) == 1:
+            if len(candidatos) > 1 and numero in candidatos:
+                # Arquivos idênticos na mesma pasta (ex.: parcprinter-opt11 p11 e p18): o SHA-1
+                # não decide; vale o número, que é um dos candidatos.
+                arquivo, ligacao = numero, "sha1+numero"
+            elif len(candidatos) == 1:
                 arquivo, ligacao = candidatos[0], "sha1"
                 if numero is not None and numero != arquivo:
                     divergencias.append((p["trilha"], p["dominio"], p["numero"], arquivo.name, numero.name))
