@@ -9,9 +9,9 @@
 | Autor | Matheus Haddad |
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
-| Última atualização | 26/09/2026 |
-| Versão deste documento | 0.42 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso |
+| Última atualização | 27/09/2026 |
+| Versão deste documento | 0.43 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟡 Fase 3 em curso · 🟢 Fase 4 concluída em 27/09/2026 · 🟡 Fase 4B iniciada em 27/09/2026 |
 
 ---
 
@@ -53,7 +53,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas | 🟡 | 24/09/2026 | | Dataset, código, resultados |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
-| 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | ⚪ | | | Dataset, mapa característica × técnica, resposta a Q5 |
+| 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟡 | 27/09/2026 | | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Testar o princípio de ajuste no Ateliê | 6–8 semanas (começa depois da Fase 4B) | ⚪ | | | Relatório do piloto + decisão sobre produto |
 | 6 | Decidir onde rodar os experimentos da Fase 3 (Linux/x86) | 3 | Matheus | antes da Fase 3 | 🟢 máquina virtual no OrbStack, neste Mac (Apple M4, arm64). **Ressalva:** os binários de 2010 são ELF 32-bit Intel 80386; testar primeiro se rodam numa máquina amd64 do OrbStack (a emulação x86 do Rosetta pode não cobrir 32 bits). Tempos sob emulação não se comparam com os de 2010: medir cobertura sob o mesmo limite para todos e, onde houver código-fonte, compilar nativo |
 
@@ -320,8 +320,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Atividades**
 
-- [ ] Levantar o que cada IPC publicou (resultados por instância, limites, hardware, domínios, planejadores)
-- [ ] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar
+- [x] Levantar o que cada IPC publicou (resultados por instância, limites, hardware, domínios, planejadores) — 27/09/2026, `docs/resultados-ipc-2011-2023.md`
+- [ ] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar — metadados de `ferber2019ipc` e `ferber2022explainable` reconferidos em 27/09/2026; promoção aguarda o autor
 - [ ] Montar o dataset em `data/` com `README.md` de origem e método
 - [ ] Classificar os planejadores na taxonomia e decidir a regra dos portfólios
 - [ ] Extrair as características dos domínios
@@ -333,6 +333,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 **Critério de conclusão:** análise reprodutível a partir do repositório e síntese para a Ponte revisada pelo autor.
 
 **Notas:**
+
+- 27/09/2026 — Fase iniciada com a Fase 3 ainda em curso (Nível 3 no GCP), por decisão do autor. Só a comparação com a Fase 3 depende do Nível 3.
+- 27/09/2026 — Levantamento das fontes (`docs/resultados-ipc-2011-2023.md`): **só a IPC 2018 tem resultados por instância acessíveis**; 2011 e 2023 só por domínio; 2014 só o total dos 5 primeiros por trilha (os arquivos de resultados de 2011 e 2014 saíram do ar e não foram arquivados). Fonte derivada por instância: IBM/Delfi (`ferber2019ipc`), 17 planejadores ótimos, 2.439 tarefas de 1998–2018. O Planner Museum não publicou dados por instância.
 
 ---
 
@@ -556,6 +559,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | X3: rodar a condição com nomes dos planejadores, para medir quanto os modelos lembram dos resultados públicos | Decisão do autor | 4 |
 | 26/09/2026 | X4 em instâncias maiores (p05), restrito aos 4 domínios de técnica antiga por orçamento; trava própria de US$ 8,90 para reservar o X2 | Escolha do autor (instâncias maiores); recorte e trava pelo Coordenador, dentro do teto de US$ 10 | 4 |
 | 26/09/2026 | Teto da Fase 4 elevado de US$ 10 para **US$ 12** (limite da chave no OpenRouter); travas dos scripts em US$ 11,50. Uso: rodar o X2 e completar as conversas do X4 cortadas pela trava | Decisão do autor | 4 |
+| 27/09/2026 | **A Fase 4B começa com a Fase 3 ainda em curso** (Nível 3 no GCP). Só a comparação final com a Fase 3 espera o Nível 3 | Decisão do autor: aproveitar o tempo de espera do GCP | 3, 4B |
 
 ---
 
@@ -605,6 +609,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-16: X1, LLM como planejador; VAL e Fast Downward compilados no Mac; US$ 1,21 | Validador testado com plano embaralhado e incompleto; referência do LAMA validada; falhas de formato separadas das de conteúdo |
 | 26/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-17: X4, ciclo LLM + VAL nas instâncias p05; US$ 2,35 | Checagem do VAL reforçada (linha exata) e X1 reavaliado sem mudança; conversas cortadas pela trava marcadas; alarme falso do VAL investigado (meta satisfeita no estado inicial) |
 | 26–27/09/2026 | 4 | Claude Code (claude-opus-5-5); os 4 modelos via OpenRouter | EXP-18: X2, LLM como tradutor; US$ 0,65; fechamento da Fase 4 (US$ 10,51 no total, conferido pela soma dos registros) | Dois artefatos da medida (assinatura das ações; checagem de tipos do VAL) e dois erros do classificador encontrados e corrigidos antes do registro |
+| 27/09/2026 | 4B | Claude Code (claude-opus-5-5) | Levantamento das fontes de resultados das IPCs 2011–2023 (sites oficiais, Internet Archive, GitHub, Zenodo); script de contagem; reconferência de metadados de `ferber2019ipc` e `ferber2022explainable` | Contagens de 2018, 2023 e IBM geradas por script e conferidas com os totais publicados (18 × 280 = 5.040; 2.439 × 17); números de 2011 e 2014 tirados dos *slides*, sem script; indisponibilidade dos arquivos de 2011 e 2014 conferida no DNS e no índice do Internet Archive |
 
 ---
 
@@ -700,3 +705,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.40 | 26/09/2026 | EXP-16 (X1): 28 de 32 planos válidos nas instâncias menores; acumulado US$ 6,56 |
 | 0.41 | 26/09/2026 | EXP-17 (X4, parcial): o retorno do VAL recupera 3 de 6 falhas; LLMs resolvem o Floortile p05; acumulado US$ 8,92; X2 preparado, sem rodar |
 | 0.42 | 27/09/2026 | EXP-18 (X2); X4 completo; **Fase 4 concluída** (X1–X4 registrados; US$ 10,51 de US$ 12) |
+| 0.43 | 27/09/2026 | **Fase 4B iniciada** em paralelo ao Nível 3 (decisão do autor); levantamento das fontes das IPCs 2011–2023 (`docs/resultados-ipc-2011-2023.md`, `data/ipc-2011-2023/`) |
