@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.77 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · Fase 6 a iniciar |
+| Versão deste documento | 0.78 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · 🟡 Fase 6 em curso desde 28/09/2026 (escrita até 02/10/2026) |
 
 ---
 
@@ -112,7 +112,7 @@ Desdobramentos possíveis, não obrigatórios:
 3. **Registrar ferramenta, modelo, versão e finalidade** de todo uso substantivo (seção 11). Isso protege a transparência ao compartilhar o trabalho.
 4. **A IA propõe, o autor decide.** Escolhas de método, interpretação e conclusões são humanas.
 5. **Congelar versões** de modelos usados em experimentos (Fase 4) e registrar datas, porque os resultados mudam com novas versões.
-6. **Texto final na voz do autor.** Rascunhos gerados por IA são material de trabalho, não texto final.
+6. **Autoria declarada.** Por decisão do autor (28/09/2026), a IA redige a dissertação inteira e o autor revisa e ajusta ao final; nada é texto final antes dessa revisão, e o uso de IA é declarado no trabalho, com o uso real.
 
 ### Ferramentas previstas
 
@@ -413,14 +413,14 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Atividades**
 
-- [ ] Validar a conversão do Markdown para o documento final ABNT (Pandoc, estilo CSL, modelo de referência) e decidir a montagem final; ver `redacao/README.md`
-- [ ] Conferir a edição vigente das normas ABNT e o manual de normalização da FEI
+- [x] Validar a conversão do Markdown para o documento final ABNT (Pandoc, estilo CSL, modelo de referência) e decidir a montagem final — 28/09/2026: padrão do guia da FEI em `redacao/montagem/` (modelo `.docx`, filtro `fei.lua`, `montar.py`) e CSL `redacao/estilos/abnt-fei.csl`; saída `.docx`, com sumário e listas como campos do Word
+- [x] Conferir a edição vigente das normas ABNT e o manual de normalização da FEI — 28/09/2026: o autor decidiu seguir o guia da FEI (revisão de 21/07/2016), resumido em `redacao/README.md`
 - [ ] Redigir capítulos a partir dos entregáveis das fases anteriores — rascunhos de IA prontos: 1 (Introdução, com seções pendentes dos resultados), 2 (Fundamentos) e 3 (Revisitando 2010); os capítulos 4 a 8 dependem das Fases 3 a 5. Ao redigir: achados G22 a G26 no capítulo de método, com remissão no capítulo 3 (decisão de 27/09/2026); capítulo 2 com os resultados do capítulo 5
 - [ ] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências)
 - [ ] Verificação final de todas as referências e números
 - [ ] Revisão de estilo na voz do autor
 - [ ] Elementos pré e pós-textuais (capa, folha de rosto, folha de aprovação, resumo e *abstract*, listas, sumário, referências) e conferência de formatação, citações e referências pela ABNT
-- [ ] Declaração do uso de IA no texto, conforme as regras da instituição
+- [ ] Declaração do uso de IA no texto — modelo do autor preenchido com o uso real em `redacao/capitulos/00-pretextuais.md` (28/09/2026); só vale depois da revisão do autor
 - [ ] Preparar resumo executivo para o orientador
 - [ ] Enviar a dissertação reescrita ao orientador por e-mail (**Marco M3**)
 - [ ] Registrar retorno e próximos passos
@@ -430,6 +430,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 **Critério de conclusão:** versão enviada e retorno registrado.
 
 **Notas:**
+
+- 28/09/2026 — Fase 6 iniciada. Decisões do autor: 4B no capítulo 5; guia da FEI; declaração de IA no modelo do autor; escrita até 02/10/2026; **a IA redige a dissertação inteira e o autor revisa ao final**. Plano de escrita e cronograma em `redacao/plano-de-escrita.md`. O CSL da UFPR, adotado em 23/09/2026, gera citações entre parênteses erradas e foi substituído pelo `abnt-fei.csl` (derivado da UFRGS).
+
 
 ---
 
@@ -593,6 +596,12 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **Ocorrência: teto da Fase 4 ultrapassado em US$ 0,08** no EXP-23 (uso da chave em US$ 12,08). A chave fica acima do limite; nenhuma chamada nova sem decisão do autor. 7 pares do EXP-23 sem chamada | A trava confere o uso antes de cada chamada, e as chamadas em paralelo já em curso passaram dela; o OpenRouter não as bloqueou. Registro do Coordenador | 4 |
 | 27/09/2026 | **Limite da chave elevado para US$ 13** para completar os 7 pares do EXP-23, em sequência (uma chamada de cada vez), com trava de US$ 12,80 | Decisão do autor | 4 |
 | 28/09/2026 | **Fase 5 concluída**: síntese exploratória e dossiê do Capítulo 7 aprovados pelo autor sem alteração; **as quatro candidatas da curadoria promovidas** (`fan2026dependencyrouter`, `chen2026risa`, `zhou2026agentasarouter`, `madeyski2026triage`), com as ressalvas registradas; `madeyski2026triage` só como hipótese com protocolo, não como evidência | Decisão do autor | 5, 6 |
+| 28/09/2026 | **Estrutura final:** 8 capítulos; a **Fase 4B entra no capítulo 5** (Resultados), ao lado da Fase 3 | Decisão do autor | 6 |
+| 28/09/2026 | **Formatação, acabamento e normas pelo guia da FEI** (biblioteca, revisão de 21/07/2016); onde o guia é omisso (citações), vale a prática de 2010. Montagem por Pandoc e script, saída `.docx` | Decisão do autor; guia anexado por ele | 6 |
+| 28/09/2026 | **Declaração de uso de IA** como nota, no modelo fornecido pelo autor, preenchida com o uso real (inclusive a redação integral pela IA) | Decisão do autor | 6 |
+| 28/09/2026 | **Escrita concluída até 02/10/2026**; revisão do autor depois | Decisão do autor | 6 |
+| 28/09/2026 | **A IA redige a dissertação inteira; o autor revisa e ajusta ao final.** Substitui o princípio 6 (texto na voz do autor) e a regra correspondente do `CLAUDE.md` | Decisão do autor | 6 |
+| 28/09/2026 | CSL `abnt-fei.csl` (derivado da variante UFRGS) no lugar da UFPR, que gera citações entre parênteses erradas; sobrenome em maiúsculas nas citações entre parênteses por filtro Lua, como em 2010 | Teste do Coordenador na montagem | 6 |
 
 ---
 
@@ -671,6 +680,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 5 | Codex (GPT-5) + skills editoriais `chief-editor` e `source-auditor` | Integração dos resultados finais disponíveis da 4B (EXP-21 e EXP-24) na síntese e no dossiê da Ponte | Formulação calibrada contra os registros: sem ganho robusto de *features* SAS+ ou seletor por instância; exceção local marcada como indício; nenhuma inferência sobre eficácia em software |
 | 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Promoção autorizada de SALLMA e SWE-Router, leitura/conferência de fontes primárias e atualização das sínteses | SALLMA entra apenas como apoio arquitetural; SWE-Router como preprint de fronteira baseado em *benchmarks*; 10 e 14 chaves citáveis verificadas, respectivamente, na síntese e no dossiê |
 | 28/09/2026 | 5 | Claude Code (claude-opus-5-5) | Notas de leitura de `fan2026dependencyrouter` e `chen2026risa`; reescrita da nota de `madeyski2026triage`; correção da nota de `zhou2026agentasarouter`; promoção das quatro; fechamento da Fase 5 | Textos integrais baixados do arXiv e extraídos com `pdftotext`; números e trechos literais conferidos nas tabelas e seções citadas; metadados das quatro conferidos na API do arXiv; DOI declarado pelo Fan testado (sem registro); duas leituras erradas de agente encontradas e corrigidas (Madeyski sem resultado empírico; Zhou, ganho por desempenho e não pela descrição) |
+| 28/09/2026 | 6 | Claude Code (claude-opus-5-5) | Montagem no padrão da FEI (modelo `.docx`, CSL, filtro Lua, script), plano de escrita, pré-textuais com a declaração de IA | Regras transcritas do guia da FEI com a página; citações e referências testadas com chaves reais (o CSL da UFPR falhou nas citações entre parênteses e foi trocado); montagem de teste com os capítulos 1 a 3 inspecionada por script (3 seções, estilos, campos, numeração). Sem Word nem LibreOffice na máquina: o resultado visual final é conferido pelo autor |
 
 ---
 
@@ -803,3 +813,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.75 | 28/09/2026 | **Fase 4B concluída**: relatório validado pelo autor (Q5, R-29 por instância, síntese para a Ponte); síntese e dossiê da Ponte ajustados com o EXP-25 |
 | 0.76 | 28/09/2026 | Codificação do EXP-13 corrigida (FDSS11 sem *landmarks*), sem mudança nos resultados |
 | 0.77 | 28/09/2026 | **Fase 5 concluída** (revisão final do autor); quatro fontes da curadoria promovidas (`referencias.bib` com 157), com notas novas (Fan, Chen) e corrigidas (Madeyski, Zhou); registros da 4B, do R-29 e do relatório da Fase 3 atualizados |
+| 0.78 | 28/09/2026 | **Fase 6 iniciada**: decisões do autor (estrutura com a 4B no cap. 5, guia da FEI, declaração de IA, prazo de 02/10, redação integral pela IA); montagem no padrão FEI; plano de escrita |
