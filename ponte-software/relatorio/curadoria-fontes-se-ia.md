@@ -2,14 +2,14 @@
 tipo: curadoria-de-fontes
 fase: 5
 data: 2026-09-27
-status: duas-fontes-promovidas-demais-candidatas
+status: seis-fontes-promovidas
 ---
 
 # Curadoria dirigida — engenharia de software com IA, roteamento e orquestração
 
 ## Propósito e regra de uso
 
-Esta curadoria amplia a Ponte com fontes mais próximas da decisão de configurar e escalar agentes em tarefas de software. Ela não altera ainda a base argumentativa citável do Capítulo 7: as obras marcadas como candidatas estão em `candidatas.bib`, foram verificadas no registro primário, mas só entram em `referencias.bib` depois da aprovação do autor em `literatura/referencias/revisao-referencias.md`.
+Esta curadoria amplia a Ponte com fontes mais próximas da decisão de configurar e escalar agentes em tarefas de software. As seis fontes primárias desta curadoria estão no `referencias.bib`: `becattini2025sallma` e `son2026swerouter` desde 27/09/2026; `fan2026dependencyrouter`, `chen2026risa`, `zhou2026agentasarouter` e `madeyski2026triage` desde 28/09/2026, por aprovação do autor, com as ressalvas registradas em `literatura/referencias/revisao-referencias.md`.
 
 O ganho não é simplesmente adicionar referências. É separar três perguntas que a formulação inicial da ponte ainda reunia em uma só:
 
@@ -89,6 +89,7 @@ Com as duas fontes aprovadas pelo autor, o Capítulo 7 pode ganhar uma subseçã
 2. ~~Para cada fonte aprovada, produzir nota de leitura integral e extrair somente afirmações compatíveis com seu desenho e população~~ — feito em 27/09/2026; notas em `literatura/notas-de-leitura/`.
 3. ~~Revisar a escada de inferência do dossiê~~ — feito em 27/09/2026: acrescentada evidência complementar de roteamento e apoio arquitetural, preservando como hipótese a eficácia em qualquer equipe ou repositório específico.
 4. ~~Integrar a síntese final disponível da Fase 4B~~ — feito em 27/09/2026. Os EXP-21 e EXP-24 reforçam, no recorte de planejamento, a exigência de política sequencial e validação por unidade mantida fora; não demonstram que sinais estáticos sejam inúteis nem antecipam o comportamento de agentes de software.
+5. ~~Decidir as quatro candidatas restantes~~ — feito em 28/09/2026: o autor aprovou as quatro. Notas novas de `fan2026dependencyrouter` e `chen2026risa`; a nota de `madeyski2026triage` foi reescrita a partir do texto integral (o artigo propõe protocolo, sem resultado empírico) e a de `zhou2026agentasarouter` teve a leitura da Tabela 1 corrigida (o ganho vem de estatísticas de desempenho por dimensão, não da descrição da dimensão). As duas correções confirmam as leituras que esta curadoria já fazia.
 
 ## Registros primários
 

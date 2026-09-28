@@ -80,7 +80,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 - **Amostra de validação de 2010:** 3 domínios, 1 discriminante. Nenhum resultado dos Níveis 1 a 3 tem poder estatístico para distinguir o método da linha de base; as diferenças estão dentro do acaso.
 - **Validação não reexecutada:** o ranking real de Storage, Zeno-travel e Elevator é o de 2010 (decisão do autor, 27/09/2026).
 - **Comparações múltiplas:** os testes contra o melhor planejador único não foram corrigidos nos registros originais. Com a correção de Holm, nenhum seletor do EXP-12 fica significativamente pior; o método por técnica (D1 e D2, EXP-13) continua significativamente pior (`experimentos/analise/correcao_multipla.py`).
-- **Nível 4 só por domínio e só cobertura:** a seleção por instância, onde a literatura mostra ganhos, não foi testada.
+- **Nível 4 só por domínio e só cobertura:** a seleção por instância, onde a literatura mostra ganhos, não foi testada aqui. Foi testada na Fase 4B (R-29, EXP-24 e EXP-25, IPCs 2011 e 2018): com todos os planejadores, nenhum seletor por instância supera o melhor planejador único (`experimentos/relatorio-fase4b.md`, seção 4).
 - **Versões dos binários:** parte das notas do Nível 3 mede limitações das versões de 2010 (ex.: o Blackbox declara insolúveis todos os problemas do Logistics e do Depots) `[HIPÓTESE]`.
 - **Satellite** (G25) e **R no Pathways** (G26) ficam fora da comparação célula a célula com 2010.
 - **Ordem do PDDL não testada:** o controle de serialização previsto para o R-27 foi dispensado (27/09/2026, com o orientador). A hipótese da Fase 1 (a ordem da exportação do itSIMPLE confundiria o efeito do domínio) não se aplica: os planejadores de 2010 rodaram os arquivos das IPCs (`docs/benchmarks-ipc-ate-2008.md`), com exceção do domínio do Satellite (G25, origem não documentada), e as métricas UML são contagens. Fica sem medida a robustez do *ranking* de 2010 a uma ordem arbitrária do PDDL [@vallati2021importance].
@@ -96,4 +96,4 @@ Proposta, para decisão do autor:
 
 ## 9. Pendências da Fase 3
 
-- Relatório por instância (R-29): passa para a Fase 4B, que levanta os resultados por execução das IPCs.
+- ~~Relatório por instância (R-29)~~: feito na Fase 4B (EXP-24 e EXP-25).

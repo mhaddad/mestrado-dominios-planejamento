@@ -24,4 +24,4 @@
 
 ## Curadoria complementar
 
-Além das fontes já citáveis na síntese e no dossiê, a [curadoria dirigida](relatorio/curadoria-fontes-se-ia.md) separa evidência sobre triagem pré-agente, escalonamento por trajetória e orquestração multiagente. As novas fontes ainda são candidatas: não entram no capítulo até a aprovação bibliográfica do autor.
+Além das fontes já citáveis na síntese e no dossiê, a [curadoria dirigida](relatorio/curadoria-fontes-se-ia.md) separa evidência sobre triagem pré-agente, escalonamento por trajetória e orquestração multiagente. As seis fontes da curadoria foram aprovadas pelo autor e estão no `referencias.bib` (27 e 28/09/2026), com as ressalvas registradas em `literatura/referencias/revisao-referencias.md`.

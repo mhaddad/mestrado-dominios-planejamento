@@ -63,8 +63,8 @@ Para mudar qualquer decisão: troque a marca (`[x]` promove, `[ ]` não promove)
 - [ ] `aghzal2025survey` — AGHZAL, M.; PLAKU, E.; STEIN, G. J.; YAO, Z. A Survey on Large Language Models for Automated Planning., 2025. Disponível em: <https://arxiv.org/abs/2502.12435>.
   - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
   - **Citações:** 2 citações · citada 0× no capítulo
-- [ ] `madeyski2026triage` — MADEYSKI, L. Triage: Routing Software Engineering Tasks to Cost-Effective LLM Tiers via Code Quality Signals., 2026. Disponível em: <https://arxiv.org/abs/2604.07494>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+- [x] `madeyski2026triage` — MADEYSKI, L. Triage: Routing Software Engineering Tasks to Cost-Effective LLM Tiers via Code Quality Signals., 2026. Disponível em: <https://arxiv.org/abs/2604.07494>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint O artigo propõe arcabouço e protocolo, **sem resultado empírico**. **Aprovado pelo autor em 28/09/2026** (Fase 5), como hipótese com protocolo, não como evidência; nota reescrita a partir do texto integral.
   - **Citações:** 2 citações · citada 3× no capítulo
 - [x] `tonidandel2006reading` — TONIDANDEL, F.; VAQUERO, T. S.; SILVA, J. R. Reading PDDL, Writing an Object-Oriented Model. Advances in Artificial Intelligence - IBERAMIA-SBIA 2006, Lecture Notes em Computer Science. p.532–541, 2006. Springer. Disponível em: <https://doi.org/10.1007/11874850_57>.
   - **Ressalva:** lida em 23/09/2026 (PDF do autor); revisada por pares, mas baixo impacto (percentil de citação 0.06; 1 citação no OpenAlex)
@@ -85,8 +85,8 @@ Para mudar qualquer decisão: troque a marca (`[x]` promove, `[ ]` não promove)
 - [x] `son2026swerouter` — SON, S.; YOON, S.; TANG, J.; et al. SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks., 2026. Disponível em: <https://arxiv.org/abs/2607.00053>.
   - **Ressalva:** preprint recente; usar como evidência complementar e identificar como trabalho de fronteira. O estudo avalia custo e resolução em *benchmarks*, não eficácia em organizações. **Aprovado pelo autor em 27/09/2026.**
   - **Citações:** 0 citações · ainda não citado em capítulo.
-- [ ] `zhou2026agentasarouter` — ZHOU, P.; TANG, Z.; MA, Y.; et al. Agent-as-a-Router: Agentic Model Routing for Coding Tasks., 2026. Disponível em: <https://arxiv.org/abs/2606.22902>.
-  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint
+- [x] `zhou2026agentasarouter` — ZHOU, P.; TANG, Z.; MA, Y.; et al. Agent-as-a-Router: Agentic Model Routing for Coding Tasks., 2026. Disponível em: <https://arxiv.org/abs/2606.22902>.
+  - **Ressalva:** preprint recente (fronteira, sem tempo para revisão/citações); usar como evidência complementar e marcado como preprint **Aprovado pelo autor em 28/09/2026** (Fase 5), com a ressalva; números conferidos no PDF e interpretação da Tabela 1 corrigida na nota.
   - **Citações:** 0 citações · citada 4× no capítulo
 - [x] `helmert2011fast` — HELMERT, M.; RÖGER, G.; KARPAS, E. Fast Downward Stone Soup: A Baseline for Building Planner Portfolios. Proceedings of the ICAPS 2011 Workshop on Planning and Learning (PAL).Anais... , 2011. Disponível em: <https://ai.dmi.unibas.ch/papers/helmert-et-al-icaps2011ws.pdf>.
   - **Ressalva:** literatura cinza oficial (resumo de planejador de IPC, resultados ou workshop); aceitável para descrever o sistema ou o resultado oficial
@@ -284,11 +284,11 @@ As 122 aprovadas pelo autor, mais 2 obras confirmadas depois, pelos mesmos crit�
 - [x] `becattini2025sallma` — BECATTINI, M.; VERDECCHIA, R.; VICARIO, E. SALLMA: A Software Architecture for LLM-Based Multi-Agent Systems. 2025 IEEE/ACM International Workshop on New Trends in Software Architecture (SATrends). Anais... p. 5–8, 2025. IEEE. Disponível em: <https://doi.org/10.1109/SATrends66715.2025.00006>.
   - **Ressalva:** artigo de workshop revisado por pares; propõe arquitetura e prova de conceito, não demonstra seleção de configuração de agentes de código. **Aprovado pelo autor em 27/09/2026** como apoio arquitetural, não como evidência de eficácia.
   - **Citações:** 0 citações · ainda não citado em capítulo.
-- [ ] `chen2026risa` — CHEN, K.; NIAN, J.; CAO, Y.; JIANG, Y. Disagree to Explore, Agree to Commit: Routing-Guided Test-Time Scaling for Software Agents. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2608.22191>.
-  - **Ressalva:** preprint recente; avalia trajetórias e arbitragem de *patches* no SWE-bench Verified, não roteamento entre configurações em ambiente de trabalho.
+- [x] `chen2026risa` — CHEN, K.; NIAN, J.; CAO, Y.; JIANG, Y. Disagree to Explore, Agree to Commit: Routing-Guided Test-Time Scaling for Software Agents. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2608.22191>.
+  - **Ressalva:** preprint recente; avalia trajetórias e arbitragem de *patches* no SWE-bench Verified, não roteamento entre configurações em ambiente de trabalho. **Aprovado pelo autor em 28/09/2026** (Fase 5), com a ressalva; nota de leitura criada na mesma data.
   - **Citações:** 0 citações · ainda não citado em capítulo.
-- [ ] `fan2026dependencyrouter` — FAN, L.; YIN, J.; CHEN, Y. When Should Dependency Updates Invoke Repair Agents? A Lightweight Routing Study. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2609.25911>.
-  - **Ressalva:** preprint muito recente e recorte estreito; é a evidência mais próxima de uma triagem pré-agente em manutenção de software.
+- [x] `fan2026dependencyrouter` — FAN, L.; YIN, J.; CHEN, Y. When Should Dependency Updates Invoke Repair Agents? A Lightweight Routing Study. arXiv, 2026. Disponível em: <https://arxiv.org/abs/2609.25911>.
+  - **Ressalva:** preprint muito recente e recorte estreito; é a evidência mais próxima de uma triagem pré-agente em manutenção de software. O PDF declara publicação no Internetware 2026 (ACM), com DOI que ainda não resolvia em 28/09/2026 `[A CONFIRMAR]`. **Aprovado pelo autor em 28/09/2026** (Fase 5), com a ressalva; nota de leitura criada na mesma data.
   - **Citações:** 0 citações · ainda não citado em capítulo.
 
 - [x] `cui2024effects` — CUI, K. Z.; DEMIRER, M.; JAFFE, S.; et al. The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers. Management Science, 2026. Institute for Operations Research and the Management Sciences (INFORMS). Disponível em: <https://doi.org/10.1287/mnsc.2025.00535>.

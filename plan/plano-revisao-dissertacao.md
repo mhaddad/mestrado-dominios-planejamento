@@ -10,8 +10,8 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.76 |
-| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟡 Fase 5 exploratória iniciada em 27/09/2026 |
+| Versão deste documento | 0.77 |
+| Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · Fase 6 a iniciar |
 
 ---
 
@@ -49,12 +49,12 @@ Desdobramentos possíveis, não obrigatórios:
 | # | Fase | Objetivo | Duração estimada | Status | Início | Fim | Entregável principal |
 |---|---|---|---|---|---|---|---|
 | 0 | Enquadramento e artefatos | Recuperar material original e montar o ambiente de trabalho | 1 semana | 🟢 | 21/09/2026 | 21/09/2026 | Acervo organizado + ambiente pronto |
-| 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras, rascunho do capítulo 2 citável (83 chaves) |
+| 1 | Revisão de literatura assistida por IA | Mapear 2008–2026 | 3–4 semanas (executada em 2 dias, multiagente) | 🟢 | 22/09/2026 | 23/09/2026 | 156 obras incluídas, 155 notas de leitura, 8 sínteses, `referencias.bib` com 133 obras (157 em 28/09/2026, com as fontes das Fases 2, 4B e 5), rascunho do capítulo 2 citável (83 chaves) |
 | 2 | Auditoria da versão original | Classificar cada afirmação: mantém / reformula / descarta | 1–2 semanas (executada em 1 dia, multiagente) | 🟢 | 23/09/2026 | 23/09/2026 | 349 afirmações classificadas (265 mantém, 80 reformula, 4 descarta, após a revisão das 101 e a resolução das pendências), relatório de auditoria, nova taxonomia, plano de reexecução (31 itens), material do M1 |
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas (executada em 4 dias) | 🟢 | 24/09/2026 | 27/09/2026 | Dataset, código, resultados; respostas a Q1 e Q2 em `experimentos/relatorio-fase3.md` |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟢 | 27/09/2026 | 28/09/2026 | Dataset, mapa característica × técnica, resposta a Q5 |
-| 5 | Ponte para desenvolvimento de software dirigido por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` | 🟡 | 27/09/2026 | | Síntese exploratória, agenda de pesquisa e hipóteses |
+| 5 | Ponte para desenvolvimento de software dirigido por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` (executada em 2 dias) | 🟢 | 27/09/2026 | 28/09/2026 | Síntese exploratória, agenda de pesquisa e hipóteses |
 | 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Nova versão + material para o orientador |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
@@ -322,11 +322,11 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - [x] Levantar o que cada IPC publicou (resultados por instância, limites, hardware, domínios, planejadores) — 27/09/2026, `docs/resultados-ipc-2011-2023.md`
 - [x] Verificar e, se for o caso, promover ao `referencias.bib` as fontes de dados e os trabalhos a confrontar — 27/09/2026: o autor decidiu **não** promover `ferber2019ipc`, `ferber2022explainable` nem as entradas do *booklet* de 2014 (seção 10)
-- [ ] Montar o dataset em `data/` com `README.md` de origem e método — em curso: 2011 (WebPlan) e 2018 por instância em `data/ipc-2011-2023/`, ambos validados contra o placar oficial (27/09/2026); recorte decidido em 27/09/2026 (`docs/fase4b-desenho.md`, D2); falta a ligação completa de 2011 aos PDDL
+- [x] Montar o dataset em `data/` com `README.md` de origem e método — `data/ipc-2011-2023/` (README): 2011 (WebPlan) e 2018 por instância, validados contra o placar oficial (27/09/2026); recorte decidido (`docs/fase4b-desenho.md`, D2); ligação de 2011 aos PDDL completa, 560 de 560 por SHA-1 (commit `7f306e6`)
 - [x] Classificar os planejadores na taxonomia e decidir a regra dos portfólios — 27/09/2026: regra P1 + G1/G2 (`docs/fase4b-desenho.md`, D1); 78 codificações de 2011 e 2018 em `data/ipc-2011-2023/planejadores_4d.csv`
 - [x] Extrair as características dos domínios — 28/09/2026: *features* SAS+ (`features_sas_ipc.csv`) e propriedades de topologia de busca (`topologia_ipc.csv`, extrator validado contra `hoffmann2011analyzing`) de 2011, 2014 e 2018; *features* SAS+ de 2023 com as falhas de 300 s pendentes (descritivo)
 - [x] Analisar e montar o mapa característica × técnica; responder Q5 — 28/09/2026: EXP-21, EXP-24 e EXP-25; resposta em `experimentos/relatorio-fase4b.md` (seção 3), **validada pelo autor em 28/09/2026**
-- [ ] Seleção por instância (R-29, vindo da Fase 3): com os dados por instância de 2011 e 2018, comparar seletor por instância, seletor por domínio e *single best*, reportados separadamente (decisão do autor, 27/09/2026)
+- [x] Seleção por instância (R-29, vindo da Fase 3): com os dados por instância de 2011 e 2018, comparar seletor por instância, seletor por domínio e *single best*, reportados separadamente (decisão do autor, 27/09/2026) — EXP-24 e EXP-25: com todos os planejadores, nenhum seletor supera o *single best* (`experimentos/relatorio-fase4b.md`, seção 4)
 - [x] Escrever a síntese para a Ponte: o que se transfere como hipótese para a Fase 5 e o que não se transfere — 28/09/2026: `experimentos/relatorio-fase4b.md` (seção 6), **validada pelo autor em 28/09/2026**
 
 **Entregáveis:** dataset documentado · mapa característica × técnica · resposta a Q5 · síntese para a Ponte
@@ -374,7 +374,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Mapear oportunidades de pesquisa e aplicação, distinguindo o que é sustentado por evidência do que depende de validação futura — síntese exploratória, seção 6 (27/09/2026)
 - [x] Elaborar uma agenda de pesquisa com possíveis desenhos empíricos, sem iniciar piloto — síntese exploratória, seções 5–6 (27/09/2026)
 - [x] Ampliar a curadoria com fontes primárias sobre triagem, roteamento por trajetória e orquestração de agentes em engenharia de software — `ponte-software/relatorio/curadoria-fontes-se-ia.md`; quatro candidatas novas registradas, ainda não citáveis (27/09/2026)
-- [x] Incorporar a síntese final disponível da Fase 4B antes de fechar a interpretação — EXP-21 e EXP-24 integrados na síntese e no dossiê (27/09/2026)
+- [x] Incorporar a síntese final disponível da Fase 4B antes de fechar a interpretação — EXP-21 e EXP-24 integrados na síntese e no dossiê (27/09/2026); EXP-25 em 28/09/2026
+- [x] Decidir as quatro candidatas da curadoria — 28/09/2026: o autor aprovou `fan2026dependencyrouter`, `chen2026risa`, `zhou2026agentasarouter` e `madeyski2026triage`; notas novas das duas primeiras; nota do Madeyski reescrita (protocolo, sem resultado empírico) e do Zhou corrigida (Tabela 1); `referencias.bib` com 157 obras
+- [x] Revisão final do autor — 28/09/2026: síntese exploratória e dossiê do Capítulo 7 aprovados sem alteração
 
 **Entregáveis:** síntese exploratória · mapa de conexões e limites · hipóteses testáveis · oportunidades e agenda de pesquisa.
 
@@ -387,6 +389,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - 27/09/2026 — Curadoria dirigida de fontes de engenharia de software com IA em `ponte-software/relatorio/curadoria-fontes-se-ia.md`: a formulação é refinada de seletor estático para política sequencial de triagem, escalonamento e orquestração. Quatro fontes primárias novas foram registradas como candidatas; preprints e infraestrutura adjacente não sustentam, por si, aplicabilidade industrial.
 - 27/09/2026 — Integração da 4B concluída na Ponte: o EXP-21 final mostra que as 16 *features* SAS+ quase não antecipam famílias fora do domínio; o EXP-24 não encontra ganho contra o *single best* no recorte completo. O indício favorável sem portfólios na *agile* de 2018 não resiste à correção global. A Fase 5 está pronta para revisão do autor e decisão bibliográfica, sem recomendação de produto.
 - 27/09/2026 — O autor aprovou a promoção de `becattini2025sallma` e `son2026swerouter`. As notas de leitura foram verificadas, o `referencias.bib` foi regenerado com 153 obras e a síntese/dossiê passaram a usar as fontes com ressalvas explícitas. A Fase 5 está pronta para a revisão final do autor.
+
+- 28/09/2026 — **Fase 5 concluída.** O autor revisou a síntese exploratória e o dossiê do Capítulo 7 e aprovou os dois sem alteração; aprovou também as quatro candidatas restantes da curadoria (seis fontes da Ponte no `referencias.bib`). Nenhuma inferência sobre desenvolvimento de software foi apresentada como resultado empírico.
 
 ---
 
@@ -467,7 +471,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 17 | Esclarecer a origem dos 4 valores de "competição" impossíveis (G21) | 2, 3 | Coordenador | 23/09/2026 | 🟢 vieram dos logs de execução própria de 2010; são 34 pares de competição e 66 de execução própria |
 | 18 | Incluir os relatórios oficiais das IPCs no `candidatas.bib` | 2, 6 | Coordenador | 23/09/2026 | 🟢 incluídos e promovidos, com Bonet e Geffner (2001) e Weld (1994) |
 | 19 | Decidir o limite de tempo da reexecução dos planejadores de 2010 (Nível 3) | 3 | Matheus | 24/09/2026 | 🟢 opção 1, limite calibrado por planejador (EXP-02): de 38 min (SGPlan) a 137 min (R); LPG-TD com o fator comum (76 min) e várias sementes; `experimentos/execucoes/fatores-2010.csv` |
-| 20 | Delimitar e executar a síntese exploratória da Ponte, sem piloto no Ateliê | 5 | Matheus + IA | | 🟡 síntese e dossiê do futuro Capítulo 7 concluídos em `ponte-software/relatorio/`; aguarda a síntese da 4B para o fechamento |
+| 20 | Delimitar e executar a síntese exploratória da Ponte, sem piloto no Ateliê | 5 | Matheus + IA | 28/09/2026 | 🟢 síntese e dossiê do Capítulo 7 em `ponte-software/relatorio/`, com a 4B integrada; revisados e aprovados pelo autor em 28/09/2026 |
 
 ---
 
@@ -588,6 +592,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **`sette2008are` excluída** (não lida, não citada); **Ghostscript mantido** no Mac do autor | Decisões do autor | 1 |
 | 27/09/2026 | **Ocorrência: teto da Fase 4 ultrapassado em US$ 0,08** no EXP-23 (uso da chave em US$ 12,08). A chave fica acima do limite; nenhuma chamada nova sem decisão do autor. 7 pares do EXP-23 sem chamada | A trava confere o uso antes de cada chamada, e as chamadas em paralelo já em curso passaram dela; o OpenRouter não as bloqueou. Registro do Coordenador | 4 |
 | 27/09/2026 | **Limite da chave elevado para US$ 13** para completar os 7 pares do EXP-23, em sequência (uma chamada de cada vez), com trava de US$ 12,80 | Decisão do autor | 4 |
+| 28/09/2026 | **Fase 5 concluída**: síntese exploratória e dossiê do Capítulo 7 aprovados pelo autor sem alteração; **as quatro candidatas da curadoria promovidas** (`fan2026dependencyrouter`, `chen2026risa`, `zhou2026agentasarouter`, `madeyski2026triage`), com as ressalvas registradas; `madeyski2026triage` só como hipótese com protocolo, não como evidência | Decisão do autor | 5, 6 |
 
 ---
 
@@ -665,6 +670,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Busca dirigida e curadoria de fontes primárias sobre roteamento/escalonamento de agentes de software; registro de candidatas e atualização do dossiê | Quatro registros primários novos em `candidatas.bib` e no protocolo; matriz distingue evidência direta, arquitetura adjacente e hipótese; nenhuma candidata foi promovida ou citada no capítulo |
 | 27/09/2026 | 5 | Codex (GPT-5) + skills editoriais `chief-editor` e `source-auditor` | Integração dos resultados finais disponíveis da 4B (EXP-21 e EXP-24) na síntese e no dossiê da Ponte | Formulação calibrada contra os registros: sem ganho robusto de *features* SAS+ ou seletor por instância; exceção local marcada como indício; nenhuma inferência sobre eficácia em software |
 | 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Promoção autorizada de SALLMA e SWE-Router, leitura/conferência de fontes primárias e atualização das sínteses | SALLMA entra apenas como apoio arquitetural; SWE-Router como preprint de fronteira baseado em *benchmarks*; 10 e 14 chaves citáveis verificadas, respectivamente, na síntese e no dossiê |
+| 28/09/2026 | 5 | Claude Code (claude-opus-5-5) | Notas de leitura de `fan2026dependencyrouter` e `chen2026risa`; reescrita da nota de `madeyski2026triage`; correção da nota de `zhou2026agentasarouter`; promoção das quatro; fechamento da Fase 5 | Textos integrais baixados do arXiv e extraídos com `pdftotext`; números e trechos literais conferidos nas tabelas e seções citadas; metadados das quatro conferidos na API do arXiv; DOI declarado pelo Fan testado (sem registro); duas leituras erradas de agente encontradas e corrigidas (Madeyski sem resultado empírico; Zhou, ganho por desempenho e não pela descrição) |
 
 ---
 
@@ -796,3 +802,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.74 | 28/09/2026 | Fase 4B: relatório com a resposta a Q5 e a síntese para a Ponte (`experimentos/relatorio-fase4b.md`), para validação do autor |
 | 0.75 | 28/09/2026 | **Fase 4B concluída**: relatório validado pelo autor (Q5, R-29 por instância, síntese para a Ponte); síntese e dossiê da Ponte ajustados com o EXP-25 |
 | 0.76 | 28/09/2026 | Codificação do EXP-13 corrigida (FDSS11 sem *landmarks*), sem mudança nos resultados |
+| 0.77 | 28/09/2026 | **Fase 5 concluída** (revisão final do autor); quatro fontes da curadoria promovidas (`referencias.bib` com 157), com notas novas (Fan, Chen) e corrigidas (Madeyski, Zhou); registros da 4B, do R-29 e do relatório da Fase 3 atualizados |

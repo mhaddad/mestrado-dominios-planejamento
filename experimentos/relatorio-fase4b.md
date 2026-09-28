@@ -114,7 +114,7 @@ Nenhuma dessas associações vale para todas as trilhas ou edições. Os coefici
 
 ## 9. Pendências
 
-- **Validação do autor:** resposta a Q5 (seção 3), leitura do R-29 (seção 4) e síntese para a Ponte (seção 6).
-- **Ajuste na síntese da Ponte** (sessão da Fase 5), se o autor aceitar a seção 6.
+- ~~Validação do autor~~ — feita em 28/09/2026: resposta a Q5 (seção 3), leitura do R-29 (seção 4) e síntese para a Ponte (seção 6).
+- ~~Ajuste na síntese da Ponte~~ — feito em 28/09/2026 (síntese e dossiê da Fase 5 com o EXP-25).
 - ~~Correção do EXP-13~~ — feita em 28/09/2026: o Stone Soup 2011 *satisficing* não usa *landmarks*; o EXP-13 rodado de novo deu saídas idênticas.
 - As *features* das 78 tarefas de 2023 que estouraram 300 s não serão extraídas (decisão do autor, 28/09/2026); 2023 fica descritiva com as tarefas que já têm *features*.
