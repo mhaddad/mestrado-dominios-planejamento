@@ -39,7 +39,7 @@ O tipo `selecao` interessa diretamente à Q5: são os sistemas que já apostam q
 
 **Codificação (27/09/2026):** `data/ipc-2011-2023/planejadores_4d.csv`, gerado por `scripts/taxonomia_4d.py`. São 78 codificações de planejador × trilha em 2011 e 2018, a partir dos resumos oficiais (*booklet* de 2011 e resumos de 2018); os planejadores já codificados no EXP-13 foram copiados de lá. São 11 portfólios, 4 deles de seleção por tarefa (IBaCoP2-2018, Delfi1, Delfi2, MSP). Um valor novo foi criado: **N7**, "Programação linear (potenciais, contagem de operadores)" na D2, para o MSP. A D2 ficou "não determinada" em 5 casos em que o resumo não diz a heurística (CPT4, Sharaabi, Symple-1 e -2, freelunch-doubly-relaxed), e a D3 em 1 (alien).
 
-**Correção encontrada:** pela fonte primária (*booklet* de 2011, Tabelas 2 e 3), o Stone Soup 2011 da *satisficing* usa hFF, hadd, hCG e hcea, **sem *landmarks***. O EXP-13 supôs *landmarks* para o FDSS11 (decisão M2, "a confirmar"). A correção do EXP-13 fica pendente para o autor; a 4B já usa a composição da fonte.
+**Correção encontrada:** pela fonte primária (*booklet* de 2011, Tabelas 2 e 3), o Stone Soup 2011 da *satisficing* usa hFF, hadd, hCG e hcea, **sem *landmarks***. O EXP-13 supôs *landmarks* para o FDSS11 (decisão M2, "a confirmar"). Corrigido em 28/09/2026, com aprovação do autor: o valor saiu do `planejadores_museu_4d.csv`, e o EXP-13 rodado de novo deu saídas idênticas.
 
 ## D2. Recorte do dataset
 

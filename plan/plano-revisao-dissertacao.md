@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.75 |
+| Versão deste documento | 0.76 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟡 Fase 5 exploratória iniciada em 27/09/2026 |
 
 ---
@@ -576,6 +576,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | **Regra dos portfólios da 4B:** P1 do EXP-13 mais o critério G1 (portfólio = se descreve como tal ou faz execuções separadas de componentes completos; fases dentro de um planejador não contam) e o tipo G2 (`fixo`, `selecao`, `paralelo`); resultados sempre com e sem portfólios. Valor novo N7 na D2 | Coordenador, por delegação do autor ("optando pelas decisões mais coerentes"); `docs/fase4b-desenho.md`, D1 | 4B |
 | 27/09/2026 | **Recorte do dataset da 4B:** análise principal em 2011 (ótima e *satisficing*) e 2018 (ótima, *satisficing*, *agile*), por instância agregada por domínio e só dentro de cada edição × trilha; 2014 e 2023 só descritivas; IBM fora; formulações de caldera e organic-synthesis de 2018 como domínios separados | Coordenador, por delegação do autor; `docs/fase4b-desenho.md`, D2 | 4B |
 | 28/09/2026 | **Fase 4B concluída.** Relatório (`experimentos/relatorio-fase4b.md`) validado: resposta a Q5, leitura do R-29 por instância e síntese para a Ponte. A síntese da Ponte (Fase 5) deve ser ajustada com o EXP-25 | Decisão do autor | 4B, 5 |
+| 28/09/2026 | **Correção da codificação do EXP-13:** *Landmarks* sai da D2 do FDSS11 (fonte primária: *booklet* da IPC 2011, Tabelas 2 e 3). As saídas do EXP-13 ficam idênticas | Decisão do autor | 3, 4B |
 | 27/09/2026 | **Fonte do PDDL da 4B:** `downward-benchmarks` (Planner Museum) para 2011, 2018 e 2023; ZIP oficial para 2014. O `pddl-instances` fica fora da 4B | O `pddl-instances` tem o floortile ótimo de 2011 igual ao da *satisficing*; o SHA-1 do WebPlan confirma o `downward-benchmarks` | 4B |
 | 27/09/2026 | **Controle da ordem de serialização dispensado** (R-27; decisão de 23/09/2026, aprovada no M1). O R-27 fica feito sem esse controle, registrado como limitação no relatório da Fase 3 e a explicar no capítulo de método | O orientador disse que não é mais necessário (relatado pelo autor). A hipótese da Fase 1 não se aplica ao experimento de 2010: os planejadores rodaram o PDDL das IPCs, não o exportado pelo itSIMPLE (exceção: o domínio do Satellite, G25, de origem não documentada), e as métricas UML são contagens que a ordem não altera. O teste restante (robustez do *ranking* à ordem do PDDL) não mudaria Q1 nem Q2 e custaria de 36 a 94 h de VM | 3, 6 |
 | 27/09/2026 | **Seleção por instância (R-29) incluída na Fase 4B** como análise própria, com os dados por instância de 2011 e 2018, reportada separadamente da análise por domínio | O recorte da 4B (D2) agrega por domínio e deixava o R-29 sem responsável; é o achado central da Fase 1 (a unidade migrou para a instância). Decisão do autor | 3, 4B |
@@ -794,3 +795,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.73 | 28/09/2026 | Fase 4B: extrator de topologia validado; EXP-25 (topologia na Q5 e no R-29): acréscimo pequeno e desigual na Q5, nenhum na Q1 |
 | 0.74 | 28/09/2026 | Fase 4B: relatório com a resposta a Q5 e a síntese para a Ponte (`experimentos/relatorio-fase4b.md`), para validação do autor |
 | 0.75 | 28/09/2026 | **Fase 4B concluída**: relatório validado pelo autor (Q5, R-29 por instância, síntese para a Ponte); síntese e dossiê da Ponte ajustados com o EXP-25 |
+| 0.76 | 28/09/2026 | Codificação do EXP-13 corrigida (FDSS11 sem *landmarks*), sem mudança nos resultados |

@@ -20,6 +20,7 @@
 - **Decisões de codificação (revisadas e aprovadas pelo autor sem alteração em 26/09/2026):**
   - **P1, portfólios:** D4 = Portfólio; D1 a D3 recebem a união dos valores dos componentes descritos na fonte. É a leitura da taxonomia, §6. São portfólios: FDSS11, FDSS23, FDRemix, Saarplan, Maidu e Levitron.
   - **M2, componentes de portfólio não listados na fonte lida:** a D2 do FDSS11, do Maidu e do Levitron segue a composição usual dos portfólios do Fast Downward (relaxação, grafo causal, *landmarks*). Precisa de confirmação.
+    - **Correção de 28/09/2026 (FDSS11):** o *booklet* da IPC 2011 (p. 38–45, Tabelas 2 e 3) lista os componentes do Stone Soup 2011 *satisficing*: hFF, hadd, hCG e hcea, **sem *landmarks***. O valor *Landmarks* saiu da D2 do FDSS11 no `planejadores_museu_4d.csv`. A análise foi rodada de novo e **as quatro saídas ficaram idênticas** (resumo, escolhas, mapa de técnicas e características): nenhum resultado deste registro muda. Maidu e Levitron seguem como estavam.
   - **Valores novos:**
     - **N1:** "Busca por largura/novidade" na D1, já previsto na taxonomia, §6;
     - **N2:** "Relaxação parcial (red-black)" na D2 (Mercury, Saarplan);
