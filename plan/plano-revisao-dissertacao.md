@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 28/09/2026 |
-| Versão deste documento | 0.80 |
+| Versão deste documento | 0.81 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · 🟡 Fase 6 em curso desde 28/09/2026 (escrita até 02/10/2026) |
 
 ---
@@ -55,7 +55,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟢 | 27/09/2026 | 28/09/2026 | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` (executada em 2 dias) | 🟢 | 27/09/2026 | 28/09/2026 | Síntese exploratória, agenda de pesquisa e hipóteses |
-| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Nova versão + material para o orientador |
+| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Primeira versão integral e parecer editorial; aplicação da revisão e material para o orientador pendentes |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
 
@@ -416,7 +416,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Validar a conversão do Markdown para o documento final ABNT (Pandoc, estilo CSL, modelo de referência) e decidir a montagem final — 28/09/2026: padrão do guia da FEI em `redacao/montagem/` (modelo `.docx`, filtro `fei.lua`, `montar.py`) e CSL `redacao/estilos/abnt-fei.csl`; saída `.docx`, com sumário e listas como campos do Word
 - [x] Conferir a edição vigente das normas ABNT e o manual de normalização da FEI — 28/09/2026: o autor decidiu seguir o guia da FEI (revisão de 21/07/2016), resumido em `redacao/README.md`
 - [x] Redigir capítulos a partir dos entregáveis das fases anteriores — primeira versão integral montada em 28/09/2026: pré-textuais, capítulos 1 a 8, referências e apêndices. Capítulos 1 a 3 atualizados pelos resultados; G22 a G26 estão no capítulo de método, com remissão no capítulo 3; a ligação dos fundamentos aos resultados está no capítulo 2
-- [ ] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências)
+- [x] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências) — parecer de 28/09/2026 em `redacao/parecer-editorial-fase6.md`, sobre `c5eac08`, com 13 grupos de achados e exemplos de reformulação; capítulos não alterados
+- [ ] Aplicar e reconferir as recomendações do parecer editorial — prioridades: alcance das conclusões, correções factuais e estatísticas, apresentação dos resultados dos capítulos 5–6, fontes finais da Fase 5 e remissões no documento montado
 - [ ] Verificação final de todas as referências e números — primeira rodada concluída em 28/09/2026: as citações dos 11 arquivos montados foram verificadas contra `referencias.bib`, sem chave ausente ou pendente, e os números novos têm comentário de fonte. Reexecutar depois das revisões do autor
 - [ ] Revisão de estilo na voz do autor
 - [ ] Elementos pré e pós-textuais (capa, folha de rosto, folha de aprovação, resumo e *abstract*, listas, sumário, referências) e conferência de formatação, citações e referências pela ABNT — resumo, *abstract*, declaração de IA e referências estão preenchidos; campos do Word, dados institucionais e revisão visual ainda dependem do autor
@@ -433,6 +434,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 - 28/09/2026 — Fase 6 iniciada. Decisões do autor: 4B no capítulo 5; guia da FEI; declaração de IA no modelo do autor; escrita até 02/10/2026; **a IA redige a dissertação inteira e o autor revisa ao final**. Plano de escrita e cronograma em `redacao/plano-de-escrita.md`. O CSL da UFPR, adotado em 23/09/2026, gera citações entre parênteses erradas e foi substituído pelo `abnt-fei.csl` (derivado da UFRGS).
 - 28/09/2026 — Primeira versão integral da Fase 6 montada em `redacao/saida/dissertacao-haddad-2026.docx`. Verificações estruturais concluídas: chaves de citação, rastreabilidade dos números, `git diff --check`, integridade do `.docx` e extração de texto. A inspeção visual automatizada não foi executada porque o renderizador prescrito não encontra LibreOffice empacotado; a abertura e revisão no Word pelo autor permanecem obrigatórias.
+- 28/09/2026 — Avaliação editorial solicitada pelo autor: `redacao/parecer-editorial-fase6.md`. A primeira versão precisa de revisão estrutural e correções de conteúdo, além da inspeção visual. As 110 chaves distintas passam na verificação de disponibilidade bibliográfica, mas isso não valida todas as paráfrases e inferências. O parecer confronta capítulos e registros, identifica divergências e propõe recuperar resultados e fontes já disponíveis; não altera os capítulos nem inicia novos experimentos.
 
 
 ---
@@ -684,6 +686,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 28/09/2026 | 6 | Claude Code (claude-opus-5-5) | Montagem no padrão da FEI (modelo `.docx`, CSL, filtro Lua, script), plano de escrita, pré-textuais com a declaração de IA | Regras transcritas do guia da FEI com a página; citações e referências testadas com chaves reais (o CSL da UFPR falhou nas citações entre parênteses e foi trocado); montagem de teste com os capítulos 1 a 3 inspecionada por script (3 seções, estilos, campos, numeração). Sem Word nem LibreOffice na máquina: o resultado visual final é conferido pelo autor |
 | 28/09/2026 | 6 | Claude Code (claude-opus-5-5) | Redação do capítulo 4 (Método) | Cada número tirado de um registro de experimento ou README de dados, com a origem em comentário; 18 chaves conferidas por `checar_citacoes.py`; uma frase ajustada ao que a nota de `kerschke2019automated` sustenta; contagem das *features* SAS+ conferida nas saídas dos extratores (16, e não 17) e corrigida nos registros. **Texto a revisar pelo autor** |
 | 28/09/2026 | 6 | Codex (GPT-5) + auditoria editorial e de fontes | Primeira versão integral: capítulos 5 a 8 e apêndices redigidos; capítulos 1 a 3 e pré-textuais atualizados; montagem do `.docx` | Citações dos 11 arquivos montados verificadas contra `referencias.bib`; rastreabilidade dos números conferida por comentários de fonte; `unzip -t`, extração do Pandoc e `git diff --check` passaram. Inspeção visual automatizada pendente por ausência de LibreOffice empacotado; revisão no Word é do autor |
+| 28/09/2026 | 6 | Codex (GPT-6) + orientações `chief-editor` e `source-auditor` | Avaliação da dissertação contra o planejamento e a execução; parecer editorial com correções prioritárias, estrutura por capítulo, apresentação dos experimentos e exemplos | Leitura dos capítulos e insumos; confronto pontual com registros e CSV de Holm; verificação de 110 chaves distintas; inspeção textual do XML do DOCX. Sem reescrita de capítulos, nova busca externa ou reexecução experimental. Divergências de fonte e limites da verificação explicitados no parecer |
 
 ---
 
@@ -819,3 +822,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.78 | 28/09/2026 | **Fase 6 iniciada**: decisões do autor (estrutura com a 4B no cap. 5, guia da FEI, declaração de IA, prazo de 02/10, redação integral pela IA); montagem no padrão FEI; plano de escrita |
 | 0.79 | 28/09/2026 | Capítulo 4 (Método) redigido; contagem das *features* SAS+ corrigida para 16 em cinco registros |
 | 0.80 | 28/09/2026 | Primeira versão integral da Fase 6: capítulos 5 a 8 e apêndices redigidos; capítulos 1 a 3 e pré-textuais atualizados; citações e integridade estrutural verificadas; revisão visual no Word pendente |
+| 0.81 | 28/09/2026 | Parecer editorial da primeira versão integral: 13 grupos de achados, propostas para clareza, fluidez e apresentação dos resultados; revisão de consistência registrada, implementação pendente; corrigida a avaliação de que só faltava revisão visual |
