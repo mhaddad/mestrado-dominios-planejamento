@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 28/09/2026 |
-| Versão deste documento | 0.82 |
+| Versão deste documento | 0.83 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · 🟡 Fase 6 em curso desde 28/09/2026 (escrita até 02/10/2026) |
 
 ---
@@ -55,7 +55,7 @@ Desdobramentos possíveis, não obrigatórios:
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟢 | 27/09/2026 | 28/09/2026 | Dataset, mapa característica × técnica, resposta a Q5 |
 | 5 | Ponte para desenvolvimento de software dirigido por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` (executada em 2 dias) | 🟢 | 27/09/2026 | 28/09/2026 | Síntese exploratória, agenda de pesquisa e hipóteses |
-| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Parecer aplicado e versão editorial revisada montada; revisão do autor, acabamento visual e material para o orientador pendentes |
+| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Versão editorial avaliada e aprovada com ajustes finais; precisão de Q3/Q5, acesso ao suplemento, revisão do autor, acabamento visual e material para o orientador pendentes |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
 
@@ -689,6 +689,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 28/09/2026 | 6 | Codex (GPT-5) + auditoria editorial e de fontes | Primeira versão integral: capítulos 5 a 8 e apêndices redigidos; capítulos 1 a 3 e pré-textuais atualizados; montagem do `.docx` | Citações dos 11 arquivos montados verificadas contra `referencias.bib`; rastreabilidade dos números conferida por comentários de fonte; `unzip -t`, extração do Pandoc e `git diff --check` passaram. Inspeção visual automatizada pendente por ausência de LibreOffice empacotado; revisão no Word é do autor |
 | 28/09/2026 | 6 | Codex (GPT-6) + orientações `chief-editor` e `source-auditor` | Avaliação da dissertação contra o planejamento e a execução; parecer editorial com correções prioritárias, estrutura por capítulo, apresentação dos experimentos e exemplos | Leitura dos capítulos e insumos; confronto pontual com registros e CSV de Holm; verificação de 110 chaves distintas; inspeção textual do XML do DOCX. Sem reescrita de capítulos, nova busca externa ou reexecução experimental. Divergências de fonte e limites da verificação explicitados no parecer |
 | 28/09/2026 | 6 | Codex (GPT-6) + orientações `chief-editor`, `source-auditor` e `documents` | Aplicação do parecer à dissertação: reestruturação dos resultados e dos experimentos com LLMs, integração da Ponte, revisão transversal de alcance, legendas, siglas e conclusões; correção da cadeia documental e remontagem do DOCX | 114 chaves distintas verificadas no `referencias.bib`; números confrontados com registros EXP e Holm; `git diff --check`; inspeção estrutural do DOCX por XML e extração Pandoc; 7 legendas de quadro e 17 de tabela separadas. Inspeção visual não executada por ausência do LibreOffice empacotado; revisão no Word permanece do autor |
+| 28/09/2026 | 6 | Codex (GPT-6) + skill `auditar-livro`, adaptada à estrutura do projeto | Avaliação geral da dissertação depois da aplicação do parecer: coerência entre perguntas, método e respostas; evidência e referências; fluidez, aplicabilidade e prontidão editorial | Leitura transversal dos capítulos e insumos canônicos; comparação com o parecer anterior; 114 chaves aprovadas; DOCX reconstruído e inspecionado por XML (11 arquivos, 25 tabelas, 7 quadros, 17 tabelas legendadas, 114 referências). Sem reescrita dos capítulos, nova busca ou reexecução experimental. Parecer em `redacao/parecer-editorial-pos-revisao-fase6.md` |
 
 ---
 
@@ -826,3 +827,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.80 | 28/09/2026 | Primeira versão integral da Fase 6: capítulos 5 a 8 e apêndices redigidos; capítulos 1 a 3 e pré-textuais atualizados; citações e integridade estrutural verificadas; revisão visual no Word pendente |
 | 0.81 | 28/09/2026 | Parecer editorial da primeira versão integral: 13 grupos de achados, propostas para clareza, fluidez e apresentação dos resultados; revisão de consistência registrada, implementação pendente; corrigida a avaliação de que só faltava revisão visual |
 | 0.82 | 28/09/2026 | Parecer editorial aplicado: estrutura e texto dos capítulos revistos, capítulos 5–7 aprofundados, conclusões recalibradas, fontes finais integradas, relatório da Fase 3 e síntese E8 corrigidos, remissões/quadros/siglas uniformizados e DOCX remontado; revisão do autor e conferência visual permanecem pendentes |
+| 0.83 | 28/09/2026 | Avaliação pós-revisão: dissertação cientificamente coerente e aprovada com ajustes finais; identificadas precisões residuais em Q3/Q5, frase causal do X4 e acesso ao suplemento; referências e estrutura do DOCX reconferidas |
