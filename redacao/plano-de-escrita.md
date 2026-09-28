@@ -15,7 +15,7 @@ Decisões do autor em 28/09/2026 (plano, seção 10): a IA redige a dissertaçã
 
 | Dia | Entrega |
 |---|---|
-| 28/09 (seg) | Padrão FEI montado (modelo, CSL, filtro, script); plano de escrita; **capítulo 4 (Método)** |
+| 28/09 (seg) | Padrão FEI montado (modelo, CSL, filtro, script); plano de escrita; **capítulo 4 (Método)** — feito |
 | 29/09 (ter) | **Capítulo 5 (Resultados)**: Fase 3 e Fase 4B |
 | 30/09 (qua) | **Capítulo 6 (LLMs)** e **capítulo 7 (Ponte)** |
 | 01/10 (qui) | **Capítulos 1, 2 e 3** atualizados; **capítulo 8**; apêndices |

@@ -9,7 +9,7 @@ Rascunho de trabalho de 26/09/2026 (Claude Code). **Decisão do autor (26/09/202
 | `potassco/pddl-instances` (commit `cf19edf`) | Instâncias originais das IPCs de 1998 a 2014 | Clonado em `experimentos/benchmarks/ipc/` |
 | Planner Museum (`lequen2026planner`; GitHub `mrlab-ai/planner-museum`, tag `icaps-2026`, commit `723a31c0`) | 26 receitas Apptainer, correspondentes aos 29 planejadores das IPCs de 1998 a 2023; *benchmarks* Autoscale com custo unitário (42 domínios × 30 instâncias); o conjunto de *benchmarks* do Fast Downward; VAL; scripts do Downward Lab | Clonado em `experimentos/ferramentas/planner-museum` (fora do git; o repositório não tem arquivo de licença) |
 | Cobertura publicada do Planner Museum | 29 planejadores × 42 domínios, mesmo hardware, 30 min e 4 GiB | `data/planner-museum/cobertura_por_dominio.csv`, conferida pela linha Total |
-| Extratores (EXP-07, EXP-11) | 11 métricas de 2010 e 17 *features* SAS+ a partir do PDDL | Prontos |
+| Extratores (EXP-07, EXP-11) | 11 métricas de 2010 e 16 *features* SAS+ a partir do PDDL | Prontos |
 | Os 10 planejadores de 2010 | Binários do acervo, rodando no GCP (Nível 3) | EXP-05 em andamento |
 
 **Planejadores de 2010 no Planner Museum:** Blackbox (BB2), IPP, FF, R (SysR), LPG e Fast Downward (versão de 2004). Não estão: SGPlan, SATPlan e MaxPlan. Esses três temos no acervo. O YAHSP do museu é o de 2014, não o de 2010.

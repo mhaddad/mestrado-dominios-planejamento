@@ -15,7 +15,7 @@
   - `experimentos/analise/uml_x_sas.py` compara com as métricas UML de 2010.
 - **Tradutor:** Fast Downward release-26.6.0 (commit `7ea275526`), só o tradutor PDDL → SAS+, fora do git (ver `experimentos/extratores/README.md`). Networkx 3.7 para os grafos.
 - **Instâncias:** as 354 usadas em 2010 nos 13 domínios (faixa `instancias_usadas` de `data/2010/benchmarks_ipc_mapa_final.csv`). Limite de 300 s por tradução, 8 processos.
-- **Features:** 17 por instância, fixadas antes de rodar a partir das estruturas que a literatura liga à complexidade (síntese E2: `helmert2009concise`, `hoffmann2011analyzing`, `domshlak2013complexity`). Por domínio, usa-se a mediana das instâncias.
+- **Features:** 16 por instância (corrigido em 28/09/2026: o registro dizia 17; as colunas do `instancias.csv` são 16), fixadas antes de rodar a partir das estruturas que a literatura liga à complexidade (síntese E2: `helmert2009concise`, `hoffmann2011analyzing`, `domshlak2013complexity`). Por domínio, usa-se a mediana das instâncias.
   - **Tamanho:** variáveis, tamanho do domínio das variáveis, operadores, metas, axiomas.
   - **Grafo causal:** arestas, densidade, grau máximo, aciclicidade, componentes fortemente conexas, fração de variáveis na maior componente e limite superior do *treewidth* (heurística de grau mínimo).
   - **DTG:** arcos por variável, fração de variáveis com DTG fortemente conexo e fração de arcos invertíveis. As duas últimas aproximam a reversibilidade.

@@ -15,7 +15,7 @@
   - O Pathways fica fora: nenhum planejador resolve nenhuma instância. Restam **41 domínios**.
 - **Características por domínio,** extraídas do PDDL das mesmas instâncias Autoscale (`experimentos/ferramentas/planner-museum`, commit `723a31c0`):
   - **(a) `pddl`:** as 11 métricas de 2010 extraíveis do PDDL (extrator do EXP-07). Nos domínios com um arquivo por instância, usa-se o da primeira. Airport (953 ações) e Organic Synthesis (1.020) têm domínios semiaterrados.
-  - **(b) `sas`:** as 17 *features* SAS+ (extrator do EXP-11), mediana de uma **amostra fixa de 10 instâncias por domínio** (p01, p04, …, p28).
+  - **(b) `sas`:** as 16 *features* SAS+ (extrator do EXP-11), mediana de uma **amostra fixa de 10 instâncias por domínio** (p01, p04, …, p28).
     - A primeira tentativa, com as 30 instâncias e 300 s por tradução, foi interrompida: as instâncias maiores levam minutos cada, e a estimativa no pior caso era de cerca de 17 horas.
     - Com 120 s por tradução, 391 de 420 instâncias traduziram. Os 29 tempos esgotados estão em 11 domínios; no pior caso, o Zeno-travel ficou com 5 de 10.
     - Nesses 11 domínios, a mediana vem das instâncias menores.

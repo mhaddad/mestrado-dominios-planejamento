@@ -250,7 +250,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Compilar e testar planejadores — os 10 de 2010 testados (EXP-01) e rodados (EXP-05); planejadores atuais dispensados: a ampliação usa dados publicados das IPCs (R-24, decisão de 26/09/2026)
 - [x] Implementar extrator das métricas de 2010 a partir do PDDL — EXP-07 (`experimentos/extratores/metricas_2010_pddl.py`): 11 de 17 métricas têm correspondente no PDDL
 - [x] Validar o extrator contra as contagens manuais de 2010 (dataset da Fase 0) — EXP-07: tipos e ações se reproduzem (postos 0,69–0,92); atributos, associações e atores não (0,31–0,51)
-- [x] Implementar ou reutilizar extrator de *features* modernas — EXP-11 (`experimentos/extratores/features_sas.py`, tradutor do Fast Downward 26.6): 17 *features* SAS+ nas 354 instâncias de 2010
+- [x] Implementar ou reutilizar extrator de *features* modernas — EXP-11 (`experimentos/extratores/features_sas.py`, tradutor do Fast Downward 26.6): 16 *features* SAS+ nas 354 instâncias de 2010
 - [x] Rodar experimentos — Nível 3 (EXP-05): 3.390 execuções; qualidade dos planos (EXP-20)
 - [x] Reproduzir o método de 2010 sobre os dados novos (linha de base) — sobre os dados de 2010 (Nível 1, EXP-03: 220/221 classes, 100/100 notas, 535/539 células, achados G23 e G24) e com as notas do Nível 3 (EXP-19)
 - [x] Treinar e avaliar modelos de seleção — EXP-12, por domínio e com dados publicados: nenhum seletor (método de 2010, kNN, *random forest*) supera o *single best*

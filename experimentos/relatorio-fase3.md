@@ -54,7 +54,7 @@ A conclusão central de 2010 é que as características dos domínios, medidas p
 - A Agregação foi contada visualmente, sem regra escrita, e não é reproduzível.
 - A característica que 2010 apontou como a de maior impacto tem o nome invertido (G1): é "Número Médio de Atores por Caso de Uso".
 
-**As métricas UML não se relacionam com a estrutura SAS+.** `[FATO]` (EXP-11) Nenhuma das métricas de 2010 se correlaciona com as 17 *features* SAS+ acima do acaso (p entre 0,21 e 0,95), em 13 domínios. Com 13 domínios, isso não mostra que as duas famílias meçam coisas diferentes: mostra que não há evidência de que meçam a mesma coisa. Também não há sinal de que as métricas UML meçam a estrutura que a literatura liga à dificuldade [@hoffmann2011analyzing].
+**As métricas UML não se relacionam com a estrutura SAS+.** `[FATO]` (EXP-11) Nenhuma das métricas de 2010 se correlaciona com as 16 *features* SAS+ acima do acaso (p entre 0,21 e 0,95), em 13 domínios. Com 13 domínios, isso não mostra que as duas famílias meçam coisas diferentes: mostra que não há evidência de que meçam a mesma coisa. Também não há sinal de que as métricas UML meçam a estrutura que a literatura liga à dificuldade [@hoffmann2011analyzing].
 
 **Como preditores, nenhum conjunto supera a escolha fixa.** `[FATO]` (EXP-12) Com *random forest*, por domínio: métricas do PDDL perdem 151 instâncias, *features* SAS+ perdem 189 e as duas juntas perdem 148, contra 143 do melhor planejador único. Nenhuma diferença é significativa depois da correção de Holm para as 7 comparações do EXP-12 (a das *features* SAS+ tem p = 0,011 sem correção e 0,068 com ela).
 
