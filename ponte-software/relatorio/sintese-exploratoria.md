@@ -12,7 +12,7 @@ status: concluida-aguarda-revisao-do-autor
 
 [FATO] Há uma conexão substantiva, embora não uma transferência demonstrada, entre a pergunta da dissertação e o desenvolvimento de software dirigido por IA. Estudos de reparo de programas e de agentes implantados mostram que o desempenho do mesmo agente varia com propriedades observáveis da tarefa, como a origem do *bug*, a riqueza da especificação e o contexto do repositório [@rondon2025evaluating; @takerngsaksiri2025humanintheloop]. Sistemas de roteamento de LLMs também mostram que escolher condicionalmente entre modelos pode reduzir custo sem sacrificar a qualidade na distribuição em que foram treinados [@ong2024routellm; @chen2023frugalgpt].
 
-[FATO] A revisão e os experimentos deste projeto impõem uma ressalva tão importante quanto a conexão. Nas Fases 3 e 4, métricas UML e *features* SAS+ não acrescentaram poder preditivo suficiente para selecionar planejadores por domínio, e o LLM não superou a linha de base como seletor. Na rodada final da Fase 4B, as 16 *features* SAS+ quase não anteciparam, fora do domínio, qual família resolveria uma instância nas IPCs de 2011 e 2018: a AUC mediana da logística foi 0,59, praticamente igual aos 0,58 do modelo só com tamanho. Na seleção por instância, nenhum seletor superou o melhor planejador único com todos os planejadores disponíveis; o único ganho local não sobreviveu à correção conjunta. Esses resultados não falam diretamente sobre software, mas tornam implausível tratar métricas estruturais estáticas como solução suficiente.
+[FATO] A revisão e os experimentos deste projeto impõem uma ressalva tão importante quanto a conexão. Nas Fases 3 e 4, métricas UML e *features* SAS+ não acrescentaram poder preditivo suficiente para selecionar planejadores por domínio, e o LLM não superou a linha de base como seletor. Na rodada final da Fase 4B, as 16 *features* SAS+ quase não anteciparam, fora do domínio, qual família resolveria uma instância nas IPCs de 2011 e 2018: a AUC mediana da logística foi 0,59, praticamente igual aos 0,58 do modelo só com tamanho. Na seleção por instância, nenhum seletor superou o melhor planejador único com todos os planejadores disponíveis; o único ganho local não sobreviveu à correção conjunta. Propriedades com fundamento teórico, de topologia de busca [@hoffmann2011analyzing], acrescentaram às *features* SAS+ um sinal pequeno e desigual (AUC mediana de 0,03 a 0,06 maior), vindo sobretudo de medidas que sondam a tarefa com a heurística, e não mudaram o resultado da seleção. Esses resultados não falam diretamente sobre software, mas tornam implausível tratar métricas estruturais estáticas como solução suficiente.
 
 [HIPÓTESE] A oportunidade não é reproduzir o método de 2010 sobre código. É formular um problema mais completo de escolha de configuração: caracterizar a tarefa, o repositório, a configuração do agente e, quando existir, a trajetória parcial de execução; otimizar resultado, custo, tempo e qualidade; e comparar a política condicional com uma configuração fixa forte. O resultado desta fase é uma agenda de pesquisa, não uma recomendação de produto nem uma alegação de eficácia.
 
@@ -20,7 +20,7 @@ status: concluida-aguarda-revisao-do-autor
 
 Q4 pergunta quais conexões, oportunidades e hipóteses ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software dirigido por IA. A resposta desta síntese não é “sim, o ajuste funciona”: não houve experimento próprio em tarefas de software, nem piloto no Ateliê.
 
-O que foi feito aqui foi uma consolidação das fontes verificadas dos eixos E7 e E8, dos relatórios das Fases 3 e 4 e dos EXP-21 e EXP-24 da Fase 4B. A integração usa os resultados finais disponíveis para as 16 *features* SAS+ e a cobertura nas IPCs de 2011 e 2018; ela não presume que propriedades teóricas ainda não avaliadas teriam o mesmo comportamento.
+O que foi feito aqui foi uma consolidação das fontes verificadas dos eixos E7 e E8, dos relatórios das Fases 3 e 4 e do relatório da Fase 4B (`experimentos/relatorio-fase4b.md`, validado pelo autor em 28/09/2026; EXP-21, EXP-24 e EXP-25). A integração usa as 16 *features* SAS+, as propriedades de topologia de busca e a cobertura nas IPCs de 2011 e 2018.
 
 O [dossiê para o Capítulo 7](dossie-capitulo-7.md) aprofunda a arquitetura argumentativa, as objeções conceituais, os limites de inferência e os subsídios de redação.
 
@@ -110,7 +110,11 @@ Um estudo posterior teria de construir uma matriz de tarefas reais ou *benchmark
 
 [FATO] O EXP-24 testa a consequência mais próxima para a Ponte: escolher um planejador por instância, deixando um domínio de fora. Com todos os planejadores, nenhum seletor supera o melhor planejador único em nenhuma das dez unidades edição × trilha × recorte. Sem portfólios, o seletor 4D melhora a *agile* de 2018 numa correção local, mas o resultado deixa de ser significativo quando as 60 comparações são corrigidas juntas. É um indício de condição de contorno — há mais espaço para seleção quando a linha de base fixa é fraca —, não uma demonstração de política útil.
 
-[INFERÊNCIA] A 4B reforça quatro exigências da Ponte: não supor que *features* estáticas bastam; comparar contra uma linha de base fixa forte; separar efeito de família, planejador e portfólio; e validar por tarefa/instância fora de repositórios ou domínios observados. Ela não autoriza concluir que nenhum sinal poderá funcionar em software: o recorte mede 16 *features* SAS+ e cobertura, não características de código, trajetória de agentes, segurança ou qualidade de manutenção.
+[FATO] O EXP-25 acrescentou propriedades com fundamento teórico — resultado básico de Hoffmann, becos sem saída e sondagem de busca sob hFF —, com o extrator validado contra a tabela publicada do autor [@hoffmann2011analyzing]. Somadas às *features* SAS+, elevaram a AUC mediana de 0,03 a 0,06 e passaram no teste com Holm em cerca de um terço das famílias, inclusive famílias amplas (busca progressiva e *landmarks* na ótima de 2011; largura/novidade na *satisficing* de 2018). Em metade dos modelos, porém, pioraram a previsão fora do domínio, e nenhum seletor passou a superar o melhor planejador único. O ganho veio de medidas que sondam a tarefa — o comprimento do plano relaxado e a paisagem da heurística em estados amostrados —, não da leitura da estrutura do modelo.
+
+[HIPÓTESE] Isso sugere um ponto transferível: sondar a tarefa informa mais do que ler sua estrutura. Em software, uma tentativa curta e barata — rodar os testes, um primeiro passo do agente — pode dizer mais sobre a configuração adequada do que métricas estáticas do repositório. É hipótese, não resultado.
+
+[INFERÊNCIA] A 4B reforça cinco exigências da Ponte: não supor que *features* estáticas bastam; comparar contra uma linha de base fixa forte; separar efeito de família, planejador e portfólio; validar por tarefa/instância fora de repositórios ou domínios observados; e checar vazamento, isto é, nenhuma característica pode derivar do resultado que se quer prever. A 4B teve um caso real: a primeira rodada do EXP-25 usou uma medida derivada do custo dos planos dos competidores e foi descartada. Ela não autoriza concluir que nenhum sinal poderá funcionar em software: o recorte mede 16 *features* SAS+ e cobertura, não características de código, trajetória de agentes, segurança ou qualidade de manutenção.
 
 ## 8. Conclusão
 
@@ -121,6 +125,7 @@ Um estudo posterior teria de construir uma matriz de tarefas reais ou *benchmark
 ## Referências usadas
 
 - @chen2023frugalgpt
+- @hoffmann2011analyzing
 - @ong2024routellm
 - @rondon2025evaluating
 - @smithmiles2023instance

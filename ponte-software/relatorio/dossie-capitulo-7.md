@@ -75,9 +75,9 @@ Esta é a ponte mais importante do capítulo. O trabalho revisado não deve apar
 
 ### 4.1 Da hipótese promissora ao limite empírico
 
-[FATO] A Fase 3 não encontrou ganho preditivo, por domínio, das métricas UML nem das *features* SAS+ sobre uma linha de base de melhor planejador único. A Fase 4 mostrou que LLMs também não superaram essa linha de base como seletores de planejadores. A rodada final da Fase 4B converge: nas IPCs de 2011 e 2018, as 16 *features* SAS+ quase não antecipam, fora do domínio, a família que resolve uma instância (AUC mediana 0,59, contra 0,58 só com tamanho); com todos os planejadores, nenhum seletor por instância supera o melhor planejador único. O ganho local sem portfólios na *agile* de 2018 não resiste à correção sobre todas as comparações.
+[FATO] A Fase 3 não encontrou ganho preditivo, por domínio, das métricas UML nem das *features* SAS+ sobre uma linha de base de melhor planejador único. A Fase 4 mostrou que LLMs também não superaram essa linha de base como seletores de planejadores. A rodada final da Fase 4B converge: nas IPCs de 2011 e 2018, as 16 *features* SAS+ quase não antecipam, fora do domínio, a família que resolve uma instância (AUC mediana 0,59, contra 0,58 só com tamanho); com todos os planejadores, nenhum seletor por instância supera o melhor planejador único. O ganho local sem portfólios na *agile* de 2018 não resiste à correção sobre todas as comparações. Propriedades de topologia de busca, com fundamento teórico [@hoffmann2011analyzing], acrescentam às *features* SAS+ um sinal pequeno e desigual, vindo de medidas que sondam a tarefa com a heurística, e não mudam o resultado da seleção (EXP-25).
 
-[HIPÓTESE] A lição para software não é que “*features* não servem”. É que *features* estáticas, agregação por domínio e uma descrição pobre da técnica são uma aposta frágil. Uma aplicação responsável começaria testando se existe sinal preditivo incremental além de bases simples — tipo da tarefa, tamanho, contexto disponível e histórico de desempenho — antes de investir em métricas sofisticadas de código.
+[HIPÓTESE] A lição para software não é que “*features* não servem”. É que *features* estáticas, agregação por domínio e uma descrição pobre da técnica são uma aposta frágil. Uma aplicação responsável começaria testando se existe sinal preditivo incremental além de bases simples — tipo da tarefa, tamanho, contexto disponível e histórico de desempenho — antes de investir em métricas sofisticadas de código. A 4B sugere também um caminho alternativo: sondas baratas de execução (rodar os testes, uma primeira tentativa do agente) podem informar mais do que a estrutura estática — hipótese a testar, não resultado.
 
 ### 4.2 A aplicação mais concreta é uma salvaguarda metodológica
 
@@ -174,7 +174,7 @@ Explicar a mudança de unidade, de técnica e de resultado. Introduzir `φ(t)`, 
 
 ### 7.4 O que os resultados negativos ensinam
 
-Apresentar as conclusões das Fases 3, 4 e 4B: há heterogeneidade por domínio e trilha, mas as *features* disponíveis não a antecipam robustamente fora da amostra, e o seletor por instância não supera o melhor planejador único no recorte completo. Defender que o valor da dissertação revisada é oferecer condições de teste e salvaguardas, não repetir a promessa de um seletor por métrica estrutural.
+Apresentar as conclusões das Fases 3, 4 e 4B: há heterogeneidade por domínio e trilha, mas as *features* disponíveis não a antecipam robustamente fora da amostra; propriedades de topologia de busca acrescentam pouco e de forma desigual; e o seletor por instância não supera o melhor planejador único no recorte completo. Defender que o valor da dissertação revisada é oferecer condições de teste e salvaguardas, não repetir a promessa de um seletor por métrica estrutural.
 
 ### 7.5 Aplicações possíveis e condições de validação
 
@@ -214,6 +214,7 @@ O memorando [curadoria-fontes-se-ia.md](curadoria-fontes-se-ia.md) registra a ma
 
 - @chen2023frugalgpt
 - @goodhue1995task
+- @hoffmann2011analyzing
 - @jimenez2024swebench
 - @lawrence1967differentiation
 - @ong2024routellm

@@ -1,6 +1,6 @@
 # Relatório da Fase 4B — panorama das IPCs 2011–2018, resposta a Q5 e síntese para a Ponte
 
-> **Rascunho de IA para validação do autor.** Claude Code (claude-opus-5-5), 28/09/2026. Cada número vem de um registro de experimento (EXP-nn, em `experimentos/execucoes/`) ou de um arquivo de `data/ipc-2011-2023/`, com o script indicado. As decisões de desenho foram tomadas pelo Coordenador por delegação do autor (`docs/fase4b-desenho.md`). O texto da dissertação é do autor; este relatório é material de trabalho.
+> **Rascunho de IA; validado pelo autor em 28/09/2026** (resposta a Q5, leitura do R-29 por instância e síntese para a Ponte). Claude Code (claude-opus-5-5), 28/09/2026. Cada número vem de um registro de experimento (EXP-nn, em `experimentos/execucoes/`) ou de um arquivo de `data/ipc-2011-2023/`, com o script indicado. As decisões de desenho foram tomadas pelo Coordenador por delegação do autor (`docs/fase4b-desenho.md`). O texto da dissertação é do autor; este relatório é material de trabalho.
 
 ## 1. As perguntas
 
@@ -43,7 +43,7 @@ A Fase 3 respondeu Q1 e Q2 com o Planner Museum, por domínio. A 4B usa os resul
   - na ótima de 2011, o ganho vem do hFF no estado inicial, que mede o comprimento do plano relaxado, ou seja, a dificuldade;
   - na *satisficing* de 2018, vem das medidas de amostragem (becos sem saída, sucesso da sondagem), que são a topologia propriamente dita.
 
-**Resposta a Q5** `[HIPÓTESE]`, a validar pelo autor:
+**Resposta a Q5** (validada pelo autor em 28/09/2026):
 - Nas IPCs de 2011 e 2018, nenhuma característica estrutural extraída do PDDL explica de forma robusta o desempenho relativo das famílias de técnica fora do domínio.
 - As que mais explicam não são estruturais no sentido estrito. São medidas que sondam a tarefa com a heurística de relaxação: o tamanho do plano relaxado e a paisagem de hFF em estados amostrados. Estão mais perto de executar uma busca curta do que de ler a estrutura do modelo.
 - Mesmo com elas, o poder de explicar fica entre 0,6 e 0,8 de AUC, e só em parte das famílias.
