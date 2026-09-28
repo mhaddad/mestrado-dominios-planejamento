@@ -10,7 +10,7 @@
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
 | Última atualização | 27/09/2026 |
-| Versão deste documento | 0.78 |
+| Versão deste documento | 0.79 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · 🟡 Fase 6 em curso desde 28/09/2026 (escrita até 02/10/2026) |
 
 ---
@@ -681,6 +681,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 27/09/2026 | 5 | Codex (GPT-5) + skill editorial `source-auditor` | Promoção autorizada de SALLMA e SWE-Router, leitura/conferência de fontes primárias e atualização das sínteses | SALLMA entra apenas como apoio arquitetural; SWE-Router como preprint de fronteira baseado em *benchmarks*; 10 e 14 chaves citáveis verificadas, respectivamente, na síntese e no dossiê |
 | 28/09/2026 | 5 | Claude Code (claude-opus-5-5) | Notas de leitura de `fan2026dependencyrouter` e `chen2026risa`; reescrita da nota de `madeyski2026triage`; correção da nota de `zhou2026agentasarouter`; promoção das quatro; fechamento da Fase 5 | Textos integrais baixados do arXiv e extraídos com `pdftotext`; números e trechos literais conferidos nas tabelas e seções citadas; metadados das quatro conferidos na API do arXiv; DOI declarado pelo Fan testado (sem registro); duas leituras erradas de agente encontradas e corrigidas (Madeyski sem resultado empírico; Zhou, ganho por desempenho e não pela descrição) |
 | 28/09/2026 | 6 | Claude Code (claude-opus-5-5) | Montagem no padrão da FEI (modelo `.docx`, CSL, filtro Lua, script), plano de escrita, pré-textuais com a declaração de IA | Regras transcritas do guia da FEI com a página; citações e referências testadas com chaves reais (o CSL da UFPR falhou nas citações entre parênteses e foi trocado); montagem de teste com os capítulos 1 a 3 inspecionada por script (3 seções, estilos, campos, numeração). Sem Word nem LibreOffice na máquina: o resultado visual final é conferido pelo autor |
+| 28/09/2026 | 6 | Claude Code (claude-opus-5-5) | Redação do capítulo 4 (Método) | Cada número tirado de um registro de experimento ou README de dados, com a origem em comentário; 18 chaves conferidas por `checar_citacoes.py`; uma frase ajustada ao que a nota de `kerschke2019automated` sustenta; contagem das *features* SAS+ conferida nas saídas dos extratores (16, e não 17) e corrigida nos registros. **Texto a revisar pelo autor** |
 
 ---
 
@@ -814,3 +815,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.76 | 28/09/2026 | Codificação do EXP-13 corrigida (FDSS11 sem *landmarks*), sem mudança nos resultados |
 | 0.77 | 28/09/2026 | **Fase 5 concluída** (revisão final do autor); quatro fontes da curadoria promovidas (`referencias.bib` com 157), com notas novas (Fan, Chen) e corrigidas (Madeyski, Zhou); registros da 4B, do R-29 e do relatório da Fase 3 atualizados |
 | 0.78 | 28/09/2026 | **Fase 6 iniciada**: decisões do autor (estrutura com a 4B no cap. 5, guia da FEI, declaração de IA, prazo de 02/10, redação integral pela IA); montagem no padrão FEI; plano de escrita |
+| 0.79 | 28/09/2026 | Capítulo 4 (Método) redigido; contagem das *features* SAS+ corrigida para 16 em cinco registros |
