@@ -1,13 +1,13 @@
 ---
 titulo: "Introdução: a pergunta de 2010 e as perguntas de hoje"
 status: rascunho-de-ia
-data: 2026-09-23
-fonte: plano (seções 1, 5 e 7), capítulos 2 e 3, relatório de auditoria
+data: 2026-09-28
+fonte: plano (seções 1, 5 e 7), relatórios das Fases 3 a 5, relatório de auditoria
 ---
 
 # Introdução
 
-> Rascunho gerado por IA. As seções que dependem dos resultados das Fases 3 a 5 (contribuições confirmadas, síntese dos resultados) estão marcadas como pendentes. As citações usam só chaves do `literatura/referencias/referencias.bib`. É material de trabalho: o texto final é do autor.
+> Rascunho gerado por IA para revisão do autor. As citações usam somente chaves verificadas de `literatura/referencias/referencias.bib`.
 
 Um planejador automático recebe a descrição de um domínio, um estado inicial e um objetivo, e devolve uma sequência de ações que leva de um ao outro [@weld1994introduction]. Desde que as Competições Internacionais de Planejamento passaram a comparar planejadores sobre os mesmos problemas, em 1998, um padrão se repete: planejadores que se destacam em alguns domínios falham em outros, e nenhum domina todos [@mcdermott2000planning; @nunez2015automatic]. Se o desempenho depende do domínio, faz sentido perguntar se é possível saber de antemão, olhando para o domínio, qual planejador escolher.
 
@@ -23,14 +23,15 @@ O primeiro passo foi auditar o que a dissertação afirmava. Das 349 afirmaçõe
 
 ## Perguntas de pesquisa
 
-A revisão se organiza em quatro perguntas.
+A revisão se organiza em cinco perguntas.
 
 - **Q1 — Replicação.** As conclusões de 2010 se sustentam com mais planejadores, mais domínios e método estatístico adequado?
 - **Q2 — Continuidade.** Métricas estruturais de modelagem, no estilo orientado a objetos, acrescentam poder preditivo às *features* modernas extraídas de PDDL? Nenhum trabalho revisado fez essa comparação, e ela precisa controlar um efeito conhecido: reordenar um modelo de domínio, sem mudar seu significado, altera o desempenho dos planejadores [@vallati2021importance].
 - **Q3 — Atualização.** Onde os modelos de linguagem entram nesse mapa: como técnica de planejamento, como tradutores de domínio para PDDL ou como seletores de planejador [@guan2023leveraging; @liu2023llmp; @pallagani2024prospects]?
-- **Q4 — Transferência.** O princípio de ajustar a estratégia de solução às características da tarefa ajuda a escolher configurações de agentes de IA no desenvolvimento de software? A questão tem apoio indireto: em correção automática de defeitos, uma abordagem simples de três fases superou agentes mais complexos em desempenho e custo [@xia2025demystifying]. `[HIPÓTESE]` A ponte com a teoria da contingência nas organizações [@lawrence1967differentiation] é analogia para organizar hipóteses, não evidência.
+- **Q4 — Transferência.** O princípio de ajustar a estratégia de solução às características da tarefa ajuda a escolher configurações de agentes de IA no desenvolvimento de software? A questão tem apoio indireto: em correção automática de defeitos, uma abordagem simples de três fases superou agentes mais complexos em desempenho e custo [@xia2025demystifying]. A ponte com a teoria da contingência nas organizações [@lawrence1967differentiation] é empregada como analogia para organizar hipóteses, não como evidência.
+- **Q5 — Ampliação.** Nos resultados publicados das IPCs posteriores a 2010, quais características estruturais extraídas automaticamente do PDDL explicam o desempenho relativo das famílias de técnicas de planejamento? A pergunta amplia a amostra e desloca a análise para resultados por instância das IPCs de 2011 e 2018.
 
-As duas primeiras perguntas são o núcleo da revisão e ficam no território do trabalho original. As duas últimas são expansões de escopo, com peso menor e registro explícito como tal.
+As duas primeiras perguntas são o núcleo da revisão e ficam no território do trabalho original. Q3 atualiza o mapa das técnicas; Q4 é uma expansão exploratória; Q5 amplia a avaliação empírica com dados posteriores a 2010.
 
 ## Objetivos
 
@@ -42,15 +43,16 @@ O objetivo geral é reexaminar a relação entre características de domínios e
 4. comparar métricas de modelagem UML com *features* extraídas de PDDL como preditoras de desempenho (capítulo 5);
 5. posicionar os modelos de linguagem no mapa das técnicas (capítulo 6);
 6. testar, como hipótese, se o princípio de ajuste informa a escolha de configurações de agentes em desenvolvimento de software (capítulo 7).
+7. examinar, nas IPCs de 2011 e 2018, se *features* SAS+ e propriedades de topologia explicam o desempenho relativo de famílias de técnicas por instância (capítulo 5).
 
 ## Contribuições
 
-> PENDENTE: esta seção depende dos resultados das Fases 3 a 5. Por ora, as contribuições já entregues são a auditoria documentada da dissertação de 2010, com dados e scripts reprodutíveis, e a taxonomia de técnicas em quatro dimensões.
+Esta revisão entrega uma auditoria rastreável das afirmações e dos dados de 2010; uma taxonomia de técnicas em quatro dimensões, construída a partir de fontes primárias; uma replicação em camadas que separa reprodução, correção, reexecução e ampliação; e uma avaliação com 41 domínios do Planner Museum e resultados por instância das IPCs de 2011 e 2018. <!-- fonte: auditoria/relatorio-auditoria.md; EXP-03 a EXP-25 --> A contribuição aplicada é uma ponte exploratória que formula a escolha de configuração de agentes de software como seleção condicional mensurável, sem alegar que uma política local já foi validada. O capítulo 8 retoma o alcance e os limites de cada contribuição.
 
 ## Estrutura do texto
 
-O capítulo 2 revisa os fundamentos e o estado da arte de 2008 a 2026: seleção de algoritmos, caracterização de tarefas de planejamento, planejadores e competições, aprendizado, modelos de linguagem, engenharia do conhecimento e o ajuste entre tarefa e técnica fora do planejamento. O capítulo 3 apresenta a auditoria da dissertação de 2010 e a nova taxonomia. O capítulo 4 descreve o método da replicação e da ampliação experimental. O capítulo 5 apresenta os resultados e responde às perguntas Q1 e Q2. O capítulo 6 trata dos modelos de linguagem (Q3), e o capítulo 7, da ponte com o desenvolvimento de software (Q4). O capítulo 8 conclui.
+O capítulo 2 revisa os fundamentos e o estado da arte de 2008 a 2026: seleção de algoritmos, caracterização de tarefas de planejamento, planejadores e competições, aprendizado, modelos de linguagem, engenharia do conhecimento e o ajuste entre tarefa e técnica fora do planejamento. O capítulo 3 apresenta a auditoria da dissertação de 2010 e a nova taxonomia. O capítulo 4 descreve o método da replicação e da ampliação experimental. O capítulo 5 apresenta os resultados e responde às perguntas Q1, Q2 e Q5. O capítulo 6 trata dos modelos de linguagem (Q3), e o capítulo 7, da ponte exploratória com o desenvolvimento de software (Q4). O capítulo 8 conclui.
 
 ## Uso de inteligência artificial
 
-> PENDENTE: declaração do uso de IA conforme as regras da instituição (plano, Fase 6). O registro detalhado está no plano do projeto, seção 11.
+O uso de inteligência artificial na revisão, na extração de dados, na pesquisa, na experimentação e na redação deste rascunho é declarado nos elementos pré-textuais. A declaração só se torna definitiva após a revisão e a aprovação do autor.
