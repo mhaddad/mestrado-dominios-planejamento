@@ -1,13 +1,11 @@
 ---
 titulo: "Revisitando 2010: auditoria da dissertação original"
-status: rascunho-de-ia
+status: revisado-por-ia
 data: 2026-09-23
 fonte: entregáveis da Fase 2 (auditoria/)
 ---
 
 # Revisitando 2010: auditoria da dissertação original
-
-> Rascunho gerado por IA a partir dos entregáveis da Fase 2 (`auditoria/relatorio-auditoria.md`, `auditoria/afirmacoes.csv`, `auditoria/achados-fase0.md`, `auditoria/taxonomia-tecnicas.md`). Os números vêm dos scripts em `auditoria/scripts/`; as citações usam só chaves do `literatura/referencias/referencias.bib`. É material de trabalho: o texto final é do autor.
 
 Este capítulo examina a dissertação de 2010 [@haddad2010relacao] com os instrumentos de 2026: a literatura revista no capítulo anterior, as fontes primárias dos planejadores e das competições que ela usou, e os próprios dados e arquivos do trabalho, preservados no acervo. O objetivo não é refazer o estudo — isso é tarefa dos capítulos seguintes —, mas separar, afirmação por afirmação, o que continua de pé, o que precisa ser dito de outro modo e o que não se sustenta. A auditoria também produziu duas coisas que a revisão usa adiante: uma taxonomia de técnicas refeita a partir das fontes primárias e uma lista do que precisa ser reexecutado.
 
@@ -27,9 +25,7 @@ Cada afirmação recebeu uma de três classes. *Mantém*: correta e sustentada c
 
 ## Resultado geral
 
-Das 349 afirmações, 265 se mantêm, 80 precisam ser reformuladas e 4 são descartadas (Tabela 1).
-
-**Tabela 1 – Classificação das afirmações da dissertação de 2010, por capítulo**
+Das 349 afirmações, 265 se mantêm, 80 precisam ser reformuladas e 4 são descartadas, como mostra a tabela a seguir.
 
 | Capítulo de 2010 | Afirmações | Mantém | Reformula | Descarta |
 |---|---|---|---|---|
@@ -43,7 +39,11 @@ Das 349 afirmações, 265 se mantêm, 80 precisam ser reformuladas e 4 são desc
 | Conclusões e trabalhos futuros | 21 | 4 | 17 | 0 |
 | **Total** | **349** | **265** | **80** | **4** |
 
+: Classificação das afirmações da dissertação de 2010, por capítulo
+
+::: fonte
 Fonte: `auditoria/afirmacoes.csv`, gerado por `auditoria/scripts/resumir_auditoria.py`.
+:::
 
 A distribuição tem um padrão claro. O que 2010 descreve — o método, os domínios, a história do campo — se sustenta quase todo. O que precisa mudar se concentra onde o texto tira conclusões: 33 das 69 afirmações de resultado e 17 das 21 afirmações das conclusões e trabalhos futuros são *reformula*. As quatro afirmações descartadas não são conclusões centrais: três são comparações numéricas entre planejadores nas IPCs, contrariadas pelos resultados oficiais, e a quarta é a convenção que sustenta a taxonomia de técnicas, examinada adiante.
 
@@ -75,9 +75,9 @@ O primeiro é que os rótulos misturam dimensões independentes. Alguns descreve
 
 O segundo é que várias atribuições contrariam as fontes. O texto de 2010 trata todos os planejadores baseados em satisfatibilidade como *Forward-chaining* "por partirem do estado inicial", por convenção própria; nas fontes do Blackbox, do SATPlan e do MAXPLAN, quem busca é o resolvedor SAT, sobre uma codificação de horizonte fixo [@kautz1999unifying; @kautz2006satplan; @xing2006maxplan]. O Fast Downward aparece como *Hierarchical*, mas a decomposição hierárquica está só no cálculo da heurística de grafo causal; a busca é progressiva no espaço de estados [@helmert2006fast]. O YAHSP aparece como *Knowledge-based*, mas reaproveita informação calculada pela própria heurística, não conhecimento de domínio fornecido por fora [@vidal2004lookahead]. O caso do System R é mais sutil: o rótulo *Backward-chaining* tem base parcial, porque o planejador regride metas e progride o estado, uma versão do STRIPS recursivo [@lin2001planner; @bacchus2001aips], mas não faz busca regressiva no espaço de estados.
 
-A revisão substitui a taxonomia de 2010 por outra em quatro dimensões: (1) algoritmo e espaço de busca, (2) heurística, (3) representação do estado ou do problema e (4) arquitetura do sistema, isto é, planejador único ou *portfólio*. *Partial-order* e *Total-order* deixam de ser técnicas e passam a atributo do plano. A Tabela 2 reclassifica os dez planejadores.
+A revisão substitui a taxonomia de 2010 por outra em quatro dimensões: (1) algoritmo e espaço de busca, (2) heurística, (3) representação do estado ou do problema e (4) arquitetura do sistema, isto é, planejador único ou *portfólio*. *Partial-order* e *Total-order* deixam de ser técnicas e passam a atributo do plano. O quadro a seguir reclassifica os dez planejadores.
 
-**Tabela 2 – Os planejadores de 2010 na nova taxonomia**
+::: quadro
 
 | Planejador | Algoritmo e espaço de busca | Heurística | Representação | Arquitetura |
 |---|---|---|---|---|
@@ -92,7 +92,12 @@ A revisão substitui a taxonomia de 2010 por outra em quatro dimensões: (1) alg
 | SATPlan | Grafo de planejamento compilado para SAT | Sem heurística própria | Proposicional, em SAT | Único |
 | MAXPLAN | SAT com decomposição por subobjetivo | Sem heurística própria | Proposicional, com formulação multivalorada | Único |
 
+: Os planejadores de 2010 na nova taxonomia
+:::
+
+::: fonte
 Fonte: `auditoria/taxonomia-tecnicas.md` e `auditoria/taxonomia/fontes-planejadores.csv`, a partir de [@kautz1999unifying; @koehler1997extending; @hoffmann2001ff; @lin2001planner; @gerevini2004lpgtd; @helmert2006fast; @vidal2004lookahead; @chen2006temporal; @kautz2006satplan; @xing2006maxplan].
+:::
 
 A primeira consequência é que a coluna de arquitetura, ausente em 2010, não distingue nenhum dos dez planejadores: todos são sistemas únicos. Essa dimensão passou a importar depois, quando portfólios e sistemas compostos dominaram as competições [@nunez2015automatic; @helmert2011fast]. A segunda é que as relações entre características e técnicas publicadas em 2010 foram calculadas com os rótulos antigos. O recálculo com a nova taxonomia é apresentado no capítulo 5.
 
@@ -102,9 +107,7 @@ A validação de 2010 comparava, em três domínios novos, o *ranking* previsto 
 
 Duas observações mudam a leitura desse resultado. A primeira é que a medida é sensível a empates. No Zeno-travel, seis planejadores resolveram todos os problemas, e no Elevator, cinco; a ordem entre eles no *ranking* observado é arbitrária, e a taxa de acerto depende de como se desempata.
 
-A segunda observação é mais séria. Os três *rankings* previstos são quase iguais entre si: a correlação de postos entre eles vai de 0,94 a 0,99. Se as características do domínio pesassem na previsão, os *rankings* deveriam variar de um domínio para outro. Para testar isso, a auditoria comparou o método com uma linha de base que ignora as características: ordenar os planejadores pela nota média nos dez domínios de treino (Tabela 3).
-
-**Tabela 3 – *Ranking* de 2010 e linha de base sem características, nos domínios de validação**
+A segunda observação é mais séria. Os três *rankings* previstos são quase iguais entre si: a correlação de postos entre eles vai de 0,94 a 0,99. Se as características do domínio pesassem na previsão, os *rankings* deveriam variar de um domínio para outro. Para testar isso, a auditoria comparou o método com uma linha de base que ignora as características: ordenar os planejadores pela nota média nos dez domínios de treino.
 
 | Domínio | Correlação de postos com o observado: 2010 | Correlação de postos: linha de base | Cinco primeiros certos: 2010 | Cinco primeiros certos: linha de base |
 |---|---|---|---|---|
@@ -112,7 +115,11 @@ A segunda observação é mais séria. Os três *rankings* previstos são quase 
 | Zeno-travel | 0,86 | 0,68 | 5 de 5 | 5 de 5 |
 | Elevator | 0,65 | 0,65 | 4 de 5 | 4 de 5 |
 
+: *Ranking* de 2010 e linha de base sem características, nos domínios de validação
+
+::: fonte
 Fonte: `auditoria/extracao/conferencia-rankings.csv`, gerado por `auditoria/scripts/conferir_rankings.py` a partir das Tabelas 30, 31, 36, 37, 42 e 43 de 2010.
+:::
 
 O método de 2010 fica à frente da linha de base em dois dos três domínios e empata no terceiro, mas a linha de base acerta os mesmos cinco primeiros planejadores. Esse padrão sugere que parte do que o *ranking* previa refletia a qualidade geral dos planejadores, não o ajuste entre técnica e domínio. Com dez planejadores e três domínios de validação, a diferença a favor do método não permite concluir que as características do domínio melhoraram a escolha. A literatura atual trata exatamente esse ponto ao comparar métodos de seleção com o melhor planejador único e com o oráculo que escolhe o melhor para cada caso [@bischl2016aslib; @lindauer2019algorithm].
 
@@ -122,13 +129,13 @@ As métricas de 2010 foram contadas em modelos UML.P, a notação do itSIMPLE. A
 
 A literatura posterior reforça a preocupação por outro caminho. Reordenar um modelo de domínio sem mudar seu significado altera o desempenho dos planejadores e pode inverter *rankings* [@vallati2021importance; @vallati2015effective]. E as estruturas com efeito demonstrado sobre a dificuldade de uma tarefa — o grafo causal, os grafos de transição de domínio e a largura de árvore do grafo causal — são extraídas automaticamente do PDDL, não contadas à mão em diagramas [@helmert2009concise; @hoffmann2011analyzing; @domshlak2013complexity]. As contagens sintáticas, as mais próximas das contagens de 2010, são a família de *features* que menos acrescenta à predição de desempenho [@fawcett2014improved].
 
-Isso não prova que as métricas UML sejam inúteis: nenhum trabalho revisado as comparou com *features* de PDDL nos mesmos domínios. É essa comparação, com controle da ordem de escrita do modelo, que a revisão propõe como segunda pergunta de pesquisa.
+Isso não prova que as métricas UML sejam inúteis: nenhum trabalho revisado as comparou com *features* de PDDL nos mesmos domínios. Essa comparação orienta a segunda pergunta de pesquisa. A ordem sintática do PDDL, contudo, não foi controlada nos experimentos desta revisão; sua influência permanece como limitação discutida no capítulo 4.
 
 ## As conclusões de 2010 à luz da revisão
 
-A Tabela 4 resume o veredito sobre as oito afirmações centrais da dissertação, combinando a literatura revista no capítulo anterior com os achados desta auditoria.
+O quadro a seguir resume o veredito sobre as oito afirmações centrais da dissertação, combinando a literatura revista no capítulo anterior com os achados desta auditoria.
 
-**Tabela 4 – Veredito sobre as afirmações centrais de 2010**
+::: quadro
 
 | Afirmação de 2010 | Veredito | Por quê |
 |---|---|---|
@@ -140,6 +147,13 @@ A Tabela 4 resume o veredito sobre as oito afirmações centrais da dissertaçã
 | Taxonomia de técnicas (Tabelas 2 a 4 de 2010) | Descarta | Mistura dimensões e contraria as fontes primárias; substituída pela taxonomia em quatro dimensões. |
 | Eficiência é a porcentagem de problemas resolvidos | Reformula | A cobertura é uma medida legítima, mas não a única: as competições medem também tempo e qualidade do plano [@hoffmann2005deterministic; @nunez2015automatic]. |
 | Trabalhos relacionados: Hoffmann (2001) e Gerevini, Saetti e Serina (2004) | Descarta como revisão suficiente | As duas obras estão bem descritas, mas a seção ignora a seleção de algoritmos e a origem da pergunta no itSIMPLE [@rice1976algorithm; @roberts2009learning; @vaquero2005itsimple]. |
+
+: Veredito sobre as afirmações centrais de 2010
+:::
+
+::: fonte
+Fonte: Autor, com base na auditoria documental e nas fontes citadas em cada linha.
+:::
 
 Os trabalhos futuros propostos em 2010 tiveram destinos diferentes. A extração automática das métricas e a atribuição de pesos às características foram realizadas pela comunidade por outros caminhos: *features* automáticas de PDDL e modelos de desempenho aprendidos [@fawcett2014improved; @hutter2014algorithm]. O detalhamento das técnicas em heurística, busca e subtécnicas é o que a nova taxonomia faz. A análise estatística da discretização foi, na prática, superada pela decisão de não discretizar e usar as características como valores contínuos [@fawcett2014improved].
 

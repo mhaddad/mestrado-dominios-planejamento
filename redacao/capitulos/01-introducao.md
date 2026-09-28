@@ -1,13 +1,11 @@
 ---
 titulo: "Introdução: a pergunta de 2010 e as perguntas de hoje"
-status: rascunho-de-ia
+status: revisado-por-ia
 data: 2026-09-28
 fonte: plano (seções 1, 5 e 7), relatórios das Fases 3 a 5, relatório de auditoria
 ---
 
 # Introdução
-
-> Rascunho gerado por IA para revisão do autor. As citações usam somente chaves verificadas de `literatura/referencias/referencias.bib`.
 
 Um planejador automático recebe a descrição de um domínio, um estado inicial e um objetivo, e devolve uma sequência de ações que leva de um ao outro [@weld1994introduction]. Desde que as Competições Internacionais de Planejamento passaram a comparar planejadores sobre os mesmos problemas, em 1998, um padrão se repete: planejadores que se destacam em alguns domínios falham em outros, e nenhum domina todos [@mcdermott2000planning; @nunez2015automatic]. Se o desempenho depende do domínio, faz sentido perguntar se é possível saber de antemão, olhando para o domínio, qual planejador escolher.
 
@@ -26,9 +24,9 @@ O primeiro passo foi auditar o que a dissertação afirmava. Das 349 afirmaçõe
 A revisão se organiza em cinco perguntas.
 
 - **Q1 — Replicação.** As conclusões de 2010 se sustentam com mais planejadores, mais domínios e método estatístico adequado?
-- **Q2 — Continuidade.** Métricas estruturais de modelagem, no estilo orientado a objetos, acrescentam poder preditivo às *features* modernas extraídas de PDDL? Nenhum trabalho revisado fez essa comparação, e ela precisa controlar um efeito conhecido: reordenar um modelo de domínio, sem mudar seu significado, altera o desempenho dos planejadores [@vallati2021importance].
+- **Q2 — Continuidade.** Métricas estruturais de modelagem, no estilo orientado a objetos, acrescentam poder preditivo às *features* modernas extraídas de PDDL? Nenhum trabalho revisado fez essa comparação. A ordem sintática do PDDL é uma fonte conhecida de variação no desempenho [@vallati2021importance], mas seu controle não foi executado nesta revisão e permanece como limitação do desenho.
 - **Q3 — Atualização.** Onde os modelos de linguagem entram nesse mapa: como técnica de planejamento, como tradutores de domínio para PDDL ou como seletores de planejador [@guan2023leveraging; @liu2023llmp; @pallagani2024prospects]?
-- **Q4 — Transferência.** O princípio de ajustar a estratégia de solução às características da tarefa ajuda a escolher configurações de agentes de IA no desenvolvimento de software? A questão tem apoio indireto: em correção automática de defeitos, uma abordagem simples de três fases superou agentes mais complexos em desempenho e custo [@xia2025demystifying]. A ponte com a teoria da contingência nas organizações [@lawrence1967differentiation] é empregada como analogia para organizar hipóteses, não como evidência.
+- **Q4 — Exploração.** Que conexões, oportunidades e hipóteses de pesquisa ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software apoiado por IA? A questão tem apoio indireto: em correção automática de defeitos, uma abordagem simples de três fases superou agentes mais complexos em desempenho e custo [@xia2025demystifying]. A ponte com a teoria da contingência nas organizações [@lawrence1967differentiation] é empregada como analogia para organizar hipóteses, não como evidência de eficácia em software.
 - **Q5 — Ampliação.** Nos resultados publicados das IPCs posteriores a 2010, quais características estruturais extraídas automaticamente do PDDL explicam o desempenho relativo das famílias de técnicas de planejamento? A pergunta amplia a amostra e desloca a análise para resultados por instância das IPCs de 2011 e 2018.
 
 As duas primeiras perguntas são o núcleo da revisão e ficam no território do trabalho original. Q3 atualiza o mapa das técnicas; Q4 é uma expansão exploratória; Q5 amplia a avaliação empírica com dados posteriores a 2010.
@@ -42,7 +40,7 @@ O objetivo geral é reexaminar a relação entre características de domínios e
 3. reproduzir o método de 2010 por script e medir o efeito de cada correção (capítulos 4 e 5);
 4. comparar métricas de modelagem UML com *features* extraídas de PDDL como preditoras de desempenho (capítulo 5);
 5. posicionar os modelos de linguagem no mapa das técnicas (capítulo 6);
-6. testar, como hipótese, se o princípio de ajuste informa a escolha de configurações de agentes em desenvolvimento de software (capítulo 7).
+6. investigar conexões entre a seleção de planejadores e a escolha de configurações de agentes de software, formulando hipóteses e critérios para estudos futuros (capítulo 7);
 7. examinar, nas IPCs de 2011 e 2018, se *features* SAS+ e propriedades de topologia explicam o desempenho relativo de famílias de técnicas por instância (capítulo 5).
 
 ## Contribuições
@@ -55,4 +53,4 @@ O capítulo 2 revisa os fundamentos e o estado da arte de 2008 a 2026: seleção
 
 ## Uso de inteligência artificial
 
-O uso de inteligência artificial na revisão, na extração de dados, na pesquisa, na experimentação e na redação deste rascunho é declarado nos elementos pré-textuais. A declaração só se torna definitiva após a revisão e a aprovação do autor.
+O uso de inteligência artificial na revisão, na extração de dados, na pesquisa, na experimentação e na redação desta versão é declarado nos elementos pré-textuais. A declaração só se torna definitiva após a revisão e a aprovação do autor.

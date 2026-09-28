@@ -1,21 +1,21 @@
 ---
 titulo: "Apêndices"
-status: rascunho-de-ia
+status: revisado-por-ia
 data: 2026-09-28
 fonte: auditoria/taxonomia/; experimentos/execucoes/; README.md
 ---
 
-# Apêndices
+# Apêndices {.unnumbered}
 
-## Apêndice A — Codificação dos planejadores
+## Apêndice A — Codificação dos planejadores {.unnumbered}
 
 A codificação completa dos planejadores na taxonomia em quatro dimensões está em arquivos versionados no repositório: `auditoria/taxonomia/planejadores_4d.csv` contém os dez planejadores de 2010; `auditoria/taxonomia/planejadores_museu_4d.csv`, os planejadores do Planner Museum; e `data/ipc-2011-2023/planejadores_4d.csv`, as codificações por trilha das IPCs de 2011 e 2018. As fontes primárias e as decisões de codificação estão em `auditoria/taxonomia/fontes-planejadores.csv` e `auditoria/taxonomia-tecnicas.md`.
 
 Cada registro distingue algoritmo e espaço de busca, heurística, representação e arquitetura. Nos casos de portfólio, os campos registram a composição descrita na fonte e a regra aplicada é documentada em `docs/fase4b-desenho.md`.
 
-## Apêndice B — Registros de experimento
+## Apêndice B — Registros de experimento {.unnumbered}
 
-Cada experimento possui um registro com objetivo, dados, comandos, resultados e limitações. A Tabela A.1 identifica os registros usados nesta dissertação.
+Cada experimento possui um registro com objetivo, dados, comandos, resultados e limitações. A tabela a seguir identifica os registros usados nesta dissertação.
 
 | Código | Tema | Registro |
 |---|---|---|
@@ -51,7 +51,7 @@ Cada experimento possui um registro com objetivo, dados, comandos, resultados e 
 Fonte: Autor.
 :::
 
-## Apêndice C — Reprodutibilidade
+## Apêndice C — Reprodutibilidade {.unnumbered}
 
 O repositório contém os dados derivados, *scripts*, registros de execução e instruções de ambiente. O acervo de 2010 é preservado como somente leitura; os dados processados ficam em `data/`, a auditoria em `auditoria/`, os experimentos em `experimentos/` e as fontes bibliográficas em `literatura/`.
 

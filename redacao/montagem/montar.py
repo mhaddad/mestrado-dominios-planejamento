@@ -171,6 +171,8 @@ def main():
                     primeiro_capitulo = p
             elif nome == "Heading 1":
                 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        if nome == "Table Caption" and texto.startswith("Quadro "):
+            p.style = doc.styles["Legenda de quadro"]
 
     # capa, folha de rosto e ficha (guia, p. 12-18), antes do primeiro parágrafo
     ancora = doc.paragraphs[0]

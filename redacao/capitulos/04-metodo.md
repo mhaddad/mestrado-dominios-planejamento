@@ -1,19 +1,19 @@
 ---
 titulo: "Método"
-status: rascunho-de-ia
+status: revisado-por-ia
 data: 2026-09-28
 fonte: registros de experimento (experimentos/execucoes/), relatórios das Fases 3 e 4B, auditoria/taxonomia-tecnicas.md, docs/fase4b-desenho.md
 ---
 
 # Método
 
-Este capítulo descreve como as perguntas Q1, Q2 e Q5 foram respondidas; o método dos experimentos com modelos de linguagem (Q3) está no capítulo 6, e o da ponte com o desenvolvimento de software (Q4), no capítulo 7. A revisão não repete o experimento de 2010 de uma só vez. Ela o refaz em camadas, cada uma mudando uma coisa de cada vez: primeiro reproduz o método sobre os mesmos dados, depois corrige o que a auditoria apontou, depois reexecuta os mesmos planejadores sob condição única, depois amplia a amostra com resultados publicados e, por fim, olha para as competições posteriores a 2010. Assim, cada diferença em relação a 2010 pode ser atribuída a uma causa.
+Este capítulo descreve como as perguntas Q1, Q2 e Q5 foram respondidas; os experimentos com modelos de linguagem (Q3) são descritos no capítulo 6, e a investigação exploratória sobre desenvolvimento de software (Q4), no capítulo 7. A revisão não repete o experimento de 2010 de uma só vez. Ela o refaz em camadas: primeiro reproduz o cálculo sobre os mesmos dados; depois altera decisões identificadas pela auditoria; em seguida reexecuta os planejadores sob uma condição comum; por fim amplia dados, planejadores e características. Nos Níveis 1 e 2, mudanças isoladas permitem localizar o efeito de decisões específicas. Nos Níveis 3 e 4 e na Fase 4B, várias condições mudam ao mesmo tempo; as comparações documentam a robustez e o alcance do resultado, sem constituir identificação causal de cada diferença.
 
 Todas as análises são feitas por *scripts* versionados no repositório do projeto, com os dados e a configuração ao lado; cada experimento tem um registro próprio, identificado por um código EXP-nn, com o comando que o reproduz. O Apêndice B lista os registros.
 
 ## Visão geral
 
-O Quadro 1 resume o desenho. As perguntas vêm do capítulo 1; os níveis de 1 a 4 são as camadas de replicação da Fase 3, e as IPCs de 2011 e 2018, a ampliação da Fase 4B.
+O primeiro quadro resume o desenho. As perguntas vêm do capítulo 1; os níveis de 1 a 4 são as camadas de replicação da Fase 3, e as IPCs de 2011 e 2018, a ampliação da Fase 4B.
 
 ::: quadro
 | Camada | O que muda em relação a 2010 | Dados | Pergunta |
@@ -45,7 +45,7 @@ Duas contagens publicadas foram corrigidas a partir das figuras da própria diss
 
 Os 10 planejadores, os 10 domínios de treino e os 3 de validação são os de 2010, descritos no capítulo 3. Os problemas de cada domínio foram localizados, por comparação de conteúdo, nas coleções oficiais das IPCs de 1998 a 2008: 10 domínios têm todos os problemas idênticos aos da competição; o Gripper foi gerado localmente com o gerador oficial; e, em três domínios, o acervo usa só as primeiras instâncias do conjunto (35 de 102 no Blocks World, 28 de 84 no Logistics e 20 de 36 no Satellite), corte que, segundo o autor, buscou igualar o subconjunto dos resultados publicados. <!-- fonte: docs/benchmarks-ipc-ate-2008.md; achados G14 e G15 -->
 
-As características de domínio de 2010 são 17 métricas contadas à mão nos diagramas UML.P do itSIMPLE [@vaquero2005itsimple; @tonidandel2006reading]: 3 do diagrama de casos de uso, 9 do diagrama de classes e 5 do diagrama de máquina de estados (Quadro 2). <!-- fonte: data/2010/metricas.csv -->
+As características de domínio de 2010 são 17 métricas contadas à mão nos diagramas UML.P do itSIMPLE [@vaquero2005itsimple; @tonidandel2006reading]: 3 do diagrama de casos de uso, 9 do diagrama de classes e 5 do diagrama de máquina de estados, apresentadas no quadro a seguir. <!-- fonte: data/2010/metricas.csv -->
 
 ::: quadro
 | Diagrama | Métricas |
@@ -185,7 +185,7 @@ A tarefa é a de 2010: escolher um planejador para um domínio novo. A perda de 
 
 ## Características extraídas do PDDL
 
-A revisão usa três famílias de características, todas extraídas automaticamente dos arquivos PDDL das tarefas, sem modelagem manual e antes de qualquer execução de planejador.
+A revisão usa três famílias de características extraídas automaticamente dos arquivos PDDL, sem modelagem manual. Elas são calculadas sem acesso ao resultado dos competidores e, portanto, podem estar disponíveis antes da decisão do seletor. A terceira família inclui sondagem heurística e exige executar computação sobre estados da tarefa; não é uma leitura puramente estática do arquivo.
 
 ### Métricas de 2010 a partir do PDDL
 
@@ -203,7 +203,7 @@ Por domínio, usa-se a mediana das instâncias. Nos 13 domínios de 2010, as *fe
 
 ### Topologia de busca
 
-A terceira família, usada só na Fase 4B, mede propriedades da paisagem de busca na linha de @hoffmann2011analyzing: o resultado do critério estrutural de Hoffmann, a fração de transições invertíveis, o valor da heurística hFF no estado inicial e, por amostragem de 10 estados, a taxa de becos sem saída, a taxa de sucesso de uma sondagem e a profundidade média da saída. Antes do uso, o extrator foi validado contra a Tabela 3 de @hoffmann2011analyzing, com correlação de postos de 0,966 na sondagem e 0,987 nos becos sem saída, em 30 domínios. Uma sétima medida, que usava o melhor custo conhecido de cada instância, foi descartada antes de qualquer resultado, porque esse custo vem dos planos dos competidores e um seletor não o teria na hora de escolher. <!-- fonte: EXP-25 -->
+A terceira família, usada só na Fase 4B, mede propriedades da paisagem de busca na linha de @hoffmann2011analyzing: o resultado do critério estrutural de Hoffmann, a fração de transições invertíveis, o valor da heurística hFF no estado inicial e, por amostragem de 10 estados, a taxa de becos sem saída, a taxa de sucesso de uma sondagem e a profundidade média da saída. Antes do uso, o extrator foi validado contra os resultados publicados por @hoffmann2011analyzing, com correlação de postos de 0,966 na sondagem e 0,987 nos becos sem saída, em 30 domínios. Uma sétima medida, que usava o melhor custo conhecido de cada instância, foi descartada antes de qualquer resultado, porque esse custo vem dos planos dos competidores e um seletor não o teria na hora de escolher. <!-- fonte: EXP-25 -->
 
 ## Resultados das IPCs de 2011 e 2018 (Fase 4B)
 
@@ -222,6 +222,22 @@ Uma **família** é um valor da D1 ou da D2 da taxonomia; um planejador com vár
 a) **mapa família × domínio**: as instâncias resolvidas pelo melhor planejador de cada família e pelo melhor planejador geral, em cada domínio;
 b) **previsão por instância** (Q5): para cada família, uma regressão logística e uma árvore de profundidade 2 preveem se ela resolve a instância a partir das características, com validação que deixa um domínio de fora por vez; a medida é a área sob a curva ROC (AUC) fora da amostra, comparada com a de um modelo só com o tamanho da tarefa. A significância vem de um teste de permutação do rótulo, com correção de Holm entre os modelos de cada recorte; para a topologia, um segundo teste permuta só o bloco de topologia, para medir o que ela acrescenta às *features* SAS+; <!-- fonte: EXP-21; EXP-25 -->
 c) **seleção por instância** (R-29): os seletores descritos a seguir escolhem um planejador por instância, e a perda é 1 quando o escolhido não resolve. <!-- fonte: EXP-24 -->
+
+As três análises usam unidades, referências e desfechos diferentes. Separá-las evita transformar capacidade de prever a resolução de uma família em evidência de que um seletor escolhe o melhor planejador.
+
+| Análise | Unidade | Sinal disponível | Referência | Desfecho fora da amostra |
+|---|---|---|---|---|
+| Mapa família × domínio | Domínio dentro de edição e trilha | Resultados observados | Melhor planejador geral | Diferença de cobertura, descritiva |
+| Predição de família | Instância elegível | Tamanho, SAS+ e, no experimento complementar, topologia | Modelo apenas com tamanho | AUC ao deixar um domínio de fora |
+| Seleção R-29 | Instância elegível | Os mesmos blocos de características | SBS escolhido apenas no treino | Número de falhas ao deixar um domínio de fora |
+
+: Unidade, sinal, referência e desfecho das análises da Q5
+
+::: fonte
+Fonte: Autor, com base nos desenhos de EXP-21, EXP-24 e EXP-25.
+:::
+
+Uma instância é elegível quando possui resultado de competição e o bloco de características exigido pelo modelo. A quantidade elegível pode, portanto, variar entre análises; os capítulos de resultados informam as exclusões. Em cada dobra, tanto o SBS quanto os parâmetros dos seletores são determinados sem usar o domínio mantido para teste. A decomposição posterior do bloco de topologia em sondagem e demais propriedades foi uma análise exploratória formulada após o resultado agregado e não recebeu uma nova família de correção por comparações múltiplas. <!-- fonte: EXP-21; EXP-24; EXP-25 -->
 
 ## Seletores, validação e testes
 
