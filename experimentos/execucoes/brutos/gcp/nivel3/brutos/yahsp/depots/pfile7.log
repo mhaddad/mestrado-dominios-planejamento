@@ -1,0 +1,59 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1234..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 1416 candidates, 408 actions
+Finalization time : 0.00 -> 135 fluents, 23 init
+
+20 17 12 10 9 7 6 5 4 
+
+0: (LIFT hoist1 crate4 crate0 distributor0) [1]
+1: (LIFT hoist0 crate5 pallet0 depot0) [1]
+2: (LIFT hoist2 crate3 crate2 distributor1) [1]
+3: (DRIVE truck0 distributor1 depot0) [1]
+4: (LOAD hoist0 crate5 truck0 depot0) [1]
+5: (DRIVE truck0 depot0 distributor1) [1]
+6: (LOAD hoist2 crate3 truck0 distributor1) [1]
+7: (UNLOAD hoist2 crate5 truck0 distributor1) [1]
+8: (DROP hoist1 crate4 pallet1 distributor0) [1]
+9: (LIFT hoist1 crate0 pallet4 distributor0) [1]
+10: (DROP hoist2 crate5 crate1 distributor1) [1]
+11: (DROP hoist1 crate0 pallet3 distributor0) [1]
+12: (LIFT hoist2 crate2 pallet2 distributor1) [1]
+13: (DRIVE truck0 distributor1 distributor0) [1]
+14: (DROP hoist2 crate2 crate5 distributor1) [1]
+15: (LIFT hoist1 crate4 pallet1 distributor0) [1]
+16: (LOAD hoist1 crate4 truck0 distributor0) [1]
+17: (UNLOAD hoist1 crate3 truck0 distributor0) [1]
+18: (DROP hoist1 crate3 pallet1 distributor0) [1]
+19: (LIFT hoist2 crate2 crate5 distributor1) [1]
+20: (DRIVE truck0 distributor0 distributor1) [1]
+21: (LOAD hoist2 crate2 truck0 distributor1) [1]
+22: (LIFT hoist2 crate5 crate1 distributor1) [1]
+23: (DROP hoist2 crate5 pallet2 distributor1) [1]
+24: (LIFT hoist2 crate1 pallet5 distributor1) [1]
+25: (DROP hoist2 crate1 crate5 distributor1) [1]
+26: (UNLOAD hoist2 crate4 truck0 distributor1) [1]
+27: (DROP hoist2 crate4 pallet5 distributor1) [1]
+28: (LIFT hoist2 crate1 crate5 distributor1) [1]
+29: (DROP hoist2 crate1 crate4 distributor1) [1]
+30: (LIFT hoist2 crate5 pallet2 distributor1) [1]
+31: (DROP hoist2 crate5 crate1 distributor1) [1]
+
+Valid plan : 32 actions.
+Computed nodes : 6573
+Evaluated nodes : 1533
+Developed nodes : 326
+Useful nodes : 4
+
+Lookahead utility : 34.83 %
+Preparation time : 0.00
+Search time : 0.09
+Total time : 0.09
+
+__MEMKB 3584

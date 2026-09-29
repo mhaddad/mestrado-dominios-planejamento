@@ -1,0 +1,101 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+84 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+4 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+38 variables of 88 necessary
+924 of 1185 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 948 to 948)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 954 unary operators... done! [948 unary operators]
+Best heuristic value: 56/30 [expanded 1 state(s)]
+Best heuristic value: 45/24 [expanded 3 state(s)]
+Best heuristic value: 44/24 [expanded 5 state(s)]
+Best heuristic value: 38/22 [expanded 7 state(s)]
+Best heuristic value: 33/22 [expanded 10 state(s)]
+Best heuristic value: 26/22 [expanded 12 state(s)]
+Best heuristic value: 25/21 [expanded 13 state(s)]
+Best heuristic value: 24/20 [expanded 14 state(s)]
+Best heuristic value: 23/19 [expanded 15 state(s)]
+Best heuristic value: 22/18 [expanded 16 state(s)]
+Best heuristic value: 21/17 [expanded 17 state(s)]
+Best heuristic value: 19/17 [expanded 18 state(s)]
+Best heuristic value: 19/16 [expanded 19 state(s)]
+Best heuristic value: 16/16 [expanded 20 state(s)]
+Best heuristic value: 15/15 [expanded 22 state(s)]
+Best heuristic value: 14/14 [expanded 23 state(s)]
+Best heuristic value: 13/13 [expanded 24 state(s)]
+Best heuristic value: 12/12 [expanded 25 state(s)]
+Best heuristic value: 11/11 [expanded 26 state(s)]
+Best heuristic value: 10/10 [expanded 27 state(s)]
+Best heuristic value: 9/9 [expanded 28 state(s)]
+Best heuristic value: 8/8 [expanded 29 state(s)]
+Best heuristic value: 7/7 [expanded 30 state(s)]
+Best heuristic value: 6/6 [expanded 31 state(s)]
+Best heuristic value: 5/5 [expanded 32 state(s)]
+Best heuristic value: 4/4 [expanded 33 state(s)]
+Best heuristic value: 3/3 [expanded 34 state(s)]
+Best heuristic value: 2/2 [expanded 35 state(s)]
+Best heuristic value: 1/1 [expanded 36 state(s)]
+Solution found!
+switch_on instrument1 satellite0
+switch_on instrument7 satellite2
+turn_to satellite0 star2 phenomenon14
+calibrate satellite0 instrument1 star2
+turn_to satellite0 star7 star2
+take_image satellite0 star7 instrument1 spectrograph3
+turn_to satellite0 star10 star7
+take_image satellite0 star10 instrument1 spectrograph3
+turn_to satellite2 phenomenon8 star6
+turn_to satellite2 star0 phenomenon8
+calibrate satellite2 instrument7 star0
+turn_to satellite2 phenomenon8 star0
+take_image satellite2 phenomenon8 instrument7 image0
+turn_to satellite2 phenomenon12 phenomenon8
+take_image satellite2 phenomenon12 instrument7 image0
+turn_to satellite2 phenomenon9 phenomenon12
+take_image satellite2 phenomenon9 instrument7 image0
+turn_to satellite0 phenomenon5 star10
+take_image satellite0 phenomenon5 instrument1 thermograph1
+turn_to satellite0 phenomenon14 phenomenon5
+take_image satellite0 phenomenon14 instrument1 thermograph2
+turn_to satellite0 planet11 phenomenon14
+take_image satellite0 planet11 instrument1 thermograph2
+turn_to satellite2 star6 phenomenon9
+take_image satellite2 star6 instrument7 thermograph1
+turn_to satellite0 phenomenon13 planet11
+take_image satellite0 phenomenon13 instrument1 thermograph1
+Plan length: 27 step(s).
+Expanded 37 state(s).
+Generated 2322 state(s).
+Cache hits: 3667
+Cache misses: 260
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 13208

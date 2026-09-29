@@ -1,0 +1,85 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P11-NET2-B10-G2_RT0_INSTANCE' defined
+ ... done.
+
+
+got 200 facts
+
+Cueing down from goal distance:   14 into depth [1]
+                                  13            [1][2]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   14
+                          13
+                          12
+                          11
+                          10
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PUSH-START S12 B0 A1 A2 B9 GASOLEO LCO TA1-2-GASOLEO
+        1: PUSH-END S12 A1 A2 B1 B9 RAT-A TA2-1-RAT-A
+        2: POP-START S13 B3 A1 A3 B6 LCO GASOLEO TA3-1-LCO
+        3: POP-START S12 B4 A1 A2 B9 GASOLEO LCO TA2-1-GASOLEO
+        4: POP-END S13 A1 A3 B7 B6 LCO TA1-1-LCO
+        5: POP-START S13 B8 A1 A3 B3 GASOLEO LCO TA3-1-GASOLEO
+        6: POP-END S13 A1 A3 B6 B3 RAT-A TA1-1-RAT-A
+        7: POP-START S13 B2 A1 A3 B8 RAT-A GASOLEO TA3-1-RAT-A
+        8: POP-END S13 A1 A3 B3 B8 GASOLEO TA1-2-GASOLEO
+        9: PUSH-START S13 B6 A1 A3 B8 GASOLEO GASOLEO TA1-1-GASOLEO
+       10: PUSH-END S13 A1 A3 B2 B8 RAT-A TA3-1-RAT-A
+       11: PUSH-START S13 B3 A1 A3 B6 LCO GASOLEO TA1-1-LCO
+       12: PUSH-END S13 A1 A3 B8 B6 GASOLEO TA3-2-GASOLEO
+       13: POP-START S13 B2 A1 A3 B6 RAT-A GASOLEO TA3-1-RAT-A
+       14: POP-END S13 A1 A3 B3 B6 GASOLEO TA1-1-GASOLEO
+       15: PUSH-START S13 B7 A1 A3 B6 GASOLEO GASOLEO TA1-2-GASOLEO
+       16: PUSH-END S13 A1 A3 B2 B6 RAT-A TA3-1-RAT-A
+       17: PUSH-START S13 B5 A1 A3 B7 GASOLEO GASOLEO TA1-1-GASOLEO
+       18: POP-END S12 A1 A2 B0 B9 GASOLEO TA1-2-GASOLEO
+       19: POP-START S12 B1 A1 A2 B4 RAT-A GASOLEO TA2-1-RAT-A
+       20: POP-END S12 A1 A2 B9 B4 LCO TA1-1-LCO
+       21: PUSH-START S12 B0 A1 A2 B4 GASOLEO GASOLEO TA1-2-GASOLEO
+       22: PUSH-END S13 A1 A3 B6 B7 GASOLEO TA3-1-GASOLEO
+       23: PUSH-END S12 A1 A2 B1 B4 RAT-A TA2-1-RAT-A
+       24: PUSH-START S12 B3 A1 A2 B0 LCO GASOLEO TA1-1-LCO
+       25: POP-START S13 B8 A1 A3 B7 GASOLEO GASOLEO TA3-2-GASOLEO
+       26: POP-END S13 A1 A3 B5 B7 LCO TA1-1-LCO
+       27: POP-START S13 B2 A1 A3 B8 RAT-A GASOLEO TA3-1-RAT-A
+       28: POP-END S13 A1 A3 B7 B8 GASOLEO TA1-2-GASOLEO
+       29: PUSH-START S13 B9 A1 A3 B8 LCO GASOLEO TA1-1-LCO
+       30: PUSH-END S13 A1 A3 B2 B8 RAT-A TA3-1-RAT-A
+       31: PUSH-END S12 A1 A2 B4 B0 GASOLEO TA2-2-GASOLEO
+       32: PUSH-START S12 B7 A1 A2 B3 GASOLEO LCO TA1-2-GASOLEO
+       33: PUSH-END S12 A1 A2 B0 B3 GASOLEO TA2-1-GASOLEO
+       34: POP-START S12 B4 A1 A2 B3 GASOLEO LCO TA2-2-GASOLEO
+       35: POP-END S12 A1 A2 B7 B3 GASOLEO TA1-2-GASOLEO
+       36: PUSH-START S13 B7 A1 A3 B9 GASOLEO LCO TA1-2-GASOLEO
+       37: POP-START S12 B1 A1 A2 B4 RAT-A GASOLEO TA2-1-RAT-A
+       38: POP-END S12 A1 A2 B3 B4 LCO TA1-1-LCO
+       39: PUSH-END S13 A1 A3 B8 B9 GASOLEO TA3-2-GASOLEO
+       40: PUSH-START S13 B3 A1 A3 B7 LCO GASOLEO TA1-1-LCO
+       41: PUSH-END S13 A1 A3 B9 B7 LCO TA3-1-LCO
+     
+
+time spent:    0.00 seconds instantiating 1760 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 200 facts and 1760 actions
+               0.00 seconds creating final representation with 200 relevant facts
+               0.00 seconds building connectivity graph
+               2.59 seconds searching, evaluating 26425 states, to a max depth of 2
+               2.59 seconds total time
+
+__MEMKB 15744

@@ -1,0 +1,97 @@
+Parsing...
+Instantiating...
+Starting instantiation [35 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+2 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+10 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+12 variables of 12 necessary
+168 of 168 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 204 to 148)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 204 unary operators... done! [204 unary operators]
+Best heuristic value: 20/15 [expanded 1 state(s)]
+Best heuristic value: 19/14 [expanded 4 state(s)]
+Best heuristic value: 18/13 [expanded 5 state(s)]
+Best heuristic value: 15/13 [expanded 8 state(s)]
+Best heuristic value: 14/13 [expanded 11 state(s)]
+Best heuristic value: 14/12 [expanded 12 state(s)]
+Best heuristic value: 14/11 [expanded 13 state(s)]
+Best heuristic value: 13/11 [expanded 14 state(s)]
+Best heuristic value: 12/11 [expanded 16 state(s)]
+Best heuristic value: 12/10 [expanded 21 state(s)]
+Best heuristic value: 11/10 [expanded 24 state(s)]
+Best heuristic value: 10/10 [expanded 26 state(s)]
+Best heuristic value: 10/8 [expanded 29 state(s)]
+Best heuristic value: 9/8 [expanded 33 state(s)]
+Best heuristic value: 9/7 [expanded 34 state(s)]
+Best heuristic value: 8/7 [expanded 37 state(s)]
+Best heuristic value: 7/7 [expanded 39 state(s)]
+Best heuristic value: 7/6 [expanded 40 state(s)]
+Best heuristic value: 6/6 [expanded 41 state(s)]
+Best heuristic value: 5/6 [expanded 43 state(s)]
+Best heuristic value: 5/5 [expanded 46 state(s)]
+Best heuristic value: 5/4 [expanded 47 state(s)]
+Best heuristic value: 4/4 [expanded 49 state(s)]
+Best heuristic value: 3/3 [expanded 50 state(s)]
+Best heuristic value: 2/2 [expanded 51 state(s)]
+Best heuristic value: 1/1 [expanded 52 state(s)]
+Solution found!
+walk driver2 s0 p0-2
+walk driver2 p0-2 s2
+board-truck driver1 truck2 s1
+drive-truck truck2 s1 s2 driver1
+load-truck package4 truck2 s2
+walk driver3 s0 p0-1
+walk driver3 p0-1 s1
+load-truck package3 truck2 s2
+board-truck driver3 truck1 s1
+drive-truck truck1 s1 s2 driver3
+drive-truck truck2 s2 s0 driver1
+unload-truck package4 truck2 s0
+load-truck package1 truck2 s0
+load-truck package2 truck2 s0
+drive-truck truck2 s0 s2 driver1
+drive-truck truck2 s2 s1 driver1
+unload-truck package1 truck2 s1
+unload-truck package2 truck2 s1
+unload-truck package3 truck2 s1
+drive-truck truck2 s1 s2 driver1
+Plan length: 20 step(s).
+Expanded 53 state(s).
+Generated 556 state(s).
+Cache hits: 410
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 9244

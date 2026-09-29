@@ -1,0 +1,159 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p02.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p02.pddl
+Problem name: p02-net1-b6-g4-rt0-instance
+Facts loaded.
+time: 1, 228 facts and 154 exclusive pairs.
+time: 2, 242 facts and 378 exclusive pairs.
+time: 3, 248 facts and 404 exclusive pairs.
+time: 4, 251 facts and 372 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 253 facts and 368 exclusive pairs.
+Goals first reachable in 5 steps.
+2834 nodes created.
+
+####################################################
+goals at time 6:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 6
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 255 facts and 391 exclusive pairs.
+596 new nodes added.
+
+####################################################
+goals at time 7:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 34
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 8:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 302
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 9:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 754
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 10:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3105
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 11:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 8705
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 255 facts and 391 exclusive pairs.
+606 new nodes added.
+
+####################################################
+goals at time 12:
+  on_b0_a2 on_b4_a1 on_b2_a3 on_b5_a2 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 6928
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (push-unitarypipe s12 b3 a1 a2 b4 rat-a lco ta1-1-rat-a ta2-1-lco)
+1 (pop-unitarypipe s13 b1 a1 a3 b5 lco oca1 ta1-1-oca1 ta3-1-lco)
+2 (push-unitarypipe s12 b2 a1 a2 b3 gasoleo rat-a ta1-1-gasoleo ta2-1-rat-a)
+3 (pop-unitarypipe s12 b4 a1 a2 b2 lco gasoleo ta1-1-gasoleo ta2-1-lco)
+4 (push-unitarypipe s12 b0 a1 a2 b4 oc1b lco ta1-1-oc1b ta2-1-lco)
+4 (push-unitarypipe s13 b2 a1 a3 b1 gasoleo lco ta1-1-gasoleo ta3-1-lco)
+5 (push-unitarypipe s12 b5 a1 a2 b0 oca1 oc1b ta1-1-oca1 ta2-1-oc1b)
+6 (pop-unitarypipe s12 b4 a1 a2 b5 lco oca1 ta1-1-oca1 ta2-1-lco)
+7 (push-unitarypipe s13 b5 a1 a3 b2 oca1 gasoleo ta1-1-oca1 ta3-1-gasoleo)
+7 (pop-unitarypipe s12 b0 a1 a2 b4 oc1b lco ta1-1-lco ta2-1-oc1b)
+8 (pop-unitarypipe s13 b1 a1 a3 b5 lco oca1 ta1-1-oca1 ta3-1-lco)
+9 (push-unitarypipe s12 b5 a1 a2 b0 oca1 oc1b ta1-1-oca1 ta2-1-oc1b)
+10 (push-unitarypipe s12 b4 a1 a2 b5 lco oca1 ta1-1-lco ta2-1-oca1)
+11 (pop-unitarypipe s12 b3 a1 a2 b4 rat-a lco ta1-1-lco ta2-1-rat-a)
+End plan
+----------------------------------------------------
+
+14 total actions in plan
+471 entries in hash table, 294 hash hits, avg set size 28
+775 total set-creation steps (entries + hits + plan length - 1)
+822 actions tried
+
+####################################################
+Total elapsed time:   0.07 seconds
+Time in milliseconds: 68
+
+####################################################
+__MEMKB 59648

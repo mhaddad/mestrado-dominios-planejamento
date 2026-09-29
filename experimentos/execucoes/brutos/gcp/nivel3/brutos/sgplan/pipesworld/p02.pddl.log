@@ -1,0 +1,46 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'PIPESWORLD_STRIPS' defined
+Parsing problem file
+ problem 'P02-NET1-B6-G4_RT0_INSTANCE' defined
+
+
+
+Starting SGPlan search ...
+
+Solution found.
+
+; Time 0.00
+; ParsingTime 0.00
+; NrActions 16
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (POP-UNITARYPIPE S13 B1 A1 A3 B5 LCO OCA1 TA1-1-OCA1 TA3-1-LCO) [1]
+1.002: (PUSH-UNITARYPIPE S12 B0 A1 A2 B4 OC1B LCO TA1-1-OC1B TA2-1-LCO) [1]
+2.003: (PUSH-UNITARYPIPE S13 B2 A1 A3 B1 GASOLEO LCO TA1-1-GASOLEO TA3-1-LCO) [1]
+3.004: (PUSH-UNITARYPIPE S13 B3 A1 A3 B2 RAT-A GASOLEO TA1-1-RAT-A TA3-1-GASOLEO) [1]
+4.005: (PUSH-UNITARYPIPE S12 B5 A1 A2 B0 OCA1 OC1B TA1-1-OCA1 TA2-1-OC1B) [1]
+5.006: (POP-UNITARYPIPE S12 B4 A1 A2 B5 LCO OCA1 TA1-1-OCA1 TA2-1-LCO) [1]
+6.007: (POP-UNITARYPIPE S12 B0 A1 A2 B4 OC1B LCO TA1-1-LCO TA2-1-OC1B) [1]
+7.008: (PUSH-UNITARYPIPE S12 B5 A1 A2 B0 OCA1 OC1B TA1-1-OCA1 TA2-1-OC1B) [1]
+8.009: (POP-UNITARYPIPE S13 B1 A1 A3 B3 LCO RAT-A TA1-1-RAT-A TA3-1-LCO) [1]
+9.010: (PUSH-UNITARYPIPE S12 B4 A1 A2 B5 LCO OCA1 TA1-1-LCO TA2-1-OCA1) [1]
+10.011: (PUSH-UNITARYPIPE S12 B3 A1 A2 B4 RAT-A LCO TA1-1-RAT-A TA2-1-LCO) [1]
+11.012: (POP-UNITARYPIPE S13 B2 A1 A3 B1 GASOLEO LCO TA1-1-LCO TA3-1-GASOLEO) [1]
+12.013: (PUSH-UNITARYPIPE S12 B1 A1 A2 B3 LCO RAT-A TA1-1-LCO TA2-1-RAT-A) [1]
+13.014: (POP-UNITARYPIPE S12 B4 A1 A2 B1 LCO LCO TA1-1-LCO TA2-1-LCO) [1]
+14.015: (PUSH-UNITARYPIPE S13 B1 A1 A3 B2 LCO GASOLEO TA1-1-LCO TA3-1-GASOLEO) [1]
+15.016: (POP-UNITARYPIPE S12 B3 A1 A2 B4 RAT-A LCO TA1-1-LCO TA2-1-RAT-A) [1]
+__MEMKB 4096

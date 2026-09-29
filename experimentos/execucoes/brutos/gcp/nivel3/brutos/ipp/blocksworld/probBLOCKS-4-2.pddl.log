@@ -1,0 +1,62 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-4-2' defined
+ ... done.
+
+
+instantiated 32 actions
+
+
+time:   0,    29 facts and       0 exclusive pairs (    8,       0 positives)
+              32 ops   and      16 exclusive pairs
+time:   1,    40 facts and      67 exclusive pairs (   12,      17 positives)
+              53 ops   and     359 exclusive pairs
+time:   2,    47 facts and     135 exclusive pairs (   19,      74 positives)
+              68 ops   and     811 exclusive pairs
+time:   3,    49 facts and     102 exclusive pairs (   20,      73 positives)
+              76 ops   and     998 exclusive pairs
+time:   4,    54 facts and     152 exclusive pairs (   25,     128 positives)
+              86 ops   and    1398 exclusive pairs
+time:   5,    54 facts and     118 exclusive pairs (   25,     110 positives)
+              86 ops   and    1298 exclusive pairs
+time:   6,    54 facts and      96 exclusive pairs (   25,      96 positives)
+
+goals first reachable in 6 time steps
+
+
+found plan as follows:
+
+time step    0: UNSTACK C B
+time step    1: STACK C D
+time step    2: PICK-UP B
+time step    3: STACK B C
+time step    4: PICK-UP A
+time step    5: STACK A B
+
+
+
+number of actions tried:          6
+number of noops tried  :         18
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 32 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.62 MBytes for graph
+               0.01 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2688

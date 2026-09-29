@@ -1,0 +1,95 @@
+
+ipp: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'LOGISTICS-9-1' defined
+ ... done.
+
+
+instantiated 402 actions
+
+
+time:   0,   111 facts and       0 exclusive pairs (   13,       0 positives)
+             125 ops   and      38 exclusive pairs
+time:   1,   138 facts and      63 exclusive pairs (   27,      24 positives)
+             168 ops   and     333 exclusive pairs
+time:   2,   138 facts and      27 exclusive pairs (   27,      15 positives)
+             177 ops   and     405 exclusive pairs
+time:   3,   147 facts and      54 exclusive pairs (   36,      42 positives)
+             204 ops   and     909 exclusive pairs
+time:   4,   156 facts and     117 exclusive pairs (   45,     105 positives)
+             222 ops   and    1323 exclusive pairs
+time:   5,   156 facts and      90 exclusive pairs (   45,      87 positives)
+             240 ops   and    2061 exclusive pairs
+time:   6,   174 facts and     378 exclusive pairs (   63,     357 positives)
+             294 ops   and    5850 exclusive pairs
+time:   7,   192 facts and     828 exclusive pairs (   81,     807 positives)
+             330 ops   and    7821 exclusive pairs
+time:   8,   192 facts and     360 exclusive pairs (   81,     357 positives)
+             348 ops   and    6111 exclusive pairs
+time:   9,   210 facts and     549 exclusive pairs (   99,     528 positives)
+
+goals first reachable in 9 time steps
+
+             384 ops   and    7290 exclusive pairs
+time:  10,   210 facts and     414 exclusive pairs (   99,     411 positives)
+
+found plan as follows:
+
+time step    0: LOAD-TRUCK OBJ11 TRU1 POS1
+                LOAD-TRUCK OBJ13 TRU1 POS1
+                LOAD-TRUCK OBJ23 TRU2 POS2
+                LOAD-TRUCK OBJ33 TRU3 POS3
+                LOAD-TRUCK OBJ32 TRU3 POS3
+                LOAD-TRUCK OBJ12 TRU1 POS1
+time step    1: DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+                DRIVE-TRUCK TRU3 POS3 APT3 CIT3
+                DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+time step    2: UNLOAD-TRUCK OBJ11 TRU1 APT1
+                UNLOAD-TRUCK OBJ13 TRU1 APT1
+                UNLOAD-TRUCK OBJ23 TRU2 APT2
+                UNLOAD-TRUCK OBJ33 TRU3 APT3
+                UNLOAD-TRUCK OBJ32 TRU3 APT3
+                UNLOAD-TRUCK OBJ12 TRU1 APT1
+time step    3: LOAD-AIRPLANE OBJ12 APN1 APT1
+                LOAD-AIRPLANE OBJ13 APN1 APT1
+                LOAD-AIRPLANE OBJ11 APN1 APT1
+time step    4: FLY-AIRPLANE APN1 APT1 APT3
+time step    5: UNLOAD-AIRPLANE OBJ12 APN1 APT3
+                UNLOAD-AIRPLANE OBJ13 APN1 APT3
+time step    6: LOAD-TRUCK OBJ13 TRU3 APT3
+                FLY-AIRPLANE APN1 APT3 APT2
+                LOAD-TRUCK OBJ12 TRU3 APT3
+time step    7: LOAD-AIRPLANE OBJ23 APN1 APT2
+                DRIVE-TRUCK TRU3 APT3 POS3 CIT3
+                UNLOAD-AIRPLANE OBJ11 APN1 APT2
+time step    8: UNLOAD-TRUCK OBJ13 TRU3 POS3
+                FLY-AIRPLANE APN1 APT2 APT3
+                UNLOAD-TRUCK OBJ12 TRU3 POS3
+time step    9: UNLOAD-AIRPLANE OBJ23 APN1 APT3
+
+
+
+number of actions tried:       1185
+number of noops tried  :       1070
+
+had     384 simple memoizing hits
+had      32 partial memoizing hits
+had      64 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 402 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.20 MBytes for domain representation
+               2.99 MBytes for graph
+               0.14 MBytes for exclusions
+               0.04 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 5504

@@ -1,0 +1,57 @@
+
+ff: parsing domain file
+domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'GROUNDED-PATHWAYS-04' defined
+ ... done.
+
+
+got 119 facts
+
+Cueing down from goal distance:   15 into depth [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1][2][3]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CHOOSE_SP1_L1_L0
+        1: INITIALIZE_SP1
+        2: CHOOSE_GP_L2_L1
+        3: INITIALIZE_GP
+        4: ASSOCIATE_SP1_GP_SP1-GP
+        5: SYNTHESIZE_SP1-GP_P107P1
+        6: INITIALIZE_SP1
+        7: INITIALIZE_GP
+        8: SYNTHESIZE_SP1-GP_CYCEP1
+        9: SYNTHESIZE_SP1-GP_P107
+       10: SYNTHESIZE_SP1-GP_POL
+       11: DUMMY-ACTION-4-2
+       12: DUMMY-ACTION-2-2
+       13: DUMMY-ACTION-1-2
+       14: ASSOCIATE_SP1_P107P1_SP1-P107P1
+       15: ASSOCIATE_SP1-P107P1_GP_SP1-P107P1-GP
+       16: DUMMY-ACTION-3-2
+     
+
+time spent:    0.00 seconds instantiating 153 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 119 facts and 153 actions
+               0.00 seconds creating final representation with 119 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 23 states, to a max depth of 3
+               0.00 seconds total time
+
+__MEMKB 4224

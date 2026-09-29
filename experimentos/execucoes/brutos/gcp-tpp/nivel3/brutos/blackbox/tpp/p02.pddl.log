@@ -1,0 +1,55 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p02.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p02.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p02.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p02.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 10 facts and 1 exclusive pairs.
+time: 2, 14 facts and 13 exclusive pairs.
+time: 3, 16 facts and 15 exclusive pairs.
+time: 4, 16 facts and 13 exclusive pairs.
+time: 5, 18 facts and 23 exclusive pairs.
+Goals first reachable in 5 steps.
+175 nodes created.
+
+####################################################
+goals at time 6:
+  stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 33
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market1)
+2 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+2 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+3 (load-goods1-truck1-market1-level0-level1-level0-level1)
+3 (load-goods2-truck1-market1-level0-level1-level0-level1)
+4 (drive-truck1-market1-depot1)
+5 (unload-goods2-truck1-depot1-level0-level1-level0-level1)
+5 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+8 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+8 actions tried
+
+####################################################
+Total elapsed time:   0.00 seconds
+Time in milliseconds: 1
+
+####################################################
+__MEMKB 5248

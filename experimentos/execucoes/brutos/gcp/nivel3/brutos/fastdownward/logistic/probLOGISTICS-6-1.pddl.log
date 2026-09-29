@@ -1,0 +1,78 @@
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 9 necessary
+78 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 78 to 78)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 78 unary operators... done! [78 unary operators]
+Best heuristic value: 16/13 [expanded 1 state(s)]
+Best heuristic value: 15/12 [expanded 5 state(s)]
+Best heuristic value: 14/11 [expanded 9 state(s)]
+Best heuristic value: 12/10 [expanded 10 state(s)]
+Best heuristic value: 11/9 [expanded 11 state(s)]
+Best heuristic value: 10/8 [expanded 14 state(s)]
+Best heuristic value: 9/7 [expanded 17 state(s)]
+Best heuristic value: 8/6 [expanded 18 state(s)]
+Best heuristic value: 7/5 [expanded 20 state(s)]
+Best heuristic value: 6/4 [expanded 22 state(s)]
+Best heuristic value: 4/4 [expanded 23 state(s)]
+Best heuristic value: 3/3 [expanded 24 state(s)]
+Best heuristic value: 2/2 [expanded 26 state(s)]
+Best heuristic value: 1/1 [expanded 27 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+unload-truck obj13 tru1 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj22 tru2 apt2
+load-truck obj13 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+Plan length: 14 step(s).
+Expanded 28 state(s).
+Generated 208 state(s).
+Cache hits: 158
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8860

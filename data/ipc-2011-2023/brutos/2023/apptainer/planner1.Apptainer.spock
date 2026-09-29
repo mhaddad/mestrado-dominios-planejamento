@@ -1,0 +1,70 @@
+# Stage 1: Compile the planner
+Bootstrap: docker
+From: ubuntu:22.04
+Stage: build
+
+%files
+    . /planner
+
+%post
+    ## Install all necessary dependencies.
+    apt-get update
+    apt-get -y install --no-install-recommends cmake g++ make pypy3
+
+    ## Clear build directory.
+    rm -rf /planner/builds
+
+    ## Build planner.
+    cd /planner
+    pypy3 build.py
+
+    ## Strip binaries.
+    strip --strip-all /planner/builds/release/bin/downward /planner/builds/release/bin/preprocess-h2
+
+# Stage 2: Run the planner
+Bootstrap: docker
+From: ubuntu:22.04
+Stage: run
+
+%files from build
+    /planner/driver
+    /planner/fast-downward.py
+    /planner/builds/release/bin
+
+%post
+    apt-get update
+    apt-get -y install --no-install-recommends pypy3
+    rm -rf /var/lib/apt/lists/*
+
+%runscript
+    #!/bin/bash
+    DOMAINFILE="$1"
+    PROBLEMFILE="$2"
+    PLANFILE="$3"
+
+    pypy3 /planner/fast-downward.py --translate --search \
+        --portfolio-eliminate-actions --alias seq-sat-fdss-2018 \
+        --overall-time-limit 30m --search-memory-limit 6G \
+        --transform-task preprocess-h2 \
+        --transform-task-options h2_time_limit,300 \
+        --plan-file "$PLANFILE" \
+        "$DOMAINFILE" \
+        "$PROBLEMFILE" \
+        -- --action-elimination-options --reduction MR --subsequence --enhanced --enhanced-fix-point \
+        --macro-operators --action-elimination-planner-config --search "astar(hmax())"
+
+%labels
+    Name        Spock
+    Description FDSS 2018 with action elimination. Removes redundant actions from each found plan to -potentially- rapidly find a cheaper plan.
+    Authors     Jendrik Seipp <jendrik.seipp@liu.se>, Mauricio Salerno <msalerno@pa.uc3m.es>, Raquel Fuentetaja <rfuentet@inf.uc3m.es>
+    License     GPL 3
+    Tracks      satisficing
+    SupportsDerivedPredicates                       yes
+    SupportsUniversallyQuantifiedPreconditions      yes
+    SupportsExistentiallyQuantifiedPreconditions    yes
+    SupportsUniversallyQuantifiedEffects            yes
+    SupportsNegativePreconditions                   yes
+    SupportsEqualityPreconditions                   yes
+    SupportsInequalityPreconditions                 yes
+    SupportsConditionalEffects                      yes
+    SupportsImplyPreconditions                      yes

@@ -1,0 +1,154 @@
+Parsing...
+Instantiating...
+Starting instantiation [43 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+20 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(crate7, crate7)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate5, crate5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate3, crate3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate6, crate6)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate4, crate4)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate1, crate1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate2, crate2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate0, crate0)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet1, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist1, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist2, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet2, distributor1)
+Removed false proposition: <none of those>
+30 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+32 variables of 32 necessary
+540 of 540 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 2748 to 1098)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 2364 unary operators... done! [2364 unary operators]
+Best heuristic value: 21/20 [expanded 1 state(s)]
+Best heuristic value: 21/18 [expanded 3 state(s)]
+Best heuristic value: 20/18 [expanded 5 state(s)]
+Best heuristic value: 20/15 [expanded 17 state(s)]
+Best heuristic value: 19/15 [expanded 21 state(s)]
+Best heuristic value: 18/15 [expanded 26 state(s)]
+Best heuristic value: 18/14 [expanded 27 state(s)]
+Best heuristic value: 14/12 [expanded 37 state(s)]
+Best heuristic value: 13/11 [expanded 40 state(s)]
+Best heuristic value: 12/10 [expanded 42 state(s)]
+Best heuristic value: 12/9 [expanded 49 state(s)]
+Best heuristic value: 11/8 [expanded 51 state(s)]
+Best heuristic value: 10/7 [expanded 52 state(s)]
+Best heuristic value: 7/6 [expanded 450 state(s)]
+Best heuristic value: 6/6 [expanded 482 state(s)]
+Best heuristic value: 5/6 [expanded 483 state(s)]
+Best heuristic value: 4/6 [expanded 486 state(s)]
+Best heuristic value: 4/4 [expanded 491 state(s)]
+Best heuristic value: 2/2 [expanded 494 state(s)]
+Best heuristic value: 1/1 [expanded 495 state(s)]
+Solution found!
+lift hoist2 crate6 crate5 distributor1
+load hoist2 crate6 truck0 distributor1
+drive truck0 distributor1 distributor0
+lift hoist2 crate5 crate3 distributor1
+lift hoist1 crate2 pallet1 distributor0
+lift hoist0 crate7 crate4 depot0
+load hoist1 crate2 truck0 distributor0
+load hoist2 crate5 truck1 distributor1
+lift hoist2 crate3 pallet2 distributor1
+load hoist2 crate3 truck1 distributor1
+unload hoist2 crate5 truck1 distributor1
+drop hoist2 crate5 pallet2 distributor1
+drop hoist0 crate7 crate4 depot0
+unload hoist1 crate2 truck0 distributor0
+drive truck0 distributor0 distributor1
+unload hoist2 crate6 truck0 distributor1
+drop hoist2 crate6 crate5 distributor1
+drive truck0 distributor1 distributor0
+load hoist1 crate2 truck0 distributor0
+drive truck0 distributor0 distributor1
+lift hoist2 crate6 crate5 distributor1
+load hoist2 crate6 truck0 distributor1
+unload hoist2 crate2 truck0 distributor1
+drive truck0 distributor1 distributor0
+unload hoist1 crate6 truck0 distributor0
+load hoist2 crate2 truck1 distributor1
+drive truck1 distributor1 distributor0
+load hoist1 crate6 truck1 distributor0
+unload hoist1 crate2 truck1 distributor0
+drive truck1 distributor0 depot0
+load hoist1 crate2 truck0 distributor0
+lift hoist0 crate7 crate4 depot0
+load hoist0 crate7 truck1 depot0
+drive truck1 depot0 distributor0
+unload hoist1 crate6 truck1 distributor0
+drive truck1 distributor0 depot0
+drop hoist1 crate6 pallet1 distributor0
+unload hoist1 crate2 truck0 distributor0
+drop hoist1 crate2 crate6 distributor0
+lift hoist0 crate4 crate1 depot0
+load hoist0 crate4 truck1 depot0
+unload hoist0 crate7 truck1 depot0
+drive truck1 depot0 distributor1
+drop hoist0 crate7 crate1 depot0
+unload hoist2 crate4 truck1 distributor1
+drive truck1 distributor1 depot0
+drop hoist2 crate4 crate5 distributor1
+lift hoist0 crate7 crate1 depot0
+load hoist0 crate7 truck1 depot0
+lift hoist0 crate1 crate0 depot0
+load hoist0 crate1 truck1 depot0
+lift hoist0 crate0 pallet0 depot0
+load hoist0 crate0 truck1 depot0
+unload hoist0 crate7 truck1 depot0
+drop hoist0 crate7 pallet0 depot0
+drive truck1 depot0 distributor1
+lift hoist2 crate4 crate5 distributor1
+load hoist2 crate4 truck1 distributor1
+drive truck1 distributor1 depot0
+unload hoist0 crate4 truck1 depot0
+drop hoist0 crate4 crate7 depot0
+unload hoist0 crate0 truck1 depot0
+drop hoist0 crate0 crate4 depot0
+Plan length: 63 step(s).
+Expanded 496 state(s).
+Generated 4216 state(s).
+Cache hits: 51372
+Cache misses: 121273
+Search time: 0.02 seconds
+Total time: 0.03 seconds
+__MEMKB 18176

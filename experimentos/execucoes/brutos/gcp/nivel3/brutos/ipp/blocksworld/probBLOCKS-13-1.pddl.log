@@ -1,0 +1,164 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-13-1' defined
+ ... done.
+
+
+instantiated 338 actions
+
+
+time:   0,   209 facts and       0 exclusive pairs (   16,       0 positives)
+             211 ops   and      11 exclusive pairs
+time:   1,   218 facts and      48 exclusive pairs (   20,      16 positives)
+             226 ops   and     195 exclusive pairs
+time:   2,   222 facts and      66 exclusive pairs (   24,      36 positives)
+             236 ops   and     401 exclusive pairs
+time:   3,   227 facts and      96 exclusive pairs (   27,      58 positives)
+             250 ops   and     809 exclusive pairs
+time:   4,   234 facts and     188 exclusive pairs (   34,     141 positives)
+             267 ops   and    1541 exclusive pairs
+time:   5,   239 facts and     226 exclusive pairs (   38,     180 positives)
+             283 ops   and    2339 exclusive pairs
+time:   6,   247 facts and     351 exclusive pairs (   46,     308 positives)
+             300 ops   and    3371 exclusive pairs
+time:   7,   250 facts and     302 exclusive pairs (   48,     268 positives)
+             314 ops   and    4174 exclusive pairs
+time:   8,   260 facts and     496 exclusive pairs (   58,     454 positives)
+             335 ops   and    5896 exclusive pairs
+time:   9,   263 facts and     438 exclusive pairs (   60,     400 positives)
+             351 ops   and    7136 exclusive pairs
+time:  10,   275 facts and     718 exclusive pairs (   72,     668 positives)
+             376 ops   and    9795 exclusive pairs
+time:  11,   278 facts and     635 exclusive pairs (   74,     591 positives)
+             394 ops   and   11561 exclusive pairs
+time:  12,   292 facts and    1011 exclusive pairs (   88,     953 positives)
+             423 ops   and   15418 exclusive pairs
+time:  13,   295 facts and     884 exclusive pairs (   90,     834 positives)
+             443 ops   and   17794 exclusive pairs
+time:  14,   311 facts and    1370 exclusive pairs (  106,    1304 positives)
+             476 ops   and   23161 exclusive pairs
+time:  15,   314 facts and    1191 exclusive pairs (  108,    1135 positives)
+             498 ops   and   26273 exclusive pairs
+time:  16,   332 facts and    1801 exclusive pairs (  126,    1727 positives)
+             535 ops   and   33498 exclusive pairs
+time:  17,   335 facts and    1562 exclusive pairs (  128,    1500 positives)
+             559 ops   and   37484 exclusive pairs
+time:  18,   355 facts and    2310 exclusive pairs (  148,    2228 positives)
+             600 ops   and   46951 exclusive pairs
+time:  19,   358 facts and    2003 exclusive pairs (  150,    1935 positives)
+             626 ops   and   51961 exclusive pairs
+time:  20,   380 facts and    2903 exclusive pairs (  172,    2813 positives)
+             671 ops   and   64089 exclusive pairs
+time:  21,   382 facts and    2480 exclusive pairs (  173,    2409 positives)
+             697 ops   and   69570 exclusive pairs
+time:  22,   405 facts and    3474 exclusive pairs (  196,    3393 positives)
+             743 ops   and   83812 exclusive pairs
+time:  23,   405 facts and    2944 exclusive pairs (  196,    2909 positives)
+             743 ops   and   79517 exclusive pairs
+time:  24,   405 facts and    2535 exclusive pairs (  196,    2535 positives)
+
+goals first reachable in 24 time steps
+
+
+graph has leveled off at time step 25
+
+             743 ops   and   78612 exclusive pairs
+time:  25,   405 facts and    2535 exclusive pairs (  196,    2535 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   26
+expanding wave front to level   27
+expanding wave front to level   28
+expanding wave front to level   29
+expanding wave front to level   30
+expanding wave front to level   31
+expanding wave front to level   32
+expanding wave front to level   33
+expanding wave front to level   34
+expanding wave front to level   35
+expanding wave front to level   36
+expanding wave front to level   37
+expanding wave front to level   38
+expanding wave front to level   39
+expanding wave front to level   40
+expanding wave front to level   41
+expanding wave front to level   42
+expanding wave front to level   43
+expanding wave front to level   44
+
+
+found plan as follows:
+
+time step    0: UNSTACK B K
+time step    1: PUT-DOWN B
+time step    2: UNSTACK J E
+time step    3: PUT-DOWN J
+time step    4: UNSTACK E D
+time step    5: PUT-DOWN E
+time step    6: UNSTACK D C
+time step    7: PUT-DOWN D
+time step    8: UNSTACK C A
+time step    9: PUT-DOWN C
+time step   10: UNSTACK A L
+time step   11: PUT-DOWN A
+time step   12: UNSTACK L H
+time step   13: PUT-DOWN L
+time step   14: UNSTACK H G
+time step   15: PUT-DOWN H
+time step   16: UNSTACK G M
+time step   17: PUT-DOWN G
+time step   18: UNSTACK M I
+time step   19: PUT-DOWN M
+time step   20: UNSTACK I F
+time step   21: STACK I B
+time step   22: PICK-UP H
+time step   23: STACK H I
+time step   24: PICK-UP G
+time step   25: STACK G H
+time step   26: PICK-UP K
+time step   27: STACK K G
+time step   28: PICK-UP F
+time step   29: STACK F K
+time step   30: PICK-UP J
+time step   31: STACK J F
+time step   32: PICK-UP C
+time step   33: STACK C J
+time step   34: PICK-UP M
+time step   35: STACK M C
+time step   36: PICK-UP L
+time step   37: STACK L M
+time step   38: PICK-UP E
+time step   39: STACK E L
+time step   40: PICK-UP A
+time step   41: STACK A E
+time step   42: PICK-UP D
+time step   43: STACK D A
+
+
+
+number of actions tried:    3129579
+number of noops tried  :   38822499
+
+had 1502407 simple memoizing hits
+had       1 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 338 operators
+               0.00 seconds building graph
+               0.02 seconds calculating exclusions
+              52.81 seconds searching graph
+              52.83 seconds total time
+
+Memory used:   0.19 MBytes for domain representation
+               9.57 MBytes for graph
+               0.87 MBytes for exclusions
+             274.43 MBytes for memoization
+             524.60 MBytes for wave front
+
+
+
+__MEMKB 1067648

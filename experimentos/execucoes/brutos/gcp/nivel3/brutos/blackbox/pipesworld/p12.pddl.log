@@ -1,0 +1,66 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p12.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p12.pddl
+Problem name: p12-net2-b10-g4-rt0-instance
+Facts loaded.
+time: 1, 273 facts and 104 exclusive pairs.
+time: 2, 284 facts and 160 exclusive pairs.
+time: 3, 300 facts and 378 exclusive pairs.
+time: 4, 314 facts and 685 exclusive pairs.
+time: 5, 333 facts and 1045 exclusive pairs.
+time: 6, 346 facts and 1279 exclusive pairs.
+time: 7, 372 facts and 2550 exclusive pairs.
+time: 8, 383 facts and 2399 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 386 facts and 1622 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 390 facts and 1384 exclusive pairs.
+Goals first reachable in 10 steps.
+12614 nodes created.
+
+####################################################
+goals at time 11:
+  on_b0_a2 on_b1_a2 on_b6_a2 on_b9_a3 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9692
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 391 facts and 1339 exclusive pairs.
+2209 new nodes added.
+
+####################################################
+goals at time 12:
+  on_b0_a2 on_b1_a2 on_b6_a2 on_b9_a3 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 768608
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 392 facts and 1347 exclusive pairs.
+2227 new nodes added.
+
+####################################################
+goals at time 13:
+  on_b0_a2 on_b1_a2 on_b6_a2 on_b9_a3 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan

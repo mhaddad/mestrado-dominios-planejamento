@@ -1,0 +1,78 @@
+
+ff: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ff: parsing problem file
+problem 'DLOG-3-3-7' defined
+ ... done.
+
+
+got 81 facts
+
+Cueing down from goal distance:   15 into depth [1]
+                                  14            [1][2][3][4]
+                                  13            [1][2][3]
+                                  12            [1][2][3][4][5]
+                                  11            [1][2]
+                                  10            [1][2][3][4]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK PACKAGE7 TRUCK3 S2
+        1: WALK DRIVER3 S1 P2-1
+        2: WALK DRIVER3 P2-1 S2
+        3: BOARD-TRUCK DRIVER3 TRUCK3 S2
+        4: DRIVE-TRUCK TRUCK3 S2 S0 DRIVER3
+        5: LOAD-TRUCK PACKAGE4 TRUCK3 S0
+        6: LOAD-TRUCK PACKAGE3 TRUCK3 S0
+        7: LOAD-TRUCK PACKAGE1 TRUCK3 S0
+        8: DRIVE-TRUCK TRUCK3 S0 S1 DRIVER3
+        9: UNLOAD-TRUCK PACKAGE7 TRUCK3 S1
+       10: UNLOAD-TRUCK PACKAGE3 TRUCK3 S1
+       11: LOAD-TRUCK PACKAGE2 TRUCK3 S1
+       12: DRIVE-TRUCK TRUCK3 S1 S0 DRIVER3
+       13: UNLOAD-TRUCK PACKAGE2 TRUCK3 S0
+       14: DRIVE-TRUCK TRUCK3 S0 S2 DRIVER3
+       15: UNLOAD-TRUCK PACKAGE4 TRUCK3 S2
+       16: UNLOAD-TRUCK PACKAGE1 TRUCK3 S2
+       17: DRIVE-TRUCK TRUCK3 S2 S0 DRIVER3
+       18: BOARD-TRUCK DRIVER1 TRUCK2 S2
+       19: DRIVE-TRUCK TRUCK2 S2 S1 DRIVER1
+       20: DISEMBARK-TRUCK DRIVER1 TRUCK2 S1
+       21: WALK DRIVER1 S1 P2-1
+       22: WALK DRIVER1 P2-1 S2
+     
+
+time spent:    0.00 seconds instantiating 450 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 81 facts and 270 actions
+               0.00 seconds creating final representation with 81 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 615 states, to a max depth of 5
+               0.00 seconds total time
+
+__MEMKB 4096

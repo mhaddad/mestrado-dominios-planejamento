@@ -1,0 +1,85 @@
+
+ff: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'LOGISTICS-8-0' defined
+ ... done.
+
+
+got 99 facts
+
+Cueing down from goal distance:   29 into depth [1]
+                                  28            [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1][2]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1][2]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK OBJ11 TRU1 POS1
+        1: LOAD-TRUCK OBJ22 TRU2 POS2
+        2: LOAD-TRUCK OBJ13 TRU1 POS1
+        3: DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+        4: UNLOAD-TRUCK OBJ11 TRU1 APT1
+        5: LOAD-AIRPLANE OBJ11 APN1 APT1
+        6: LOAD-TRUCK OBJ32 TRU3 POS3
+        7: UNLOAD-TRUCK OBJ13 TRU1 APT1
+        8: LOAD-TRUCK OBJ31 TRU3 POS3
+        9: LOAD-TRUCK OBJ23 TRU2 POS2
+       10: DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+       11: UNLOAD-TRUCK OBJ22 TRU2 APT2
+       12: LOAD-AIRPLANE OBJ13 APN1 APT1
+       13: UNLOAD-TRUCK OBJ23 TRU2 APT2
+       14: FLY-AIRPLANE APN1 APT1 APT2
+       15: LOAD-AIRPLANE OBJ22 APN1 APT2
+       16: UNLOAD-AIRPLANE OBJ13 APN1 APT2
+       17: FLY-AIRPLANE APN1 APT2 APT3
+       18: UNLOAD-AIRPLANE OBJ11 APN1 APT3
+       19: UNLOAD-AIRPLANE OBJ22 APN1 APT3
+       20: DRIVE-TRUCK TRU3 POS3 APT3 CIT3
+       21: UNLOAD-TRUCK OBJ32 TRU3 APT3
+       22: LOAD-TRUCK OBJ11 TRU3 APT3
+       23: LOAD-TRUCK OBJ22 TRU3 APT3
+       24: LOAD-AIRPLANE OBJ32 APN1 APT3
+       25: FLY-AIRPLANE APN1 APT3 APT1
+       26: UNLOAD-TRUCK OBJ31 TRU3 APT3
+       27: DRIVE-TRUCK TRU3 APT3 POS3 CIT3
+       28: UNLOAD-TRUCK OBJ11 TRU3 POS3
+       29: UNLOAD-TRUCK OBJ22 TRU3 POS3
+       30: UNLOAD-AIRPLANE OBJ32 APN1 APT1
+     
+
+time spent:    0.00 seconds instantiating 477 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 99 facts and 183 actions
+               0.00 seconds creating final representation with 99 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 48 states, to a max depth of 2
+               0.00 seconds total time
+
+__MEMKB 3712

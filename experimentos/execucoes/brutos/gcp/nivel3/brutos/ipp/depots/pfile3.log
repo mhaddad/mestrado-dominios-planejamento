@@ -1,0 +1,106 @@
+
+ipp: parsing domain file
+domain 'DEPOT' defined
+ ... done.
+ipp: parsing problem file
+problem 'DEPOTPROB1935' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 336 actions
+
+
+time:   0,   120 facts and       0 exclusive pairs (   20,       0 positives)
+             127 ops   and      28 exclusive pairs
+time:   1,   144 facts and      96 exclusive pairs (   30,      30 positives)
+             168 ops   and     414 exclusive pairs
+time:   2,   150 facts and     135 exclusive pairs (   36,      72 positives)
+             182 ops   and     732 exclusive pairs
+time:   3,   158 facts and     171 exclusive pairs (   40,      92 positives)
+             208 ops   and    1546 exclusive pairs
+time:   4,   168 facts and     274 exclusive pairs (   50,     198 positives)
+             247 ops   and    3544 exclusive pairs
+time:   5,   190 facts and     717 exclusive pairs (   70,     562 positives)
+             298 ops   and    7117 exclusive pairs
+time:   6,   202 facts and     948 exclusive pairs (   82,     804 positives)
+             356 ops   and   13014 exclusive pairs
+time:   7,   218 facts and    1145 exclusive pairs (   98,    1035 positives)
+             417 ops   and   20477 exclusive pairs
+time:   8,   225 facts and    1238 exclusive pairs (  105,    1145 positives)
+             469 ops   and   28340 exclusive pairs
+time:   9,   234 facts and    1227 exclusive pairs (  114,    1176 positives)
+             511 ops   and   35124 exclusive pairs
+time:  10,   234 facts and    1126 exclusive pairs (  114,    1091 positives)
+             524 ops   and   37510 exclusive pairs
+time:  11,   234 facts and    1047 exclusive pairs (  114,    1029 positives)
+
+goals first reachable in 11 time steps
+
+
+graph has leveled off at time step 12
+
+             534 ops   and   39609 exclusive pairs
+time:  12,   234 facts and    1047 exclusive pairs (  114,    1029 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: LIFT HOIST0 CRATE1 PALLET0 DEPOT0
+                LIFT HOIST1 CRATE4 CRATE3 DISTRIBUTOR0
+                LIFT HOIST2 CRATE5 CRATE2 DISTRIBUTOR1
+time step    1: LOAD HOIST0 CRATE1 TRUCK0 DEPOT0
+                LOAD HOIST1 CRATE4 TRUCK1 DISTRIBUTOR0
+time step    2: LIFT HOIST1 CRATE3 CRATE0 DISTRIBUTOR0
+                DRIVE TRUCK1 DISTRIBUTOR0 DISTRIBUTOR1
+                DRIVE TRUCK0 DEPOT0 DISTRIBUTOR0
+time step    3: LOAD HOIST2 CRATE5 TRUCK1 DISTRIBUTOR1
+                LOAD HOIST1 CRATE3 TRUCK0 DISTRIBUTOR0
+time step    4: LIFT HOIST1 CRATE0 PALLET1 DISTRIBUTOR0
+                DRIVE TRUCK1 DISTRIBUTOR1 DISTRIBUTOR0
+                LIFT HOIST2 CRATE2 PALLET2 DISTRIBUTOR1
+                DRIVE TRUCK0 DISTRIBUTOR0 DISTRIBUTOR1
+time step    5: LOAD HOIST2 CRATE2 TRUCK0 DISTRIBUTOR1
+                LOAD HOIST1 CRATE0 TRUCK1 DISTRIBUTOR0
+time step    6: UNLOAD HOIST1 CRATE4 TRUCK1 DISTRIBUTOR0
+                UNLOAD HOIST2 CRATE1 TRUCK0 DISTRIBUTOR1
+time step    7: DRIVE TRUCK1 DISTRIBUTOR0 DISTRIBUTOR1
+                DROP HOIST2 CRATE1 PALLET2 DISTRIBUTOR1
+                DROP HOIST1 CRATE4 PALLET1 DISTRIBUTOR0
+                DRIVE TRUCK0 DISTRIBUTOR1 DEPOT0
+time step    8: UNLOAD HOIST0 CRATE2 TRUCK0 DEPOT0
+                UNLOAD HOIST2 CRATE0 TRUCK1 DISTRIBUTOR1
+time step    9: DROP HOIST2 CRATE0 CRATE1 DISTRIBUTOR1
+                DROP HOIST0 CRATE2 PALLET0 DEPOT0
+time step   10: UNLOAD HOIST0 CRATE3 TRUCK0 DEPOT0
+                UNLOAD HOIST2 CRATE5 TRUCK1 DISTRIBUTOR1
+time step   11: DROP HOIST2 CRATE5 CRATE0 DISTRIBUTOR1
+                DROP HOIST0 CRATE3 CRATE2 DEPOT0
+
+
+
+number of actions tried:      10695
+number of noops tried  :      31206
+
+had    4981 simple memoizing hits
+had       0 partial memoizing hits
+had     955 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 336 operators
+               0.00 seconds building graph
+               0.01 seconds calculating exclusions
+               0.02 seconds searching graph
+               0.03 seconds total time
+
+Memory used:   0.22 MBytes for domain representation
+               4.05 MBytes for graph
+               0.35 MBytes for exclusions
+               0.16 MBytes for memoization
+               0.02 MBytes for wave front
+
+
+
+__MEMKB 7424

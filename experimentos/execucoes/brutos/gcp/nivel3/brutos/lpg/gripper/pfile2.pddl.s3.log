@@ -1,0 +1,58 @@
+
+Parsing domain file:  domain 'GRIPPER-STRIPS' defined ... done.
+Parsing problem file:  problem 'GRIPPER-4' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      36
+Number of conditional actions :       0
+Number of facts               :      20
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (PICK BALL1 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 0.0000: (PICK BALL3 ROOMA LEFT) [D:1.0000; C:1.0000]
+ 1.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 2.0000: (DROP BALL3 ROOMB LEFT) [D:1.0000; C:1.0000]
+ 3.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 4.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 5.0000: (DROP BALL1 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 6.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 7.0000: (PICK BALL2 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 7.0000: (PICK BALL4 ROOMA LEFT) [D:1.0000; C:1.0000]
+ 8.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 9.0000: (DROP BALL4 ROOMB LEFT) [D:1.0000; C:1.0000]
+ 10.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 11.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 12.0000: (DROP BALL2 ROOMB RIGHT) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         15
+Execution cost:  15.00
+Duration:        13.000
+Plan quality:    15.000
+
+__MEMKB 109824

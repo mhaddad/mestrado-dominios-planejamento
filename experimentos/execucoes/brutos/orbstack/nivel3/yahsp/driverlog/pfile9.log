@@ -1,0 +1,56 @@
+
+Parsing domain..... driverlog..... done.
+Parsing problem..... dlog-2-3-6..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.01
+Domains creation  time : 0.00
+Instantiation time : 0.01 -> 384 candidates, 384 actions
+Finalization time : 0.01 -> 94 fluents, 14 init
+
+24 16 9 8 2 
+
+0: (WALK driver2 s1 p0-1) [1]
+1: (WALK driver1 s4 p3-4) [1]
+2: (WALK driver2 p0-1 s0) [1]
+3: (BOARD-TRUCK driver2 truck2 s0) [1]
+4: (DRIVE-TRUCK truck2 s0 s3 driver2) [1]
+5: (LOAD-TRUCK package1 truck1 s2) [1]
+6: (LOAD-TRUCK package3 truck3 s3) [1]
+7: (WALK driver1 p3-4 s3) [1]
+8: (DISEMBARK-TRUCK driver2 truck2 s3) [1]
+9: (BOARD-TRUCK driver2 truck3 s3) [1]
+10: (UNLOAD-TRUCK package1 truck1 s2) [1]
+11: (DRIVE-TRUCK truck3 s3 s2 driver2) [1]
+12: (LOAD-TRUCK package1 truck3 s2) [1]
+13: (DRIVE-TRUCK truck3 s2 s1 driver2) [1]
+14: (UNLOAD-TRUCK package3 truck3 s1) [1]
+15: (LOAD-TRUCK package2 truck3 s1) [1]
+16: (DRIVE-TRUCK truck3 s1 s2 driver2) [1]
+17: (UNLOAD-TRUCK package2 truck3 s2) [1]
+18: (DISEMBARK-TRUCK driver2 truck3 s2) [1]
+19: (BOARD-TRUCK driver2 truck1 s2) [1]
+20: (DRIVE-TRUCK truck1 s2 s3 driver2) [1]
+21: (DISEMBARK-TRUCK driver2 truck1 s3) [1]
+22: (WALK driver2 s3 p3-2) [1]
+23: (WALK driver2 p3-2 s2) [1]
+24: (BOARD-TRUCK driver2 truck3 s2) [1]
+25: (DRIVE-TRUCK truck3 s2 s3 driver2) [1]
+26: (UNLOAD-TRUCK package1 truck3 s3) [1]
+27: (DRIVE-TRUCK truck3 s3 s4 driver2) [1]
+28: (DISEMBARK-TRUCK driver2 truck3 s4) [1]
+
+Valid plan : 29 actions.
+Computed nodes : 29
+Evaluated nodes : 6
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 49.15 %
+Preparation time : 0.03
+Search time : 0.00
+Total time : 0.03
+
+__MEMKB 11900

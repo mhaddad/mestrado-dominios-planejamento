@@ -1,0 +1,76 @@
+MaxPlanII beta.
+
+bb: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'GRIPPER-2' defined
+ ... done.
+
+
+******  Solve with 1 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [1];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 2 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [2];
+        goal constraints;
+        building exclusion constraints --> up to layer 2...
+
+DECISION LAYER 2, WRITING ACTION-BASED ENCODING WITH 37 VARS, 144 CLAUSES.
+2 G clauses, 42 A clauses, 100 E clauses.c CNF file planning task -p , -o /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/domain.pddl, -f /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/pfile1.pddl, bound 2, action based encoding
+In building up solver: p cnf 37 144
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |     144      299 |      48       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.010000],apply counts 4, apply_generated 0
+restarts          :            1
+conflicts         :            3           (      300 / sec      )
+decisions         :            2           (      200 / sec      )
+propagations      :           10           (     1000 / sec      )
+inspects          :           43           (     4300 / sec      )
+conflict literals :            2           (     0.00 % deleted  )
+CPU time          :         0.01 sec
+UNSATISFIABLE
+
+******  Solve with 3 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [3];
+        goal constraints;
+        building exclusion constraints --> up to layer 3...
+
+DECISION LAYER 3, WRITING ACTION-BASED ENCODING WITH 69 VARS, 325 CLAUSES.
+2 G clauses, 98 A clauses, 225 E clauses.c CNF file planning task -p , -o /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/domain.pddl, -f /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/pfile1.pddl, bound 3, action based encoding
+In building up solver: p cnf 69 325
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |     325      777 |     108       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.000000],apply counts 16, apply_generated 0
+restarts          :            1
+conflicts         :            3           (      inf / sec      )
+decisions         :            9           (      inf / sec      )
+propagations      :          146           (      inf / sec      )
+inspects          :          290           (      inf / sec      )
+conflict literals :            3           (     0.00 % deleted  )
+CPU time          :         0.00 sec
+SATISFIABLE
+
+Info:      0.05 seconds total solving time
+           0.00 MB memory used
+        solution found at layer 3
+
+__MEMKB 13812

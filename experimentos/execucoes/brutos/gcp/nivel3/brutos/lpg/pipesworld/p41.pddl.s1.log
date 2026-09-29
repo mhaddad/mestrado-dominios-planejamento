@@ -1,0 +1,58 @@
+
+Parsing domain file:  domain 'PIPESWORLD_STRIPS' defined ... done.
+Parsing problem file:  problem 'P41-NET5-B22-G2_RT0_INSTANCE' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :   15988
+Number of conditional actions :       0
+Number of facts               :     826
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.98 seconds
+
+Searching ('.' = every 50 search steps):
+........... search limit exceeded. Restart.
+.... solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (POP-START S15 B4 A1 A5 B3 OC1B OC1B TA5-1-OC1B) [D:1.0000; C:1.0000]
+ 0.0000: (PUSH-START S13 B10 A1 A3 B13 GASOLEO GASOLEO TA1-1-GASOLEO) [D:1.0000; C:1.0000]
+ 1.0000: (POP-END S15 A1 A5 B14 B12 LCO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 1.0000: (PUSH-END S13 A1 A3 B8 B13 RAT-A TA3-1-RAT-A) [D:1.0000; C:1.0000]
+ 2.0000: (PUSH-START S13 B14 A1 A3 B10 LCO GASOLEO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 2.0000: (POP-START S15 B19 A1 A5 B4 LCO OC1B TA5-1-LCO) [D:1.0000; C:1.0000]
+ 3.0000: (POP-END S15 A1 A5 B12 B7 GASOLEO TA1-1-GASOLEO) [D:1.0000; C:1.0000]
+ 3.0000: (PUSH-END S13 A1 A3 B13 B10 GASOLEO TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 4.0000: (PUSH-START S13 B12 A1 A3 B14 GASOLEO LCO TA1-1-GASOLEO) [D:1.0000; C:1.0000]
+ 4.0000: (POP-START S23 B13 A2 A3 B16 GASOLEO OCA1 TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 5.0000: (PUSH-END S13 A1 A3 B10 B14 GASOLEO TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 5.0000: (POP-END S23 A2 A3 B6 B9 OC1B TA2-1-OC1B) [D:1.0000; C:1.0000]
+ 6.0000: (POP-START S13 B5 A1 A3 B14 OCA1 LCO TA3-1-OCA1) [D:1.0000; C:1.0000]
+ 7.0000: (POP-END S13 A1 A3 B12 B14 LCO TA1-1-LCO) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      14.18
+Search time:     13.20
+Actions:         14
+Execution cost:  14.00
+Duration:        8.000
+Plan quality:    14.000
+
+__MEMKB 168448

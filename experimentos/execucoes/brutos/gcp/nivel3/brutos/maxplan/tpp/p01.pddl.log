@@ -1,0 +1,94 @@
+MaxPlanII beta.
+
+bb: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+bb: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+******  Solve with 1 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [1];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 2 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [2];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 3 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [3];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 4 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [4];
+        goal constraints;
+        building exclusion constraints --> up to layer 4...
+
+DECISION LAYER 4, WRITING ACTION-BASED ENCODING WITH 41 VARS, 79 CLAUSES.
+1 G clauses, 47 A clauses, 31 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/p01.pddl, bound 4, action based encoding
+In building up solver: p cnf 41 79
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |      68      154 |      22       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.000000],apply counts 12, apply_generated 0
+restarts          :            1
+conflicts         :            1           (      inf / sec      )
+decisions         :            0           (      nan / sec      )
+propagations      :           26           (      inf / sec      )
+inspects          :           33           (      inf / sec      )
+conflict literals :            0           (      nan % deleted  )
+CPU time          :         0.00 sec
+UNSATISFIABLE
+
+******  Solve with 5 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [5];
+        goal constraints;
+        building exclusion constraints --> up to layer 5...
+
+DECISION LAYER 5, WRITING ACTION-BASED ENCODING WITH 56 VARS, 114 CLAUSES.
+1 G clauses, 68 A clauses, 45 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/p01.pddl, bound 5, action based encoding
+In building up solver: p cnf 56 114
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |     114      262 |      38       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.000000],apply counts 24, apply_generated 0
+restarts          :            1
+conflicts         :            1           (      inf / sec      )
+decisions         :           10           (      inf / sec      )
+propagations      :           75           (      inf / sec      )
+inspects          :          105           (      inf / sec      )
+conflict literals :            1           (     0.00 % deleted  )
+CPU time          :         0.00 sec
+SATISFIABLE
+
+Info:      0.01 seconds total solving time
+           0.00 MB memory used
+        solution found at layer 5
+
+__MEMKB 6672

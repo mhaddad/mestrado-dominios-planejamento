@@ -1,0 +1,64 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob4398..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 6576 candidates, 1404 actions
+Finalization time : 0.00 -> 212 fluents, 32 init
+
+25 21 14 8 7 
+
+0: (DRIVE truck2 depot0 depot1) [1]
+1: (LIFT hoist0 crate5 crate2 depot0) [1]
+2: (LIFT hoist1 crate3 crate1 depot1) [1]
+3: (DRIVE truck3 distributor1 depot1) [1]
+4: (DRIVE truck0 depot1 depot0) [1]
+5: (LOAD hoist1 crate3 truck2 depot1) [1]
+6: (LOAD hoist0 crate5 truck0 depot0) [1]
+7: (LIFT hoist0 crate2 pallet0 depot0) [1]
+8: (LIFT hoist2 crate4 pallet2 distributor0) [1]
+9: (LIFT hoist1 crate1 pallet1 depot1) [1]
+10: (LOAD hoist0 crate2 truck0 depot0) [1]
+11: (DROP hoist2 crate4 pallet2 distributor0) [1]
+12: (LIFT hoist5 crate0 pallet4 depot1) [1]
+13: (DRIVE truck0 depot0 distributor0) [1]
+14: (DRIVE truck2 depot1 depot0) [1]
+15: (UNLOAD hoist0 crate3 truck2 depot0) [1]
+16: (UNLOAD hoist2 crate5 truck0 distributor0) [1]
+17: (DROP hoist0 crate3 pallet0 depot0) [1]
+18: (DROP hoist2 crate5 crate4 distributor0) [1]
+19: (LOAD hoist5 crate0 truck1 depot1) [1]
+20: (DRIVE truck1 depot1 distributor1) [1]
+21: (DRIVE truck0 distributor0 depot1) [1]
+22: (DRIVE truck2 depot0 distributor0) [1]
+23: (UNLOAD hoist7 crate0 truck1 distributor1) [1]
+24: (UNLOAD hoist6 crate2 truck0 depot1) [1]
+25: (DROP hoist7 crate0 pallet3 distributor1) [1]
+26: (DROP hoist6 crate2 pallet1 depot1) [1]
+27: (DRIVE truck0 depot1 distributor0) [1]
+28: (LIFT hoist2 crate5 crate4 distributor0) [1]
+29: (DROP hoist2 crate5 pallet7 distributor0) [1]
+30: (LIFT hoist2 crate4 pallet2 distributor0) [1]
+31: (LOAD hoist2 crate4 truck0 distributor0) [1]
+32: (DRIVE truck0 distributor0 depot0) [1]
+33: (UNLOAD hoist0 crate4 truck0 depot0) [1]
+34: (LIFT hoist2 crate5 pallet7 distributor0) [1]
+35: (DROP hoist0 crate4 crate3 depot0) [1]
+36: (DROP hoist2 crate5 pallet2 distributor0) [1]
+
+Valid plan : 37 actions.
+Computed nodes : 60
+Evaluated nodes : 14
+Developed nodes : 1
+Useful nodes : 1
+
+Lookahead utility : 40.60 %
+Preparation time : 0.00
+Search time : 0.01
+Total time : 0.01
+
+__MEMKB 3456

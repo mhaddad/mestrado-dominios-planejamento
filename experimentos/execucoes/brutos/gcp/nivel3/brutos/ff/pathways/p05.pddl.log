@@ -1,0 +1,89 @@
+
+ff: parsing domain file
+domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'GROUNDED-PATHWAYS-05' defined
+ ... done.
+
+
+got 148 facts
+
+Cueing down from goal distance:   31 into depth [1]
+                                  30            [1]
+                                  29            [1]
+                                  28            [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1][2]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CHOOSE_E2F5-DP12P1_L1_L0
+        1: INITIALIZE_E2F5-DP12P1
+        2: CHOOSE_P130_L2_L1
+        3: INITIALIZE_P130
+        4: CHOOSE_P53_L3_L2
+        5: INITIALIZE_P53
+        6: SYNTHESIZE_P53_GADD45
+        7: CHOOSE_E2F13-DP12_L4_L3
+        8: INITIALIZE_E2F13-DP12
+        9: CHOOSE_GE2_L5_L4
+       10: INITIALIZE_GE2
+       11: CHOOSE_CDK1P1P2_L6_L5
+       12: INITIALIZE_CDK1P1P2
+       13: CHOOSE_SP1_L7_L6
+       14: INITIALIZE_SP1
+       15: ASSOCIATE_P130_E2F5-DP12P1_P130-E2F5-DP12P1
+       16: ASSOCIATE_CDK1P1P2_GADD45_CDK1P1P2-GADD45
+       17: DUMMY-ACTION-3-2
+       18: ASSOCIATE_E2F13-DP12_GE2_E2F13-DP12-GE2
+       19: SYNTHESIZE_E2F13-DP12-GE2_P107P1
+       20: INITIALIZE_GE2
+       21: SYNTHESIZE_E2F13-DP12-GE2_P107
+       22: SYNTHESIZE_E2F13-DP12-GE2_C-MYC
+       23: SYNTHESIZE_E2F13-DP12-GE2_CYCE
+       24: DUMMY-ACTION-6-2
+       25: DUMMY-ACTION-1-2
+       26: ASSOCIATE_P130-E2F5-DP12P1_GE2_P130-E2F5-DP12P1-GE2
+       27: DUMMY-ACTION-4-2
+       28: ASSOCIATE_SP1_P107P1_SP1-P107P1
+       29: INITIALIZE_SP1
+       30: DUMMY-ACTION-5-2
+       31: ASSOCIATE_SP1_P107_SP1-P107
+       32: DUMMY-ACTION-2-2
+     
+
+time spent:    0.00 seconds instantiating 266 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 148 facts and 266 actions
+               0.00 seconds creating final representation with 148 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 39 states, to a max depth of 2
+               0.00 seconds total time
+
+__MEMKB 4864

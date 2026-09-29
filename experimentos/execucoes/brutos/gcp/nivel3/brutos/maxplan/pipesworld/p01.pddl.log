@@ -1,0 +1,59 @@
+MaxPlanII beta.
+
+bb: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'P01-NET1-B6-G2_RT0_INSTANCE' defined
+ ... done.
+
+
+******  Solve with 1 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [1];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 2 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [2];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 3 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [3];
+        goal constraints;
+        building exclusion constraints --> up to layer 3...
+
+DECISION LAYER 3, WRITING ACTION-BASED ENCODING WITH 262 VARS, 2979 CLAUSES.
+2 G clauses, 611 A clauses, 2366 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p01.pddl, bound 3, action based encoding
+In building up solver: p cnf 262 2979
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |    2979     7176 |     993       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.000000],apply counts 66, apply_generated 0
+restarts          :            1
+conflicts         :            5           (      500 / sec      )
+decisions         :           33           (     3300 / sec      )
+propagations      :          453           (    45300 / sec      )
+inspects          :         1286           (   128600 / sec      )
+conflict literals :            8           (     0.00 % deleted  )
+CPU time          :         0.01 sec
+SATISFIABLE
+
+Info:      0.00 seconds total solving time
+           0.00 MB memory used
+        solution found at layer 3
+
+__MEMKB 8248

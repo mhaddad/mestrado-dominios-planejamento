@@ -1,0 +1,93 @@
+
+ff: parsing domain file
+domain 'SATELLITE' defined
+ ... done.
+ff: parsing problem file
+problem 'STRIPS-SAT-X-1' defined
+ ... done.
+
+
+got 223 facts
+
+Cueing down from goal distance:   36 into depth [1]
+                                  35            [1]
+                                  34            [1]
+                                  33            [1]
+                                  32            [1]
+                                  31            [1]
+                                  30            [1]
+                                  29            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: TURN_TO SATELLITE0 STAR0 STAR8
+        1: TURN_TO SATELLITE2 STAR2 STAR4
+        2: SWITCH_ON INSTRUMENT0 SATELLITE0
+        3: CALIBRATE SATELLITE0 INSTRUMENT0 STAR0
+        4: TURN_TO SATELLITE0 PLANET13 STAR0
+        5: TAKE_IMAGE SATELLITE0 PLANET13 INSTRUMENT0 SPECTROGRAPH4
+        6: TURN_TO SATELLITE0 PHENOMENON9 PLANET13
+        7: SWITCH_ON INSTRUMENT3 SATELLITE1
+        8: TURN_TO SATELLITE1 STAR0 GROUNDSTATION3
+        9: CALIBRATE SATELLITE1 INSTRUMENT3 STAR0
+       10: TURN_TO SATELLITE1 PLANET6 STAR0
+       11: TAKE_IMAGE SATELLITE1 PLANET6 INSTRUMENT3 INFRARED1
+       12: TURN_TO SATELLITE1 PHENOMENON7 PLANET6
+       13: TAKE_IMAGE SATELLITE1 PHENOMENON7 INSTRUMENT3 INFRARED1
+       14: TURN_TO SATELLITE1 STAR10 PHENOMENON7
+       15: TAKE_IMAGE SATELLITE1 STAR10 INSTRUMENT3 THERMOGRAPH2
+       16: TURN_TO SATELLITE1 STAR11 STAR10
+       17: TAKE_IMAGE SATELLITE1 STAR11 INSTRUMENT3 INFRARED1
+       18: TURN_TO SATELLITE1 PLANET14 STAR11
+       19: TAKE_IMAGE SATELLITE1 PLANET14 INSTRUMENT3 THERMOGRAPH2
+       20: TURN_TO SATELLITE1 STAR4 PLANET14
+       21: TURN_TO SATELLITE4 STAR11 PHENOMENON9
+       22: SWITCH_ON INSTRUMENT4 SATELLITE2
+       23: CALIBRATE SATELLITE2 INSTRUMENT4 STAR2
+       24: TURN_TO SATELLITE2 STAR5 STAR2
+       25: TAKE_IMAGE SATELLITE2 STAR5 INSTRUMENT4 IMAGE3
+       26: TURN_TO SATELLITE2 STAR8 STAR5
+       27: TAKE_IMAGE SATELLITE2 STAR8 INSTRUMENT4 IMAGE3
+       28: TURN_TO SATELLITE2 PHENOMENON15 STAR8
+       29: TAKE_IMAGE SATELLITE2 PHENOMENON15 INSTRUMENT4 INFRARED0
+       30: TURN_TO SATELLITE2 PLANET16 PHENOMENON15
+       31: TAKE_IMAGE SATELLITE2 PLANET16 INSTRUMENT4 IMAGE3
+       32: TURN_TO SATELLITE2 STAR17 PLANET16
+       33: TAKE_IMAGE SATELLITE2 STAR17 INSTRUMENT4 INFRARED0
+     
+
+time spent:    0.00 seconds instantiating 2387 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 223 facts and 2387 actions
+               0.00 seconds creating final representation with 223 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 91 states, to a max depth of 1
+               0.00 seconds total time
+
+__MEMKB 5760

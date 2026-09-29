@@ -1,0 +1,96 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p06.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p06.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p06.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p06.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 36 facts and 2 exclusive pairs.
+time: 2, 40 facts and 10 exclusive pairs.
+time: 3, 54 facts and 44 exclusive pairs.
+time: 4, 72 facts and 132 exclusive pairs.
+time: 5, 75 facts and 109 exclusive pairs.
+time: 6, 84 facts and 151 exclusive pairs.
+time: 7, 89 facts and 140 exclusive pairs.
+time: 8, 93 facts and 132 exclusive pairs.
+Goals first reachable in 8 steps.
+1653 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods6-level1 stored-goods5-level1 stored-goods4-level1 stored-goods3-level1 stored-goods2-level2 
+stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 38832
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 93 facts and 132 exclusive pairs.
+326 new nodes added.
+
+####################################################
+goals at time 10:
+  stored-goods6-level1 stored-goods5-level1 stored-goods4-level1 stored-goods3-level1 stored-goods2-level2 
+stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 77433
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market2)
+1 (drive-truck2-depot1-market2)
+2 (drive-truck1-market2-market1)
+2 (drive-truck2-market2-market1)
+3 (buy-truck1-goods6-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods5-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods2-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods4-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+4 (load-goods5-truck2-market1-level0-level1-level0-level1)
+4 (load-goods2-truck2-market1-level0-level1-level0-level1)
+4 (load-goods6-truck2-market1-level0-level1-level0-level1)
+4 (load-goods3-truck2-market1-level0-level1-level0-level1)
+4 (load-goods4-truck2-market1-level0-level1-level0-level1)
+4 (load-goods1-truck2-market1-level0-level1-level0-level1)
+5 (drive-truck2-market1-market2)
+5 (buy-truck1-goods2-market1-level0-level1-level0-level1)
+6 (drive-truck2-market2-depot1)
+6 (load-goods2-truck1-market1-level0-level1-level0-level1)
+7 (drive-truck1-market1-market2)
+7 (unload-goods6-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods5-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods4-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods3-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods2-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods1-truck2-depot1-level0-level1-level0-level1)
+8 (drive-truck1-market2-depot1)
+9 (unload-goods2-truck1-depot1-level0-level1-level1-level2)
+End plan
+----------------------------------------------------
+
+29 total actions in plan
+7759 entries in hash table, 17668 hash hits, avg set size 13
+25435 total set-creation steps (entries + hits + plan length - 1)
+42770 actions tried
+
+####################################################
+Total elapsed time:   0.06 seconds
+Time in milliseconds: 58
+
+####################################################
+__MEMKB 23040

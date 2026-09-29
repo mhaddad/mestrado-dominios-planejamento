@@ -1,0 +1,69 @@
+
+Parsing domain file:  domain 'BLOCKS' defined ... done.
+Parsing problem file:  problem 'BLOCKS-6-2' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      84
+Number of conditional actions :       0
+Number of facts               :      55
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+. solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (UNSTACK A D) [D:1.0000; C:1.0000]
+ 1.0000: (STACK A D) [D:1.0000; C:1.0000]
+ 2.0000: (UNSTACK A D) [D:1.0000; C:1.0000]
+ 3.0000: (PUT-DOWN A) [D:1.0000; C:1.0000]
+ 4.0000: (UNSTACK D B) [D:1.0000; C:1.0000]
+ 5.0000: (PUT-DOWN D) [D:1.0000; C:1.0000]
+ 6.0000: (UNSTACK B F) [D:1.0000; C:1.0000]
+ 7.0000: (STACK B D) [D:1.0000; C:1.0000]
+ 8.0000: (UNSTACK F E) [D:1.0000; C:1.0000]
+ 9.0000: (PUT-DOWN F) [D:1.0000; C:1.0000]
+ 10.0000: (UNSTACK E C) [D:1.0000; C:1.0000]
+ 11.0000: (STACK E F) [D:1.0000; C:1.0000]
+ 12.0000: (UNSTACK B D) [D:1.0000; C:1.0000]
+ 13.0000: (PUT-DOWN B) [D:1.0000; C:1.0000]
+ 14.0000: (PICK-UP C) [D:1.0000; C:1.0000]
+ 15.0000: (STACK C D) [D:1.0000; C:1.0000]
+ 16.0000: (PICK-UP B) [D:1.0000; C:1.0000]
+ 17.0000: (STACK B C) [D:1.0000; C:1.0000]
+ 18.0000: (PICK-UP A) [D:1.0000; C:1.0000]
+ 19.0000: (STACK A B) [D:1.0000; C:1.0000]
+ 20.0000: (UNSTACK E F) [D:1.0000; C:1.0000]
+ 21.0000: (PUT-DOWN E) [D:1.0000; C:1.0000]
+ 22.0000: (PICK-UP F) [D:1.0000; C:1.0000]
+ 23.0000: (STACK F A) [D:1.0000; C:1.0000]
+ 24.0000: (PICK-UP E) [D:1.0000; C:1.0000]
+ 25.0000: (STACK E F) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         26
+Execution cost:  26.00
+Duration:        26.000
+Plan quality:    26.000
+
+__MEMKB 110208

@@ -1,0 +1,97 @@
+
+Parsing domain file:  domain 'BLOCKS' defined ... done.
+Parsing problem file:  problem 'BLOCKS-10-0' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :     220
+Number of conditional actions :       0
+Number of facts               :     131
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+... solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (UNSTACK C E) [D:1.0000; C:1.0000]
+ 1.0000: (PUT-DOWN C) [D:1.0000; C:1.0000]
+ 2.0000: (UNSTACK E J) [D:1.0000; C:1.0000]
+ 3.0000: (PUT-DOWN E) [D:1.0000; C:1.0000]
+ 4.0000: (UNSTACK J B) [D:1.0000; C:1.0000]
+ 5.0000: (PUT-DOWN J) [D:1.0000; C:1.0000]
+ 6.0000: (UNSTACK B G) [D:1.0000; C:1.0000]
+ 7.0000: (STACK B E) [D:1.0000; C:1.0000]
+ 8.0000: (UNSTACK G H) [D:1.0000; C:1.0000]
+ 9.0000: (PUT-DOWN G) [D:1.0000; C:1.0000]
+ 10.0000: (UNSTACK H A) [D:1.0000; C:1.0000]
+ 11.0000: (PUT-DOWN H) [D:1.0000; C:1.0000]
+ 12.0000: (UNSTACK B E) [D:1.0000; C:1.0000]
+ 13.0000: (PUT-DOWN B) [D:1.0000; C:1.0000]
+ 14.0000: (PICK-UP J) [D:1.0000; C:1.0000]
+ 15.0000: (STACK J G) [D:1.0000; C:1.0000]
+ 16.0000: (UNSTACK A D) [D:1.0000; C:1.0000]
+ 17.0000: (PUT-DOWN A) [D:1.0000; C:1.0000]
+ 18.0000: (UNSTACK D I) [D:1.0000; C:1.0000]
+ 19.0000: (STACK D C) [D:1.0000; C:1.0000]
+ 20.0000: (UNSTACK J G) [D:1.0000; C:1.0000]
+ 21.0000: (STACK J A) [D:1.0000; C:1.0000]
+ 22.0000: (UNSTACK J A) [D:1.0000; C:1.0000]
+ 23.0000: (STACK J I) [D:1.0000; C:1.0000]
+ 24.0000: (UNSTACK D C) [D:1.0000; C:1.0000]
+ 25.0000: (STACK D G) [D:1.0000; C:1.0000]
+ 26.0000: (UNSTACK D G) [D:1.0000; C:1.0000]
+ 27.0000: (STACK D C) [D:1.0000; C:1.0000]
+ 28.0000: (PICK-UP H) [D:1.0000; C:1.0000]
+ 29.0000: (STACK H D) [D:1.0000; C:1.0000]
+ 30.0000: (UNSTACK J I) [D:1.0000; C:1.0000]
+ 31.0000: (PUT-DOWN J) [D:1.0000; C:1.0000]
+ 32.0000: (PICK-UP G) [D:1.0000; C:1.0000]
+ 33.0000: (STACK G I) [D:1.0000; C:1.0000]
+ 34.0000: (PICK-UP A) [D:1.0000; C:1.0000]
+ 35.0000: (STACK A G) [D:1.0000; C:1.0000]
+ 36.0000: (PICK-UP B) [D:1.0000; C:1.0000]
+ 37.0000: (STACK B A) [D:1.0000; C:1.0000]
+ 38.0000: (UNSTACK H D) [D:1.0000; C:1.0000]
+ 39.0000: (STACK H B) [D:1.0000; C:1.0000]
+ 40.0000: (PICK-UP E) [D:1.0000; C:1.0000]
+ 41.0000: (STACK E H) [D:1.0000; C:1.0000]
+ 42.0000: (PICK-UP J) [D:1.0000; C:1.0000]
+ 43.0000: (STACK J E) [D:1.0000; C:1.0000]
+ 44.0000: (PICK-UP F) [D:1.0000; C:1.0000]
+ 45.0000: (STACK F J) [D:1.0000; C:1.0000]
+ 46.0000: (UNSTACK D C) [D:1.0000; C:1.0000]
+ 47.0000: (STACK D C) [D:1.0000; C:1.0000]
+ 48.0000: (UNSTACK D C) [D:1.0000; C:1.0000]
+ 49.0000: (PUT-DOWN D) [D:1.0000; C:1.0000]
+ 50.0000: (PICK-UP C) [D:1.0000; C:1.0000]
+ 51.0000: (STACK C F) [D:1.0000; C:1.0000]
+ 52.0000: (PICK-UP D) [D:1.0000; C:1.0000]
+ 53.0000: (STACK D C) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.01
+Search time:     0.01
+Actions:         54
+Execution cost:  54.00
+Duration:        54.000
+Plan quality:    54.000
+
+__MEMKB 111232

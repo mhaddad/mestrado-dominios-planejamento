@@ -1,0 +1,105 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p07.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p07.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p07.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p07.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 41 facts and 2 exclusive pairs.
+time: 2, 45 facts and 10 exclusive pairs.
+time: 3, 61 facts and 48 exclusive pairs.
+time: 4, 83 facts and 158 exclusive pairs.
+time: 5, 86 facts and 128 exclusive pairs.
+time: 6, 97 facts and 181 exclusive pairs.
+time: 7, 103 facts and 166 exclusive pairs.
+time: 8, 108 facts and 156 exclusive pairs.
+Goals first reachable in 8 steps.
+1902 nodes created.
+
+####################################################
+goals at time 9:
+  stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level2 stored-goods3-level1 
+stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 36960
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 108 facts and 156 exclusive pairs.
+380 new nodes added.
+
+####################################################
+goals at time 10:
+  stored-goods7-level2 stored-goods6-level1 stored-goods5-level2 stored-goods4-level2 stored-goods3-level1 
+stored-goods2-level1 stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 285982
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market2)
+1 (drive-truck2-depot1-market2)
+2 (drive-truck1-market2-market1)
+2 (drive-truck2-market2-market1)
+3 (buy-truck1-goods6-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods5-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods2-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods4-market1-level1-level2-level0-level1)
+3 (buy-truck1-goods3-market1-level0-level1-level0-level1)
+3 (buy-truck1-goods7-market1-level1-level2-level0-level1)
+4 (load-goods5-truck2-market1-level0-level1-level0-level1)
+4 (load-goods2-truck2-market1-level0-level1-level0-level1)
+4 (load-goods6-truck2-market1-level0-level1-level0-level1)
+4 (load-goods3-truck2-market1-level0-level1-level0-level1)
+4 (load-goods7-truck2-market1-level0-level1-level0-level1)
+4 (load-goods4-truck2-market1-level0-level1-level0-level1)
+4 (load-goods1-truck2-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods7-market1-level0-level1-level0-level1)
+5 (drive-truck2-market1-market2)
+5 (buy-truck1-goods4-market1-level0-level1-level0-level1)
+5 (buy-truck1-goods5-market1-level0-level1-level0-level1)
+6 (load-goods5-truck1-market1-level0-level1-level0-level1)
+6 (drive-truck2-market2-depot1)
+6 (load-goods7-truck1-market1-level0-level1-level0-level1)
+6 (load-goods4-truck1-market1-level0-level1-level0-level1)
+7 (drive-truck1-market1-market2)
+7 (unload-goods7-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods6-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods5-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods4-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods3-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods2-truck2-depot1-level0-level1-level0-level1)
+7 (unload-goods1-truck2-depot1-level0-level1-level0-level1)
+8 (drive-truck1-market2-depot1)
+9 (unload-goods7-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods5-truck1-depot1-level0-level1-level1-level2)
+9 (unload-goods4-truck1-depot1-level0-level1-level1-level2)
+End plan
+----------------------------------------------------
+
+38 total actions in plan
+13136 entries in hash table, 44018 hash hits, avg set size 16
+57162 total set-creation steps (entries + hits + plan length - 1)
+113085 actions tried
+
+####################################################
+Total elapsed time:   0.14 seconds
+Time in milliseconds: 144
+
+####################################################
+__MEMKB 27264

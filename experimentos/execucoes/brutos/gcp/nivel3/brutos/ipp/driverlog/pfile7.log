@@ -1,0 +1,74 @@
+
+ipp: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ipp: parsing problem file
+problem 'DLOG-3-3-6' defined
+ ... done.
+
+
+instantiated 252 actions
+
+
+time:   0,    93 facts and       0 exclusive pairs (   15,       0 positives)
+             111 ops   and      60 exclusive pairs
+time:   1,   120 facts and      63 exclusive pairs (   33,      42 positives)
+             168 ops   and     726 exclusive pairs
+time:   2,   135 facts and     231 exclusive pairs (   45,     138 positives)
+             246 ops   and    5043 exclusive pairs
+time:   3,   162 facts and     617 exclusive pairs (   69,     504 positives)
+             342 ops   and   14207 exclusive pairs
+time:   4,   162 facts and     341 exclusive pairs (   69,     312 positives)
+             396 ops   and   14591 exclusive pairs
+time:   5,   168 facts and     241 exclusive pairs (   75,     241 positives)
+
+goals first reachable in 5 time steps
+
+             420 ops   and   13900 exclusive pairs
+time:   6,   168 facts and     225 exclusive pairs (   75,     225 positives)
+
+found plan as follows:
+
+time step    0: BOARD-TRUCK DRIVER1 TRUCK1 S1
+                WALK DRIVER2 S2 P2-1
+                LOAD-TRUCK PACKAGE4 TRUCK1 S1
+                LOAD-TRUCK PACKAGE5 TRUCK2 S1
+time step    1: WALK DRIVER2 P2-1 S1
+                DRIVE-TRUCK TRUCK1 S1 S2 DRIVER1
+time step    2: DISEMBARK-TRUCK DRIVER1 TRUCK1 S2
+                BOARD-TRUCK DRIVER2 TRUCK2 S1
+                LOAD-TRUCK PACKAGE2 TRUCK1 S2
+                UNLOAD-TRUCK PACKAGE4 TRUCK1 S2
+time step    3: BOARD-TRUCK DRIVER3 TRUCK1 S2
+                DRIVE-TRUCK TRUCK2 S1 S0 DRIVER2
+                WALK DRIVER1 S2 P0-2
+time step    4: WALK DRIVER1 P0-2 S0
+                DISEMBARK-TRUCK DRIVER2 TRUCK2 S0
+                DRIVE-TRUCK TRUCK1 S2 S1 DRIVER3
+                UNLOAD-TRUCK PACKAGE5 TRUCK2 S0
+time step    5: UNLOAD-TRUCK PACKAGE2 TRUCK1 S1
+
+
+
+number of actions tried:      15210
+number of noops tried  :      19581
+
+had    3804 simple memoizing hits
+had       0 partial memoizing hits
+had    1062 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 252 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.01 seconds searching graph
+               0.01 seconds total time
+
+Memory used:   0.13 MBytes for domain representation
+               2.31 MBytes for graph
+               0.16 MBytes for exclusions
+               0.14 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 4992

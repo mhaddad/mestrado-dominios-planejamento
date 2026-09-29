@@ -1,0 +1,140 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-10-0' defined
+ ... done.
+
+
+instantiated 200 actions
+
+
+time:   0,   131 facts and       0 exclusive pairs (   13,       0 positives)
+             133 ops   and      10 exclusive pairs
+time:   1,   139 facts and      37 exclusive pairs (   16,      11 positives)
+             146 ops   and     154 exclusive pairs
+time:   2,   142 facts and      45 exclusive pairs (   19,      24 positives)
+             153 ops   and     273 exclusive pairs
+time:   3,   145 facts and      56 exclusive pairs (   21,      36 positives)
+             161 ops   and     447 exclusive pairs
+time:   4,   149 facts and      91 exclusive pairs (   25,      68 positives)
+             170 ops   and     711 exclusive pairs
+time:   5,   152 facts and     100 exclusive pairs (   27,      79 positives)
+             180 ops   and    1050 exclusive pairs
+time:   6,   158 facts and     175 exclusive pairs (   33,     149 positives)
+             193 ops   and    1626 exclusive pairs
+time:   7,   161 facts and     176 exclusive pairs (   35,     150 positives)
+             205 ops   and    2198 exclusive pairs
+time:   8,   169 facts and     306 exclusive pairs (   43,     272 positives)
+             222 ops   and    3253 exclusive pairs
+time:   9,   172 facts and     287 exclusive pairs (   45,     255 positives)
+             236 ops   and    4129 exclusive pairs
+time:  10,   182 facts and     485 exclusive pairs (   55,     443 positives)
+             257 ops   and    5866 exclusive pairs
+time:  11,   185 facts and     438 exclusive pairs (   57,     400 positives)
+             273 ops   and    7136 exclusive pairs
+time:  12,   197 facts and     718 exclusive pairs (   69,     668 positives)
+             298 ops   and    9795 exclusive pairs
+time:  13,   200 facts and     635 exclusive pairs (   71,     591 positives)
+             316 ops   and   11561 exclusive pairs
+time:  14,   214 facts and    1011 exclusive pairs (   85,     953 positives)
+             345 ops   and   15418 exclusive pairs
+time:  15,   217 facts and     884 exclusive pairs (   87,     834 positives)
+             365 ops   and   17794 exclusive pairs
+time:  16,   233 facts and    1370 exclusive pairs (  103,    1304 positives)
+             398 ops   and   23160 exclusive pairs
+time:  17,   235 facts and    1160 exclusive pairs (  104,    1107 positives)
+             418 ops   and   25839 exclusive pairs
+time:  18,   252 facts and    1716 exclusive pairs (  121,    1656 positives)
+             452 ops   and   32413 exclusive pairs
+time:  19,   252 facts and    1426 exclusive pairs (  121,    1400 positives)
+             452 ops   and   30512 exclusive pairs
+time:  20,   252 facts and    1200 exclusive pairs (  121,    1200 positives)
+
+goals first reachable in 20 time steps
+
+
+graph has leveled off at time step 21
+
+             452 ops   and   30021 exclusive pairs
+time:  21,   252 facts and    1200 exclusive pairs (  121,    1200 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   22
+expanding wave front to level   23
+expanding wave front to level   24
+expanding wave front to level   25
+expanding wave front to level   26
+expanding wave front to level   27
+expanding wave front to level   28
+expanding wave front to level   29
+expanding wave front to level   30
+expanding wave front to level   31
+expanding wave front to level   32
+expanding wave front to level   33
+expanding wave front to level   34
+
+
+found plan as follows:
+
+time step    0: UNSTACK C E
+time step    1: PUT-DOWN C
+time step    2: UNSTACK E J
+time step    3: PUT-DOWN E
+time step    4: UNSTACK J B
+time step    5: PUT-DOWN J
+time step    6: UNSTACK B G
+time step    7: PUT-DOWN B
+time step    8: UNSTACK G H
+time step    9: PUT-DOWN G
+time step   10: UNSTACK H A
+time step   11: PUT-DOWN H
+time step   12: UNSTACK A D
+time step   13: PUT-DOWN A
+time step   14: UNSTACK D I
+time step   15: PUT-DOWN D
+time step   16: PICK-UP G
+time step   17: STACK G I
+time step   18: PICK-UP A
+time step   19: STACK A G
+time step   20: PICK-UP B
+time step   21: STACK B A
+time step   22: PICK-UP H
+time step   23: STACK H B
+time step   24: PICK-UP E
+time step   25: STACK E H
+time step   26: PICK-UP J
+time step   27: STACK J E
+time step   28: PICK-UP F
+time step   29: STACK F J
+time step   30: PICK-UP C
+time step   31: STACK C F
+time step   32: PICK-UP D
+time step   33: STACK D C
+
+
+
+number of actions tried:       9009
+number of noops tried  :      71885
+
+had    2876 simple memoizing hits
+had       1 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 200 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.05 seconds searching graph
+               0.05 seconds total time
+
+Memory used:   0.11 MBytes for domain representation
+               5.30 MBytes for graph
+               0.32 MBytes for exclusions
+               0.40 MBytes for memoization
+               3.47 MBytes for wave front
+
+
+
+__MEMKB 12544

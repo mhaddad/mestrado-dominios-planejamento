@@ -1,0 +1,57 @@
+
+ff: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'LOGISTICS-5-1' defined
+ ... done.
+
+
+got 48 facts
+
+Cueing down from goal distance:   15 into depth [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1][2]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK OBJ23 TRU2 POS2
+        1: LOAD-TRUCK OBJ22 TRU2 POS2
+        2: LOAD-TRUCK OBJ21 TRU2 POS2
+        3: DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+        4: UNLOAD-TRUCK OBJ23 TRU2 APT2
+        5: LOAD-TRUCK OBJ12 TRU1 POS1
+        6: UNLOAD-TRUCK OBJ22 TRU2 APT2
+        7: UNLOAD-TRUCK OBJ21 TRU2 APT2
+        8: FLY-AIRPLANE APN1 APT1 APT2
+        9: LOAD-AIRPLANE OBJ23 APN1 APT2
+       10: FLY-AIRPLANE APN1 APT2 APT1
+       11: UNLOAD-AIRPLANE OBJ23 APN1 APT1
+       12: DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+       13: LOAD-TRUCK OBJ23 TRU1 APT1
+       14: UNLOAD-TRUCK OBJ12 TRU1 APT1
+       15: DRIVE-TRUCK TRU1 APT1 POS1 CIT1
+       16: UNLOAD-TRUCK OBJ23 TRU1 POS1
+     
+
+time spent:    0.00 seconds instantiating 164 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 48 facts and 84 actions
+               0.00 seconds creating final representation with 48 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 26 states, to a max depth of 2
+               0.00 seconds total time
+
+__MEMKB 3328

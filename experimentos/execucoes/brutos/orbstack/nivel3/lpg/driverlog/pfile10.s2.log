@@ -1,0 +1,65 @@
+
+Parsing domain file:  domain 'DRIVERLOG' defined ... done.
+Parsing problem file:  problem 'DLOG-2-3-6' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :     516
+Number of conditional actions :       0
+Number of facts               :     111
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.06 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (BOARD-TRUCK DRIVER1 TRUCK2 S4) [D:1.0000; C:1.0000]
+ 0.0000: (LOAD-TRUCK PACKAGE3 TRUCK2 S4) [D:1.0000; C:1.0000]
+ 0.0000: (LOAD-TRUCK PACKAGE4 TRUCK2 S4) [D:1.0000; C:1.0000]
+ 1.0000: (DRIVE-TRUCK TRUCK2 S4 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 2.0000: (UNLOAD-TRUCK PACKAGE4 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 3.0000: (DRIVE-TRUCK TRUCK2 S1 S4 DRIVER1) [D:1.0000; C:1.0000]
+ 4.0000: (LOAD-TRUCK PACKAGE5 TRUCK2 S4) [D:1.0000; C:1.0000]
+ 5.0000: (DRIVE-TRUCK TRUCK2 S4 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 6.0000: (DRIVE-TRUCK TRUCK2 S1 S5 DRIVER1) [D:1.0000; C:1.0000]
+ 7.0000: (UNLOAD-TRUCK PACKAGE3 TRUCK2 S5) [D:1.0000; C:1.0000]
+ 8.0000: (DRIVE-TRUCK TRUCK2 S5 S3 DRIVER1) [D:1.0000; C:1.0000]
+ 9.0000: (UNLOAD-TRUCK PACKAGE5 TRUCK2 S3) [D:1.0000; C:1.0000]
+ 10.0000: (DRIVE-TRUCK TRUCK2 S3 S4 DRIVER1) [D:1.0000; C:1.0000]
+ 11.0000: (DRIVE-TRUCK TRUCK2 S4 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 12.0000: (LOAD-TRUCK PACKAGE1 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 13.0000: (DRIVE-TRUCK TRUCK2 S1 S5 DRIVER1) [D:1.0000; C:1.0000]
+ 14.0000: (UNLOAD-TRUCK PACKAGE1 TRUCK2 S5) [D:1.0000; C:1.0000]
+ 15.0000: (DRIVE-TRUCK TRUCK2 S5 S0 DRIVER1) [D:1.0000; C:1.0000]
+ 16.0000: (LOAD-TRUCK PACKAGE2 TRUCK2 S0) [D:1.0000; C:1.0000]
+ 17.0000: (DRIVE-TRUCK TRUCK2 S0 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 18.0000: (UNLOAD-TRUCK PACKAGE2 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 18.0000: (DISEMBARK-TRUCK DRIVER1 TRUCK2 S1) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.11
+Search time:     0.05
+Actions:         22
+Execution cost:  22.00
+Duration:        19.000
+Plan quality:    22.000
+
+__MEMKB 131184

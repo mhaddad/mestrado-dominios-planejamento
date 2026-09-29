@@ -1,0 +1,102 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-8-1' defined
+ ... done.
+
+
+instantiated 128 actions
+
+
+time:   0,    89 facts and       0 exclusive pairs (   13,       0 positives)
+              93 ops   and      24 exclusive pairs
+time:   1,   104 facts and     123 exclusive pairs (   19,      31 positives)
+             126 ops   and     803 exclusive pairs
+time:   2,   118 facts and     374 exclusive pairs (   33,     220 positives)
+             156 ops   and    2313 exclusive pairs
+time:   3,   123 facts and     316 exclusive pairs (   36,     228 positives)
+             178 ops   and    3415 exclusive pairs
+time:   4,   138 facts and     652 exclusive pairs (   51,     545 positives)
+             211 ops   and    6145 exclusive pairs
+time:   5,   143 facts and     586 exclusive pairs (   55,     514 positives)
+             231 ops   and    7603 exclusive pairs
+time:   6,   155 facts and     835 exclusive pairs (   67,     772 positives)
+             256 ops   and   10126 exclusive pairs
+time:   7,   157 facts and     643 exclusive pairs (   68,     598 positives)
+             272 ops   and   11386 exclusive pairs
+time:   8,   170 facts and     969 exclusive pairs (   81,     923 positives)
+             298 ops   and   14747 exclusive pairs
+time:   9,   170 facts and     774 exclusive pairs (   81,     754 positives)
+             298 ops   and   13742 exclusive pairs
+time:  10,   170 facts and     640 exclusive pairs (   81,     640 positives)
+
+goals first reachable in 10 time steps
+
+
+graph has leveled off at time step 11
+
+             298 ops   and   13457 exclusive pairs
+time:  11,   170 facts and     640 exclusive pairs (   81,     640 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+
+
+found plan as follows:
+
+time step    0: UNSTACK E C
+time step    1: PUT-DOWN E
+time step    2: UNSTACK H A
+time step    3: PUT-DOWN H
+time step    4: UNSTACK A B
+time step    5: STACK A E
+time step    6: PICK-UP H
+time step    7: STACK H A
+time step    8: PICK-UP F
+time step    9: STACK F H
+time step   10: UNSTACK B G
+time step   11: PUT-DOWN B
+time step   12: PICK-UP G
+time step   13: STACK G F
+time step   14: PICK-UP B
+time step   15: STACK B G
+time step   16: PICK-UP D
+time step   17: STACK D B
+time step   18: PICK-UP C
+time step   19: STACK C D
+
+
+
+number of actions tried:       1118
+number of noops tried  :       9410
+
+had     717 simple memoizing hits
+had       0 partial memoizing hits
+had       1 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 128 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.07 MBytes for domain representation
+               2.59 MBytes for graph
+               0.12 MBytes for exclusions
+               0.12 MBytes for memoization
+               0.19 MBytes for wave front
+
+
+
+__MEMKB 5504

@@ -1,0 +1,187 @@
+
+ff: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+got 353 facts
+
+Cueing down from goal distance:    5 into depth [1][2][3]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:   42 into depth [1][2][3]
+                                  41            [1][2][3]
+                                  40            [1][2][3]
+                                  39            [1][2][3]
+                                  38            [1][2][3]
+                                  37            [1][2][3]
+                                  36            [1][2][3]
+                                  35            [1][2][3]
+                                  34            [1][2][3]
+                                  33            [1][2][3]
+                                  32            [1][2][3]
+                                  31            [1][2][3]
+                                  30            [1][2][3]
+                                  29            [1][2][3]
+                                  28            [1][2][3]
+                                  27            [1][2][3]
+                                  26            [1][2][3]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1][2][3][4][5]
+                                  21            [1][2][3][4][5]
+                                  20            [1][2][3][4][5]
+                                  19            [1][2][3][4][5]
+                                  18            [1]
+                                  17            [1][2][3][4][5]
+                                  16            [1]
+                                  15            [1][2][3][4][5]
+                                  14            [1]
+                                  13            [1][2][3][4][5]
+                                  12            [1]
+                                  11            [1][2][3][4][5]
+                                  10            [1]
+                                   9            [1][2][3][4][5][6][7]
+                                   8            [1][2][3][4][5][6][7]
+                                   7            [1]
+                                   6            [1][2][3][4][5][6][7]
+                                   5            [1]
+                                   4            [1][2][3][4][5][6][7]
+                                   3            [1]
+                                   2            [1][2][3][4][5][6][7]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: DRIVE TRUCK4 DEPOT1 MARKET1
+        1: DRIVE TRUCK4 MARKET1 MARKET4
+        2: BUY TRUCK4 GOODS8 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        3: LOAD GOODS8 TRUCK4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        4: DRIVE TRUCK4 MARKET4 MARKET2
+        5: DRIVE TRUCK4 MARKET2 DEPOT2
+        6: UNLOAD GOODS8 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        7: DRIVE TRUCK4 DEPOT2 MARKET2
+        8: BUY TRUCK4 GOODS3 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        9: BUY TRUCK4 GOODS5 MARKET2 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       10: BUY TRUCK4 GOODS7 MARKET2 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       11: BUY TRUCK4 GOODS9 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       12: BUY TRUCK4 GOODS1 MARKET2 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       13: BUY TRUCK4 GOODS2 MARKET2 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       14: BUY TRUCK4 GOODS6 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       15: BUY TRUCK4 GOODS10 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       16: LOAD GOODS3 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       17: LOAD GOODS5 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       18: LOAD GOODS7 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       19: LOAD GOODS9 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       20: LOAD GOODS1 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       21: LOAD GOODS2 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       22: LOAD GOODS6 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       23: LOAD GOODS10 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       24: DRIVE TRUCK4 MARKET2 MARKET4
+       25: BUY TRUCK4 GOODS4 MARKET4 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       26: LOAD GOODS4 TRUCK4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       27: DRIVE TRUCK4 MARKET4 MARKET2
+       28: DRIVE TRUCK4 MARKET2 DEPOT2
+       29: UNLOAD GOODS1 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       30: DRIVE TRUCK4 DEPOT2 MARKET2
+       31: BUY TRUCK4 GOODS1 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       32: LOAD GOODS1 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       33: DRIVE TRUCK4 MARKET2 DEPOT2
+       34: UNLOAD GOODS2 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       35: DRIVE TRUCK4 DEPOT2 MARKET2
+       36: BUY TRUCK4 GOODS2 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       37: LOAD GOODS2 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       38: DRIVE TRUCK4 MARKET2 DEPOT2
+       39: UNLOAD GOODS10 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       40: DRIVE TRUCK3 DEPOT1 MARKET1
+       41: BUY TRUCK3 GOODS10 MARKET1 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       42: LOAD GOODS10 TRUCK3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       43: DRIVE TRUCK3 MARKET1 DEPOT1
+       44: UNLOAD GOODS2 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       45: DRIVE TRUCK3 DEPOT1 MARKET1
+       46: BUY TRUCK3 GOODS2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       47: LOAD GOODS2 TRUCK3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       48: DRIVE TRUCK3 MARKET1 DEPOT1
+       49: UNLOAD GOODS2 TRUCK3 DEPOT1 LEVEL0 LEVEL1 LEVEL2 LEVEL3
+       50: UNLOAD GOODS3 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       51: DRIVE TRUCK3 DEPOT1 MARKET1
+       52: BUY TRUCK3 GOODS3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       53: LOAD GOODS3 TRUCK3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       54: DRIVE TRUCK3 MARKET1 DEPOT1
+       55: UNLOAD GOODS3 TRUCK3 DEPOT1 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       56: UNLOAD GOODS5 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       57: DRIVE TRUCK4 DEPOT2 MARKET2
+       58: BUY TRUCK4 GOODS5 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       59: LOAD GOODS5 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       60: DRIVE TRUCK4 MARKET2 DEPOT2
+       61: UNLOAD GOODS5 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       62: UNLOAD GOODS7 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       63: DRIVE TRUCK4 DEPOT2 MARKET2
+       64: BUY TRUCK4 GOODS7 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       65: LOAD GOODS7 TRUCK4 MARKET2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       66: DRIVE TRUCK4 MARKET2 DEPOT2
+       67: UNLOAD GOODS7 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       68: UNLOAD GOODS10 TRUCK3 DEPOT1 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       69: DRIVE TRUCK3 DEPOT1 MARKET1
+       70: BUY TRUCK3 GOODS10 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       71: LOAD GOODS10 TRUCK3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       72: DRIVE TRUCK3 MARKET1 DEPOT1
+       73: UNLOAD GOODS10 TRUCK3 DEPOT1 LEVEL0 LEVEL1 LEVEL2 LEVEL3
+       74: UNLOAD GOODS6 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       75: DRIVE TRUCK4 DEPOT2 MARKET2
+       76: DRIVE TRUCK4 MARKET2 MARKET4
+       77: BUY TRUCK4 GOODS6 MARKET4 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+       78: LOAD GOODS6 TRUCK4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       79: DRIVE TRUCK4 MARKET4 MARKET2
+       80: DRIVE TRUCK4 MARKET2 DEPOT2
+       81: UNLOAD GOODS1 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       82: DRIVE TRUCK4 DEPOT2 MARKET2
+       83: DRIVE TRUCK4 MARKET2 MARKET4
+       84: BUY TRUCK4 GOODS1 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       85: LOAD GOODS1 TRUCK4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       86: DRIVE TRUCK4 MARKET4 MARKET2
+       87: DRIVE TRUCK4 MARKET2 DEPOT2
+       88: UNLOAD GOODS1 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL2 LEVEL3
+       89: UNLOAD GOODS4 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       90: DRIVE TRUCK4 DEPOT2 MARKET2
+       91: DRIVE TRUCK4 MARKET2 MARKET4
+       92: BUY TRUCK4 GOODS4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       93: LOAD GOODS4 TRUCK4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       94: DRIVE TRUCK4 MARKET4 MARKET2
+       95: DRIVE TRUCK4 MARKET2 DEPOT2
+       96: UNLOAD GOODS4 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       97: UNLOAD GOODS6 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+       98: DRIVE TRUCK4 DEPOT2 MARKET2
+       99: DRIVE TRUCK4 MARKET2 MARKET4
+      100: BUY TRUCK4 GOODS6 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+      101: LOAD GOODS6 TRUCK4 MARKET4 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+      102: DRIVE TRUCK4 MARKET4 MARKET2
+      103: DRIVE TRUCK4 MARKET2 DEPOT2
+      104: UNLOAD GOODS6 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL2 LEVEL3
+      105: UNLOAD GOODS9 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+      106: DRIVE TRUCK4 DEPOT2 MARKET2
+      107: DRIVE TRUCK4 MARKET2 MARKET3
+      108: BUY TRUCK4 GOODS9 MARKET3 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+      109: LOAD GOODS9 TRUCK4 MARKET3 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+      110: DRIVE TRUCK4 MARKET3 MARKET2
+      111: DRIVE TRUCK4 MARKET2 DEPOT2
+      112: UNLOAD GOODS9 TRUCK4 DEPOT2 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+     
+
+time spent:    0.00 seconds instantiating 3656 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 393 facts and 1844 actions
+               0.00 seconds creating final representation with 353 relevant facts
+               0.00 seconds building connectivity graph
+               0.50 seconds searching, evaluating 8644 states, to a max depth of 7
+               0.50 seconds total time
+
+__MEMKB 9856

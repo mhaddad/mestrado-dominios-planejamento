@@ -1,0 +1,77 @@
+
+ipp: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+instantiated 48 actions
+
+
+time:   0,    66 facts and       0 exclusive pairs (   32,       0 positives)
+              68 ops   and       4 exclusive pairs
+time:   1,    70 facts and       4 exclusive pairs (   34,       2 positives)
+              76 ops   and      38 exclusive pairs
+time:   2,    72 facts and       6 exclusive pairs (   36,       6 positives)
+              90 ops   and     179 exclusive pairs
+time:   3,    92 facts and      66 exclusive pairs (   46,      26 positives)
+             120 ops   and     474 exclusive pairs
+time:   4,   112 facts and     226 exclusive pairs (   56,      76 positives)
+             140 ops   and     794 exclusive pairs
+time:   5,   112 facts and     186 exclusive pairs (   56,      66 positives)
+             140 ops   and     714 exclusive pairs
+time:   6,   112 facts and     166 exclusive pairs (   56,      56 positives)
+             150 ops   and     989 exclusive pairs
+time:   7,   122 facts and     256 exclusive pairs (   61,      81 positives)
+
+goals first reachable in 7 time steps
+
+
+found plan as follows:
+
+time step    0: DRIVE TRUCK1 DEPOT1 MARKET2
+time step    1: DRIVE TRUCK1 MARKET2 MARKET1
+time step    2: BUY TRUCK1 GOODS5 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS4 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    3: LOAD GOODS1 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS2 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS3 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS4 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS5 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    4: DRIVE TRUCK1 MARKET1 MARKET2
+time step    5: DRIVE TRUCK1 MARKET2 DEPOT1
+time step    6: UNLOAD GOODS5 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS4 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS3 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS2 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS1 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+
+
+
+number of actions tried:         19
+number of noops tried  :         12
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 48 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.04 MBytes for domain representation
+               1.29 MBytes for graph
+               0.02 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 3328

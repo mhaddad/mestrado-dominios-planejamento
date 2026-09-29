@@ -1,0 +1,77 @@
+
+ipp: parsing domain file
+domain 'SATELLITE' defined
+ ... done.
+ipp: parsing problem file
+problem 'STRIPS-SAT-X-1' defined
+ ... done.
+
+
+AND has only one son (anymore)
+warning: detected identical trees in con/dis junction
+instantiated 52 actions
+
+
+time:   0,    17 facts and       0 exclusive pairs (    2,       0 positives)
+              24 ops   and      30 exclusive pairs
+time:   1,    26 facts and      23 exclusive pairs (    9,      22 positives)
+              71 ops   and    1335 exclusive pairs
+time:   2,    27 facts and      32 exclusive pairs (   10,      29 positives)
+              73 ops   and    1438 exclusive pairs
+time:   3,    28 facts and      33 exclusive pairs (   11,      29 positives)
+              80 ops   and    1805 exclusive pairs
+time:   4,    34 facts and     105 exclusive pairs (   17,      85 positives)
+              86 ops   and    2110 exclusive pairs
+time:   5,    34 facts and      44 exclusive pairs (   17,      37 positives)
+              86 ops   and    1785 exclusive pairs
+time:   6,    34 facts and      23 exclusive pairs (   17,      22 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+              86 ops   and    1764 exclusive pairs
+time:   7,    34 facts and      23 exclusive pairs (   17,      22 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+
+
+found plan as follows:
+
+time step    0: TURN_TO SATELLITE0 GROUNDSTATION2 PHENOMENON6
+                SWITCH_ON INSTRUMENT0 SATELLITE0
+time step    1: CALIBRATE SATELLITE0 INSTRUMENT0 GROUNDSTATION2
+time step    2: TURN_TO SATELLITE0 PHENOMENON6 GROUNDSTATION2
+time step    3: TAKE_IMAGE SATELLITE0 PHENOMENON6 INSTRUMENT0 THERMOGRAPH0
+time step    4: TURN_TO SATELLITE0 STAR5 PHENOMENON6
+time step    5: TAKE_IMAGE SATELLITE0 STAR5 INSTRUMENT0 THERMOGRAPH0
+time step    6: TURN_TO SATELLITE0 PHENOMENON4 STAR5
+time step    7: TAKE_IMAGE SATELLITE0 PHENOMENON4 INSTRUMENT0 THERMOGRAPH0
+
+
+
+number of actions tried:         26
+number of noops tried  :         64
+
+had       5 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 52 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.49 MBytes for graph
+               0.02 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.02 MBytes for wave front
+
+
+
+__MEMKB 2560

@@ -1,0 +1,86 @@
+
+Parsing domain..... driverlog..... done.
+Parsing problem..... dlog-3-3-6..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.02
+Domains creation  time : 0.01
+Instantiation time : 0.03 -> 1158 candidates, 1158 actions
+Finalization time : 0.00 -> 192 fluents, 15 init
+
+39 26 19 12 9 7 4 
+
+0: (WALK driver3 s2 p6-2) [1]
+1: (WALK driver2 s2 p6-2) [1]
+2: (WALK driver3 p6-2 s6) [1]
+3: (WALK driver2 p6-2 s6) [1]
+4: (WALK driver3 s6 p6-8) [1]
+5: (WALK driver2 s6 p6-8) [1]
+6: (WALK driver3 p6-8 s8) [1]
+7: (WALK driver2 p6-8 s8) [1]
+8: (LOAD-TRUCK package5 truck2 s1) [1]
+9: (BOARD-TRUCK driver2 truck3 s8) [1]
+10: (DRIVE-TRUCK truck3 s8 s0 driver2) [1]
+11: (DRIVE-TRUCK truck3 s0 s3 driver2) [1]
+12: (UNLOAD-TRUCK package5 truck2 s1) [1]
+13: (LOAD-TRUCK package4 truck3 s3) [1]
+14: (WALK driver3 s8 p8-3) [1]
+15: (DISEMBARK-TRUCK driver2 truck3 s3) [1]
+16: (WALK driver2 s3 p2-3) [1]
+17: (WALK driver3 p8-3 s3) [1]
+18: (WALK driver3 s3 p2-3) [1]
+19: (WALK driver2 p2-3 s2) [1]
+20: (WALK driver3 p2-3 s2) [1]
+21: (WALK driver2 s2 p1-2) [1]
+22: (UNLOAD-TRUCK package4 truck3 s3) [1]
+23: (WALK driver2 p1-2 s1) [1]
+24: (WALK driver3 s2 p1-2) [1]
+25: (BOARD-TRUCK driver2 truck2 s1) [1]
+26: (LOAD-TRUCK package5 truck2 s1) [1]
+27: (DRIVE-TRUCK truck2 s1 s3 driver2) [1]
+28: (WALK driver3 p1-2 s1) [1]
+29: (UNLOAD-TRUCK package5 truck2 s3) [1]
+30: (DRIVE-TRUCK truck2 s3 s2 driver2) [1]
+31: (DISEMBARK-TRUCK driver2 truck2 s2) [1]
+32: (BOARD-TRUCK driver2 truck1 s2) [1]
+33: (DRIVE-TRUCK truck1 s2 s3 driver2) [1]
+34: (DRIVE-TRUCK truck1 s3 s6 driver2) [1]
+35: (DISEMBARK-TRUCK driver2 truck1 s6) [1]
+36: (WALK driver2 s6 p6-2) [1]
+37: (WALK driver2 p6-2 s2) [1]
+38: (BOARD-TRUCK driver2 truck2 s2) [1]
+39: (DRIVE-TRUCK truck2 s2 s0 driver2) [1]
+40: (DRIVE-TRUCK truck2 s0 s5 driver2) [1]
+41: (LOAD-TRUCK package1 truck2 s5) [1]
+42: (LOAD-TRUCK package2 truck2 s5) [1]
+43: (DRIVE-TRUCK truck2 s5 s0 driver2) [1]
+44: (UNLOAD-TRUCK package1 truck2 s0) [1]
+45: (UNLOAD-TRUCK package2 truck2 s0) [1]
+46: (DRIVE-TRUCK truck2 s0 s3 driver2) [1]
+47: (LOAD-TRUCK package4 truck2 s3) [1]
+48: (DRIVE-TRUCK truck2 s3 s0 driver2) [1]
+49: (DRIVE-TRUCK truck2 s0 s5 driver2) [1]
+50: (DRIVE-TRUCK truck2 s5 s4 driver2) [1]
+51: (UNLOAD-TRUCK package4 truck2 s4) [1]
+52: (LOAD-TRUCK package6 truck2 s4) [1]
+53: (DRIVE-TRUCK truck2 s4 s9 driver2) [1]
+54: (LOAD-TRUCK package3 truck2 s9) [1]
+55: (DRIVE-TRUCK truck2 s9 s4 driver2) [1]
+56: (UNLOAD-TRUCK package3 truck2 s4) [1]
+57: (DRIVE-TRUCK truck2 s4 s5 driver2) [1]
+58: (UNLOAD-TRUCK package6 truck2 s5) [1]
+
+Valid plan : 59 actions.
+Computed nodes : 59
+Evaluated nodes : 10
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 34.91 %
+Preparation time : 0.06
+Search time : 0.01
+Total time : 0.07
+
+__MEMKB 12168

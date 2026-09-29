@@ -1,0 +1,60 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'SATELLITE' defined
+Parsing problem file
+ problem 'STRIPS-SAT-X-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution found.
+
+; Time 0.01
+; ParsingTime 0.00
+; NrActions 17
+; MakeSpan
+; MetricValue
+
+	 0.00100:  (TURN_TO SATELLITE0 STAR0 PLANET4)[1.00000]
+	 1.00200:  (SWITCH_ON INSTRUMENT0 SATELLITE0)[1.00000]
+	 2.00300:  (CALIBRATE SATELLITE0 INSTRUMENT0 STAR0)[1.00000]
+	 3.00400:  (TURN_TO SATELLITE0 STAR7 STAR0)[1.00000]
+	 4.00500:  (TAKE_IMAGE SATELLITE0 STAR7 INSTRUMENT0 INFRARED0)[1.00000]
+	 5.00600:  (TURN_TO SATELLITE0 PHENOMENON6 STAR7)[1.00000]
+	 6.00700:  (TAKE_IMAGE SATELLITE0 PHENOMENON6 INSTRUMENT0 INFRARED0)[1.00000]
+	 7.00800:  (SWITCH_OFF INSTRUMENT0 SATELLITE0)[1.00000]
+	 8.00900:  (TURN_TO SATELLITE0 GROUNDSTATION2 PHENOMENON6)[1.00000]
+	 9.01000:  (SWITCH_ON INSTRUMENT1 SATELLITE0)[1.00000]
+	 10.01100:  (CALIBRATE SATELLITE0 INSTRUMENT1 GROUNDSTATION2)[1.00000]
+	 11.01200:  (TURN_TO SATELLITE0 PHENOMENON5 GROUNDSTATION2)[1.00000]
+	 12.01300:  (TAKE_IMAGE SATELLITE0 PHENOMENON5 INSTRUMENT1 IMAGE2)[1.00000]
+	 13.01400:  (TURN_TO SATELLITE0 PLANET4 PHENOMENON5)[1.00000]
+	 14.01500:  (TAKE_IMAGE SATELLITE0 PLANET4 INSTRUMENT1 INFRARED0)[1.00000]
+	 15.01600:  (TURN_TO SATELLITE0 PLANET3 PLANET4)[1.00000]
+	 16.01700:  (TAKE_IMAGE SATELLITE0 PLANET3 INSTRUMENT1 INFRARED0)[1.00000]
+__MEMKB 19908

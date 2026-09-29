@@ -1,0 +1,93 @@
+Parsing...
+Instantiating...
+Starting instantiation [21 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+7 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(c, c)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(d, d)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(f, f)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(b, b)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(e, e)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(a, a)
+Removed false proposition: <none of those>
+12 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+13 variables of 13 necessary
+72 of 72 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 216 to 96)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 276 unary operators... done! [216 unary operators]
+Best heuristic value: 18/11 [expanded 1 state(s)]
+Best heuristic value: 17/11 [expanded 3 state(s)]
+Best heuristic value: 15/10 [expanded 5 state(s)]
+Best heuristic value: 13/10 [expanded 8 state(s)]
+Best heuristic value: 13/9 [expanded 10 state(s)]
+Best heuristic value: 11/9 [expanded 12 state(s)]
+Best heuristic value: 7/8 [expanded 15 state(s)]
+Best heuristic value: 5/6 [expanded 18 state(s)]
+Best heuristic value: 3/4 [expanded 21 state(s)]
+Best heuristic value: 3/3 [expanded 32 state(s)]
+Best heuristic value: 2/2 [expanded 36 state(s)]
+Best heuristic value: 1/1 [expanded 37 state(s)]
+Solution found!
+unstack a d
+put-down a
+unstack d b
+put-down d
+unstack b f
+put-down b
+unstack f e
+stack f a
+unstack e c
+stack e f
+pick-up c
+stack c d
+pick-up b
+stack b c
+unstack e f
+put-down e
+unstack f a
+put-down f
+pick-up e
+stack e f
+pick-up a
+stack a b
+unstack e f
+put-down e
+pick-up f
+stack f a
+pick-up e
+stack e f
+Plan length: 28 step(s).
+Expanded 38 state(s).
+Generated 122 state(s).
+Cache hits: 308
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8860

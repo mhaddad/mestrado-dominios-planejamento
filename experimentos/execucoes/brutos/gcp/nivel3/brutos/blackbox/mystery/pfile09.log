@@ -1,0 +1,55 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/pfile09
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/pfile09
+Problem name: strips-mysty-x-9
+Facts loaded.
+time: 1, 108 facts and 112 exclusive pairs.
+time: 2, 133 facts and 332 exclusive pairs.
+time: 3, 170 facts and 933 exclusive pairs.
+time: 4, 213 facts and 1997 exclusive pairs.
+time: 5, 232 facts and 1866 exclusive pairs.
+Goals first reachable in 5 steps.
+3792 nodes created.
+
+####################################################
+goals at time 6:
+  craves_sciatica_hamburger craves_jealousy_wurst 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 77
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (overcome jealousy excitement guava earth uranus)
+1 (overcome sciatica entertainment flounder saturn venus)
+2 (feast excitement guava apple manitoba kentucky)
+2 (feast entertainment flounder hamburger bavaria arizona)
+3 (feast excitement apple hotdog bavaria arizona)
+3 (succumb sciatica entertainment hamburger saturn venus)
+4 (feast excitement hotdog wurst bosnia bavaria)
+5 (succumb jealousy excitement wurst earth uranus)
+End plan
+----------------------------------------------------
+
+8 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+8 actions tried
+
+####################################################
+Total elapsed time:   0.05 seconds
+Time in milliseconds: 53
+
+####################################################
+__MEMKB 39936

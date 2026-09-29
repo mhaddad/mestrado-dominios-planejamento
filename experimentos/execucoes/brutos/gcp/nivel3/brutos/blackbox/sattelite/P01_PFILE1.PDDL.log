@@ -1,0 +1,89 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P01_PFILE1.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P01_PFILE1.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 12 facts and 22 exclusive pairs.
+time: 2, 13 facts and 29 exclusive pairs.
+time: 3, 14 facts and 29 exclusive pairs.
+time: 4, 20 facts and 85 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 20 facts and 37 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 20 facts and 22 exclusive pairs.
+Goals first reachable in 6 steps.
+448 nodes created.
+
+####################################################
+goals at time 7:
+  have-image_phenomenon4_thermograph0 have-image_star5_thermograph0 have-image_phenomenon6_thermograph0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 20 facts and 22 exclusive pairs.
+92 new nodes added.
+
+####################################################
+goals at time 8:
+  have-image_phenomenon4_thermograph0 have-image_star5_thermograph0 have-image_phenomenon6_thermograph0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 35
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 20 facts and 22 exclusive pairs.
+92 new nodes added.
+
+####################################################
+goals at time 9:
+  have-image_phenomenon4_thermograph0 have-image_star5_thermograph0 have-image_phenomenon6_thermograph0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 57
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite0 groundstation2 phenomenon6)
+2 (calibrate satellite0 instrument0 groundstation2)
+3 (turn-to satellite0 phenomenon6 groundstation2)
+4 (take-image satellite0 phenomenon6 instrument0 thermograph0)
+5 (turn-to satellite0 star5 phenomenon6)
+6 (take-image satellite0 star5 instrument0 thermograph0)
+7 (turn-to satellite0 phenomenon4 star5)
+8 (take-image satellite0 phenomenon4 instrument0 thermograph0)
+End plan
+----------------------------------------------------
+
+9 total actions in plan
+5 entries in hash table, 3 hash hits, avg set size 5
+15 total set-creation steps (entries + hits + plan length - 1)
+19 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 5
+
+####################################################
+__MEMKB 9344

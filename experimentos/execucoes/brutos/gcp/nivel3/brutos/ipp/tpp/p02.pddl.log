@@ -1,0 +1,62 @@
+
+ipp: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+instantiated 8 actions
+
+
+time:   0,    18 facts and       0 exclusive pairs (    9,       0 positives)
+              19 ops   and       2 exclusive pairs
+time:   1,    20 facts and       2 exclusive pairs (   10,       1 positives)
+              24 ops   and      29 exclusive pairs
+time:   2,    28 facts and      42 exclusive pairs (   14,      13 positives)
+              34 ops   and     119 exclusive pairs
+time:   3,    32 facts and      46 exclusive pairs (   16,      15 positives)
+              38 ops   and     131 exclusive pairs
+time:   4,    32 facts and      38 exclusive pairs (   16,      13 positives)
+              40 ops   and     155 exclusive pairs
+time:   5,    36 facts and      74 exclusive pairs (   18,      23 positives)
+
+goals first reachable in 5 time steps
+
+
+found plan as follows:
+
+time step    0: DRIVE TRUCK1 DEPOT1 MARKET1
+time step    1: BUY TRUCK1 GOODS1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    2: LOAD GOODS2 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS1 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    3: DRIVE TRUCK1 MARKET1 DEPOT1
+time step    4: UNLOAD GOODS2 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS1 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+
+
+
+number of actions tried:          8
+number of noops tried  :          4
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 8 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.01 MBytes for domain representation
+               0.32 MBytes for graph
+               0.00 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2304

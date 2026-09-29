@@ -1,0 +1,47 @@
+
+Parsing domain..... logistics..... done.
+Parsing problem..... logistics-4-0..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 130 candidates, 78 actions
+Finalization time : 0.00 -> 48 fluents, 9 init
+
+19 3 
+
+0: (LOAD-TRUCK obj23 tru2 pos2) [1]
+1: (LOAD-TRUCK obj21 tru2 pos2) [1]
+2: (DRIVE-TRUCK tru2 pos2 apt2 cit2) [1]
+3: (LOAD-TRUCK obj13 tru1 pos1) [1]
+4: (LOAD-TRUCK obj11 tru1 pos1) [1]
+5: (UNLOAD-TRUCK obj23 tru2 apt2) [1]
+6: (UNLOAD-TRUCK obj21 tru2 apt2) [1]
+7: (LOAD-AIRPLANE obj23 apn1 apt2) [1]
+8: (LOAD-AIRPLANE obj21 apn1 apt2) [1]
+9: (FLY-AIRPLANE apn1 apt2 apt1) [1]
+10: (DRIVE-TRUCK tru1 pos1 apt1 cit1) [1]
+11: (UNLOAD-AIRPLANE obj21 apn1 apt1) [1]
+12: (UNLOAD-AIRPLANE obj23 apn1 apt1) [1]
+13: (LOAD-TRUCK obj23 tru1 apt1) [1]
+14: (LOAD-TRUCK obj21 tru1 apt1) [1]
+15: (UNLOAD-TRUCK obj13 tru1 apt1) [1]
+16: (UNLOAD-TRUCK obj11 tru1 apt1) [1]
+17: (DRIVE-TRUCK tru1 apt1 pos1 cit1) [1]
+18: (UNLOAD-TRUCK obj21 tru1 pos1) [1]
+19: (UNLOAD-TRUCK obj23 tru1 pos1) [1]
+
+Valid plan : 20 actions.
+Computed nodes : 20
+Evaluated nodes : 3
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 90.91 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2560

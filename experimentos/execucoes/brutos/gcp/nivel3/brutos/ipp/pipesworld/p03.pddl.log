@@ -1,0 +1,67 @@
+
+ipp: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'P03-NET1-B8-G3_RT0_INSTANCE' defined
+ ... done.
+
+
+instantiated 656 actions
+
+
+time:   0,    98 facts and       0 exclusive pairs (   31,       0 positives)
+             109 ops   and     139 exclusive pairs
+time:   1,   150 facts and     664 exclusive pairs (   61,     264 positives)
+             269 ops   and   10758 exclusive pairs
+time:   2,   176 facts and     950 exclusive pairs (   81,     543 positives)
+             465 ops   and   48815 exclusive pairs
+time:   3,   189 facts and     847 exclusive pairs (   92,     586 positives)
+             675 ops   and  121233 exclusive pairs
+time:   4,   195 facts and     610 exclusive pairs (   97,     479 positives)
+             807 ops   and  174443 exclusive pairs
+time:   5,   196 facts and     517 exclusive pairs (   98,     427 positives)
+
+goals first reachable in 5 time steps
+
+             848 ops   and  190331 exclusive pairs
+time:   6,   196 facts and     510 exclusive pairs (   98,     421 positives)
+
+found plan as follows:
+
+time step    0: PUSH-UNITARYPIPE S12 B3 A1 A2 B5 OCA1 GASOLEO TA1-1-OCA1 TA2-2-GASOLEO
+                PUSH-UNITARYPIPE S13 B0 A1 A3 B2 RAT-A RAT-A TA1-1-RAT-A TA3-2-RAT-A
+time step    1: POP-UNITARYPIPE S13 B6 A1 A3 B0 LCO RAT-A TA1-2-RAT-A TA3-1-LCO
+                POP-UNITARYPIPE S12 B4 A1 A2 B3 GASOLEO OCA1 TA1-1-OCA1 TA2-1-GASOLEO
+time step    2: POP-UNITARYPIPE S12 B5 A1 A2 B4 GASOLEO GASOLEO TA1-1-GASOLEO TA2-2-GASOLEO
+                POP-UNITARYPIPE S13 B1 A1 A3 B6 GASOLEO LCO TA1-1-LCO TA3-1-GASOLEO
+time step    3: PUSH-UNITARYPIPE S12 B6 A1 A2 B5 LCO GASOLEO TA1-1-LCO TA2-2-GASOLEO
+                POP-UNITARYPIPE S13 B2 A1 A3 B1 RAT-A GASOLEO TA1-2-GASOLEO TA3-2-RAT-A
+time step    4: PUSH-UNITARYPIPE S13 B0 A1 A3 B2 RAT-A RAT-A TA1-2-RAT-A TA3-1-RAT-A
+                PUSH-UNITARYPIPE S12 B7 A1 A2 B6 OCA1 LCO TA1-2-OCA1 TA2-1-LCO
+time step    5: PUSH-UNITARYPIPE S13 B4 A1 A3 B0 GASOLEO RAT-A TA1-2-GASOLEO TA3-2-RAT-A
+
+
+
+number of actions tried:        880
+number of noops tried  :       1097
+
+had     243 simple memoizing hits
+had       0 partial memoizing hits
+had      68 subset memoizing hits
+
+time spent:    0.01 seconds instantiating 656 operators
+               0.00 seconds building graph
+               0.01 seconds calculating exclusions
+               0.01 seconds searching graph
+               0.03 seconds total time
+
+Memory used:   0.57 MBytes for domain representation
+               3.75 MBytes for graph
+               1.29 MBytes for exclusions
+               0.07 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 8180

@@ -1,0 +1,78 @@
+
+ipp: parsing domain file
+domain 'SATELLITE' defined
+ ... done.
+ipp: parsing problem file
+problem 'STRIPS-SAT-X-1' defined
+ ... done.
+
+
+AND has only one son (anymore)
+warning: detected identical trees in con/dis junction
+instantiated 188 actions
+
+
+time:   0,    50 facts and       0 exclusive pairs (    4,       0 positives)
+              68 ops   and      85 exclusive pairs
+time:   1,    72 facts and      64 exclusive pairs (   22,      63 positives)
+             196 ops   and    4647 exclusive pairs
+time:   2,    76 facts and     113 exclusive pairs (   26,     104 positives)
+             208 ops   and    5540 exclusive pairs
+time:   3,    82 facts and     131 exclusive pairs (   32,     118 positives)
+             270 ops   and   11064 exclusive pairs
+time:   4,   100 facts and      67 exclusive pairs (   50,      66 positives)
+
+goals first reachable in 4 time steps
+
+             288 ops   and   10702 exclusive pairs
+time:   5,   100 facts and      64 exclusive pairs (   50,      63 positives)
+
+graph has leveled off at time step 6
+
+             288 ops   and   10619 exclusive pairs
+time:   6,   100 facts and      64 exclusive pairs (   50,      63 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: SWITCH_ON INSTRUMENT3 SATELLITE1
+                TURN_TO SATELLITE0 STAR1 STAR4
+                SWITCH_ON INSTRUMENT0 SATELLITE0
+time step    1: CALIBRATE SATELLITE0 INSTRUMENT0 STAR1
+                CALIBRATE SATELLITE1 INSTRUMENT3 STAR0
+time step    2: TURN_TO SATELLITE1 STAR4 STAR0
+                TURN_TO SATELLITE0 PHENOMENON7 STAR1
+time step    3: TAKE_IMAGE SATELLITE0 PHENOMENON7 INSTRUMENT0 SPECTROGRAPH2
+                TAKE_IMAGE SATELLITE1 STAR4 INSTRUMENT3 SPECTROGRAPH2
+time step    4: TURN_TO SATELLITE1 STAR3 STAR4
+                TURN_TO SATELLITE0 PHENOMENON5 PHENOMENON7
+time step    5: TAKE_IMAGE SATELLITE0 PHENOMENON5 INSTRUMENT0 SPECTROGRAPH2
+                TAKE_IMAGE SATELLITE1 STAR3 INSTRUMENT3 INFRARED0
+
+
+
+number of actions tried:       1961
+number of noops tried  :       5211
+
+had    1258 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 188 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.07 MBytes for domain representation
+               1.45 MBytes for graph
+               0.12 MBytes for exclusions
+               0.02 MBytes for memoization
+               0.05 MBytes for wave front
+
+
+
+__MEMKB 3712

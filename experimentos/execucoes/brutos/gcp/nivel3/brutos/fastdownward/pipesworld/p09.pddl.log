@@ -1,0 +1,149 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s13)
+Removed false proposition: Atom pop-updating(s13)
+Removed false proposition: Atom push-updating(s13)
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s12)
+Removed false proposition: Atom push-updating(s12)
+Removed false proposition: Atom pop-updating(s12)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+36 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+40 variables of 42 necessary
+3160 of 3160 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 22120 to 8792)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 15800 unary operators... done! [15800 unary operators]
+Best heuristic value: 15/22 [expanded 1 state(s)]
+Best heuristic value: 14/21 [expanded 4 state(s)]
+Best heuristic value: 14/20 [expanded 6 state(s)]
+Best heuristic value: 13/20 [expanded 11 state(s)]
+Best heuristic value: 12/18 [expanded 13 state(s)]
+Best heuristic value: 11/17 [expanded 18 state(s)]
+Best heuristic value: 10/15 [expanded 25 state(s)]
+Best heuristic value: 10/14 [expanded 48 state(s)]
+Best heuristic value: 9/14 [expanded 50 state(s)]
+Best heuristic value: 8/14 [expanded 58 state(s)]
+Best heuristic value: 6/14 [expanded 68 state(s)]
+Best heuristic value: 6/13 [expanded 72 state(s)]
+Best heuristic value: 6/12 [expanded 89 state(s)]
+Best heuristic value: 6/9 [expanded 133 state(s)]
+Best heuristic value: 5/8 [expanded 135 state(s)]
+Best heuristic value: 4/8 [expanded 136 state(s)]
+Best heuristic value: 4/7 [expanded 138 state(s)]
+Best heuristic value: 4/5 [expanded 181 state(s)]
+Best heuristic value: 4/4 [expanded 183 state(s)]
+Best heuristic value: 3/3 [expanded 187 state(s)]
+Best heuristic value: 2/2 [expanded 189 state(s)]
+Best heuristic value: 1/1 [expanded 6276 state(s)]
+Solution found!
+pop-unitarypipe s13 b3 a1 a3 b7 lco oca1 ta1-1-oca1 ta3-1-lco
+pop-unitarypipe s12 b13 a1 a2 b2 rat-a gasoleo ta1-1-gasoleo ta2-1-rat-a
+pop-unitarypipe s12 b1 a1 a2 b13 lco rat-a ta1-2-rat-a ta2-3-lco
+pop-unitarypipe s12 b4 a1 a2 b1 lco lco ta1-2-lco ta2-2-lco
+pop-unitarypipe s12 b11 a1 a2 b4 gasoleo lco ta1-3-lco ta2-1-gasoleo
+push-unitarypipe s12 b0 a1 a2 b11 lco gasoleo ta1-2-lco ta2-1-gasoleo
+pop-unitarypipe s13 b8 a1 a3 b3 rat-a lco ta1-2-lco ta3-1-rat-a
+push-unitarypipe s12 b3 a1 a2 b0 lco lco ta1-1-lco ta2-3-lco
+pop-unitarypipe s12 b6 a1 a2 b3 lco lco ta1-1-lco ta2-3-lco
+push-unitarypipe s13 b1 a1 a3 b8 lco rat-a ta1-3-lco ta3-1-rat-a
+pop-unitarypipe s12 b5 a1 a2 b6 oca1 lco ta1-3-lco ta2-2-oca1
+pop-unitarypipe s12 b11 a1 a2 b5 gasoleo oca1 ta1-2-oca1 ta2-1-gasoleo
+push-unitarypipe s12 b2 a1 a2 b11 gasoleo gasoleo ta1-1-gasoleo ta2-1-gasoleo
+push-unitarypipe s13 b7 a1 a3 b1 oca1 lco ta1-1-oca1 ta3-3-lco
+push-unitarypipe s13 b3 a1 a3 b7 lco oca1 ta1-3-lco ta3-2-oca1
+pop-unitarypipe s12 b11 a1 a2 b2 gasoleo gasoleo ta1-1-gasoleo ta2-1-gasoleo
+pop-unitarypipe s13 b12 a1 a3 b3 rat-a lco ta1-3-lco ta3-1-rat-a
+pop-unitarypipe s13 b1 a1 a3 b12 lco rat-a ta1-1-rat-a ta3-3-lco
+push-unitarypipe s12 b12 a1 a2 b11 rat-a gasoleo ta1-2-rat-a ta2-1-gasoleo
+push-unitarypipe s12 b2 a1 a2 b12 gasoleo rat-a ta1-1-gasoleo ta2-1-rat-a
+pop-unitarypipe s12 b9 a1 a2 b2 rat-a gasoleo ta1-1-gasoleo ta2-2-rat-a
+push-unitarypipe s13 b2 a1 a3 b1 gasoleo lco ta1-1-gasoleo ta3-3-lco
+pop-unitarypipe s12 b11 a1 a2 b9 gasoleo rat-a ta1-2-rat-a ta2-1-gasoleo
+pop-unitarypipe s12 b10 a1 a2 b11 oca1 gasoleo ta1-1-gasoleo ta2-1-oca1
+pop-unitarypipe s12 b0 a1 a2 b10 lco oca1 ta1-1-oca1 ta2-1-lco
+push-unitarypipe s13 b10 a1 a3 b2 oca1 gasoleo ta1-1-oca1 ta3-1-gasoleo
+push-unitarypipe s13 b4 a1 a3 b10 lco oca1 ta1-1-lco ta3-1-oca1
+push-unitarypipe s12 b13 a1 a2 b0 rat-a lco ta1-2-rat-a ta2-1-lco
+pop-unitarypipe s13 b10 a1 a3 b4 oca1 lco ta1-1-lco ta3-2-oca1
+push-unitarypipe s12 b3 a1 a2 b13 lco rat-a ta1-2-lco ta2-2-rat-a
+pop-unitarypipe s13 b1 a1 a3 b10 lco oca1 ta1-1-oca1 ta3-3-lco
+pop-unitarypipe s13 b8 a1 a3 b1 rat-a lco ta1-2-lco ta3-2-rat-a
+push-unitarypipe s12 b1 a1 a2 b3 lco lco ta1-3-lco ta2-3-lco
+push-unitarypipe s13 b4 a1 a3 b8 lco rat-a ta1-2-lco ta3-1-rat-a
+pop-unitarypipe s12 b13 a1 a2 b1 rat-a lco ta1-2-lco ta2-2-rat-a
+pop-unitarypipe s13 b2 a1 a3 b4 gasoleo lco ta1-3-lco ta3-1-gasoleo
+push-unitarypipe s13 b10 a1 a3 b2 oca1 gasoleo ta1-1-oca1 ta3-1-gasoleo
+push-unitarypipe s13 b5 a1 a3 b10 oca1 oca1 ta1-2-oca1 ta3-2-oca1
+pop-unitarypipe s13 b2 a1 a3 b5 gasoleo oca1 ta1-1-oca1 ta3-1-gasoleo
+push-unitarypipe s12 b11 a1 a2 b13 gasoleo rat-a ta1-1-gasoleo ta2-2-rat-a
+pop-unitarypipe s13 b8 a1 a3 b2 rat-a gasoleo ta1-1-gasoleo ta3-1-rat-a
+push-unitarypipe s12 b9 a1 a2 b11 rat-a gasoleo ta1-1-rat-a ta2-1-gasoleo
+pop-unitarypipe s12 b13 a1 a2 b9 rat-a rat-a ta1-2-rat-a ta2-2-rat-a
+push-unitarypipe s13 b9 a1 a3 b8 rat-a rat-a ta1-2-rat-a ta3-1-rat-a
+push-unitarypipe s13 b2 a1 a3 b9 gasoleo rat-a ta1-1-gasoleo ta3-2-rat-a
+pop-unitarypipe s13 b8 a1 a3 b2 rat-a gasoleo ta1-1-gasoleo ta3-1-rat-a
+pop-unitarypipe s12 b11 a1 a2 b13 gasoleo rat-a ta1-2-rat-a ta2-1-gasoleo
+pop-unitarypipe s13 b9 a1 a3 b8 rat-a rat-a ta1-1-rat-a ta3-2-rat-a
+push-unitarypipe s12 b8 a1 a2 b11 rat-a gasoleo ta1-2-rat-a ta2-1-gasoleo
+push-unitarypipe s12 b2 a1 a2 b8 gasoleo rat-a ta1-1-gasoleo ta2-2-rat-a
+Plan length: 50 step(s).
+Expanded 6278 state(s).
+Generated 197091 state(s).
+Cache hits: 3503762
+Cache misses: 7290291
+Search time: 1.63 seconds
+Total time: 1.71 seconds
+__MEMKB 45680

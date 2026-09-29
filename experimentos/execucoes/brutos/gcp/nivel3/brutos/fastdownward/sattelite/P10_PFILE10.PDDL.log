@@ -1,0 +1,113 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+112 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+5 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+43 variables of 117 necessary
+1445 of 1784 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 1472 to 1472)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 1478 unary operators... done! [1472 unary operators]
+Best heuristic value: 64/31 [expanded 1 state(s)]
+Best heuristic value: 63/30 [expanded 2 state(s)]
+Best heuristic value: 51/29 [expanded 4 state(s)]
+Best heuristic value: 45/28 [expanded 7 state(s)]
+Best heuristic value: 42/27 [expanded 10 state(s)]
+Best heuristic value: 41/26 [expanded 12 state(s)]
+Best heuristic value: 40/25 [expanded 14 state(s)]
+Best heuristic value: 39/24 [expanded 16 state(s)]
+Best heuristic value: 38/23 [expanded 18 state(s)]
+Best heuristic value: 37/22 [expanded 20 state(s)]
+Best heuristic value: 33/21 [expanded 22 state(s)]
+Best heuristic value: 32/20 [expanded 25 state(s)]
+Best heuristic value: 31/19 [expanded 28 state(s)]
+Best heuristic value: 26/19 [expanded 31 state(s)]
+Best heuristic value: 20/18 [expanded 32 state(s)]
+Best heuristic value: 19/17 [expanded 33 state(s)]
+Best heuristic value: 18/17 [expanded 35 state(s)]
+Best heuristic value: 16/16 [expanded 38 state(s)]
+Best heuristic value: 15/15 [expanded 40 state(s)]
+Best heuristic value: 14/14 [expanded 42 state(s)]
+Best heuristic value: 13/13 [expanded 44 state(s)]
+Best heuristic value: 12/12 [expanded 46 state(s)]
+Best heuristic value: 11/11 [expanded 48 state(s)]
+Best heuristic value: 10/10 [expanded 50 state(s)]
+Best heuristic value: 9/9 [expanded 52 state(s)]
+Best heuristic value: 8/8 [expanded 54 state(s)]
+Best heuristic value: 7/7 [expanded 56 state(s)]
+Best heuristic value: 6/6 [expanded 58 state(s)]
+Best heuristic value: 5/5 [expanded 60 state(s)]
+Best heuristic value: 4/4 [expanded 62 state(s)]
+Best heuristic value: 3/3 [expanded 64 state(s)]
+Best heuristic value: 2/2 [expanded 66 state(s)]
+Best heuristic value: 1/1 [expanded 68 state(s)]
+Solution found!
+turn_to satellite4 planet9 planet10
+switch_on instrument10 satellite4
+switch_on instrument3 satellite1
+calibrate satellite1 instrument3 star4
+turn_to satellite1 star6 star4
+take_image satellite1 star6 instrument3 infrared3
+turn_to satellite1 planet10 star6
+take_image satellite1 planet10 instrument3 infrared3
+turn_to satellite3 star15 groundstation3
+switch_on instrument7 satellite3
+turn_to satellite1 planet9 planet10
+take_image satellite1 planet9 instrument3 infrared0
+turn_to satellite4 star0 planet9
+calibrate satellite4 instrument10 star0
+turn_to satellite4 planet9 star0
+turn_to satellite3 star4 star15
+calibrate satellite3 instrument7 star4
+turn_to satellite3 phenomenon8 star4
+take_image satellite3 phenomenon8 instrument7 image4
+turn_to satellite3 star12 phenomenon8
+take_image satellite3 star12 instrument7 image4
+turn_to satellite3 star15 star12
+take_image satellite3 star15 instrument7 spectrograph1
+turn_to satellite3 phenomenon14 star15
+take_image satellite3 phenomenon14 instrument7 spectrograph1
+turn_to satellite3 phenomenon13 phenomenon14
+take_image satellite3 phenomenon13 instrument7 image4
+turn_to satellite3 star7 phenomenon13
+take_image satellite3 star7 instrument7 image4
+turn_to satellite3 planet5 star7
+take_image satellite3 planet5 instrument7 image4
+turn_to satellite4 star16 planet9
+take_image satellite4 star16 instrument10 image2
+turn_to satellite4 planet9 star16
+Plan length: 34 step(s).
+Expanded 69 state(s).
+Generated 6064 state(s).
+Cache hits: 5759
+Cache misses: 495
+Search time: 0.01 seconds
+Total time: 0.01 seconds
+__MEMKB 15644

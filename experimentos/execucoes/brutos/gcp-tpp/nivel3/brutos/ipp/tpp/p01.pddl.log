@@ -1,0 +1,62 @@
+
+ipp: parsing domain file
+domain 'GROUNDED-STRIPS-TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'GROUNDED-STRIPS-TPP' defined
+ ... done.
+
+
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+instantiated 5 actions
+
+
+time:   0,    10 facts and       0 exclusive pairs (    5,       0 positives)
+              11 ops   and       2 exclusive pairs
+time:   1,    12 facts and       2 exclusive pairs (    6,       1 positives)
+              15 ops   and      21 exclusive pairs
+time:   2,    16 facts and      22 exclusive pairs (    8,       7 positives)
+              20 ops   and      66 exclusive pairs
+time:   3,    18 facts and      24 exclusive pairs (    9,       8 positives)
+              22 ops   and      72 exclusive pairs
+time:   4,    18 facts and      20 exclusive pairs (    9,       7 positives)
+              23 ops   and      82 exclusive pairs
+time:   5,    20 facts and      38 exclusive pairs (   10,      12 positives)
+
+goals first reachable in 5 time steps
+
+
+found plan as follows:
+
+time step    0: DRIVE-TRUCK1-DEPOT1-MARKET1
+time step    1: BUY-TRUCK1-GOODS1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    2: LOAD-GOODS1-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    3: DRIVE-TRUCK1-MARKET1-DEPOT1
+time step    4: UNLOAD-GOODS1-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+
+
+
+number of actions tried:          5
+number of noops tried  :          3
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 5 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.01 MBytes for domain representation
+               0.18 MBytes for graph
+               0.00 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2176

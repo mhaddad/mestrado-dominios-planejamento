@@ -1,0 +1,71 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+26 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+2 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 28 necessary
+71 of 102 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 73 to 73)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 73 unary operators... done! [73 unary operators]
+Best heuristic value: 29/12 [expanded 1 state(s)]
+Best heuristic value: 23/12 [expanded 2 state(s)]
+Best heuristic value: 20/12 [expanded 3 state(s)]
+Best heuristic value: 19/11 [expanded 5 state(s)]
+Best heuristic value: 15/11 [expanded 6 state(s)]
+Best heuristic value: 10/10 [expanded 7 state(s)]
+Best heuristic value: 9/9 [expanded 8 state(s)]
+Best heuristic value: 8/8 [expanded 9 state(s)]
+Best heuristic value: 7/7 [expanded 10 state(s)]
+Best heuristic value: 6/6 [expanded 11 state(s)]
+Best heuristic value: 5/5 [expanded 12 state(s)]
+Best heuristic value: 4/4 [expanded 13 state(s)]
+Best heuristic value: 3/3 [expanded 14 state(s)]
+Best heuristic value: 2/2 [expanded 15 state(s)]
+Best heuristic value: 1/1 [expanded 16 state(s)]
+Solution found!
+switch_on instrument1 satellite0
+turn_to satellite0 groundstation2 planet4
+calibrate satellite0 instrument1 groundstation2
+turn_to satellite0 planet4 groundstation2
+take_image satellite0 planet4 instrument1 infrared0
+turn_to satellite0 planet3 planet4
+take_image satellite0 planet3 instrument1 infrared0
+turn_to satellite0 star7 planet3
+take_image satellite0 star7 instrument1 infrared0
+turn_to satellite0 phenomenon6 star7
+take_image satellite0 phenomenon6 instrument1 infrared0
+turn_to satellite0 phenomenon5 phenomenon6
+take_image satellite0 phenomenon5 instrument1 image2
+Plan length: 13 step(s).
+Expanded 17 state(s).
+Generated 142 state(s).
+Cache hits: 178
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8988

@@ -1,0 +1,50 @@
+blackbox version 43
+command line:  ./blackbox -o /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/domain.pddl -f /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/pfile1.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/domain.pddl
+Loading fact file: /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/gripper/pfile1.pddl
+Problem name: gripper-2
+Facts loaded.
+time: 1, 16 facts and 17 exclusive pairs.
+time: 2, 16 facts and 13 exclusive pairs.
+time: 3, 18 facts and 21 exclusive pairs.
+Goals first reachable in 3 steps.
+137 nodes created.
+
+####################################################
+goals at time 4:
+  at_ball1_roomb at_ball2_roomb 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 22
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (pick ball1 rooma right)
+1 (pick ball2 rooma left)
+2 (move rooma roomb)
+3 (drop ball1 roomb right)
+3 (drop ball2 roomb left)
+End plan
+----------------------------------------------------
+
+5 total actions in plan
+0 entries in hash table, 
+2 total set-creation steps (entries + hits + plan length - 1)
+5 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 12
+
+####################################################
+__MEMKB 13988

@@ -1,0 +1,29 @@
+3420 execuções pendentes (0 já registradas); adiados: -
+1572 execuções pendentes (1848 já registradas); adiados: -
+fim
+Sat Sep 26 12:00:48 UTC 2026 removidas 330 linhas do Pathways; restam 2434
+956 execuções pendentes (2434 já registradas); adiados: -
+ERRO em ('R', 'driverlog', 'pfile15', ''):
+Traceback (most recent call last):
+  File "/home/matheus/repo/experimentos/execucoes/rodar_nivel3_2010.py", line 218, in seguro
+    executar(t, lim[t[0]])
+  File "/home/matheus/repo/experimentos/execucoes/rodar_nivel3_2010.py", line 167, in executar
+    t = C.tempo_agora(pl, cwd, saida, prob) if situacao == "terminou" else None
+  File "/home/matheus/repo/experimentos/planejadores/calibrar_2010.py", line 97, in tempo_agora
+    return float(p[1])
+ValueError: could not convert string to float: ' s2'
+
+ERRO em ('R', 'driverlog', 'pfile17', ''):
+Traceback (most recent call last):
+  File "/home/matheus/repo/experimentos/execucoes/rodar_nivel3_2010.py", line 218, in seguro
+    executar(t, lim[t[0]])
+  File "/home/matheus/repo/experimentos/execucoes/rodar_nivel3_2010.py", line 167, in executar
+    t = C.tempo_agora(pl, cwd, saida, prob) if situacao == "terminou" else None
+  File "/home/matheus/repo/experimentos/planejadores/calibrar_2010.py", line 97, in tempo_agora
+    return float(p[1])
+ValueError: could not convert string to float: '  (effect(walk(driver3'
+
+fim
+2 execuções pendentes (3388 já registradas); adiados: -
+fim
+Sun Sep 27 08:20:29 UTC 2026 FINAL

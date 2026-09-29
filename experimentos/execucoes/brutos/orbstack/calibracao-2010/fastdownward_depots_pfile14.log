@@ -1,0 +1,172 @@
+Parsing...
+Instantiating...
+Starting instantiation [43 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+42 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(crate8, crate8)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate7, crate7)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate3, crate3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate9, crate9)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate6, crate6)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate4, crate4)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate5, crate5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate1, crate1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate2, crate2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate0, crate0)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist5, distributor2)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet4, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet3, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist3, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet1, depot1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist2, depot2)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist4, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet7, depot1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet8, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist1, depot1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet9, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet6, distributor2)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet2, depot2)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet5, distributor2)
+Removed false proposition: <none of those>
+54 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+48 variables of 48 necessary
+2080 of 2080 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 12640 to 4181)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 9440 unary operators... done! [9440 unary operators]
+Best heuristic value: 16/24 [expanded 1 state(s)]
+Best heuristic value: 15/23 [expanded 2 state(s)]
+Best heuristic value: 15/22 [expanded 3 state(s)]
+Best heuristic value: 15/21 [expanded 4 state(s)]
+Best heuristic value: 15/20 [expanded 6 state(s)]
+Best heuristic value: 13/19 [expanded 22 state(s)]
+Best heuristic value: 12/18 [expanded 33 state(s)]
+Best heuristic value: 11/16 [expanded 60 state(s)]
+Best heuristic value: 10/16 [expanded 61 state(s)]
+Best heuristic value: 10/15 [expanded 64 state(s)]
+Best heuristic value: 9/15 [expanded 66 state(s)]
+Best heuristic value: 8/14 [expanded 67 state(s)]
+Best heuristic value: 8/13 [expanded 69 state(s)]
+Best heuristic value: 8/12 [expanded 73 state(s)]
+Best heuristic value: 8/11 [expanded 89 state(s)]
+Best heuristic value: 7/10 [expanded 91 state(s)]
+Best heuristic value: 6/10 [expanded 94 state(s)]
+Best heuristic value: 6/8 [expanded 620 state(s)]
+Best heuristic value: 5/8 [expanded 623 state(s)]
+Best heuristic value: 5/6 [expanded 630 state(s)]
+Best heuristic value: 5/5 [expanded 631 state(s)]
+Best heuristic value: 4/4 [expanded 632 state(s)]
+Best heuristic value: 3/3 [expanded 633 state(s)]
+Best heuristic value: 2/3 [expanded 634 state(s)]
+Best heuristic value: 2/2 [expanded 6864 state(s)]
+Best heuristic value: 1/1 [expanded 6865 state(s)]
+Solution found!
+lift hoist3 crate9 crate2 distributor0
+drive truck1 depot2 distributor0
+load hoist3 crate9 truck1 distributor0
+drive truck1 distributor0 distributor1
+unload hoist4 crate9 truck1 distributor1
+drop hoist4 crate9 crate7 distributor1
+lift hoist1 crate8 pallet1 depot1
+drop hoist1 crate8 pallet7 depot1
+lift hoist0 crate5 crate1 depot0
+drive truck1 distributor1 depot0
+load hoist0 crate5 truck1 depot0
+drive truck1 depot0 distributor2
+unload hoist5 crate5 truck1 distributor2
+drop hoist5 crate5 pallet5 distributor2
+drive truck1 distributor2 depot0
+lift hoist0 crate1 pallet9 depot0
+load hoist0 crate1 truck1 depot0
+drive truck1 depot0 distributor1
+lift hoist4 crate9 crate7 distributor1
+drop hoist4 crate9 crate0 distributor1
+lift hoist4 crate7 crate6 distributor1
+drop hoist4 crate7 crate9 distributor1
+lift hoist4 crate6 pallet4 distributor1
+drop hoist4 crate6 crate7 distributor1
+unload hoist4 crate1 truck1 distributor1
+drop hoist4 crate1 pallet4 distributor1
+lift hoist4 crate6 crate7 distributor1
+load hoist4 crate6 truck1 distributor1
+drive truck1 distributor1 depot1
+unload hoist1 crate6 truck1 depot1
+drop hoist1 crate6 pallet1 depot1
+drive truck1 depot1 distributor1
+lift hoist4 crate7 crate9 distributor1
+load hoist4 crate7 truck1 distributor1
+drive truck1 distributor1 depot1
+unload hoist1 crate7 truck1 depot1
+drop hoist1 crate7 crate6 depot1
+lift hoist4 crate9 crate0 distributor1
+drive truck1 depot1 distributor1
+drop hoist4 crate9 crate0 distributor1
+drive truck0 depot1 distributor1
+lift hoist4 crate9 crate0 distributor1
+load hoist4 crate9 truck0 distributor1
+drive truck0 distributor1 depot1
+unload hoist1 crate9 truck0 depot1
+drop hoist1 crate9 crate7 depot1
+lift hoist4 crate1 pallet4 distributor1
+load hoist4 crate1 truck1 distributor1
+lift hoist4 crate0 pallet8 distributor1
+drop hoist4 crate0 pallet4 distributor1
+unload hoist4 crate1 truck1 distributor1
+drop hoist4 crate1 pallet8 distributor1
+Plan length: 52 step(s).
+Expanded 6866 state(s).
+Generated 130322 state(s).
+Cache hits: 658810
+Cache misses: 2624074
+Search time: 14.93 seconds
+Total time: 17.23 seconds

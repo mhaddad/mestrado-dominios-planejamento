@@ -1,0 +1,161 @@
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+17 variables of 17 necessary
+308 of 308 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 308 to 308)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 308 unary operators... done! [308 unary operators]
+Best heuristic value: 54/39 [expanded 1 state(s)]
+Best heuristic value: 53/38 [expanded 6 state(s)]
+Best heuristic value: 52/37 [expanded 12 state(s)]
+Best heuristic value: 51/36 [expanded 19 state(s)]
+Best heuristic value: 50/36 [expanded 21 state(s)]
+Best heuristic value: 49/35 [expanded 24 state(s)]
+Best heuristic value: 48/34 [expanded 31 state(s)]
+Best heuristic value: 47/34 [expanded 33 state(s)]
+Best heuristic value: 47/33 [expanded 43 state(s)]
+Best heuristic value: 46/33 [expanded 44 state(s)]
+Best heuristic value: 45/33 [expanded 48 state(s)]
+Best heuristic value: 44/32 [expanded 51 state(s)]
+Best heuristic value: 43/32 [expanded 55 state(s)]
+Best heuristic value: 43/31 [expanded 59 state(s)]
+Best heuristic value: 42/31 [expanded 62 state(s)]
+Best heuristic value: 41/31 [expanded 67 state(s)]
+Best heuristic value: 41/30 [expanded 70 state(s)]
+Best heuristic value: 39/30 [expanded 72 state(s)]
+Best heuristic value: 38/29 [expanded 74 state(s)]
+Best heuristic value: 37/29 [expanded 78 state(s)]
+Best heuristic value: 37/28 [expanded 82 state(s)]
+Best heuristic value: 36/28 [expanded 87 state(s)]
+Best heuristic value: 36/27 [expanded 91 state(s)]
+Best heuristic value: 34/26 [expanded 92 state(s)]
+Best heuristic value: 33/26 [expanded 95 state(s)]
+Best heuristic value: 33/25 [expanded 96 state(s)]
+Best heuristic value: 32/25 [expanded 98 state(s)]
+Best heuristic value: 31/24 [expanded 102 state(s)]
+Best heuristic value: 30/24 [expanded 103 state(s)]
+Best heuristic value: 29/23 [expanded 106 state(s)]
+Best heuristic value: 28/22 [expanded 108 state(s)]
+Best heuristic value: 27/21 [expanded 109 state(s)]
+Best heuristic value: 26/20 [expanded 110 state(s)]
+Best heuristic value: 25/19 [expanded 113 state(s)]
+Best heuristic value: 23/18 [expanded 114 state(s)]
+Best heuristic value: 22/17 [expanded 116 state(s)]
+Best heuristic value: 21/16 [expanded 119 state(s)]
+Best heuristic value: 20/15 [expanded 124 state(s)]
+Best heuristic value: 19/14 [expanded 127 state(s)]
+Best heuristic value: 18/13 [expanded 131 state(s)]
+Best heuristic value: 17/12 [expanded 135 state(s)]
+Best heuristic value: 15/12 [expanded 136 state(s)]
+Best heuristic value: 14/11 [expanded 139 state(s)]
+Best heuristic value: 13/10 [expanded 143 state(s)]
+Best heuristic value: 12/9 [expanded 144 state(s)]
+Best heuristic value: 11/8 [expanded 145 state(s)]
+Best heuristic value: 10/7 [expanded 148 state(s)]
+Best heuristic value: 9/7 [expanded 149 state(s)]
+Best heuristic value: 8/7 [expanded 150 state(s)]
+Best heuristic value: 7/6 [expanded 151 state(s)]
+Best heuristic value: 6/5 [expanded 154 state(s)]
+Best heuristic value: 5/4 [expanded 155 state(s)]
+Best heuristic value: 4/3 [expanded 157 state(s)]
+Best heuristic value: 2/2 [expanded 158 state(s)]
+Best heuristic value: 1/1 [expanded 159 state(s)]
+Solution found!
+load-truck obj33 tru3 pos3
+load-truck obj13 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+unload-truck obj11 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+load-airplane obj11 apn1 apt1
+fly-airplane apn1 apt1 apt4
+unload-airplane obj11 apn1 apt4
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj21 tru2 apt2
+unload-truck obj23 tru2 apt2
+load-truck obj32 tru3 pos3
+drive-truck tru3 pos3 apt3 cit3
+unload-truck obj33 tru3 apt3
+fly-airplane apn1 apt4 apt3
+load-airplane obj33 apn1 apt3
+fly-airplane apn1 apt3 apt2
+unload-airplane obj33 apn1 apt2
+load-truck obj33 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj33 tru2 pos2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt4
+unload-airplane obj23 apn1 apt4
+unload-truck obj32 tru3 apt3
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+load-truck obj41 tru4 pos4
+drive-truck tru4 pos4 apt4 cit4
+load-truck obj23 tru4 apt4
+unload-truck obj41 tru4 apt4
+drive-truck tru4 apt4 pos4 cit4
+unload-truck obj23 tru4 pos4
+load-airplane obj41 apn1 apt4
+fly-airplane apn1 apt4 apt3
+fly-airplane apn1 apt3 apt1
+unload-airplane obj41 apn1 apt1
+load-airplane obj12 apn1 apt1
+fly-airplane apn1 apt1 apt3
+load-airplane obj32 apn1 apt3
+fly-airplane apn1 apt3 apt4
+unload-airplane obj32 apn1 apt4
+unload-airplane obj12 apn1 apt4
+Plan length: 48 step(s).
+Expanded 160 state(s).
+Generated 2632 state(s).
+Cache hits: 3599
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 10012

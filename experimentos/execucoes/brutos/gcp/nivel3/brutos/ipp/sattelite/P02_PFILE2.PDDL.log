@@ -1,0 +1,85 @@
+
+ipp: parsing domain file
+domain 'SATELLITE' defined
+ ... done.
+ipp: parsing problem file
+problem 'STRIPS-SAT-X-1' defined
+ ... done.
+
+
+AND has only one son (anymore)
+warning: detected identical trees in con/dis junction
+instantiated 102 actions
+
+
+time:   0,    37 facts and       0 exclusive pairs (    2,       0 positives)
+              46 ops   and      42 exclusive pairs
+time:   1,    48 facts and      31 exclusive pairs (   11,      31 positives)
+             110 ops   and    2315 exclusive pairs
+time:   2,    50 facts and      54 exclusive pairs (   13,      50 positives)
+             117 ops   and    2829 exclusive pairs
+time:   3,    55 facts and     105 exclusive pairs (   18,      90 positives)
+             157 ops   and    6644 exclusive pairs
+time:   4,    74 facts and     486 exclusive pairs (   37,     452 positives)
+             176 ops   and    8334 exclusive pairs
+time:   5,    74 facts and     206 exclusive pairs (   37,     199 positives)
+             176 ops   and    6445 exclusive pairs
+time:   6,    74 facts and      31 exclusive pairs (   37,      31 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             176 ops   and    6128 exclusive pairs
+time:   7,    74 facts and      31 exclusive pairs (   37,      31 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+
+
+found plan as follows:
+
+time step    0: TURN_TO SATELLITE0 GROUNDSTATION2 PLANET4
+                SWITCH_ON INSTRUMENT1 SATELLITE0
+time step    1: CALIBRATE SATELLITE0 INSTRUMENT1 GROUNDSTATION2
+time step    2: TURN_TO SATELLITE0 PLANET4 GROUNDSTATION2
+time step    3: TAKE_IMAGE SATELLITE0 PLANET4 INSTRUMENT1 INFRARED0
+time step    4: TURN_TO SATELLITE0 STAR7 PLANET4
+time step    5: TAKE_IMAGE SATELLITE0 STAR7 INSTRUMENT1 INFRARED0
+time step    6: TURN_TO SATELLITE0 PHENOMENON6 STAR7
+time step    7: TAKE_IMAGE SATELLITE0 PHENOMENON6 INSTRUMENT1 INFRARED0
+time step    8: TURN_TO SATELLITE0 PHENOMENON5 PHENOMENON6
+time step    9: TAKE_IMAGE SATELLITE0 PHENOMENON5 INSTRUMENT1 IMAGE2
+time step   10: TURN_TO SATELLITE0 PLANET3 PHENOMENON5
+time step   11: TAKE_IMAGE SATELLITE0 PLANET3 INSTRUMENT1 INFRARED0
+
+
+
+number of actions tried:       4469
+number of noops tried  :      11644
+
+had    3524 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 102 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.04 MBytes for domain representation
+               1.02 MBytes for graph
+               0.07 MBytes for exclusions
+               0.02 MBytes for memoization
+               0.74 MBytes for wave front
+
+
+
+__MEMKB 3968

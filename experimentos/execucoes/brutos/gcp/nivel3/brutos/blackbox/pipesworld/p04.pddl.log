@@ -1,0 +1,80 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p04.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p04.pddl
+Problem name: p04-net1-b8-g5-rt0-instance
+Facts loaded.
+time: 1, 281 facts and 113 exclusive pairs.
+time: 2, 298 facts and 291 exclusive pairs.
+time: 3, 310 facts and 514 exclusive pairs.
+time: 4, 320 facts and 662 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 322 facts and 482 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 326 facts and 449 exclusive pairs.
+Goals reachable at 6 steps but mutually exclusive.
+time: 7, 329 facts and 440 exclusive pairs.
+Goals first reachable in 7 steps.
+6179 nodes created.
+
+####################################################
+goals at time 8:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 479
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 329 facts and 422 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 9:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 343606
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 329 facts and 421 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 10:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 11817057
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 329 facts and 421 exclusive pairs.
+1154 new nodes added.
+
+####################################################
+goals at time 11:
+  on_b0_a3 on_b1_a1 on_b6_a2 on_b2_a3 on_b5_a2 
+normal_s12 normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan

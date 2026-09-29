@@ -1,0 +1,80 @@
+
+ipp: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'P02-NET1-B6-G4_RT0_INSTANCE' defined
+ ... done.
+
+
+instantiated 104 actions
+
+
+time:   0,    72 facts and       0 exclusive pairs (   23,       0 positives)
+              78 ops   and      68 exclusive pairs
+time:   1,   109 facts and     327 exclusive pairs (   45,     154 positives)
+             136 ops   and    1508 exclusive pairs
+time:   2,   128 facts and     725 exclusive pairs (   59,     378 positives)
+             172 ops   and    3482 exclusive pairs
+time:   3,   137 facts and     755 exclusive pairs (   65,     404 positives)
+             196 ops   and    4989 exclusive pairs
+time:   4,   140 facts and     607 exclusive pairs (   68,     372 positives)
+             216 ops   and    6358 exclusive pairs
+time:   5,   142 facts and     577 exclusive pairs (   70,     368 positives)
+
+goals first reachable in 5 time steps
+
+             234 ops   and    8136 exclusive pairs
+time:   6,   144 facts and     598 exclusive pairs (   72,     391 positives)
+
+graph has leveled off at time step 7
+
+             244 ops   and    9308 exclusive pairs
+time:   7,   144 facts and     598 exclusive pairs (   72,     391 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+
+
+found plan as follows:
+
+time step    0: PUSH-UNITARYPIPE S12 B3 A1 A2 B4 RAT-A LCO TA1-1-RAT-A TA2-1-LCO
+                POP-UNITARYPIPE S13 B1 A1 A3 B5 LCO OCA1 TA1-1-OCA1 TA3-1-LCO
+time step    1: PUSH-UNITARYPIPE S12 B2 A1 A2 B3 GASOLEO RAT-A TA1-1-GASOLEO TA2-1-RAT-A
+time step    2: POP-UNITARYPIPE S12 B4 A1 A2 B2 LCO GASOLEO TA1-1-GASOLEO TA2-1-LCO
+time step    3: PUSH-UNITARYPIPE S12 B5 A1 A2 B4 OCA1 LCO TA1-1-OCA1 TA2-1-LCO
+time step    4: PUSH-UNITARYPIPE S12 B0 A1 A2 B5 OC1B OCA1 TA1-1-OC1B TA2-1-OCA1
+time step    5: PUSH-UNITARYPIPE S12 B2 A1 A2 B0 GASOLEO OC1B TA1-1-GASOLEO TA2-1-OC1B
+time step    6: POP-UNITARYPIPE S12 B4 A1 A2 B2 LCO GASOLEO TA1-1-GASOLEO TA2-1-LCO
+time step    7: PUSH-UNITARYPIPE S13 B2 A1 A3 B1 GASOLEO LCO TA1-1-GASOLEO TA3-1-LCO
+                POP-UNITARYPIPE S12 B3 A1 A2 B4 RAT-A LCO TA1-1-LCO TA2-1-RAT-A
+time step    8: PUSH-UNITARYPIPE S13 B4 A1 A3 B2 LCO GASOLEO TA1-1-LCO TA3-1-GASOLEO
+time step    9: POP-UNITARYPIPE S13 B1 A1 A3 B4 LCO LCO TA1-1-LCO TA3-1-LCO
+
+
+
+number of actions tried:        362
+number of noops tried  :       1956
+
+had     115 simple memoizing hits
+had       5 partial memoizing hits
+had     107 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 104 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.13 MBytes for domain representation
+               1.81 MBytes for graph
+               0.09 MBytes for exclusions
+               0.04 MBytes for memoization
+               0.06 MBytes for wave front
+
+
+
+__MEMKB 4124

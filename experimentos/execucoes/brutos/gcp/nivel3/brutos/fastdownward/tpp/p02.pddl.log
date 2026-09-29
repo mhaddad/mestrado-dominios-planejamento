@@ -1,0 +1,69 @@
+Parsing...
+Instantiating...
+Starting instantiation [45 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+9 variables of 9 necessary
+8 of 8 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 14 to 14)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 14 unary operators... done! [14 unary operators]
+Best heuristic value: 10/7 [expanded 1 state(s)]
+Best heuristic value: 8/7 [expanded 2 state(s)]
+Best heuristic value: 7/6 [expanded 3 state(s)]
+Best heuristic value: 6/5 [expanded 5 state(s)]
+Best heuristic value: 5/4 [expanded 7 state(s)]
+Best heuristic value: 4/4 [expanded 8 state(s)]
+Best heuristic value: 3/3 [expanded 9 state(s)]
+Best heuristic value: 2/2 [expanded 11 state(s)]
+Best heuristic value: 1/1 [expanded 12 state(s)]
+Solution found!
+drive truck1 depot1 market1
+buy truck1 goods1 market1 level0 level1 level0 level1
+load goods1 truck1 market1 level0 level1 level0 level1
+buy truck1 goods2 market1 level0 level1 level0 level1
+drive truck1 market1 depot1
+unload goods1 truck1 depot1 level0 level1 level0 level1
+drive truck1 depot1 market1
+load goods2 truck1 market1 level0 level1 level0 level1
+drive truck1 market1 depot1
+unload goods2 truck1 depot1 level0 level1 level0 level1
+Plan length: 10 step(s).
+Expanded 13 state(s).
+Generated 22 state(s).
+Cache hits: 18
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8604

@@ -1,0 +1,56 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P41-NET5-B22-G2_RT0_INSTANCE' defined
+ ... done.
+
+
+got 826 facts
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1]
+                                   6            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    9
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PUSH-START S13 B10 A1 A3 B13 GASOLEO GASOLEO TA1-1-GASOLEO
+        1: POP-START S15 B19 A1 A5 B3 LCO OC1B TA5-1-LCO
+        2: PUSH-END S13 A1 A3 B8 B13 RAT-A TA3-1-RAT-A
+        3: POP-END S15 A1 A5 B14 B12 LCO TA1-1-LCO
+        4: POP-START S15 B4 A1 A5 B19 OC1B LCO TA5-1-OC1B
+        5: PUSH-START S13 B14 A1 A3 B10 LCO GASOLEO TA1-1-LCO
+        6: POP-END S15 A1 A5 B12 B7 GASOLEO TA1-1-GASOLEO
+        7: POP-START S23 B20 A2 A3 B16 OCA1 OCA1 TA3-3-OCA1
+        8: POP-END S23 A2 A3 B6 B9 GASOLEO TA2-1-GASOLEO
+        9: POP-START S12 B6 A1 A2 B11 GASOLEO GASOLEO TA2-1-GASOLEO
+       10: POP-END S12 A1 A2 B21 B11 RAT-A TA1-1-RAT-A
+       11: PUSH-END S13 A1 A3 B13 B10 GASOLEO TA3-1-GASOLEO
+       12: PUSH-START S13 B21 A1 A3 B14 RAT-A LCO TA1-1-RAT-A
+       13: POP-START S23 B13 A2 A3 B20 GASOLEO OCA1 TA3-1-GASOLEO
+       14: POP-END S23 A2 A3 B9 B16 LCO TA2-1-LCO
+       15: PUSH-END S13 A1 A3 B10 B14 GASOLEO TA3-1-GASOLEO
+     
+
+time spent:    0.00 seconds instantiating 17356 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 827 facts and 15988 actions
+               0.01 seconds creating final representation with 826 relevant facts
+               0.00 seconds building connectivity graph
+              39.77 seconds searching, evaluating 77000 states, to a max depth of 1
+              39.78 seconds total time
+
+__MEMKB 59392

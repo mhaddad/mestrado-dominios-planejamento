@@ -1,0 +1,92 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'BLOCKS' defined
+Parsing problem file
+ problem 'BLOCKS-10-1' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+Solution found.
+
+; Time 2.01
+; ParsingTime 0.00
+; NrActions 58
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(best-first search) as the subplanner
+
+0.001: (UNSTACK C G) [1]
+1.002: (STACK C F) [1]
+2.003: (UNSTACK G E) [1]
+3.004: (STACK G C) [1]
+4.005: (UNSTACK E I) [1]
+5.006: (PUT-DOWN E) [1]
+6.007: (UNSTACK I J) [1]
+7.008: (STACK I E) [1]
+8.009: (UNSTACK G C) [1]
+9.010: (STACK G J) [1]
+10.011: (UNSTACK C F) [1]
+11.012: (STACK C I) [1]
+12.013: (UNSTACK F D) [1]
+13.014: (STACK F C) [1]
+14.015: (UNSTACK D H) [1]
+15.016: (STACK D F) [1]
+16.017: (PICK-UP H) [1]
+17.018: (STACK H G) [1]
+18.019: (UNSTACK D F) [1]
+19.020: (PUT-DOWN D) [1]
+20.021: (UNSTACK F C) [1]
+21.022: (STACK F D) [1]
+22.023: (UNSTACK C I) [1]
+23.024: (STACK C F) [1]
+24.025: (UNSTACK I E) [1]
+25.026: (STACK I C) [1]
+26.027: (PICK-UP E) [1]
+27.028: (STACK E H) [1]
+28.029: (UNSTACK E H) [1]
+29.030: (STACK E I) [1]
+30.031: (UNSTACK H G) [1]
+31.032: (STACK H E) [1]
+32.033: (UNSTACK G J) [1]
+33.034: (STACK G H) [1]
+34.035: (UNSTACK J A) [1]
+35.036: (PUT-DOWN J) [1]
+36.037: (UNSTACK G H) [1]
+37.038: (STACK G J) [1]
+38.039: (UNSTACK H E) [1]
+39.040: (STACK H G) [1]
+40.041: (UNSTACK E I) [1]
+41.042: (STACK E H) [1]
+42.043: (UNSTACK A B) [1]
+43.044: (STACK A E) [1]
+44.045: (UNSTACK I C) [1]
+45.046: (STACK I A) [1]
+46.047: (UNSTACK C F) [1]
+47.048: (STACK C B) [1]
+48.049: (UNSTACK F D) [1]
+49.050: (STACK F I) [1]
+50.051: (PICK-UP D) [1]
+51.052: (STACK D F) [1]
+52.053: (UNSTACK C B) [1]
+53.054: (PUT-DOWN C) [1]
+54.055: (PICK-UP B) [1]
+55.056: (STACK B D) [1]
+56.057: (PICK-UP C) [1]
+57.058: (STACK C B) [1]
+__MEMKB 153748

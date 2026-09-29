@@ -1,0 +1,107 @@
+
+ipp: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+instantiated 252 actions
+
+
+time:   0,   138 facts and       0 exclusive pairs (   45,       0 positives)
+             140 ops   and       4 exclusive pairs
+time:   1,   142 facts and       4 exclusive pairs (   47,       2 positives)
+             150 ops   and      57 exclusive pairs
+time:   2,   148 facts and      18 exclusive pairs (   51,      10 positives)
+             174 ops   and     335 exclusive pairs
+time:   3,   180 facts and     134 exclusive pairs (   67,      48 positives)
+             230 ops   and    1127 exclusive pairs
+time:   4,   214 facts and     365 exclusive pairs (   89,     158 positives)
+             290 ops   and    2477 exclusive pairs
+time:   5,   218 facts and     228 exclusive pairs (   92,     128 positives)
+             306 ops   and    2632 exclusive pairs
+time:   6,   229 facts and     263 exclusive pairs (  103,     181 positives)
+             343 ops   and    4199 exclusive pairs
+time:   7,   241 facts and     241 exclusive pairs (  109,     166 positives)
+             365 ops   and    4816 exclusive pairs
+time:   8,   246 facts and     226 exclusive pairs (  114,     156 positives)
+
+goals first reachable in 8 time steps
+
+
+graph has leveled off at time step 9
+
+             390 ops   and    6026 exclusive pairs
+time:   9,   246 facts and     226 exclusive pairs (  114,     156 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: DRIVE TRUCK1 DEPOT1 MARKET2
+                DRIVE TRUCK2 DEPOT1 MARKET2
+time step    1: DRIVE TRUCK2 MARKET2 MARKET1
+                DRIVE TRUCK1 MARKET2 MARKET1
+time step    2: BUY TRUCK1 GOODS7 MARKET1 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS6 MARKET1 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS5 MARKET1 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS4 MARKET1 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS2 MARKET1 LEVEL1 LEVEL2 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    3: LOAD GOODS1 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS2 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS3 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS4 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS5 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS6 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS7 TRUCK2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    4: DRIVE TRUCK2 MARKET1 MARKET2
+                BUY TRUCK1 GOODS7 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS5 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS4 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    5: LOAD GOODS4 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS5 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS7 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                DRIVE TRUCK2 MARKET2 DEPOT1
+time step    6: UNLOAD GOODS7 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                DRIVE TRUCK1 MARKET1 MARKET2
+                UNLOAD GOODS6 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS5 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS4 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS3 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS2 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS1 TRUCK2 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    7: DRIVE TRUCK1 MARKET2 DEPOT1
+time step    8: UNLOAD GOODS7 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+                UNLOAD GOODS5 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+                UNLOAD GOODS4 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL1 LEVEL2
+
+
+
+number of actions tried:     584555
+number of noops tried  :    1044712
+
+had  245855 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 252 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.79 seconds searching graph
+               0.79 seconds total time
+
+Memory used:   0.17 MBytes for domain representation
+               3.25 MBytes for graph
+               0.12 MBytes for exclusions
+              10.45 MBytes for memoization
+              47.64 MBytes for wave front
+
+
+
+__MEMKB 72960

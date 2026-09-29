@@ -1,0 +1,217 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom follow(b8, b8)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b6, b6)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b3, b3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b4, b4)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b0, b0)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b5, b5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b2, b2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b10, b10)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b7, b7)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b9, b9)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b11, b11)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b1, b1)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+44 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+32 variables of 32 necessary
+2304 of 2304 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 9216 to 4099)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 9216 unary operators... done! [9216 unary operators]
+Best heuristic value: 21/31 [expanded 1 state(s)]
+Best heuristic value: 19/31 [expanded 2 state(s)]
+Best heuristic value: 17/31 [expanded 3 state(s)]
+Best heuristic value: 17/29 [expanded 7 state(s)]
+Best heuristic value: 17/26 [expanded 12 state(s)]
+Best heuristic value: 16/25 [expanded 14 state(s)]
+Best heuristic value: 15/25 [expanded 15 state(s)]
+Best heuristic value: 15/24 [expanded 16 state(s)]
+Best heuristic value: 15/23 [expanded 18 state(s)]
+Best heuristic value: 14/21 [expanded 20 state(s)]
+Best heuristic value: 13/20 [expanded 28 state(s)]
+Best heuristic value: 12/17 [expanded 47 state(s)]
+Best heuristic value: 11/17 [expanded 260 state(s)]
+Best heuristic value: 10/17 [expanded 261 state(s)]
+Best heuristic value: 10/16 [expanded 264 state(s)]
+Best heuristic value: 10/14 [expanded 269 state(s)]
+Best heuristic value: 9/14 [expanded 315 state(s)]
+Best heuristic value: 8/14 [expanded 688 state(s)]
+Best heuristic value: 8/12 [expanded 689 state(s)]
+Best heuristic value: 7/12 [expanded 697 state(s)]
+Best heuristic value: 6/12 [expanded 703 state(s)]
+Best heuristic value: 6/11 [expanded 773 state(s)]
+Best heuristic value: 5/11 [expanded 1414 state(s)]
+Best heuristic value: 5/10 [expanded 4299 state(s)]
+Best heuristic value: 5/9 [expanded 4309 state(s)]
+Best heuristic value: 5/7 [expanded 4314 state(s)]
+Best heuristic value: 5/6 [expanded 4315 state(s)]
+Best heuristic value: 5/5 [expanded 4349 state(s)]
+Best heuristic value: 4/5 [expanded 4350 state(s)]
+Best heuristic value: 3/5 [expanded 4353 state(s)]
+Best heuristic value: 2/5 [expanded 4367 state(s)]
+Best heuristic value: 2/3 [expanded 4371 state(s)]
+Best heuristic value: 2/2 [expanded 4387 state(s)]
+Best heuristic value: 1/2 [expanded 4388 state(s)]
+Solution found!
+pop-start s13 b8 a1 a3 b11 gasoleo rat-a ta3-1-gasoleo
+pop-end s13 a1 a3 b1 b11 gasoleo ta1-2-gasoleo
+pop-start s12 b2 a1 a2 b0 lco lco ta2-1-lco
+pop-start s13 b10 a1 a3 b8 oca1 gasoleo ta3-1-oca1
+pop-end s13 a1 a3 b11 b8 lco ta1-1-lco
+pop-end s12 a1 a2 b6 b0 oca1 ta1-1-oca1
+pop-start s12 b9 a1 a2 b2 oca1 lco ta2-1-oca1
+pop-start s13 b5 a1 a3 b10 gasoleo oca1 ta3-2-gasoleo
+pop-end s13 a1 a3 b8 b10 rat-a ta1-1-rat-a
+push-start s13 b3 a1 a3 b10 gasoleo oca1 ta1-1-gasoleo
+push-end s13 a1 a3 b5 b10 gasoleo ta3-2-gasoleo
+pop-end s12 a1 a2 b0 b2 gasoleo ta1-1-gasoleo
+push-start s13 b8 a1 a3 b3 gasoleo gasoleo ta1-1-gasoleo
+pop-start s12 b4 a1 a2 b9 gasoleo oca1 ta2-1-gasoleo
+push-end s13 a1 a3 b10 b3 oca1 ta3-1-oca1
+push-start s13 b6 a1 a3 b8 gasoleo gasoleo ta1-2-gasoleo
+push-end s13 a1 a3 b3 b8 gasoleo ta3-1-gasoleo
+pop-start s13 b10 a1 a3 b8 oca1 gasoleo ta3-2-oca1
+pop-end s13 a1 a3 b6 b8 gasoleo ta1-2-gasoleo
+pop-start s13 b5 a1 a3 b10 gasoleo oca1 ta3-1-gasoleo
+pop-end s13 a1 a3 b8 b10 gasoleo ta1-1-gasoleo
+push-start s13 b6 a1 a3 b10 gasoleo oca1 ta1-2-gasoleo
+push-end s13 a1 a3 b5 b10 gasoleo ta3-1-gasoleo
+pop-start s13 b5 a1 a3 b10 gasoleo oca1 ta3-1-gasoleo
+pop-end s12 a1 a2 b2 b9 gasoleo ta1-2-gasoleo
+push-start s12 b0 a1 a2 b9 lco oca1 ta1-1-lco
+push-end s12 a1 a2 b4 b9 gasoleo ta2-2-gasoleo
+pop-end s13 a1 a3 b6 b10 lco ta1-1-lco
+push-start s12 b6 a1 a2 b0 gasoleo lco ta1-1-gasoleo
+pop-start s13 b7 a1 a3 b5 oca1 gasoleo ta3-1-oca1
+push-end s12 a1 a2 b9 b0 oca1 ta2-1-oca1
+push-start s12 b8 a1 a2 b6 gasoleo gasoleo ta1-2-gasoleo
+push-end s12 a1 a2 b0 b6 lco ta2-1-lco
+pop-start s12 b9 a1 a2 b6 oca1 gasoleo ta2-1-oca1
+pop-end s13 a1 a3 b10 b5 gasoleo ta1-2-gasoleo
+pop-end s12 a1 a2 b8 b6 gasoleo ta1-1-gasoleo
+push-start s12 b10 a1 a2 b6 oca1 gasoleo ta1-1-oca1
+pop-start s13 b3 a1 a3 b7 gasoleo oca1 ta3-2-gasoleo
+pop-end s13 a1 a3 b5 b7 oca1 ta1-1-oca1
+push-end s12 a1 a2 b9 b6 oca1 ta2-1-oca1
+push-start s12 b8 a1 a2 b10 gasoleo oca1 ta1-1-gasoleo
+push-end s12 a1 a2 b6 b10 gasoleo ta2-1-gasoleo
+pop-start s12 b9 a1 a2 b10 oca1 oca1 ta2-1-oca1
+pop-end s12 a1 a2 b8 b10 gasoleo ta1-1-gasoleo
+pop-start s12 b4 a1 a2 b9 gasoleo oca1 ta2-1-gasoleo
+push-start s13 b8 a1 a3 b7 gasoleo oca1 ta1-2-gasoleo
+push-end s13 a1 a3 b3 b7 gasoleo ta3-1-gasoleo
+pop-end s12 a1 a2 b10 b9 gasoleo ta1-2-gasoleo
+push-start s12 b2 a1 a2 b9 lco oca1 ta1-1-lco
+push-end s12 a1 a2 b4 b9 gasoleo ta2-1-gasoleo
+pop-start s12 b6 a1 a2 b9 gasoleo oca1 ta2-1-gasoleo
+push-start s13 b10 a1 a3 b8 oca1 gasoleo ta1-1-oca1
+push-end s13 a1 a3 b7 b8 oca1 ta3-2-oca1
+pop-end s12 a1 a2 b2 b9 oca1 ta1-1-oca1
+pop-start s12 b4 a1 a2 b6 gasoleo gasoleo ta2-2-gasoleo
+pop-end s12 a1 a2 b9 b6 lco ta1-1-lco
+push-start s13 b9 a1 a3 b10 oca1 oca1 ta1-1-oca1
+push-end s13 a1 a3 b8 b10 gasoleo ta3-2-gasoleo
+pop-start s12 b0 a1 a2 b4 lco gasoleo ta2-1-lco
+pop-end s12 a1 a2 b6 b4 oca1 ta1-1-oca1
+push-start s12 b11 a1 a2 b4 rat-a gasoleo ta1-1-rat-a
+push-end s12 a1 a2 b0 b4 lco ta2-1-lco
+pop-start s13 b8 a1 a3 b10 gasoleo oca1 ta3-1-gasoleo
+push-start s12 b2 a1 a2 b11 lco rat-a ta1-1-lco
+push-end s12 a1 a2 b4 b11 gasoleo ta2-1-gasoleo
+pop-start s12 b0 a1 a2 b11 lco rat-a ta2-1-lco
+pop-end s12 a1 a2 b2 b11 rat-a ta1-1-rat-a
+push-start s12 b6 a1 a2 b11 gasoleo rat-a ta1-1-gasoleo
+push-end s12 a1 a2 b0 b11 lco ta2-1-lco
+pop-end s13 a1 a3 b9 b10 gasoleo ta1-1-gasoleo
+pop-start s13 b7 a1 a3 b8 oca1 gasoleo ta3-2-oca1
+pop-end s13 a1 a3 b10 b8 lco ta1-1-lco
+push-start s12 b10 a1 a2 b6 oca1 gasoleo ta1-1-oca1
+push-end s12 a1 a2 b11 b6 rat-a ta2-1-rat-a
+push-start s12 b2 a1 a2 b10 lco oca1 ta1-1-lco
+push-end s12 a1 a2 b6 b10 gasoleo ta2-2-gasoleo
+pop-start s12 b4 a1 a2 b10 gasoleo oca1 ta2-2-gasoleo
+pop-end s12 a1 a2 b2 b10 oca1 ta1-1-oca1
+push-start s13 b9 a1 a3 b8 oca1 gasoleo ta1-1-oca1
+push-start s12 b5 a1 a2 b10 gasoleo oca1 ta1-1-gasoleo
+push-end s12 a1 a2 b4 b10 gasoleo ta2-2-gasoleo
+pop-start s12 b4 a1 a2 b10 gasoleo oca1 ta2-2-gasoleo
+pop-end s12 a1 a2 b5 b10 lco ta1-1-lco
+push-start s12 b2 a1 a2 b10 lco oca1 ta1-1-lco
+push-end s13 a1 a3 b7 b8 oca1 ta3-2-oca1
+push-end s12 a1 a2 b4 b10 gasoleo ta2-2-gasoleo
+push-start s13 b5 a1 a3 b9 gasoleo oca1 ta1-2-gasoleo
+push-end s13 a1 a3 b8 b9 gasoleo ta3-1-gasoleo
+push-start s12 b1 a1 a2 b2 rat-a lco ta1-1-rat-a
+push-end s12 a1 a2 b10 b2 oca1 ta2-1-oca1
+pop-start s12 b6 a1 a2 b2 gasoleo lco ta2-1-gasoleo
+pop-end s12 a1 a2 b1 b2 rat-a ta1-1-rat-a
+push-start s13 b1 a1 a3 b5 rat-a gasoleo ta1-1-rat-a
+push-end s13 a1 a3 b9 b5 oca1 ta3-1-oca1
+pop-start s13 b8 a1 a3 b5 gasoleo gasoleo ta3-2-gasoleo
+pop-end s13 a1 a3 b1 b5 lco ta1-1-lco
+pop-start s13 b7 a1 a3 b8 oca1 gasoleo ta3-2-oca1
+pop-end s13 a1 a3 b5 b8 gasoleo ta1-2-gasoleo
+Plan length: 98 step(s).
+Expanded 4394 state(s).
+Generated 26635 state(s).
+Cache hits: 2531041
+Cache misses: 5599130
+Search time: 0.8 seconds
+Total time: 0.84 seconds
+__MEMKB 32084

@@ -1,0 +1,71 @@
+
+ff: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ff: parsing problem file
+problem 'BLOCKS-7-0' defined
+ ... done.
+
+
+got 71 facts
+
+Cueing down from goal distance:    6 into depth [1][2]
+                                   5            [1][2]
+                                   4            [1][2]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: UNSTACK E G
+        1: PUT-DOWN E
+        2: UNSTACK G B
+        3: PUT-DOWN G
+        4: UNSTACK B A
+        5: PUT-DOWN B
+        6: UNSTACK A F
+        7: PUT-DOWN A
+        8: UNSTACK F C
+        9: STACK F E
+       10: UNSTACK C D
+       11: STACK C F
+       12: PICK-UP B
+       13: STACK B C
+       14: PICK-UP D
+       15: STACK D B
+       16: PICK-UP G
+       17: STACK G D
+       18: PICK-UP A
+       19: STACK A G
+     
+
+time spent:    0.00 seconds instantiating 112 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 71 facts and 112 actions
+               0.00 seconds creating final representation with 71 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 26 states, to a max depth of 2
+               0.00 seconds total time
+
+__MEMKB 3456

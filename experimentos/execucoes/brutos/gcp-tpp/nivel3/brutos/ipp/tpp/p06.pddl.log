@@ -1,0 +1,106 @@
+
+ipp: parsing domain file
+domain 'GROUNDED-STRIPS-TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'GROUNDED-STRIPS-TPP' defined
+ ... done.
+
+
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+instantiated 156 actions
+
+
+time:   0,    99 facts and       0 exclusive pairs (   34,       0 positives)
+             101 ops   and       4 exclusive pairs
+time:   1,   103 facts and       4 exclusive pairs (   36,       2 positives)
+             111 ops   and      57 exclusive pairs
+time:   2,   109 facts and      18 exclusive pairs (   40,      10 positives)
+             133 ops   and     308 exclusive pairs
+time:   3,   137 facts and     122 exclusive pairs (   54,      44 positives)
+             181 ops   and     982 exclusive pairs
+time:   4,   165 facts and     306 exclusive pairs (   72,     132 positives)
+             231 ops   and    2093 exclusive pairs
+time:   5,   169 facts and     196 exclusive pairs (   75,     109 positives)
+             245 ops   and    2228 exclusive pairs
+time:   6,   178 facts and     223 exclusive pairs (   84,     151 positives)
+             276 ops   and    3451 exclusive pairs
+time:   7,   188 facts and     209 exclusive pairs (   89,     140 positives)
+             294 ops   and    3887 exclusive pairs
+time:   8,   192 facts and     197 exclusive pairs (   93,     132 positives)
+
+goals first reachable in 8 time steps
+
+
+graph has leveled off at time step 9
+
+             314 ops   and    4759 exclusive pairs
+time:   9,   192 facts and     197 exclusive pairs (   93,     132 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: DRIVE-TRUCK1-DEPOT1-MARKET2
+                DRIVE-TRUCK2-DEPOT1-MARKET2
+time step    1: DRIVE-TRUCK2-MARKET2-MARKET1
+                DRIVE-TRUCK1-MARKET2-MARKET1
+time step    2: BUY-TRUCK1-GOODS1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS2-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS3-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS4-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS5-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS6-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+time step    3: LOAD-GOODS6-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS5-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS4-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS3-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS2-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS1-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    4: DRIVE-TRUCK2-MARKET1-MARKET2
+                BUY-TRUCK1-GOODS2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    5: LOAD-GOODS2-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                DRIVE-TRUCK2-MARKET2-DEPOT1
+time step    6: UNLOAD-GOODS1-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                DRIVE-TRUCK1-MARKET1-MARKET2
+                UNLOAD-GOODS2-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS3-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS4-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS5-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS6-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    7: DRIVE-TRUCK1-MARKET2-DEPOT1
+time step    8: UNLOAD-GOODS2-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL1-LEVEL2
+
+
+
+number of actions tried:      43707
+number of noops tried  :      65239
+
+had   18474 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 156 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.05 seconds searching graph
+               0.05 seconds total time
+
+Memory used:   0.22 MBytes for domain representation
+               2.52 MBytes for graph
+               0.08 MBytes for exclusions
+               0.89 MBytes for memoization
+               3.03 MBytes for wave front
+
+
+
+__MEMKB 9984

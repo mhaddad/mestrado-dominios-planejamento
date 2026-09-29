@@ -1,0 +1,49 @@
+
+Parsing domain..... driverlog..... done.
+Parsing problem..... dlog-3-2-5..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 168 candidates, 168 actions
+Finalization time : 0.00 -> 57 fluents, 12 init
+
+16 14 8 5 4 1 
+
+0: (BOARD-TRUCK driver1 truck1 s1) [1]
+1: (WALK driver2 s0 p0-2) [1]
+2: (DRIVE-TRUCK truck1 s1 s2 driver1) [1]
+3: (LOAD-TRUCK package4 truck1 s2) [1]
+4: (WALK driver2 p0-2 s2) [1]
+5: (WALK driver3 s0 p0-1) [1]
+6: (WALK driver3 p0-1 s1) [1]
+7: (BOARD-TRUCK driver3 truck2 s1) [1]
+8: (DRIVE-TRUCK truck2 s1 s2 driver3) [1]
+9: (UNLOAD-TRUCK package4 truck1 s2) [1]
+10: (LOAD-TRUCK package3 truck2 s2) [1]
+11: (LOAD-TRUCK package4 truck2 s2) [1]
+12: (DRIVE-TRUCK truck2 s2 s0 driver3) [1]
+13: (UNLOAD-TRUCK package4 truck2 s0) [1]
+14: (LOAD-TRUCK package1 truck2 s0) [1]
+15: (LOAD-TRUCK package2 truck2 s0) [1]
+16: (DRIVE-TRUCK truck2 s0 s2 driver3) [1]
+17: (DRIVE-TRUCK truck2 s2 s1 driver3) [1]
+18: (UNLOAD-TRUCK package3 truck2 s1) [1]
+19: (UNLOAD-TRUCK package2 truck2 s1) [1]
+20: (UNLOAD-TRUCK package1 truck2 s1) [1]
+21: (DRIVE-TRUCK truck2 s1 s2 driver3) [1]
+
+Valid plan : 22 actions.
+Computed nodes : 22
+Evaluated nodes : 7
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 45.83 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2560

@@ -1,0 +1,95 @@
+
+ipp: parsing domain file
+domain 'DEPOT' defined
+ ... done.
+ipp: parsing problem file
+problem 'DEPOTPROB1234' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 408 actions
+
+
+time:   0,   141 facts and       0 exclusive pairs (   23,       0 positives)
+             149 ops   and      35 exclusive pairs
+time:   1,   170 facts and     141 exclusive pairs (   35,      42 positives)
+             202 ops   and     674 exclusive pairs
+time:   2,   184 facts and     268 exclusive pairs (   47,     136 positives)
+             230 ops   and    1462 exclusive pairs
+time:   3,   192 facts and     259 exclusive pairs (   51,     143 positives)
+             267 ops   and    3035 exclusive pairs
+time:   4,   211 facts and     512 exclusive pairs (   70,     392 positives)
+             340 ops   and    8264 exclusive pairs
+time:   5,   246 facts and    1605 exclusive pairs (  105,    1389 positives)
+             418 ops   and   16404 exclusive pairs
+time:   6,   258 facts and    1610 exclusive pairs (  117,    1475 positives)
+             500 ops   and   27833 exclusive pairs
+time:   7,   276 facts and    1714 exclusive pairs (  135,    1619 positives)
+
+goals first reachable in 7 time steps
+
+             572 ops   and   39730 exclusive pairs
+time:   8,   276 facts and    1535 exclusive pairs (  135,    1466 positives)
+             592 ops   and   43669 exclusive pairs
+time:   9,   276 facts and    1416 exclusive pairs (  135,    1380 positives)
+
+graph has leveled off at time step 10
+
+             612 ops   and   48309 exclusive pairs
+time:  10,   276 facts and    1416 exclusive pairs (  135,    1380 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: LIFT HOIST1 CRATE4 CRATE0 DISTRIBUTOR0
+                LIFT HOIST0 CRATE5 PALLET0 DEPOT0
+                LIFT HOIST2 CRATE3 CRATE2 DISTRIBUTOR1
+                DRIVE TRUCK1 DEPOT0 DISTRIBUTOR0
+time step    1: LOAD HOIST1 CRATE4 TRUCK1 DISTRIBUTOR0
+                LOAD HOIST2 CRATE3 TRUCK0 DISTRIBUTOR1
+time step    2: LIFT HOIST1 CRATE0 PALLET4 DISTRIBUTOR0
+                LIFT HOIST2 CRATE1 PALLET5 DISTRIBUTOR1
+                DRIVE TRUCK1 DISTRIBUTOR0 DISTRIBUTOR1
+                DRIVE TRUCK0 DISTRIBUTOR1 DEPOT0
+time step    3: DROP HOIST2 CRATE1 CRATE2 DISTRIBUTOR1
+                LOAD HOIST0 CRATE5 TRUCK0 DEPOT0
+                DROP HOIST1 CRATE0 PALLET3 DISTRIBUTOR0
+time step    4: UNLOAD HOIST2 CRATE4 TRUCK1 DISTRIBUTOR1
+                DRIVE TRUCK0 DEPOT0 DISTRIBUTOR0
+time step    5: DROP HOIST2 CRATE4 PALLET5 DISTRIBUTOR1
+                UNLOAD HOIST1 CRATE3 TRUCK0 DISTRIBUTOR0
+time step    6: DROP HOIST1 CRATE3 PALLET1 DISTRIBUTOR0
+                LIFT HOIST2 CRATE1 CRATE2 DISTRIBUTOR1
+                DRIVE TRUCK0 DISTRIBUTOR0 DISTRIBUTOR1
+time step    7: DROP HOIST2 CRATE1 CRATE4 DISTRIBUTOR1
+time step    8: UNLOAD HOIST2 CRATE5 TRUCK0 DISTRIBUTOR1
+time step    9: DROP HOIST2 CRATE5 CRATE1 DISTRIBUTOR1
+
+
+
+number of actions tried:      20250
+number of noops tried  :      54878
+
+had    5225 simple memoizing hits
+had     146 partial memoizing hits
+had    2770 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 408 operators
+               0.00 seconds building graph
+               0.01 seconds calculating exclusions
+               0.05 seconds searching graph
+               0.06 seconds total time
+
+Memory used:   0.27 MBytes for domain representation
+               4.33 MBytes for graph
+               0.43 MBytes for exclusions
+               0.37 MBytes for memoization
+               0.02 MBytes for wave front
+
+
+
+__MEMKB 8192

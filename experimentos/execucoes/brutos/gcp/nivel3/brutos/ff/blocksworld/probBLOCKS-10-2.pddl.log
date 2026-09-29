@@ -1,0 +1,102 @@
+
+ff: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ff: parsing problem file
+problem 'BLOCKS-10-2' defined
+ ... done.
+
+
+got 131 facts
+
+Cueing down from goal distance:    5 into depth [1][2][3][4]
+                                   4            [1][2]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    8 into depth [1][2][3][4][5][6][7][8]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1][2]
+                                   4            [1][2]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: UNSTACK J I
+        1: PUT-DOWN J
+        2: UNSTACK I H
+        3: PUT-DOWN I
+        4: UNSTACK H F
+        5: PUT-DOWN H
+        6: UNSTACK F D
+        7: PUT-DOWN F
+        8: UNSTACK D E
+        9: PUT-DOWN D
+       10: PICK-UP J
+       11: STACK J D
+       12: PICK-UP F
+       13: STACK F J
+       14: UNSTACK E G
+       15: PUT-DOWN E
+       16: UNSTACK G B
+       17: PUT-DOWN G
+       18: UNSTACK B A
+       19: PUT-DOWN B
+       20: PICK-UP A
+       21: STACK A F
+       22: PICK-UP C
+       23: STACK C A
+       24: PICK-UP H
+       25: STACK H C
+       26: PICK-UP G
+       27: STACK G H
+       28: PICK-UP I
+       29: STACK I G
+       30: PICK-UP E
+       31: STACK E I
+       32: PICK-UP B
+       33: STACK B E
+     
+
+time spent:    0.00 seconds instantiating 220 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 131 facts and 220 actions
+               0.00 seconds creating final representation with 131 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 313 states, to a max depth of 8
+               0.00 seconds total time
+
+__MEMKB 4096

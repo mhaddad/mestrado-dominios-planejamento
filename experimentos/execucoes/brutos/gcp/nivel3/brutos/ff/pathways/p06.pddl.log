@@ -1,0 +1,159 @@
+
+ff: parsing domain file
+domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'GROUNDED-PATHWAYS-06' defined
+ ... done.
+
+
+got 214 facts
+
+Cueing down from goal distance:   56 into depth [1]
+                                  55            [1]
+                                  54            [1]
+                                  53            [1]
+                                  52            [1]
+                                  51            [1]
+                                  50            [1]
+                                  49            [1]
+                                  48            [1]
+                                  47            [1]
+                                  46            [1]
+                                  45            [1]
+                                  44            [1]
+                                  43            [1]
+                                  42            [1]
+                                  41            [1]
+                                  40            [1]
+                                  39            [1]
+                                  38            [1]
+                                  37            [1]
+                                  36            [1][2][3]
+                                  35            [1]
+                                  34            [1][2]
+                                  33            [1]
+                                  32            [1]
+                                  31            [1]
+                                  30            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   56
+                          55
+                          54
+                          53
+                          44
+                          43
+                          42
+                          41
+                          40
+                          39
+                          38
+                          37
+                          36
+                          35
+                          34
+                          33
+                          32
+                          31
+                          30
+                          29
+                          28
+                          27
+                          25
+                          24
+                          23
+                          22
+                          21
+                          20
+                          19
+                          18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: CHOOSE_CDK2P1_L1_L0
+        1: INITIALIZE_CDK2P1
+        2: CHOOSE_SP1_L2_L1
+        3: CHOOSE_GP_L3_L2
+        4: INITIALIZE_SP1
+        5: INITIALIZE_GP
+        6: CHOOSE_SKP2_L4_L3
+        7: INITIALIZE_SKP2
+        8: CHOOSE_RPA_L5_L4
+        9: INITIALIZE_RPA
+       10: CHOOSE_P57_L6_L5
+       11: INITIALIZE_P57
+       12: CHOOSE_HDAC1_L7_L6
+       13: INITIALIZE_HDAC1
+       14: CHOOSE_E2F4_L8_L7
+       15: INITIALIZE_E2F4
+       16: CHOOSE_DP12_L9_L8
+       17: INITIALIZE_DP12
+       18: CHOOSE_CDK46P1_L10_L9
+       19: ASSOCIATE_E2F4_DP12_E2F4-DP12
+       20: INITIALIZE_CDK46P1
+       21: ASSOCIATE_SP1_GP_SP1-GP
+       22: SYNTHESIZE_SP1-GP_CYCA
+       23: INITIALIZE_SP1
+       24: INITIALIZE_GP
+       25: SYNTHESIZE_SP1-GP_P107P1
+       26: SYNTHESIZE_SP1-GP_P107
+       27: SYNTHESIZE_SP1-GP_CYCD
+       28: ASSOCIATE_CDK46P1_CYCD_CDK46P1-CYCD
+       29: ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA
+       30: SYNTHESIZE_SP1-GP_CYCA
+       31: DUMMY-ACTION-6-1
+       32: ASSOCIATE_RPA_CYCA_RPA-CYCA
+       33: DUMMY-ACTION-8-2
+       34: ASSOCIATE_SP1_P107P1_SP1-P107P1
+       35: INITIALIZE_SP1
+       36: ASSOCIATE_P107_E2F4-DP12_P107-E2F4-DP12
+       37: SYNTHESIZE_SP1-GP_P107
+       38: ASSOCIATE_HDAC1_P107-E2F4-DP12_HDAC1-P107-E2F4-DP12
+       39: ASSOCIATE_SP1_P107_SP1-P107
+       40: DUMMY-ACTION-4-2
+       41: ASSOCIATE_P57_CDK46P1-CYCD_P57-CDK46P1-CYCD
+       42: INITIALIZE_P57
+       43: DUMMY-ACTION-5-2
+       44: ASSOCIATE_SP1-P107P1_GP_SP1-P107P1-GP
+       45: INITIALIZE_GP
+       46: DUMMY-ACTION-7-2
+       47: ASSOCIATE_SP1-P107_GP_SP1-P107-GP
+       48: DUMMY-ACTION-2-2
+       49: INITIALIZE_CDK2P1
+       50: SYNTHESIZE_SP1-GP_CYCA
+       51: ASSOCIATE_SKP2_CDK2P1-CYCA_SKP2-CDK2P1-CYCA
+       52: ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA
+       53: DUMMY-ACTION-1-2
+       54: ASSOCIATE_P57_CDK2P1-CYCA_P57-CDK2P1-CYCA
+       55: DUMMY-ACTION-3-2
+     
+
+time spent:    0.00 seconds instantiating 497 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 214 facts and 497 actions
+               0.00 seconds creating final representation with 214 relevant facts
+               0.00 seconds building connectivity graph
+               0.05 seconds searching, evaluating 4421 states, to a max depth of 3
+               0.05 seconds total time
+
+__MEMKB 8576

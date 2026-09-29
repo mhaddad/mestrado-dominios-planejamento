@@ -1,0 +1,65 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+34 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+2 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+15 variables of 36 necessary
+132 of 188 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 141 to 141)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 143 unary operators... done! [141 unary operators]
+Best heuristic value: 21/11 [expanded 1 state(s)]
+Best heuristic value: 20/10 [expanded 2 state(s)]
+Best heuristic value: 12/9 [expanded 4 state(s)]
+Best heuristic value: 8/8 [expanded 6 state(s)]
+Best heuristic value: 7/7 [expanded 7 state(s)]
+Best heuristic value: 6/6 [expanded 8 state(s)]
+Best heuristic value: 5/5 [expanded 9 state(s)]
+Best heuristic value: 4/4 [expanded 10 state(s)]
+Best heuristic value: 3/3 [expanded 11 state(s)]
+Best heuristic value: 2/2 [expanded 12 state(s)]
+Best heuristic value: 1/1 [expanded 13 state(s)]
+Solution found!
+turn_to satellite0 phenomenon5 star4
+switch_on instrument3 satellite1
+calibrate satellite1 instrument3 star0
+turn_to satellite1 phenomenon7 star0
+take_image satellite1 phenomenon7 instrument3 spectrograph2
+turn_to satellite1 star4 phenomenon7
+take_image satellite1 star4 instrument3 spectrograph2
+turn_to satellite1 star3 star4
+take_image satellite1 star3 instrument3 infrared0
+turn_to satellite1 phenomenon5 star3
+take_image satellite1 phenomenon5 instrument3 spectrograph2
+Plan length: 11 step(s).
+Expanded 14 state(s).
+Generated 243 state(s).
+Cache hits: 166
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 9240

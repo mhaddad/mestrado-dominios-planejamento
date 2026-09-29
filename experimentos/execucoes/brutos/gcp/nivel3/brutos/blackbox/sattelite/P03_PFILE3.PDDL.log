@@ -1,0 +1,92 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P03_PFILE3.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P03_PFILE3.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 38 facts and 63 exclusive pairs.
+time: 2, 42 facts and 104 exclusive pairs.
+time: 3, 48 facts and 118 exclusive pairs.
+time: 4, 66 facts and 66 exclusive pairs.
+Goals first reachable in 4 steps.
+880 nodes created.
+
+####################################################
+goals at time 5:
+  pointing_satellite0_phenomenon5 have-image_star3_infrared0 have-image_star4_spectrograph2 have-image_phenomenon5_spectrograph2 have-image_phenomenon7_spectrograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 2
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 66 facts and 63 exclusive pairs.
+320 new nodes added.
+
+####################################################
+goals at time 6:
+  pointing_satellite0_phenomenon5 have-image_star3_infrared0 have-image_star4_spectrograph2 have-image_phenomenon5_spectrograph2 have-image_phenomenon7_spectrograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 649
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 66 facts and 63 exclusive pairs.
+320 new nodes added.
+
+####################################################
+goals at time 7:
+  pointing_satellite0_phenomenon5 have-image_star3_infrared0 have-image_star4_spectrograph2 have-image_phenomenon5_spectrograph2 have-image_phenomenon7_spectrograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 7174
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (switch-on instrument0 satellite0)
+1 (switch-on instrument3 satellite1)
+1 (turn-to satellite0 star1 star4)
+2 (calibrate satellite0 instrument0 star1)
+2 (calibrate satellite1 instrument3 star0)
+3 (turn-to satellite0 star4 star1)
+3 (turn-to satellite1 phenomenon7 star0)
+4 (take-image satellite0 star4 instrument0 spectrograph2)
+4 (take-image satellite1 phenomenon7 instrument3 spectrograph2)
+5 (turn-to satellite1 star3 phenomenon7)
+5 (turn-to satellite0 phenomenon5 star4)
+6 (take-image satellite0 phenomenon5 instrument0 spectrograph2)
+6 (take-image satellite1 star3 instrument3 infrared0)
+End plan
+----------------------------------------------------
+
+13 total actions in plan
+288 entries in hash table, 1216 hash hits, avg set size 9
+1509 total set-creation steps (entries + hits + plan length - 1)
+1906 actions tried
+
+####################################################
+Total elapsed time:   0.02 seconds
+Time in milliseconds: 17
+
+####################################################
+__MEMKB 18176

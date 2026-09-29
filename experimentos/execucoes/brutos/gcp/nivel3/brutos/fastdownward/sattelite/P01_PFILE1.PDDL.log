@@ -1,0 +1,61 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+8 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+2 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+6 variables of 10 necessary
+48 of 52 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 49 to 49)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 49 unary operators... done! [49 unary operators]
+Best heuristic value: 17/8 [expanded 1 state(s)]
+Best heuristic value: 11/7 [expanded 2 state(s)]
+Best heuristic value: 9/7 [expanded 3 state(s)]
+Best heuristic value: 6/6 [expanded 4 state(s)]
+Best heuristic value: 5/5 [expanded 5 state(s)]
+Best heuristic value: 4/4 [expanded 6 state(s)]
+Best heuristic value: 3/3 [expanded 7 state(s)]
+Best heuristic value: 2/2 [expanded 8 state(s)]
+Best heuristic value: 1/1 [expanded 9 state(s)]
+Solution found!
+switch_on instrument0 satellite0
+turn_to satellite0 groundstation2 phenomenon6
+calibrate satellite0 instrument0 groundstation2
+turn_to satellite0 phenomenon6 groundstation2
+take_image satellite0 phenomenon6 instrument0 thermograph0
+turn_to satellite0 star5 phenomenon6
+take_image satellite0 star5 instrument0 thermograph0
+turn_to satellite0 phenomenon4 star5
+take_image satellite0 phenomenon4 instrument0 thermograph0
+Plan length: 9 step(s).
+Expanded 10 state(s).
+Generated 70 state(s).
+Cache hits: 20
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8600

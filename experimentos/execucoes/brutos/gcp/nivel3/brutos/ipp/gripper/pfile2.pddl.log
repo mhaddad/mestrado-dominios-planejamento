@@ -1,0 +1,74 @@
+
+ipp: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'GRIPPER-4' defined
+ ... done.
+
+
+instantiated 34 actions
+
+
+time:   0,    20 facts and       0 exclusive pairs (    7,       0 positives)
+              29 ops   and      50 exclusive pairs
+time:   1,    36 facts and      62 exclusive pairs (   16,      41 positives)
+              54 ops   and     397 exclusive pairs
+time:   2,    36 facts and      34 exclusive pairs (   16,      33 positives)
+              62 ops   and     611 exclusive pairs
+time:   3,    40 facts and      54 exclusive pairs (   20,      49 positives)
+
+goals first reachable in 3 time steps
+
+              74 ops   and    1015 exclusive pairs
+time:   4,    40 facts and      46 exclusive pairs (   20,      45 positives)
+
+graph has leveled off at time step 5
+
+              74 ops   and     955 exclusive pairs
+time:   5,    40 facts and      46 exclusive pairs (   20,      45 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    6
+expanding wave front to level    7
+
+
+found plan as follows:
+
+time step    0: PICK BALL4 ROOMA RIGHT
+                PICK BALL3 ROOMA LEFT
+time step    1: MOVE ROOMA ROOMB
+time step    2: DROP BALL4 ROOMB RIGHT
+                DROP BALL3 ROOMB LEFT
+time step    3: MOVE ROOMB ROOMA
+time step    4: PICK BALL2 ROOMA RIGHT
+                PICK BALL1 ROOMA LEFT
+time step    5: MOVE ROOMA ROOMB
+time step    6: DROP BALL2 ROOMB RIGHT
+                DROP BALL1 ROOMB LEFT
+
+
+
+number of actions tried:        342
+number of noops tried  :        825
+
+had     197 simple memoizing hits
+had       0 partial memoizing hits
+had      96 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 34 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.45 MBytes for graph
+               0.01 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.08 MBytes for wave front
+
+
+
+__MEMKB 2560

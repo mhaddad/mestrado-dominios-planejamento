@@ -1,0 +1,153 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom follow(b7, b7)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b6, b6)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b10, b10)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b0, b0)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b5, b5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b8, b8)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b13, b13)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b12, b12)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b3, b3)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b1, b1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b2, b2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b9, b9)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b11, b11)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b4, b4)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+48 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+34 variables of 34 necessary
+2252 of 2252 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 9008 to 4544)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 9008 unary operators... done! [9008 unary operators]
+Best heuristic value: 15/21 [expanded 1 state(s)]
+Best heuristic value: 15/20 [expanded 2 state(s)]
+Best heuristic value: 14/19 [expanded 3 state(s)]
+Best heuristic value: 12/18 [expanded 5 state(s)]
+Best heuristic value: 10/18 [expanded 6 state(s)]
+Best heuristic value: 10/16 [expanded 9 state(s)]
+Best heuristic value: 9/16 [expanded 10 state(s)]
+Best heuristic value: 9/14 [expanded 14 state(s)]
+Best heuristic value: 9/13 [expanded 19 state(s)]
+Best heuristic value: 8/13 [expanded 25 state(s)]
+Best heuristic value: 8/12 [expanded 73 state(s)]
+Best heuristic value: 6/12 [expanded 228 state(s)]
+Best heuristic value: 6/11 [expanded 821 state(s)]
+Best heuristic value: 6/10 [expanded 2467 state(s)]
+Best heuristic value: 5/10 [expanded 2473 state(s)]
+Best heuristic value: 4/9 [expanded 2478 state(s)]
+Best heuristic value: 4/8 [expanded 2483 state(s)]
+Best heuristic value: 4/7 [expanded 2486 state(s)]
+Best heuristic value: 4/6 [expanded 2487 state(s)]
+Best heuristic value: 4/4 [expanded 2489 state(s)]
+Best heuristic value: 2/3 [expanded 2490 state(s)]
+Best heuristic value: 2/2 [expanded 2637 state(s)]
+Solution found!
+push-start s12 b8 a1 a2 b10 rat-a rat-a ta1-1-rat-a
+push-end s12 a1 a2 b1 b10 oca1 ta2-1-oca1
+pop-start s13 b6 a1 a3 b7 lco lco ta3-1-lco
+pop-end s13 a1 a3 b12 b7 lco ta1-1-lco
+pop-start s12 b3 a1 a2 b10 rat-a rat-a ta2-3-rat-a
+pop-end s12 a1 a2 b8 b10 rat-a ta1-2-rat-a
+pop-start s12 b5 a1 a2 b3 rat-a rat-a ta2-1-rat-a
+pop-end s12 a1 a2 b10 b3 rat-a ta1-1-rat-a
+push-start s12 b8 a1 a2 b3 rat-a rat-a ta1-1-rat-a
+push-end s12 a1 a2 b5 b3 rat-a ta2-3-rat-a
+pop-start s13 b13 a1 a3 b6 rat-a lco ta3-1-rat-a
+pop-end s13 a1 a3 b7 b6 rat-a ta1-1-rat-a
+push-start s13 b9 a1 a3 b6 oc1b lco ta1-1-oc1b
+push-end s13 a1 a3 b13 b6 rat-a ta3-2-rat-a
+push-start s13 b2 a1 a3 b9 oca1 oc1b ta1-1-oca1
+push-end s13 a1 a3 b6 b9 lco ta3-1-lco
+pop-start s12 b0 a1 a2 b3 rat-a rat-a ta2-3-rat-a
+pop-end s12 a1 a2 b8 b3 oca1 ta1-1-oca1
+pop-start s12 b5 a1 a2 b0 rat-a rat-a ta2-2-rat-a
+pop-end s12 a1 a2 b3 b0 oc1b ta1-1-oc1b
+push-start s12 b8 a1 a2 b0 rat-a rat-a ta1-1-rat-a
+push-end s12 a1 a2 b5 b0 rat-a ta2-1-rat-a
+push-start s12 b10 a1 a2 b8 rat-a rat-a ta1-2-rat-a
+push-end s12 a1 a2 b0 b8 rat-a ta2-3-rat-a
+pop-start s13 b6 a1 a3 b9 lco oc1b ta3-1-lco
+pop-end s13 a1 a3 b2 b9 rat-a ta1-1-rat-a
+pop-start s13 b4 a1 a3 b6 oca1 lco ta3-1-oca1
+pop-end s13 a1 a3 b9 b6 rat-a ta1-2-rat-a
+push-start s13 b3 a1 a3 b6 rat-a lco ta1-1-rat-a
+push-end s13 a1 a3 b4 b6 oca1 ta3-1-oca1
+push-start s12 b12 a1 a2 b10 rat-a rat-a ta1-2-rat-a
+push-end s12 a1 a2 b8 b10 rat-a ta2-2-rat-a
+pop-start s12 b5 a1 a2 b10 rat-a rat-a ta2-3-rat-a
+push-start s13 b7 a1 a3 b3 lco rat-a ta1-1-lco
+pop-end s12 a1 a2 b12 b10 rat-a ta1-1-rat-a
+push-end s13 a1 a3 b6 b3 lco ta3-1-lco
+push-start s13 b12 a1 a3 b7 rat-a lco ta1-1-rat-a
+push-end s13 a1 a3 b3 b7 rat-a ta3-1-rat-a
+pop-start s13 b6 a1 a3 b7 lco lco ta3-1-lco
+pop-end s13 a1 a3 b12 b7 lco ta1-1-lco
+pop-start s13 b13 a1 a3 b6 rat-a lco ta3-1-rat-a
+pop-end s13 a1 a3 b7 b6 rat-a ta1-2-rat-a
+Plan length: 42 step(s).
+Expanded 2639 state(s).
+Generated 14770 state(s).
+Cache hits: 950019
+Cache misses: 4160045
+Search time: 0.48 seconds
+Total time: 0.52 seconds
+__MEMKB 32132

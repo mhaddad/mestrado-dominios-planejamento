@@ -1,0 +1,158 @@
+Parsing...
+Instantiating...
+Starting instantiation [45 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+10 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom on-sale(goods2, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom ready-to-load(goods1, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom on-sale(goods1, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom ready-to-load(goods2, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom on-sale(goods6, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom ready-to-load(goods4, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom on-sale(goods5, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom ready-to-load(goods5, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom on-sale(goods4, market2, level0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom ready-to-load(goods6, market2, level0)
+Removed false proposition: <none of those>
+54 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+34 variables of 34 necessary
+156 of 156 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 304 to 230)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 304 unary operators... done! [304 unary operators]
+Best heuristic value: 26/24 [expanded 1 state(s)]
+Best heuristic value: 25/22 [expanded 2 state(s)]
+Best heuristic value: 24/20 [expanded 3 state(s)]
+Best heuristic value: 23/19 [expanded 5 state(s)]
+Best heuristic value: 22/19 [expanded 6 state(s)]
+Best heuristic value: 21/19 [expanded 7 state(s)]
+Best heuristic value: 21/18 [expanded 8 state(s)]
+Best heuristic value: 21/17 [expanded 11 state(s)]
+Best heuristic value: 20/16 [expanded 14 state(s)]
+Best heuristic value: 19/16 [expanded 15 state(s)]
+Best heuristic value: 18/16 [expanded 16 state(s)]
+Best heuristic value: 18/15 [expanded 17 state(s)]
+Best heuristic value: 17/15 [expanded 18 state(s)]
+Best heuristic value: 17/14 [expanded 21 state(s)]
+Best heuristic value: 17/13 [expanded 24 state(s)]
+Best heuristic value: 17/12 [expanded 25 state(s)]
+Best heuristic value: 15/12 [expanded 27 state(s)]
+Best heuristic value: 12/12 [expanded 28 state(s)]
+Best heuristic value: 12/11 [expanded 29 state(s)]
+Best heuristic value: 11/11 [expanded 30 state(s)]
+Best heuristic value: 11/10 [expanded 31 state(s)]
+Best heuristic value: 10/10 [expanded 32 state(s)]
+Best heuristic value: 9/10 [expanded 34 state(s)]
+Best heuristic value: 9/9 [expanded 35 state(s)]
+Best heuristic value: 9/8 [expanded 39 state(s)]
+Best heuristic value: 9/7 [expanded 40 state(s)]
+Best heuristic value: 6/6 [expanded 41 state(s)]
+Best heuristic value: 5/5 [expanded 42 state(s)]
+Best heuristic value: 4/4 [expanded 43 state(s)]
+Best heuristic value: 3/3 [expanded 44 state(s)]
+Best heuristic value: 2/2 [expanded 45 state(s)]
+Best heuristic value: 1/1 [expanded 65 state(s)]
+Solution found!
+drive truck1 depot1 market2
+buy truck1 goods3 market2 level0 level1 level0 level1
+load goods3 truck1 market2 level0 level1 level0 level1
+drive truck1 market2 depot1
+unload goods3 truck1 depot1 level0 level1 level0 level1
+drive truck1 depot1 market2
+drive truck1 market2 market1
+buy truck1 goods4 market1 level1 level2 level0 level1
+load goods4 truck1 market1 level0 level1 level0 level1
+buy truck1 goods6 market1 level1 level2 level0 level1
+load goods6 truck1 market1 level0 level1 level0 level1
+buy truck1 goods1 market1 level0 level1 level0 level1
+load goods1 truck1 market1 level0 level1 level0 level1
+buy truck1 goods2 market1 level1 level2 level0 level1
+load goods2 truck1 market1 level0 level1 level0 level1
+buy truck1 goods5 market1 level1 level2 level0 level1
+load goods5 truck1 market1 level0 level1 level0 level1
+drive truck1 market1 market2
+drive truck1 market2 depot1
+unload goods4 truck1 depot1 level0 level1 level0 level1
+unload goods6 truck1 depot1 level0 level1 level0 level1
+unload goods1 truck1 depot1 level0 level1 level0 level1
+unload goods5 truck1 depot1 level0 level1 level0 level1
+unload goods2 truck1 depot1 level0 level1 level0 level1
+drive truck2 depot1 market2
+drive truck2 market2 market1
+buy truck2 goods2 market1 level0 level1 level0 level1
+load goods2 truck2 market1 level0 level1 level0 level1
+drive truck2 market1 market2
+drive truck2 market2 depot1
+unload goods2 truck2 depot1 level0 level1 level1 level2
+Plan length: 31 step(s).
+Expanded 66 state(s).
+Generated 288 state(s).
+Cache hits: 1282
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 9624

@@ -1,0 +1,46 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'DEPOT' defined
+Parsing problem file
+ problem 'DEPOTPROB1818' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+Solution found.
+
+
+
+; Time 0.00
+; ParsingTime 0.00
+; NrActions 10
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (LIFT HOIST0 CRATE1 PALLET0 DEPOT0) [1]
+1.002: (LOAD HOIST0 CRATE1 TRUCK1 DEPOT0) [1]
+2.003: (DRIVE TRUCK1 DEPOT0 DISTRIBUTOR0) [1]
+3.004: (LIFT HOIST1 CRATE0 PALLET1 DISTRIBUTOR0) [1]
+4.005: (LOAD HOIST1 CRATE0 TRUCK1 DISTRIBUTOR0) [1]
+5.006: (UNLOAD HOIST1 CRATE1 TRUCK1 DISTRIBUTOR0) [1]
+6.007: (DRIVE TRUCK1 DISTRIBUTOR0 DISTRIBUTOR1) [1]
+7.008: (UNLOAD HOIST2 CRATE0 TRUCK1 DISTRIBUTOR1) [1]
+8.009: (DROP HOIST2 CRATE0 PALLET2 DISTRIBUTOR1) [1]
+9.010: (DROP HOIST1 CRATE1 PALLET1 DISTRIBUTOR0) [1]
+__MEMKB 19888

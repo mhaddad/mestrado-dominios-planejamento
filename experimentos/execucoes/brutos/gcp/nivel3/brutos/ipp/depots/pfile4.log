@@ -1,0 +1,113 @@
+
+ipp: parsing domain file
+domain 'DEPOT' defined
+ ... done.
+ipp: parsing problem file
+problem 'DEPOTPROB6512' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 540 actions
+
+
+time:   0,   172 facts and       0 exclusive pairs (   24,       0 positives)
+             179 ops   and      28 exclusive pairs
+time:   1,   196 facts and      96 exclusive pairs (   34,      30 positives)
+             220 ops   and     414 exclusive pairs
+time:   2,   202 facts and     135 exclusive pairs (   40,      72 positives)
+             234 ops   and     732 exclusive pairs
+time:   3,   210 facts and     171 exclusive pairs (   44,      92 positives)
+             260 ops   and    1546 exclusive pairs
+time:   4,   220 facts and     274 exclusive pairs (   54,     198 positives)
+             300 ops   and    3586 exclusive pairs
+time:   5,   246 facts and     793 exclusive pairs (   76,     600 positives)
+             358 ops   and    7617 exclusive pairs
+time:   6,   260 facts and    1096 exclusive pairs (   90,     902 positives)
+             421 ops   and   14145 exclusive pairs
+time:   7,   280 facts and    1369 exclusive pairs (  108,    1168 positives)
+             498 ops   and   23884 exclusive pairs
+time:   8,   296 facts and    1803 exclusive pairs (  124,    1602 positives)
+             586 ops   and   38418 exclusive pairs
+time:   9,   316 facts and    2030 exclusive pairs (  144,    1888 positives)
+             671 ops   and   54525 exclusive pairs
+time:  10,   327 facts and    2279 exclusive pairs (  155,    2158 positives)
+             746 ops   and   71718 exclusive pairs
+time:  11,   336 facts and    2095 exclusive pairs (  164,    2035 positives)
+             800 ops   and   84441 exclusive pairs
+time:  12,   336 facts and    1910 exclusive pairs (  164,    1868 positives)
+
+goals first reachable in 12 time steps
+
+             814 ops   and   88242 exclusive pairs
+time:  13,   336 facts and    1850 exclusive pairs (  164,    1826 positives)
+
+graph has leveled off at time step 14
+
+             828 ops   and   92704 exclusive pairs
+time:  14,   336 facts and    1850 exclusive pairs (  164,    1826 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: LIFT HOIST2 CRATE6 CRATE5 DISTRIBUTOR1
+                LIFT HOIST1 CRATE2 PALLET1 DISTRIBUTOR0
+                LIFT HOIST0 CRATE7 CRATE4 DEPOT0
+                DRIVE TRUCK0 DISTRIBUTOR1 DEPOT0
+time step    1: LOAD HOIST0 CRATE7 TRUCK0 DEPOT0
+                LOAD HOIST2 CRATE6 TRUCK1 DISTRIBUTOR1
+time step    2: LIFT HOIST2 CRATE5 CRATE3 DISTRIBUTOR1
+                DRIVE TRUCK1 DISTRIBUTOR1 DISTRIBUTOR0
+                LIFT HOIST0 CRATE4 CRATE1 DEPOT0
+time step    3: LOAD HOIST0 CRATE4 TRUCK0 DEPOT0
+                LOAD HOIST1 CRATE2 TRUCK1 DISTRIBUTOR0
+time step    4: UNLOAD HOIST1 CRATE6 TRUCK1 DISTRIBUTOR0
+                LIFT HOIST0 CRATE1 CRATE0 DEPOT0
+time step    5: LOAD HOIST0 CRATE1 TRUCK0 DEPOT0
+                DROP HOIST1 CRATE6 PALLET1 DISTRIBUTOR0
+                DRIVE TRUCK1 DISTRIBUTOR0 DISTRIBUTOR1
+time step    6: LOAD HOIST2 CRATE5 TRUCK1 DISTRIBUTOR1
+                LIFT HOIST0 CRATE0 PALLET0 DEPOT0
+time step    7: LOAD HOIST0 CRATE0 TRUCK0 DEPOT0
+                LIFT HOIST2 CRATE3 PALLET2 DISTRIBUTOR1
+                DRIVE TRUCK1 DISTRIBUTOR1 DISTRIBUTOR0
+time step    8: UNLOAD HOIST1 CRATE2 TRUCK1 DISTRIBUTOR0
+                UNLOAD HOIST0 CRATE7 TRUCK0 DEPOT0
+time step    9: DROP HOIST0 CRATE7 PALLET0 DEPOT0
+                DRIVE TRUCK1 DISTRIBUTOR0 DISTRIBUTOR1
+                DROP HOIST1 CRATE2 CRATE6 DISTRIBUTOR0
+time step   10: UNLOAD HOIST0 CRATE4 TRUCK0 DEPOT0
+                LOAD HOIST2 CRATE3 TRUCK1 DISTRIBUTOR1
+time step   11: UNLOAD HOIST2 CRATE5 TRUCK1 DISTRIBUTOR1
+                DROP HOIST0 CRATE4 CRATE7 DEPOT0
+time step   12: UNLOAD HOIST0 CRATE0 TRUCK0 DEPOT0
+                DROP HOIST2 CRATE5 PALLET2 DISTRIBUTOR1
+time step   13: DROP HOIST0 CRATE0 CRATE4 DEPOT0
+
+
+
+number of actions tried:      13674
+number of noops tried  :      31713
+
+had    4560 simple memoizing hits
+had       0 partial memoizing hits
+had    1408 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 540 operators
+               0.00 seconds building graph
+               0.02 seconds calculating exclusions
+               0.03 seconds searching graph
+               0.05 seconds total time
+
+Memory used:   0.35 MBytes for domain representation
+               6.38 MBytes for graph
+               0.81 MBytes for exclusions
+               0.25 MBytes for memoization
+               0.01 MBytes for wave front
+
+
+
+__MEMKB 10880

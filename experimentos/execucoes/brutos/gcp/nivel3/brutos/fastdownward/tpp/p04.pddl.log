@@ -1,0 +1,93 @@
+Parsing...
+Instantiating...
+Starting instantiation [45 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+17 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+17 variables of 17 necessary
+14 of 14 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 26 to 26)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 26 unary operators... done! [26 unary operators]
+Best heuristic value: 20/13 [expanded 1 state(s)]
+Best heuristic value: 16/13 [expanded 2 state(s)]
+Best heuristic value: 15/12 [expanded 3 state(s)]
+Best heuristic value: 14/11 [expanded 5 state(s)]
+Best heuristic value: 13/10 [expanded 7 state(s)]
+Best heuristic value: 12/9 [expanded 9 state(s)]
+Best heuristic value: 11/8 [expanded 11 state(s)]
+Best heuristic value: 10/8 [expanded 12 state(s)]
+Best heuristic value: 9/7 [expanded 13 state(s)]
+Best heuristic value: 8/6 [expanded 14 state(s)]
+Best heuristic value: 7/6 [expanded 15 state(s)]
+Best heuristic value: 6/5 [expanded 16 state(s)]
+Best heuristic value: 5/4 [expanded 18 state(s)]
+Best heuristic value: 4/4 [expanded 19 state(s)]
+Best heuristic value: 3/3 [expanded 20 state(s)]
+Best heuristic value: 2/2 [expanded 22 state(s)]
+Best heuristic value: 1/1 [expanded 23 state(s)]
+Solution found!
+drive truck1 depot1 market1
+buy truck1 goods1 market1 level0 level1 level0 level1
+load goods1 truck1 market1 level0 level1 level0 level1
+buy truck1 goods3 market1 level0 level1 level0 level1
+load goods3 truck1 market1 level0 level1 level0 level1
+buy truck1 goods4 market1 level0 level1 level0 level1
+drive truck1 market1 depot1
+unload goods1 truck1 depot1 level0 level1 level0 level1
+unload goods3 truck1 depot1 level0 level1 level0 level1
+drive truck1 depot1 market1
+load goods4 truck1 market1 level0 level1 level0 level1
+buy truck1 goods2 market1 level0 level1 level0 level1
+drive truck1 market1 depot1
+unload goods4 truck1 depot1 level0 level1 level0 level1
+drive truck1 depot1 market1
+load goods2 truck1 market1 level0 level1 level0 level1
+drive truck1 market1 depot1
+unload goods2 truck1 depot1 level0 level1 level0 level1
+Plan length: 18 step(s).
+Expanded 24 state(s).
+Generated 56 state(s).
+Cache hits: 65
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8472

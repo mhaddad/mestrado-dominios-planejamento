@@ -1,0 +1,151 @@
+MaxPlanII beta.
+
+bb: parsing domain file
+domain 'MYSTERY-STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'STRIPS-MYSTY-X-30' defined
+ ... done.
+
+
+******  Solve with 1 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [1];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 2 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [2];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 3 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [3];
+        goal constraints;
+        building exclusion constraints --> up to layer 3...
+
+DECISION LAYER 3, WRITING ACTION-BASED ENCODING WITH 682 VARS, 10500 CLAUSES.
+3 G clauses, 1339 A clauses, 9158 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/pfile30, bound 3, action based encoding
+In building up solver: p cnf 682 10500
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |    9686    21058 |    3228       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.000000],apply counts 4, apply_generated 0
+restarts          :            1
+conflicts         :            1           (      inf / sec      )
+decisions         :            0           (      nan / sec      )
+propagations      :           42           (      inf / sec      )
+inspects          :           33           (      inf / sec      )
+conflict literals :            0           (      nan % deleted  )
+CPU time          :         0.00 sec
+UNSATISFIABLE
+
+******  Solve with 4 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [4];
+        goal constraints;
+        building exclusion constraints --> up to layer 4...
+
+DECISION LAYER 4, WRITING ACTION-BASED ENCODING WITH 2276 VARS, 129034 CLAUSES.
+3 G clauses, 5362 A clauses, 123669 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/pfile30, bound 4, action based encoding
+In building up solver: p cnf 2276 129034
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  129034   282373 |   43011       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.010000][L0.000000],apply counts 441, apply_generated 0
+restarts          :            1
+conflicts         :           49           (     4900 / sec      )
+decisions         :          151           (    15100 / sec      )
+propagations      :        21470           (  2147000 / sec      )
+inspects          :        51985           (  5198500 / sec      )
+conflict literals :          192           (     3.03 % deleted  )
+CPU time          :         0.01 sec
+UNSATISFIABLE
+
+******  Solve with 5 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [5];
+        goal constraints;
+        building exclusion constraints --> up to layer 5...
+
+DECISION LAYER 5, WRITING ACTION-BASED ENCODING WITH 5422 VARS, 574109 CLAUSES.
+3 G clauses, 13668 A clauses, 560438 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/pfile30, bound 5, action based encoding
+In building up solver: p cnf 5422 574109
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  574109  1355069 |  191369       0        0     0.0 |  0.000 % |
+|       100 |  572385  1351488 |  210506      93     4277    46.0 |  0.609 % |
+|       250 |  572385  1351488 |  231556     230    11507    50.0 |  2.603 % |
+|       475 |  572385  1351488 |  254712     444    19092    43.0 |  4.317 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.010000][L0.010000],apply counts 3965, apply_generated 0
+restarts          :            4
+conflicts         :          774           (    11057 / sec      )
+decisions         :         1066           (    15229 / sec      )
+propagations      :       379338           (  5419114 / sec      )
+inspects          :      1097241           ( 15674871 / sec      )
+conflict literals :        24274           (    14.36 % deleted  )
+CPU time          :         0.07 sec
+UNSATISFIABLE
+
+******  Solve with 6 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [6];
+        goal constraints;
+        building exclusion constraints --> up to layer 6...
+
+DECISION LAYER 6, WRITING ACTION-BASED ENCODING WITH 9191 VARS, 1175317 CLAUSES.
+3 G clauses, 23578 A clauses, 1151736 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/mystery/pfile30, bound 6, action based encoding
+In building up solver: p cnf 9191 1175317
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 | 1175317  3002303 |  391772       0        0     0.0 |  0.000 % |
+|       100 | 1175073  3001793 |  430949      96     6105    63.6 |  0.100 % |
+|       250 | 1175073  3001793 |  474044     229    17181    75.0 |  1.491 % |
+|       475 | 1175073  3001793 |  521449     446    38099    85.4 |  1.873 % |
+|       812 | 1175073  3001793 |  573593     776    84200   108.5 |  1.948 % |
+|      1319 | 1175073  3001793 |  630953    1266   140736   111.2 |  2.492 % |
+|      2078 | 1175073  3001793 |  694048    1990   231425   116.3 |  7.018 % |
+|      3217 | 1175073  3001793 |  763453    3107   332737   107.1 | 10.108 % |
+|      4925 | 1175073  3001793 |  839798    4788   496203   103.6 | 11.121 % |
+|      7488 | 1009951  2656731 |  923778    6767   720772   106.5 | 14.809 % |
+|     11332 |  944075  2512667 | 1016156   10252  1169865   114.1 | 15.224 % |
+|     17098 |  944075  2512667 | 1117771   15991  1812954   113.4 | 16.356 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.190000][L0.170000],apply counts 96542, apply_generated 0
+restarts          :           12
+conflicts         :        18270           (     6668 / sec      )
+decisions         :        22773           (     8311 / sec      )
+propagations      :      9805270           (  3578566 / sec      )
+inspects          :     39018415           ( 14240297 / sec      )
+conflict literals :      1946349           (    22.42 % deleted  )
+CPU time          :         2.74 sec
+SATISFIABLE
+
+Info:      2.46 seconds total solving time
+           0.00 MB memory used
+        solution found at layer 6
+
+__MEMKB 67704

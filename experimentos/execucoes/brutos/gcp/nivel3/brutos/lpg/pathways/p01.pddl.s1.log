@@ -1,0 +1,49 @@
+
+Parsing domain file:  domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined ... done.
+Parsing problem file:  problem 'GROUNDED-PATHWAYS-01' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      78
+Number of conditional actions :       0
+Number of facts               :      63
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (CHOOSE_P300_L1_L0) [D:1.0000; C:1.0000]
+ 1.0000: (INITIALIZE_P300) [D:1.0000; C:1.0000]
+ 1.0000: (CHOOSE_PCAF_L2_L1) [D:1.0000; C:1.0000]
+ 2.0000: (INITIALIZE_PCAF) [D:1.0000; C:1.0000]
+ 3.0000: (ASSOCIATE_PCAF_P300_PCAF-P300) [D:1.0000; C:1.0000]
+ 4.0000: (DUMMY-ACTION-1-2) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         6
+Execution cost:  6.00
+Duration:        5.000
+Plan quality:    6.000
+
+__MEMKB 110080

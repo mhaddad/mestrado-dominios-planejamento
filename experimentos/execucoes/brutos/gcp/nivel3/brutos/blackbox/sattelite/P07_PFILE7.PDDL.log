@@ -1,0 +1,106 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P07_PFILE7.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P07_PFILE7.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 93 facts and 277 exclusive pairs.
+time: 2, 101 facts and 388 exclusive pairs.
+time: 3, 112 facts and 395 exclusive pairs.
+time: 4, 149 facts and 282 exclusive pairs.
+Goals first reachable in 4 steps.
+2959 nodes created.
+
+####################################################
+goals at time 5:
+  pointing_satellite1_star1 pointing_satellite2_phenomenon5 have-image_phenomenon5_image0 have-image_star6_image1 have-image_star7_image0 
+have-image_planet8_image0 have-image_planet9_image3 have-image_planet10_image0 have-image_planet11_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 2
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 149 facts and 277 exclusive pairs.
+1054 new nodes added.
+
+####################################################
+goals at time 6:
+  pointing_satellite1_star1 pointing_satellite2_phenomenon5 have-image_phenomenon5_image0 have-image_star6_image1 have-image_star7_image0 
+have-image_planet8_image0 have-image_planet9_image3 have-image_planet10_image0 have-image_planet11_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 10703457
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 149 facts and 277 exclusive pairs.
+1054 new nodes added.
+
+####################################################
+goals at time 7:
+  pointing_satellite1_star1 pointing_satellite2_phenomenon5 have-image_phenomenon5_image0 have-image_star6_image1 have-image_star7_image0 
+have-image_planet8_image0 have-image_planet9_image3 have-image_planet10_image0 have-image_planet11_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 260853815
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite3 groundstation0 groundstation2)
+1 (turn-to satellite1 groundstation4 groundstation0)
+1 (switch-on instrument4 satellite2)
+1 (switch-on instrument2 satellite0)
+1 (switch-on instrument3 satellite1)
+1 (turn-to satellite0 groundstation2 star6)
+1 (turn-to satellite2 star1 star6)
+1 (switch-on instrument7 satellite3)
+2 (calibrate satellite1 instrument3 groundstation4)
+2 (calibrate satellite3 instrument7 groundstation0)
+2 (calibrate satellite0 instrument2 groundstation2)
+2 (calibrate satellite2 instrument4 star1)
+3 (turn-to satellite3 planet9 groundstation0)
+3 (turn-to satellite2 planet8 star1)
+3 (turn-to satellite0 planet10 groundstation2)
+3 (turn-to satellite1 planet11 groundstation4)
+4 (take-image satellite0 planet10 instrument2 image0)
+4 (take-image satellite1 planet11 instrument3 image2)
+4 (take-image satellite3 planet9 instrument7 image3)
+4 (take-image satellite2 planet8 instrument4 image0)
+5 (turn-to satellite3 star6 planet9)
+5 (turn-to satellite2 phenomenon5 planet8)
+5 (turn-to satellite0 star7 planet10)
+5 (turn-to satellite1 star1 planet11)
+6 (take-image satellite2 phenomenon5 instrument4 image0)
+6 (take-image satellite0 star7 instrument2 image0)
+6 (take-image satellite3 star6 instrument7 image1)
+End plan
+----------------------------------------------------
+
+27 total actions in plan
+671433 entries in hash table, 45514758 hash hits, avg set size 17
+46186196 total set-creation steps (entries + hits + plan length - 1)
+52287312 actions tried
+
+####################################################
+Total elapsed time:   3 minutes, 24 seconds
+Time in milliseconds: 204349
+
+####################################################
+__MEMKB 759168

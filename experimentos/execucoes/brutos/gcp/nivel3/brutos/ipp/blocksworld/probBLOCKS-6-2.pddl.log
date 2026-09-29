@@ -1,0 +1,106 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-6-2' defined
+ ... done.
+
+
+instantiated 72 actions
+
+
+time:   0,    55 facts and       0 exclusive pairs (    8,       0 positives)
+              56 ops   and       5 exclusive pairs
+time:   1,    60 facts and      20 exclusive pairs (   10,       6 positives)
+              63 ops   and      57 exclusive pairs
+time:   2,    61 facts and      19 exclusive pairs (   11,       6 positives)
+              66 ops   and      87 exclusive pairs
+time:   3,    64 facts and      34 exclusive pairs (   13,      16 positives)
+              72 ops   and     175 exclusive pairs
+time:   4,    66 facts and      38 exclusive pairs (   15,      24 positives)
+              77 ops   and     259 exclusive pairs
+time:   5,    69 facts and      52 exclusive pairs (   17,      36 positives)
+              85 ops   and     438 exclusive pairs
+time:   6,    73 facts and      88 exclusive pairs (   21,      68 positives)
+              94 ops   and     705 exclusive pairs
+time:   7,    76 facts and     100 exclusive pairs (   23,      79 positives)
+             104 ops   and    1050 exclusive pairs
+time:   8,    82 facts and     175 exclusive pairs (   29,     149 positives)
+             117 ops   and    1626 exclusive pairs
+time:   9,    85 facts and     176 exclusive pairs (   31,     150 positives)
+             129 ops   and    2198 exclusive pairs
+time:  10,    93 facts and     306 exclusive pairs (   39,     272 positives)
+             146 ops   and    3252 exclusive pairs
+time:  11,    95 facts and     268 exclusive pairs (   40,     239 positives)
+             158 ops   and    3959 exclusive pairs
+time:  12,   104 facts and     436 exclusive pairs (   49,     404 positives)
+             176 ops   and    5405 exclusive pairs
+time:  13,   104 facts and     354 exclusive pairs (   49,     340 positives)
+             176 ops   and    5044 exclusive pairs
+time:  14,   104 facts and     288 exclusive pairs (   49,     288 positives)
+
+goals first reachable in 14 time steps
+
+
+graph has leveled off at time step 15
+
+             176 ops   and    4909 exclusive pairs
+time:  15,   104 facts and     288 exclusive pairs (   49,     288 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+
+
+found plan as follows:
+
+time step    0: UNSTACK A D
+time step    1: PUT-DOWN A
+time step    2: UNSTACK D B
+time step    3: PUT-DOWN D
+time step    4: UNSTACK B F
+time step    5: PUT-DOWN B
+time step    6: UNSTACK F E
+time step    7: PUT-DOWN F
+time step    8: UNSTACK E C
+time step    9: PUT-DOWN E
+time step   10: PICK-UP C
+time step   11: STACK C D
+time step   12: PICK-UP B
+time step   13: STACK B C
+time step   14: PICK-UP A
+time step   15: STACK A B
+time step   16: PICK-UP F
+time step   17: STACK F A
+time step   18: PICK-UP E
+time step   19: STACK E F
+
+
+
+number of actions tried:         44
+number of noops tried  :        233
+
+had      15 simple memoizing hits
+had       1 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 72 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.04 MBytes for domain representation
+               1.79 MBytes for graph
+               0.05 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.02 MBytes for wave front
+
+
+
+__MEMKB 4096

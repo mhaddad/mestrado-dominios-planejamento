@@ -1,0 +1,53 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p01.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p01.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p01.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p01.pddl
+Problem name: grounded-pathways-01
+Facts loaded.
+time: 1, 35 facts and 153 exclusive pairs.
+time: 2, 52 facts and 187 exclusive pairs.
+time: 3, 53 facts and 70 exclusive pairs.
+time: 4, 62 facts and 112 exclusive pairs.
+time: 5, 64 facts and 106 exclusive pairs.
+Goals first reachable in 5 steps.
+795 nodes created.
+
+####################################################
+goals at time 6:
+  goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 13
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-p300-l1-l0)
+2 (choose-pcaf-l2-l1)
+2 (initialize-p300)
+3 (initialize-pcaf)
+4 (associate-pcaf-p300-pcaf-p300)
+5 (dummy-action-1-2)
+End plan
+----------------------------------------------------
+
+6 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+6 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 5
+
+####################################################
+__MEMKB 10624

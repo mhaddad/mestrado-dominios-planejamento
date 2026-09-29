@@ -1,0 +1,65 @@
+
+ipp: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+instantiated 11 actions
+
+
+time:   0,    26 facts and       0 exclusive pairs (   13,       0 positives)
+              27 ops   and       2 exclusive pairs
+time:   1,    28 facts and       2 exclusive pairs (   14,       1 positives)
+              33 ops   and      37 exclusive pairs
+time:   2,    40 facts and      62 exclusive pairs (   20,      19 positives)
+              48 ops   and     172 exclusive pairs
+time:   3,    46 facts and      68 exclusive pairs (   23,      22 positives)
+              54 ops   and     190 exclusive pairs
+time:   4,    46 facts and      56 exclusive pairs (   23,      19 positives)
+              57 ops   and     232 exclusive pairs
+time:   5,    52 facts and     110 exclusive pairs (   26,      34 positives)
+
+goals first reachable in 5 time steps
+
+
+found plan as follows:
+
+time step    0: DRIVE TRUCK1 DEPOT1 MARKET1
+time step    1: BUY TRUCK1 GOODS1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                BUY TRUCK1 GOODS3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    2: LOAD GOODS3 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS2 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                LOAD GOODS1 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+time step    3: DRIVE TRUCK1 MARKET1 DEPOT1
+time step    4: UNLOAD GOODS3 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS2 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+                UNLOAD GOODS1 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+
+
+
+number of actions tried:         11
+number of noops tried  :          5
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 11 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.45 MBytes for graph
+               0.00 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2432

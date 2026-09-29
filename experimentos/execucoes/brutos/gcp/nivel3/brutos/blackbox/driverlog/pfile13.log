@@ -1,0 +1,81 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/driverlog/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/driverlog/pfile13
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/driverlog/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/driverlog/pfile13
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 186 facts and 29 exclusive pairs.
+time: 2, 198 facts and 129 exclusive pairs.
+time: 3, 230 facts and 739 exclusive pairs.
+time: 4, 266 facts and 2132 exclusive pairs.
+time: 5, 300 facts and 3743 exclusive pairs.
+time: 6, 335 facts and 4925 exclusive pairs.
+time: 7, 369 facts and 4027 exclusive pairs.
+Goals reachable at 7 steps but mutually exclusive.
+time: 8, 371 facts and 2662 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 371 facts and 2411 exclusive pairs.
+Goals first reachable in 9 steps.
+10282 nodes created.
+
+####################################################
+goals at time 10:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 26231
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 11:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 675112
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 12:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 48662157
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 13:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan

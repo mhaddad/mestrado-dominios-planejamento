@@ -1,0 +1,78 @@
+Parsing...
+Instantiating...
+Starting instantiation [35 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+2 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+8 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+9 variables of 10 necessary
+108 of 120 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 132 to 100)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 132 unary operators... done! [132 unary operators]
+Best heuristic value: 13/11 [expanded 1 state(s)]
+Best heuristic value: 12/10 [expanded 2 state(s)]
+Best heuristic value: 11/9 [expanded 3 state(s)]
+Best heuristic value: 11/8 [expanded 4 state(s)]
+Best heuristic value: 10/8 [expanded 6 state(s)]
+Best heuristic value: 10/7 [expanded 8 state(s)]
+Best heuristic value: 9/7 [expanded 9 state(s)]
+Best heuristic value: 8/6 [expanded 11 state(s)]
+Best heuristic value: 7/6 [expanded 12 state(s)]
+Best heuristic value: 6/5 [expanded 13 state(s)]
+Best heuristic value: 5/4 [expanded 16 state(s)]
+Best heuristic value: 3/3 [expanded 17 state(s)]
+Best heuristic value: 2/2 [expanded 18 state(s)]
+Best heuristic value: 1/1 [expanded 20 state(s)]
+Solution found!
+walk driver2 s0 p2-0
+walk driver2 p2-0 s2
+load-truck package3 truck1 s1
+board-truck driver1 truck1 s1
+drive-truck truck1 s1 s0 driver1
+load-truck package1 truck1 s0
+drive-truck truck1 s0 s1 driver1
+unload-truck package1 truck1 s1
+drive-truck truck1 s1 s0 driver1
+load-truck package2 truck1 s0
+drive-truck truck1 s0 s1 driver1
+unload-truck package2 truck1 s1
+drive-truck truck1 s1 s2 driver1
+unload-truck package3 truck1 s2
+drive-truck truck1 s2 s1 driver1
+Plan length: 15 step(s).
+Expanded 21 state(s).
+Generated 151 state(s).
+Cache hits: 105
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8984

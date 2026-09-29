@@ -57,6 +57,6 @@ O painel completo, com datas e entregáveis, fica no plano de trabalho. Este qua
 
 - **Referências** (sem Zotero, decisão de 23/09/2026): obras verificadas por agente ficam em `candidatas.bib`; o autor aprova em `revisao-referencias.md` e o script gera o `referencias.bib`, a única fonte citável. Ver [literatura/referencias/](literatura/referencias/). As notas de leitura ficam no repositório, em [literatura/notas-de-leitura/](literatura/notas-de-leitura/).
 - **Benchmarks das IPCs** e **planejadores de terceiros** (`experimentos/benchmarks/ipc/`, `experimentos/ferramentas/`): clones de repositórios públicos, ignorados pelo Git; os registros de experimento indicam repositório e commit.
-- **Saídas brutas de execução** (`experimentos/execucoes/brutos/`) e **arquivos brutos das IPCs 2011–2023** (`data/ipc-2011-2023/brutos/`): ignorados pelo Git por tamanho. As saídas brutas **só se recuperam refazendo as execuções** (as máquinas da Fase 3 foram apagadas), e parte dos arquivos das IPCs veio do autor ou de páginas que podem sair do ar; guarde uma cópia fora do repositório antes de apagar a pasta do projeto.
+- **Saídas brutas** (`experimentos/execucoes/brutos/`, `data/ipc-2011-2023/brutos/`) **estão versionadas** desde 29/09/2026, preservadas byte a byte (`.gitattributes`): as máquinas da Fase 3 foram apagadas e não há outra cópia.
 - **Versão montada pela IA** (`redacao/saida/`): gerada por `redacao/montagem/montar.py`, fora do Git.
 - **Lixo do acervo de 2010**: metadados `.svn`, objetos compilados (`.o`, `.pyc`) e `.DS_Store`. Todo o resto foi preservado.

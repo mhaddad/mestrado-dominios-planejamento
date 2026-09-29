@@ -1,0 +1,74 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'BLOCKS' defined
+Parsing problem file
+ problem 'BLOCKS-11-2' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+Solution found.
+
+; Time 0.00
+; ParsingTime 0.00
+; NrActions 40
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (UNSTACK B H) [1]
+1.002: (STACK B I) [1]
+2.003: (UNSTACK H K) [1]
+3.004: (STACK H B) [1]
+4.005: (UNSTACK K F) [1]
+5.006: (PUT-DOWN K) [1]
+6.007: (UNSTACK F C) [1]
+7.008: (STACK F K) [1]
+8.009: (UNSTACK C D) [1]
+9.010: (STACK C H) [1]
+10.011: (UNSTACK D J) [1]
+11.012: (STACK D C) [1]
+12.013: (UNSTACK J A) [1]
+13.014: (PUT-DOWN J) [1]
+14.015: (PICK-UP A) [1]
+15.016: (STACK A F) [1]
+16.017: (UNSTACK D C) [1]
+17.018: (STACK D J) [1]
+18.019: (UNSTACK C H) [1]
+19.020: (PUT-DOWN C) [1]
+20.021: (UNSTACK H B) [1]
+21.022: (STACK H A) [1]
+22.023: (UNSTACK B I) [1]
+23.024: (STACK B H) [1]
+24.025: (UNSTACK D J) [1]
+25.026: (PUT-DOWN D) [1]
+26.027: (PICK-UP J) [1]
+27.028: (STACK J B) [1]
+28.029: (UNSTACK I E) [1]
+29.030: (PUT-DOWN I) [1]
+30.031: (UNSTACK E G) [1]
+31.032: (STACK E J) [1]
+32.033: (PICK-UP D) [1]
+33.034: (STACK D E) [1]
+34.035: (PICK-UP C) [1]
+35.036: (STACK C D) [1]
+36.037: (PICK-UP G) [1]
+37.038: (STACK G C) [1]
+38.039: (PICK-UP I) [1]
+39.040: (STACK I G) [1]
+__MEMKB 20932

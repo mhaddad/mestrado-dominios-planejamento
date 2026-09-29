@@ -1,0 +1,114 @@
+Parsing...
+Instantiating...
+Starting instantiation [35 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+3 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+13 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+16 variables of 16 necessary
+270 of 270 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 324 to 244)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 324 unary operators... done! [324 unary operators]
+Best heuristic value: 21/15 [expanded 1 state(s)]
+Best heuristic value: 20/14 [expanded 4 state(s)]
+Best heuristic value: 19/14 [expanded 7 state(s)]
+Best heuristic value: 18/14 [expanded 8 state(s)]
+Best heuristic value: 18/13 [expanded 11 state(s)]
+Best heuristic value: 17/13 [expanded 13 state(s)]
+Best heuristic value: 16/13 [expanded 15 state(s)]
+Best heuristic value: 16/12 [expanded 19 state(s)]
+Best heuristic value: 15/12 [expanded 20 state(s)]
+Best heuristic value: 14/11 [expanded 21 state(s)]
+Best heuristic value: 13/11 [expanded 27 state(s)]
+Best heuristic value: 13/10 [expanded 30 state(s)]
+Best heuristic value: 12/10 [expanded 31 state(s)]
+Best heuristic value: 11/10 [expanded 33 state(s)]
+Best heuristic value: 10/10 [expanded 34 state(s)]
+Best heuristic value: 10/9 [expanded 38 state(s)]
+Best heuristic value: 9/9 [expanded 40 state(s)]
+Best heuristic value: 8/8 [expanded 43 state(s)]
+Best heuristic value: 7/8 [expanded 44 state(s)]
+Best heuristic value: 6/7 [expanded 45 state(s)]
+Best heuristic value: 5/7 [expanded 54 state(s)]
+Best heuristic value: 5/6 [expanded 56 state(s)]
+Best heuristic value: 5/5 [expanded 58 state(s)]
+Best heuristic value: 4/4 [expanded 60 state(s)]
+Best heuristic value: 3/4 [expanded 63 state(s)]
+Best heuristic value: 3/3 [expanded 64 state(s)]
+Best heuristic value: 2/2 [expanded 65 state(s)]
+Best heuristic value: 1/2 [expanded 67 state(s)]
+Best heuristic value: 1/1 [expanded 6300 state(s)]
+Solution found!
+load-truck package7 truck2 s2
+board-truck driver1 truck2 s2
+drive-truck truck2 s2 s1 driver1
+unload-truck package7 truck2 s1
+drive-truck truck2 s1 s0 driver1
+load-truck package4 truck2 s0
+drive-truck truck2 s0 s2 driver1
+disembark-truck driver1 truck2 s2
+unload-truck package4 truck2 s2
+board-truck driver1 truck2 s2
+drive-truck truck2 s2 s1 driver1
+load-truck package2 truck2 s1
+drive-truck truck2 s1 s0 driver1
+unload-truck package2 truck2 s0
+load-truck package1 truck2 s0
+drive-truck truck2 s0 s2 driver1
+disembark-truck driver1 truck2 s2
+unload-truck package1 truck2 s2
+board-truck driver1 truck3 s2
+drive-truck truck3 s2 s0 driver1
+load-truck package3 truck3 s0
+walk driver3 s1 p2-1
+walk driver3 p2-1 s2
+board-truck driver3 truck2 s2
+drive-truck truck2 s2 s1 driver3
+drive-truck truck3 s0 s1 driver1
+unload-truck package3 truck3 s1
+drive-truck truck3 s1 s0 driver1
+disembark-truck driver1 truck3 s0
+walk driver1 s0 p2-0
+walk driver1 p2-0 s2
+Plan length: 31 step(s).
+Expanded 6301 state(s).
+Generated 102853 state(s).
+Cache hits: 31083
+Cache misses: 0
+Search time: 0.05 seconds
+Total time: 0.05 seconds
+__MEMKB 9500

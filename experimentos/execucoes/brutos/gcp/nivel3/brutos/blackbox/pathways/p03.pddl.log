@@ -1,0 +1,82 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p03.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p03.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p03.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p03.pddl
+Problem name: grounded-pathways-03
+Facts loaded.
+time: 1, 41 facts and 210 exclusive pairs.
+time: 2, 61 facts and 250 exclusive pairs.
+time: 3, 62 facts and 82 exclusive pairs.
+time: 4, 73 facts and 138 exclusive pairs.
+time: 5, 87 facts and 186 exclusive pairs.
+time: 6, 96 facts and 224 exclusive pairs.
+time: 7, 100 facts and 226 exclusive pairs.
+Goals first reachable in 7 steps.
+1562 nodes created.
+
+####################################################
+goals at time 8:
+  goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 5913
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 100 facts and 206 exclusive pairs.
+318 new nodes added.
+
+####################################################
+goals at time 9:
+  goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 88827
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-gp-l1-l0)
+2 (initialize-gp)
+2 (choose-sp1-l2-l1)
+3 (initialize-sp1)
+3 (choose-cdk46p1-l3-l2)
+4 (initialize-cdk46p1)
+4 (associate-sp1-gp-sp1-gp)
+5 (initialize-sp1)
+5 (synthesize-sp1-gp-p107)
+5 (synthesize-sp1-gp-cyca)
+5 (initialize-gp)
+5 (synthesize-sp1-gp-cycd)
+6 (associate-cdk46p1-cycd-cdk46p1-cycd)
+6 (associate-sp1-p107-sp1-p107)
+6 (dummy-action-2-2)
+7 (dummy-action-3-2)
+7 (associate-sp1-p107-gp-sp1-p107-gp)
+8 (dummy-action-1-1)
+End plan
+----------------------------------------------------
+
+18 total actions in plan
+2457 entries in hash table, 23121 hash hits, avg set size 7
+25585 total set-creation steps (entries + hits + plan length - 1)
+36037 actions tried
+
+####################################################
+Total elapsed time:   0.04 seconds
+Time in milliseconds: 42
+
+####################################################
+__MEMKB 20992

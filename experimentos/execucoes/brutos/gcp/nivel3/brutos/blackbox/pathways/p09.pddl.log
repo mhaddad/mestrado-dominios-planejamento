@@ -1,0 +1,51 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p09.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p09.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p09.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p09.pddl
+Problem name: grounded-pathways-09
+Facts loaded.
+time: 1, 99 facts and 1225 exclusive pairs.
+time: 2, 148 facts and 1323 exclusive pairs.
+time: 3, 153 facts and 206 exclusive pairs.
+time: 4, 202 facts and 563 exclusive pairs.
+time: 5, 243 facts and 1281 exclusive pairs.
+time: 6, 275 facts and 1440 exclusive pairs.
+time: 7, 293 facts and 1113 exclusive pairs.
+time: 8, 300 facts and 956 exclusive pairs.
+time: 9, 305 facts and 873 exclusive pairs.
+Goals reachable at 9 steps but mutually exclusive.
+time: 10, 306 facts and 832 exclusive pairs.
+Goals first reachable in 10 steps.
+8599 nodes created.
+
+####################################################
+goals at time 11:
+  goal13- goal12- goal11- goal10- goal9- 
+goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 7662985
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 307 facts and 843 exclusive pairs.
+1388 new nodes added.
+
+####################################################
+goals at time 12:
+  goal13- goal12- goal11- goal10- goal9- 
+goal8- goal7- goal6- goal5- goal4- 
+goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan

@@ -1,0 +1,136 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P04_PFILE4.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P04_PFILE4.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 38 facts and 94 exclusive pairs.
+time: 2, 41 facts and 127 exclusive pairs.
+time: 3, 46 facts and 149 exclusive pairs.
+time: 4, 71 facts and 230 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 71 facts and 130 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 71 facts and 94 exclusive pairs.
+Goals first reachable in 6 steps.
+1885 nodes created.
+
+####################################################
+goals at time 7:
+  pointing_satellite1_planet5 have-image_planet3_infrared1 have-image_star4_infrared1 have-image_planet5_thermograph2 have-image_star6_infrared1 
+have-image_star7_infrared0 have-image_phenomenon8_thermograph2 have-image_phenomenon9_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 19
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 71 facts and 94 exclusive pairs.
+401 new nodes added.
+
+####################################################
+goals at time 8:
+  pointing_satellite1_planet5 have-image_planet3_infrared1 have-image_star4_infrared1 have-image_planet5_thermograph2 have-image_star6_infrared1 
+have-image_star7_infrared0 have-image_phenomenon8_thermograph2 have-image_phenomenon9_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 676
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 71 facts and 94 exclusive pairs.
+401 new nodes added.
+
+####################################################
+goals at time 9:
+  pointing_satellite1_planet5 have-image_planet3_infrared1 have-image_star4_infrared1 have-image_planet5_thermograph2 have-image_star6_infrared1 
+have-image_star7_infrared0 have-image_phenomenon8_thermograph2 have-image_phenomenon9_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 134461
+
+----------------------------------------------------
+Can't solve in 8 steps
+time: 9, 71 facts and 94 exclusive pairs.
+401 new nodes added.
+
+####################################################
+goals at time 10:
+  pointing_satellite1_planet5 have-image_planet3_infrared1 have-image_star4_infrared1 have-image_planet5_thermograph2 have-image_star6_infrared1 
+have-image_star7_infrared0 have-image_phenomenon8_thermograph2 have-image_phenomenon9_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 1094515
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 71 facts and 94 exclusive pairs.
+401 new nodes added.
+
+####################################################
+goals at time 11:
+  pointing_satellite1_planet5 have-image_planet3_infrared1 have-image_star4_infrared1 have-image_planet5_thermograph2 have-image_star6_infrared1 
+have-image_star7_infrared0 have-image_phenomenon8_thermograph2 have-image_phenomenon9_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 3598518
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite1 star2 star0)
+1 (switch-on instrument0 satellite0)
+1 (switch-on instrument1 satellite1)
+1 (turn-to satellite0 star0 star6)
+2 (calibrate satellite0 instrument0 star0)
+2 (calibrate satellite1 instrument1 star2)
+3 (turn-to satellite0 phenomenon9 star0)
+3 (turn-to satellite1 star6 star2)
+4 (take-image satellite1 star6 instrument1 infrared1)
+4 (take-image satellite0 phenomenon9 instrument0 infrared0)
+5 (turn-to satellite0 phenomenon8 phenomenon9)
+5 (turn-to satellite1 star4 star6)
+6 (take-image satellite0 phenomenon8 instrument0 thermograph2)
+6 (take-image satellite1 star4 instrument1 infrared1)
+7 (turn-to satellite1 planet3 star4)
+7 (turn-to satellite0 star7 phenomenon8)
+8 (take-image satellite0 star7 instrument0 infrared0)
+8 (take-image satellite1 planet3 instrument1 infrared1)
+9 (turn-to satellite0 planet5 star7)
+9 (turn-to satellite1 planet5 planet3)
+10 (take-image satellite0 planet5 instrument0 thermograph2)
+End plan
+----------------------------------------------------
+
+21 total actions in plan
+27740 entries in hash table, 724412 hash hits, avg set size 14
+752161 total set-creation steps (entries + hits + plan length - 1)
+871462 actions tried
+
+####################################################
+Total elapsed time:   2.45 seconds
+Time in milliseconds: 2455
+
+####################################################
+__MEMKB 66688

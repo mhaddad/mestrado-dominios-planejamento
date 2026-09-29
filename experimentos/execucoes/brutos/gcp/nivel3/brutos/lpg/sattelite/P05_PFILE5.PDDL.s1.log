@@ -1,0 +1,59 @@
+
+Parsing domain file:  domain 'SATELLITE' defined ... done.
+Parsing problem file:  problem 'STRIPS-SAT-X-1' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :     527
+Number of conditional actions :       0
+Number of facts               :      81
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (SWITCH_ON INSTRUMENT8 SATELLITE2) [D:1.0000; C:1.0000]
+ 0.0000: (TURN_TO SATELLITE2 GROUNDSTATION0 PHENOMENON5) [D:1.0000; C:1.0000]
+ 0.0000: (TURN_TO SATELLITE0 PHENOMENON5 PHENOMENON8) [D:1.0000; C:1.0000]
+ 1.0000: (CALIBRATE SATELLITE2 INSTRUMENT8 GROUNDSTATION0) [D:1.0000; C:1.0000]
+ 2.0000: (TURN_TO SATELLITE2 STAR3 GROUNDSTATION0) [D:1.0000; C:1.0000]
+ 3.0000: (TAKE_IMAGE SATELLITE2 STAR3 INSTRUMENT8 THERMOGRAPH0) [D:1.0000; C:1.0000]
+ 4.0000: (TURN_TO SATELLITE2 STAR7 STAR3) [D:1.0000; C:1.0000]
+ 5.0000: (TAKE_IMAGE SATELLITE2 STAR7 INSTRUMENT8 THERMOGRAPH0) [D:1.0000; C:1.0000]
+ 6.0000: (TURN_TO SATELLITE2 PLANET9 STAR7) [D:1.0000; C:1.0000]
+ 7.0000: (TAKE_IMAGE SATELLITE2 PLANET9 INSTRUMENT8 SPECTROGRAPH1) [D:1.0000; C:1.0000]
+ 8.0000: (TURN_TO SATELLITE2 PHENOMENON6 PLANET9) [D:1.0000; C:1.0000]
+ 9.0000: (TAKE_IMAGE SATELLITE2 PHENOMENON6 INSTRUMENT8 IMAGE2) [D:1.0000; C:1.0000]
+ 10.0000: (TURN_TO SATELLITE2 PHENOMENON8 PHENOMENON6) [D:1.0000; C:1.0000]
+ 11.0000: (TAKE_IMAGE SATELLITE2 PHENOMENON8 INSTRUMENT8 IMAGE2) [D:1.0000; C:1.0000]
+ 12.0000: (TURN_TO SATELLITE2 PHENOMENON5 PHENOMENON8) [D:1.0000; C:1.0000]
+ 13.0000: (TAKE_IMAGE SATELLITE2 PHENOMENON5 INSTRUMENT8 IMAGE2) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         16
+Execution cost:  16.00
+Duration:        14.000
+Plan quality:    16.000
+
+__MEMKB 110464

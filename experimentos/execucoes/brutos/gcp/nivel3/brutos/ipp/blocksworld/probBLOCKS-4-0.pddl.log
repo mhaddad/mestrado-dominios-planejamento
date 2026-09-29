@@ -1,0 +1,68 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-4-0' defined
+ ... done.
+
+
+instantiated 32 actions
+
+
+time:   0,    29 facts and       0 exclusive pairs (    9,       0 positives)
+              33 ops   and      22 exclusive pairs
+time:   1,    42 facts and      90 exclusive pairs (   13,      18 positives)
+              62 ops   and     645 exclusive pairs
+time:   2,    54 facts and     276 exclusive pairs (   25,     156 positives)
+              86 ops   and    1701 exclusive pairs
+time:   3,    54 facts and     156 exclusive pairs (   25,     132 positives)
+              86 ops   and    1377 exclusive pairs
+time:   4,    54 facts and      96 exclusive pairs (   25,      96 positives)
+
+goals first reachable in 4 time steps
+
+
+graph has leveled off at time step 5
+
+              86 ops   and    1257 exclusive pairs
+time:   5,    54 facts and      96 exclusive pairs (   25,      96 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    6
+
+
+found plan as follows:
+
+time step    0: PICK-UP B
+time step    1: STACK B A
+time step    2: PICK-UP C
+time step    3: STACK C B
+time step    4: PICK-UP D
+time step    5: STACK D C
+
+
+
+number of actions tried:         10
+number of noops tried  :         37
+
+had       3 simple memoizing hits
+had       1 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 32 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.58 MBytes for graph
+               0.01 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.01 MBytes for wave front
+
+
+
+__MEMKB 2688

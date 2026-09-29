@@ -1,0 +1,59 @@
+
+ff: parsing domain file
+domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'GROUNDED-PATHWAYS-03' defined
+ ... done.
+
+
+got 99 facts
+
+Cueing down from goal distance:   21 into depth [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1][2][3]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CHOOSE_GP_L1_L0
+        1: INITIALIZE_GP
+        2: CHOOSE_SP1_L2_L1
+        3: INITIALIZE_SP1
+        4: CHOOSE_CDK46P1_L3_L2
+        5: INITIALIZE_CDK46P1
+        6: ASSOCIATE_SP1_GP_SP1-GP
+        7: SYNTHESIZE_SP1-GP_P107
+        8: INITIALIZE_SP1
+        9: SYNTHESIZE_SP1-GP_CYCD
+       10: INITIALIZE_GP
+       11: SYNTHESIZE_SP1-GP_CYCA
+       12: DUMMY-ACTION-2-2
+       13: ASSOCIATE_SP1_P107_SP1-P107
+       14: ASSOCIATE_CDK46P1_CYCD_CDK46P1-CYCD
+       15: DUMMY-ACTION-3-2
+       16: ASSOCIATE_SP1-P107_GP_SP1-P107-GP
+       17: DUMMY-ACTION-1-1
+     
+
+time spent:    0.00 seconds instantiating 118 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 99 facts and 118 actions
+               0.00 seconds creating final representation with 99 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 23 states, to a max depth of 3
+               0.00 seconds total time
+
+__MEMKB 3968

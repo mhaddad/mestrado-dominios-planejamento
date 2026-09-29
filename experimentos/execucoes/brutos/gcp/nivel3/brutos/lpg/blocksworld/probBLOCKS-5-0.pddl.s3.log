@@ -1,0 +1,63 @@
+
+Parsing domain file:  domain 'BLOCKS' defined ... done.
+Parsing problem file:  problem 'BLOCKS-5-0' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      60
+Number of conditional actions :       0
+Number of facts               :      41
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (UNSTACK C E) [D:1.0000; C:1.0000]
+ 1.0000: (PUT-DOWN C) [D:1.0000; C:1.0000]
+ 2.0000: (UNSTACK E B) [D:1.0000; C:1.0000]
+ 3.0000: (PUT-DOWN E) [D:1.0000; C:1.0000]
+ 4.0000: (UNSTACK B A) [D:1.0000; C:1.0000]
+ 5.0000: (STACK B C) [D:1.0000; C:1.0000]
+ 6.0000: (PICK-UP A) [D:1.0000; C:1.0000]
+ 7.0000: (STACK A E) [D:1.0000; C:1.0000]
+ 8.0000: (UNSTACK B C) [D:1.0000; C:1.0000]
+ 9.0000: (PUT-DOWN B) [D:1.0000; C:1.0000]
+ 10.0000: (UNSTACK A E) [D:1.0000; C:1.0000]
+ 11.0000: (PUT-DOWN A) [D:1.0000; C:1.0000]
+ 12.0000: (PICK-UP D) [D:1.0000; C:1.0000]
+ 13.0000: (STACK D C) [D:1.0000; C:1.0000]
+ 14.0000: (PICK-UP B) [D:1.0000; C:1.0000]
+ 15.0000: (STACK B D) [D:1.0000; C:1.0000]
+ 16.0000: (PICK-UP E) [D:1.0000; C:1.0000]
+ 17.0000: (STACK E B) [D:1.0000; C:1.0000]
+ 18.0000: (PICK-UP A) [D:1.0000; C:1.0000]
+ 19.0000: (STACK A E) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.01
+Search time:     0.01
+Actions:         20
+Execution cost:  20.00
+Duration:        20.000
+Plan quality:    20.000
+
+__MEMKB 109952

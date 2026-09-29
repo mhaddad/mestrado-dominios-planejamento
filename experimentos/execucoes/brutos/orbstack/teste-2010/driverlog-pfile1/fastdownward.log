@@ -1,0 +1,61 @@
+Parsing...
+Instantiating...
+Starting instantiation [35 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+2 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+6 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+8 variables of 8 necessary
+88 of 88 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 112 to 84)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 112 unary operators... done! [112 unary operators]
+Best heuristic value: 3/8 [expanded 1 state(s)]
+Best heuristic value: 3/7 [expanded 2 state(s)]
+Best heuristic value: 3/6 [expanded 3 state(s)]
+Best heuristic value: 2/5 [expanded 4 state(s)]
+Best heuristic value: 1/4 [expanded 5 state(s)]
+Best heuristic value: 1/2 [expanded 8 state(s)]
+Best heuristic value: 1/1 [expanded 9 state(s)]
+Solution found!
+walk driver1 s2 p1-2
+walk driver1 p1-2 s1
+walk driver1 s1 p1-0
+walk driver1 p1-0 s0
+board-truck driver1 truck1 s0
+drive-truck truck1 s0 s1 driver1
+disembark-truck driver1 truck1 s1
+Plan length: 7 step(s).
+Expanded 10 state(s).
+Generated 63 state(s).
+Cache hits: 20
+Cache misses: 0
+Search time: 0.02 seconds
+Total time: 0.08 seconds
+TEMPO=2.19 s MEMORIA=13396 KB

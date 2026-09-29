@@ -1,0 +1,70 @@
+
+ipp: parsing domain file
+domain 'GROUNDED-STRIPS-TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'GROUNDED-STRIPS-TPP' defined
+ ... done.
+
+
+AND has only one son (anymore)
+AND has only one son (anymore)
+instantiated 14 actions
+
+
+time:   0,    34 facts and       0 exclusive pairs (   17,       0 positives)
+              35 ops   and       2 exclusive pairs
+time:   1,    36 facts and       2 exclusive pairs (   18,       1 positives)
+              42 ops   and      45 exclusive pairs
+time:   2,    52 facts and      82 exclusive pairs (   26,      25 positives)
+              62 ops   and     225 exclusive pairs
+time:   3,    60 facts and      90 exclusive pairs (   30,      29 positives)
+              70 ops   and     249 exclusive pairs
+time:   4,    60 facts and      74 exclusive pairs (   30,      25 positives)
+              74 ops   and     313 exclusive pairs
+time:   5,    68 facts and     146 exclusive pairs (   34,      45 positives)
+
+goals first reachable in 5 time steps
+
+
+found plan as follows:
+
+time step    0: DRIVE-TRUCK1-DEPOT1-MARKET1
+time step    1: BUY-TRUCK1-GOODS4-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS3-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    2: LOAD-GOODS1-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS2-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS3-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS4-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    3: DRIVE-TRUCK1-MARKET1-DEPOT1
+time step    4: UNLOAD-GOODS1-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS2-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS3-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS4-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+
+
+
+number of actions tried:         14
+number of noops tried  :          6
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 14 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.59 MBytes for graph
+               0.01 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2688

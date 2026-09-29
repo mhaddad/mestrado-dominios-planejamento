@@ -1,0 +1,74 @@
+
+Parsing domain..... logistics..... done.
+Parsing problem..... logistics-12-0..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 908 candidates, 308 actions
+Finalization time : 0.00 -> 168 fluents, 17 init
+
+39 19 16 13 2 
+
+0: (LOAD-TRUCK obj11 tru1 pos1) [1]
+1: (LOAD-TRUCK obj41 tru4 pos4) [1]
+2: (LOAD-TRUCK obj33 tru3 pos3) [1]
+3: (LOAD-TRUCK obj32 tru3 pos3) [1]
+4: (DRIVE-TRUCK tru3 pos3 apt3 cit3) [1]
+5: (LOAD-TRUCK obj12 tru1 pos1) [1]
+6: (LOAD-TRUCK obj23 tru2 pos2) [1]
+7: (LOAD-TRUCK obj13 tru1 pos1) [1]
+8: (DRIVE-TRUCK tru1 pos1 apt1 cit1) [1]
+9: (LOAD-TRUCK obj21 tru2 pos2) [1]
+10: (UNLOAD-TRUCK obj13 tru1 apt1) [1]
+11: (FLY-AIRPLANE apn1 apt1 apt3) [1]
+12: (UNLOAD-TRUCK obj33 tru3 apt3) [1]
+13: (UNLOAD-TRUCK obj12 tru1 apt1) [1]
+14: (UNLOAD-TRUCK obj32 tru3 apt3) [1]
+15: (UNLOAD-TRUCK obj11 tru1 apt1) [1]
+16: (LOAD-AIRPLANE obj33 apn1 apt3) [1]
+17: (LOAD-AIRPLANE obj32 apn1 apt3) [1]
+18: (DRIVE-TRUCK tru4 pos4 apt4 cit4) [1]
+19: (DRIVE-TRUCK tru2 pos2 apt2 cit2) [1]
+20: (UNLOAD-TRUCK obj21 tru2 apt2) [1]
+21: (UNLOAD-TRUCK obj23 tru2 apt2) [1]
+22: (UNLOAD-TRUCK obj41 tru4 apt4) [1]
+23: (FLY-AIRPLANE apn1 apt3 apt1) [1]
+24: (LOAD-AIRPLANE obj11 apn1 apt1) [1]
+25: (LOAD-AIRPLANE obj12 apn1 apt1) [1]
+26: (DRIVE-TRUCK tru2 apt2 pos2 cit2) [1]
+27: (DRIVE-TRUCK tru4 apt4 pos4 cit4) [1]
+28: (FLY-AIRPLANE apn1 apt1 apt2) [1]
+29: (DRIVE-TRUCK tru2 pos2 apt2 cit2) [1]
+30: (UNLOAD-AIRPLANE obj33 apn1 apt2) [1]
+31: (LOAD-AIRPLANE obj23 apn1 apt2) [1]
+32: (DRIVE-TRUCK tru4 pos4 apt4 cit4) [1]
+33: (LOAD-TRUCK obj33 tru2 apt2) [1]
+34: (FLY-AIRPLANE apn1 apt2 apt4) [1]
+35: (UNLOAD-AIRPLANE obj32 apn1 apt4) [1]
+36: (UNLOAD-AIRPLANE obj11 apn1 apt4) [1]
+37: (UNLOAD-AIRPLANE obj12 apn1 apt4) [1]
+38: (DRIVE-TRUCK tru2 apt2 pos2 cit2) [1]
+39: (UNLOAD-AIRPLANE obj23 apn1 apt4) [1]
+40: (LOAD-AIRPLANE obj41 apn1 apt4) [1]
+41: (LOAD-TRUCK obj23 tru4 apt4) [1]
+42: (DRIVE-TRUCK tru4 apt4 pos4 cit4) [1]
+43: (UNLOAD-TRUCK obj33 tru2 pos2) [1]
+44: (UNLOAD-TRUCK obj23 tru4 pos4) [1]
+45: (FLY-AIRPLANE apn1 apt4 apt1) [1]
+46: (UNLOAD-AIRPLANE obj41 apn1 apt1) [1]
+
+Valid plan : 47 actions.
+Computed nodes : 47
+Evaluated nodes : 6
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 52.81 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2816

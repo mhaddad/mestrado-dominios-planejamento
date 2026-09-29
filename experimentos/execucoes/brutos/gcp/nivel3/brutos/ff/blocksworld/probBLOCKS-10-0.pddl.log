@@ -1,0 +1,100 @@
+
+ff: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ff: parsing problem file
+problem 'BLOCKS-10-0' defined
+ ... done.
+
+
+got 131 facts
+
+Cueing down from goal distance:    9 into depth [1][2]
+                                   8            [1][2]
+                                   7            [1][2]
+                                   6            [1][2]
+                                   5            [1][2][3][4]
+                                   4            [1][2]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: UNSTACK C E
+        1: PUT-DOWN C
+        2: UNSTACK E J
+        3: PUT-DOWN E
+        4: UNSTACK J B
+        5: PUT-DOWN J
+        6: UNSTACK B G
+        7: PUT-DOWN B
+        8: UNSTACK G H
+        9: PUT-DOWN G
+       10: UNSTACK H A
+       11: PUT-DOWN H
+       12: UNSTACK A D
+       13: PUT-DOWN A
+       14: UNSTACK D I
+       15: PUT-DOWN D
+       16: PICK-UP G
+       17: STACK G I
+       18: PICK-UP A
+       19: STACK A G
+       20: PICK-UP B
+       21: STACK B A
+       22: PICK-UP H
+       23: STACK H B
+       24: PICK-UP E
+       25: STACK E H
+       26: PICK-UP J
+       27: STACK J E
+       28: PICK-UP F
+       29: STACK F J
+       30: PICK-UP C
+       31: STACK C F
+       32: PICK-UP D
+       33: STACK D C
+     
+
+time spent:    0.00 seconds instantiating 220 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 131 facts and 220 actions
+               0.00 seconds creating final representation with 131 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 63 states, to a max depth of 4
+               0.00 seconds total time
+
+__MEMKB 3968

@@ -1,0 +1,58 @@
+
+ipp: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'LOGISTICS-5-2' defined
+ ... done.
+
+
+instantiated 130 actions
+
+
+time:   0,    52 facts and       0 exclusive pairs (    9,       0 positives)
+              61 ops   and      24 exclusive pairs
+time:   1,    70 facts and      42 exclusive pairs (   18,      15 positives)
+              88 ops   and     201 exclusive pairs
+time:   2,    70 facts and      18 exclusive pairs (   18,       9 positives)
+              94 ops   and     249 exclusive pairs
+time:   3,    76 facts and      36 exclusive pairs (   24,      27 positives)
+
+goals first reachable in 3 time steps
+
+
+found plan as follows:
+
+time step    0: LOAD-TRUCK OBJ23 TRU2 POS2
+                LOAD-TRUCK OBJ12 TRU1 POS1
+                LOAD-TRUCK OBJ21 TRU2 POS2
+time step    1: DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+                DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+time step    2: UNLOAD-TRUCK OBJ23 TRU2 APT2
+                UNLOAD-TRUCK OBJ12 TRU1 APT1
+                UNLOAD-TRUCK OBJ21 TRU2 APT2
+
+
+
+number of actions tried:          8
+number of noops tried  :         11
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 130 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.07 MBytes for domain representation
+               0.65 MBytes for graph
+               0.00 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2688

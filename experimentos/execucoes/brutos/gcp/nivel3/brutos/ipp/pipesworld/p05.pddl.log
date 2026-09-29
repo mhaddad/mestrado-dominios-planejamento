@@ -1,0 +1,66 @@
+
+ipp: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'P05-NET1-B10-G4_RT0_INSTANCE' defined
+ ... done.
+
+
+instantiated 768 actions
+
+
+time:   0,   108 facts and       0 exclusive pairs (   31,       0 positives)
+             117 ops   and     112 exclusive pairs
+time:   1,   156 facts and     684 exclusive pairs (   58,     246 positives)
+             262 ops   and    9413 exclusive pairs
+time:   2,   181 facts and     777 exclusive pairs (   78,     456 positives)
+             466 ops   and   45413 exclusive pairs
+time:   3,   197 facts and     935 exclusive pairs (   92,     649 positives)
+             664 ops   and  113473 exclusive pairs
+time:   4,   208 facts and    1001 exclusive pairs (  101,     741 positives)
+             853 ops   and  199418 exclusive pairs
+time:   5,   213 facts and     859 exclusive pairs (  106,     701 positives)
+
+goals first reachable in 5 time steps
+
+             958 ops   and  247008 exclusive pairs
+time:   6,   216 facts and     846 exclusive pairs (  108,     681 positives)
+
+found plan as follows:
+
+time step    0: POP-UNITARYPIPE S12 B0 A1 A2 B6 RAT-A RAT-A TA1-1-RAT-A TA2-1-RAT-A
+                POP-UNITARYPIPE S13 B3 A1 A3 B2 OCA1 GASOLEO TA1-2-GASOLEO TA3-1-OCA1
+time step    1: PUSH-UNITARYPIPE S12 B7 A1 A2 B0 GASOLEO RAT-A TA1-2-GASOLEO TA2-1-RAT-A
+                POP-UNITARYPIPE S13 B1 A1 A3 B3 GASOLEO OCA1 TA1-1-OCA1 TA3-1-GASOLEO
+time step    2: PUSH-UNITARYPIPE S13 B6 A1 A3 B1 RAT-A GASOLEO TA1-1-RAT-A TA3-2-GASOLEO
+                PUSH-UNITARYPIPE S12 B3 A1 A2 B7 OCA1 GASOLEO TA1-1-OCA1 TA2-2-GASOLEO
+time step    3: POP-UNITARYPIPE S12 B9 A1 A2 B3 OC1B OCA1 TA1-1-OCA1 TA2-1-OC1B
+                PUSH-UNITARYPIPE S13 B4 A1 A3 B6 LCO RAT-A TA1-2-LCO TA3-1-RAT-A
+time step    4: POP-UNITARYPIPE S12 B5 A1 A2 B9 GASOLEO OC1B TA1-1-OC1B TA2-2-GASOLEO
+time step    5: POP-UNITARYPIPE S12 B0 A1 A2 B5 RAT-A GASOLEO TA1-2-GASOLEO TA2-1-RAT-A
+
+
+
+number of actions tried:      28605
+number of noops tried  :      65492
+
+had    1104 simple memoizing hits
+had      52 partial memoizing hits
+had    6977 subset memoizing hits
+
+time spent:    0.01 seconds instantiating 768 operators
+               0.00 seconds building graph
+               0.03 seconds calculating exclusions
+               0.16 seconds searching graph
+               0.20 seconds total time
+
+Memory used:   0.67 MBytes for domain representation
+               4.15 MBytes for graph
+               1.65 MBytes for exclusions
+               0.43 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 9864

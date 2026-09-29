@@ -1,0 +1,38 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob1818..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 228 candidates, 72 actions
+Finalization time : 0.00 -> 38 fluents, 12 init
+
+10 7 3 
+
+0: (LIFT hoist0 crate1 pallet0 depot0) [1]
+1: (DRIVE truck0 distributor1 depot0) [1]
+2: (LOAD hoist0 crate1 truck0 depot0) [1]
+3: (LIFT hoist1 crate0 pallet1 distributor0) [1]
+4: (DRIVE truck0 depot0 distributor0) [1]
+5: (LOAD hoist1 crate0 truck0 distributor0) [1]
+6: (UNLOAD hoist1 crate1 truck0 distributor0) [1]
+7: (DROP hoist1 crate1 pallet1 distributor0) [1]
+8: (DRIVE truck0 distributor0 distributor1) [1]
+9: (UNLOAD hoist2 crate0 truck0 distributor1) [1]
+10: (DROP hoist2 crate0 pallet2 distributor1) [1]
+
+Valid plan : 11 actions.
+Computed nodes : 11
+Evaluated nodes : 4
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 55.00 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2560

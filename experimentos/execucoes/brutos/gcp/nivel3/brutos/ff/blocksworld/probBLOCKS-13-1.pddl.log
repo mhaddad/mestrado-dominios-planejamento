@@ -1,0 +1,130 @@
+
+ff: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ff: parsing problem file
+problem 'BLOCKS-13-1' defined
+ ... done.
+
+
+got 209 facts
+
+Cueing down from goal distance:   11 into depth [1][2]
+                                  10            [1][2]
+                                   9            [1][2]
+                                   8            [1][2]
+                                   7            [1][2]
+                                   6            [1][2]
+                                   5            [1][2]
+                                   4            [1][2]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    6 into depth [1][2][3][4][5][6][7][8][9][10][11]
+                                   5            [1][2][3]
+                                   4            [1]
+                                   3            [1][2][3]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    2 into depth [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: UNSTACK J E
+        1: PUT-DOWN J
+        2: UNSTACK E D
+        3: PUT-DOWN E
+        4: UNSTACK D C
+        5: PUT-DOWN D
+        6: UNSTACK C A
+        7: PUT-DOWN C
+        8: UNSTACK A L
+        9: PUT-DOWN A
+       10: UNSTACK L H
+       11: PUT-DOWN L
+       12: UNSTACK H G
+       13: PUT-DOWN H
+       14: UNSTACK G M
+       15: PUT-DOWN G
+       16: UNSTACK M I
+       17: PUT-DOWN M
+       18: UNSTACK I F
+       19: PUT-DOWN I
+       20: UNSTACK B K
+       21: PUT-DOWN B
+       22: PICK-UP I
+       23: STACK I B
+       24: PICK-UP H
+       25: STACK H I
+       26: PICK-UP G
+       27: STACK G H
+       28: PICK-UP K
+       29: STACK K G
+       30: PICK-UP F
+       31: STACK F K
+       32: PICK-UP J
+       33: STACK J F
+       34: PICK-UP C
+       35: STACK C J
+       36: PICK-UP M
+       37: STACK M C
+       38: PICK-UP L
+       39: STACK L M
+       40: PICK-UP E
+       41: STACK E L
+       42: PICK-UP A
+       43: STACK A E
+       44: PICK-UP D
+       45: STACK D A
+     
+
+time spent:    0.00 seconds instantiating 364 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 209 facts and 364 actions
+               0.00 seconds creating final representation with 209 relevant facts
+               0.00 seconds building connectivity graph
+               1.13 seconds searching, evaluating 85942 states, to a max depth of 11
+               1.13 seconds total time
+
+__MEMKB 45184

@@ -1,0 +1,61 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p02.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p02.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p02.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p02.pddl
+Problem name: grounded-pathways-02
+Facts loaded.
+time: 1, 27 facts and 91 exclusive pairs.
+time: 2, 40 facts and 117 exclusive pairs.
+time: 3, 45 facts and 62 exclusive pairs.
+time: 4, 55 facts and 124 exclusive pairs.
+time: 5, 66 facts and 206 exclusive pairs.
+time: 6, 69 facts and 140 exclusive pairs.
+time: 7, 71 facts and 147 exclusive pairs.
+Goals first reachable in 7 steps.
+1100 nodes created.
+
+####################################################
+goals at time 8:
+  goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 62
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-ge2-l1-l0)
+2 (initialize-ge2)
+2 (choose-e2f13p1-dp12-l2-l1)
+3 (initialize-e2f13p1-dp12)
+3 (choose-e2f4-dp12p1-l3-l2)
+4 (initialize-e2f4-dp12p1)
+4 (associate-e2f13p1-dp12-ge2-e2f13p1-dp12-ge2)
+5 (synthesize-e2f13p1-dp12-ge2-p107)
+5 (synthesize-e2f13p1-dp12-ge2-cycdp1)
+6 (dummy-action-2-2)
+6 (associate-p107-e2f4-dp12p1-p107-e2f4-dp12p1)
+7 (dummy-action-1-1)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+8 entries in hash table, 3 hash hits, avg set size 3
+17 total set-creation steps (entries + hits + plan length - 1)
+30 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 7
+
+####################################################
+__MEMKB 13056

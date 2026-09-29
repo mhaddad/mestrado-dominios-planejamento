@@ -1,0 +1,114 @@
+
+ipp: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'GRIPPER-12' defined
+ ... done.
+
+
+instantiated 98 actions
+
+
+time:   0,    52 facts and       0 exclusive pairs (   15,       0 positives)
+              77 ops   and     242 exclusive pairs
+time:   1,    92 facts and     270 exclusive pairs (   40,     217 positives)
+             142 ops   and    2013 exclusive pairs
+time:   2,    92 facts and     194 exclusive pairs (   40,     193 positives)
+             166 ops   and    3723 exclusive pairs
+time:   3,   104 facts and     254 exclusive pairs (   52,     241 positives)
+
+goals first reachable in 3 time steps
+
+             202 ops   and    6567 exclusive pairs
+time:   4,   104 facts and     230 exclusive pairs (   52,     229 positives)
+
+graph has leveled off at time step 5
+
+             202 ops   and    6003 exclusive pairs
+time:   5,   104 facts and     230 exclusive pairs (   52,     229 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    6
+expanding wave front to level    7
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+expanding wave front to level   21
+expanding wave front to level   22
+expanding wave front to level   23
+
+
+found plan as follows:
+
+time step    0: PICK BALL12 ROOMA RIGHT
+                PICK BALL11 ROOMA LEFT
+time step    1: MOVE ROOMA ROOMB
+time step    2: DROP BALL12 ROOMB RIGHT
+                DROP BALL11 ROOMB LEFT
+time step    3: MOVE ROOMB ROOMA
+time step    4: PICK BALL10 ROOMA RIGHT
+                PICK BALL9 ROOMA LEFT
+time step    5: MOVE ROOMA ROOMB
+time step    6: DROP BALL10 ROOMB RIGHT
+                DROP BALL9 ROOMB LEFT
+time step    7: MOVE ROOMB ROOMA
+time step    8: PICK BALL8 ROOMA RIGHT
+                PICK BALL7 ROOMA LEFT
+time step    9: MOVE ROOMA ROOMB
+time step   10: DROP BALL8 ROOMB RIGHT
+                DROP BALL7 ROOMB LEFT
+time step   11: MOVE ROOMB ROOMA
+time step   12: PICK BALL6 ROOMA RIGHT
+                PICK BALL5 ROOMA LEFT
+time step   13: MOVE ROOMA ROOMB
+time step   14: DROP BALL6 ROOMB RIGHT
+                DROP BALL5 ROOMB LEFT
+time step   15: MOVE ROOMB ROOMA
+time step   16: PICK BALL4 ROOMA RIGHT
+                PICK BALL3 ROOMA LEFT
+time step   17: MOVE ROOMA ROOMB
+time step   18: DROP BALL4 ROOMB RIGHT
+                DROP BALL3 ROOMB LEFT
+time step   19: MOVE ROOMB ROOMA
+time step   20: PICK BALL2 ROOMA RIGHT
+                PICK BALL1 ROOMA LEFT
+time step   21: MOVE ROOMA ROOMB
+time step   22: DROP BALL2 ROOMB RIGHT
+                DROP BALL1 ROOMB LEFT
+
+
+
+number of actions tried:    4848314
+number of noops tried  :   36504162
+
+had 4695558 simple memoizing hits
+had       0 partial memoizing hits
+had    4248 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 98 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+              12.21 seconds searching graph
+              12.21 seconds total time
+
+Memory used:   0.06 MBytes for domain representation
+               1.20 MBytes for graph
+               0.05 MBytes for exclusions
+              59.36 MBytes for memoization
+             648.46 MBytes for wave front
+
+
+
+__MEMKB 758784

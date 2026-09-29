@@ -1,0 +1,74 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-4-1' defined
+ ... done.
+
+
+instantiated 32 actions
+
+
+time:   0,    29 facts and       0 exclusive pairs (    6,       0 positives)
+              30 ops   and       5 exclusive pairs
+time:   1,    34 facts and      20 exclusive pairs (    8,       6 positives)
+              37 ops   and      57 exclusive pairs
+time:   2,    35 facts and      19 exclusive pairs (    9,       6 positives)
+              40 ops   and      87 exclusive pairs
+time:   3,    38 facts and      34 exclusive pairs (   11,      16 positives)
+              46 ops   and     175 exclusive pairs
+time:   4,    40 facts and      38 exclusive pairs (   13,      24 positives)
+              51 ops   and     259 exclusive pairs
+time:   5,    43 facts and      52 exclusive pairs (   15,      36 positives)
+              59 ops   and     438 exclusive pairs
+time:   6,    47 facts and      88 exclusive pairs (   19,      68 positives)
+              68 ops   and     704 exclusive pairs
+time:   7,    49 facts and      87 exclusive pairs (   20,      69 positives)
+              76 ops   and     964 exclusive pairs
+time:   8,    54 facts and     144 exclusive pairs (   25,     126 positives)
+              86 ops   and    1381 exclusive pairs
+time:   9,    54 facts and     118 exclusive pairs (   25,     110 positives)
+              86 ops   and    1298 exclusive pairs
+time:  10,    54 facts and      96 exclusive pairs (   25,      96 positives)
+
+goals first reachable in 10 time steps
+
+
+found plan as follows:
+
+time step    0: UNSTACK B C
+time step    1: PUT-DOWN B
+time step    2: UNSTACK C A
+time step    3: PUT-DOWN C
+time step    4: UNSTACK A D
+time step    5: STACK A B
+time step    6: PICK-UP C
+time step    7: STACK C A
+time step    8: PICK-UP D
+time step    9: STACK D C
+
+
+
+number of actions tried:         10
+number of noops tried  :         22
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 32 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.74 MBytes for graph
+               0.01 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 2816

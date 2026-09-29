@@ -1,0 +1,119 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+156 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+5 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+48 variables of 161 necessary
+3093 of 3589 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 3123 to 3123)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 3131 unary operators... done! [3123 unary operators]
+Best heuristic value: 76/39 [expanded 1 state(s)]
+Best heuristic value: 60/32 [expanded 2 state(s)]
+Best heuristic value: 53/32 [expanded 3 state(s)]
+Best heuristic value: 53/31 [expanded 4 state(s)]
+Best heuristic value: 45/31 [expanded 5 state(s)]
+Best heuristic value: 44/30 [expanded 7 state(s)]
+Best heuristic value: 43/29 [expanded 8 state(s)]
+Best heuristic value: 42/28 [expanded 9 state(s)]
+Best heuristic value: 41/27 [expanded 10 state(s)]
+Best heuristic value: 40/26 [expanded 11 state(s)]
+Best heuristic value: 39/25 [expanded 12 state(s)]
+Best heuristic value: 38/24 [expanded 13 state(s)]
+Best heuristic value: 37/23 [expanded 14 state(s)]
+Best heuristic value: 36/22 [expanded 15 state(s)]
+Best heuristic value: 35/21 [expanded 16 state(s)]
+Best heuristic value: 34/20 [expanded 17 state(s)]
+Best heuristic value: 33/19 [expanded 18 state(s)]
+Best heuristic value: 32/18 [expanded 19 state(s)]
+Best heuristic value: 31/17 [expanded 20 state(s)]
+Best heuristic value: 30/16 [expanded 21 state(s)]
+Best heuristic value: 24/15 [expanded 22 state(s)]
+Best heuristic value: 22/15 [expanded 23 state(s)]
+Best heuristic value: 19/14 [expanded 25 state(s)]
+Best heuristic value: 18/13 [expanded 26 state(s)]
+Best heuristic value: 17/12 [expanded 27 state(s)]
+Best heuristic value: 13/11 [expanded 29 state(s)]
+Best heuristic value: 12/10 [expanded 31 state(s)]
+Best heuristic value: 11/9 [expanded 33 state(s)]
+Best heuristic value: 10/8 [expanded 35 state(s)]
+Best heuristic value: 9/7 [expanded 37 state(s)]
+Best heuristic value: 8/6 [expanded 39 state(s)]
+Best heuristic value: 7/5 [expanded 41 state(s)]
+Best heuristic value: 6/5 [expanded 43 state(s)]
+Best heuristic value: 4/4 [expanded 44 state(s)]
+Best heuristic value: 3/3 [expanded 45 state(s)]
+Best heuristic value: 2/2 [expanded 46 state(s)]
+Best heuristic value: 1/1 [expanded 47 state(s)]
+Solution found!
+switch_on instrument6 satellite1
+turn_to satellite1 star0 phenomenon21
+calibrate satellite1 instrument6 star0
+turn_to satellite1 phenomenon21 star0
+take_image satellite1 phenomenon21 instrument6 image1
+turn_to satellite1 phenomenon18 phenomenon21
+take_image satellite1 phenomenon18 instrument6 image1
+turn_to satellite1 star9 phenomenon18
+take_image satellite1 star9 instrument6 image1
+turn_to satellite1 star10 star9
+take_image satellite1 star10 instrument6 image1
+turn_to satellite1 planet7 star10
+take_image satellite1 planet7 instrument6 image1
+turn_to satellite1 planet19 planet7
+take_image satellite1 planet19 instrument6 thermograph2
+turn_to satellite1 star15 planet19
+take_image satellite1 star15 instrument6 thermograph2
+turn_to satellite3 phenomenon5 phenomenon16
+switch_on instrument11 satellite3
+turn_to satellite3 star1 phenomenon5
+calibrate satellite3 instrument11 star1
+turn_to satellite3 phenomenon5 star1
+take_image satellite3 phenomenon5 instrument11 thermograph4
+switch_on instrument1 satellite0
+turn_to satellite1 phenomenon13 star15
+take_image satellite1 phenomenon13 instrument6 thermograph2
+turn_to satellite3 phenomenon17 phenomenon5
+take_image satellite3 phenomenon17 instrument11 thermograph4
+turn_to satellite3 planet20 phenomenon17
+take_image satellite3 planet20 instrument11 thermograph4
+turn_to satellite0 star0 star8
+calibrate satellite0 instrument1 star0
+turn_to satellite0 star22 star0
+take_image satellite0 star22 instrument1 thermograph3
+turn_to satellite0 star8 star22
+take_image satellite0 star8 instrument1 thermograph3
+Plan length: 36 step(s).
+Expanded 48 state(s).
+Generated 6122 state(s).
+Cache hits: 3819
+Cache misses: 317
+Search time: 0.01 seconds
+Total time: 0.02 seconds
+__MEMKB 22296

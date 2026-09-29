@@ -1,0 +1,55 @@
+
+Parsing domain file:  domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined ... done.
+Parsing problem file:  problem 'GROUNDED-PATHWAYS-02' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      80
+Number of conditional actions :       0
+Number of facts               :      70
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.01 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (CHOOSE_GE2_L1_L0) [D:1.0000; C:1.0000]
+ 1.0000: (INITIALIZE_GE2) [D:1.0000; C:1.0000]
+ 1.0000: (CHOOSE_E2F13P1-DP12_L2_L1) [D:1.0000; C:1.0000]
+ 2.0000: (INITIALIZE_E2F13P1-DP12) [D:1.0000; C:1.0000]
+ 2.0000: (CHOOSE_E2F4-DP12P1_L3_L2) [D:1.0000; C:1.0000]
+ 3.0000: (ASSOCIATE_E2F13P1-DP12_GE2_E2F13P1-DP12-GE2) [D:1.0000; C:1.0000]
+ 3.0000: (INITIALIZE_E2F4-DP12P1) [D:1.0000; C:1.0000]
+ 4.0000: (SYNTHESIZE_E2F13P1-DP12-GE2_CYCDP1) [D:1.0000; C:1.0000]
+ 4.0000: (SYNTHESIZE_E2F13P1-DP12-GE2_P107) [D:1.0000; C:1.0000]
+ 5.0000: (DUMMY-ACTION-2-2) [D:1.0000; C:1.0000]
+ 5.0000: (ASSOCIATE_P107_E2F4-DP12P1_P107-E2F4-DP12P1) [D:1.0000; C:1.0000]
+ 6.0000: (DUMMY-ACTION-1-1) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.01
+Search time:     0.00
+Actions:         12
+Execution cost:  12.00
+Duration:        7.000
+Plan quality:    12.000
+
+__MEMKB 110080

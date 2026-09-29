@@ -1,0 +1,60 @@
+
+ff: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ff: parsing problem file
+problem 'DLOG-3-3-5' defined
+ ... done.
+
+
+got 66 facts
+
+Cueing down from goal distance:   10 into depth [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK PACKAGE1 TRUCK3 S1
+        1: WALK DRIVER2 S2 P2-0
+        2: WALK DRIVER1 S2 P1-2
+        3: BOARD-TRUCK DRIVER3 TRUCK3 S1
+        4: WALK DRIVER2 P2-0 S0
+        5: WALK DRIVER1 P1-2 S1
+        6: DRIVE-TRUCK TRUCK3 S1 S2 DRIVER3
+        7: UNLOAD-TRUCK PACKAGE1 TRUCK3 S2
+        8: DISEMBARK-TRUCK DRIVER3 TRUCK3 S2
+        9: WALK DRIVER3 S2 P1-2
+       10: WALK DRIVER3 P1-2 S1
+       11: BOARD-TRUCK DRIVER3 TRUCK2 S1
+       12: DRIVE-TRUCK TRUCK2 S1 S0 DRIVER3
+     
+
+time spent:    0.00 seconds instantiating 318 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 66 facts and 222 actions
+               0.00 seconds creating final representation with 66 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 232 states, to a max depth of 1
+               0.00 seconds total time
+
+__MEMKB 3840

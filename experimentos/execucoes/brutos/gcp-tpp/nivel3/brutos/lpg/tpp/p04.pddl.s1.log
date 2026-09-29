@@ -1,0 +1,63 @@
+
+Parsing domain file:  domain 'GROUNDED-STRIPS-TPP-PROPOSITIONAL' defined ... done.
+Parsing problem file:  problem 'GROUNDED-STRIPS-TPP' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      14
+Number of conditional actions :       0
+Number of facts               :      34
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.01 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (DRIVE-TRUCK1-DEPOT1-MARKET1) [D:1.0000; C:1.0000]
+ 1.0000: (BUY-TRUCK1-GOODS4-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 1.0000: (BUY-TRUCK1-GOODS3-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 1.0000: (BUY-TRUCK1-GOODS2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 1.0000: (BUY-TRUCK1-GOODS1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 2.0000: (LOAD-GOODS4-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 2.0000: (LOAD-GOODS3-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 2.0000: (LOAD-GOODS2-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 2.0000: (LOAD-GOODS1-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 3.0000: (DRIVE-TRUCK1-MARKET1-DEPOT1) [D:1.0000; C:1.0000]
+ 4.0000: (UNLOAD-GOODS1-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 5.0000: (DRIVE-TRUCK1-DEPOT1-MARKET1) [D:1.0000; C:1.0000]
+ 6.0000: (DRIVE-TRUCK1-MARKET1-DEPOT1) [D:1.0000; C:1.0000]
+ 7.0000: (UNLOAD-GOODS2-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 8.0000: (DRIVE-TRUCK1-DEPOT1-MARKET1) [D:1.0000; C:1.0000]
+ 9.0000: (DRIVE-TRUCK1-MARKET1-DEPOT1) [D:1.0000; C:1.0000]
+ 10.0000: (UNLOAD-GOODS3-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+ 11.0000: (DRIVE-TRUCK1-DEPOT1-MARKET1) [D:1.0000; C:1.0000]
+ 12.0000: (DRIVE-TRUCK1-MARKET1-DEPOT1) [D:1.0000; C:1.0000]
+ 13.0000: (UNLOAD-GOODS4-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.01
+Search time:     0.00
+Actions:         20
+Execution cost:  20.00
+Duration:        14.000
+Plan quality:    20.000
+
+__MEMKB 109824

@@ -1,0 +1,44 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P11_PFILE11.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P11_PFILE11.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 150 facts and 965 exclusive pairs.
+time: 2, 159 facts and 1163 exclusive pairs.
+time: 3, 168 facts and 1052 exclusive pairs.
+time: 4, 259 facts and 971 exclusive pairs.
+Goals first reachable in 4 steps.
+7910 nodes created.
+
+####################################################
+goals at time 5:
+  pointing_satellite0_phenomenon9 pointing_satellite1_star4 pointing_satellite4_star11 have-image_star5_image3 have-image_planet6_infrared1 
+have-image_phenomenon7_infrared1 have-image_star8_image3 have-image_star10_thermograph2 have-image_star11_infrared1 have-image_planet13_spectrograph4 
+have-image_planet14_thermograph2 have-image_phenomenon15_infrared0 have-image_planet16_image3 have-image_star17_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 259 facts and 965 exclusive pairs.
+2805 new nodes added.
+
+####################################################
+goals at time 6:
+  pointing_satellite0_phenomenon9 pointing_satellite1_star4 pointing_satellite4_star11 have-image_star5_image3 have-image_planet6_infrared1 
+have-image_phenomenon7_infrared1 have-image_star8_image3 have-image_star10_thermograph2 have-image_star11_infrared1 have-image_planet13_spectrograph4 
+have-image_planet14_thermograph2 have-image_phenomenon15_infrared0 have-image_planet16_image3 have-image_star17_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan

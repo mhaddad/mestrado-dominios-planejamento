@@ -20,14 +20,13 @@ venv/
 .idea/
 .vscode/
 
-# Experimentos (Fase 3 em diante): o que é grande e reproduzível não é versionado.
-# Benchmarks são baixados por script; saídas brutas ficam fora do Git.
-# Resultados agregados (CSV) em experimentos/execucoes/ ou data/processed/ são versionados.
+# Experimentos (Fase 3 em diante): benchmarks e planejadores de terceiros são clones
+# públicos e não são versionados (repositório e commit nos registros de experimento).
+# As saídas brutas (experimentos/execucoes/brutos/, data/ipc-2011-2023/brutos/) são
+# versionadas desde 29/09/2026: as máquinas da Fase 3 foram apagadas e não há outra cópia.
 *.sif
 experimentos/benchmarks/ipc/
 experimentos/ferramentas/
-experimentos/execucoes/brutos/
-data/ipc-2011-2023/brutos/
 
 # saídas do teste de conversão (geradas por comando, não versionadas)
 redacao/teste-abnt/*.docx

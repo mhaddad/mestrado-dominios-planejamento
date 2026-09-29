@@ -1,0 +1,195 @@
+
+ff: parsing domain file
+domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'GROUNDED-PATHWAYS-09' defined
+ ... done.
+
+
+got 307 facts
+
+Cueing down from goal distance:   67 into depth [1]
+                                  66            [1]
+                                  65            [1]
+                                  64            [1]
+                                  63            [1]
+                                  59            [1]
+                                  58            [1]
+                                  57            [1]
+                                  56            [1]
+                                  55            [1]
+                                  54            [1]
+                                  53            [1]
+                                  52            [1]
+                                  51            [1]
+                                  50            [1]
+                                  49            [1]
+                                  48            [1]
+                                  47            [1]
+                                  46            [1]
+                                  45            [1]
+                                  44            [1]
+                                  43            [1]
+                                  42            [1]
+                                  41            [1]
+                                  40            [1]
+                                  39            [1]
+                                  38            [1]
+                                  37            [1]
+                                  36            [1][2]
+                                  35            [1]
+                                  34            [1]
+                                  33            [1]
+                                  32            [1]
+                                  31            [1][2]
+                                  30            [1]
+                                  29            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   67
+                          66
+                          65
+                          64
+                          63
+                          62
+                          61
+                          60
+                          59
+                          50
+                          49
+                          47
+                          46
+                          45
+                          44
+                          41
+                          40
+                          39
+                          38
+                          37
+                          36
+                          35
+                          34
+                          33
+                          32
+                          31
+                          30
+                          29
+                          28
+                          27
+                          26
+                          25
+                          24
+                          23
+                          22
+                          21
+                          20
+                          19
+                          18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: CHOOSE_CDC25C_L1_L0
+        1: INITIALIZE_CDC25C
+        2: CHOOSE_PRBP2_L2_L1
+        3: INITIALIZE_PRBP2
+        4: CHOOSE_PRB_L3_L2
+        5: INITIALIZE_PRB
+        6: CHOOSE_PLK1_L4_L3
+        7: INITIALIZE_PLK1
+        8: CHOOSE_CDK1P1P2_L5_L4
+        9: ASSOCIATE-WITH-CATALYZE_CDC25C_PLK1_CDC25CP1
+       10: INITIALIZE_CDK1P1P2
+       11: CHOOSE_P53_L6_L5
+       12: INITIALIZE_P53
+       13: CHOOSE_CYCH_L7_L6
+       14: CHOOSE_CDK7_L8_L7
+       15: SYNTHESIZE_P53_GADD45
+       16: INITIALIZE_CYCH
+       17: INITIALIZE_CDK7
+       18: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDC25CP1_CDK1P2
+       19: CHOOSE_P16_L9_L8
+       20: ASSOCIATE-WITH-CATALYZE_CDK1P2_CDC25CP1_CDK1
+       21: INITIALIZE_P16
+       22: CHOOSE_CYCB_L10_L9
+       23: DUMMY-ACTION-12-2
+       24: INITIALIZE_CYCB
+       25: CHOOSE_CKS1_L11_L10
+       26: INITIALIZE_CKS1
+       27: CHOOSE_SL1_L12_L11
+       28: ASSOCIATE_CDK7_CYCH_CDK7-CYCH
+       29: INITIALIZE_CDK1P1P2
+       30: INITIALIZE_CDK7
+       31: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDK7-CYCH_CDK1P1P2P3
+       32: ASSOCIATE-WITH-CATALYZE_CDK7_CDK7-CYCH_CDK7P1
+       33: ASSOCIATE_P16_CDK7P1_P16-CDK7P1
+       34: DUMMY-ACTION-13-1
+       35: ASSOCIATE_CDK1_GADD45_CDK1-GADD45
+       36: SYNTHESIZE_P53_GADD45
+       37: DUMMY-ACTION-11-1
+       38: INITIALIZE_CDK1P1P2
+       39: ASSOCIATE-WITH-CATALYZE_CDK1P1P2P3_CDC25CP1_CDK1P1P3
+       40: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDK7-CYCH_CDK1P1P2P3
+       41: ASSOCIATE-WITH-CATALYZE_CDK1P1P3_CDC25CP1_CDK1P3
+       42: DUMMY-ACTION-8-2
+       43: INITIALIZE_CDK1P1P2
+       44: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDC25CP1_CDK1P1
+       45: INITIALIZE_CDK1P1P2
+       46: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDC25CP1_CDK1P2
+       47: ASSOCIATE-WITH-CATALYZE_CDK1P2_CDK7-CYCH_CDK1P2P3
+       48: DUMMY-ACTION-7-1
+       49: ASSOCIATE_CDK1P1_CKS1_CDK1P1-CKS1
+       50: INITIALIZE_CKS1
+       51: DUMMY-ACTION-4-2
+       52: ASSOCIATE_CDK1P2P3_GADD45_CDK1P2P3-GADD45
+       53: SYNTHESIZE_P53_GADD45
+       54: DUMMY-ACTION-10-1
+       55: INITIALIZE_CDK1P1P2
+       56: ASSOCIATE_CDK1P1P2P3_CYCB_CDK1P1P2P3-CYCB
+       57: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDK7-CYCH_CDK1P1P2P3
+       58: DUMMY-ACTION-6-2
+       59: ASSOCIATE-WITH-CATALYZE_CDK1P1P2P3-CYCB_CDC25CP1_CDK1P1P3-CYCB
+       60: DUMMY-ACTION-5-2
+       61: ASSOCIATE-WITH-CATALYZE_CDK1P1P3-CYCB_CDC25CP1_CDK1P3-CYCB
+       62: DUMMY-ACTION-1-2
+       63: ASSOCIATE_CDK1P1P2P3_GADD45_CDK1P1P2P3-GADD45
+       64: SYNTHESIZE_P53_GADD45
+       65: DUMMY-ACTION-9-2
+       66: INITIALIZE_CDK1P1P2
+       67: ASSOCIATE-WITH-CATALYZE_CDK1P1P2_CDK7-CYCH_CDK1P1P2P3
+       68: ASSOCIATE-WITH-CATALYZE_CDK1P1P2P3_CDC25CP1_CDK1P2P3
+       69: ASSOCIATE_CDK1P3_CKS1_CDK1P3-CKS1
+       70: ASSOCIATE-WITH-CATALYZE_CDK1P2P3_CDC25CP1_CDK1P3
+       71: DUMMY-ACTION-3-2
+       72: ASSOCIATE_CDK1P3_GADD45_CDK1P3-GADD45
+       73: DUMMY-ACTION-2-1
+     
+
+time spent:    0.00 seconds instantiating 823 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 307 facts and 823 actions
+               0.00 seconds creating final representation with 307 relevant facts
+               0.00 seconds building connectivity graph
+               0.23 seconds searching, evaluating 11327 states, to a max depth of 2
+               0.23 seconds total time
+
+__MEMKB 14336

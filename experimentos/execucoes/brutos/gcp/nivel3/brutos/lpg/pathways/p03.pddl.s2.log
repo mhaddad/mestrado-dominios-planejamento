@@ -1,0 +1,61 @@
+
+Parsing domain file:  domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined ... done.
+Parsing problem file:  problem 'GROUNDED-PATHWAYS-03' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :     118
+Number of conditional actions :       0
+Number of facts               :      99
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (CHOOSE_GP_L1_L0) [D:1.0000; C:1.0000]
+ 1.0000: (INITIALIZE_GP) [D:1.0000; C:1.0000]
+ 1.0000: (CHOOSE_SP1_L2_L1) [D:1.0000; C:1.0000]
+ 2.0000: (INITIALIZE_SP1) [D:1.0000; C:1.0000]
+ 2.0000: (CHOOSE_CDK46P1_L3_L2) [D:1.0000; C:1.0000]
+ 3.0000: (ASSOCIATE_SP1_GP_SP1-GP) [D:1.0000; C:1.0000]
+ 3.0000: (INITIALIZE_CDK46P1) [D:1.0000; C:1.0000]
+ 4.0000: (SYNTHESIZE_SP1-GP_CYCD) [D:1.0000; C:1.0000]
+ 4.0000: (SYNTHESIZE_SP1-GP_CYCA) [D:1.0000; C:1.0000]
+ 4.0000: (INITIALIZE_GP) [D:1.0000; C:1.0000]
+ 4.0000: (SYNTHESIZE_SP1-GP_P107) [D:1.0000; C:1.0000]
+ 4.0000: (INITIALIZE_SP1) [D:1.0000; C:1.0000]
+ 5.0000: (ASSOCIATE_CDK46P1_CYCD_CDK46P1-CYCD) [D:1.0000; C:1.0000]
+ 5.0000: (DUMMY-ACTION-2-2) [D:1.0000; C:1.0000]
+ 5.0000: (ASSOCIATE_SP1_P107_SP1-P107) [D:1.0000; C:1.0000]
+ 6.0000: (DUMMY-ACTION-3-2) [D:1.0000; C:1.0000]
+ 6.0000: (ASSOCIATE_SP1-P107_GP_SP1-P107-GP) [D:1.0000; C:1.0000]
+ 7.0000: (DUMMY-ACTION-1-1) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.01
+Search time:     0.01
+Actions:         18
+Execution cost:  18.00
+Duration:        8.000
+Plan quality:    18.000
+
+__MEMKB 110464

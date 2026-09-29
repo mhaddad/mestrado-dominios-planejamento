@@ -1,0 +1,79 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P09-NET1-B14-G6_RT0_INSTANCE' defined
+ ... done.
+
+
+got 146 facts
+
+Cueing down from goal distance:   23 into depth [1]
+                                  22            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1][2]
+                                  14            [1]
+                                  13            [1]
+                                  11            [1]
+                                  10            [1]
+                                   7            [1][2][3]
+                                   5            [1][2][3][4][5][6]
+                                   4            [1]
+                                   3            [1][2][3][4][5][6][7][8][9][10][11][12][13]
+                                   2            [1][2]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   23
+                          20
+                          18
+                          16
+                          15
+                          14
+                          11
+                           9
+                           7
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: POP-UNITARYPIPE S13 B3 A1 A3 B7 LCO OCA1 TA1-2-OCA1 TA3-1-LCO
+        1: POP-UNITARYPIPE S12 B6 A1 A2 B2 LCO GASOLEO TA1-1-GASOLEO TA2-3-LCO
+        2: POP-UNITARYPIPE S12 B1 A1 A2 B6 LCO LCO TA1-3-LCO TA2-2-LCO
+        3: POP-UNITARYPIPE S12 B10 A1 A2 B1 OCA1 LCO TA1-2-LCO TA2-2-OCA1
+        4: PUSH-UNITARYPIPE S13 B0 A1 A3 B3 LCO LCO TA1-1-LCO TA3-3-LCO
+        5: POP-UNITARYPIPE S12 B5 A1 A2 B10 OCA1 OCA1 TA1-1-OCA1 TA2-1-OCA1
+        6: PUSH-UNITARYPIPE S13 B10 A1 A3 B0 OCA1 LCO TA1-2-OCA1 TA3-2-LCO
+        7: PUSH-UNITARYPIPE S13 B1 A1 A3 B10 LCO OCA1 TA1-3-LCO TA3-2-OCA1
+        8: POP-UNITARYPIPE S12 B4 A1 A2 B5 LCO OCA1 TA1-2-OCA1 TA2-1-LCO
+        9: POP-UNITARYPIPE S13 B12 A1 A3 B1 RAT-A LCO TA1-1-LCO TA3-2-RAT-A
+       10: POP-UNITARYPIPE S13 B8 A1 A3 B12 RAT-A RAT-A TA1-2-RAT-A TA3-1-RAT-A
+       11: POP-UNITARYPIPE S12 B9 A1 A2 B4 RAT-A LCO TA1-3-LCO TA2-2-RAT-A
+       12: POP-UNITARYPIPE S12 B11 A1 A2 B9 GASOLEO RAT-A TA1-1-RAT-A TA2-1-GASOLEO
+       13: PUSH-UNITARYPIPE S12 B12 A1 A2 B11 RAT-A GASOLEO TA1-2-RAT-A TA2-1-GASOLEO
+       14: POP-UNITARYPIPE S13 B0 A1 A3 B8 LCO RAT-A TA1-2-RAT-A TA3-3-LCO
+       15: PUSH-UNITARYPIPE S12 B8 A1 A2 B12 RAT-A RAT-A TA1-1-RAT-A TA2-2-RAT-A
+       16: PUSH-UNITARYPIPE S13 B9 A1 A3 B0 RAT-A LCO TA1-2-RAT-A TA3-3-LCO
+       17: POP-UNITARYPIPE S12 B13 A1 A2 B8 RAT-A RAT-A TA1-1-RAT-A TA2-1-RAT-A
+       18: POP-UNITARYPIPE S12 B11 A1 A2 B13 GASOLEO RAT-A TA1-2-RAT-A TA2-1-GASOLEO
+       19: PUSH-UNITARYPIPE S12 B8 A1 A2 B11 RAT-A GASOLEO TA1-1-RAT-A TA2-1-GASOLEO
+       20: PUSH-UNITARYPIPE S12 B1 A1 A2 B8 LCO RAT-A TA1-3-LCO TA2-1-RAT-A
+     
+
+time spent:    0.00 seconds instantiating 3460 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 148 facts and 3460 actions
+               0.00 seconds creating final representation with 146 relevant facts
+               0.00 seconds building connectivity graph
+               7.35 seconds searching, evaluating 59147 states, to a max depth of 13
+               7.35 seconds total time
+

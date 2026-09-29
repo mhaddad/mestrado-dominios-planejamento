@@ -1,0 +1,82 @@
+
+Parsing domain file:  domain 'GRIPPER-STRIPS' defined ... done.
+Parsing problem file:  problem 'GRIPPER-10' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      84
+Number of conditional actions :       0
+Number of facts               :      44
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+. solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (PICK BALL1 ROOMA LEFT) [D:1.0000; C:1.0000]
+ 0.0000: (PICK BALL3 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 1.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 2.0000: (DROP BALL3 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 3.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 4.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 5.0000: (DROP BALL1 ROOMB LEFT) [D:1.0000; C:1.0000]
+ 6.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 7.0000: (PICK BALL5 ROOMA LEFT) [D:1.0000; C:1.0000]
+ 8.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 9.0000: (DROP BALL5 ROOMB LEFT) [D:1.0000; C:1.0000]
+ 10.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 11.0000: (PICK BALL2 ROOMA LEFT) [D:1.0000; C:1.0000]
+ 11.0000: (PICK BALL4 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 12.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 13.0000: (DROP BALL4 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 14.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 15.0000: (PICK BALL6 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 16.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 17.0000: (DROP BALL6 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 18.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 19.0000: (PICK BALL7 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 20.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 21.0000: (DROP BALL7 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 22.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 23.0000: (PICK BALL8 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 24.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 25.0000: (DROP BALL8 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 26.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 27.0000: (PICK BALL9 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 28.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 29.0000: (DROP BALL9 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 30.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 31.0000: (PICK BALL10 ROOMA RIGHT) [D:1.0000; C:1.0000]
+ 32.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 33.0000: (DROP BALL10 ROOMB RIGHT) [D:1.0000; C:1.0000]
+ 34.0000: (MOVE ROOMB ROOMA) [D:1.0000; C:1.0000]
+ 35.0000: (MOVE ROOMA ROOMB) [D:1.0000; C:1.0000]
+ 36.0000: (DROP BALL2 ROOMB LEFT) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         39
+Execution cost:  39.00
+Duration:        37.000
+Plan quality:    39.000
+
+__MEMKB 109952

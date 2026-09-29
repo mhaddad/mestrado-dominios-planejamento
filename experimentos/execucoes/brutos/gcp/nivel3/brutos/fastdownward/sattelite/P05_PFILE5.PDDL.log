@@ -1,0 +1,84 @@
+Parsing...
+Instantiating...
+Starting instantiation [31 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+51 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+3 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+30 variables of 54 necessary
+339 of 497 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 360 to 360)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 366 unary operators... done! [360 unary operators]
+Best heuristic value: 33/18 [expanded 1 state(s)]
+Best heuristic value: 32/17 [expanded 2 state(s)]
+Best heuristic value: 31/17 [expanded 3 state(s)]
+Best heuristic value: 24/15 [expanded 4 state(s)]
+Best heuristic value: 20/15 [expanded 5 state(s)]
+Best heuristic value: 15/14 [expanded 7 state(s)]
+Best heuristic value: 14/13 [expanded 8 state(s)]
+Best heuristic value: 13/12 [expanded 9 state(s)]
+Best heuristic value: 12/11 [expanded 10 state(s)]
+Best heuristic value: 11/10 [expanded 11 state(s)]
+Best heuristic value: 10/9 [expanded 12 state(s)]
+Best heuristic value: 9/8 [expanded 13 state(s)]
+Best heuristic value: 7/7 [expanded 15 state(s)]
+Best heuristic value: 6/6 [expanded 17 state(s)]
+Best heuristic value: 5/5 [expanded 19 state(s)]
+Best heuristic value: 4/4 [expanded 21 state(s)]
+Best heuristic value: 3/3 [expanded 24 state(s)]
+Best heuristic value: 2/2 [expanded 25 state(s)]
+Best heuristic value: 1/1 [expanded 27 state(s)]
+Solution found!
+turn_to satellite0 phenomenon5 phenomenon8
+turn_to satellite2 star7 phenomenon5
+switch_on instrument7 satellite2
+turn_to satellite2 groundstation1 star7
+calibrate satellite2 instrument7 groundstation1
+turn_to satellite2 star7 groundstation1
+take_image satellite2 star7 instrument7 thermograph0
+turn_to satellite2 phenomenon5 star7
+take_image satellite2 phenomenon5 instrument7 image2
+turn_to satellite2 phenomenon8 phenomenon5
+take_image satellite2 phenomenon8 instrument7 image2
+switch_on instrument4 satellite1
+calibrate satellite1 instrument4 groundstation2
+turn_to satellite2 star3 phenomenon8
+take_image satellite2 star3 instrument7 thermograph0
+turn_to satellite1 planet9 groundstation2
+take_image satellite1 planet9 instrument4 spectrograph1
+turn_to satellite1 groundstation2 planet9
+turn_to satellite1 phenomenon6 groundstation2
+take_image satellite1 phenomenon6 instrument4 image2
+turn_to satellite1 groundstation2 phenomenon6
+Plan length: 21 step(s).
+Expanded 28 state(s).
+Generated 932 state(s).
+Cache hits: 1815
+Cache misses: 99
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 10648

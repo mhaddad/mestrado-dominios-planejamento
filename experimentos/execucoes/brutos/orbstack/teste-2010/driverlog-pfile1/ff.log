@@ -1,0 +1,41 @@
+
+ff: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ff: parsing problem file
+problem 'DLOG-2-2-2' defined
+ ... done.
+
+
+got 32 facts
+
+Cueing down from goal distance:    8 into depth [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: WALK DRIVER2 S2 P1-2
+        1: WALK DRIVER2 P1-2 S1
+        2: WALK DRIVER2 S1 P1-0
+        3: WALK DRIVER2 P1-0 S0
+        4: WALK DRIVER1 S2 P1-2
+        5: WALK DRIVER1 P1-2 S1
+        6: BOARD-TRUCK DRIVER2 TRUCK1 S0
+        7: DRIVE-TRUCK TRUCK1 S0 S1 DRIVER2
+     
+
+time spent:    0.04 seconds instantiating 120 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 32 facts and 88 actions
+               0.00 seconds creating final representation with 32 relevant facts
+               0.01 seconds building connectivity graph
+               0.01 seconds searching, evaluating 9 states, to a max depth of 1
+               0.06 seconds total time
+
+TEMPO=0.14 s MEMORIA=12232 KB

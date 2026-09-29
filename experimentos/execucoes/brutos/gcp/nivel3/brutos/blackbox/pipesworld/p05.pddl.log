@@ -1,0 +1,79 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p05.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pipesworld/p05.pddl
+Problem name: p05-net1-b10-g4-rt0-instance
+Facts loaded.
+time: 1, 280 facts and 125 exclusive pairs.
+time: 2, 305 facts and 431 exclusive pairs.
+time: 3, 320 facts and 649 exclusive pairs.
+time: 4, 330 facts and 777 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 335 facts and 769 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 339 facts and 716 exclusive pairs.
+Goals first reachable in 6 steps.
+5579 nodes created.
+
+####################################################
+goals at time 7:
+  on_b6_a3 on_b7_a2 on_b9_a1 on_b5_a1 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 12934
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 339 facts and 671 exclusive pairs.
+1230 new nodes added.
+
+####################################################
+goals at time 8:
+  on_b6_a3 on_b7_a2 on_b9_a1 on_b5_a1 normal_s12 
+normal_s13 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 105385
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (pop-unitarypipe s12 b5 a1 a2 b6 gasoleo rat-a ta1-1-rat-a ta2-1-gasoleo)
+1 (push-unitarypipe s13 b4 a1 a3 b2 lco gasoleo ta1-1-lco ta3-2-gasoleo)
+2 (pop-unitarypipe s13 b3 a1 a3 b4 oca1 lco ta1-1-lco ta3-1-oca1)
+2 (pop-unitarypipe s12 b0 a1 a2 b5 rat-a gasoleo ta1-2-gasoleo ta2-1-rat-a)
+3 (pop-unitarypipe s13 b2 a1 a3 b3 gasoleo oca1 ta1-1-oca1 ta3-1-gasoleo)
+3 (push-unitarypipe s12 b7 a1 a2 b0 gasoleo rat-a ta1-2-gasoleo ta2-1-rat-a)
+4 (push-unitarypipe s13 b6 a1 a3 b2 rat-a gasoleo ta1-1-rat-a ta3-1-gasoleo)
+4 (push-unitarypipe s12 b3 a1 a2 b7 oca1 gasoleo ta1-1-oca1 ta2-2-gasoleo)
+5 (pop-unitarypipe s12 b9 a1 a2 b3 oc1b oca1 ta1-1-oca1 ta2-1-oc1b)
+5 (push-unitarypipe s13 b8 a1 a3 b6 lco rat-a ta1-2-lco ta3-1-rat-a)
+6 (pop-unitarypipe s12 b7 a1 a2 b9 gasoleo oc1b ta1-1-oc1b ta2-2-gasoleo)
+7 (push-unitarypipe s12 b4 a1 a2 b7 lco gasoleo ta1-1-lco ta2-2-gasoleo)
+End plan
+----------------------------------------------------
+
+12 total actions in plan
+1976 entries in hash table, 386 hash hits, avg set size 38
+2368 total set-creation steps (entries + hits + plan length - 1)
+13466 actions tried
+
+####################################################
+Total elapsed time:   0.63 seconds
+Time in milliseconds: 631
+
+####################################################
+__MEMKB 74368

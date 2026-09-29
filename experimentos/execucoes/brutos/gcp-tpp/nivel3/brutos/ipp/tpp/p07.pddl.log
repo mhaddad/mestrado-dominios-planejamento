@@ -1,0 +1,115 @@
+
+ipp: parsing domain file
+domain 'GROUNDED-STRIPS-TPP-PROPOSITIONAL' defined
+ ... done.
+ipp: parsing problem file
+problem 'GROUNDED-STRIPS-TPP' defined
+ ... done.
+
+
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+AND has only one son (anymore)
+instantiated 180 actions
+
+
+time:   0,   114 facts and       0 exclusive pairs (   39,       0 positives)
+             116 ops   and       4 exclusive pairs
+time:   1,   118 facts and       4 exclusive pairs (   41,       2 positives)
+             126 ops   and      57 exclusive pairs
+time:   2,   124 facts and      18 exclusive pairs (   45,      10 positives)
+             150 ops   and     335 exclusive pairs
+time:   3,   156 facts and     134 exclusive pairs (   61,      48 positives)
+             206 ops   and    1127 exclusive pairs
+time:   4,   190 facts and     365 exclusive pairs (   83,     158 positives)
+             266 ops   and    2477 exclusive pairs
+time:   5,   194 facts and     228 exclusive pairs (   86,     128 positives)
+             282 ops   and    2632 exclusive pairs
+time:   6,   205 facts and     263 exclusive pairs (   97,     181 positives)
+             319 ops   and    4199 exclusive pairs
+time:   7,   217 facts and     241 exclusive pairs (  103,     166 positives)
+             341 ops   and    4816 exclusive pairs
+time:   8,   222 facts and     226 exclusive pairs (  108,     156 positives)
+
+goals first reachable in 8 time steps
+
+
+graph has leveled off at time step 9
+
+             366 ops   and    6026 exclusive pairs
+time:   9,   222 facts and     226 exclusive pairs (  108,     156 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+
+
+found plan as follows:
+
+time step    0: DRIVE-TRUCK1-DEPOT1-MARKET2
+                DRIVE-TRUCK2-DEPOT1-MARKET2
+time step    1: DRIVE-TRUCK2-MARKET2-MARKET1
+                DRIVE-TRUCK1-MARKET2-MARKET1
+time step    2: BUY-TRUCK1-GOODS1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS2-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS3-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS4-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS5-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS6-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS7-MARKET1-LEVEL1-LEVEL2-LEVEL0-LEVEL1
+time step    3: LOAD-GOODS7-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS6-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS5-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS4-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS3-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS2-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS1-TRUCK2-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    4: DRIVE-TRUCK2-MARKET1-MARKET2
+                BUY-TRUCK1-GOODS4-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS5-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                BUY-TRUCK1-GOODS7-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    5: LOAD-GOODS7-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS5-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                LOAD-GOODS4-TRUCK1-MARKET1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                DRIVE-TRUCK2-MARKET2-DEPOT1
+time step    6: UNLOAD-GOODS1-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS2-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS3-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                DRIVE-TRUCK1-MARKET1-MARKET2
+                UNLOAD-GOODS4-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS5-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS6-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+                UNLOAD-GOODS7-TRUCK2-DEPOT1-LEVEL0-LEVEL1-LEVEL0-LEVEL1
+time step    7: DRIVE-TRUCK1-MARKET2-DEPOT1
+time step    8: UNLOAD-GOODS4-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL1-LEVEL2
+                UNLOAD-GOODS5-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL1-LEVEL2
+                UNLOAD-GOODS7-TRUCK1-DEPOT1-LEVEL0-LEVEL1-LEVEL1-LEVEL2
+
+
+
+number of actions tried:     114197
+number of noops tried  :     196557
+
+had   45098 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 180 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.17 seconds searching graph
+               0.17 seconds total time
+
+Memory used:   0.26 MBytes for domain representation
+               2.91 MBytes for graph
+               0.11 MBytes for exclusions
+               2.30 MBytes for memoization
+               0.74 MBytes for wave front
+
+
+
+__MEMKB 10880

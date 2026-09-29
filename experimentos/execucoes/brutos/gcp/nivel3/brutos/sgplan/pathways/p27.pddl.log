@@ -1,0 +1,2753 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+Parsing problem file
+ problem 'GROUNDED-PATHWAYS-27' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution found.
+
+
+
+; Time 4.15
+; ParsingTime 0.16
+; NrActions 269
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(best-first search) as the subplanner
+
+0.001: (CHOOSE_GP_L1_L0) [1]
+1.002: (CHOOSE_SP1_L2_L1) [1]
+2.003: (INITIALIZE_GP) [1]
+3.004: (INITIALIZE_SP1) [1]
+4.005: (CHOOSE_MAX_L3_L2) [1]
+5.006: (CHOOSE_GCDC25A_L4_L3) [1]
+6.007: (CHOOSE_RAF1_L5_L4) [1]
+7.008: (CHOOSE_CDK46P1_L6_L5) [1]
+8.009: (ASSOCIATE_SP1_GP_SP1-GP) [1]
+9.010: (INITIALIZE_MAX) [1]
+10.011: (SYNTHESIZE_SP1-GP_C-MYC) [1]
+11.012: (INITIALIZE_GCDC25A) [1]
+12.013: (ASSOCIATE_C-MYC_MAX_C-MYC-MAX) [1]
+13.014: (ASSOCIATE_C-MYC-MAX_GCDC25A_C-MYC-MAX-GCDC25A) [1]
+14.015: (INITIALIZE_RAF1) [1]
+15.016: (SYNTHESIZE_C-MYC-MAX-GCDC25A_CDC25A) [1]
+16.017: (ASSOCIATE-WITH-CATALYZE_CDC25A_RAF1_CDC25AP1) [1]
+17.018: (INITIALIZE_CDK46P1) [1]
+18.019: (SYNTHESIZE_SP1-GP_CYCD) [1]
+19.020: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+20.021: (CHOOSE_P27_L7_L6) [1]
+21.022: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+22.023: (INITIALIZE_P27) [1]
+23.024: (ASSOCIATE_P27_CDK46-CYCD_P27-CDK46-CYCD) [1]
+24.025: (DUMMY-ACTION-1-1) [1]
+25.026: (CHOOSE_CYCH_L8_L7) [1]
+26.027: (CHOOSE_CDK7_L9_L8) [1]
+27.028: (INITIALIZE_CYCH) [1]
+28.029: (INITIALIZE_CDK7) [1]
+29.030: (CHOOSE_CDK2P1_L10_L9) [1]
+30.031: (SYNTHESIZE_SP1-GP_CYCA) [1]
+31.032: (INITIALIZE_CDK2P1) [1]
+32.033: (CHOOSE_SKP1_L11_L10) [1]
+33.034: (CHOOSE_SKP2_L12_L11) [1]
+34.035: (INITIALIZE_SKP1) [1]
+35.036: (INITIALIZE_SKP2) [1]
+36.037: (ASSOCIATE_CDK7_CYCH_CDK7-CYCH) [1]
+37.038: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+38.039: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCA_CDK7-CYCH_CDK2P1P2-CYCA) [1]
+39.040: (ASSOCIATE-WITH-CATALYZE_CDK2P1P2-CYCA_CDC25AP1_CDK2P2-CYCA) [1]
+40.041: (SYNTHESIZE_SP1-GP_CYCA) [1]
+41.042: (INITIALIZE_CDK2P1) [1]
+42.043: (ASSOCIATE-WITH-CATALYZE_SKP1_CDK2P2-CYCA_SKP1P1) [1]
+43.044: (ASSOCIATE_SKP2_SKP1P1_SKP2-SKP1P1) [1]
+44.045: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+45.046: (ASSOCIATE_SKP2-SKP1P1_CDK2P1-CYCA_SKP2-SKP1P1-CDK2P1-CYCA) [1]
+46.047: (DUMMY-ACTION-2-1) [1]
+47.048: (SYNTHESIZE_SP1-GP_CYCA) [1]
+48.049: (INITIALIZE_CDK2P1) [1]
+49.050: (INITIALIZE_SKP1) [1]
+50.051: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+51.052: (ASSOCIATE-WITH-CATALYZE_SKP1_CDK2P2-CYCA_SKP1P1) [1]
+52.053: (INITIALIZE_SKP2) [1]
+53.054: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCA_CDC25AP1_CDK2-CYCA) [1]
+54.055: (ASSOCIATE_SKP2_SKP1P1_SKP2-SKP1P1) [1]
+55.056: (ASSOCIATE_SKP2-SKP1P1_CDK2-CYCA_SKP2-SKP1P1-CDK2-CYCA) [1]
+56.057: (DUMMY-ACTION-3-2) [1]
+57.058: (SYNTHESIZE_C-MYC-MAX-GCDC25A_CDC25A) [1]
+58.059: (ASSOCIATE_RAF1_CDC25A_RAF1-CDC25A) [1]
+59.060: (DUMMY-ACTION-4-2) [1]
+60.061: (INITIALIZE_CDK46P1) [1]
+61.062: (SYNTHESIZE_SP1-GP_CYCD) [1]
+62.063: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+63.064: (CHOOSE_P57_L13_L12) [1]
+64.065: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+65.066: (INITIALIZE_P57) [1]
+66.067: (ASSOCIATE_P57_CDK46-CYCD_P57-CDK46-CYCD) [1]
+67.068: (DUMMY-ACTION-5-1) [1]
+68.069: (INITIALIZE_P57) [1]
+69.070: (ASSOCIATE_P57_CDK2P2-CYCA_P57-CDK2P2-CYCA) [1]
+70.071: (DUMMY-ACTION-6-1) [1]
+71.072: (SYNTHESIZE_SP1-GP_CYCE) [1]
+72.073: (SYNTHESIZE_SP1-GP_CYCA) [1]
+73.074: (INITIALIZE_CDK2P1) [1]
+74.075: (INITIALIZE_P27) [1]
+75.076: (ASSOCIATE_CDK2P1_CYCE_CDK2P1-CYCE) [1]
+76.077: (INITIALIZE_CDK2P1) [1]
+77.078: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCE_CDC25AP1_CDK2-CYCE) [1]
+78.079: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+79.080: (ASSOCIATE-WITH-CATALYZE_CDK2-CYCE_CDK7-CYCH_CDK2P2-CYCE) [1]
+80.081: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCA_CDK7-CYCH_CDK2P1P2-CYCA) [1]
+81.082: (ASSOCIATE-WITH-CATALYZE_P27_CDK2P2-CYCE_P27P1) [1]
+82.083: (ASSOCIATE_P27P1_CDK2P1P2-CYCA_P27P1-CDK2P1P2-CYCA) [1]
+83.084: (DUMMY-ACTION-7-2) [1]
+84.085: (SYNTHESIZE_SP1-GP_CYCA) [1]
+85.086: (INITIALIZE_CDK2P1) [1]
+86.087: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+87.088: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCA_CDC25AP1_CDK2-CYCA) [1]
+88.089: (INITIALIZE_SKP2) [1]
+89.090: (ASSOCIATE_SKP2_CDK2-CYCA_SKP2-CDK2-CYCA) [1]
+90.091: (DUMMY-ACTION-8-2) [1]
+91.092: (SYNTHESIZE_SP1-GP_CYCA) [1]
+92.093: (INITIALIZE_CDK2P1) [1]
+93.094: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+94.095: (CHOOSE_E2F13_L14_L13) [1]
+95.096: (INITIALIZE_E2F13) [1]
+96.097: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCA_CDC25AP1_CDK2-CYCA) [1]
+97.098: (ASSOCIATE-WITH-CATALYZE_CDK2-CYCA_CDK7-CYCH_CDK2P2-CYCA) [1]
+98.099: (SYNTHESIZE_SP1-GP_CYCA) [1]
+99.100: (INITIALIZE_CDK2P1) [1]
+100.101: (ASSOCIATE-WITH-CATALYZE_E2F13_CDK2P2-CYCA_E2F13P1) [1]
+101.102: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+102.103: (ASSOCIATE_CDK2P1-CYCA_E2F13P1_CDK2P1-CYCA-E2F13P1) [1]
+103.104: (DUMMY-ACTION-9-1) [1]
+104.105: (CHOOSE_E2F4-DP12P1_L15_L14) [1]
+105.106: (INITIALIZE_E2F4-DP12P1) [1]
+106.107: (SYNTHESIZE_SP1-GP_P107) [1]
+107.108: (ASSOCIATE_P107_E2F4-DP12P1_P107-E2F4-DP12P1) [1]
+108.109: (DUMMY-ACTION-10-2) [1]
+109.110: (SYNTHESIZE_SP1-GP_CYCE) [1]
+110.111: (INITIALIZE_CDK2P1) [1]
+111.112: (INITIALIZE_P27) [1]
+112.113: (ASSOCIATE_CDK2P1_CYCE_CDK2P1-CYCE) [1]
+113.114: (ASSOCIATE-WITH-CATALYZE_P27_CDK2P2-CYCE_P27P1) [1]
+114.115: (ASSOCIATE_P27P1_CDK2P1-CYCE_P27P1-CDK2P1-CYCE) [1]
+115.116: (DUMMY-ACTION-11-2) [1]
+116.117: (INITIALIZE_CDK46P1) [1]
+117.118: (SYNTHESIZE_SP1-GP_CYCD) [1]
+118.119: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+119.120: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+120.121: (INITIALIZE_P27) [1]
+121.122: (ASSOCIATE-WITH-CATALYZE_CDK46-CYCD_CDK7-CYCH_CDK46P2-CYCD) [1]
+122.123: (ASSOCIATE-WITH-CATALYZE_P27_CDK2P2-CYCE_P27P1) [1]
+123.124: (ASSOCIATE_P27P1_CDK46P2-CYCD_P27P1-CDK46P2-CYCD) [1]
+124.125: (DUMMY-ACTION-12-1) [1]
+125.126: (DUMMY-ACTION-13-2) [1]
+126.127: (INITIALIZE_SKP2) [1]
+127.128: (ASSOCIATE_SKP2_CDK2P2-CYCA_SKP2-CDK2P2-CYCA) [1]
+128.129: (DUMMY-ACTION-14-1) [1]
+129.130: (INITIALIZE_P27) [1]
+130.131: (ASSOCIATE_P27_CDK2P2-CYCE_P27-CDK2P2-CYCE) [1]
+131.132: (DUMMY-ACTION-15-2) [1]
+132.133: (INITIALIZE_CDK46P1) [1]
+133.134: (SYNTHESIZE_SP1-GP_CYCDP1) [1]
+134.135: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+135.136: (ASSOCIATE_CDK46_CYCDP1_CDK46-CYCDP1) [1]
+136.137: (ASSOCIATE-WITH-CATALYZE_CDK46-CYCDP1_CDK7-CYCH_CDK46P2-CYCDP1) [1]
+137.138: (INITIALIZE_P57) [1]
+138.139: (ASSOCIATE_P57_CDK46P2-CYCDP1_P57-CDK46P2-CYCDP1) [1]
+139.140: (DUMMY-ACTION-16-1) [1]
+140.141: (INITIALIZE_CDK46P1) [1]
+141.142: (SYNTHESIZE_SP1-GP_CYCD) [1]
+142.143: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+143.144: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+144.145: (ASSOCIATE-WITH-CATALYZE_CDK46-CYCD_CDK7-CYCH_CDK46P2-CYCD) [1]
+145.146: (INITIALIZE_P27) [1]
+146.147: (ASSOCIATE_P27_CDK46P2-CYCD_P27-CDK46P2-CYCD) [1]
+147.148: (DUMMY-ACTION-17-2) [1]
+148.149: (CHOOSE_DP12_L16_L15) [1]
+149.150: (CHOOSE_E2F4_L17_L16) [1]
+150.151: (INITIALIZE_DP12) [1]
+151.152: (INITIALIZE_E2F4) [1]
+152.153: (CHOOSE_P130_L18_L17) [1]
+153.154: (CHOOSE_GE2_L19_L18) [1]
+154.155: (ASSOCIATE_E2F4_DP12_E2F4-DP12) [1]
+155.156: (INITIALIZE_P130) [1]
+156.157: (INITIALIZE_GE2) [1]
+157.158: (ASSOCIATE_P130_E2F4-DP12_P130-E2F4-DP12) [1]
+158.159: (ASSOCIATE_P130-E2F4-DP12_GE2_P130-E2F4-DP12-GE2) [1]
+159.160: (DUMMY-ACTION-18-2) [1]
+160.161: (CHOOSE_P53_L20_L19) [1]
+161.162: (INITIALIZE_P53) [1]
+162.163: (CHOOSE_PCNA_L21_L20) [1]
+163.164: (SYNTHESIZE_P53_P21) [1]
+164.165: (INITIALIZE_PCNA) [1]
+165.166: (ASSOCIATE_PCNA_P21_PCNA-P21) [1]
+166.167: (DUMMY-ACTION-19-2) [1]
+167.168: (INITIALIZE_CDK46P1) [1]
+168.169: (SYNTHESIZE_SP1-GP_CYCDP1) [1]
+169.170: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+170.171: (ASSOCIATE_CDK46_CYCDP1_CDK46-CYCDP1) [1]
+171.172: (ASSOCIATE-WITH-CATALYZE_CDK46-CYCDP1_CDK7-CYCH_CDK46P2-CYCDP1) [1]
+172.173: (ASSOCIATE_PCNA-P21_CDK46P2-CYCDP1_PCNA-P21-CDK46P2-CYCDP1) [1]
+173.174: (DUMMY-ACTION-20-1) [1]
+174.175: (CHOOSE_CDK46P3-CYCD_L22_L21) [1]
+175.176: (CHOOSE_PRBP2_L23_L22) [1]
+176.177: (INITIALIZE_CDK46P3-CYCD) [1]
+177.178: (INITIALIZE_PRBP2) [1]
+178.179: (CHOOSE_CEBP_L24_L23) [1]
+179.180: (ASSOCIATE-WITH-CATALYZE_PRBP2_CDK46P3-CYCD_PRBP1P2) [1]
+180.181: (INITIALIZE_CEBP) [1]
+181.182: (ASSOCIATE_CEBP_PRBP1P2_CEBP-PRBP1P2) [1]
+182.183: (DUMMY-ACTION-21-2) [1]
+183.184: (SYNTHESIZE_SP1-GP_CYCA) [1]
+184.185: (INITIALIZE_CDK2P1) [1]
+185.186: (ASSOCIATE_CDK2P1_CYCA_CDK2P1-CYCA) [1]
+186.187: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCA_CDC25AP1_CDK2-CYCA) [1]
+187.188: (ASSOCIATE-WITH-CATALYZE_CDK2-CYCA_CDK7-CYCH_CDK2P2-CYCA) [1]
+188.189: (CHOOSE_P68_L25_L24) [1]
+189.190: (INITIALIZE_P68) [1]
+190.191: (ASSOCIATE-WITH-CATALYZE_P68_CDK2P2-CYCA_P68P2) [1]
+191.192: (DUMMY-ACTION-22-2) [1]
+192.193: (INITIALIZE_CDK46P1) [1]
+193.194: (SYNTHESIZE_SP1-GP_CYCD) [1]
+194.195: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+195.196: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+196.197: (ASSOCIATE-WITH-CATALYZE_CDK46-CYCD_CDK7-CYCH_CDK46P2-CYCD) [1]
+197.198: (SYNTHESIZE_P53_P21) [1]
+198.199: (ASSOCIATE_P21_CDK46P2-CYCD_P21-CDK46P2-CYCD) [1]
+199.200: (DUMMY-ACTION-23-2) [1]
+200.201: (SYNTHESIZE_SP1-GP_CYCA) [1]
+201.202: (DUMMY-ACTION-24-2) [1]
+202.203: (SYNTHESIZE_SP1-GP_CYCE) [1]
+203.204: (INITIALIZE_CDK2P1) [1]
+204.205: (ASSOCIATE_CDK2P1_CYCE_CDK2P1-CYCE) [1]
+205.206: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCE_CDK7-CYCH_CDK2P1P2-CYCE) [1]
+206.207: (DUMMY-ACTION-25-2) [1]
+207.208: (SYNTHESIZE_P53_P21) [1]
+208.209: (INITIALIZE_PCNA) [1]
+209.210: (ASSOCIATE-WITH-CATALYZE_CDK2P1P2-CYCE_CDC25AP1_CDK2P2-CYCE) [1]
+210.211: (ASSOCIATE_PCNA_P21_PCNA-P21) [1]
+211.212: (ASSOCIATE_PCNA-P21_CDK2P2-CYCE_PCNA-P21-CDK2P2-CYCE) [1]
+212.213: (DUMMY-ACTION-26-2) [1]
+213.214: (INITIALIZE_CDK46P1) [1]
+214.215: (CHOOSE_P16_L26_L25) [1]
+215.216: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+216.217: (INITIALIZE_P16) [1]
+217.218: (ASSOCIATE_P16_CDK46_P16-CDK46) [1]
+218.219: (DUMMY-ACTION-27-1) [1]
+219.220: (INITIALIZE_DP12) [1]
+220.221: (ASSOCIATE-WITH-CATALYZE_DP12_CDK2P2-CYCA_DP12P1) [1]
+221.222: (ASSOCIATE_P53_DP12P1_P53-DP12P1) [1]
+222.223: (DUMMY-ACTION-28-2) [1]
+223.224: (INITIALIZE_CDK46P1) [1]
+224.225: (SYNTHESIZE_SP1-GP_CYCD) [1]
+225.226: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+226.227: (CHOOSE_P57P1_L27_L26) [1]
+227.228: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+228.229: (INITIALIZE_P57P1) [1]
+229.230: (ASSOCIATE_P57P1_CDK46-CYCD_P57P1-CDK46-CYCD) [1]
+230.231: (DUMMY-ACTION-29-2) [1]
+231.232: (INITIALIZE_CDK46P1) [1]
+232.233: (INITIALIZE_P53) [1]
+233.234: (SYNTHESIZE_SP1-GP_CYCD) [1]
+234.235: (ASSOCIATE-WITH-CATALYZE_CDK46P1_CDC25AP1_CDK46) [1]
+235.236: (SYNTHESIZE_P53_P21) [1]
+236.237: (INITIALIZE_PCNA) [1]
+237.238: (ASSOCIATE_CDK46_CYCD_CDK46-CYCD) [1]
+238.239: (ASSOCIATE_PCNA_P21_PCNA-P21) [1]
+239.240: (ASSOCIATE_PCNA-P21_CDK46-CYCD_PCNA-P21-CDK46-CYCD) [1]
+240.241: (DUMMY-ACTION-30-1) [1]
+241.242: (SYNTHESIZE_SP1-GP_CYCE) [1]
+242.243: (SYNTHESIZE_SP1-GP_CYCEP1) [1]
+243.244: (INITIALIZE_CDK2P1) [1]
+244.245: (ASSOCIATE_CDK2P1_CYCEP1_CDK2P1-CYCEP1) [1]
+245.246: (INITIALIZE_P27) [1]
+246.247: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCEP1_CDK7-CYCH_CDK2P1P2-CYCEP1) [1]
+247.248: (ASSOCIATE-WITH-CATALYZE_CDK2P1P2-CYCEP1_CDC25AP1_CDK2P2-CYCEP1) [1]
+248.249: (ASSOCIATE-WITH-CATALYZE_CYCE_CDK2P2-CYCEP1_CYCEP1) [1]
+249.250: (INITIALIZE_CDK2P1) [1]
+250.251: (ASSOCIATE_CDK2P1_CYCEP1_CDK2P1-CYCEP1) [1]
+251.252: (ASSOCIATE-WITH-CATALYZE_CDK2P1-CYCEP1_CDK7-CYCH_CDK2P1P2-CYCEP1) [1]
+252.253: (ASSOCIATE-WITH-CATALYZE_P27_CDK2P2-CYCEP1_P27P1) [1]
+253.254: (ASSOCIATE_P27P1_CDK2P1P2-CYCEP1_P27P1-CDK2P1P2-CYCEP1) [1]
+254.255: (DUMMY-ACTION-31-2) [1]
+255.256: (SYNTHESIZE_C-MYC-MAX-GCDC25A_CDC25A) [1]
+256.257: (DUMMY-ACTION-32-2) [1]
+257.258: (SYNTHESIZE_P53_GADD45) [1]
+258.259: (SYNTHESIZE_P53_P21) [1]
+259.260: (ASSOCIATE_P21_GADD45_P21-GADD45) [1]
+260.261: (DUMMY-ACTION-33-2) [1]
+261.262: (INITIALIZE_P27) [1]
+262.263: (ASSOCIATE_P27_CDK2P2-CYCEP1_P27-CDK2P2-CYCEP1) [1]
+263.264: (DUMMY-ACTION-34-1) [1]
+264.265: (INITIALIZE_SKP2) [1]
+265.266: (INITIALIZE_SKP1) [1]
+266.267: (ASSOCIATE-WITH-CATALYZE_SKP2_CDK2P2-CYCA_SKP2P1) [1]
+267.268: (ASSOCIATE_SKP2P1_SKP1_SKP2P1-SKP1) [1]
+268.269: (DUMMY-ACTION-35-1) [1]
+__MEMKB 67188

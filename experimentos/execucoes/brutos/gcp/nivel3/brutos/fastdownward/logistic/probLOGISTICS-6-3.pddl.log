@@ -1,0 +1,104 @@
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+9 variables of 9 necessary
+78 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 78 to 78)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 78 unary operators... done! [78 unary operators]
+Best heuristic value: 30/21 [expanded 1 state(s)]
+Best heuristic value: 29/20 [expanded 5 state(s)]
+Best heuristic value: 28/20 [expanded 6 state(s)]
+Best heuristic value: 27/19 [expanded 11 state(s)]
+Best heuristic value: 26/18 [expanded 15 state(s)]
+Best heuristic value: 25/18 [expanded 18 state(s)]
+Best heuristic value: 25/17 [expanded 21 state(s)]
+Best heuristic value: 24/17 [expanded 24 state(s)]
+Best heuristic value: 22/17 [expanded 25 state(s)]
+Best heuristic value: 21/16 [expanded 29 state(s)]
+Best heuristic value: 20/15 [expanded 33 state(s)]
+Best heuristic value: 19/15 [expanded 34 state(s)]
+Best heuristic value: 18/14 [expanded 39 state(s)]
+Best heuristic value: 17/14 [expanded 40 state(s)]
+Best heuristic value: 16/13 [expanded 45 state(s)]
+Best heuristic value: 15/12 [expanded 49 state(s)]
+Best heuristic value: 14/11 [expanded 53 state(s)]
+Best heuristic value: 13/10 [expanded 54 state(s)]
+Best heuristic value: 12/9 [expanded 55 state(s)]
+Best heuristic value: 11/8 [expanded 58 state(s)]
+Best heuristic value: 9/7 [expanded 60 state(s)]
+Best heuristic value: 8/6 [expanded 62 state(s)]
+Best heuristic value: 7/5 [expanded 64 state(s)]
+Best heuristic value: 6/4 [expanded 66 state(s)]
+Best heuristic value: 4/4 [expanded 67 state(s)]
+Best heuristic value: 3/3 [expanded 68 state(s)]
+Best heuristic value: 2/2 [expanded 70 state(s)]
+Best heuristic value: 1/1 [expanded 71 state(s)]
+Solution found!
+load-truck obj13 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj13 tru1 apt1
+load-truck obj23 tru2 pos2
+load-truck obj22 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+load-airplane obj23 apn1 apt2
+fly-airplane apn1 apt2 apt1
+load-airplane obj13 apn1 apt1
+fly-airplane apn1 apt1 apt2
+unload-airplane obj13 apn1 apt2
+load-truck obj13 tru2 apt2
+unload-truck obj22 tru2 apt2
+drive-truck tru2 apt2 pos2 cit2
+unload-truck obj13 tru2 pos2
+load-airplane obj22 apn1 apt2
+fly-airplane apn1 apt2 apt1
+unload-airplane obj22 apn1 apt1
+unload-airplane obj23 apn1 apt1
+load-truck obj23 tru1 apt1
+drive-truck tru1 apt1 pos1 cit1
+unload-truck obj23 tru1 pos1
+load-truck obj11 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj11 tru1 apt1
+Plan length: 26 step(s).
+Expanded 72 state(s).
+Generated 520 state(s).
+Cache hits: 542
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8984

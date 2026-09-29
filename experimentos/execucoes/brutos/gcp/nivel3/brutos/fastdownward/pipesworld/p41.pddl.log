@@ -1,0 +1,148 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom follow(b10, b10)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b14, b14)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b19, b19)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b1, b1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b11, b11)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b15, b15)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b2, b2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b12, b12)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b13, b13)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b6, b6)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b7, b7)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b20, b20)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b4, b4)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b9, b9)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b16, b16)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b5, b5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b17, b17)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b18, b18)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b3, b3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b21, b21)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b0, b0)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b8, b8)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s34)
+Removed false proposition: Atom push-updating(s34)
+Removed false proposition: Atom pop-updating(s34)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+84 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+57 variables of 58 necessary
+15168 of 15168 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 60672 to 18765)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 60672 unary operators... done! [60672 unary operators]
+Best heuristic value: 9/10 [expanded 1 state(s)]
+Best heuristic value: 9/8 [expanded 5 state(s)]
+Best heuristic value: 9/7 [expanded 6 state(s)]
+Best heuristic value: 8/7 [expanded 7 state(s)]
+Best heuristic value: 8/6 [expanded 12 state(s)]
+Best heuristic value: 8/5 [expanded 13 state(s)]
+Best heuristic value: 4/3 [expanded 15 state(s)]
+Best heuristic value: 3/2 [expanded 21 state(s)]
+Best heuristic value: 2/2 [expanded 55 state(s)]
+Solution found!
+push-start s13 b10 a1 a3 b13 gasoleo gasoleo ta1-1-gasoleo
+push-end s13 a1 a3 b8 b13 rat-a ta3-1-rat-a
+pop-start s15 b4 a1 a5 b3 oc1b oc1b ta5-1-oc1b
+pop-end s15 a1 a5 b14 b12 lco ta1-1-lco
+pop-start s15 b19 a1 a5 b4 lco oc1b ta5-1-lco
+pop-end s15 a1 a5 b12 b7 gasoleo ta1-1-gasoleo
+push-start s13 b14 a1 a3 b10 lco gasoleo ta1-1-lco
+push-end s13 a1 a3 b13 b10 gasoleo ta3-1-gasoleo
+pop-start s23 b13 a2 a3 b16 gasoleo oca1 ta3-1-gasoleo
+pop-end s23 a2 a3 b6 b9 oca1 ta2-1-oca1
+push-start s13 b12 a1 a3 b14 gasoleo lco ta1-1-gasoleo
+push-end s13 a1 a3 b10 b14 gasoleo ta3-1-gasoleo
+pop-start s13 b18 a1 a3 b14 oca1 lco ta3-3-oca1
+pop-end s13 a1 a3 b12 b14 lco ta1-1-lco
+Plan length: 14 step(s).
+Expanded 61 state(s).
+Generated 1054 state(s).
+Cache hits: 233697
+Cache misses: 536174
+Search time: 0.19 seconds
+Total time: 0.51 seconds
+__MEMKB 153608

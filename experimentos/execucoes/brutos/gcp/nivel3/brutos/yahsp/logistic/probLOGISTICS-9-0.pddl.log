@@ -1,0 +1,63 @@
+
+Parsing domain..... logistics..... done.
+Parsing problem..... logistics-9-0..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 402 candidates, 174 actions
+Finalization time : 0.00 -> 99 fluents, 13 init
+
+33 13 2 
+
+0: (LOAD-TRUCK obj23 tru2 pos2) [1]
+1: (LOAD-TRUCK obj21 tru2 pos2) [1]
+2: (LOAD-TRUCK obj22 tru2 pos2) [1]
+3: (DRIVE-TRUCK tru2 pos2 apt2 cit2) [1]
+4: (LOAD-TRUCK obj32 tru3 pos3) [1]
+5: (LOAD-TRUCK obj13 tru1 pos1) [1]
+6: (LOAD-TRUCK obj31 tru3 pos3) [1]
+7: (UNLOAD-TRUCK obj22 tru2 apt2) [1]
+8: (UNLOAD-TRUCK obj23 tru2 apt2) [1]
+9: (UNLOAD-TRUCK obj21 tru2 apt2) [1]
+10: (LOAD-AIRPLANE obj22 apn1 apt2) [1]
+11: (LOAD-AIRPLANE obj23 apn1 apt2) [1]
+12: (LOAD-AIRPLANE obj21 apn1 apt2) [1]
+13: (FLY-AIRPLANE apn1 apt2 apt3) [1]
+14: (DRIVE-TRUCK tru3 pos3 apt3 cit3) [1]
+15: (DRIVE-TRUCK tru1 pos1 apt1 cit1) [1]
+16: (UNLOAD-AIRPLANE obj23 apn1 apt3) [1]
+17: (LOAD-TRUCK obj23 tru3 apt3) [1]
+18: (UNLOAD-TRUCK obj31 tru3 apt3) [1]
+19: (UNLOAD-TRUCK obj32 tru3 apt3) [1]
+20: (UNLOAD-TRUCK obj13 tru1 apt1) [1]
+21: (LOAD-AIRPLANE obj32 apn1 apt3) [1]
+22: (FLY-AIRPLANE apn1 apt3 apt1) [1]
+23: (UNLOAD-AIRPLANE obj21 apn1 apt1) [1]
+24: (DRIVE-TRUCK tru3 apt3 pos3 cit3) [1]
+25: (UNLOAD-AIRPLANE obj22 apn1 apt1) [1]
+26: (UNLOAD-AIRPLANE obj32 apn1 apt1) [1]
+27: (LOAD-AIRPLANE obj13 apn1 apt1) [1]
+28: (LOAD-TRUCK obj22 tru1 apt1) [1]
+29: (LOAD-TRUCK obj32 tru1 apt1) [1]
+30: (DRIVE-TRUCK tru1 apt1 pos1 cit1) [1]
+31: (UNLOAD-TRUCK obj32 tru1 pos1) [1]
+32: (UNLOAD-TRUCK obj23 tru3 pos3) [1]
+33: (UNLOAD-TRUCK obj22 tru1 pos1) [1]
+34: (FLY-AIRPLANE apn1 apt1 apt3) [1]
+35: (UNLOAD-AIRPLANE obj13 apn1 apt3) [1]
+
+Valid plan : 36 actions.
+Computed nodes : 36
+Evaluated nodes : 4
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 75.00 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2688

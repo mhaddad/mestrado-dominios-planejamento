@@ -1,0 +1,116 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/gripper/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/gripper/pfile2.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/gripper/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/gripper/pfile2.pddl
+Problem name: gripper-4
+Facts loaded.
+time: 1, 24 facts and 41 exclusive pairs.
+time: 2, 24 facts and 33 exclusive pairs.
+time: 3, 28 facts and 49 exclusive pairs.
+Goals first reachable in 3 steps.
+215 nodes created.
+
+####################################################
+goals at time 4:
+  at_ball1_roomb at_ball2_roomb at_ball3_roomb at_ball4_roomb 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3
+
+----------------------------------------------------
+Can't solve in 3 steps
+time: 4, 28 facts and 45 exclusive pairs.
+90 new nodes added.
+
+####################################################
+goals at time 5:
+  at_ball1_roomb at_ball2_roomb at_ball3_roomb at_ball4_roomb 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 111
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 28 facts and 45 exclusive pairs.
+90 new nodes added.
+
+####################################################
+goals at time 6:
+  at_ball1_roomb at_ball2_roomb at_ball3_roomb at_ball4_roomb 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 734
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 28 facts and 45 exclusive pairs.
+90 new nodes added.
+
+####################################################
+goals at time 7:
+  at_ball1_roomb at_ball2_roomb at_ball3_roomb at_ball4_roomb 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 4409
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 28 facts and 45 exclusive pairs.
+90 new nodes added.
+
+####################################################
+goals at time 8:
+  at_ball1_roomb at_ball2_roomb at_ball3_roomb at_ball4_roomb 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 3290
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (pick ball3 rooma right)
+1 (pick ball4 rooma left)
+2 (move rooma roomb)
+3 (drop ball3 roomb right)
+3 (drop ball4 roomb left)
+4 (move roomb rooma)
+5 (pick ball1 rooma right)
+5 (pick ball2 rooma left)
+6 (move rooma roomb)
+7 (drop ball1 roomb right)
+7 (drop ball2 roomb left)
+End plan
+----------------------------------------------------
+
+11 total actions in plan
+388 entries in hash table, 933 hash hits, avg set size 10
+1327 total set-creation steps (entries + hits + plan length - 1)
+1348 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 5
+
+####################################################
+__MEMKB 8960

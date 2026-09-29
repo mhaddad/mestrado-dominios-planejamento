@@ -1,0 +1,96 @@
+
+ipp: parsing domain file
+domain 'BLOCKS' defined
+ ... done.
+ipp: parsing problem file
+problem 'BLOCKS-5-2' defined
+ ... done.
+
+
+instantiated 50 actions
+
+
+time:   0,    41 facts and       0 exclusive pairs (    7,       0 positives)
+              42 ops   and       5 exclusive pairs
+time:   1,    46 facts and      20 exclusive pairs (    9,       6 positives)
+              49 ops   and      57 exclusive pairs
+time:   2,    47 facts and      19 exclusive pairs (   10,       6 positives)
+              52 ops   and      87 exclusive pairs
+time:   3,    50 facts and      34 exclusive pairs (   12,      16 positives)
+              58 ops   and     175 exclusive pairs
+time:   4,    52 facts and      38 exclusive pairs (   14,      24 positives)
+              63 ops   and     259 exclusive pairs
+time:   5,    55 facts and      52 exclusive pairs (   16,      36 positives)
+              71 ops   and     438 exclusive pairs
+time:   6,    59 facts and      88 exclusive pairs (   20,      68 positives)
+              80 ops   and     705 exclusive pairs
+time:   7,    62 facts and     100 exclusive pairs (   22,      79 positives)
+              90 ops   and    1050 exclusive pairs
+time:   8,    68 facts and     175 exclusive pairs (   28,     149 positives)
+             103 ops   and    1625 exclusive pairs
+time:   9,    70 facts and     160 exclusive pairs (   29,     137 positives)
+             113 ops   and    2074 exclusive pairs
+time:  10,    77 facts and     266 exclusive pairs (   36,     241 positives)
+             127 ops   and    2908 exclusive pairs
+time:  11,    77 facts and     216 exclusive pairs (   36,     205 positives)
+             127 ops   and    2717 exclusive pairs
+time:  12,    77 facts and     175 exclusive pairs (   36,     175 positives)
+
+goals first reachable in 12 time steps
+
+
+graph has leveled off at time step 13
+
+             127 ops   and    2636 exclusive pairs
+time:  13,    77 facts and     175 exclusive pairs (   36,     175 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+
+
+found plan as follows:
+
+time step    0: UNSTACK D E
+time step    1: PUT-DOWN D
+time step    2: UNSTACK E C
+time step    3: PUT-DOWN E
+time step    4: UNSTACK C A
+time step    5: PUT-DOWN C
+time step    6: UNSTACK A B
+time step    7: PUT-DOWN A
+time step    8: PICK-UP E
+time step    9: STACK E A
+time step   10: PICK-UP B
+time step   11: STACK B E
+time step   12: PICK-UP C
+time step   13: STACK C B
+time step   14: PICK-UP D
+time step   15: STACK D C
+
+
+
+number of actions tried:         24
+number of noops tried  :        106
+
+had       7 simple memoizing hits
+had       1 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 50 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.03 MBytes for domain representation
+               1.23 MBytes for graph
+               0.03 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.01 MBytes for wave front
+
+
+
+__MEMKB 3328

@@ -1,0 +1,100 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'DRIVERLOG' defined
+Parsing problem file
+ problem 'DLOG-2-3-6' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution found.
+
+
+
+; Time 3.84
+; ParsingTime 0.07
+; NrActions 41
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(best-first search) as the subplanner
+
+0.001: (WALK DRIVER2 S3 P3-9) [1]
+1.002: (WALK DRIVER2 P3-9 S9) [1]
+2.003: (BOARD-TRUCK DRIVER2 TRUCK2 S9) [1]
+3.004: (DRIVE-TRUCK TRUCK2 S9 S7 DRIVER2) [1]
+4.005: (LOAD-TRUCK PACKAGE4 TRUCK2 S7) [1]
+5.006: (DRIVE-TRUCK TRUCK2 S7 S4 DRIVER2) [1]
+6.007: (LOAD-TRUCK PACKAGE2 TRUCK2 S4) [1]
+7.008: (LOAD-TRUCK PACKAGE5 TRUCK2 S4) [1]
+8.009: (DRIVE-TRUCK TRUCK2 S4 S1 DRIVER2) [1]
+9.010: (LOAD-TRUCK PACKAGE6 TRUCK2 S1) [1]
+10.011: (UNLOAD-TRUCK PACKAGE4 TRUCK2 S1) [1]
+11.012: (DRIVE-TRUCK TRUCK2 S1 S0 DRIVER2) [1]
+12.013: (UNLOAD-TRUCK PACKAGE5 TRUCK2 S0) [1]
+13.014: (DRIVE-TRUCK TRUCK2 S0 S2 DRIVER2) [1]
+14.015: (UNLOAD-TRUCK PACKAGE2 TRUCK2 S2) [1]
+15.016: (UNLOAD-TRUCK PACKAGE6 TRUCK2 S2) [1]
+16.017: (DRIVE-TRUCK TRUCK2 S2 S1 DRIVER2) [1]
+17.018: (DRIVE-TRUCK TRUCK2 S1 S3 DRIVER2) [1]
+18.019: (LOAD-TRUCK PACKAGE1 TRUCK2 S3) [1]
+19.020: (DRIVE-TRUCK TRUCK2 S3 S1 DRIVER2) [1]
+20.021: (DRIVE-TRUCK TRUCK2 S1 S2 DRIVER2) [1]
+21.022: (UNLOAD-TRUCK PACKAGE1 TRUCK2 S2) [1]
+22.023: (DISEMBARK-TRUCK DRIVER2 TRUCK2 S2) [1]
+23.024: (BOARD-TRUCK DRIVER2 TRUCK3 S2) [1]
+24.025: (DRIVE-TRUCK TRUCK3 S2 S0 DRIVER2) [1]
+25.026: (WALK DRIVER1 S1 P1-7) [1]
+26.027: (WALK DRIVER1 P1-7 S7) [1]
+27.028: (WALK DRIVER1 S7 P2-7) [1]
+28.029: (WALK DRIVER1 P2-7 S2) [1]
+29.030: (BOARD-TRUCK DRIVER1 TRUCK2 S2) [1]
+30.031: (DRIVE-TRUCK TRUCK2 S2 S5 DRIVER1) [1]
+31.032: (DISEMBARK-TRUCK DRIVER2 TRUCK3 S0) [1]
+32.033: (WALK DRIVER2 S0 P0-8) [1]
+33.034: (WALK DRIVER2 P0-8 S8) [1]
+34.035: (WALK DRIVER2 S8 P8-7) [1]
+35.036: (WALK DRIVER2 P8-7 S7) [1]
+36.037: (WALK DRIVER2 S7 P7-9) [1]
+37.038: (WALK DRIVER2 P7-9 S9) [1]
+38.039: (DISEMBARK-TRUCK DRIVER1 TRUCK2 S5) [1]
+39.040: (WALK DRIVER1 S5 P4-5) [1]
+40.041: (WALK DRIVER1 P4-5 S4) [1]

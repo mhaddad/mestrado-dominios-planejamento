@@ -1,0 +1,62 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P13-NET2-B12-G3_RT0_INSTANCE' defined
+ ... done.
+
+
+got 268 facts
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1]
+                                   6            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   14
+                          13
+                          11
+                          10
+                           9
+                           8
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PUSH-START S13 B2 A1 A3 B9 RAT-A LCO TA1-1-RAT-A
+        1: PUSH-START S12 B1 A1 A2 B6 OC1B OCA1 TA1-1-OC1B
+        2: PUSH-END S12 A1 A2 B11 B6 LCO TA2-3-LCO
+        3: PUSH-START S12 B4 A1 A2 B1 OCA1 OC1B TA1-2-OCA1
+        4: PUSH-END S12 A1 A2 B6 B1 OCA1 TA2-3-OCA1
+        5: PUSH-START S12 B7 A1 A2 B4 OCA1 OCA1 TA1-1-OCA1
+        6: PUSH-END S12 A1 A2 B1 B4 OC1B TA2-1-OC1B
+        7: POP-START S12 B5 A1 A2 B4 GASOLEO OCA1 TA2-1-GASOLEO
+        8: POP-END S12 A1 A2 B7 B4 LCO TA1-3-LCO
+        9: POP-START S12 B6 A1 A2 B5 OCA1 GASOLEO TA2-3-OCA1
+       10: POP-END S12 A1 A2 B4 B5 LCO TA1-2-LCO
+       11: POP-START S12 B11 A1 A2 B6 LCO OCA1 TA2-3-LCO
+       12: POP-END S12 A1 A2 B5 B6 GASOLEO TA1-1-GASOLEO
+       13: PUSH-END S13 A1 A3 B3 B9 LCO TA3-3-LCO
+       14: PUSH-START S13 B5 A1 A3 B2 GASOLEO RAT-A TA1-1-GASOLEO
+       15: PUSH-END S13 A1 A3 B9 B2 LCO TA3-2-LCO
+       16: POP-START S13 B3 A1 A3 B2 LCO RAT-A TA3-3-LCO
+       17: POP-END S13 A1 A3 B5 B2 LCO TA1-1-LCO
+     
+
+time spent:    0.00 seconds instantiating 4464 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 268 facts and 4032 actions
+               0.00 seconds creating final representation with 268 relevant facts
+               0.00 seconds building connectivity graph
+               0.13 seconds searching, evaluating 1197 states, to a max depth of 1
+               0.13 seconds total time
+
+__MEMKB 9088

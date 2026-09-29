@@ -1,0 +1,54 @@
+
+Parsing domain file:  domain 'DEPOT' defined ... done.
+Parsing problem file:  problem 'DEPOTPROB1818' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      90
+Number of conditional actions :       0
+Number of facts               :      40
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (DRIVE TRUCK0 DISTRIBUTOR1 DISTRIBUTOR0) [D:1.0000; C:1.0000]
+ 0.0000: (LIFT HOIST1 CRATE0 PALLET1 DISTRIBUTOR0) [D:1.0000; C:1.0000]
+ 0.0000: (LIFT HOIST0 CRATE1 PALLET0 DEPOT0) [D:1.0000; C:1.0000]
+ 1.0000: (LOAD HOIST1 CRATE0 TRUCK0 DISTRIBUTOR0) [D:1.0000; C:1.0000]
+ 1.0000: (LOAD HOIST0 CRATE1 TRUCK1 DEPOT0) [D:1.0000; C:1.0000]
+ 2.0000: (DRIVE TRUCK1 DEPOT0 DISTRIBUTOR0) [D:1.0000; C:1.0000]
+ 2.0000: (DRIVE TRUCK0 DISTRIBUTOR0 DISTRIBUTOR1) [D:1.0000; C:1.0000]
+ 3.0000: (UNLOAD HOIST1 CRATE1 TRUCK1 DISTRIBUTOR0) [D:1.0000; C:1.0000]
+ 3.0000: (UNLOAD HOIST2 CRATE0 TRUCK0 DISTRIBUTOR1) [D:1.0000; C:1.0000]
+ 4.0000: (DROP HOIST1 CRATE1 PALLET1 DISTRIBUTOR0) [D:1.0000; C:1.0000]
+ 4.0000: (DROP HOIST2 CRATE0 PALLET2 DISTRIBUTOR1) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         11
+Execution cost:  11.00
+Duration:        5.000
+Plan quality:    11.000
+
+__MEMKB 110080

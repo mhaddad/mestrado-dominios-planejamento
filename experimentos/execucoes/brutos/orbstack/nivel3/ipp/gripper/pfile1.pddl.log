@@ -1,0 +1,55 @@
+
+ipp: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'GRIPPER-2' defined
+ ... done.
+
+
+instantiated 18 actions
+
+
+time:   0,    12 facts and       0 exclusive pairs (    5,       0 positives)
+              17 ops   and      22 exclusive pairs
+time:   1,    22 facts and      30 exclusive pairs (   10,      17 positives)
+              32 ops   and     173 exclusive pairs
+time:   2,    22 facts and      14 exclusive pairs (   10,      13 positives)
+              36 ops   and     233 exclusive pairs
+time:   3,    24 facts and      24 exclusive pairs (   12,      21 positives)
+
+goals first reachable in 3 time steps
+
+
+found plan as follows:
+
+time step    0: PICK BALL2 ROOMA RIGHT
+                PICK BALL1 ROOMA LEFT
+time step    1: MOVE ROOMA ROOMB
+time step    2: DROP BALL2 ROOMB RIGHT
+                DROP BALL1 ROOMB LEFT
+
+
+
+number of actions tried:          5
+number of noops tried  :          3
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.02 seconds instantiating 18 operators
+               0.01 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.03 seconds total time
+
+Memory used:   0.02 MBytes for domain representation
+               0.21 MBytes for graph
+               0.00 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 11408

@@ -1,0 +1,162 @@
+MaxPlanII beta.
+
+bb: parsing domain file
+domain 'SATELLITE' defined
+ ... done.
+bb: parsing problem file
+problem 'STRIPS-SAT-X-1' defined
+ ... done.
+
+
+******  Solve with 1 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [1];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 2 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [2];
+        goal constraints;
+
+no achiever in for goal?? deadline too low!#001
+
+
+******  Solve with 3 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [3];
+        goal constraints;
+        building exclusion constraints --> up to layer 3...
+
+DECISION LAYER 3, WRITING ACTION-BASED ENCODING WITH 11597 VARS, 402982 CLAUSES.
+24 G clauses, 12950 A clauses, 390008 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P15_PFILE15.PDDL, bound 3, action based encoding
+In building up solver: p cnf 11597 402982
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  402982   957132 |  134327       0        0     0.0 |  0.000 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.000000][L0.000000],apply counts 264, apply_generated 0
+restarts          :            1
+conflicts         :           38           (      inf / sec      )
+decisions         :          174           (      inf / sec      )
+propagations      :        43473           (      inf / sec      )
+inspects          :        68045           (      inf / sec      )
+conflict literals :          667           (    90.91 % deleted  )
+CPU time          :         0.00 sec
+UNSATISFIABLE
+
+******  Solve with 4 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [4];
+        goal constraints;
+        building exclusion constraints --> up to layer 4...
+
+DECISION LAYER 4, WRITING ACTION-BASED ENCODING WITH 17800 VARS, 614913 CLAUSES.
+24 G clauses, 20722 A clauses, 594167 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P15_PFILE15.PDDL, bound 4, action based encoding
+In building up solver: p cnf 17800 614913
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  614913  1533206 |  204971       0        0     0.0 |  0.000 % |
+|       101 |  614883  1533120 |  225468     100    11270   112.7 |  0.006 % |
+|       251 |  614883  1533120 |  248015     249    16879    67.8 |  0.011 % |
+|       476 |  614883  1533120 |  272816     465    26611    57.2 |  0.062 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B0.020000][L0.010000],apply counts 3271, apply_generated 0
+restarts          :            4
+conflicts         :          800           (     5714 / sec      )
+decisions         :         1684           (    12029 / sec      )
+propagations      :       625144           (  4465314 / sec      )
+inspects          :      1196860           (  8549000 / sec      )
+conflict literals :        44642           (    68.67 % deleted  )
+CPU time          :         0.14 sec
+UNSATISFIABLE
+
+******  Solve with 5 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [5];
+        goal constraints;
+        building exclusion constraints --> up to layer 5...
+
+DECISION LAYER 5, WRITING ACTION-BASED ENCODING WITH 24003 VARS, 826844 CLAUSES.
+24 G clauses, 28494 A clauses, 798326 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P15_PFILE15.PDDL, bound 5, action based encoding
+In building up solver: p cnf 24003 826844
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  826844  2109387 |  275614       0        0     0.0 |  0.000 % |
+|       100 |  826844  2109387 |  303175     100    22479   224.8 |  0.000 % |
+|       250 |  826844  2109387 |  333493     250    24777    99.1 |  0.000 % |
+|       475 |  826844  2109387 |  366842     475    27416    57.7 |  0.000 % |
+|       812 |  826814  2109301 |  403526     811    49049    60.5 |  0.004 % |
+|      1318 |  826814  2109301 |  443879    1314    76241    58.0 |  0.017 % |
+|      2077 |  826814  2109301 |  488267    2071   172533    83.3 |  0.025 % |
+|      3216 |  826814  2109301 |  537094    3206   374912   116.9 |  0.042 % |
+|      4924 |  826423  2108177 |  590803    4904   561545   114.5 |  0.079 % |
+|      7486 |  826423  2108177 |  649883    7461  1008488   135.2 |  0.104 % |
+|     11330 |  825953  2106874 |  714872   11298  1539935   136.3 |  0.133 % |
+|     17096 |  825546  2105749 |  786359   17053  2419517   141.9 |  0.183 % |
+|     25745 |  825287  2105050 |  864995   25692  4205567   163.7 |  0.225 % |
+|     38719 |  824971  2104184 |  951494   37493  6544113   174.5 |  0.254 % |
+|     58180 |  824623  2103309 | 1046644   56941 10024573   176.1 |  0.304 % |
+|     87372 |  824275  2102351 | 1151308   83396 14445719   173.2 |  0.358 % |
+==============================================================================
+Totoal time used by londex constraint checking is [B2.230000][L1.840000],apply counts 270407, apply_generated 0
+restarts          :           16
+conflicts         :       111696           (     5314 / sec      )
+decisions         :       135079           (     6426 / sec      )
+propagations      :     66119490           (  3145551 / sec      )
+inspects          :    202088773           (  9614119 / sec      )
+conflict literals :     18139648           (    43.34 % deleted  )
+CPU time          :        21.02 sec
+UNSATISFIABLE
+
+******  Solve with 6 layers Start******
+
+creating action-based encoding:
+        building rplan graph layers, up to layer [6];
+        goal constraints;
+        building exclusion constraints --> up to layer 6...
+
+DECISION LAYER 6, WRITING ACTION-BASED ENCODING WITH 30206 VARS, 1038775 CLAUSES.
+24 G clauses, 36266 A clauses, 1002485 E clauses.c CNF file planning task -p , -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl, -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P15_PFILE15.PDDL, bound 6, action based encoding
+In building up solver: p cnf 30206 1038775
+==================================[ MINISAT ]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 | 1038775  2685568 |  346258       0        0     0.0 |  0.000 % |
+|       100 | 1038775  2685568 |  380884     100    24898   249.0 |  0.000 % |
+|       250 | 1038775  2685568 |  418972     250    32198   128.8 |  0.000 % |
+|       475 | 1038775  2685568 |  460869     475   145205   305.7 |  0.000 % |
+|       812 | 1038775  2685568 |  506956     812   150623   185.5 |  0.000 % |
+|      1318 | 1038775  2685568 |  557652    1318   255627   194.0 |  0.000 % |
+|      2077 | 1038745  2685482 |  613417    2072   347107   167.5 |  0.017 % |
+|      3216 | 1038745  2685482 |  674759    3207   410768   128.1 |  0.033 % |
+|      4924 | 1038745  2685482 |  742235    4914   716852   145.9 |  0.036 % |
+|      7487 | 1038745  2685482 |  816458    7474  1323999   177.1 |  0.046 % |
+|     11331 | 1038235  2684020 |  898104   11309  2059031   182.1 |  0.079 % |
+|     17097 | 1038235  2684020 |  987914   17062  2721769   159.5 |  0.126 % |
+|     25746 | 1037635  2682300 | 1086706   25706  4260321   165.7 |  0.139 % |
+|     38720 | 1037302  2681428 | 1195377   38672  6277697   162.3 |  0.166 % |
+|     58181 | 1036895  2680303 | 1314914   58116  9978783   171.7 |  0.222 % |
+|     87373 | 1036304  2678730 | 1446406   87293 15401088   176.4 |  0.265 % |
+|    131163 | 1035677  2677143 | 1591046  131063 24452623   186.6 |  0.331 % |
+|    196847 | 1034879  2674978 | 1750151  196720 37619270   191.2 |  0.424 % |
+|    295373 | 1033758  2672121 | 1925166  295207 55596637   188.3 |  0.556 % |
+|    443162 | 1031489  2666082 | 2117682  442958 83617207   188.8 |  0.672 % |
+|    664845 | 1029926  2661818 | 2329451  664578 132140579   198.8 |  0.881 % |
+|    997370 | 1028026  2656594 | 2562396  997031 206774728   207.4 |  1.112 % |
+|   1496158 | 1025140  2648808 | 2818635 1495720 315360444   210.8 |  1.434 % |
+|   2244340 | 1019548  2633808 | 3100499 2123395 467047210   220.0 |  1.748 % |

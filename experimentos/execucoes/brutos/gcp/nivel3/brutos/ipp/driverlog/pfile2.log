@@ -1,0 +1,86 @@
+
+ipp: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ipp: parsing problem file
+problem 'DLOG-2-2-3' defined
+ ... done.
+
+
+instantiated 108 actions
+
+
+time:   0,    53 facts and       0 exclusive pairs (    9,       0 positives)
+              61 ops   and      25 exclusive pairs
+time:   1,    66 facts and      19 exclusive pairs (   17,      17 positives)
+              90 ops   and     296 exclusive pairs
+time:   2,    73 facts and      43 exclusive pairs (   23,      40 positives)
+             122 ops   and    1130 exclusive pairs
+time:   3,    82 facts and      89 exclusive pairs (   30,      80 positives)
+             148 ops   and    2045 exclusive pairs
+time:   4,    85 facts and      83 exclusive pairs (   32,      79 positives)
+             174 ops   and    3101 exclusive pairs
+time:   5,    92 facts and     109 exclusive pairs (   39,     106 positives)
+             198 ops   and    4141 exclusive pairs
+time:   6,    92 facts and      98 exclusive pairs (   39,      98 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             200 ops   and    4091 exclusive pairs
+time:   7,    92 facts and      98 exclusive pairs (   39,      98 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+
+
+found plan as follows:
+
+time step    0: LOAD-TRUCK PACKAGE3 TRUCK2 S1
+                LOAD-TRUCK PACKAGE2 TRUCK2 S1
+                BOARD-TRUCK DRIVER2 TRUCK1 S0
+                WALK DRIVER1 S0 P0-1
+time step    1: WALK DRIVER1 P0-1 S1
+                DRIVE-TRUCK TRUCK1 S0 S2 DRIVER2
+time step    2: DISEMBARK-TRUCK DRIVER2 TRUCK1 S2
+                BOARD-TRUCK DRIVER1 TRUCK2 S1
+time step    3: WALK DRIVER2 S2 P2-1
+                DRIVE-TRUCK TRUCK2 S1 S2 DRIVER1
+time step    4: UNLOAD-TRUCK PACKAGE2 TRUCK2 S2
+                LOAD-TRUCK PACKAGE1 TRUCK2 S2
+                WALK DRIVER2 P2-1 S1
+time step    5: DRIVE-TRUCK TRUCK2 S2 S0 DRIVER1
+time step    6: UNLOAD-TRUCK PACKAGE3 TRUCK2 S0
+                UNLOAD-TRUCK PACKAGE1 TRUCK2 S0
+                DISEMBARK-TRUCK DRIVER1 TRUCK2 S0
+time step    7: WALK DRIVER1 S0 P0-1
+time step    8: WALK DRIVER1 P0-1 S1
+
+
+
+number of actions tried:       9404
+number of noops tried  :      11248
+
+had    7511 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 108 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.06 MBytes for domain representation
+               1.26 MBytes for graph
+               0.05 MBytes for exclusions
+               0.03 MBytes for memoization
+               0.48 MBytes for wave front
+
+
+
+__MEMKB 4096

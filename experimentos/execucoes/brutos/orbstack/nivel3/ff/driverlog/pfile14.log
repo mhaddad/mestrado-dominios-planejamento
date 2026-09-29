@@ -1,0 +1,118 @@
+
+ff: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ff: parsing problem file
+problem 'DLOG-3-3-6' defined
+ ... done.
+
+
+got 192 facts
+
+Cueing down from goal distance:   30 into depth [1]
+                                  29            [1]
+                                  28            [1][2]
+                                  27            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1][2]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1][2][3]
+                                  18            [1][2][3]
+                                  17            [1][2][3][4]
+                                  16            [1][2][3]
+                                  14            [1][2][3]
+                                  13            [1]
+                                  12            [1][2][3][4]
+                                  11            [1][2][3][4]
+                                  10            [1]
+                                   9            [1][2][3]
+                                   8            [1]
+                                   7            [1][2][3]
+                                   5            [1][2][3][4][5]
+                                   3            [1]
+                                   2            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   30
+                          25
+                          24
+                          23
+                          22
+                          21
+                          20
+                          19
+                          18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: BOARD-TRUCK DRIVER3 TRUCK1 S2
+        1: DRIVE-TRUCK TRUCK1 S2 S3 DRIVER3
+        2: LOAD-TRUCK PACKAGE4 TRUCK1 S3
+        3: WALK DRIVER2 S2 P2-3
+        4: WALK DRIVER2 P2-3 S3
+        5: WALK DRIVER2 S3 P8-3
+        6: WALK DRIVER2 P8-3 S8
+        7: BOARD-TRUCK DRIVER2 TRUCK3 S8
+        8: DRIVE-TRUCK TRUCK1 S3 S9 DRIVER3
+        9: DRIVE-TRUCK TRUCK3 S8 S0 DRIVER2
+       10: LOAD-TRUCK PACKAGE3 TRUCK1 S9
+       11: DRIVE-TRUCK TRUCK1 S9 S4 DRIVER3
+       12: DRIVE-TRUCK TRUCK3 S0 S3 DRIVER2
+       13: UNLOAD-TRUCK PACKAGE4 TRUCK1 S4
+       14: UNLOAD-TRUCK PACKAGE3 TRUCK1 S4
+       15: LOAD-TRUCK PACKAGE6 TRUCK1 S4
+       16: DRIVE-TRUCK TRUCK1 S4 S1 DRIVER3
+       17: LOAD-TRUCK PACKAGE5 TRUCK1 S1
+       18: DRIVE-TRUCK TRUCK1 S1 S5 DRIVER3
+       19: UNLOAD-TRUCK PACKAGE6 TRUCK1 S5
+       20: LOAD-TRUCK PACKAGE2 TRUCK1 S5
+       21: LOAD-TRUCK PACKAGE1 TRUCK1 S5
+       22: DRIVE-TRUCK TRUCK1 S5 S1 DRIVER3
+       23: DRIVE-TRUCK TRUCK1 S1 S3 DRIVER3
+       24: UNLOAD-TRUCK PACKAGE5 TRUCK1 S3
+       25: DRIVE-TRUCK TRUCK1 S3 S1 DRIVER3
+       26: DISEMBARK-TRUCK DRIVER2 TRUCK3 S3
+       27: DISEMBARK-TRUCK DRIVER3 TRUCK1 S1
+       28: WALK DRIVER2 S3 P2-3
+       29: WALK DRIVER2 P2-3 S2
+       30: WALK DRIVER2 S2 P1-2
+       31: WALK DRIVER2 P1-2 S1
+       32: BOARD-TRUCK DRIVER2 TRUCK1 S1
+       33: DRIVE-TRUCK TRUCK1 S1 S0 DRIVER2
+       34: UNLOAD-TRUCK PACKAGE2 TRUCK1 S0
+       35: UNLOAD-TRUCK PACKAGE1 TRUCK1 S0
+       36: DRIVE-TRUCK TRUCK1 S0 S5 DRIVER2
+       37: DRIVE-TRUCK TRUCK1 S5 S6 DRIVER2
+     
+
+time spent:    0.02 seconds instantiating 1968 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 192 facts and 1158 actions
+               0.00 seconds creating final representation with 192 relevant facts
+               0.01 seconds building connectivity graph
+               0.19 seconds searching, evaluating 3421 states, to a max depth of 5
+               0.22 seconds total time
+
+__MEMKB 15540

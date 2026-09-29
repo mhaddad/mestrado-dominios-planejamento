@@ -1,0 +1,124 @@
+
+ipp: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'GRIPPER-14' defined
+ ... done.
+
+
+instantiated 114 actions
+
+
+time:   0,    60 facts and       0 exclusive pairs (   17,       0 positives)
+              89 ops   and     310 exclusive pairs
+time:   1,   106 facts and     342 exclusive pairs (   46,     281 positives)
+             164 ops   and    2597 exclusive pairs
+time:   2,   106 facts and     254 exclusive pairs (   46,     253 positives)
+             192 ops   and    4901 exclusive pairs
+time:   3,   120 facts and     324 exclusive pairs (   60,     309 positives)
+
+goals first reachable in 3 time steps
+
+             234 ops   and    8695 exclusive pairs
+time:   4,   120 facts and     296 exclusive pairs (   60,     295 positives)
+
+graph has leveled off at time step 5
+
+             234 ops   and    7925 exclusive pairs
+time:   5,   120 facts and     296 exclusive pairs (   60,     295 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    6
+expanding wave front to level    7
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+expanding wave front to level   21
+expanding wave front to level   22
+expanding wave front to level   23
+expanding wave front to level   24
+expanding wave front to level   25
+expanding wave front to level   26
+expanding wave front to level   27
+
+
+found plan as follows:
+
+time step    0: PICK BALL14 ROOMA RIGHT
+                PICK BALL13 ROOMA LEFT
+time step    1: MOVE ROOMA ROOMB
+time step    2: DROP BALL14 ROOMB RIGHT
+                DROP BALL13 ROOMB LEFT
+time step    3: MOVE ROOMB ROOMA
+time step    4: PICK BALL12 ROOMA RIGHT
+                PICK BALL11 ROOMA LEFT
+time step    5: MOVE ROOMA ROOMB
+time step    6: DROP BALL12 ROOMB RIGHT
+                DROP BALL11 ROOMB LEFT
+time step    7: MOVE ROOMB ROOMA
+time step    8: PICK BALL10 ROOMA RIGHT
+                PICK BALL9 ROOMA LEFT
+time step    9: MOVE ROOMA ROOMB
+time step   10: DROP BALL10 ROOMB RIGHT
+                DROP BALL9 ROOMB LEFT
+time step   11: MOVE ROOMB ROOMA
+time step   12: PICK BALL8 ROOMA RIGHT
+                PICK BALL7 ROOMA LEFT
+time step   13: MOVE ROOMA ROOMB
+time step   14: DROP BALL8 ROOMB RIGHT
+                DROP BALL7 ROOMB LEFT
+time step   15: MOVE ROOMB ROOMA
+time step   16: PICK BALL6 ROOMA RIGHT
+                PICK BALL5 ROOMA LEFT
+time step   17: MOVE ROOMA ROOMB
+time step   18: DROP BALL6 ROOMB RIGHT
+                DROP BALL5 ROOMB LEFT
+time step   19: MOVE ROOMB ROOMA
+time step   20: PICK BALL4 ROOMA RIGHT
+                PICK BALL3 ROOMA LEFT
+time step   21: MOVE ROOMA ROOMB
+time step   22: DROP BALL4 ROOMB RIGHT
+                DROP BALL3 ROOMB LEFT
+time step   23: MOVE ROOMB ROOMA
+time step   24: PICK BALL2 ROOMA RIGHT
+                PICK BALL1 ROOMA LEFT
+time step   25: MOVE ROOMA ROOMB
+time step   26: DROP BALL2 ROOMB RIGHT
+                DROP BALL1 ROOMB LEFT
+
+
+
+number of actions tried:   27142117
+number of noops tried  :  236811743
+
+had 26416902 simple memoizing hits
+had       0 partial memoizing hits
+had    6580 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 114 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+              84.77 seconds searching graph
+              84.77 seconds total time
+
+Memory used:   0.07 MBytes for domain representation
+               1.39 MBytes for graph
+               0.07 MBytes for exclusions
+             336.68 MBytes for memoization
+             -865.09 MBytes for wave front
+
+
+
+__MEMKB 4043904

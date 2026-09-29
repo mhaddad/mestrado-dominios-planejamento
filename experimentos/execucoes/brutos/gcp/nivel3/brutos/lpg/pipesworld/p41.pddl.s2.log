@@ -1,0 +1,66 @@
+
+Parsing domain file:  domain 'PIPESWORLD_STRIPS' defined ... done.
+Parsing problem file:  problem 'P41-NET5-B22-G2_RT0_INSTANCE' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :   15988
+Number of conditional actions :       0
+Number of facts               :     826
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.99 seconds
+
+Searching ('.' = every 50 search steps):
+........... search limit exceeded. Restart.
+............. search limit exceeded. Restart.
+............... search limit exceeded. Restart.
+.......... solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (POP-START S15 B4 A1 A5 B3 OC1B OC1B TA5-1-OC1B) [D:1.0000; C:1.0000]
+ 0.0000: (PUSH-START S13 B10 A1 A3 B13 GASOLEO GASOLEO TA1-1-GASOLEO) [D:1.0000; C:1.0000]
+ 1.0000: (POP-END S15 A1 A5 B14 B12 RAT-A TA1-1-RAT-A) [D:1.0000; C:1.0000]
+ 1.0000: (PUSH-END S13 A1 A3 B8 B13 RAT-A TA3-1-RAT-A) [D:1.0000; C:1.0000]
+ 2.0000: (POP-START S15 B19 A1 A5 B4 LCO OC1B TA5-1-LCO) [D:1.0000; C:1.0000]
+ 3.0000: (POP-END S15 A1 A5 B12 B7 LCO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 4.0000: (PUSH-START S13 B14 A1 A3 B10 LCO GASOLEO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 5.0000: (PUSH-END S13 A1 A3 B13 B10 GASOLEO TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 6.0000: (POP-START S23 B13 A2 A3 B16 GASOLEO OCA1 TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 7.0000: (POP-UNITARYPIPE S34 B2 A3 A4 B1 LCO GASOLEO TA3-1-GASOLEO TA4-1-LCO) [D:1.0000; C:1.0000]
+ 7.0000: (POP-END S23 A2 A3 B6 B9 GASOLEO TA2-1-GASOLEO) [D:1.0000; C:1.0000]
+ 8.0000: (POP-START S13 B1 A1 A3 B10 GASOLEO GASOLEO TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 8.0000: (POP-START S12 B6 A1 A2 B11 GASOLEO GASOLEO TA2-1-GASOLEO) [D:1.0000; C:1.0000]
+ 9.0000: (POP-END S13 A1 A3 B14 B10 OCA1 TA1-1-OCA1) [D:1.0000; C:1.0000]
+ 9.0000: (POP-END S12 A1 A2 B21 B11 LCO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 10.0000: (PUSH-START S13 B14 A1 A3 B10 LCO GASOLEO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 11.0000: (PUSH-END S13 A1 A3 B1 B10 GASOLEO TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 12.0000: (PUSH-START S13 B21 A1 A3 B14 RAT-A LCO TA1-1-RAT-A) [D:1.0000; C:1.0000]
+ 12.0000: (PUSH-UNITARYPIPE S34 B1 A3 A4 B2 GASOLEO LCO TA3-1-GASOLEO TA4-1-LCO) [D:1.0000; C:1.0000]
+ 13.0000: (PUSH-END S13 A1 A3 B10 B14 GASOLEO TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      44.40
+Search time:     43.41
+Actions:         20
+Execution cost:  20.00
+Duration:        14.000
+Plan quality:    20.000
+
+__MEMKB 187392

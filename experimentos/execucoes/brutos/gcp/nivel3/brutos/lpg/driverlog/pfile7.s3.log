@@ -1,0 +1,70 @@
+
+Parsing domain file:  domain 'DRIVERLOG' defined ... done.
+Parsing problem file:  problem 'DLOG-3-3-6' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :     252
+Number of conditional actions :       0
+Number of facts               :      75
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (BOARD-TRUCK DRIVER1 TRUCK3 S1) [D:1.0000; C:1.0000]
+ 0.0000: (WALK DRIVER2 S2 P0-2) [D:1.0000; C:1.0000]
+ 0.0000: (WALK DRIVER3 S2 P2-1) [D:1.0000; C:1.0000]
+ 1.0000: (DRIVE-TRUCK TRUCK3 S1 S2 DRIVER1) [D:1.0000; C:1.0000]
+ 1.0000: (WALK DRIVER2 P0-2 S0) [D:1.0000; C:1.0000]
+ 1.0000: (WALK DRIVER3 P2-1 S1) [D:1.0000; C:1.0000]
+ 2.0000: (LOAD-TRUCK PACKAGE2 TRUCK3 S2) [D:1.0000; C:1.0000]
+ 2.0000: (BOARD-TRUCK DRIVER3 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 3.0000: (DRIVE-TRUCK TRUCK3 S2 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 4.0000: (UNLOAD-TRUCK PACKAGE2 TRUCK3 S1) [D:1.0000; C:1.0000]
+ 4.0000: (LOAD-TRUCK PACKAGE4 TRUCK3 S1) [D:1.0000; C:1.0000]
+ 4.0000: (LOAD-TRUCK PACKAGE5 TRUCK3 S1) [D:1.0000; C:1.0000]
+ 5.0000: (LOAD-TRUCK PACKAGE2 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 5.0000: (DRIVE-TRUCK TRUCK3 S1 S0 DRIVER1) [D:1.0000; C:1.0000]
+ 6.0000: (UNLOAD-TRUCK PACKAGE2 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 6.0000: (UNLOAD-TRUCK PACKAGE5 TRUCK3 S0) [D:1.0000; C:1.0000]
+ 7.0000: (LOAD-TRUCK PACKAGE2 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 7.0000: (DRIVE-TRUCK TRUCK3 S0 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 8.0000: (UNLOAD-TRUCK PACKAGE2 TRUCK2 S1) [D:1.0000; C:1.0000]
+ 8.0000: (DRIVE-TRUCK TRUCK3 S1 S2 DRIVER1) [D:1.0000; C:1.0000]
+ 9.0000: (UNLOAD-TRUCK PACKAGE4 TRUCK3 S2) [D:1.0000; C:1.0000]
+ 9.0000: (DISEMBARK-TRUCK DRIVER1 TRUCK3 S2) [D:1.0000; C:1.0000]
+ 9.0000: (DRIVE-TRUCK TRUCK2 S1 S0 DRIVER3) [D:1.0000; C:1.0000]
+ 10.0000: (WALK DRIVER1 S2 P0-2) [D:1.0000; C:1.0000]
+ 11.0000: (WALK DRIVER1 P0-2 S0) [D:1.0000; C:1.0000]
+ 12.0000: (WALK DRIVER1 S0 P0-1) [D:1.0000; C:1.0000]
+ 13.0000: (WALK DRIVER1 P0-1 S0) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.00
+Search time:     0.00
+Actions:         27
+Execution cost:  27.00
+Duration:        14.000
+Plan quality:    27.000
+
+__MEMKB 110208

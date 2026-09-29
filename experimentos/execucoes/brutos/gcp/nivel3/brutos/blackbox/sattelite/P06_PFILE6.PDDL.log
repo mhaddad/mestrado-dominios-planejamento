@@ -1,0 +1,106 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P06_PFILE6.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P06_PFILE6.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 61 facts and 173 exclusive pairs.
+time: 2, 66 facts and 237 exclusive pairs.
+time: 3, 73 facts and 270 exclusive pairs.
+time: 4, 110 facts and 385 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 110 facts and 260 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 110 facts and 173 exclusive pairs.
+Goals first reachable in 6 steps.
+3202 nodes created.
+
+####################################################
+goals at time 7:
+  have-image_planet4_thermograph2 have-image_planet5_spectrograph0 have-image_star6_thermograph2 have-image_star7_infrared3 have-image_phenomenon8_spectrograph0 
+have-image_star9_infrared1 have-image_star10_infrared3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 161304
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 110 facts and 173 exclusive pairs.
+675 new nodes added.
+
+####################################################
+goals at time 8:
+  have-image_planet4_thermograph2 have-image_planet5_spectrograph0 have-image_star6_thermograph2 have-image_star7_infrared3 have-image_phenomenon8_spectrograph0 
+have-image_star9_infrared1 have-image_star10_infrared3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 22683534
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 110 facts and 173 exclusive pairs.
+675 new nodes added.
+
+####################################################
+goals at time 9:
+  have-image_planet4_thermograph2 have-image_planet5_spectrograph0 have-image_star6_thermograph2 have-image_star7_infrared3 have-image_phenomenon8_spectrograph0 
+have-image_star9_infrared1 have-image_star10_infrared3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 907968
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (turn-to satellite1 star2 star6)
+1 (switch-on instrument4 satellite2)
+1 (switch-on instrument2 satellite1)
+1 (switch-on instrument0 satellite0)
+1 (turn-to satellite2 star0 star6)
+1 (turn-to satellite0 star1 phenomenon8)
+2 (calibrate satellite0 instrument0 star1)
+2 (calibrate satellite1 instrument2 star2)
+2 (calibrate satellite2 instrument4 star0)
+3 (turn-to satellite2 star10 star0)
+3 (turn-to satellite0 phenomenon8 star1)
+3 (turn-to satellite1 star9 star2)
+4 (take-image satellite2 star10 instrument4 infrared3)
+4 (take-image satellite0 phenomenon8 instrument0 spectrograph0)
+4 (take-image satellite1 star9 instrument2 infrared1)
+5 (turn-to satellite1 star6 star9)
+5 (turn-to satellite2 star7 star10)
+5 (turn-to satellite0 planet5 phenomenon8)
+6 (take-image satellite0 planet5 instrument0 spectrograph0)
+6 (take-image satellite1 star6 instrument2 thermograph2)
+6 (take-image satellite2 star7 instrument4 infrared3)
+7 (turn-to satellite1 planet4 star6)
+8 (take-image satellite1 planet4 instrument2 thermograph2)
+End plan
+----------------------------------------------------
+
+23 total actions in plan
+25427 entries in hash table, 2401651 hash hits, avg set size 18
+2427085 total set-creation steps (entries + hits + plan length - 1)
+4075666 actions tried
+
+####################################################
+Total elapsed time:   30.62 seconds
+Time in milliseconds: 30616
+
+####################################################
+__MEMKB 76160

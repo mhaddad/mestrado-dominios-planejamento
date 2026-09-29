@@ -1,0 +1,136 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom follow(b8, b8)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b6, b6)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b3, b3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b7, b7)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b4, b4)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b9, b9)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b0, b0)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b1, b1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b5, b5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom follow(b2, b2)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+36 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+26 variables of 26 necessary
+1584 of 1584 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 6336 to 2408)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 6336 unary operators... done! [6336 unary operators]
+Best heuristic value: 9/17 [expanded 1 state(s)]
+Best heuristic value: 9/16 [expanded 2 state(s)]
+Best heuristic value: 9/15 [expanded 3 state(s)]
+Best heuristic value: 8/15 [expanded 11 state(s)]
+Best heuristic value: 8/14 [expanded 15 state(s)]
+Best heuristic value: 7/14 [expanded 17 state(s)]
+Best heuristic value: 6/14 [expanded 25 state(s)]
+Best heuristic value: 6/13 [expanded 27 state(s)]
+Best heuristic value: 5/13 [expanded 35 state(s)]
+Best heuristic value: 5/12 [expanded 43 state(s)]
+Best heuristic value: 3/12 [expanded 48 state(s)]
+Best heuristic value: 2/11 [expanded 52 state(s)]
+Best heuristic value: 2/10 [expanded 53 state(s)]
+Best heuristic value: 2/8 [expanded 56 state(s)]
+Best heuristic value: 2/7 [expanded 71 state(s)]
+Best heuristic value: 2/5 [expanded 74 state(s)]
+Best heuristic value: 2/4 [expanded 76 state(s)]
+Best heuristic value: 2/3 [expanded 79 state(s)]
+Best heuristic value: 2/2 [expanded 87 state(s)]
+Best heuristic value: 1/2 [expanded 1502 state(s)]
+Best heuristic value: 1/1 [expanded 1503 state(s)]
+Solution found!
+pop-start s13 b2 a1 a3 b6 rat-a gasoleo ta3-1-rat-a
+pop-end s13 a1 a3 b7 b6 rat-a ta1-1-rat-a
+push-start s12 b0 a1 a2 b9 gasoleo lco ta1-1-gasoleo
+push-end s12 a1 a2 b1 b9 rat-a ta2-1-rat-a
+push-start s12 b5 a1 a2 b0 gasoleo gasoleo ta1-2-gasoleo
+pop-start s13 b3 a1 a3 b2 lco rat-a ta3-1-lco
+pop-end s13 a1 a3 b6 b2 gasoleo ta1-1-gasoleo
+push-end s12 a1 a2 b9 b0 lco ta2-1-lco
+push-start s12 b6 a1 a2 b5 gasoleo gasoleo ta1-1-gasoleo
+push-end s12 a1 a2 b0 b5 gasoleo ta2-2-gasoleo
+pop-start s12 b9 a1 a2 b5 lco gasoleo ta2-1-lco
+pop-end s12 a1 a2 b6 b5 gasoleo ta1-2-gasoleo
+pop-start s13 b8 a1 a3 b3 gasoleo lco ta3-1-gasoleo
+pop-end s13 a1 a3 b2 b3 gasoleo ta1-1-gasoleo
+push-start s13 b6 a1 a3 b3 gasoleo lco ta1-1-gasoleo
+push-end s13 a1 a3 b8 b3 gasoleo ta3-2-gasoleo
+push-start s13 b7 a1 a3 b6 gasoleo gasoleo ta1-2-gasoleo
+push-end s13 a1 a3 b3 b6 lco ta3-1-lco
+push-start s13 b2 a1 a3 b7 rat-a gasoleo ta1-1-rat-a
+push-end s13 a1 a3 b6 b7 gasoleo ta3-1-gasoleo
+pop-start s13 b3 a1 a3 b7 lco gasoleo ta3-1-lco
+pop-end s13 a1 a3 b2 b7 rat-a ta1-1-rat-a
+pop-start s13 b6 a1 a3 b3 gasoleo lco ta3-1-gasoleo
+pop-end s13 a1 a3 b7 b3 gasoleo ta1-1-gasoleo
+pop-start s13 b8 a1 a3 b6 gasoleo gasoleo ta3-2-gasoleo
+pop-end s13 a1 a3 b3 b6 gasoleo ta1-2-gasoleo
+pop-start s12 b4 a1 a2 b9 gasoleo lco ta2-1-gasoleo
+pop-end s12 a1 a2 b5 b9 lco ta1-1-lco
+pop-start s12 b1 a1 a2 b4 rat-a gasoleo ta2-1-rat-a
+push-start s13 b2 a1 a3 b6 rat-a gasoleo ta1-1-rat-a
+push-end s13 a1 a3 b8 b6 gasoleo ta3-1-gasoleo
+pop-end s12 a1 a2 b9 b4 rat-a ta1-1-rat-a
+push-start s13 b9 a1 a3 b2 lco rat-a ta1-1-lco
+push-end s13 a1 a3 b6 b2 gasoleo ta3-2-gasoleo
+push-start s13 b5 a1 a3 b9 gasoleo lco ta1-1-gasoleo
+push-end s13 a1 a3 b2 b9 rat-a ta3-1-rat-a
+push-start s13 b7 a1 a3 b5 gasoleo gasoleo ta1-2-gasoleo
+push-end s13 a1 a3 b9 b5 lco ta3-1-lco
+Plan length: 38 step(s).
+Expanded 1504 state(s).
+Generated 8559 state(s).
+Cache hits: 580221
+Cache misses: 483131
+Search time: 0.17 seconds
+Total time: 0.2 seconds
+__MEMKB 25216

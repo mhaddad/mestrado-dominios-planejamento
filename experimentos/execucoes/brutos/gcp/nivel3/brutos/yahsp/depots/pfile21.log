@@ -1,0 +1,61 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob8715..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.11 -> 126792 candidates, 8562 actions
+Finalization time : 0.01 -> 737 fluents, 61 init
+
+33 25 16 15 9 6 3 
+
+0: (LIFT hoist1 crate5 pallet1 depot1) [1]
+1: (DRIVE truck0 distributor2 depot0) [1]
+2: (LIFT hoist4 crate6 pallet4 depot4) [1]
+3: (LIFT hoist0 crate1 pallet0 depot0) [1]
+4: (LIFT hoist11 crate2 pallet13 distributor5) [1]
+5: (LOAD hoist0 crate1 truck0 depot0) [1]
+6: (LIFT hoist7 crate8 pallet7 distributor1) [1]
+7: (DROP hoist11 crate2 pallet11 distributor5) [1]
+8: (LOAD hoist4 crate6 truck5 depot4) [1]
+9: (DRIVE truck5 depot4 distributor1) [1]
+10: (DRIVE truck0 depot0 distributor1) [1]
+11: (LIFT hoist13 crate0 pallet16 depot1) [1]
+12: (LOAD hoist7 crate8 truck0 distributor1) [1]
+13: (UNLOAD hoist7 crate1 truck0 distributor1) [1]
+14: (DROP hoist7 crate1 pallet7 distributor1) [1]
+15: (UNLOAD hoist7 crate6 truck5 distributor1) [1]
+16: (DROP hoist7 crate6 pallet12 distributor1) [1]
+17: (DRIVE truck0 distributor1 depot2) [1]
+18: (DRIVE truck0 depot2 depot1) [1]
+19: (LOAD hoist1 crate5 truck0 depot1) [1]
+20: (LOAD hoist13 crate0 truck0 depot1) [1]
+21: (UNLOAD hoist13 crate8 truck0 depot1) [1]
+22: (LIFT hoist1 crate3 pallet15 depot1) [1]
+23: (DROP hoist13 crate8 pallet15 depot1) [1]
+24: (LOAD hoist1 crate3 truck0 depot1) [1]
+25: (DRIVE truck0 depot1 depot2) [1]
+26: (UNLOAD hoist2 crate0 truck0 depot2) [1]
+27: (DROP hoist2 crate0 pallet2 depot2) [1]
+28: (DRIVE truck0 depot2 depot3) [1]
+29: (UNLOAD hoist3 crate3 truck0 depot3) [1]
+30: (DROP hoist3 crate3 pallet3 depot3) [1]
+31: (DRIVE truck0 depot3 depot5) [1]
+32: (UNLOAD hoist12 crate5 truck0 depot5) [1]
+33: (DROP hoist12 crate5 pallet5 depot5) [1]
+
+Valid plan : 34 actions.
+Computed nodes : 34
+Evaluated nodes : 8
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 31.78 %
+Preparation time : 0.12
+Search time : 0.00
+Total time : 0.12
+
+__MEMKB 12544

@@ -1,0 +1,198 @@
+Parsing...
+Instantiating...
+Starting instantiation [43 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+18 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(crate5, crate5)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate3, crate3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate4, crate4)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate1, crate1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate2, crate2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate0, crate0)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist1, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet1, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist2, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet2, distributor1)
+Removed false proposition: <none of those>
+26 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+26 variables of 26 necessary
+336 of 336 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 1632 to 636)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 1416 unary operators... done! [1416 unary operators]
+Best heuristic value: 25/25 [expanded 1 state(s)]
+Best heuristic value: 23/25 [expanded 3 state(s)]
+Best heuristic value: 23/24 [expanded 4 state(s)]
+Best heuristic value: 22/24 [expanded 5 state(s)]
+Best heuristic value: 22/23 [expanded 6 state(s)]
+Best heuristic value: 21/23 [expanded 10 state(s)]
+Best heuristic value: 20/23 [expanded 39 state(s)]
+Best heuristic value: 19/21 [expanded 43 state(s)]
+Best heuristic value: 18/20 [expanded 52 state(s)]
+Best heuristic value: 17/20 [expanded 54 state(s)]
+Best heuristic value: 16/19 [expanded 55 state(s)]
+Best heuristic value: 15/18 [expanded 62 state(s)]
+Best heuristic value: 15/17 [expanded 108 state(s)]
+Best heuristic value: 14/17 [expanded 111 state(s)]
+Best heuristic value: 13/16 [expanded 116 state(s)]
+Best heuristic value: 13/15 [expanded 875 state(s)]
+Best heuristic value: 13/14 [expanded 883 state(s)]
+Best heuristic value: 12/13 [expanded 887 state(s)]
+Best heuristic value: 11/12 [expanded 888 state(s)]
+Best heuristic value: 10/11 [expanded 889 state(s)]
+Best heuristic value: 8/10 [expanded 893 state(s)]
+Best heuristic value: 7/9 [expanded 2324 state(s)]
+Best heuristic value: 6/9 [expanded 2325 state(s)]
+Best heuristic value: 5/8 [expanded 2326 state(s)]
+Best heuristic value: 4/7 [expanded 2327 state(s)]
+Best heuristic value: 4/6 [expanded 2328 state(s)]
+Best heuristic value: 4/4 [expanded 2343 state(s)]
+Best heuristic value: 4/3 [expanded 2345 state(s)]
+Best heuristic value: 2/2 [expanded 2346 state(s)]
+Best heuristic value: 1/1 [expanded 2347 state(s)]
+Solution found!
+lift hoist2 crate5 crate2 distributor1
+drive truck1 distributor0 distributor1
+load hoist2 crate5 truck1 distributor1
+lift hoist1 crate4 crate3 distributor0
+drive truck1 distributor1 distributor0
+load hoist1 crate4 truck1 distributor0
+lift hoist1 crate3 crate0 distributor0
+load hoist1 crate3 truck1 distributor0
+unload hoist1 crate5 truck1 distributor0
+drop hoist1 crate5 crate0 distributor0
+unload hoist1 crate4 truck1 distributor0
+drive truck1 distributor0 distributor1
+unload hoist2 crate3 truck1 distributor1
+drop hoist2 crate3 crate2 distributor1
+lift hoist0 crate1 pallet0 depot0
+load hoist0 crate1 truck0 depot0
+drive truck0 depot0 distributor1
+unload hoist2 crate1 truck0 distributor1
+drop hoist2 crate1 crate3 distributor1
+drive truck1 distributor1 distributor0
+load hoist1 crate4 truck1 distributor0
+lift hoist1 crate5 crate0 distributor0
+load hoist1 crate5 truck1 distributor0
+lift hoist1 crate0 pallet1 distributor0
+load hoist1 crate0 truck1 distributor0
+drive truck1 distributor0 distributor1
+unload hoist2 crate0 truck1 distributor1
+drop hoist2 crate0 crate1 distributor1
+drive truck1 distributor1 distributor0
+unload hoist1 crate4 truck1 distributor0
+drive truck1 distributor0 distributor1
+drop hoist1 crate4 pallet1 distributor0
+lift hoist2 crate0 crate1 distributor1
+drive truck1 distributor1 depot0
+load hoist2 crate0 truck0 distributor1
+drive truck1 depot0 distributor1
+unload hoist2 crate5 truck1 distributor1
+load hoist2 crate5 truck0 distributor1
+drive truck0 distributor1 depot0
+unload hoist0 crate0 truck0 depot0
+drop hoist0 crate0 pallet0 depot0
+unload hoist0 crate5 truck0 depot0
+drop hoist0 crate5 crate0 depot0
+drive truck0 depot0 distributor1
+lift hoist2 crate1 crate3 distributor1
+drive truck1 distributor1 depot0
+load hoist2 crate1 truck0 distributor1
+drive truck0 distributor1 depot0
+lift hoist2 crate3 crate2 distributor1
+unload hoist0 crate1 truck0 depot0
+drop hoist0 crate1 crate5 depot0
+drive truck0 depot0 distributor1
+load hoist2 crate3 truck0 distributor1
+lift hoist2 crate2 pallet2 distributor1
+load hoist2 crate2 truck0 distributor1
+drive truck0 distributor1 depot0
+lift hoist0 crate1 crate5 depot0
+load hoist0 crate1 truck0 depot0
+unload hoist0 crate2 truck0 depot0
+drop hoist0 crate2 crate5 depot0
+drive truck0 depot0 distributor1
+unload hoist2 crate1 truck0 distributor1
+drop hoist2 crate1 pallet2 distributor1
+lift hoist0 crate2 crate5 depot0
+load hoist0 crate2 truck1 depot0
+lift hoist0 crate5 crate0 depot0
+unload hoist2 crate3 truck0 distributor1
+drop hoist0 crate5 crate0 depot0
+drive truck1 depot0 distributor1
+drive truck1 distributor1 distributor0
+unload hoist1 crate2 truck1 distributor0
+drop hoist1 crate2 crate4 distributor0
+load hoist2 crate3 truck0 distributor1
+drive truck0 distributor1 distributor0
+unload hoist1 crate3 truck0 distributor0
+drop hoist1 crate3 crate2 distributor0
+drive truck0 distributor0 distributor1
+drive truck1 distributor0 depot0
+lift hoist0 crate5 crate0 depot0
+load hoist0 crate5 truck1 depot0
+drive truck1 depot0 distributor0
+lift hoist0 crate0 pallet0 depot0
+drive truck0 distributor1 depot0
+load hoist0 crate0 truck0 depot0
+drive truck0 depot0 distributor1
+unload hoist2 crate0 truck0 distributor1
+drop hoist2 crate0 crate1 distributor1
+drive truck1 distributor0 distributor1
+unload hoist2 crate5 truck1 distributor1
+drop hoist2 crate5 crate0 distributor1
+drive truck0 distributor1 depot0
+drive truck0 depot0 distributor0
+lift hoist1 crate3 crate2 distributor0
+load hoist1 crate3 truck0 distributor0
+lift hoist1 crate2 crate4 distributor0
+load hoist1 crate2 truck0 distributor0
+drive truck0 distributor0 depot0
+unload hoist0 crate2 truck0 depot0
+drop hoist0 crate2 pallet0 depot0
+unload hoist0 crate3 truck0 depot0
+drop hoist0 crate3 crate2 depot0
+Plan length: 101 step(s).
+Expanded 2348 state(s).
+Generated 18101 state(s).
+Cache hits: 260961
+Cache misses: 55391
+Search time: 0.07 seconds
+Total time: 0.07 seconds
+__MEMKB 13824

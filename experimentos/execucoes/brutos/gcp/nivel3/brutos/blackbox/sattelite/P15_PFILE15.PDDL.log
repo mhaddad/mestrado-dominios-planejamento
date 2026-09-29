@@ -1,0 +1,48 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P15_PFILE15.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P15_PFILE15.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 296 facts and 2434 exclusive pairs.
+time: 2, 315 facts and 2954 exclusive pairs.
+time: 3, 333 facts and 2762 exclusive pairs.
+time: 4, 440 facts and 2449 exclusive pairs.
+Goals first reachable in 4 steps.
+18830 nodes created.
+
+####################################################
+goals at time 5:
+  pointing_satellite0_star19 pointing_satellite1_planet22 pointing_satellite2_star13 pointing_satellite3_planet14 pointing_satellite5_planet24 
+pointing_satellite7_star3 have-image_phenomenon5_spectrograph2 have-image_planet6_spectrograph2 have-image_planet7_infrared0 have-image_phenomenon9_infrared0 
+have-image_phenomenon10_image1 have-image_planet11_image1 have-image_star12_thermograph3 have-image_star13_thermograph3 have-image_planet14_thermograph4 
+have-image_star15_thermograph4 have-image_phenomenon16_image1 have-image_planet17_thermograph3 have-image_star18_image1 have-image_planet20_image1 
+have-image_planet21_infrared0 have-image_planet22_image1 have-image_planet23_thermograph3 have-image_planet24_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 31
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 440 facts and 2434 exclusive pairs.
+6512 new nodes added.
+
+####################################################
+goals at time 6:
+  pointing_satellite0_star19 pointing_satellite1_planet22 pointing_satellite2_star13 pointing_satellite3_planet14 pointing_satellite5_planet24 
+pointing_satellite7_star3 have-image_phenomenon5_spectrograph2 have-image_planet6_spectrograph2 have-image_planet7_infrared0 have-image_phenomenon9_infrared0 
+have-image_phenomenon10_image1 have-image_planet11_image1 have-image_star12_thermograph3 have-image_star13_thermograph3 have-image_planet14_thermograph4 
+have-image_star15_thermograph4 have-image_phenomenon16_image1 have-image_planet17_thermograph3 have-image_star18_image1 have-image_planet20_image1 
+have-image_planet21_infrared0 have-image_planet22_image1 have-image_planet23_thermograph3 have-image_planet24_infrared0 
+
+
+----------------------------------------------------
+Invoking solver graphplan

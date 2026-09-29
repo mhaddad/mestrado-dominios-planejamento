@@ -1,0 +1,84 @@
+Parsing...
+Instantiating...
+Starting instantiation [35 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+2 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+11 variables of 11 necessary
+144 of 144 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 180 to 124)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 180 unary operators... done! [180 unary operators]
+Best heuristic value: 15/15 [expanded 1 state(s)]
+Best heuristic value: 15/11 [expanded 2 state(s)]
+Best heuristic value: 14/11 [expanded 3 state(s)]
+Best heuristic value: 13/10 [expanded 5 state(s)]
+Best heuristic value: 12/9 [expanded 6 state(s)]
+Best heuristic value: 11/8 [expanded 9 state(s)]
+Best heuristic value: 10/8 [expanded 10 state(s)]
+Best heuristic value: 9/8 [expanded 11 state(s)]
+Best heuristic value: 8/7 [expanded 13 state(s)]
+Best heuristic value: 7/6 [expanded 15 state(s)]
+Best heuristic value: 6/5 [expanded 19 state(s)]
+Best heuristic value: 5/4 [expanded 22 state(s)]
+Best heuristic value: 3/3 [expanded 23 state(s)]
+Best heuristic value: 2/2 [expanded 24 state(s)]
+Best heuristic value: 1/2 [expanded 26 state(s)]
+Best heuristic value: 1/1 [expanded 2930 state(s)]
+Solution found!
+board-truck driver3 truck2 s0
+drive-truck truck2 s0 s2 driver3
+walk driver2 s1 p0-1
+walk driver2 p0-1 s0
+load-truck package1 truck2 s2
+drive-truck truck2 s2 s1 driver3
+disembark-truck driver3 truck2 s1
+unload-truck package1 truck2 s1
+load-truck package4 truck2 s1
+board-truck driver3 truck2 s1
+drive-truck truck2 s1 s0 driver3
+unload-truck package4 truck2 s0
+load-truck package3 truck2 s0
+drive-truck truck2 s0 s2 driver3
+unload-truck package3 truck2 s2
+disembark-truck driver3 truck2 s2
+walk driver3 s2 p1-2
+walk driver3 p1-2 s1
+Plan length: 18 step(s).
+Expanded 2931 state(s).
+Generated 31505 state(s).
+Cache hits: 14859
+Cache misses: 0
+Search time: 0.24 seconds
+Total time: 0.28 seconds
+__MEMKB 13864

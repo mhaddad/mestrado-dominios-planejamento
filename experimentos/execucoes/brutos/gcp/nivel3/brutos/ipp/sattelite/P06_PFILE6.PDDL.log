@@ -1,0 +1,91 @@
+
+ipp: parsing domain file
+domain 'SATELLITE' defined
+ ... done.
+ipp: parsing problem file
+problem 'STRIPS-SAT-X-1' defined
+ ... done.
+
+
+AND has only one son (anymore)
+warning: detected identical trees in con/dis junction
+instantiated 455 actions
+
+
+time:   0,    90 facts and       0 exclusive pairs (    6,       0 positives)
+             125 ops   and     213 exclusive pairs
+time:   1,   131 facts and     175 exclusive pairs (   41,     173 positives)
+             476 ops   and   23216 exclusive pairs
+time:   2,   136 facts and     249 exclusive pairs (   46,     237 positives)
+             491 ops   and   25178 exclusive pairs
+time:   3,   143 facts and     289 exclusive pairs (   53,     270 positives)
+             598 ops   and   42422 exclusive pairs
+time:   4,   180 facts and     418 exclusive pairs (   90,     385 positives)
+             635 ops   and   43471 exclusive pairs
+time:   5,   180 facts and     272 exclusive pairs (   90,     260 positives)
+             635 ops   and   41827 exclusive pairs
+time:   6,   180 facts and     175 exclusive pairs (   90,     173 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             635 ops   and   41206 exclusive pairs
+time:   7,   180 facts and     175 exclusive pairs (   90,     173 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+
+
+found plan as follows:
+
+time step    0: TURN_TO SATELLITE0 STAR1 PHENOMENON8
+                SWITCH_ON INSTRUMENT0 SATELLITE0
+                TURN_TO SATELLITE1 STAR2 STAR6
+                SWITCH_ON INSTRUMENT2 SATELLITE1
+                TURN_TO SATELLITE2 STAR0 STAR6
+                SWITCH_ON INSTRUMENT4 SATELLITE2
+time step    1: CALIBRATE SATELLITE2 INSTRUMENT4 STAR0
+                CALIBRATE SATELLITE1 INSTRUMENT2 STAR2
+                CALIBRATE SATELLITE0 INSTRUMENT0 STAR1
+time step    2: TURN_TO SATELLITE0 PHENOMENON8 STAR1
+                TURN_TO SATELLITE1 STAR6 STAR2
+                TURN_TO SATELLITE2 STAR10 STAR0
+time step    3: TAKE_IMAGE SATELLITE2 STAR10 INSTRUMENT4 INFRARED3
+                TAKE_IMAGE SATELLITE0 PHENOMENON8 INSTRUMENT0 SPECTROGRAPH0
+                TAKE_IMAGE SATELLITE1 STAR6 INSTRUMENT2 THERMOGRAPH2
+time step    4: TURN_TO SATELLITE0 PLANET5 PHENOMENON8
+                TURN_TO SATELLITE2 STAR7 STAR10
+                TURN_TO SATELLITE1 STAR9 STAR6
+time step    5: TAKE_IMAGE SATELLITE1 STAR9 INSTRUMENT2 INFRARED1
+                TAKE_IMAGE SATELLITE2 STAR7 INSTRUMENT4 INFRARED3
+                TAKE_IMAGE SATELLITE0 PLANET5 INSTRUMENT0 SPECTROGRAPH0
+time step    6: TURN_TO SATELLITE1 PLANET4 STAR9
+time step    7: TAKE_IMAGE SATELLITE1 PLANET4 INSTRUMENT2 THERMOGRAPH2
+
+
+
+number of actions tried:    4153949
+number of noops tried  :   11548406
+
+had 2457693 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 455 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               9.40 seconds searching graph
+               9.40 seconds total time
+
+Memory used:   0.13 MBytes for domain representation
+               3.08 MBytes for graph
+               0.51 MBytes for exclusions
+               0.63 MBytes for memoization
+               0.33 MBytes for wave front
+
+
+
+__MEMKB 7552

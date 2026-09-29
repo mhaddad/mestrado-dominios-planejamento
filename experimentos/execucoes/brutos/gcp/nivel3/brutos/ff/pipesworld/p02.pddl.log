@@ -1,0 +1,57 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P02-NET1-B6-G4_RT0_INSTANCE' defined
+ ... done.
+
+
+got 72 facts
+
+Cueing down from goal distance:    9 into depth [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    9
+                           7
+                           6
+                           5
+                           4
+                           3
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: POP-UNITARYPIPE S13 B1 A1 A3 B5 LCO OCA1 TA1-1-OCA1 TA3-1-LCO
+        1: PUSH-UNITARYPIPE S13 B2 A1 A3 B1 GASOLEO LCO TA1-1-GASOLEO TA3-1-LCO
+        2: PUSH-UNITARYPIPE S12 B0 A1 A2 B4 OC1B LCO TA1-1-OC1B TA2-1-LCO
+        3: PUSH-UNITARYPIPE S13 B3 A1 A3 B2 RAT-A GASOLEO TA1-1-RAT-A TA3-1-GASOLEO
+        4: PUSH-UNITARYPIPE S12 B5 A1 A2 B0 OCA1 OC1B TA1-1-OCA1 TA2-1-OC1B
+        5: POP-UNITARYPIPE S12 B4 A1 A2 B5 LCO OCA1 TA1-1-OCA1 TA2-1-LCO
+        6: POP-UNITARYPIPE S12 B0 A1 A2 B4 OC1B LCO TA1-1-LCO TA2-1-OC1B
+        7: PUSH-UNITARYPIPE S12 B5 A1 A2 B0 OCA1 OC1B TA1-1-OCA1 TA2-1-OC1B
+        8: POP-UNITARYPIPE S13 B1 A1 A3 B3 LCO RAT-A TA1-1-RAT-A TA3-1-LCO
+        9: PUSH-UNITARYPIPE S12 B4 A1 A2 B5 LCO OCA1 TA1-1-LCO TA2-1-OCA1
+       10: PUSH-UNITARYPIPE S12 B3 A1 A2 B4 RAT-A LCO TA1-1-RAT-A TA2-1-LCO
+       11: POP-UNITARYPIPE S13 B2 A1 A3 B1 GASOLEO LCO TA1-1-LCO TA3-1-GASOLEO
+       12: PUSH-UNITARYPIPE S12 B1 A1 A2 B3 LCO RAT-A TA1-1-LCO TA2-1-RAT-A
+       13: POP-UNITARYPIPE S12 B4 A1 A2 B1 LCO LCO TA1-1-LCO TA2-1-LCO
+       14: PUSH-UNITARYPIPE S13 B1 A1 A3 B2 LCO GASOLEO TA1-1-LCO TA3-1-GASOLEO
+       15: POP-UNITARYPIPE S12 B3 A1 A2 B4 RAT-A LCO TA1-1-LCO TA2-1-RAT-A
+     
+
+time spent:    0.00 seconds instantiating 128 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 74 facts and 128 actions
+               0.00 seconds creating final representation with 72 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 158 states, to a max depth of 3
+               0.00 seconds total time
+
+__MEMKB 3968

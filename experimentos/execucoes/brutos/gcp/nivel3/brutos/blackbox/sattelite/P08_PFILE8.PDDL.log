@@ -1,0 +1,61 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P08_PFILE8.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P08_PFILE8.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 115 facts and 438 exclusive pairs.
+time: 2, 125 facts and 612 exclusive pairs.
+time: 3, 140 facts and 630 exclusive pairs.
+time: 4, 185 facts and 446 exclusive pairs.
+Goals first reachable in 4 steps.
+4349 nodes created.
+
+####################################################
+goals at time 5:
+  have-image_phenomenon5_thermograph1 have-image_star6_thermograph1 have-image_star7_spectrograph3 have-image_phenomenon8_image0 have-image_phenomenon9_image0 
+have-image_star10_spectrograph3 have-image_planet11_thermograph2 have-image_phenomenon12_image0 have-image_phenomenon13_thermograph1 have-image_phenomenon14_thermograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 66
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 185 facts and 438 exclusive pairs.
+1555 new nodes added.
+
+####################################################
+goals at time 6:
+  have-image_phenomenon5_thermograph1 have-image_star6_thermograph1 have-image_star7_spectrograph3 have-image_phenomenon8_image0 have-image_phenomenon9_image0 
+have-image_star10_spectrograph3 have-image_planet11_thermograph2 have-image_phenomenon12_image0 have-image_phenomenon13_thermograph1 have-image_phenomenon14_thermograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 5373086
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 185 facts and 438 exclusive pairs.
+1555 new nodes added.
+
+####################################################
+goals at time 7:
+  have-image_phenomenon5_thermograph1 have-image_star6_thermograph1 have-image_star7_spectrograph3 have-image_phenomenon8_image0 have-image_phenomenon9_image0 
+have-image_star10_spectrograph3 have-image_planet11_thermograph2 have-image_phenomenon12_image0 have-image_phenomenon13_thermograph1 have-image_phenomenon14_thermograph2 
+
+
+
+----------------------------------------------------
+Invoking solver graphplan

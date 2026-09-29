@@ -1,0 +1,170 @@
+---SatPlan Version: 1.1
+
+bb: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'GRIPPER-2' defined
+ ... done.
+
+
+time:   0,     5 facts and       0 exclusive pairs
+              11 ops   and      23 exclusive pairs
+time:   1,    10 facts and      17 exclusive pairs
+
+creating thin gp-based encoding...
+plan graph layer 0...
+plan graph layer 1...
+goal constraints...
+
+goal fact not coded - level too low??
+
+
+bb: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'GRIPPER-2' defined
+ ... done.
+
+
+time:   0,     5 facts and       0 exclusive pairs
+              11 ops   and      23 exclusive pairs
+time:   1,    10 facts and      17 exclusive pairs
+              22 ops   and     139 exclusive pairs
+time:   2,    10 facts and      13 exclusive pairs
+
+creating thin gp-based encoding...
+plan graph layer 0...
+plan graph layer 1...
+plan graph layer 2...
+goal constraints...
+
+goal fact not coded - level too low??
+
+
+bb: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'GRIPPER-2' defined
+ ... done.
+
+
+time:   0,     5 facts and       0 exclusive pairs
+              11 ops   and      23 exclusive pairs
+time:   1,    10 facts and      17 exclusive pairs
+              22 ops   and     139 exclusive pairs
+time:   2,    10 facts and      13 exclusive pairs
+              26 ops   and     203 exclusive pairs
+time:   3,    12 facts and      21 exclusive pairs
+
+creating thin gp-based encoding...
+plan graph layer 0...
+plan graph layer 1...
+plan graph layer 2...
+plan graph layer 3...
+goal constraints...
+exclusion constraints layer 0...
+exclusion constraints layer 1...
+exclusion constraints layer 2...
+exclusion constraints layer 3...
+
+DECISION LAYER 3, WRITING THIN GP-BASED ENCODING WITH 96 VARS, 333 CLAUSES.
+
+time spent:    0.00 seconds instantiating 20 action templates
+               0.00 seconds reachability analysis, yielding 12 facts and 20 actions
+               0.00 seconds collecting 12 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds building (std) graph
+               0.00 seconds CNF output time
+               0.00 seconds total planner time (solving not included)
+
+
+***Solving***
+
+
+[ filemap ]
+[ extract ]
+
+variables : 96
+pure lits : 15
+
+1-clauses : 2
+2-clauses : 308
+3-clauses : 11
+n-clauses : 12
+discarded : 0
+
+[ solve ]
+
+
+satisfiable                             
+
+[ stats ]
+
+decisions : 24
+conflicts : 1
+time : ~0.01
+
+
+bb: parsing domain file
+domain 'GRIPPER-STRIPS' defined
+ ... done.
+bb: parsing problem file
+problem 'GRIPPER-2' defined
+ ... done.
+
+
+time:   0,     5 facts and       0 exclusive pairs
+              11 ops   and      23 exclusive pairs
+time:   1,    10 facts and      17 exclusive pairs
+              22 ops   and     139 exclusive pairs
+time:   2,    10 facts and      13 exclusive pairs
+              26 ops   and     203 exclusive pairs
+time:   3,    12 facts and      21 exclusive pairs
+
+creating thin gp-based encoding...
+plan graph layer 0...
+plan graph layer 1...
+plan graph layer 2...
+plan graph layer 3...
+goal constraints...
+exclusion constraints layer 0...
+exclusion constraints layer 1...
+exclusion constraints layer 2...
+exclusion constraints layer 3...
+
+DECISION LAYER 3, WRITING THIN GP-BASED ENCODING WITH 96 VARS, 333 CLAUSES.
+
+time spent:    0.00 seconds instantiating 20 action templates
+               0.00 seconds reachability analysis, yielding 12 facts and 20 actions
+               0.00 seconds collecting 12 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds building (std) graph
+               0.00 seconds CNF output time
+               0.00 seconds total planner time (solving not included)
+
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+Pruned:  0: (PICK BALL1 ROOMB LEFT) [1]
+---SatPlan Version: 1.1
+***SAT!***
+
+Solved in 3 layers
+
+Real Time: = 0.01
+User Time: = 0
+Syst Time: = 0
+
+__MEMKB 1920

@@ -1,0 +1,39 @@
+
+Parsing domain..... pipesworld_strips..... done.
+Parsing problem..... p05-net1-b10-g4_rt0_instance..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.02 -> 552 candidates, 552 actions
+Finalization time : 0.01 -> 108 fluents, 31 init
+
+8 7 4 3 2 
+
+0: (POP-UNITARYPIPE s12 b5 a1 a2 b6 gasoleo rat-a ta1-1-rat-a ta2-1-gasoleo) [1]
+1: (POP-UNITARYPIPE s12 b0 a1 a2 b5 rat-a gasoleo ta1-2-gasoleo ta2-1-rat-a) [1]
+2: (PUSH-UNITARYPIPE s13 b6 a1 a3 b2 rat-a gasoleo ta1-1-rat-a ta3-2-gasoleo) [1]
+3: (PUSH-UNITARYPIPE s13 b7 a1 a3 b6 gasoleo rat-a ta1-1-gasoleo ta3-1-rat-a) [1]
+4: (PUSH-UNITARYPIPE s12 b8 a1 a2 b0 lco rat-a ta1-1-lco ta2-1-rat-a) [1]
+5: (POP-UNITARYPIPE s13 b3 a1 a3 b7 oca1 gasoleo ta1-1-gasoleo ta3-1-oca1) [1]
+6: (POP-UNITARYPIPE s12 b9 a1 a2 b8 oc1b lco ta1-1-lco ta2-1-oc1b) [1]
+7: (PUSH-UNITARYPIPE s12 b4 a1 a2 b9 lco oc1b ta1-1-lco ta2-1-oc1b) [1]
+8: (PUSH-UNITARYPIPE s12 b7 a1 a2 b4 gasoleo lco ta1-1-gasoleo ta2-1-lco) [1]
+9: (PUSH-UNITARYPIPE s12 b8 a1 a2 b7 lco gasoleo ta1-2-lco ta2-2-gasoleo) [1]
+10: (POP-UNITARYPIPE s12 b9 a1 a2 b8 oc1b lco ta1-1-lco ta2-1-oc1b) [1]
+11: (POP-UNITARYPIPE s12 b4 a1 a2 b9 lco oc1b ta1-1-oc1b ta2-1-lco) [1]
+
+Valid plan : 12 actions.
+Computed nodes : 12
+Evaluated nodes : 7
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 42.86 %
+Preparation time : 0.03
+Search time : 0.00
+Total time : 0.03
+
+__MEMKB 2816

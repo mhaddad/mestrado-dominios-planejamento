@@ -1,0 +1,141 @@
+
+Parsing domain file:  domain 'BLOCKS' defined ... done.
+Parsing problem file:  problem 'BLOCKS-15-0' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :     480
+Number of conditional actions :       0
+Number of facts               :     271
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.01 seconds
+
+Searching ('.' = every 50 search steps):
+....... solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (UNSTACK I H) [D:1.0000; C:1.0000]
+ 1.0000: (PUT-DOWN I) [D:1.0000; C:1.0000]
+ 2.0000: (UNSTACK F K) [D:1.0000; C:1.0000]
+ 3.0000: (PUT-DOWN F) [D:1.0000; C:1.0000]
+ 4.0000: (UNSTACK B A) [D:1.0000; C:1.0000]
+ 5.0000: (STACK B F) [D:1.0000; C:1.0000]
+ 6.0000: (UNSTACK A O) [D:1.0000; C:1.0000]
+ 7.0000: (STACK A E) [D:1.0000; C:1.0000]
+ 8.0000: (PICK-UP O) [D:1.0000; C:1.0000]
+ 9.0000: (STACK O I) [D:1.0000; C:1.0000]
+ 10.0000: (UNSTACK M N) [D:1.0000; C:1.0000]
+ 11.0000: (STACK M H) [D:1.0000; C:1.0000]
+ 12.0000: (UNSTACK B F) [D:1.0000; C:1.0000]
+ 13.0000: (PUT-DOWN B) [D:1.0000; C:1.0000]
+ 14.0000: (UNSTACK A E) [D:1.0000; C:1.0000]
+ 15.0000: (STACK A N) [D:1.0000; C:1.0000]
+ 16.0000: (UNSTACK E J) [D:1.0000; C:1.0000]
+ 17.0000: (PUT-DOWN E) [D:1.0000; C:1.0000]
+ 18.0000: (UNSTACK J D) [D:1.0000; C:1.0000]
+ 19.0000: (PUT-DOWN J) [D:1.0000; C:1.0000]
+ 20.0000: (UNSTACK D L) [D:1.0000; C:1.0000]
+ 21.0000: (PUT-DOWN D) [D:1.0000; C:1.0000]
+ 22.0000: (UNSTACK L C) [D:1.0000; C:1.0000]
+ 23.0000: (PUT-DOWN L) [D:1.0000; C:1.0000]
+ 24.0000: (UNSTACK C G) [D:1.0000; C:1.0000]
+ 25.0000: (PUT-DOWN C) [D:1.0000; C:1.0000]
+ 26.0000: (UNSTACK A N) [D:1.0000; C:1.0000]
+ 27.0000: (STACK A G) [D:1.0000; C:1.0000]
+ 28.0000: (UNSTACK M H) [D:1.0000; C:1.0000]
+ 29.0000: (STACK M N) [D:1.0000; C:1.0000]
+ 30.0000: (UNSTACK O I) [D:1.0000; C:1.0000]
+ 31.0000: (STACK O H) [D:1.0000; C:1.0000]
+ 32.0000: (UNSTACK A G) [D:1.0000; C:1.0000]
+ 33.0000: (STACK A J) [D:1.0000; C:1.0000]
+ 34.0000: (UNSTACK A J) [D:1.0000; C:1.0000]
+ 35.0000: (STACK A I) [D:1.0000; C:1.0000]
+ 36.0000: (UNSTACK A I) [D:1.0000; C:1.0000]
+ 37.0000: (STACK A J) [D:1.0000; C:1.0000]
+ 38.0000: (UNSTACK A J) [D:1.0000; C:1.0000]
+ 39.0000: (STACK A E) [D:1.0000; C:1.0000]
+ 40.0000: (PICK-UP B) [D:1.0000; C:1.0000]
+ 41.0000: (STACK B I) [D:1.0000; C:1.0000]
+ 42.0000: (UNSTACK A E) [D:1.0000; C:1.0000]
+ 43.0000: (STACK A C) [D:1.0000; C:1.0000]
+ 44.0000: (UNSTACK O H) [D:1.0000; C:1.0000]
+ 45.0000: (STACK O A) [D:1.0000; C:1.0000]
+ 46.0000: (UNSTACK O A) [D:1.0000; C:1.0000]
+ 47.0000: (STACK O H) [D:1.0000; C:1.0000]
+ 48.0000: (UNSTACK M N) [D:1.0000; C:1.0000]
+ 49.0000: (PUT-DOWN M) [D:1.0000; C:1.0000]
+ 50.0000: (UNSTACK O H) [D:1.0000; C:1.0000]
+ 51.0000: (STACK O N) [D:1.0000; C:1.0000]
+ 52.0000: (UNSTACK O N) [D:1.0000; C:1.0000]
+ 53.0000: (PUT-DOWN O) [D:1.0000; C:1.0000]
+ 54.0000: (UNSTACK B I) [D:1.0000; C:1.0000]
+ 55.0000: (PUT-DOWN B) [D:1.0000; C:1.0000]
+ 56.0000: (UNSTACK A C) [D:1.0000; C:1.0000]
+ 57.0000: (PUT-DOWN A) [D:1.0000; C:1.0000]
+ 58.0000: (PICK-UP L) [D:1.0000; C:1.0000]
+ 59.0000: (STACK L C) [D:1.0000; C:1.0000]
+ 60.0000: (PICK-UP G) [D:1.0000; C:1.0000]
+ 61.0000: (STACK G O) [D:1.0000; C:1.0000]
+ 62.0000: (UNSTACK L C) [D:1.0000; C:1.0000]
+ 63.0000: (PUT-DOWN L) [D:1.0000; C:1.0000]
+ 64.0000: (UNSTACK G O) [D:1.0000; C:1.0000]
+ 65.0000: (PUT-DOWN G) [D:1.0000; C:1.0000]
+ 66.0000: (PICK-UP C) [D:1.0000; C:1.0000]
+ 67.0000: (STACK C G) [D:1.0000; C:1.0000]
+ 68.0000: (UNSTACK C G) [D:1.0000; C:1.0000]
+ 69.0000: (PUT-DOWN C) [D:1.0000; C:1.0000]
+ 70.0000: (PICK-UP I) [D:1.0000; C:1.0000]
+ 71.0000: (STACK I C) [D:1.0000; C:1.0000]
+ 72.0000: (PICK-UP N) [D:1.0000; C:1.0000]
+ 73.0000: (STACK N I) [D:1.0000; C:1.0000]
+ 74.0000: (PICK-UP D) [D:1.0000; C:1.0000]
+ 75.0000: (STACK D N) [D:1.0000; C:1.0000]
+ 76.0000: (PICK-UP J) [D:1.0000; C:1.0000]
+ 77.0000: (STACK J D) [D:1.0000; C:1.0000]
+ 78.0000: (PICK-UP L) [D:1.0000; C:1.0000]
+ 79.0000: (STACK L J) [D:1.0000; C:1.0000]
+ 80.0000: (PICK-UP B) [D:1.0000; C:1.0000]
+ 81.0000: (STACK B L) [D:1.0000; C:1.0000]
+ 82.0000: (PICK-UP A) [D:1.0000; C:1.0000]
+ 83.0000: (STACK A B) [D:1.0000; C:1.0000]
+ 84.0000: (PICK-UP E) [D:1.0000; C:1.0000]
+ 85.0000: (STACK E A) [D:1.0000; C:1.0000]
+ 86.0000: (PICK-UP F) [D:1.0000; C:1.0000]
+ 87.0000: (STACK F E) [D:1.0000; C:1.0000]
+ 88.0000: (PICK-UP M) [D:1.0000; C:1.0000]
+ 89.0000: (STACK M F) [D:1.0000; C:1.0000]
+ 90.0000: (PICK-UP K) [D:1.0000; C:1.0000]
+ 91.0000: (STACK K M) [D:1.0000; C:1.0000]
+ 92.0000: (PICK-UP H) [D:1.0000; C:1.0000]
+ 93.0000: (STACK H K) [D:1.0000; C:1.0000]
+ 94.0000: (PICK-UP O) [D:1.0000; C:1.0000]
+ 95.0000: (STACK O H) [D:1.0000; C:1.0000]
+ 96.0000: (PICK-UP G) [D:1.0000; C:1.0000]
+ 97.0000: (STACK G O) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.08
+Search time:     0.07
+Actions:         98
+Execution cost:  98.00
+Duration:        98.000
+Plan quality:    98.000
+
+__MEMKB 114944

@@ -1,0 +1,95 @@
+Parsing...
+Instantiating...
+Starting instantiation [43 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+16 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(crate3, crate3)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate1, crate1)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate2, crate2)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(crate0, crate0)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet1, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet0, depot0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist2, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(pallet2, distributor1)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist1, distributor0)
+Removed false proposition: <none of those>
+Removed true proposition: Atom at(hoist0, depot0)
+Removed false proposition: <none of those>
+22 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+20 variables of 20 necessary
+180 of 180 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 804 to 360)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 708 unary operators... done! [708 unary operators]
+Best heuristic value: 12/15 [expanded 1 state(s)]
+Best heuristic value: 12/14 [expanded 2 state(s)]
+Best heuristic value: 12/13 [expanded 6 state(s)]
+Best heuristic value: 11/12 [expanded 8 state(s)]
+Best heuristic value: 10/12 [expanded 9 state(s)]
+Best heuristic value: 9/12 [expanded 14 state(s)]
+Best heuristic value: 9/10 [expanded 26 state(s)]
+Best heuristic value: 8/10 [expanded 31 state(s)]
+Best heuristic value: 8/8 [expanded 35 state(s)]
+Best heuristic value: 7/7 [expanded 38 state(s)]
+Best heuristic value: 6/6 [expanded 39 state(s)]
+Best heuristic value: 5/5 [expanded 41 state(s)]
+Best heuristic value: 4/4 [expanded 43 state(s)]
+Best heuristic value: 3/3 [expanded 44 state(s)]
+Best heuristic value: 2/2 [expanded 45 state(s)]
+Best heuristic value: 1/1 [expanded 46 state(s)]
+Solution found!
+drive truck0 depot0 distributor0
+lift hoist0 crate0 pallet0 depot0
+load hoist0 crate0 truck1 depot0
+drive truck1 depot0 distributor1
+lift hoist2 crate2 crate1 distributor1
+load hoist2 crate2 truck1 distributor1
+lift hoist2 crate1 pallet2 distributor1
+load hoist2 crate1 truck1 distributor1
+unload hoist2 crate0 truck1 distributor1
+drive truck1 distributor1 distributor0
+drop hoist2 crate0 pallet2 distributor1
+unload hoist1 crate1 truck1 distributor0
+drop hoist1 crate1 crate3 distributor0
+drive truck1 distributor0 depot0
+unload hoist0 crate2 truck1 depot0
+drop hoist0 crate2 pallet0 depot0
+Plan length: 16 step(s).
+Expanded 47 state(s).
+Generated 341 state(s).
+Cache hits: 2741
+Cache misses: 329
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 13184

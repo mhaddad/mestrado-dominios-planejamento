@@ -1,0 +1,55 @@
+
+ipp: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ipp: parsing problem file
+problem 'P01-NET1-B6-G2_RT0_INSTANCE' defined
+ ... done.
+
+
+instantiated 104 actions
+
+
+time:   0,    72 facts and       0 exclusive pairs (   23,       0 positives)
+              78 ops   and      68 exclusive pairs
+time:   1,   109 facts and     327 exclusive pairs (   45,     154 positives)
+             136 ops   and    1508 exclusive pairs
+time:   2,   128 facts and     725 exclusive pairs (   59,     378 positives)
+             172 ops   and    3482 exclusive pairs
+time:   3,   137 facts and     755 exclusive pairs (   65,     404 positives)
+
+goals first reachable in 3 time steps
+
+
+found plan as follows:
+
+time step    0: POP-UNITARYPIPE S13 B1 A1 A3 B5 LCO OCA1 TA1-1-OCA1 TA3-1-LCO
+time step    1: PUSH-UNITARYPIPE S13 B2 A1 A3 B1 GASOLEO LCO TA1-1-GASOLEO TA3-1-LCO
+                PUSH-UNITARYPIPE S12 B5 A1 A2 B4 OCA1 LCO TA1-1-OCA1 TA2-1-LCO
+time step    2: PUSH-UNITARYPIPE S12 B0 A1 A2 B5 OC1B OCA1 TA1-1-OC1B TA2-1-OCA1
+                PUSH-UNITARYPIPE S13 B3 A1 A3 B2 RAT-A GASOLEO TA1-1-RAT-A TA3-1-GASOLEO
+
+
+
+number of actions tried:          5
+number of noops tried  :         13
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 104 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.13 MBytes for domain representation
+               1.11 MBytes for graph
+               0.04 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 3100

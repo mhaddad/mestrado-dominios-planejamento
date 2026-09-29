@@ -1,0 +1,74 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob4321..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 3072 candidates, 912 actions
+Finalization time : 0.00 -> 255 fluents, 31 init
+
+27 25 18 6 3 
+
+0: (LIFT hoist1 crate8 crate3 distributor0) [1]
+1: (LIFT hoist2 crate7 crate4 distributor1) [1]
+2: (DRIVE truck0 distributor0 depot0) [1]
+3: (LIFT hoist0 crate2 pallet0 depot0) [1]
+4: (LOAD hoist1 crate8 truck1 distributor0) [1]
+5: (DRIVE truck1 distributor0 distributor1) [1]
+6: (DRIVE truck0 depot0 distributor0) [1]
+7: (LIFT hoist1 crate6 crate5 distributor0) [1]
+8: (LOAD hoist2 crate7 truck1 distributor1) [1]
+9: (LOAD hoist1 crate6 truck0 distributor0) [1]
+10: (LIFT hoist1 crate5 crate1 distributor0) [1]
+11: (LIFT hoist2 crate4 pallet3 distributor1) [1]
+12: (DRIVE truck1 distributor1 depot0) [1]
+13: (LOAD hoist1 crate5 truck0 distributor0) [1]
+14: (DRIVE truck0 distributor0 distributor1) [1]
+15: (LIFT hoist1 crate0 pallet4 distributor0) [1]
+16: (DROP hoist0 crate2 pallet0 depot0) [1]
+17: (UNLOAD hoist0 crate8 truck1 depot0) [1]
+18: (LOAD hoist2 crate4 truck0 distributor1) [1]
+19: (DRIVE truck0 distributor1 distributor0) [1]
+20: (LOAD hoist0 crate8 truck1 depot0) [1]
+21: (DRIVE truck1 depot0 distributor0) [1]
+22: (LOAD hoist1 crate0 truck0 distributor0) [1]
+23: (UNLOAD hoist1 crate8 truck1 distributor0) [1]
+24: (LIFT hoist2 crate9 pallet2 distributor1) [1]
+25: (DROP hoist1 crate8 pallet4 distributor0) [1]
+26: (LIFT hoist0 crate2 pallet0 depot0) [1]
+27: (LIFT hoist1 crate1 pallet1 distributor0) [1]
+28: (LOAD hoist1 crate1 truck0 distributor0) [1]
+29: (DRIVE truck0 distributor0 distributor1) [1]
+30: (DROP hoist0 crate2 pallet0 depot0) [1]
+31: (LOAD hoist2 crate9 truck0 distributor1) [1]
+32: (LIFT hoist1 crate3 pallet5 distributor0) [1]
+33: (UNLOAD hoist2 crate0 truck0 distributor1) [1]
+34: (DROP hoist1 crate3 crate8 distributor0) [1]
+35: (DROP hoist2 crate0 pallet3 distributor1) [1]
+36: (UNLOAD hoist2 crate6 truck0 distributor1) [1]
+37: (UNLOAD hoist1 crate7 truck1 distributor0) [1]
+38: (DROP hoist2 crate6 pallet2 distributor1) [1]
+39: (DROP hoist1 crate7 pallet1 distributor0) [1]
+40: (UNLOAD hoist2 crate1 truck0 distributor1) [1]
+41: (DRIVE truck0 distributor1 depot0) [1]
+42: (DROP hoist2 crate1 crate0 distributor1) [1]
+43: (LIFT hoist0 crate2 pallet0 depot0) [1]
+44: (LOAD hoist0 crate2 truck0 depot0) [1]
+45: (UNLOAD hoist0 crate9 truck0 depot0) [1]
+46: (DROP hoist0 crate9 pallet0 depot0) [1]
+
+Valid plan : 47 actions.
+Computed nodes : 47
+Evaluated nodes : 8
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 35.07 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 3200

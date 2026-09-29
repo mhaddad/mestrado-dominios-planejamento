@@ -1,0 +1,60 @@
+
+Parsing domain file:  domain 'PIPESWORLD_STRIPS' defined ... done.
+Parsing problem file:  problem 'P07-NET1-B12-G5_RT0_INSTANCE' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :    2944
+Number of conditional actions :       0
+Number of facts               :     138
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.06 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (POP-UNITARYPIPE S13 B11 A1 A3 B1 GASOLEO OC1B TA1-1-OC1B TA3-1-GASOLEO) [D:1.0000; C:1.0000]
+ 0.0000: (POP-UNITARYPIPE S12 B4 A1 A2 B8 LCO OC1B TA1-2-OC1B TA2-1-LCO) [D:1.0000; C:1.0000]
+ 1.0000: (PUSH-UNITARYPIPE S12 B1 A1 A2 B4 OC1B LCO TA1-2-OC1B TA2-1-LCO) [D:1.0000; C:1.0000]
+ 1.0000: (POP-UNITARYPIPE S13 B6 A1 A3 B11 LCO GASOLEO TA1-2-GASOLEO TA3-1-LCO) [D:1.0000; C:1.0000]
+ 2.0000: (POP-UNITARYPIPE S13 B3 A1 A3 B6 GASOLEO LCO TA1-3-LCO TA3-2-GASOLEO) [D:1.0000; C:1.0000]
+ 3.0000: (PUSH-UNITARYPIPE S12 B6 A1 A2 B1 LCO OC1B TA1-1-LCO TA2-1-OC1B) [D:1.0000; C:1.0000]
+ 3.0000: (PUSH-UNITARYPIPE S13 B10 A1 A3 B3 GASOLEO GASOLEO TA1-2-GASOLEO TA3-2-GASOLEO) [D:1.0000; C:1.0000]
+ 4.0000: (POP-UNITARYPIPE S13 B7 A1 A3 B10 RAT-A GASOLEO TA1-2-GASOLEO TA3-1-RAT-A) [D:1.0000; C:1.0000]
+ 4.0000: (POP-UNITARYPIPE S12 B4 A1 A2 B6 LCO LCO TA1-2-LCO TA2-1-LCO) [D:1.0000; C:1.0000]
+ 5.0000: (POP-UNITARYPIPE S13 B3 A1 A3 B7 GASOLEO RAT-A TA1-1-RAT-A TA3-2-GASOLEO) [D:1.0000; C:1.0000]
+ 5.0000: (POP-UNITARYPIPE S12 B2 A1 A2 B4 RAT-A LCO TA1-1-LCO TA2-2-RAT-A) [D:1.0000; C:1.0000]
+ 6.0000: (PUSH-UNITARYPIPE S12 B0 A1 A2 B2 LCO RAT-A TA1-3-LCO TA2-2-RAT-A) [D:1.0000; C:1.0000]
+ 7.0000: (POP-UNITARYPIPE S12 B9 A1 A2 B0 LCO LCO TA1-3-LCO TA2-2-LCO) [D:1.0000; C:1.0000]
+ 8.0000: (PUSH-UNITARYPIPE S12 B0 A1 A2 B9 LCO LCO TA1-1-LCO TA2-2-LCO) [D:1.0000; C:1.0000]
+ 9.0000: (PUSH-UNITARYPIPE S12 B6 A1 A2 B0 LCO LCO TA1-3-LCO TA2-3-LCO) [D:1.0000; C:1.0000]
+ 10.0000: (POP-UNITARYPIPE S12 B9 A1 A2 B6 LCO LCO TA1-1-LCO TA2-3-LCO) [D:1.0000; C:1.0000]
+ 11.0000: (POP-UNITARYPIPE S12 B2 A1 A2 B9 RAT-A LCO TA1-3-LCO TA2-1-RAT-A) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.14
+Search time:     0.08
+Actions:         17
+Execution cost:  17.00
+Duration:        12.000
+Plan quality:    17.000
+
+__MEMKB 113280

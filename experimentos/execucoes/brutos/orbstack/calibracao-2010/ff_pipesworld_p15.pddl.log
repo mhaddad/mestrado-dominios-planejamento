@@ -1,0 +1,106 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P15-NET2-B14-G4_RT0_INSTANCE' defined
+ ... done.
+
+
+got 263 facts
+
+Cueing down from goal distance:   16 into depth [1]
+                                  14            [1][2]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   18
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: POP-START S13 B6 A1 A3 B7 LCO LCO TA3-1-LCO
+        1: PUSH-START S12 B8 A1 A2 B10 RAT-A RAT-A TA1-1-RAT-A
+        2: POP-END S13 A1 A3 B12 B7 RAT-A TA1-2-RAT-A
+        3: PUSH-END S12 A1 A2 B1 B10 OCA1 TA2-1-OCA1
+        4: POP-START S13 B13 A1 A3 B6 RAT-A LCO TA3-1-RAT-A
+        5: POP-END S13 A1 A3 B7 B6 RAT-A TA1-1-RAT-A
+        6: POP-START S12 B3 A1 A2 B10 RAT-A RAT-A TA2-3-RAT-A
+        7: PUSH-START S13 B12 A1 A3 B6 RAT-A LCO TA1-2-RAT-A
+        8: PUSH-END S13 A1 A3 B13 B6 RAT-A TA3-2-RAT-A
+        9: POP-END S12 A1 A2 B8 B10 RAT-A TA1-2-RAT-A
+       10: POP-START S12 B0 A1 A2 B3 RAT-A RAT-A TA2-1-RAT-A
+       11: POP-END S12 A1 A2 B10 B3 LCO TA1-1-LCO
+       12: PUSH-START S12 B8 A1 A2 B3 RAT-A RAT-A TA1-2-RAT-A
+       13: PUSH-END S12 A1 A2 B0 B3 RAT-A TA2-3-RAT-A
+       14: POP-START S13 B4 A1 A3 B6 OCA1 LCO TA3-1-OCA1
+       15: POP-END S13 A1 A3 B12 B6 RAT-A TA1-2-RAT-A
+       16: PUSH-START S13 B10 A1 A3 B6 RAT-A LCO TA1-1-RAT-A
+       17: PUSH-END S13 A1 A3 B4 B6 OCA1 TA3-1-OCA1
+       18: PUSH-START S13 B7 A1 A3 B10 LCO RAT-A TA1-1-LCO
+       19: PUSH-END S13 A1 A3 B6 B10 LCO TA3-1-LCO
+       20: PUSH-START S13 B12 A1 A3 B7 RAT-A LCO TA1-2-RAT-A
+       21: PUSH-END S13 A1 A3 B10 B7 RAT-A TA3-1-RAT-A
+       22: POP-START S13 B13 A1 A3 B7 RAT-A LCO TA3-2-RAT-A
+       23: POP-START S12 B5 A1 A2 B3 RAT-A RAT-A TA2-2-RAT-A
+       24: POP-END S12 A1 A2 B8 B3 LCO TA1-1-LCO
+       25: POP-START S12 B0 A1 A2 B5 RAT-A RAT-A TA2-3-RAT-A
+       26: POP-END S12 A1 A2 B3 B5 RAT-A TA1-2-RAT-A
+       27: PUSH-START S12 B8 A1 A2 B5 RAT-A RAT-A TA1-2-RAT-A
+       28: POP-END S13 A1 A3 B12 B7 RAT-A TA1-1-RAT-A
+       29: PUSH-END S12 A1 A2 B0 B5 RAT-A TA2-3-RAT-A
+       30: POP-START S13 B10 A1 A3 B13 RAT-A RAT-A TA3-1-RAT-A
+       31: POP-END S13 A1 A3 B7 B13 RAT-A TA1-2-RAT-A
+       32: PUSH-START S13 B3 A1 A3 B13 RAT-A RAT-A TA1-1-RAT-A
+       33: PUSH-END S13 A1 A3 B10 B13 RAT-A TA3-2-RAT-A
+       34: PUSH-START S12 B7 A1 A2 B8 LCO RAT-A TA1-1-LCO
+       35: PUSH-END S12 A1 A2 B5 B8 RAT-A TA2-2-RAT-A
+       36: PUSH-START S12 B2 A1 A2 B7 OCA1 LCO TA1-1-OCA1
+       37: PUSH-END S12 A1 A2 B8 B7 RAT-A TA2-1-RAT-A
+       38: POP-START S12 B1 A1 A2 B7 OCA1 LCO TA2-1-OCA1
+       39: POP-END S12 A1 A2 B2 B7 LCO TA1-1-LCO
+       40: POP-START S12 B11 A1 A2 B1 OC1B OCA1 TA2-1-OC1B
+       41: POP-END S12 A1 A2 B7 B1 RAT-A TA1-1-RAT-A
+       42: PUSH-START S12 B9 A1 A2 B1 OC1B OCA1 TA1-1-OC1B
+       43: PUSH-END S12 A1 A2 B11 B1 OC1B TA2-1-OC1B
+       44: PUSH-START S13 B7 A1 A3 B3 LCO RAT-A TA1-1-LCO
+       45: PUSH-END S13 A1 A3 B13 B3 RAT-A TA3-1-RAT-A
+       46: POP-START S13 B10 A1 A3 B3 RAT-A RAT-A TA3-2-RAT-A
+       47: POP-END S13 A1 A3 B7 B3 OCA1 TA1-1-OCA1
+       48: POP-START S13 B6 A1 A3 B10 LCO RAT-A TA3-1-LCO
+       49: POP-END S13 A1 A3 B3 B10 OC1B TA1-1-OC1B
+       50: POP-START S13 B4 A1 A3 B6 OCA1 LCO TA3-1-OCA1
+       51: POP-END S13 A1 A3 B10 B6 LCO TA1-1-LCO
+       52: PUSH-START S13 B3 A1 A3 B6 RAT-A LCO TA1-2-RAT-A
+       53: PUSH-END S13 A1 A3 B4 B6 OCA1 TA3-1-OCA1
+       54: PUSH-START S13 B10 A1 A3 B3 RAT-A RAT-A TA1-1-RAT-A
+       55: PUSH-END S13 A1 A3 B6 B3 LCO TA3-1-LCO
+       56: PUSH-START S13 B7 A1 A3 B10 LCO RAT-A TA1-1-LCO
+       57: PUSH-END S13 A1 A3 B3 B10 RAT-A TA3-2-RAT-A
+       58: POP-START S13 B6 A1 A3 B10 LCO RAT-A TA3-1-LCO
+       59: POP-END S13 A1 A3 B7 B10 LCO TA1-1-LCO
+     
+
+time spent:    0.06 seconds instantiating 3465 easy, 0 hard action templates
+               0.01 seconds reachability analysis, yielding 263 facts and 2532 actions
+               0.02 seconds creating final representation with 263 relevant facts
+               0.01 seconds building connectivity graph
+             960.22 seconds searching, evaluating 288082 states, to a max depth of 2
+             960.32 seconds total time
+

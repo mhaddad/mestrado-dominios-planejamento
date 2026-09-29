@@ -1,0 +1,41 @@
+
+ff: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'LOGISTICS-5-2' defined
+ ... done.
+
+
+got 48 facts
+
+Cueing down from goal distance:    8 into depth [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK OBJ21 TRU2 POS2
+        1: LOAD-TRUCK OBJ12 TRU1 POS1
+        2: DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+        3: LOAD-TRUCK OBJ23 TRU2 POS2
+        4: DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+        5: UNLOAD-TRUCK OBJ21 TRU2 APT2
+        6: UNLOAD-TRUCK OBJ12 TRU1 APT1
+        7: UNLOAD-TRUCK OBJ23 TRU2 APT2
+     
+
+time spent:    0.00 seconds instantiating 164 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 48 facts and 84 actions
+               0.00 seconds creating final representation with 48 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 11 states, to a max depth of 1
+               0.00 seconds total time
+
+__MEMKB 3328

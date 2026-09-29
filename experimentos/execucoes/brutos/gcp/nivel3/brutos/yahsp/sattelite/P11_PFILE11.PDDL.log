@@ -1,0 +1,73 @@
+
+Parsing domain..... satellite..... done.
+Parsing problem..... strips-sat-x-1..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 2387 candidates, 2387 actions
+Finalization time : 0.00 -> 223 fluents, 10 init
+
+36 26 25 23 21 19 17 15 13 12 11 8 4 2 
+
+0: (TURN_TO satellite0 phenomenon9 star8) [1]
+1: (TURN_TO satellite1 star4 groundstation3) [1]
+2: (TURN_TO satellite4 star11 phenomenon9) [1]
+3: (TURN_TO satellite2 star2 star4) [1]
+4: (SWITCH_ON instrument3 satellite1) [1]
+5: (SWITCH_ON instrument4 satellite2) [1]
+6: (CALIBRATE satellite2 instrument4 star2) [1]
+7: (SWITCH_ON instrument0 satellite0) [1]
+8: (TURN_TO satellite1 star0 star4) [1]
+9: (TURN_TO satellite2 planet6 star2) [1]
+10: (TAKE_IMAGE satellite2 planet6 instrument4 infrared1) [1]
+11: (TURN_TO satellite2 star11 planet6) [1]
+12: (TAKE_IMAGE satellite2 star11 instrument4 infrared1) [1]
+13: (TURN_TO satellite2 star5 star11) [1]
+14: (TAKE_IMAGE satellite2 star5 instrument4 image3) [1]
+15: (TURN_TO satellite2 star8 star5) [1]
+16: (TAKE_IMAGE satellite2 star8 instrument4 image3) [1]
+17: (TURN_TO satellite2 star17 star8) [1]
+18: (TAKE_IMAGE satellite2 star17 instrument4 infrared0) [1]
+19: (TURN_TO satellite2 phenomenon7 star17) [1]
+20: (TAKE_IMAGE satellite2 phenomenon7 instrument4 infrared1) [1]
+21: (TURN_TO satellite1 star4 star0) [1]
+22: (TURN_TO satellite2 phenomenon15 phenomenon7) [1]
+23: (TAKE_IMAGE satellite2 phenomenon15 instrument4 infrared0) [1]
+24: (SWITCH_OFF instrument4 satellite2) [1]
+25: (TURN_TO satellite2 planet16 phenomenon15) [1]
+26: (SWITCH_ON instrument5 satellite2) [1]
+27: (TURN_TO satellite2 star0 planet16) [1]
+28: (SWITCH_OFF instrument5 satellite2) [1]
+29: (SWITCH_ON instrument4 satellite2) [1]
+30: (TURN_TO satellite2 star2 star0) [1]
+31: (SWITCH_OFF instrument4 satellite2) [1]
+32: (SWITCH_ON instrument5 satellite2) [1]
+33: (TURN_TO satellite3 star2 phenomenon9) [1]
+34: (TURN_TO satellite2 star0 star2) [1]
+35: (CALIBRATE satellite2 instrument5 star0) [1]
+36: (SWITCH_ON instrument7 satellite3) [1]
+37: (CALIBRATE satellite3 instrument7 star2) [1]
+38: (TURN_TO satellite2 star10 star0) [1]
+39: (TURN_TO satellite3 planet16 star2) [1]
+40: (TAKE_IMAGE satellite2 star10 instrument5 thermograph2) [1]
+41: (TAKE_IMAGE satellite3 planet16 instrument7 image3) [1]
+42: (TURN_TO satellite2 planet13 star10) [1]
+43: (TAKE_IMAGE satellite2 planet13 instrument5 spectrograph4) [1]
+44: (TURN_TO satellite2 planet14 planet13) [1]
+45: (TAKE_IMAGE satellite2 planet14 instrument5 thermograph2) [1]
+
+Valid plan : 46 actions.
+Computed nodes : 9577
+Evaluated nodes : 2155
+Developed nodes : 12
+Useful nodes : 12
+
+Lookahead utility : 19.01 %
+Preparation time : 0.00
+Search time : 0.27
+Total time : 0.27
+
+__MEMKB 7552

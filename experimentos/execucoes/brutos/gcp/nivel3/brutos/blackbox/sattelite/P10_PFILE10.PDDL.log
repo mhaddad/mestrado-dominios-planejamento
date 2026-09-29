@@ -1,0 +1,44 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P10_PFILE10.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P10_PFILE10.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 146 facts and 698 exclusive pairs.
+time: 2, 157 facts and 906 exclusive pairs.
+time: 3, 174 facts and 960 exclusive pairs.
+time: 4, 242 facts and 705 exclusive pairs.
+Goals first reachable in 4 steps.
+6358 nodes created.
+
+####################################################
+goals at time 5:
+  pointing_satellite4_planet9 have-image_planet5_image4 have-image_star6_infrared3 have-image_star7_image4 have-image_phenomenon8_image4 
+have-image_planet9_infrared0 have-image_planet10_infrared3 have-image_star12_image4 have-image_phenomenon13_image4 have-image_phenomenon14_spectrograph1 
+have-image_star15_spectrograph1 have-image_star16_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 16
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 242 facts and 698 exclusive pairs.
+2268 new nodes added.
+
+####################################################
+goals at time 6:
+  pointing_satellite4_planet9 have-image_planet5_image4 have-image_star6_infrared3 have-image_star7_image4 have-image_phenomenon8_image4 
+have-image_planet9_infrared0 have-image_planet10_infrared3 have-image_star12_image4 have-image_phenomenon13_image4 have-image_phenomenon14_spectrograph1 
+have-image_star15_spectrograph1 have-image_star16_image2 
+
+
+----------------------------------------------------
+Invoking solver graphplan

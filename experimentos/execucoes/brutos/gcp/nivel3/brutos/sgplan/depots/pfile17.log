@@ -1,0 +1,66 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'DEPOT' defined
+Parsing problem file
+ problem 'DEPOTPROB6587' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+
+
+Solution found.
+
+
+
+; Time 0.04
+; ParsingTime 0.02
+; NrActions 28
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(enforced hill-climbing search) as the subplanner
+
+0.001: (DRIVE TRUCK3 DEPOT0 DEPOT1) [1]
+1.002: (LIFT HOIST1 CRATE4 PALLET1 DEPOT1) [1]
+2.003: (LOAD HOIST1 CRATE4 TRUCK3 DEPOT1) [1]
+3.004: (LIFT HOIST7 CRATE8 CRATE6 DISTRIBUTOR1) [1]
+4.005: (DRIVE TRUCK3 DEPOT1 DISTRIBUTOR1) [1]
+5.006: (LIFT HOIST3 CRATE6 PALLET7 DISTRIBUTOR1) [1]
+6.007: (LOAD HOIST7 CRATE8 TRUCK3 DISTRIBUTOR1) [1]
+7.008: (LIFT HOIST7 CRATE7 CRATE5 DISTRIBUTOR1) [1]
+8.009: (LOAD HOIST3 CRATE6 TRUCK3 DISTRIBUTOR1) [1]
+9.010: (LOAD HOIST7 CRATE7 TRUCK3 DISTRIBUTOR1) [1]
+10.011: (DRIVE TRUCK3 DISTRIBUTOR1 DEPOT1) [1]
+11.012: (UNLOAD HOIST1 CRATE6 TRUCK3 DEPOT1) [1]
+12.013: (DRIVE TRUCK3 DEPOT1 DEPOT0) [1]
+13.014: (UNLOAD HOIST6 CRATE4 TRUCK3 DEPOT0) [1]
+14.015: (UNLOAD HOIST5 CRATE7 TRUCK3 DEPOT0) [1]
+15.016: (UNLOAD HOIST4 CRATE8 TRUCK3 DEPOT0) [1]
+16.017: (DROP HOIST6 CRATE4 PALLET0 DEPOT0) [1]
+17.018: (DROP HOIST1 CRATE6 PALLET1 DEPOT1) [1]
+18.019: (LIFT HOIST6 CRATE3 PALLET6 DEPOT0) [1]
+19.020: (DROP HOIST6 CRATE3 CRATE4 DEPOT0) [1]
+20.021: (DROP HOIST5 CRATE7 CRATE3 DEPOT0) [1]
+21.022: (DROP HOIST4 CRATE8 PALLET6 DEPOT0) [1]
+22.023: (LIFT HOIST7 CRATE1 PALLET5 DISTRIBUTOR1) [1]
+23.024: (DROP HOIST7 CRATE1 PALLET7 DISTRIBUTOR1) [1]
+24.025: (LIFT HOIST6 CRATE7 CRATE3 DEPOT0) [1]
+25.026: (LIFT HOIST0 CRATE3 CRATE4 DEPOT0) [1]
+26.027: (DROP HOIST0 CRATE3 CRATE8 DEPOT0) [1]
+27.028: (DROP HOIST6 CRATE7 CRATE3 DEPOT0) [1]
+__MEMKB 32440

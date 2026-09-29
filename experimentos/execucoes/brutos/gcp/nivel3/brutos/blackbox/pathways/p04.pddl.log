@@ -1,0 +1,67 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p04.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p04.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/domain_p04.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/pathways/Strips/p04.pddl
+Problem name: grounded-pathways-04
+Facts loaded.
+time: 1, 47 facts and 276 exclusive pairs.
+time: 2, 70 facts and 322 exclusive pairs.
+time: 3, 71 facts and 94 exclusive pairs.
+time: 4, 82 facts and 159 exclusive pairs.
+time: 5, 96 facts and 249 exclusive pairs.
+time: 6, 113 facts and 333 exclusive pairs.
+time: 7, 119 facts and 309 exclusive pairs.
+time: 8, 120 facts and 267 exclusive pairs.
+Goals first reachable in 8 steps.
+2207 nodes created.
+
+####################################################
+goals at time 9:
+  goal4- goal3- goal2- goal1- 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 40
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (choose-gp-l1-l0)
+2 (initialize-gp)
+2 (choose-sp1-l2-l1)
+3 (initialize-sp1)
+4 (associate-sp1-gp-sp1-gp)
+5 (initialize-sp1)
+5 (synthesize-sp1-gp-pol)
+5 (synthesize-sp1-gp-cycep1)
+5 (synthesize-sp1-gp-p107)
+5 (initialize-gp)
+5 (synthesize-sp1-gp-p107p1)
+6 (associate-sp1-p107p1-sp1-p107p1)
+6 (dummy-action-2-2)
+6 (dummy-action-1-2)
+6 (dummy-action-4-2)
+7 (associate-sp1-p107p1-gp-sp1-p107p1-gp)
+8 (dummy-action-3-2)
+End plan
+----------------------------------------------------
+
+17 total actions in plan
+0 entries in hash table, 
+7 total set-creation steps (entries + hits + plan length - 1)
+17 actions tried
+
+####################################################
+Total elapsed time:   0.02 seconds
+Time in milliseconds: 15
+
+####################################################
+__MEMKB 23296

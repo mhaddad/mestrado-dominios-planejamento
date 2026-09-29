@@ -1,0 +1,353 @@
+
+ff: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ff: parsing problem file
+problem 'DLOG-5-5-25' defined
+ ... done.
+
+
+got 1045 facts
+
+Cueing down from goal distance:   93 into depth [1]
+                                  92            [1]
+                                  91            [1]
+                                  90            [1]
+                                  89            [1]
+                                  88            [1][2]
+                                  86            [1]
+                                  85            [1]
+                                  84            [1]
+                                  83            [1]
+                                  82            [1]
+                                  79            [1]
+                                  78            [1][2]
+                                  77            [1]
+                                  76            [1]
+                                  75            [1]
+                                  74            [1][2]
+                                  73            [1]
+                                  72            [1][2][3]
+                                  71            [1]
+                                  70            [1][2][3]
+                                  68            [1][2][3]
+                                  67            [1][2][3]
+                                  66            [1][2][3]
+                                  65            [1][2]
+                                  64            [1][2]
+                                  63            [1][2]
+                                  62            [1]
+                                  61            [1][2]
+                                  60            [1]
+                                  59            [1]
+                                  58            [1][2]
+                                  57            [1]
+                                  56            [1]
+                                  55            [1][2][3]
+                                  54            [1]
+                                  53            [1]
+                                  52            [1]
+                                  51            [1]
+                                  50            [1][2]
+                                  49            [1]
+                                  48            [1]
+                                  47            [1]
+                                  46            [1]
+                                  45            [1][2][3]
+                                  44            [1][2]
+                                  43            [1]
+                                  42            [1]
+                                  40            [1][2][3]
+                                  39            [1][2][3]
+                                  38            [1][2]
+                                  37            [1][2][3]
+                                  36            [1][2][3]
+                                  35            [1][2]
+                                  34            [1][2][3]
+                                  33            [1][2][3]
+                                  32            [1][2][3]
+                                  31            [1][2][3][4]
+                                  30            [1][2][3]
+                                  29            [1][2][3]
+                                  27            [1]
+                                  26            [1][2][3]
+                                  25            [1]
+                                  24            [1][2][3][4][5]
+                                  23            [1][2]
+                                  22            [1][2][3]
+                                  20            [1][2][3][4]
+                                  19            [1]
+                                  18            [1][2][3]
+                                  17            [1][2][3][4]
+                                  16            [1][2][3][4][5][6]
+                                  15            [1]
+                                  14            [1][2][3][4][5][6][7]
+                                  13            [1][2][3][4][5][6]
+                                  12            [1][2][3]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   93
+                          90
+                          87
+                          86
+                          85
+                          84
+                          83
+                          82
+                          81
+                          80
+                          79
+                          78
+                          77
+                          76
+                          75
+                          74
+                          73
+                          72
+                          71
+                          70
+                          69
+                          68
+                          67
+                          65
+                          64
+                          63
+                          62
+                          61
+                          60
+                          59
+                          58
+                          57
+                          56
+                          55
+                          54
+                          52
+                          51
+                          50
+                          49
+                          48
+                          47
+                          46
+                          45
+                          44
+                          43
+                          42
+                          41
+                          39
+                          38
+                          37
+                          36
+                          35
+                          34
+                          33
+                          32
+                          31
+                          30
+                          29
+                          28
+                          27
+                          26
+                          24
+                          23
+                          22
+                          21
+                          19
+                          18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           6
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: BOARD-TRUCK DRIVER3 TRUCK2 S8
+        1: DRIVE-TRUCK TRUCK2 S8 S3 DRIVER3
+        2: WALK DRIVER5 S3 P5-3
+        3: WALK DRIVER4 S12 P7-12
+        4: DRIVE-TRUCK TRUCK2 S3 S19 DRIVER3
+        5: WALK DRIVER5 P5-3 S5
+        6: WALK DRIVER1 S3 P3-16
+        7: LOAD-TRUCK PACKAGE16 TRUCK2 S19
+        8: WALK DRIVER1 P3-16 S16
+        9: WALK DRIVER4 P7-12 S7
+       10: WALK DRIVER2 S11 P11-8
+       11: WALK DRIVER2 P11-8 S8
+       12: WALK DRIVER2 S8 P13-8
+       13: WALK DRIVER2 P13-8 S13
+       14: DRIVE-TRUCK TRUCK2 S19 S6 DRIVER3
+       15: LOAD-TRUCK PACKAGE24 TRUCK2 S6
+       16: DRIVE-TRUCK TRUCK2 S6 S12 DRIVER3
+       17: LOAD-TRUCK PACKAGE17 TRUCK2 S12
+       18: DRIVE-TRUCK TRUCK2 S12 S2 DRIVER3
+       19: UNLOAD-TRUCK PACKAGE24 TRUCK2 S2
+       20: LOAD-TRUCK PACKAGE23 TRUCK2 S2
+       21: LOAD-TRUCK PACKAGE10 TRUCK2 S2
+       22: DRIVE-TRUCK TRUCK2 S2 S4 DRIVER3
+       23: LOAD-TRUCK PACKAGE21 TRUCK2 S4
+       24: LOAD-TRUCK PACKAGE3 TRUCK2 S4
+       25: DRIVE-TRUCK TRUCK2 S4 S18 DRIVER3
+       26: LOAD-TRUCK PACKAGE22 TRUCK2 S18
+       27: DRIVE-TRUCK TRUCK2 S18 S8 DRIVER3
+       28: UNLOAD-TRUCK PACKAGE22 TRUCK2 S8
+       29: LOAD-TRUCK PACKAGE13 TRUCK2 S8
+       30: DRIVE-TRUCK TRUCK2 S8 S18 DRIVER3
+       31: DRIVE-TRUCK TRUCK2 S18 S4 DRIVER3
+       32: DRIVE-TRUCK TRUCK2 S4 S2 DRIVER3
+       33: DRIVE-TRUCK TRUCK2 S2 S9 DRIVER3
+       34: LOAD-TRUCK PACKAGE20 TRUCK2 S9
+       35: LOAD-TRUCK PACKAGE15 TRUCK2 S9
+       36: LOAD-TRUCK PACKAGE9 TRUCK2 S9
+       37: DRIVE-TRUCK TRUCK2 S9 S12 DRIVER3
+       38: DRIVE-TRUCK TRUCK2 S12 S6 DRIVER3
+       39: DRIVE-TRUCK TRUCK2 S6 S19 DRIVER3
+       40: UNLOAD-TRUCK PACKAGE3 TRUCK2 S19
+       41: DRIVE-TRUCK TRUCK2 S19 S17 DRIVER3
+       42: UNLOAD-TRUCK PACKAGE23 TRUCK2 S17
+       43: UNLOAD-TRUCK PACKAGE17 TRUCK2 S17
+       44: LOAD-TRUCK PACKAGE8 TRUCK2 S17
+       45: LOAD-TRUCK PACKAGE2 TRUCK2 S17
+       46: DRIVE-TRUCK TRUCK2 S17 S5 DRIVER3
+       47: LOAD-TRUCK PACKAGE14 TRUCK2 S5
+       48: LOAD-TRUCK PACKAGE12 TRUCK2 S5
+       49: LOAD-TRUCK PACKAGE5 TRUCK2 S5
+       50: DRIVE-TRUCK TRUCK2 S5 S12 DRIVER3
+       51: DRIVE-TRUCK TRUCK2 S12 S6 DRIVER3
+       52: UNLOAD-TRUCK PACKAGE14 TRUCK2 S6
+       53: UNLOAD-TRUCK PACKAGE8 TRUCK2 S6
+       54: WALK DRIVER4 S7 P4-7
+       55: WALK DRIVER4 P4-7 S4
+       56: BOARD-TRUCK DRIVER4 TRUCK1 S4
+       57: DRIVE-TRUCK TRUCK1 S4 S7 DRIVER4
+       58: DRIVE-TRUCK TRUCK1 S7 S16 DRIVER4
+       59: LOAD-TRUCK PACKAGE18 TRUCK1 S16
+       60: DRIVE-TRUCK TRUCK1 S16 S0 DRIVER4
+       61: DRIVE-TRUCK TRUCK2 S6 S3 DRIVER3
+       62: UNLOAD-TRUCK PACKAGE21 TRUCK2 S3
+       63: DRIVE-TRUCK TRUCK2 S3 S6 DRIVER3
+       64: DRIVE-TRUCK TRUCK2 S6 S2 DRIVER3
+       65: DRIVE-TRUCK TRUCK2 S2 S4 DRIVER3
+       66: DRIVE-TRUCK TRUCK2 S4 S1 DRIVER3
+       67: LOAD-TRUCK PACKAGE25 TRUCK2 S1
+       68: DRIVE-TRUCK TRUCK2 S1 S4 DRIVER3
+       69: DRIVE-TRUCK TRUCK2 S4 S2 DRIVER3
+       70: DRIVE-TRUCK TRUCK2 S2 S6 DRIVER3
+       71: DRIVE-TRUCK TRUCK1 S0 S2 DRIVER4
+       72: DRIVE-TRUCK TRUCK1 S2 S4 DRIVER4
+       73: DRIVE-TRUCK TRUCK2 S6 S12 DRIVER3
+       74: UNLOAD-TRUCK PACKAGE25 TRUCK2 S12
+       75: DRIVE-TRUCK TRUCK2 S12 S6 DRIVER3
+       76: DRIVE-TRUCK TRUCK1 S4 S2 DRIVER4
+       77: DISEMBARK-TRUCK DRIVER4 TRUCK1 S2
+       78: DRIVE-TRUCK TRUCK2 S6 S2 DRIVER3
+       79: UNLOAD-TRUCK PACKAGE18 TRUCK1 S2
+       80: LOAD-TRUCK PACKAGE18 TRUCK2 S2
+       81: WALK DRIVER4 S2 P13-2
+       82: WALK DRIVER4 P13-2 S13
+       83: WALK DRIVER4 S13 P16-13
+       84: WALK DRIVER4 P16-13 S16
+       85: WALK DRIVER4 S16 P3-16
+       86: WALK DRIVER4 P3-16 S3
+       87: WALK DRIVER4 S3 P0-3
+       88: WALK DRIVER4 P0-3 S0
+       89: BOARD-TRUCK DRIVER4 TRUCK4 S0
+       90: DRIVE-TRUCK TRUCK4 S0 S8 DRIVER4
+       91: DRIVE-TRUCK TRUCK2 S2 S6 DRIVER3
+       92: DRIVE-TRUCK TRUCK4 S8 S3 DRIVER4
+       93: DISEMBARK-TRUCK DRIVER4 TRUCK4 S3
+       94: DRIVE-TRUCK TRUCK2 S6 S19 DRIVER3
+       95: WALK DRIVER4 S3 P7-3
+       96: WALK DRIVER4 P7-3 S7
+       97: DRIVE-TRUCK TRUCK2 S19 S11 DRIVER3
+       98: UNLOAD-TRUCK PACKAGE15 TRUCK2 S11
+       99: UNLOAD-TRUCK PACKAGE12 TRUCK2 S11
+      100: LOAD-TRUCK PACKAGE19 TRUCK2 S11
+      101: DRIVE-TRUCK TRUCK2 S11 S13 DRIVER3
+      102: DRIVE-TRUCK TRUCK2 S13 S10 DRIVER3
+      103: UNLOAD-TRUCK PACKAGE16 TRUCK2 S10
+      104: UNLOAD-TRUCK PACKAGE2 TRUCK2 S10
+      105: LOAD-TRUCK PACKAGE4 TRUCK2 S10
+      106: DRIVE-TRUCK TRUCK2 S10 S6 DRIVER3
+      107: DRIVE-TRUCK TRUCK2 S6 S11 DRIVER3
+      108: UNLOAD-TRUCK PACKAGE4 TRUCK2 S11
+      109: WALK DRIVER5 S5 P5-3
+      110: WALK DRIVER5 P5-3 S3
+      111: WALK DRIVER5 S3 P19-3
+      112: WALK DRIVER5 P19-3 S19
+      113: BOARD-TRUCK DRIVER5 TRUCK3 S19
+      114: DRIVE-TRUCK TRUCK3 S19 S6 DRIVER5
+      115: DISEMBARK-TRUCK DRIVER5 TRUCK3 S6
+      116: DRIVE-TRUCK TRUCK2 S11 S4 DRIVER3
+      117: UNLOAD-TRUCK PACKAGE19 TRUCK2 S4
+      118: DRIVE-TRUCK TRUCK2 S4 S7 DRIVER3
+      119: UNLOAD-TRUCK PACKAGE20 TRUCK2 S7
+      120: UNLOAD-TRUCK PACKAGE9 TRUCK2 S7
+      121: DRIVE-TRUCK TRUCK2 S7 S17 DRIVER3
+      122: DRIVE-TRUCK TRUCK2 S17 S11 DRIVER3
+      123: BOARD-TRUCK DRIVER5 TRUCK5 S6
+      124: DRIVE-TRUCK TRUCK5 S6 S14 DRIVER5
+      125: DRIVE-TRUCK TRUCK5 S14 S5 DRIVER5
+      126: DRIVE-TRUCK TRUCK5 S5 S16 DRIVER5
+      127: DISEMBARK-TRUCK DRIVER5 TRUCK5 S16
+      128: WALK DRIVER5 S16 P3-16
+      129: WALK DRIVER5 P3-16 S3
+      130: WALK DRIVER5 S3 P5-3
+      131: WALK DRIVER5 P5-3 S5
+      132: DRIVE-TRUCK TRUCK2 S11 S6 DRIVER3
+      133: DRIVE-TRUCK TRUCK2 S6 S14 DRIVER3
+      134: UNLOAD-TRUCK PACKAGE10 TRUCK2 S14
+      135: UNLOAD-TRUCK PACKAGE5 TRUCK2 S14
+      136: DRIVE-TRUCK TRUCK2 S14 S5 DRIVER3
+      137: DRIVE-TRUCK TRUCK2 S5 S15 DRIVER3
+      138: UNLOAD-TRUCK PACKAGE18 TRUCK2 S15
+      139: UNLOAD-TRUCK PACKAGE13 TRUCK2 S15
+      140: LOAD-TRUCK PACKAGE11 TRUCK2 S15
+      141: DRIVE-TRUCK TRUCK2 S15 S5 DRIVER3
+      142: DRIVE-TRUCK TRUCK2 S5 S11 DRIVER3
+      143: DRIVE-TRUCK TRUCK2 S11 S13 DRIVER3
+      144: UNLOAD-TRUCK PACKAGE11 TRUCK2 S13
+      145: DRIVE-TRUCK TRUCK2 S13 S11 DRIVER3
+      146: WALK DRIVER4 S7 P4-7
+      147: DISEMBARK-TRUCK DRIVER3 TRUCK2 S11
+      148: WALK DRIVER4 P4-7 S4
+      149: WALK DRIVER4 S4 P6-4
+      150: WALK DRIVER4 P6-4 S6
+      151: BOARD-TRUCK DRIVER4 TRUCK3 S6
+      152: DRIVE-TRUCK TRUCK3 S6 S10 DRIVER4
+      153: WALK DRIVER3 S11 P18-11
+      154: DRIVE-TRUCK TRUCK3 S10 S18 DRIVER4
+      155: WALK DRIVER3 P18-11 S18
+      156: DRIVE-TRUCK TRUCK3 S18 S7 DRIVER4
+      157: WALK DRIVER3 S18 P15-18
+      158: DISEMBARK-TRUCK DRIVER4 TRUCK3 S7
+      159: WALK DRIVER3 P15-18 S15
+      160: WALK DRIVER3 S15 P15-4
+      161: WALK DRIVER3 P15-4 S4
+      162: WALK DRIVER3 S4 P4-7
+      163: WALK DRIVER3 P4-7 S7
+      164: BOARD-TRUCK DRIVER3 TRUCK3 S7
+      165: DRIVE-TRUCK TRUCK3 S7 S16 DRIVER3
+      166: DRIVE-TRUCK TRUCK3 S16 S10 DRIVER3
+     
+
+time spent:    0.00 seconds instantiating 21710 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 1045 facts and 10010 actions
+               0.00 seconds creating final representation with 1045 relevant facts
+               0.00 seconds building connectivity graph
+              47.33 seconds searching, evaluating 171105 states, to a max depth of 7
+              47.33 seconds total time
+
+__MEMKB 88448

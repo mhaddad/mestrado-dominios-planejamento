@@ -1,0 +1,104 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s13)
+Removed false proposition: Atom pop-updating(s13)
+Removed false proposition: Atom push-updating(s13)
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s12)
+Removed false proposition: Atom push-updating(s12)
+Removed false proposition: Atom pop-updating(s12)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+39 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+41 variables of 43 necessary
+2672 of 2672 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 18704 to 8106)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 13360 unary operators... done! [13360 unary operators]
+Best heuristic value: 12/13 [expanded 1 state(s)]
+Best heuristic value: 10/10 [expanded 2 state(s)]
+Best heuristic value: 9/9 [expanded 3 state(s)]
+Best heuristic value: 8/8 [expanded 4 state(s)]
+Best heuristic value: 6/6 [expanded 5 state(s)]
+Best heuristic value: 5/5 [expanded 6 state(s)]
+Best heuristic value: 4/4 [expanded 9 state(s)]
+Best heuristic value: 3/3 [expanded 10 state(s)]
+Best heuristic value: 2/2 [expanded 13 state(s)]
+Best heuristic value: 1/1 [expanded 63 state(s)]
+Solution found!
+pop-unitarypipe s13 b6 a1 a3 b1 lco oc1b ta1-2-oc1b ta3-1-lco
+push-unitarypipe s12 b1 a1 a2 b8 oc1b oc1b ta1-2-oc1b ta2-1-oc1b
+pop-unitarypipe s13 b7 a1 a3 b6 rat-a lco ta1-3-lco ta3-1-rat-a
+pop-unitarypipe s13 b11 a1 a3 b7 gasoleo rat-a ta1-1-rat-a ta3-1-gasoleo
+pop-unitarypipe s13 b3 a1 a3 b11 gasoleo gasoleo ta1-2-gasoleo ta3-2-gasoleo
+push-unitarypipe s12 b6 a1 a2 b1 lco oc1b ta1-3-lco ta2-2-oc1b
+pop-unitarypipe s12 b4 a1 a2 b6 lco lco ta1-2-lco ta2-1-lco
+pop-unitarypipe s12 b1 a1 a2 b4 oc1b lco ta1-3-lco ta2-1-oc1b
+pop-unitarypipe s12 b9 a1 a2 b1 lco oc1b ta1-1-oc1b ta2-2-lco
+push-unitarypipe s12 b6 a1 a2 b9 lco lco ta1-2-lco ta2-3-lco
+push-unitarypipe s12 b1 a1 a2 b6 oc1b lco ta1-1-oc1b ta2-1-lco
+push-unitarypipe s12 b10 a1 a2 b1 gasoleo oc1b ta1-1-gasoleo ta2-1-oc1b
+pop-unitarypipe s12 b9 a1 a2 b10 lco gasoleo ta1-1-gasoleo ta2-1-lco
+pop-unitarypipe s12 b8 a1 a2 b9 oc1b lco ta1-2-lco ta2-2-oc1b
+Plan length: 14 step(s).
+Expanded 64 state(s).
+Generated 3045 state(s).
+Cache hits: 51346
+Cache misses: 134889
+Search time: 0.04 seconds
+Total time: 0.11 seconds
+__MEMKB 39448

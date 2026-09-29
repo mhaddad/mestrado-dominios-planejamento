@@ -1,0 +1,73 @@
+
+Parsing domain..... depot..... done.
+Parsing problem..... depotprob7654..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 5676 candidates, 816 actions
+Finalization time : 0.00 -> 180 fluents, 26 init
+
+23 19 14 13 10 9 7 6 2 
+
+0: (LIFT hoist5 crate3 crate2 distributor2) [1]
+1: (LIFT hoist2 crate4 pallet2 depot2) [1]
+2: (DRIVE truck0 depot1 depot2) [1]
+3: (LIFT hoist1 crate0 pallet1 depot1) [1]
+4: (DRIVE truck1 depot2 depot1) [1]
+5: (LOAD hoist1 crate0 truck1 depot1) [1]
+6: (LOAD hoist2 crate4 truck0 depot2) [1]
+7: (LIFT hoist0 crate1 pallet0 depot0) [1]
+8: (LIFT hoist3 crate5 pallet3 distributor0) [1]
+9: (DRIVE truck1 depot1 depot2) [1]
+10: (UNLOAD hoist2 crate4 truck0 depot2) [1]
+11: (DRIVE truck0 depot2 distributor2) [1]
+12: (DROP hoist0 crate1 pallet0 depot0) [1]
+13: (LOAD hoist5 crate3 truck0 distributor2) [1]
+14: (DROP hoist2 crate4 pallet2 depot2) [1]
+15: (DROP hoist3 crate5 pallet3 distributor0) [1]
+16: (LIFT hoist5 crate2 pallet5 distributor2) [1]
+17: (UNLOAD hoist2 crate0 truck1 depot2) [1]
+18: (LOAD hoist5 crate2 truck0 distributor2) [1]
+19: (DROP hoist2 crate0 crate4 depot2) [1]
+20: (DRIVE truck1 depot2 depot0) [1]
+21: (DRIVE truck0 distributor2 distributor0) [1]
+22: (LIFT hoist2 crate0 crate4 depot2) [1]
+23: (LIFT hoist3 crate5 pallet3 distributor0) [1]
+24: (LIFT hoist0 crate1 pallet0 depot0) [1]
+25: (LOAD hoist3 crate5 truck0 distributor0) [1]
+26: (LOAD hoist0 crate1 truck1 depot0) [1]
+27: (DRIVE truck0 distributor0 depot0) [1]
+28: (DROP hoist2 crate0 crate4 depot2) [1]
+29: (UNLOAD hoist0 crate3 truck0 depot0) [1]
+30: (DROP hoist0 crate3 pallet0 depot0) [1]
+31: (DRIVE truck0 depot0 distributor0) [1]
+32: (LIFT hoist2 crate0 crate4 depot2) [1]
+33: (UNLOAD hoist3 crate2 truck0 distributor0) [1]
+34: (DROP hoist3 crate2 pallet3 distributor0) [1]
+35: (DROP hoist2 crate0 crate4 depot2) [1]
+36: (DRIVE truck0 distributor0 depot2) [1]
+37: (LIFT hoist2 crate0 crate4 depot2) [1]
+38: (LOAD hoist2 crate0 truck0 depot2) [1]
+39: (LIFT hoist2 crate4 pallet2 depot2) [1]
+40: (LOAD hoist2 crate4 truck0 depot2) [1]
+41: (DRIVE truck0 depot2 distributor2) [1]
+42: (UNLOAD hoist5 crate4 truck0 distributor2) [1]
+43: (DROP hoist5 crate4 pallet5 distributor2) [1]
+44: (UNLOAD hoist5 crate0 truck0 distributor2) [1]
+45: (DROP hoist5 crate0 crate4 distributor2) [1]
+
+Valid plan : 46 actions.
+Computed nodes : 872
+Evaluated nodes : 241
+Developed nodes : 12
+Useful nodes : 3
+
+Lookahead utility : 34.96 %
+Preparation time : 0.00
+Search time : 0.02
+Total time : 0.02
+
+__MEMKB 3456

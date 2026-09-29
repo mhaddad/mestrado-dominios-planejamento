@@ -1,0 +1,50 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P19_PFILE19.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P19_PFILE19.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 254 facts and 1584 exclusive pairs.
+time: 2, 279 facts and 2386 exclusive pairs.
+time: 3, 311 facts and 2514 exclusive pairs.
+time: 4, 479 facts and 1643 exclusive pairs.
+Goals first reachable in 4 steps.
+14205 nodes created.
+
+####################################################
+goals at time 5:
+  pointing_satellite0_planet17 have-image_phenomenon5_infrared7 have-image_phenomenon5_image4 have-image_phenomenon7_thermograph1 have-image_planet9_spectrograph0 
+have-image_planet9_spectrograph6 have-image_star10_infrared3 have-image_star10_spectrograph6 have-image_phenomenon11_infrared2 have-image_star12_spectrograph6 
+have-image_star12_thermograph1 have-image_phenomenon13_infrared7 have-image_phenomenon13_infrared2 have-image_star14_infrared2 have-image_planet15_infrared2 
+have-image_star16_image4 have-image_planet17_image5 have-image_planet17_image4 have-image_star18_infrared2 have-image_star19_infrared3 
+have-image_star19_thermograph1 have-image_phenomenon20_spectrograph0 have-image_planet21_infrared3 have-image_planet21_image5 have-image_planet22_infrared2 
+have-image_star23_infrared2 have-image_phenomenon24_spectrograph6 have-image_phenomenon24_image5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 21
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 479 facts and 1584 exclusive pairs.
+5258 new nodes added.
+
+####################################################
+goals at time 6:
+  pointing_satellite0_planet17 have-image_phenomenon5_infrared7 have-image_phenomenon5_image4 have-image_phenomenon7_thermograph1 have-image_planet9_spectrograph0 
+have-image_planet9_spectrograph6 have-image_star10_infrared3 have-image_star10_spectrograph6 have-image_phenomenon11_infrared2 have-image_star12_spectrograph6 
+have-image_star12_thermograph1 have-image_phenomenon13_infrared7 have-image_phenomenon13_infrared2 have-image_star14_infrared2 have-image_planet15_infrared2 
+have-image_star16_image4 have-image_planet17_image5 have-image_planet17_image4 have-image_star18_infrared2 have-image_star19_infrared3 
+have-image_star19_thermograph1 have-image_phenomenon20_spectrograph0 have-image_planet21_infrared3 have-image_planet21_image5 have-image_planet22_infrared2 
+have-image_star23_infrared2 have-image_phenomenon24_spectrograph6 have-image_phenomenon24_image5 
+
+
+----------------------------------------------------
+Invoking solver graphplan

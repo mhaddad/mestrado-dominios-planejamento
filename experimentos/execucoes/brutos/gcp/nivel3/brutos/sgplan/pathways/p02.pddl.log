@@ -1,0 +1,50 @@
+#
+# (C) Copyright 2008, University of Illinois, Urbana-Champaign
+#
+# All rights reserved. Use of this software is permitted ONLY for
+# non-commercial research purposes, and it may be copied only
+# for that use only. All copies must include this copyright message.
+# This software is made available AS IS, and neither the authors
+# nor the University of Illinois, make any warranty about the
+# software or its performance.
+#
+
+Parsing domain file
+ domain 'GROUNDED-PATHWAYS-PROPOSITIONAL' defined
+Parsing problem file
+ problem 'GROUNDED-PATHWAYS-02' defined
+
+
+
+checking for cyclic := effects --- OK.
+
+Starting SGPlan search ...
+
+
+
+
+
+Solution found.
+
+
+
+; Time 0.00
+; ParsingTime 0.01
+; NrActions 12
+; MakeSpan
+; MetricValue
+; PlanningTechnique Modified-FF(best-first search) as the subplanner
+
+0.001: (CHOOSE_GE2_L1_L0) [1]
+1.002: (CHOOSE_E2F13P1-DP12_L2_L1) [1]
+2.003: (CHOOSE_E2F4-DP12P1_L3_L2) [1]
+3.004: (INITIALIZE_E2F4-DP12P1) [1]
+4.005: (INITIALIZE_E2F13P1-DP12) [1]
+5.006: (INITIALIZE_GE2) [1]
+6.007: (ASSOCIATE_E2F13P1-DP12_GE2_E2F13P1-DP12-GE2) [1]
+7.008: (SYNTHESIZE_E2F13P1-DP12-GE2_P107) [1]
+8.009: (ASSOCIATE_P107_E2F4-DP12P1_P107-E2F4-DP12P1) [1]
+9.010: (DUMMY-ACTION-1-1) [1]
+10.011: (SYNTHESIZE_E2F13P1-DP12-GE2_CYCDP1) [1]
+11.012: (DUMMY-ACTION-2-2) [1]
+__MEMKB 18916

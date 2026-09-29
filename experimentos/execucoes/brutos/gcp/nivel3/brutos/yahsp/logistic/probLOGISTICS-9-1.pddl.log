@@ -1,0 +1,61 @@
+
+Parsing domain..... logistics..... done.
+Parsing problem..... logistics-9-1..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 402 candidates, 174 actions
+Finalization time : 0.00 -> 99 fluents, 13 init
+
+29 14 11 5 
+
+0: (LOAD-TRUCK obj12 tru1 pos1) [1]
+1: (LOAD-TRUCK obj23 tru2 pos2) [1]
+2: (DRIVE-TRUCK tru2 pos2 apt2 cit2) [1]
+3: (LOAD-TRUCK obj13 tru1 pos1) [1]
+4: (LOAD-TRUCK obj11 tru1 pos1) [1]
+5: (DRIVE-TRUCK tru1 pos1 apt1 cit1) [1]
+6: (LOAD-TRUCK obj33 tru3 pos3) [1]
+7: (LOAD-TRUCK obj32 tru3 pos3) [1]
+8: (FLY-AIRPLANE apn1 apt1 apt2) [1]
+9: (UNLOAD-TRUCK obj11 tru1 apt1) [1]
+10: (UNLOAD-TRUCK obj12 tru1 apt1) [1]
+11: (UNLOAD-TRUCK obj23 tru2 apt2) [1]
+12: (UNLOAD-TRUCK obj13 tru1 apt1) [1]
+13: (LOAD-AIRPLANE obj23 apn1 apt2) [1]
+14: (DRIVE-TRUCK tru3 pos3 apt3 cit3) [1]
+15: (UNLOAD-TRUCK obj33 tru3 apt3) [1]
+16: (UNLOAD-TRUCK obj32 tru3 apt3) [1]
+17: (FLY-AIRPLANE apn1 apt2 apt1) [1]
+18: (LOAD-AIRPLANE obj13 apn1 apt1) [1]
+19: (LOAD-AIRPLANE obj12 apn1 apt1) [1]
+20: (LOAD-AIRPLANE obj11 apn1 apt1) [1]
+21: (DRIVE-TRUCK tru3 apt3 pos3 cit3) [1]
+22: (FLY-AIRPLANE apn1 apt1 apt3) [1]
+23: (UNLOAD-AIRPLANE obj23 apn1 apt3) [1]
+24: (DRIVE-TRUCK tru3 pos3 apt3 cit3) [1]
+25: (UNLOAD-AIRPLANE obj12 apn1 apt3) [1]
+26: (UNLOAD-AIRPLANE obj13 apn1 apt3) [1]
+27: (LOAD-TRUCK obj12 tru3 apt3) [1]
+28: (LOAD-TRUCK obj13 tru3 apt3) [1]
+29: (DRIVE-TRUCK tru3 apt3 pos3 cit3) [1]
+30: (UNLOAD-TRUCK obj13 tru3 pos3) [1]
+31: (FLY-AIRPLANE apn1 apt3 apt2) [1]
+32: (UNLOAD-TRUCK obj12 tru3 pos3) [1]
+33: (UNLOAD-AIRPLANE obj11 apn1 apt2) [1]
+
+Valid plan : 34 actions.
+Computed nodes : 34
+Evaluated nodes : 5
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 57.63 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2560

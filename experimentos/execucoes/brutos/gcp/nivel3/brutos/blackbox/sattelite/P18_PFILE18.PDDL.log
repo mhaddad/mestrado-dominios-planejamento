@@ -1,0 +1,44 @@
+blackbox version 43
+command line:  ./blackbox -M 8192 -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P18_PFILE18.PDDL
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/domain.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/sattelite/P18_PFILE18.PDDL
+Problem name: strips-sat-x-1
+Facts loaded.
+time: 1, 191 facts and 1526 exclusive pairs.
+time: 2, 204 facts and 1890 exclusive pairs.
+time: 3, 221 facts and 1927 exclusive pairs.
+time: 4, 329 facts and 1539 exclusive pairs.
+Goals first reachable in 4 steps.
+12027 nodes created.
+
+####################################################
+goals at time 5:
+  have-image_phenomenon5_thermograph4 have-image_planet7_image1 have-image_star8_thermograph3 have-image_star9_image1 have-image_star10_image1 
+have-image_phenomenon13_thermograph2 have-image_star15_thermograph2 have-image_phenomenon17_thermograph4 have-image_phenomenon18_image1 have-image_planet19_thermograph2 
+have-image_planet20_thermograph4 have-image_phenomenon21_image1 have-image_star22_thermograph3 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 32
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 329 facts and 1526 exclusive pairs.
+4247 new nodes added.
+
+####################################################
+goals at time 6:
+  have-image_phenomenon5_thermograph4 have-image_planet7_image1 have-image_star8_thermograph3 have-image_star9_image1 have-image_star10_image1 
+have-image_phenomenon13_thermograph2 have-image_star15_thermograph2 have-image_phenomenon17_thermograph4 have-image_phenomenon18_image1 have-image_planet19_thermograph2 
+have-image_planet20_thermograph4 have-image_phenomenon21_image1 have-image_star22_thermograph3 
+
+
+----------------------------------------------------
+Invoking solver graphplan

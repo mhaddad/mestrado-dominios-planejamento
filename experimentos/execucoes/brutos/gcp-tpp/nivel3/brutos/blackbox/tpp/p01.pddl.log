@@ -1,0 +1,52 @@
+blackbox version 43
+command line:  ./blackbox -o /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p01.pddl -f /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p01.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/domain_p01.pddl
+Loading fact file: /home/matheus/repo/acervo-2010/planejadores_analise_resultados/comp/tpp/Strips/p01.pddl
+Problem name: grounded-strips-tpp
+Facts loaded.
+time: 1, 6 facts and 1 exclusive pairs.
+time: 2, 8 facts and 7 exclusive pairs.
+time: 3, 9 facts and 8 exclusive pairs.
+time: 4, 9 facts and 7 exclusive pairs.
+time: 5, 10 facts and 12 exclusive pairs.
+Goals first reachable in 5 steps.
+102 nodes created.
+
+####################################################
+goals at time 6:
+  stored-goods1-level1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 21
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (drive-truck1-depot1-market1)
+2 (buy-truck1-goods1-market1-level0-level1-level0-level1)
+3 (load-goods1-truck1-market1-level0-level1-level0-level1)
+4 (drive-truck1-market1-depot1)
+5 (unload-goods1-truck1-depot1-level0-level1-level0-level1)
+End plan
+----------------------------------------------------
+
+5 total actions in plan
+0 entries in hash table, 
+4 total set-creation steps (entries + hits + plan length - 1)
+5 actions tried
+
+####################################################
+Total elapsed time:   0.00 seconds
+Time in milliseconds: 0
+
+####################################################
+__MEMKB 4736

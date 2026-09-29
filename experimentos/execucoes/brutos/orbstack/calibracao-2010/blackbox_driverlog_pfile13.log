@@ -1,0 +1,128 @@
+blackbox version 43
+command line:  ./blackbox -o /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/driverlog/domain.pddl -f /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/driverlog/pfile13
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/driverlog/domain.pddl
+Loading fact file: /Users/matheus/Projetos/mestrado-dominios-planejamento/acervo-2010/planejadores_analise_resultados/comp/driverlog/pfile13
+Problem name: dlog-2-3-6
+Facts loaded.
+time: 1, 186 facts and 29 exclusive pairs.
+time: 2, 198 facts and 129 exclusive pairs.
+time: 3, 230 facts and 739 exclusive pairs.
+time: 4, 266 facts and 2132 exclusive pairs.
+time: 5, 300 facts and 3743 exclusive pairs.
+time: 6, 335 facts and 4925 exclusive pairs.
+time: 7, 369 facts and 4027 exclusive pairs.
+Goals reachable at 7 steps but mutually exclusive.
+time: 8, 371 facts and 2662 exclusive pairs.
+Goals reachable at 8 steps but mutually exclusive.
+time: 9, 371 facts and 2411 exclusive pairs.
+Goals first reachable in 9 steps.
+10282 nodes created.
+
+####################################################
+goals at time 10:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 26231
+
+----------------------------------------------------
+Can't solve in 9 steps
+time: 10, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 11:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 675112
+
+----------------------------------------------------
+Can't solve in 10 steps
+time: 11, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 12:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 48662157
+
+----------------------------------------------------
+Can't solve in 11 steps
+time: 12, 371 facts and 2397 exclusive pairs.
+1890 new nodes added.
+
+####################################################
+goals at time 13:
+  at_driver1_s11 at_truck2_s8 at_truck3_s4 at_package1_s5 at_package2_s0 
+at_package3_s4 at_package4_s0 at_package6_s5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 22918589
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (walk driver1 s0 p0-2)
+1 (load-truck package6 truck3 s2)
+1 (board-truck driver2 truck2 s9)
+2 (drive-truck truck2 s9 s11 driver2)
+2 (walk driver1 p0-2 s2)
+3 (board-truck driver1 truck3 s2)
+3 (drive-truck truck2 s11 s6 driver2)
+4 (drive-truck truck3 s2 s0 driver1)
+4 (load-truck package2 truck2 s6)
+4 (load-truck package4 truck2 s6)
+5 (drive-truck truck2 s6 s10 driver2)
+5 (drive-truck truck3 s0 s4 driver1)
+6 (drive-truck truck2 s10 s0 driver2)
+6 (load-truck package1 truck3 s4)
+7 (drive-truck truck3 s4 s5 driver1)
+7 (unload-truck package2 truck2 s0)
+7 (unload-truck package4 truck2 s0)
+8 (load-truck package3 truck3 s5)
+8 (drive-truck truck2 s0 s10 driver2)
+8 (unload-truck package6 truck3 s5)
+8 (unload-truck package1 truck3 s5)
+9 (drive-truck truck3 s5 s4 driver1)
+9 (drive-truck truck2 s10 s8 driver2)
+10 (unload-truck package3 truck3 s4)
+10 (disembark-truck driver1 truck3 s4)
+11 (walk driver1 s4 p11-4)
+12 (walk driver1 p11-4 s11)
+End plan
+----------------------------------------------------
+
+27 total actions in plan
+1134982 entries in hash table, 9607324 hash hits, avg set size 15
+10742317 total set-creation steps (entries + hits + plan length - 1)
+19144892 actions tried
+
+####################################################
+Total elapsed time:   46 minutes, 33 seconds
+Time in milliseconds: 2792255
+
+####################################################

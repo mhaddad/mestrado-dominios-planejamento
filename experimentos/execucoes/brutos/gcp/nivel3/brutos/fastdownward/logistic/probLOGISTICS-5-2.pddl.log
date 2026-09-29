@@ -1,0 +1,66 @@
+Parsing...
+Instantiating...
+Starting instantiation [33 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+9 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is acyclic.
+8 variables of 9 necessary
+66 of 78 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 66 to 66)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 66 unary operators... done! [66 unary operators]
+Best heuristic value: 9/8 [expanded 1 state(s)]
+Best heuristic value: 8/7 [expanded 3 state(s)]
+Best heuristic value: 7/6 [expanded 5 state(s)]
+Best heuristic value: 5/5 [expanded 6 state(s)]
+Best heuristic value: 4/4 [expanded 7 state(s)]
+Best heuristic value: 3/3 [expanded 8 state(s)]
+Best heuristic value: 2/2 [expanded 10 state(s)]
+Best heuristic value: 1/1 [expanded 11 state(s)]
+Solution found!
+load-truck obj23 tru2 pos2
+load-truck obj21 tru2 pos2
+drive-truck tru2 pos2 apt2 cit2
+unload-truck obj23 tru2 apt2
+unload-truck obj21 tru2 apt2
+load-truck obj12 tru1 pos1
+drive-truck tru1 pos1 apt1 cit1
+unload-truck obj12 tru1 apt1
+Plan length: 8 step(s).
+Expanded 12 state(s).
+Generated 83 state(s).
+Cache hits: 61
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8860

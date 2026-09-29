@@ -1,0 +1,65 @@
+
+Parsing domain file:  domain 'PIPESWORLD_STRIPS' defined ... done.
+Parsing problem file:  problem 'P21-NET3-B12-G2_RT0_INSTANCE' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :    3620
+Number of conditional actions :       0
+Number of facts               :     308
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.09 seconds
+
+Searching ('.' = every 50 search steps):
+........... search limit exceeded. Restart.
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (POP-START S12 B11 A1 A2 B0 GASOLEO LCO TA2-1-GASOLEO) [D:1.0000; C:1.0000]
+ 0.0000: (POP-UNITARYPIPE S34 B3 A3 A4 B4 GASOLEO RAT-A TA3-2-RAT-A TA4-1-GASOLEO) [D:1.0000; C:1.0000]
+ 1.0000: (POP-END S12 A1 A2 B5 B0 RAT-A TA1-2-RAT-A) [D:1.0000; C:1.0000]
+ 1.0000: (POP-START S13 B4 A1 A3 B9 RAT-A GASOLEO TA3-2-RAT-A) [D:1.0000; C:1.0000]
+ 2.0000: (PUSH-START S12 B6 A1 A2 B0 RAT-A LCO TA1-2-RAT-A) [D:1.0000; C:1.0000]
+ 2.0000: (POP-END S13 A1 A3 B7 B9 GASOLEO TA1-2-GASOLEO) [D:1.0000; C:1.0000]
+ 3.0000: (PUSH-END S12 A1 A2 B11 B0 GASOLEO TA2-2-GASOLEO) [D:1.0000; C:1.0000]
+ 4.0000: (PUSH-START S12 B1 A1 A2 B6 GASOLEO RAT-A TA1-1-GASOLEO) [D:1.0000; C:1.0000]
+ 5.0000: (PUSH-END S12 A1 A2 B0 B6 LCO TA2-1-LCO) [D:1.0000; C:1.0000]
+ 6.0000: (POP-START S12 B0 A1 A2 B6 LCO RAT-A TA2-1-LCO) [D:1.0000; C:1.0000]
+ 7.0000: (POP-END S12 A1 A2 B1 B6 LCO TA1-1-LCO) [D:1.0000; C:1.0000]
+ 8.0000: (PUSH-START S12 B7 A1 A2 B6 LCO RAT-A TA1-1-LCO) [D:1.0000; C:1.0000]
+ 9.0000: (PUSH-END S12 A1 A2 B0 B6 LCO TA2-1-LCO) [D:1.0000; C:1.0000]
+ 10.0000: (PUSH-START S12 B1 A1 A2 B7 GASOLEO LCO TA1-2-GASOLEO) [D:1.0000; C:1.0000]
+ 11.0000: (PUSH-END S12 A1 A2 B6 B7 RAT-A TA2-2-RAT-A) [D:1.0000; C:1.0000]
+ 12.0000: (POP-START S12 B11 A1 A2 B7 GASOLEO LCO TA2-2-GASOLEO) [D:1.0000; C:1.0000]
+ 13.0000: (POP-END S12 A1 A2 B1 B7 RAT-A TA1-2-RAT-A) [D:1.0000; C:1.0000]
+ 14.0000: (POP-START S12 B2 A1 A2 B11 RAT-A GASOLEO TA2-2-RAT-A) [D:1.0000; C:1.0000]
+ 15.0000: (POP-END S12 A1 A2 B7 B11 OC1B TA1-1-OC1B) [D:1.0000; C:1.0000]
+ 16.0000: (POP-START S12 B0 A1 A2 B2 LCO RAT-A TA2-1-LCO) [D:1.0000; C:1.0000]
+ 17.0000: (POP-END S12 A1 A2 B11 B2 LCO TA1-1-LCO) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      1.97
+Search time:     1.88
+Actions:         21
+Execution cost:  21.00
+Duration:        18.000
+Plan quality:    21.000
+
+__MEMKB 117376

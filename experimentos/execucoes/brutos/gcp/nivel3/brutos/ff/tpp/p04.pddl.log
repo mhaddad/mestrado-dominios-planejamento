@@ -1,0 +1,52 @@
+
+ff: parsing domain file
+domain 'TPP-PROPOSITIONAL' defined
+ ... done.
+ff: parsing problem file
+problem 'TPP' defined
+ ... done.
+
+
+got 34 facts
+
+Cueing down from goal distance:   13 into depth [1][2]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: DRIVE TRUCK1 DEPOT1 MARKET1
+        1: BUY TRUCK1 GOODS1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        2: BUY TRUCK1 GOODS2 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        3: BUY TRUCK1 GOODS3 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        4: BUY TRUCK1 GOODS4 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        5: LOAD GOODS1 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        6: LOAD GOODS2 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        7: LOAD GOODS3 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        8: LOAD GOODS4 TRUCK1 MARKET1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+        9: DRIVE TRUCK1 MARKET1 DEPOT1
+       10: UNLOAD GOODS1 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       11: UNLOAD GOODS2 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       12: UNLOAD GOODS3 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+       13: UNLOAD GOODS4 TRUCK1 DEPOT1 LEVEL0 LEVEL1 LEVEL0 LEVEL1
+     
+
+time spent:    0.00 seconds instantiating 14 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 34 facts and 14 actions
+               0.00 seconds creating final representation with 34 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 22 states, to a max depth of 2
+               0.00 seconds total time
+
+__MEMKB 2944

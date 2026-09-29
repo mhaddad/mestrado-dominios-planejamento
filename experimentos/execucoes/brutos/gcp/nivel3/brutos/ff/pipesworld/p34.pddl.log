@@ -1,0 +1,112 @@
+
+ff: parsing domain file
+domain 'PIPESWORLD_STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'P34-NET4-B16-G6_RT0_INSTANCE' defined
+ ... done.
+
+
+got 502 facts
+
+Cueing down from goal distance:   40 into depth [1]
+                                  38            [1]
+                                  33            [1]
+                                  30            [1]
+                                  29            [1]
+                                  28            [1]
+                                  27            [1]
+                                  25            [1][2]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   40
+                          33
+                          32
+                          30
+                          29
+                          27
+                          26
+                          25
+                          23
+                          22
+                          21
+                          20
+                          19
+                          18
+                          15
+                          14
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PUSH-START S13 B4 A1 A3 B8 LCO OCA1 TA1-1-LCO
+        1: PUSH-UNITARYPIPE S34 B6 A3 A4 B9 RAT-A LCO TA3-2-RAT-A TA4-2-LCO
+        2: POP-START S23 B15 A2 A3 B1 RAT-A RAT-A TA3-1-RAT-A
+        3: POP-UNITARYPIPE S34 B12 A3 A4 B6 GASOLEO RAT-A TA3-2-RAT-A TA4-2-GASOLEO
+        4: POP-UNITARYPIPE S34 B2 A3 A4 B12 LCO GASOLEO TA3-2-GASOLEO TA4-2-LCO
+        5: POP-UNITARYPIPE S34 B9 A3 A4 B2 LCO LCO TA3-2-LCO TA4-1-LCO
+        6: PUSH-UNITARYPIPE S34 B6 A3 A4 B9 RAT-A LCO TA3-2-RAT-A TA4-2-LCO
+        7: PUSH-UNITARYPIPE S34 B12 A3 A4 B6 GASOLEO RAT-A TA3-2-GASOLEO TA4-2-RAT-A
+        8: POP-END S23 A2 A3 B0 B3 LCO TA2-2-LCO
+        9: POP-START S12 B7 A1 A2 B10 GASOLEO OCA1 TA2-1-GASOLEO
+       10: PUSH-END S13 A1 A3 B13 B8 OCA1 TA3-3-OCA1
+       11: POP-UNITARYPIPE S34 B9 A3 A4 B12 LCO GASOLEO TA3-1-GASOLEO TA4-2-LCO
+       12: POP-START S23 B2 A2 A3 B15 LCO RAT-A TA3-2-LCO
+       13: POP-UNITARYPIPE S34 B11 A3 A4 B9 GASOLEO LCO TA3-1-LCO TA4-1-GASOLEO
+       14: POP-START S13 B5 A1 A3 B8 OCA1 OCA1 TA3-1-OCA1
+       15: POP-END S13 A1 A3 B4 B8 LCO TA1-2-LCO
+       16: PUSH-START S13 B4 A1 A3 B8 LCO OCA1 TA1-2-LCO
+       17: POP-END S23 A2 A3 B3 B1 GASOLEO TA2-2-GASOLEO
+       18: POP-END S12 A1 A2 B14 B10 LCO TA1-1-LCO
+       19: POP-START S12 B0 A1 A2 B7 GASOLEO GASOLEO TA2-2-GASOLEO
+       20: PUSH-END S13 A1 A3 B5 B8 OCA1 TA3-2-OCA1
+       21: POP-START S23 B12 A2 A3 B2 GASOLEO LCO TA3-1-GASOLEO
+       22: POP-END S23 A2 A3 B1 B15 OC1B TA2-1-OC1B
+       23: POP-START S23 B13 A2 A3 B12 OCA1 GASOLEO TA3-3-OCA1
+       24: POP-END S23 A2 A3 B15 B2 RAT-A TA2-2-RAT-A
+       25: POP-END S12 A1 A2 B10 B7 OC1B TA1-1-OC1B
+       26: PUSH-START S13 B14 A1 A3 B4 OC1B LCO TA1-1-OC1B
+       27: POP-START S12 B1 A1 A2 B0 RAT-A GASOLEO TA2-2-RAT-A
+       28: POP-START S23 B5 A2 A3 B13 OCA1 OCA1 TA3-2-OCA1
+       29: POP-END S12 A1 A2 B7 B0 LCO TA1-2-LCO
+       30: POP-END S23 A2 A3 B2 B12 RAT-A TA2-2-RAT-A
+       31: POP-START S12 B2 A1 A2 B1 LCO RAT-A TA2-2-LCO
+       32: POP-END S12 A1 A2 B0 B1 GASOLEO TA1-2-GASOLEO
+       33: PUSH-END S13 A1 A3 B8 B4 OCA1 TA3-1-OCA1
+       34: PUSH-START S13 B7 A1 A3 B14 GASOLEO OC1B TA1-2-GASOLEO
+       35: PUSH-END S13 A1 A3 B4 B14 LCO TA3-2-LCO
+       36: PUSH-UNITARYPIPE S34 B4 A3 A4 B11 LCO GASOLEO TA3-1-LCO TA4-2-GASOLEO
+       37: PUSH-UNITARYPIPE S34 B9 A3 A4 B4 LCO LCO TA3-2-LCO TA4-2-LCO
+       38: POP-START S23 B8 A2 A3 B5 OCA1 OCA1 TA3-1-OCA1
+       39: POP-END S23 A2 A3 B12 B13 GASOLEO TA2-2-GASOLEO
+       40: POP-START S12 B12 A1 A2 B2 GASOLEO LCO TA2-2-GASOLEO
+       41: POP-UNITARYPIPE S34 B11 A3 A4 B9 GASOLEO LCO TA3-1-LCO TA4-2-GASOLEO
+       42: POP-START S23 B9 A2 A3 B8 LCO OCA1 TA3-1-LCO
+       43: POP-END S23 A2 A3 B13 B5 OCA1 TA2-1-OCA1
+       44: POP-END S12 A1 A2 B1 B2 GASOLEO TA1-2-GASOLEO
+       45: POP-START S12 B13 A1 A2 B12 OCA1 GASOLEO TA2-1-OCA1
+       46: POP-END S12 A1 A2 B2 B12 GASOLEO TA1-1-GASOLEO
+     
+
+time spent:    0.00 seconds instantiating 14568 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 503 facts and 13272 actions
+               0.01 seconds creating final representation with 502 relevant facts
+               0.00 seconds building connectivity graph
+             262.18 seconds searching, evaluating 216701 states, to a max depth of 2
+             262.19 seconds total time
+
+__MEMKB 129024

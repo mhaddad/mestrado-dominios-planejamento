@@ -1,0 +1,93 @@
+Parsing...
+Instantiating...
+Starting instantiation [126 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+0 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s13)
+Removed false proposition: Atom pop-updating(s13)
+Removed false proposition: Atom push-updating(s13)
+Removed false proposition: <none of those>
+Removed true proposition: Atom normal(s12)
+Removed false proposition: Atom push-updating(s12)
+Removed false proposition: Atom pop-updating(s12)
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+Removed false proposition: <none of those>
+33 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+31 variables of 33 necessary
+656 of 656 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 4592 to 2470)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 3280 unary operators... done! [3280 unary operators]
+Best heuristic value: 8/8 [expanded 1 state(s)]
+Best heuristic value: 7/8 [expanded 2 state(s)]
+Best heuristic value: 6/8 [expanded 5 state(s)]
+Best heuristic value: 5/7 [expanded 7 state(s)]
+Best heuristic value: 4/6 [expanded 8 state(s)]
+Best heuristic value: 3/4 [expanded 9 state(s)]
+Best heuristic value: 3/3 [expanded 10 state(s)]
+Best heuristic value: 2/2 [expanded 12 state(s)]
+Best heuristic value: 1/1 [expanded 13 state(s)]
+Solution found!
+push-unitarypipe s13 b0 a1 a3 b2 rat-a rat-a ta1-1-rat-a ta3-1-rat-a
+pop-unitarypipe s12 b4 a1 a2 b5 gasoleo gasoleo ta1-1-gasoleo ta2-1-gasoleo
+push-unitarypipe s13 b5 a1 a3 b0 gasoleo rat-a ta1-1-gasoleo ta3-2-rat-a
+pop-unitarypipe s13 b1 a1 a3 b5 gasoleo gasoleo ta1-1-gasoleo ta3-1-gasoleo
+pop-unitarypipe s13 b2 a1 a3 b1 rat-a gasoleo ta1-2-gasoleo ta3-1-rat-a
+pop-unitarypipe s13 b6 a1 a3 b2 lco rat-a ta1-1-rat-a ta3-1-lco
+pop-unitarypipe s13 b0 a1 a3 b6 rat-a lco ta1-1-lco ta3-2-rat-a
+push-unitarypipe s12 b6 a1 a2 b4 lco gasoleo ta1-1-lco ta2-2-gasoleo
+push-unitarypipe s13 b2 a1 a3 b0 rat-a rat-a ta1-1-rat-a ta3-2-rat-a
+push-unitarypipe s12 b3 a1 a2 b6 oca1 lco ta1-2-oca1 ta2-1-lco
+Plan length: 10 step(s).
+Expanded 14 state(s).
+Generated 269 state(s).
+Cache hits: 4609
+Cache misses: 7246
+Search time: 0 seconds
+Total time: 0.02 seconds
+__MEMKB 17436

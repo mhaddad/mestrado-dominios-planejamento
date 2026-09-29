@@ -1,0 +1,116 @@
+
+ipp: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'LOGISTICS-10-1' defined
+ ... done.
+
+
+instantiated 908 actions
+
+
+time:   0,   192 facts and       0 exclusive pairs (   17,       0 positives)
+             211 ops   and      53 exclusive pairs
+time:   1,   228 facts and      86 exclusive pairs (   36,      34 positives)
+             272 ops   and     524 exclusive pairs
+time:   2,   228 facts and      38 exclusive pairs (   36,      22 positives)
+             284 ops   and     620 exclusive pairs
+time:   3,   240 facts and      74 exclusive pairs (   48,      58 positives)
+             320 ops   and    1394 exclusive pairs
+time:   4,   252 facts and     188 exclusive pairs (   60,     172 positives)
+             344 ops   and    2246 exclusive pairs
+time:   5,   252 facts and     140 exclusive pairs (   60,     136 positives)
+             380 ops   and    4592 exclusive pairs
+time:   6,   288 facts and    1184 exclusive pairs (   96,    1144 positives)
+             488 ops   and   18524 exclusive pairs
+time:   7,   324 facts and    2966 exclusive pairs (  132,    2926 positives)
+             560 ops   and   26012 exclusive pairs
+time:   8,   324 facts and    1004 exclusive pairs (  132,    1000 positives)
+             596 ops   and   17102 exclusive pairs
+time:   9,   360 facts and    1472 exclusive pairs (  168,    1432 positives)
+             668 ops   and   19208 exclusive pairs
+time:  10,   360 facts and     950 exclusive pairs (  168,     946 positives)
+
+goals first reachable in 10 time steps
+
+
+graph has leveled off at time step 11
+
+             668 ops   and   16508 exclusive pairs
+time:  11,   360 facts and     950 exclusive pairs (  168,     946 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   12
+
+
+found plan as follows:
+
+time step    0: LOAD-TRUCK OBJ43 TRU4 POS4
+                LOAD-TRUCK OBJ42 TRU4 POS4
+                LOAD-TRUCK OBJ41 TRU4 POS4
+                LOAD-TRUCK OBJ23 TRU2 POS2
+                LOAD-TRUCK OBJ13 TRU1 POS1
+                LOAD-TRUCK OBJ22 TRU2 POS2
+                LOAD-TRUCK OBJ31 TRU3 POS3
+                LOAD-TRUCK OBJ33 TRU3 POS3
+time step    1: DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+                DRIVE-TRUCK TRU3 POS3 APT3 CIT3
+                DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+                DRIVE-TRUCK TRU4 POS4 APT4 CIT4
+time step    2: UNLOAD-TRUCK OBJ43 TRU4 APT4
+                UNLOAD-TRUCK OBJ42 TRU4 APT4
+                UNLOAD-TRUCK OBJ41 TRU4 APT4
+                UNLOAD-TRUCK OBJ23 TRU2 APT2
+                UNLOAD-TRUCK OBJ13 TRU1 APT1
+                UNLOAD-TRUCK OBJ22 TRU2 APT2
+                UNLOAD-TRUCK OBJ31 TRU3 APT3
+                UNLOAD-TRUCK OBJ33 TRU3 APT3
+time step    3: LOAD-AIRPLANE OBJ22 APN1 APT2
+                LOAD-AIRPLANE OBJ23 APN1 APT2
+time step    4: FLY-AIRPLANE APN1 APT2 APT4
+time step    5: UNLOAD-AIRPLANE OBJ22 APN1 APT4
+                LOAD-AIRPLANE OBJ41 APN1 APT4
+                LOAD-AIRPLANE OBJ42 APN1 APT4
+time step    6: LOAD-TRUCK OBJ22 TRU4 APT4
+                FLY-AIRPLANE APN1 APT4 APT3
+time step    7: LOAD-AIRPLANE OBJ33 APN1 APT3
+                DRIVE-TRUCK TRU4 APT4 POS4 CIT4
+                UNLOAD-AIRPLANE OBJ23 APN1 APT3
+                UNLOAD-AIRPLANE OBJ41 APN1 APT3
+                UNLOAD-AIRPLANE OBJ42 APN1 APT3
+time step    8: LOAD-TRUCK OBJ23 TRU3 APT3
+                UNLOAD-TRUCK OBJ22 TRU4 POS4
+                FLY-AIRPLANE APN1 APT3 APT1
+time step    9: UNLOAD-AIRPLANE OBJ33 APN1 APT1
+                LOAD-AIRPLANE OBJ13 APN1 APT1
+                DRIVE-TRUCK TRU3 APT3 POS3 CIT3
+time step   10: UNLOAD-TRUCK OBJ23 TRU3 POS3
+                FLY-AIRPLANE APN1 APT1 APT4
+time step   11: UNLOAD-AIRPLANE OBJ13 APN1 APT4
+
+
+
+number of actions tried:   82840079
+number of noops tried  :  139682487
+
+had 39294088 simple memoizing hits
+had  633089 partial memoizing hits
+had 5223687 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 908 operators
+               0.00 seconds building graph
+               0.01 seconds calculating exclusions
+             124.76 seconds searching graph
+             124.77 seconds total time
+
+Memory used:   0.44 MBytes for domain representation
+               5.40 MBytes for graph
+               0.37 MBytes for exclusions
+             115.92 MBytes for memoization
+              12.18 MBytes for wave front
+
+
+
+__MEMKB 247168

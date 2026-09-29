@@ -1,0 +1,69 @@
+Parsing...
+Instantiating...
+Starting instantiation [21 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+6 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(c, c)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(d, d)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(b, b)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(e, e)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(a, a)
+Removed false proposition: <none of those>
+10 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+11 variables of 11 necessary
+50 of 50 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 150 to 70)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 190 unary operators... done! [150 unary operators]
+Best heuristic value: 9/8 [expanded 1 state(s)]
+Best heuristic value: 7/7 [expanded 4 state(s)]
+Best heuristic value: 6/5 [expanded 8 state(s)]
+Best heuristic value: 4/4 [expanded 12 state(s)]
+Best heuristic value: 2/2 [expanded 15 state(s)]
+Best heuristic value: 1/1 [expanded 16 state(s)]
+Solution found!
+unstack c e
+put-down c
+pick-up d
+stack d c
+unstack e b
+put-down e
+unstack b a
+stack b d
+pick-up e
+stack e b
+pick-up a
+stack a e
+Plan length: 12 step(s).
+Expanded 17 state(s).
+Generated 43 state(s).
+Cache hits: 70
+Cache misses: 0
+Search time: 0 seconds
+Total time: 0 seconds
+__MEMKB 8860

@@ -1,0 +1,44 @@
+
+Parsing domain..... satellite..... done.
+Parsing problem..... strips-sat-x-1..... done.
+Computing domains..... done.
+Instantiating actions..... done.
+Computing final representation..... done.
+
+Parsing time : 0.00
+Domains creation  time : 0.00
+Instantiation time : 0.00 -> 110 candidates, 110 actions
+Finalization time : 0.00 -> 37 fluents, 2 init
+
+15 12 10 8 6 4 2 
+
+0: (TURN_TO satellite0 groundstation2 planet4) [1]
+1: (SWITCH_ON instrument0 satellite0) [1]
+2: (SWITCH_OFF instrument0 satellite0) [1]
+3: (TURN_TO satellite0 star0 groundstation2) [1]
+4: (SWITCH_ON instrument1 satellite0) [1]
+5: (TURN_TO satellite0 groundstation2 star0) [1]
+6: (CALIBRATE satellite0 instrument1 groundstation2) [1]
+7: (TURN_TO satellite0 phenomenon6 groundstation2) [1]
+8: (TAKE_IMAGE satellite0 phenomenon6 instrument1 infrared0) [1]
+9: (TURN_TO satellite0 planet3 phenomenon6) [1]
+10: (TAKE_IMAGE satellite0 planet3 instrument1 infrared0) [1]
+11: (TURN_TO satellite0 phenomenon5 planet3) [1]
+12: (TAKE_IMAGE satellite0 phenomenon5 instrument1 image2) [1]
+13: (TURN_TO satellite0 star7 phenomenon5) [1]
+14: (TAKE_IMAGE satellite0 star7 instrument1 infrared0) [1]
+15: (TURN_TO satellite0 planet4 star7) [1]
+16: (TAKE_IMAGE satellite0 planet4 instrument1 infrared0) [1]
+
+Valid plan : 17 actions.
+Computed nodes : 17
+Evaluated nodes : 9
+Developed nodes : 0
+Useful nodes : 0
+
+Lookahead utility : 23.61 %
+Preparation time : 0.00
+Search time : 0.00
+Total time : 0.00
+
+__MEMKB 2432

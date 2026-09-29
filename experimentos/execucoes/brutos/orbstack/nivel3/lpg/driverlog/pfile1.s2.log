@@ -1,0 +1,50 @@
+
+Parsing domain file:  domain 'DRIVERLOG' defined ... done.
+Parsing problem file:  problem 'DLOG-2-2-2' defined ... done.
+
+
+
+Modality: Fast Planner
+
+Number of actions             :      88
+Number of conditional actions :       0
+Number of facts               :      32
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: NO
+	Problem with Timed Initial Litearals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.06 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (WALK DRIVER1 S2 P1-2) [D:1.0000; C:1.0000]
+ 1.0000: (WALK DRIVER1 P1-2 S1) [D:1.0000; C:1.0000]
+ 2.0000: (WALK DRIVER1 S1 P1-0) [D:1.0000; C:1.0000]
+ 3.0000: (WALK DRIVER1 P1-0 S0) [D:1.0000; C:1.0000]
+ 4.0000: (BOARD-TRUCK DRIVER1 TRUCK1 S0) [D:1.0000; C:1.0000]
+ 5.0000: (DRIVE-TRUCK TRUCK1 S0 S1 DRIVER1) [D:1.0000; C:1.0000]
+ 6.0000: (DISEMBARK-TRUCK DRIVER1 TRUCK1 S1) [D:1.0000; C:1.0000]
+
+
+Solution found:
+Total time:      0.09
+Search time:     0.03
+Actions:         7
+Execution cost:  7.00
+Duration:        7.000
+Plan quality:    7.000
+
+__MEMKB 128200

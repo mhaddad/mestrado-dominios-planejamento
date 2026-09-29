@@ -1,0 +1,66 @@
+
+ipp: parsing domain file
+domain 'DEPOT' defined
+ ... done.
+ipp: parsing problem file
+problem 'DEPOTPROB1818' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 72 actions
+
+
+time:   0,    40 facts and       0 exclusive pairs (   12,       0 positives)
+              46 ops   and      22 exclusive pairs
+time:   1,    58 facts and      66 exclusive pairs (   20,      22 positives)
+              78 ops   and     308 exclusive pairs
+time:   2,    62 facts and      90 exclusive pairs (   24,      48 positives)
+              86 ops   and     480 exclusive pairs
+time:   3,    62 facts and      78 exclusive pairs (   24,      40 positives)
+              94 ops   and     726 exclusive pairs
+time:   4,    67 facts and      99 exclusive pairs (   28,      71 positives)
+             113 ops   and    1400 exclusive pairs
+time:   5,    78 facts and     245 exclusive pairs (   38,     200 positives)
+
+goals first reachable in 5 time steps
+
+
+found plan as follows:
+
+time step    0: LIFT HOIST0 CRATE1 PALLET0 DEPOT0
+                LIFT HOIST1 CRATE0 PALLET1 DISTRIBUTOR0
+                DRIVE TRUCK0 DISTRIBUTOR1 DISTRIBUTOR0
+time step    1: LOAD HOIST1 CRATE0 TRUCK0 DISTRIBUTOR0
+                LOAD HOIST0 CRATE1 TRUCK1 DEPOT0
+time step    2: DRIVE TRUCK1 DEPOT0 DISTRIBUTOR0
+                DRIVE TRUCK0 DISTRIBUTOR0 DISTRIBUTOR1
+time step    3: UNLOAD HOIST2 CRATE0 TRUCK0 DISTRIBUTOR1
+                UNLOAD HOIST1 CRATE1 TRUCK1 DISTRIBUTOR0
+time step    4: DROP HOIST1 CRATE1 PALLET1 DISTRIBUTOR0
+                DROP HOIST2 CRATE0 PALLET2 DISTRIBUTOR1
+
+
+
+number of actions tried:         11
+number of noops tried  :          9
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 72 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.05 MBytes for domain representation
+               0.76 MBytes for graph
+               0.02 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 3072

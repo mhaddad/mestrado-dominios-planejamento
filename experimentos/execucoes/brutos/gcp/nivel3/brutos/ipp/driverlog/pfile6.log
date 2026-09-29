@@ -1,0 +1,65 @@
+
+ipp: parsing domain file
+domain 'DRIVERLOG' defined
+ ... done.
+ipp: parsing problem file
+problem 'DLOG-3-3-5' defined
+ ... done.
+
+
+instantiated 222 actions
+
+
+time:   0,    76 facts and       0 exclusive pairs (   14,       0 positives)
+              92 ops   and      43 exclusive pairs
+time:   1,   102 facts and      37 exclusive pairs (   30,      27 positives)
+             143 ops   and     445 exclusive pairs
+time:   2,   113 facts and     114 exclusive pairs (   39,      75 positives)
+             196 ops   and    2547 exclusive pairs
+time:   3,   132 facts and     287 exclusive pairs (   57,     266 positives)
+             271 ops   and    7563 exclusive pairs
+time:   4,   140 facts and     259 exclusive pairs (   64,     253 positives)
+
+goals first reachable in 4 time steps
+
+             336 ops   and   10339 exclusive pairs
+time:   5,   142 facts and     186 exclusive pairs (   66,     186 positives)
+
+found plan as follows:
+
+time step    0: LOAD-TRUCK PACKAGE1 TRUCK3 S1
+                BOARD-TRUCK DRIVER3 TRUCK3 S1
+                WALK DRIVER2 S2 P1-2
+                WALK DRIVER1 S2 P1-2
+time step    1: WALK DRIVER1 P1-2 S1
+                WALK DRIVER2 P1-2 S1
+                DRIVE-TRUCK TRUCK3 S1 S2 DRIVER3
+time step    2: UNLOAD-TRUCK PACKAGE1 TRUCK3 S2
+                BOARD-TRUCK DRIVER2 TRUCK2 S1
+time step    3: DRIVE-TRUCK TRUCK2 S1 S0 DRIVER2
+time step    4: DISEMBARK-TRUCK DRIVER2 TRUCK2 S0
+
+
+
+number of actions tried:         30
+number of noops tried  :         72
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 222 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.11 MBytes for domain representation
+               1.77 MBytes for graph
+               0.11 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 3968

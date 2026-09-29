@@ -1,0 +1,258 @@
+Parsing...
+Instantiating...
+Starting instantiation [21 rules]...
+Finding invariants...
+Instantiating groups...
+Choosing groups...
+14 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Detecting unreachable propositions...
+Removed false proposition: Atom on(c, c)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(j, j)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(h, h)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(k, k)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(i, i)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(f, f)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(a, a)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(g, g)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(e, e)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(l, l)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(d, d)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(b, b)
+Removed false proposition: <none of those>
+Removed false proposition: Atom on(m, m)
+Removed false proposition: <none of those>
+26 propositions removed.
+Writing output...
+Done!
+Building causal graph...
+The causal graph is not acyclic.
+27 variables of 27 necessary
+338 of 338 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done! (reduced from 702 to 378)
+Initializing heuristic cache... done!
+Conducting best first search.
+Initializing causal graph heuristic...
+Initializing HSP/FF heuristic...
+Simplifying 1014 unary operators... done! [702 unary operators]
+Best heuristic value: 49/24 [expanded 1 state(s)]
+Best heuristic value: 46/24 [expanded 5 state(s)]
+Best heuristic value: 45/24 [expanded 12 state(s)]
+Best heuristic value: 37/23 [expanded 22 state(s)]
+Best heuristic value: 37/22 [expanded 27 state(s)]
+Best heuristic value: 29/22 [expanded 32 state(s)]
+Best heuristic value: 29/21 [expanded 35 state(s)]
+Best heuristic value: 23/21 [expanded 40 state(s)]
+Best heuristic value: 19/20 [expanded 46 state(s)]
+Best heuristic value: 17/19 [expanded 51 state(s)]
+Best heuristic value: 14/19 [expanded 56 state(s)]
+Best heuristic value: 14/18 [expanded 59 state(s)]
+Best heuristic value: 12/18 [expanded 66 state(s)]
+Best heuristic value: 10/17 [expanded 70 state(s)]
+Best heuristic value: 8/16 [expanded 75 state(s)]
+Best heuristic value: 7/16 [expanded 99 state(s)]
+Best heuristic value: 5/15 [expanded 103 state(s)]
+Best heuristic value: 4/14 [expanded 117 state(s)]
+Best heuristic value: 2/14 [expanded 212 state(s)]
+Best heuristic value: 1/13 [expanded 222 state(s)]
+Best heuristic value: 1/12 [expanded 510 state(s)]
+Best heuristic value: 1/11 [expanded 543 state(s)]
+Best heuristic value: 1/10 [expanded 548 state(s)]
+Best heuristic value: 1/8 [expanded 551 state(s)]
+Best heuristic value: 1/7 [expanded 630 state(s)]
+Best heuristic value: 1/5 [expanded 633 state(s)]
+Best heuristic value: 1/3 [expanded 649 state(s)]
+Best heuristic value: 1/2 [expanded 653 state(s)]
+Best heuristic value: 1/1 [expanded 654 state(s)]
+Solution found!
+unstack b f
+put-down b
+unstack f d
+put-down f
+unstack d c
+stack d f
+unstack c j
+stack c d
+unstack j a
+stack j b
+unstack a e
+stack a m
+unstack i g
+stack i c
+pick-up g
+stack g i
+unstack e h
+put-down e
+unstack h l
+stack h e
+unstack l k
+stack l j
+unstack h e
+put-down h
+pick-up e
+stack e l
+pick-up h
+stack h e
+unstack a m
+put-down a
+pick-up m
+stack m h
+pick-up a
+stack a m
+unstack g i
+put-down g
+unstack i c
+put-down i
+pick-up g
+stack g i
+unstack c d
+put-down c
+unstack d f
+put-down d
+pick-up f
+stack f a
+pick-up c
+stack c d
+unstack g i
+put-down g
+pick-up i
+stack i c
+pick-up g
+stack g i
+unstack f a
+put-down f
+unstack a m
+put-down a
+pick-up f
+stack f a
+unstack m h
+put-down m
+unstack f a
+put-down f
+pick-up a
+stack a m
+pick-up f
+stack f a
+unstack g i
+put-down g
+unstack i c
+put-down i
+pick-up g
+stack g i
+unstack c d
+put-down c
+pick-up d
+stack d f
+pick-up c
+stack c d
+unstack g i
+put-down g
+pick-up i
+stack i c
+pick-up g
+stack g i
+unstack h e
+put-down h
+unstack e l
+put-down e
+pick-up h
+stack h e
+unstack l j
+put-down l
+unstack h e
+put-down h
+pick-up e
+stack e l
+pick-up h
+stack h e
+unstack j b
+put-down j
+pick-up b
+stack b k
+pick-up j
+stack j b
+unstack h e
+put-down h
+unstack e l
+put-down e
+pick-up l
+stack l j
+pick-up e
+stack e l
+pick-up h
+stack h e
+unstack g i
+put-down g
+unstack i c
+put-down i
+pick-up g
+stack g i
+unstack c d
+put-down c
+unstack d f
+put-down d
+pick-up c
+stack c d
+unstack g i
+put-down g
+pick-up i
+stack i c
+pick-up g
+stack g i
+unstack f a
+put-down f
+unstack a m
+put-down a
+pick-up m
+stack m h
+pick-up a
+stack a m
+pick-up f
+stack f a
+unstack g i
+put-down g
+unstack i c
+put-down i
+pick-up g
+stack g i
+unstack c d
+put-down c
+pick-up d
+stack d f
+pick-up c
+stack c d
+unstack g i
+put-down g
+pick-up i
+stack i c
+pick-up g
+stack g i
+Plan length: 162 step(s).
+Expanded 655 state(s).
+Generated 3596 state(s).
+Cache hits: 10784
+Cache misses: 31629
+Search time: 0.02 seconds
+Total time: 0.02 seconds
+__MEMKB 11036

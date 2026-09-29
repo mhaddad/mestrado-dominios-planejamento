@@ -1,0 +1,77 @@
+
+ipp: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'LOGISTICS-4-2' defined
+ ... done.
+
+
+instantiated 130 actions
+
+
+time:   0,    52 facts and       0 exclusive pairs (    9,       0 positives)
+              61 ops   and      24 exclusive pairs
+time:   1,    70 facts and      42 exclusive pairs (   18,      15 positives)
+              88 ops   and     201 exclusive pairs
+time:   2,    70 facts and      18 exclusive pairs (   18,       9 positives)
+              94 ops   and     249 exclusive pairs
+time:   3,    76 facts and      36 exclusive pairs (   24,      27 positives)
+             112 ops   and     546 exclusive pairs
+time:   4,    82 facts and      63 exclusive pairs (   30,      54 positives)
+             124 ops   and     696 exclusive pairs
+time:   5,    82 facts and      51 exclusive pairs (   30,      48 positives)
+             130 ops   and     825 exclusive pairs
+time:   6,    88 facts and      87 exclusive pairs (   36,      78 positives)
+             148 ops   and    1335 exclusive pairs
+time:   7,    94 facts and     144 exclusive pairs (   42,     135 positives)
+             160 ops   and    1665 exclusive pairs
+time:   8,    94 facts and     105 exclusive pairs (   42,     102 positives)
+             166 ops   and    1668 exclusive pairs
+time:   9,   100 facts and     153 exclusive pairs (   48,     144 positives)
+
+goals first reachable in 9 time steps
+
+
+found plan as follows:
+
+time step    0: LOAD-TRUCK OBJ11 TRU1 POS1
+                LOAD-TRUCK OBJ21 TRU2 POS2
+time step    1: DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+                DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+time step    2: UNLOAD-TRUCK OBJ11 TRU1 APT1
+                UNLOAD-TRUCK OBJ21 TRU2 APT2
+time step    3: LOAD-AIRPLANE OBJ11 APN1 APT1
+time step    4: FLY-AIRPLANE APN1 APT1 APT2
+time step    5: LOAD-AIRPLANE OBJ21 APN1 APT2
+                UNLOAD-AIRPLANE OBJ11 APN1 APT2
+time step    6: LOAD-TRUCK OBJ11 TRU2 APT2
+                FLY-AIRPLANE APN1 APT2 APT1
+time step    7: UNLOAD-AIRPLANE OBJ21 APN1 APT1
+                DRIVE-TRUCK TRU2 APT2 POS2 CIT2
+time step    8: UNLOAD-TRUCK OBJ11 TRU2 POS2
+
+
+
+number of actions tried:         15
+number of noops tried  :         38
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 130 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.07 MBytes for domain representation
+               1.33 MBytes for graph
+               0.03 MBytes for exclusions
+               0.01 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+
+__MEMKB 3456

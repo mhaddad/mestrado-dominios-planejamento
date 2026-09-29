@@ -1,0 +1,64 @@
+
+ff: parsing domain file
+domain 'LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'LOGISTICS-4-0' defined
+ ... done.
+
+
+got 48 facts
+
+Cueing down from goal distance:   19 into depth [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1][2]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK OBJ23 TRU2 POS2
+        1: LOAD-TRUCK OBJ21 TRU2 POS2
+        2: DRIVE-TRUCK TRU2 POS2 APT2 CIT2
+        3: UNLOAD-TRUCK OBJ23 TRU2 APT2
+        4: UNLOAD-TRUCK OBJ21 TRU2 APT2
+        5: LOAD-AIRPLANE OBJ23 APN1 APT2
+        6: LOAD-AIRPLANE OBJ21 APN1 APT2
+        7: FLY-AIRPLANE APN1 APT2 APT1
+        8: UNLOAD-AIRPLANE OBJ23 APN1 APT1
+        9: UNLOAD-AIRPLANE OBJ21 APN1 APT1
+       10: LOAD-TRUCK OBJ11 TRU1 POS1
+       11: LOAD-TRUCK OBJ13 TRU1 POS1
+       12: DRIVE-TRUCK TRU1 POS1 APT1 CIT1
+       13: LOAD-TRUCK OBJ23 TRU1 APT1
+       14: LOAD-TRUCK OBJ21 TRU1 APT1
+       15: UNLOAD-TRUCK OBJ11 TRU1 APT1
+       16: UNLOAD-TRUCK OBJ13 TRU1 APT1
+       17: DRIVE-TRUCK TRU1 APT1 POS1 CIT1
+       18: UNLOAD-TRUCK OBJ23 TRU1 POS1
+       19: UNLOAD-TRUCK OBJ21 TRU1 POS1
+     
+
+time spent:    0.00 seconds instantiating 164 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 48 facts and 84 actions
+               0.00 seconds creating final representation with 48 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 26 states, to a max depth of 2
+               0.00 seconds total time
+
+__MEMKB 3328
