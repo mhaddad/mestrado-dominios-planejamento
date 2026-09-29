@@ -7,7 +7,8 @@
 
 **A versão final é [`final/dissertacao-haddad-2026.docx`](final/dissertacao-haddad-2026.docx)**, revisada pelo autor no Word a partir da montagem do commit `5fc627f`. É ela que vale e é ela que se envia.
 
-- Os capítulos em Markdown (`capitulos/`) e o montador (`montagem/`) ficam como **fonte da versão gerada pela IA, anterior à revisão do autor**. Não foram atualizados com as alterações feitas no Word; rodar o montador de novo gera essa versão anterior (em `saida/`, fora do git), e não a final.
+- Os capítulos em Markdown (`capitulos/`) e o montador (`montagem/`) ficam como **fonte da versão gerada pela IA, anterior à revisão do autor**. Não foram atualizados com as alterações feitas no Word; rodar o montador de novo gera essa versão anterior (em `saida/dissertacao-haddad-2026.docx`), e não a final.
+- `saida/` é versionada desde 29/09/2026, a pedido do autor, com o DOCX revisado pelo autor (idêntico ao de `final/`) e o PDF dessa versão (`dissertacao-haddad-2026-revisada-autor.pdf`). A versão gerada pela IA foi apagada pelo autor; recupera-se rodando o montador no commit `5fc627f`.
 - Alterações do autor em relação à versão gerada: capa e folha de rosto (título sem subtítulo após dois-pontos, "Revisão e atualização - 2010 a 2026", sem nome da instituição e cidade na capa, sem a página da ficha catalográfica); declaração de IA no pretérito ("foi revisado"); listas de ilustrações, quadros, tabelas e siglas retiradas; sumário atualizado; seção 1.6 e subseção 6.1.1 (registro de custo) retiradas; caminhos de arquivo retirados das fontes de tabelas e quadros; Apêndice C reescrito; ajustes de redação nos capítulos 1 e 2.
 
 ## Decisão de formato (autor, 21/09/2026)
