@@ -13,6 +13,7 @@ Os campos (sumário, listas, número de página) se atualizam ao abrir o arquivo
 
 Uso: uv run --no-project --with python-docx python redacao/montagem/montar.py
 Saída: redacao/saida/dissertacao-haddad-2026.docx (fora do git)
+Gera a versão anterior à revisão do autor; a final é redacao/final/dissertacao-haddad-2026.docx (redacao/README.md).
 """
 import copy
 import json
