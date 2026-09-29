@@ -52,7 +52,7 @@ Manter a auditoria (Fase 2); remissão aos achados G22 a G26 no capítulo 4; con
 ### 6 LLMs no mapa das técnicas (novo, `06-llms.md`)
 1. Desenho dos experimentos (modelos, parâmetros, custo). 2. Como seletor (X3, com e sem nomes). 3. Como planejador (X1) e com nomes ofuscados (EXP-23). 4. Com verificador (X4). 5. Como tradutor (X2). 6. Posição na taxonomia; resposta a Q3; limites. Fonte: `llm/relatorio-fase4.md` e EXP-14 a EXP-18, EXP-23.
 
-### 7 Do domínio de planejamento ao desenvolvimento de software dirigido por IA (novo, `07-ponte-software.md`)
+### 7 Do domínio de planejamento ao desenvolvimento de software apoiado por IA (novo, `07-ponte-software.md`)
 A partir de `ponte-software/relatorio/dossie-capitulo-7.md` e da síntese exploratória: analogia e seus limites; o que se transfere da 4B e o que não; triagem, escalonamento e orquestração; hipóteses H1 a H3 e desenhos empíricos; tudo como hipótese.
 
 ### 8 Conclusões e próximos passos (novo, `08-conclusoes.md`)

@@ -1,7 +1,7 @@
 ---
 titulo: "Apêndices"
 status: revisado-por-ia
-data: 2026-09-28
+data: 2026-09-29
 fonte: auditoria/taxonomia/; experimentos/execucoes/; README.md
 ---
 
@@ -9,7 +9,7 @@ fonte: auditoria/taxonomia/; experimentos/execucoes/; README.md
 
 ## Apêndice A — Codificação dos planejadores {.unnumbered}
 
-A codificação completa dos planejadores na taxonomia em quatro dimensões está em arquivos versionados no repositório: `auditoria/taxonomia/planejadores_4d.csv` contém os dez planejadores de 2010; `auditoria/taxonomia/planejadores_museu_4d.csv`, os planejadores do Planner Museum; e `data/ipc-2011-2023/planejadores_4d.csv`, as codificações por trilha das IPCs de 2011 e 2018. As fontes primárias e as decisões de codificação estão em `auditoria/taxonomia/fontes-planejadores.csv` e `auditoria/taxonomia-tecnicas.md`.
+A codificação completa dos planejadores na taxonomia em quatro dimensões está em arquivos versionados no repositório do projeto: `auditoria/taxonomia/planejadores_4d.csv` contém os dez planejadores de 2010; `auditoria/taxonomia/planejadores_museu_4d.csv`, os planejadores do Planner Museum; e `data/ipc-2011-2023/planejadores_4d.csv`, as codificações por trilha das IPCs de 2011 e 2018. As fontes primárias e as decisões de codificação estão em `auditoria/taxonomia/fontes-planejadores.csv` e `auditoria/taxonomia-tecnicas.md`. O endereço e a condição de acesso são informados no Apêndice C.
 
 Cada registro distingue algoritmo e espaço de busca, heurística, representação e arquitetura. Nos casos de portfólio, os campos registram a composição descrita na fonte e a regra aplicada é documentada em `docs/fase4b-desenho.md`.
 
@@ -53,7 +53,7 @@ Fonte: Autor.
 
 ## Apêndice C — Reprodutibilidade {.unnumbered}
 
-O repositório contém os dados derivados, *scripts*, registros de execução e instruções de ambiente. O acervo de 2010 é preservado como somente leitura; os dados processados ficam em `data/`, a auditoria em `auditoria/`, os experimentos em `experimentos/` e as fontes bibliográficas em `literatura/`.
+O repositório do projeto está em `https://github.com/mhaddad/mestrado-dominios-planejamento`. Na data desta versão, ele é privado; o acesso pode ser concedido pelo autor e o documento deve ser acompanhado dessa permissão ou de um pacote suplementar congelado quando for compartilhado. A versão dos artefatos científicos anterior aos ajustes finais de redação corresponde ao commit `bc9737d`. Os dados derivados, *scripts*, registros de execução e instruções de ambiente estão organizados no próprio repositório. O acervo de 2010 é preservado como somente leitura; os dados processados ficam em `data/`, a auditoria em `auditoria/`, os experimentos em `experimentos/` e as fontes bibliográficas em `literatura/`.
 
 O ambiente Python é criado com Python 3.12 e `uv`:
 
@@ -74,4 +74,4 @@ O documento final é montado a partir dos capítulos em Markdown, do arquivo bib
 uv run --no-project --with python-docx python redacao/montagem/montar.py
 ```
 
-Saídas brutas de planejadores, *benchmarks* e credenciais não são versionados. Os registros indicam a origem, o ambiente e os limites necessários para reproduzir cada resultado derivado.
+Saídas brutas de planejadores, *benchmarks* e credenciais não são versionados. Por isso, a disponibilidade do repositório não equivale, sozinha, à reprodução integral de todas as execuções. Os registros indicam a origem, o ambiente e os limites necessários para reconstruir os dados derivados e identificar os insumos externos que precisam ser obtidos separadamente.

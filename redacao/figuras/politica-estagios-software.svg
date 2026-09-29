@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Política em três estágios para tarefas de software apoiadas por IA</title>
+  <desc id="desc">Fluxo exploratório de roteamento inicial, adaptação durante a execução e verificação antes da integração, sempre comparado a uma configuração fixa forte.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#365F91"/>
+    </marker>
+    <style>
+      .box { fill: #F4F7FB; stroke: #365F91; stroke-width: 2; rx: 16; }
+      .num { fill: #365F91; }
+      .ntext { font: 700 28px Arial, sans-serif; fill: white; text-anchor: middle; }
+      .head { font: 700 25px Arial, sans-serif; fill: #1F1F1F; text-anchor: middle; }
+      .body { font: 20px Arial, sans-serif; fill: #333333; text-anchor: middle; }
+      .line { stroke: #365F91; stroke-width: 4; marker-end: url(#arrow); }
+      .base { font: 21px Arial, sans-serif; fill: #1F1F1F; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="box" x="45" y="80" width="320" height="310"/>
+  <circle class="num" cx="205" cy="120" r="29"/><text class="ntext" x="205" y="130">1</text>
+  <text class="head" x="205" y="185"><tspan x="205">Roteamento inicial</tspan></text>
+  <text class="body" x="205" y="235"><tspan x="205">descrição da tarefa</tspan><tspan x="205" dy="30">estado do repositório</tspan><tspan x="205" dy="30">histórico comparável</tspan><tspan x="205" dy="50">escolher configuração</tspan><tspan x="205" dy="30">ou revisão humana</tspan></text>
+
+  <line class="line" x1="365" y1="235" x2="430" y2="235"/>
+  <rect class="box" x="440" y="80" width="320" height="310"/>
+  <circle class="num" cx="600" cy="120" r="29"/><text class="ntext" x="600" y="130">2</text>
+  <text class="head" x="600" y="185"><tspan x="600">Adaptação em execução</tspan></text>
+  <text class="body" x="600" y="235"><tspan x="600">testes e compilação</tspan><tspan x="600" dy="30">trajetória e custo</tspan><tspan x="600" dy="30">dispersão da mudança</tspan><tspan x="600" dy="50">continuar, escalar</tspan><tspan x="600" dy="30">ou interromper</tspan></text>
+
+  <line class="line" x1="760" y1="235" x2="825" y2="235"/>
+  <rect class="box" x="835" y="80" width="320" height="310"/>
+  <circle class="num" cx="995" cy="120" r="29"/><text class="ntext" x="995" y="130">3</text>
+  <text class="head" x="995" y="185"><tspan x="995">Verificação final</tspan></text>
+  <text class="body" x="995" y="235"><tspan x="995">testes independentes</tspan><tspan x="995" dy="30">análise estática</tspan><tspan x="995" dy="30">segurança e risco</tspan><tspan x="995" dy="50">integrar, corrigir</tspan><tspan x="995" dy="30">ou revisar</tspan></text>
+
+  <rect x="175" y="455" width="850" height="82" rx="12" fill="#E2EAF4" stroke="#365F91" stroke-width="2"/>
+  <text class="base" x="600" y="490"><tspan x="600">Em cada estágio: comparar com uma configuração fixa forte</tspan><tspan x="600" dy="30">e medir correção, qualidade, segurança, tempo, custo e retrabalho</tspan></text>
+</svg>

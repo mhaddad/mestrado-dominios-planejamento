@@ -1,6 +1,6 @@
-# Fase 5 — Ponte para desenvolvimento de software dirigido por IA
+# Fase 5 — Ponte para desenvolvimento de software apoiado por IA
 
-**Objetivo:** responder Q4 por investigação exploratória: explicitar conexões, limites, oportunidades e hipóteses entre características de tarefas, estratégias de solução e desenvolvimento de software dirigido por IA.
+**Objetivo:** responder Q4 por investigação exploratória: explicitar conexões, limites, oportunidades e hipóteses entre características de tarefas, estratégias de solução e desenvolvimento de software apoiado por IA.
 **Critério de conclusão:** síntese revisada pelo autor, com inferências marcadas como `[HIPÓTESE]` e sem alegação de validação empírica no desenvolvimento de software. Ver a [Fase 5 no plano](../plan/plano-revisao-dissertacao.md#fase-5--ponte-para-desenvolvimento-de-software-dirigido-por-ia).
 
 > Esta fase não terá piloto, coleta de dados no Ateliê nem decisão de produto. A síntese da Fase 4B é insumo obrigatório antes do fechamento da interpretação.

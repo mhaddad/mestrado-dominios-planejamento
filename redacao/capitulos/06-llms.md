@@ -1,7 +1,7 @@
 ---
 titulo: "Modelos de linguagem no mapa das técnicas"
 status: revisado-por-ia
-data: 2026-09-28
+data: 2026-09-29
 fonte: llm/relatorio-fase4.md; registros EXP-14 a EXP-18 e EXP-23
 ---
 
@@ -92,7 +92,7 @@ O X4 avaliou a p05 de quatro domínios em que técnicas antigas se destacam. Na 
 Fonte: Autor, a partir do EXP-17.
 :::
 
-O resultado demonstra o desempenho do **ciclo observado**, que combina nova tentativa, informação do verificador e orçamento adicional. O experimento não inclui uma condição equivalente de novas tentativas sem mensagem do VAL; por isso, não isola causalmente quanto do acréscimo vem da informação do verificador. Ele mostra que mensagens formais de erro foram suficientes para que cinco conversas antes inválidas chegassem a planos aceitos.
+O resultado demonstra o desempenho do **ciclo observado**, que combina nova tentativa, informação do verificador e orçamento adicional. O experimento não inclui uma condição equivalente de novas tentativas sem mensagem do VAL; por isso, não isola causalmente quanto do acréscimo vem da informação do verificador. No ciclo observado, cinco conversas antes inválidas chegaram a planos aceitos depois de receber mensagens formais de erro.
 
 Nos exemplos válidos, os planos também foram menores que os do `lama-first`: de 86 a 90 passos contra 160 em Blocks World e de 73 a 75 contra 106 no TPP. No Floortile p05, GPT-6 Sol e Gemini produziram planos de 206 e 204 passos, enquanto `lama-first` não encontrou plano em 300 segundos. <!-- fonte: EXP-17 --> Planejadores baseados em SAT, que vencem Floortile no Nível 4, não foram executados nessa instância; o caso não estabelece superioridade sobre o estado da arte do domínio.
 

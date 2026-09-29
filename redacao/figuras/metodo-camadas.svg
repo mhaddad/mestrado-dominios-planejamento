@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Camadas da revisão experimental</title>
+  <desc id="desc">Fluxo da auditoria de 2010 até a análise por instância das IPCs, com aumento progressivo do alcance da evidência.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#365F91"/>
+    </marker>
+    <style>
+      .box { fill: #F4F7FB; stroke: #365F91; stroke-width: 2; rx: 14; }
+      .head { font: 700 24px Arial, sans-serif; fill: #1F1F1F; text-anchor: middle; }
+      .body { font: 20px Arial, sans-serif; fill: #333333; text-anchor: middle; }
+      .axis { font: 20px Arial, sans-serif; fill: #365F91; text-anchor: middle; }
+      .line { stroke: #365F91; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="box" x="35" y="95" width="165" height="180"/>
+  <text class="head" x="117" y="135"><tspan x="117">Auditoria</tspan><tspan x="117" dy="30">de 2010</tspan></text>
+  <text class="body" x="117" y="205"><tspan x="117">afirmações</tspan><tspan x="117" dy="27">dados e</tspan><tspan x="117" dy="27">taxonomia</tspan></text>
+
+  <line class="line" x1="200" y1="185" x2="225" y2="185"/>
+  <rect class="box" x="230" y="95" width="165" height="180"/>
+  <text class="head" x="312" y="135"><tspan x="312">Nível 1</tspan><tspan x="312" dy="30">reprodução</tspan></text>
+  <text class="body" x="312" y="215"><tspan x="312">mesmos dados</tspan><tspan x="312" dy="27">e cálculo</tspan></text>
+
+  <line class="line" x1="395" y1="185" x2="420" y2="185"/>
+  <rect class="box" x="425" y="95" width="165" height="180"/>
+  <text class="head" x="507" y="135"><tspan x="507">Nível 2</tspan><tspan x="507" dy="30">correções</tspan></text>
+  <text class="body" x="507" y="195"><tspan x="507">decisões</tspan><tspan x="507" dy="27">alteradas</tspan><tspan x="507" dy="27">isoladamente</tspan></text>
+
+  <line class="line" x1="590" y1="185" x2="615" y2="185"/>
+  <rect class="box" x="620" y="95" width="165" height="180"/>
+  <text class="head" x="702" y="135"><tspan x="702">Nível 3</tspan><tspan x="702" dy="30">reexecução</tspan></text>
+  <text class="body" x="702" y="215"><tspan x="702">uma condição</tspan><tspan x="702" dy="27">de execução</tspan></text>
+
+  <line class="line" x1="785" y1="185" x2="810" y2="185"/>
+  <rect class="box" x="815" y="95" width="165" height="180"/>
+  <text class="head" x="897" y="135"><tspan x="897">Nível 4</tspan><tspan x="897" dy="30">ampliação</tspan></text>
+  <text class="body" x="897" y="205"><tspan x="897">41 domínios</tspan><tspan x="897" dy="27">29 planejadores</tspan></text>
+
+  <line class="line" x1="980" y1="185" x2="1005" y2="185"/>
+  <rect class="box" x="1010" y="95" width="165" height="180"/>
+  <text class="head" x="1092" y="135"><tspan x="1092">Fase 4B</tspan><tspan x="1092" dy="30">por instância</tspan></text>
+  <text class="body" x="1092" y="215"><tspan x="1092">IPCs 2011</tspan><tspan x="1092" dy="27">e 2018</tspan></text>
+
+  <line x1="90" y1="370" x2="1110" y2="370" stroke="#365F91" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="axis" x="600" y="420">fidelidade ao estudo original  →  robustez  →  alcance fora da amostra original</text>
+  <text class="body" x="600" y="468">Q1 acompanha todas as camadas; Q2 entra na ampliação; Q5 usa os resultados por instância</text>
+</svg>

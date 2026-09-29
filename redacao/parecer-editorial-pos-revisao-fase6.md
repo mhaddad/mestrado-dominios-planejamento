@@ -128,3 +128,21 @@ O DOCX precisa ser aberto no Word para atualizar os quatro campos, conferir queb
 6. Reconstruir o DOCX, repetir a checagem de citações e fazer a conferência final antes do M3.
 
 Com esses ajustes, a dissertação estará em condição de ser compartilhada com o orientador como uma revisão madura do trabalho de 2010. O ganho principal da versão atual não é apenas corrigir o passado: é transformar um resultado inicialmente afirmativo e frágil em uma investigação mais rigorosa sobre quando uma decisão adaptativa realmente acrescenta valor.
+
+## 6. Estado de implementação em 29/09/2026
+
+Os ajustes de conteúdo e comunicação deste parecer foram aplicados ao manuscrito:
+
+| Achado | Estado | Implementação |
+|---|---|---|
+| A01 | Concluído | A resposta a Q3 separa o X1 — 28 de 32 planos válidos, ou 20 de 32 com nomes ofuscados — do X4 na p05 — 8 de 16 na primeira tentativa e 13 de 16 ao final do ciclo — e preserva a limitação causal. |
+| A02 | Concluído | A resposta a Q5 distingue previsão de resolução por família, discriminação da melhor alternativa e utilidade do seletor contra o SBS. |
+| A03 | Concluído para esta versão | Os apêndices informam URL, caráter privado, condição de acesso, versão de referência (`bc9737d`) e limites do material versionado. Antes do M3, o autor ainda precisa conceder acesso ou anexar um pacote congelado. |
+| A04 | Concluído | O texto do X4 descreve a sequência observada sem atribuir causalidade suficiente às mensagens do VAL. |
+| A05 | Concluído | “Desenvolvimento de software apoiado por IA” foi adotado como termo canônico no manuscrito e nos documentos vivos do projeto. |
+| A06 | Concluído | O capítulo 2 foi reduzido de cerca de 6,2 mil para 5,1 mil palavras, e sua seção final passou a funcionar como transição para a parte empírica. |
+| A07 | Concluído | Foram acrescentados um diagrama do desenho em camadas, um gráfico das perdas do Nível 4 e um esquema da política em três estágios. |
+| A08 | Concluído | As formulações da introdução e do método foram calibradas para não presumir capacidade preditiva nem equiparar ausência de ganho a ausência absoluta de informação. |
+| A09 | Parcial, depende do autor | O DOCX foi reconstruído e aberto no Pages para inspeção inicial. Permanecem a atualização dos quatro campos e a conferência final no Word, além de título, natureza do documento, ficha catalográfica, folha de aprovação e validação autoral da declaração de IA. O Pages informou fontes não instaladas; o ambiente não dispõe de Word nem LibreOffice. |
+
+As checagens automatizadas posteriores à aplicação constam no registro da sessão e no plano. O estado “concluído” acima se refere ao ajuste editorial; não substitui a revisão autoral e institucional requerida antes do M3.

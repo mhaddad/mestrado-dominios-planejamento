@@ -34,7 +34,7 @@ A pergunta original: nenhum planejador é o melhor em todos os domínios, e cara
 | 2 | Auditoria da versão original | ⚪ |
 | 3 | Infraestrutura e replicação experimental | ⚪ |
 | 4 | Camada LLM | ⚪ |
-| 5 | Ponte para desenvolvimento de software dirigido por IA | ⚪ |
+| 5 | Ponte para desenvolvimento de software apoiado por IA | ⚪ |
 | 6 | Redação e compartilhamento | ⚪ |
 
 **Produto final:** dissertação revisada, no padrão ABNT (ver [redacao/README.md](redacao/README.md)).

@@ -1,11 +1,11 @@
 ---
-titulo: "Do domínio de planejamento ao desenvolvimento de software dirigido por IA"
+titulo: "Do domínio de planejamento ao desenvolvimento de software apoiado por IA"
 status: revisado-por-ia
-data: 2026-09-28
+data: 2026-09-29
 fonte: ponte-software/relatorio/sintese-exploratoria.md; ponte-software/relatorio/dossie-capitulo-7.md; experimentos/relatorio-fase4b.md
 ---
 
-# Do domínio de planejamento ao desenvolvimento de software dirigido por IA
+# Do domínio de planejamento ao desenvolvimento de software apoiado por IA
 
 Este capítulo responde à Q4 por meio de uma investigação exploratória. Seu objetivo não é declarar que as métricas de domínio de 2010 selecionam agentes de software, nem propor um roteador pronto para equipes. A contribuição é formular com precisão onde a pergunta original permanece útil e quais condições uma aplicação real teria de satisfazer.
 
@@ -52,6 +52,12 @@ O resultado também não deve ser reduzido a “tarefa resolvida”. O capítulo
 ## Da escolha única à política em estágios
 
 A literatura recente sugere que “escolher um agente” encobre ao menos três decisões. A primeira ocorre **antes da execução**: encaminhar uma tarefa com base na descrição, no repositório e no histórico de casos comparáveis. Um roteador de atualizações de dependência exemplifica esse estágio ao evitar chamadas desnecessárias de agentes em parte da amostra [@fan2026dependencyrouter]. A segunda ocorre **durante a execução**: manter, escalar, trocar ou interromper uma configuração quando surgem sinais de trajetória. SWE-Router e RISA tratam justamente essa decisão intermediária [@son2026swerouter; @chen2026risa]. A terceira ocorre **antes da integração**: aceitar o artefato, solicitar correção ou encaminhar a revisão humana, conforme testes, análise estática, segurança e risco da mudança.
+
+![Política em três estágios para tarefas de software apoiadas por IA](../figuras/politica-estagios-software.png){width=95%}
+
+::: fonte
+Fonte: Autor.
+:::
 
 Essa decomposição evita supor que uma descrição inicial contém toda a informação relevante. Também explica por que o histórico pode ser mais útil que uma descrição abstrata das capacidades do agente: em um experimento de roteamento, estatísticas de desempenho anterior melhoraram a resolução, enquanto descrições textuais das dimensões dos agentes praticamente não o fizeram [@zhou2026agentasarouter]. Arquiteturas como SALLMA separam a camada operacional, que coordena fluxos, da camada de conhecimento, que cataloga configurações [@becattini2025sallma]; a separação é conceitualmente compatível com a política em estágios, embora a prova de conceito não demonstre ganho causal de seleção.
 
@@ -108,6 +114,6 @@ H1 e H2 precisam de validação por repositório, família de tarefa ou período
 
 ## Conclusão
 
-O desenvolvimento de software dirigido por IA oferece evidência de heterogeneidade por tarefa e de mecanismos de roteamento. A presente revisão mostra, por sua vez, que heterogeneidade não é automaticamente capturada por métricas estruturais nem convertida em um seletor útil. A conexão mais defensável é metodológica: tratar a escolha de configuração de agente como seleção condicional, mas medir antes se há sinal preditivo incremental, contra qual linha de base ele será comparado e quais resultados não podem ser sacrificados.
+O desenvolvimento de software apoiado por IA oferece evidência de heterogeneidade por tarefa e de mecanismos de roteamento. A presente revisão mostra, por sua vez, que heterogeneidade não é automaticamente capturada por métricas estruturais nem convertida em um seletor útil. A conexão mais defensável é metodológica: tratar a escolha de configuração de agente como seleção condicional, mas medir antes se há sinal preditivo incremental, contra qual linha de base ele será comparado e quais resultados não podem ser sacrificados.
 
 Não se recomenda produto, piloto ou política específica para uma organização. A aplicabilidade desta pesquisa consiste em fornecer uma pergunta melhor e salvaguardas para respondê-la: caracterizar tarefa e configuração, medir resultados múltiplos, validar fora do contexto observado e manter uma configuração fixa forte como referência. Esse enquadramento transforma uma possível aplicação no mundo real em agenda verificável, e não em extrapolação da analogia.

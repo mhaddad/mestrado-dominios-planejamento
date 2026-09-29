@@ -1,7 +1,7 @@
 ---
 titulo: "Introdução: a pergunta de 2010 e as perguntas de hoje"
 status: revisado-por-ia
-data: 2026-09-28
+data: 2026-09-29
 fonte: plano (seções 1, 5 e 7), relatórios das Fases 3 a 5, relatório de auditoria
 ---
 
@@ -17,7 +17,7 @@ Esta revisão parte da dissertação de 2010 e a reexamina com esses instrumento
 
 ## A auditoria da versão original
 
-O primeiro passo foi auditar o que a dissertação afirmava. Das 349 afirmações substantivas extraídas do texto, 265 se mantêm, 80 precisam ser reformuladas e 4 são descartadas (capítulo 3). O que se sustenta é sobretudo o que o trabalho descreve e a sua premissa, que é o fundamento da seleção de algoritmos [@rice1976algorithm]. O que precisa mudar está nas conclusões: a taxonomia de técnicas usada para relacionar planejadores e características não resiste às fontes primárias dos próprios planejadores; e a validação do *ranking* não se distingue de uma linha de base que ignora as características do domínio. A auditoria também mostrou que a pergunta de 2010 tinha uma origem não registrada no texto: o artigo que apresentou o itSIMPLE já a declarava como objetivo [@vaquero2005itsimple].
+O primeiro passo foi auditar o que a dissertação afirmava. Das 349 afirmações substantivas extraídas do texto, 265 se mantêm, 80 precisam ser reformuladas e 4 são descartadas (capítulo 3). O que se sustenta é sobretudo o que o trabalho descreve e a formulação do problema, que relaciona características, alternativas e desempenho no campo de seleção de algoritmos [@rice1976algorithm]. Isso não presume que as características escolhidas em 2010 consigam prever o vencedor. O que precisa mudar está nas conclusões: a taxonomia de técnicas usada para relacionar planejadores e características não resiste às fontes primárias dos próprios planejadores; e a validação do *ranking* não se distingue de uma linha de base que ignora as características do domínio. A auditoria também mostrou que a pergunta de 2010 tinha uma origem não registrada no texto: o artigo que apresentou o itSIMPLE já a declarava como objetivo [@vaquero2005itsimple].
 
 ## Perguntas de pesquisa
 

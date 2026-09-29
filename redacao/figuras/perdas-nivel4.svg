@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Perda dos seletores por domínio no Nível 4</title>
+  <desc id="desc">Gráfico de barras horizontais da perda em instâncias em relação ao VBS. O SBS perde 143 instâncias e todos os seletores avaliados perdem pelo menos 148.</desc>
+  <style>
+    .label { font: 21px Arial, sans-serif; fill: #222222; text-anchor: end; }
+    .value { font: 700 21px Arial, sans-serif; fill: #222222; }
+    .tick { font: 18px Arial, sans-serif; fill: #555555; text-anchor: middle; }
+    .grid { stroke: #D9D9D9; stroke-width: 1; }
+    .bar { fill: #8FAADC; }
+    .sbs { fill: #365F91; }
+    .best { fill: #5B9BD5; }
+  </style>
+  <line class="grid" x1="370" y1="60" x2="370" y2="685"/>
+  <line class="grid" x1="530" y1="60" x2="530" y2="685"/>
+  <line class="grid" x1="690" y1="60" x2="690" y2="685"/>
+  <line class="grid" x1="850" y1="60" x2="850" y2="685"/>
+  <line class="grid" x1="1010" y1="60" x2="1010" y2="685"/>
+  <line class="grid" x1="1170" y1="60" x2="1170" y2="685"/>
+  <text class="tick" x="370" y="720">0</text><text class="tick" x="530" y="720">50</text><text class="tick" x="690" y="720">100</text><text class="tick" x="850" y="720">150</text><text class="tick" x="1010" y="720">200</text><text class="tick" x="1170" y="720">250</text>
+
+  <text class="label" x="350" y="103">SBS - Levitron</text><rect class="sbs" x="370" y="75" width="458" height="40"/><text class="value" x="842" y="103">143</text>
+  <text class="label" x="350" y="183">Método 2010 - PDDL</text><rect class="bar" x="370" y="155" width="512" height="40"/><text class="value" x="896" y="183">160</text>
+  <text class="label" x="350" y="263">kNN - PDDL</text><rect class="bar" x="370" y="235" width="730" height="40"/><text class="value" x="1114" y="263">228</text>
+  <text class="label" x="350" y="343">kNN - SAS+</text><rect class="bar" x="370" y="315" width="739" height="40"/><text class="value" x="1123" y="343">231</text>
+  <text class="label" x="350" y="423">kNN - PDDL + SAS+</text><rect class="bar" x="370" y="395" width="704" height="40"/><text class="value" x="1088" y="423">220</text>
+  <text class="label" x="350" y="503">Random forest - PDDL</text><rect class="bar" x="370" y="475" width="483" height="40"/><text class="value" x="867" y="503">151</text>
+  <text class="label" x="350" y="583">Random forest - SAS+</text><rect class="bar" x="370" y="555" width="605" height="40"/><text class="value" x="989" y="583">189</text>
+  <text class="label" x="350" y="663">Random forest - combinado</text><rect class="best" x="370" y="635" width="474" height="40"/><text class="value" x="858" y="663">148</text>
+  <text class="tick" x="770" y="750">Perda em instâncias em relação ao VBS; menor é melhor</text>
+</svg>

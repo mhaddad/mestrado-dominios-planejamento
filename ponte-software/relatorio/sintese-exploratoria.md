@@ -6,11 +6,11 @@ data: 2026-09-27
 status: concluida-aguarda-revisao-do-autor
 ---
 
-# Fase 5 — da seleção de planejadores ao desenvolvimento de software dirigido por IA
+# Fase 5 — da seleção de planejadores ao desenvolvimento de software apoiado por IA
 
 ## Síntese executiva
 
-[FATO] Há uma conexão substantiva, embora não uma transferência demonstrada, entre a pergunta da dissertação e o desenvolvimento de software dirigido por IA. Estudos de reparo de programas e de agentes implantados mostram que o desempenho do mesmo agente varia com propriedades observáveis da tarefa, como a origem do *bug*, a riqueza da especificação e o contexto do repositório [@rondon2025evaluating; @takerngsaksiri2025humanintheloop]. Sistemas de roteamento de LLMs também mostram que escolher condicionalmente entre modelos pode reduzir custo sem sacrificar a qualidade na distribuição em que foram treinados [@ong2024routellm; @chen2023frugalgpt].
+[FATO] Há uma conexão substantiva, embora não uma transferência demonstrada, entre a pergunta da dissertação e o desenvolvimento de software apoiado por IA. Estudos de reparo de programas e de agentes implantados mostram que o desempenho do mesmo agente varia com propriedades observáveis da tarefa, como a origem do *bug*, a riqueza da especificação e o contexto do repositório [@rondon2025evaluating; @takerngsaksiri2025humanintheloop]. Sistemas de roteamento de LLMs também mostram que escolher condicionalmente entre modelos pode reduzir custo sem sacrificar a qualidade na distribuição em que foram treinados [@ong2024routellm; @chen2023frugalgpt].
 
 [FATO] A revisão e os experimentos deste projeto impõem uma ressalva tão importante quanto a conexão. Nas Fases 3 e 4, métricas UML e *features* SAS+ não acrescentaram poder preditivo suficiente para selecionar planejadores por domínio, e o LLM não superou a linha de base como seletor. Na rodada final da Fase 4B, as 16 *features* SAS+ quase não anteciparam, fora do domínio, qual família resolveria uma instância nas IPCs de 2011 e 2018: a AUC mediana da logística foi 0,59, praticamente igual aos 0,58 do modelo só com tamanho. Na seleção por instância, nenhum seletor superou o melhor planejador único com todos os planejadores disponíveis; o único ganho local não sobreviveu à correção conjunta. Propriedades com fundamento teórico, de topologia de busca [@hoffmann2011analyzing], acrescentaram às *features* SAS+ um sinal pequeno e desigual (AUC mediana de 0,03 a 0,06 maior), vindo sobretudo de medidas que sondam a tarefa com a heurística, e não mudaram o resultado da seleção. Esses resultados não falam diretamente sobre software, mas tornam implausível tratar métricas estruturais estáticas como solução suficiente.
 
@@ -18,7 +18,7 @@ status: concluida-aguarda-revisao-do-autor
 
 ## 1. Pergunta e escopo
 
-Q4 pergunta quais conexões, oportunidades e hipóteses ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software dirigido por IA. A resposta desta síntese não é “sim, o ajuste funciona”: não houve experimento próprio em tarefas de software, nem piloto no Ateliê.
+Q4 pergunta quais conexões, oportunidades e hipóteses ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software apoiado por IA. A resposta desta síntese não é “sim, o ajuste funciona”: não houve experimento próprio em tarefas de software, nem piloto no Ateliê.
 
 O que foi feito aqui foi uma consolidação das fontes verificadas dos eixos E7 e E8, dos relatórios das Fases 3 e 4 e do relatório da Fase 4B (`experimentos/relatorio-fase4b.md`, validado pelo autor em 28/09/2026; EXP-21, EXP-24 e EXP-25). A integração usa as 16 *features* SAS+, as propriedades de topologia de busca e a cobertura nas IPCs de 2011 e 2018.
 
@@ -118,7 +118,7 @@ Um estudo posterior teria de construir uma matriz de tarefas reais ou *benchmark
 
 ## 8. Conclusão
 
-[FATO] O desenvolvimento de software dirigido por IA já fornece evidência de heterogeneidade por tarefa e de mecanismos de roteamento entre modelos. [FATO] O trabalho desta dissertação mostra que essa heterogeneidade não é automaticamente capturada por métricas estruturais nem convertida em um seletor útil. 
+[FATO] O desenvolvimento de software apoiado por IA já fornece evidência de heterogeneidade por tarefa e de mecanismos de roteamento entre modelos. [FATO] O trabalho desta dissertação mostra que essa heterogeneidade não é automaticamente capturada por métricas estruturais nem convertida em um seletor útil.
 
 [HIPÓTESE] A conexão mais defensável é, portanto, metodológica: tratar a escolha de configuração de agente como problema de seleção condicional, mas medir primeiro se há sinal preditivo real, de quais tipos e contra qual linha de base. A contribuição potencial da dissertação não é prometer um roteador para equipes de software; é oferecer uma genealogia crítica e um conjunto de salvaguardas para não repetir, nesse novo domínio, a inferência que os próprios experimentos revisados não sustentaram.
 

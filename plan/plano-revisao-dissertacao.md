@@ -9,8 +9,8 @@
 | Autor | Matheus Haddad |
 | Orientador original | Prof. Dr. Flavio Tonidandel |
 | Início da revisão | 21/09/2026 |
-| Última atualização | 28/09/2026 |
-| Versão deste documento | 0.83 |
+| Última atualização | 29/09/2026 |
+| Versão deste documento | 0.84 |
 | Status geral | 🟢 Fase 0 concluída em 21/09/2026 · 🟢 Fase 1 concluída em 23/09/2026 (equipe multiagente) · 🟢 Fase 2 concluída em 23/09/2026 (equipe multiagente) · 🟢 Marco M1 em 24/09/2026 · 🟢 Fase 3 concluída em 27/09/2026 (Q1 e Q2 validadas pelo autor) · 🟢 Fase 4 concluída em 27/09/2026 · 🟢 Fase 4B concluída em 28/09/2026 (Q5 validada pelo autor) · 🟢 Fase 5 exploratória concluída em 28/09/2026 (síntese revisada pelo autor) · 🟡 Fase 6 em curso desde 28/09/2026 (escrita até 02/10/2026) |
 
 ---
@@ -22,7 +22,7 @@ Revisar a dissertação de 2010 para **evoluir o trabalho**: atualizar o estado 
 Desdobramentos possíveis, não obrigatórios:
 
 - **Compartilhar com o orientador original** (Flavio Tonidandel) e, se houver interesse mútuo, continuar a conversa ou produzir algo em conjunto.
-- **Aplicar no desenvolvimento de software dirigido por IA**: investigar oportunidades e formular hipóteses sobre como o ajuste entre características do problema e técnica de solução pode ser útil nesse contexto.
+- **Aplicar no desenvolvimento de software apoiado por IA**: investigar oportunidades e formular hipóteses sobre como o ajuste entre características do problema e técnica de solução pode ser útil nesse contexto.
 - **Produto**: possibilidade futura, fora do escopo desta revisão; só pode ser considerada após validação empírica independente.
 
 **Princípio de aceleração:** usar LLMs e outras ferramentas de IA em todas as fases para comprimir o trabalho operacional (busca, leitura, código, experimentos, rascunhos). As decisões, a verificação e a autoria continuam humanas.
@@ -54,8 +54,8 @@ Desdobramentos possíveis, não obrigatórios:
 | 3 | Infraestrutura e replicação experimental | Replicar e estender o experimento com método atual | 4–6 semanas (executada em 4 dias) | 🟢 | 24/09/2026 | 27/09/2026 | Dataset, código, resultados; respostas a Q1 e Q2 em `experimentos/relatorio-fase3.md` |
 | 4 | Camada LLM | Posicionar LLMs no mapa das técnicas | 2–3 semanas (executada em 2 dias) | 🟢 | 26/09/2026 | 27/09/2026 | Resultados comparativos |
 | 4B | Panorama das IPCs posteriores a 2010 | Avaliação geral de características de domínio × técnicas com os dados publicados das IPCs 2011–2023, como base para desenhar a Ponte | 3–4 semanas `[HIPÓTESE]` | 🟢 | 27/09/2026 | 28/09/2026 | Dataset, mapa característica × técnica, resposta a Q5 |
-| 5 | Ponte para desenvolvimento de software dirigido por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` (executada em 2 dias) | 🟢 | 27/09/2026 | 28/09/2026 | Síntese exploratória, agenda de pesquisa e hipóteses |
-| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Versão editorial avaliada e aprovada com ajustes finais; precisão de Q3/Q5, acesso ao suplemento, revisão do autor, acabamento visual e material para o orientador pendentes |
+| 5 | Ponte para desenvolvimento de software apoiado por IA | Investigar conexões, oportunidades e hipóteses entre planejamento e desenvolvimento de software com IA | 1–2 semanas `[HIPÓTESE]` (executada em 2 dias) | 🟢 | 27/09/2026 | 28/09/2026 | Síntese exploratória, agenda de pesquisa e hipóteses |
+| 6 | Redação e compartilhamento | Nova versão do trabalho + conversa com o orientador | 3–4 semanas | 🟡 | 24/09/2026 | | Parecer pós-revisão aplicado; revisão do autor, acesso ao suplemento no M3, acabamento formal no Word e material para o orientador pendentes |
 
 **Duração total estimada:** 4 a 5 meses em dedicação parcial. Sem o apoio de IA, a estimativa seria de 9 a 12 meses.
 
@@ -98,7 +98,7 @@ Desdobramentos possíveis, não obrigatórios:
 | Q1 | As conclusões de 2010 se sustentam com mais planejadores, mais domínios e método estatístico adequado? | Replicação | 3 |
 | Q2 | Métricas estruturais de modelagem, no estilo orientado a objetos, acrescentam poder preditivo às *features* modernas extraídas de PDDL? | Continuidade | 3 |
 | Q3 | Onde os LLMs entram no mapa: como técnica de planejamento, como tradutores de domínio ou como seletores? | Atualização | 4 |
-| Q4 | Que conexões, oportunidades e hipóteses de pesquisa ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software dirigido por IA? | Exploratória | 5 |
+| Q4 | Que conexões, oportunidades e hipóteses de pesquisa ligam o ajuste entre características da tarefa e estratégia de solução ao desenvolvimento de software apoiado por IA? | Exploratória | 5 |
 | Q5 | Nos resultados publicados das IPCs posteriores a 2010, quais características estruturais do domínio, extraídas automaticamente do PDDL (sem UML.P), explicam o desempenho relativo das famílias de técnicas de planejamento? | Ampliação | 4B |
 
 **Observação sobre Q4.** As métricas usadas em 2010 para diagramas de classes e de estados (Genero & Piattini; In, Kim & Barry) vieram da **engenharia de software**. No desenvolvimento de software essas métricas estão em seu terreno de origem, o que torna a ponte da Fase 5 mais natural do que parece à primeira vista. `[HIPÓTESE]`
@@ -341,9 +341,9 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 ---
 
-### Fase 5 — Ponte para desenvolvimento de software dirigido por IA
+### Fase 5 — Ponte para desenvolvimento de software apoiado por IA
 
-**Objetivo:** responder Q4 por investigação exploratória: explicitar conexões entre o que foi estudado sobre características de domínios e técnicas de planejamento e o desenvolvimento de software dirigido por IA; identificar oportunidades e formular hipóteses testáveis. Não há piloto, coleta de dados no Ateliê nem decisão de produto nesta fase.
+**Objetivo:** responder Q4 por investigação exploratória: explicitar conexões entre o que foi estudado sobre características de domínios e técnicas de planejamento e o desenvolvimento de software apoiado por IA; identificar oportunidades e formular hipóteses testáveis. Não há piloto, coleta de dados no Ateliê nem decisão de produto nesta fase.
 
 **Início:** em paralelo à conclusão da Fase 4B (decisão do autor, 27/09/2026). A síntese da 4B entra como evidência complementar antes do fechamento da Fase 5.
 
@@ -351,7 +351,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 
 **Analogia de trabalho** `[HIPÓTESE]`
 
-| Planejamento automático (2010) | Desenvolvimento de software dirigido por IA |
+| Planejamento automático (2010) | Desenvolvimento de software apoiado por IA |
 |---|---|
 | Domínio de planejamento | Tarefa de desenvolvimento (história, bug, refatoração) no contexto de um repositório |
 | Características do domínio | Tamanho da mudança, clareza da especificação, cobertura de testes, acoplamento, idade do código, novidade do domínio de negócio, métricas estruturais do código |
@@ -408,7 +408,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 4. Método
 5. Resultados experimentais
 6. LLMs no mapa das técnicas
-7. Do domínio de planejamento ao desenvolvimento de software dirigido por IA
+7. Do domínio de planejamento ao desenvolvimento de software apoiado por IA
 8. Conclusões e próximos passos
 
 **Atividades**
@@ -418,7 +418,8 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - [x] Redigir capítulos a partir dos entregáveis das fases anteriores — primeira versão integral montada em 28/09/2026: pré-textuais, capítulos 1 a 8, referências e apêndices. Capítulos 1 a 3 atualizados pelos resultados; G22 a G26 estão no capítulo de método, com remissão no capítulo 3; a ligação dos fundamentos aos resultados está no capítulo 2
 - [x] Revisão de consistência (IA aponta inconsistências entre capítulos, dados e referências) — parecer de 28/09/2026 em `redacao/parecer-editorial-fase6.md`, sobre `c5eac08`, com 13 grupos de achados e exemplos de reformulação; capítulos não alterados
 - [x] Aplicar e reconferir as recomendações do parecer editorial — 28/09/2026: capítulos 1 a 8, pré-textuais e apêndices revistos; resultados dos capítulos 5–6 desenvolvidos; Q2, significância, denominadores, custos e validação semântica recalibrados; fontes da Fase 5 integradas; legendas, remissões e listas uniformizadas; cadeia documental corrigida no relatório da Fase 3 e na síntese E8
-- [ ] Verificação final de todas as referências e números — segunda rodada automatizada concluída em 28/09/2026: 114 chaves distintas dos 11 arquivos montados verificadas, nenhuma ausente ou pendente; `git diff --check` e inspeção estrutural do DOCX passaram. Reexecutar depois da revisão do autor
+- [x] Aplicar os ajustes do parecer pós-revisão — 29/09/2026: Q3 separa X1/X4; Q5 separa previsão de resolução, discriminação e seleção; X4 não recebe interpretação causal; acesso e limites do suplemento estão explícitos; terminologia uniformizada; capítulo 2 condensado; três figuras acrescentadas; formulações absolutas calibradas
+- [ ] Verificação final de todas as referências e números — terceira rodada automatizada concluída em 29/09/2026: 114 chaves distintas dos 11 arquivos montados verificadas, nenhuma ausente ou pendente; `git diff --check`, integridade do DOCX e extração pelo Pandoc passaram. Reexecutar depois da revisão do autor
 - [ ] Revisão de estilo na voz do autor
 - [ ] Elementos pré e pós-textuais (capa, folha de rosto, folha de aprovação, resumo e *abstract*, listas, sumário, referências) e conferência de formatação, citações e referências pela ABNT — resumo, *abstract*, declaração de IA e referências estão preenchidos; campos do Word, dados institucionais e revisão visual ainda dependem do autor
 - [ ] Declaração do uso de IA no texto — modelo do autor preenchido com o uso real em `redacao/capitulos/00-pretextuais.md` (28/09/2026); só vale depois da revisão do autor
@@ -436,6 +437,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 - 28/09/2026 — Primeira versão integral da Fase 6 montada em `redacao/saida/dissertacao-haddad-2026.docx`. Verificações estruturais concluídas: chaves de citação, rastreabilidade dos números, `git diff --check`, integridade do `.docx` e extração de texto. A inspeção visual automatizada não foi executada porque o renderizador prescrito não encontra LibreOffice empacotado; a abertura e revisão no Word pelo autor permanecem obrigatórias.
 - 28/09/2026 — Avaliação editorial solicitada pelo autor: `redacao/parecer-editorial-fase6.md`. A primeira versão precisa de revisão estrutural e correções de conteúdo, além da inspeção visual. As 110 chaves distintas passam na verificação de disponibilidade bibliográfica, mas isso não valida todas as paráfrases e inferências. O parecer confronta capítulos e registros, identifica divergências e propõe recuperar resultados e fontes já disponíveis; não altera os capítulos nem inicia novos experimentos.
 - 28/09/2026 — Recomendações do parecer aplicadas. Os capítulos 5 e 6 foram ampliados com protocolos, denominadores, perdas, p-valores e limites; os capítulos 2 e 7 integram Fan, Zhou, Madeyski, Chen, Son e SALLMA pelos papéis adequados; o capítulo 7 agora formula uma política em três estágios e seis hipóteses operacionais. O montador separa quadros de tabelas nas listas, os apêndices deixam de receber numeração de capítulo e a lista de siglas foi completada. O DOCX foi reconstruído; permanecem a revisão autoral e a inspeção visual no Word.
+- 29/09/2026 — Os nove achados do parecer pós-revisão foram tratados: A01–A08 concluídos; A09 permanece parcialmente humano e institucional. O DOCX foi reconstruído com três figuras e aberto no Pages para inspeção inicial; a capa está legível, mas o aplicativo informou fontes não instaladas. Word e LibreOffice não estão disponíveis neste ambiente. Permanecem a atualização dos quatro campos e a conferência integral no Word pelo autor.
 
 
 ---
@@ -488,7 +490,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 |---|---|---|---|
 | 21/09/2026 | Propósito da revisão: evoluir o trabalho; compartilhamento com o orientador e aplicação no Ateliê como desdobramentos possíveis | Definição do autor | 0 |
 | 21/09/2026 | Usar IA para acelerar todas as fases, com verificação humana obrigatória | Definição do autor | 0 |
-| 21/09/2026 | Q4 direcionada ao desenvolvimento de software dirigido por IA | Interesse de aplicação no Ateliê | 0 |
+| 21/09/2026 | Q4 direcionada ao desenvolvimento de software apoiado por IA | Interesse de aplicação no Ateliê | 0 |
 | 21/09/2026 | Repositório privado `mhaddad/mestrado-dominios-planejamento`, com estrutura por fase; acervo de 2010 em `acervo-2010/`, somente leitura | Separar material original do trabalho derivado; preservar rastreabilidade | 0 |
 | 21/09/2026 | Versionar o acervo de 2010 inteiro (cerca de 73 MB compactado), exceto `.svn`, `.o`, `.pyc` e `.DS_Store` | Cabe no GitHub sem LFS; os arquivos `*~` guardam scripts de execução úteis para documentar F6 | 0 |
 | 21/09/2026 | Benchmarks das IPCs e saídas brutas de execução não serão versionados (baixados/gerados por script) | Grandes e reproduzíveis | 0 |
@@ -690,6 +692,7 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 28/09/2026 | 6 | Codex (GPT-6) + orientações `chief-editor` e `source-auditor` | Avaliação da dissertação contra o planejamento e a execução; parecer editorial com correções prioritárias, estrutura por capítulo, apresentação dos experimentos e exemplos | Leitura dos capítulos e insumos; confronto pontual com registros e CSV de Holm; verificação de 110 chaves distintas; inspeção textual do XML do DOCX. Sem reescrita de capítulos, nova busca externa ou reexecução experimental. Divergências de fonte e limites da verificação explicitados no parecer |
 | 28/09/2026 | 6 | Codex (GPT-6) + orientações `chief-editor`, `source-auditor` e `documents` | Aplicação do parecer à dissertação: reestruturação dos resultados e dos experimentos com LLMs, integração da Ponte, revisão transversal de alcance, legendas, siglas e conclusões; correção da cadeia documental e remontagem do DOCX | 114 chaves distintas verificadas no `referencias.bib`; números confrontados com registros EXP e Holm; `git diff --check`; inspeção estrutural do DOCX por XML e extração Pandoc; 7 legendas de quadro e 17 de tabela separadas. Inspeção visual não executada por ausência do LibreOffice empacotado; revisão no Word permanece do autor |
 | 28/09/2026 | 6 | Codex (GPT-6) + skill `auditar-livro`, adaptada à estrutura do projeto | Avaliação geral da dissertação depois da aplicação do parecer: coerência entre perguntas, método e respostas; evidência e referências; fluidez, aplicabilidade e prontidão editorial | Leitura transversal dos capítulos e insumos canônicos; comparação com o parecer anterior; 114 chaves aprovadas; DOCX reconstruído e inspecionado por XML (11 arquivos, 25 tabelas, 7 quadros, 17 tabelas legendadas, 114 referências). Sem reescrita dos capítulos, nova busca ou reexecução experimental. Parecer em `redacao/parecer-editorial-pos-revisao-fase6.md` |
+| 29/09/2026 | 6 | Codex (GPT-6) + skills `consolidar-capitulo` e `documents` | Aplicação dos nove achados do parecer pós-revisão ao manuscrito e reconstrução do DOCX | A01–A08 conferidos no texto; capítulo 2 reduzido a 5.099 palavras; três figuras com fontes SVG e PNG; 114 chaves aprovadas; `git diff --check`; DOCX íntegro, com três mídias e quatro campos esperados, extraído pelo Pandoc e aberto no Pages. A09 continua dependente da revisão do autor e do Word; Pages informou fontes não instaladas. |
 
 ---
 
@@ -828,3 +831,4 @@ Movida para `auditoria/afirmacoes.csv` (349 afirmações, IDs AF-NNN). A tabela 
 | 0.81 | 28/09/2026 | Parecer editorial da primeira versão integral: 13 grupos de achados, propostas para clareza, fluidez e apresentação dos resultados; revisão de consistência registrada, implementação pendente; corrigida a avaliação de que só faltava revisão visual |
 | 0.82 | 28/09/2026 | Parecer editorial aplicado: estrutura e texto dos capítulos revistos, capítulos 5–7 aprofundados, conclusões recalibradas, fontes finais integradas, relatório da Fase 3 e síntese E8 corrigidos, remissões/quadros/siglas uniformizados e DOCX remontado; revisão do autor e conferência visual permanecem pendentes |
 | 0.83 | 28/09/2026 | Avaliação pós-revisão: dissertação cientificamente coerente e aprovada com ajustes finais; identificadas precisões residuais em Q3/Q5, frase causal do X4 e acesso ao suplemento; referências e estrutura do DOCX reconferidas |
+| 0.84 | 29/09/2026 | Parecer pós-revisão aplicado: A01–A08 concluídos, três figuras acrescentadas, capítulo 2 condensado, terminologia e alcance calibrados, acesso ao suplemento qualificado e DOCX reconstruído; A09 permanece para revisão autoral e formal no Word |

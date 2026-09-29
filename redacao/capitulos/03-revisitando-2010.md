@@ -1,7 +1,7 @@
 ---
 titulo: "Revisitando 2010: auditoria da dissertação original"
 status: revisado-por-ia
-data: 2026-09-23
+data: 2026-09-29
 fonte: entregáveis da Fase 2 (auditoria/)
 ---
 
@@ -49,7 +49,7 @@ A distribuição tem um padrão claro. O que 2010 descreve — o método, os dom
 
 ## O que se sustenta
 
-O princípio que motivou o trabalho é, hoje, o fundamento de um campo inteiro. A ideia de que características extraídas de um problema indicam o algoritmo de melhor desempenho é o problema de seleção de algoritmos formalizado por Rice [@rice1976algorithm] e desenvolvido, em planejamento, por *portfólios* e sistemas de seleção [@kerschke2019automated; @helmert2011fast; @cenamor2016ibacop]. A observação de partida — nenhum planejador domina todos os domínios — foi reafirmada pela literatura posterior com dados muito mais amplos [@nunez2015automatic; @lindauer2019algorithm].
+O princípio que motivou o trabalho é, hoje, o fundamento de um campo inteiro. Investigar se características extraídas de um problema permitem antecipar o algoritmo de melhor desempenho corresponde ao problema de seleção de algoritmos formalizado por Rice [@rice1976algorithm] e desenvolvido, em planejamento, por *portfólios* e sistemas de seleção [@kerschke2019automated; @helmert2011fast; @cenamor2016ibacop]. A formulação não garante que as características adotadas sejam preditivas. A observação de partida — nenhum planejador domina todos os domínios — foi reafirmada pela literatura posterior com dados muito mais amplos [@nunez2015automatic; @lindauer2019algorithm].
 
 A pergunta também tinha uma origem que o texto de 2010 não registrou. O artigo que apresentou o itSIMPLE, em 2005, já declarava como alvo classificar características de domínio para decidir qual técnica ou heurística se ajusta a cada domínio [@vaquero2005itsimple]. A dissertação foi, nesse sentido, a primeira execução de um objetivo do projeto itSIMPLE, por um caminho diferente do previsto em 2005 — contagens em diagramas UML, e não análise por redes de Petri.
 

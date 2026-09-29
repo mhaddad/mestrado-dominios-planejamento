@@ -96,7 +96,7 @@ O plano prevê oito capítulos. O mapa abaixo mostra de onde cada um poderia vir
 | 4. Método | Cap. 5 (Método) | Reescrever: extração automática de métricas, replicação com mais planejadores e domínios |
 | 5. Resultados experimentais | Cap. 5 (Relação, testes) | **Novo**: resultados da Fase 3 (`experimentos/relatorio-fase3.md`) e da Fase 4B (`experimentos/relatorio-fase4b.md`: Q5, mapa característica × técnica, seleção por instância; decisão do autor, 28/09/2026). A discussão das métricas de modelagem (F3) inclui o resultado do X2: a descrição em linguagem natural não determina o modelo PDDL, como a do domínio não determinava o modelo UML (decisão do autor, 27/09/2026) |
 | 6. LLMs no mapa das técnicas | — | **Novo**: Fase 4 (`llm/relatorio-fase4.md`). Três papéis em seções separadas (planejador, tradutor, seletor), com a conclusão de que o lugar dos LLMs no mapa é o de técnica de planejamento com verificador formal (decisão do autor, 27/09/2026) |
-| 7. Do domínio de planejamento ao desenvolvimento de software dirigido por IA | — | **Novo**: Fase 5 |
+| 7. Do domínio de planejamento ao desenvolvimento de software apoiado por IA | — | **Novo**: Fase 5 |
 | 8. Conclusões e próximos passos | Cap. 6 | Reescrever |
 
 Na proposta, os capítulos de "Planejadores" e "Domínios" de 2010 (3 e 4) alimentam o Método (4) e os Resultados (5). Se a ampliação justificar (por exemplo, um capítulo próprio sobre a taxonomia atual de técnicas, ou sobre *features*), a estrutura muda.

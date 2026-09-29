@@ -1,7 +1,7 @@
 ---
 titulo: "Resultados experimentais"
 status: revisado-por-ia
-data: 2026-09-28
+data: 2026-09-29
 fonte: experimentos/relatorio-fase3.md; experimentos/relatorio-fase4b.md; registros EXP-03 a EXP-25
 ---
 
@@ -91,6 +91,12 @@ A tabela seguinte preserva a unidade de cada comparação. A perda total é medi
 
 ::: fonte
 Fonte: Autor, a partir do EXP-12 e de `experimentos/analise/correcao-multipla/holm.csv`.
+:::
+
+![Perda dos seletores por domínio no Nível 4](../figuras/perdas-nivel4.png){width=95%}
+
+::: fonte
+Fonte: Autor, a partir do EXP-12.
 :::
 
 Nenhum seletor apresenta perda menor que o SBS, e nenhuma diferença permanece significativa nessa família de sete testes. A combinação PDDL + SAS+ reduz numericamente a perda do *random forest* de 151 ou 189 para 148, mas continua acima das 143 instâncias do SBS. Os testes realizados comparam cada seletor com o SBS; eles não demonstram equivalência entre os conjuntos de características nem ausência de informação complementar entre eles.

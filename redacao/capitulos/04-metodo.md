@@ -1,7 +1,7 @@
 ---
 titulo: "Método"
 status: revisado-por-ia
-data: 2026-09-28
+data: 2026-09-29
 fonte: registros de experimento (experimentos/execucoes/), relatórios das Fases 3 e 4B, auditoria/taxonomia-tecnicas.md, docs/fase4b-desenho.md
 ---
 
@@ -26,6 +26,14 @@ O primeiro quadro resume o desenho. As perguntas vêm do capítulo 1; os níveis
 
 : Camadas do método, dados e perguntas
 :::
+
+::: fonte
+Fonte: Autor.
+:::
+
+O quadro identifica dados e perguntas; a figura seguinte destaca a progressão epistemológica do desenho, da fidelidade ao cálculo publicado à avaliação fora da amostra original.
+
+![Camadas da revisão experimental](../figuras/metodo-camadas.png){width=95%}
 
 ::: fonte
 Fonte: Autor.
@@ -118,7 +126,7 @@ c) rótulo corrigido da métrica de atores por caso de uso, contagens corrigidas
 d) discretização recalculada com 18 domínios adicionais das IPCs de 1998 a 2008, para medir quanto a classe de um domínio depende da amostra; <!-- fonte: EXP-10 -->
 e) medida de validação trocada, como descrito a seguir. <!-- fonte: EXP-09 -->
 
-A **linha de base sem características** ordena os planejadores pela nota média nos 10 domínios de treino, a mesma para qualquer domínio novo. Se o método de 2010 não se sai melhor que ela, as características do domínio não estão acrescentando nada à escolha.
+A **linha de base sem características** ordena os planejadores pela nota média nos 10 domínios de treino, a mesma para qualquer domínio novo. Se o método de 2010 não se sai melhor que ela, as características do domínio não demonstram ganho para essa decisão e para a função objetivo avaliada.
 
 ### Medidas de validação
 
@@ -249,7 +257,7 @@ c) **k vizinhos mais próximos** (3 vizinhos por domínio, 5 por instância) e *
 
 A validação deixa um domínio de fora por vez: o seletor é treinado com os demais e testado no domínio que não viu, como na situação de 2010, em que o método recomendava planejadores para domínios novos. A comparação com o SBS usa o teste de Wilcoxon pareado sobre a perda por domínio. Como vários seletores são comparados com o mesmo SBS, os valores de p são corrigidos pelo método de Holm dentro de cada família de comparações. <!-- fonte: experimentos/analise/correcao_multipla.py -->
 
-A distinção entre VBS e SBS, e a distância entre os dois como medida do ganho que a seleção pode trazer, segue a literatura de seleção de algoritmos [@kerschke2019automated]. Um seletor que não supera o SBS não acrescenta nada à decisão fixa de usar sempre o mesmo planejador.
+A distinção entre VBS e SBS, e a distância entre os dois como medida do ganho que a seleção pode trazer, segue a literatura de seleção de algoritmos [@kerschke2019automated]. Um seletor que não supera o SBS não demonstra ganho para a decisão fixa e a função objetivo avaliadas.
 
 ## Limitações
 
