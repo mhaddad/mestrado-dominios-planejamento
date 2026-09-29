@@ -10,7 +10,7 @@
 
 ## Configuração
 
-- **Código:** `llm/x1-planejador/x1_planejador.py` (commit `fbb0fc4`, feito antes das chamadas).
+- **Código:** `llm/x1-planejador/x1_planejador.py` (commit `51d9732`, feito antes das chamadas).
 - ***Prompt*:** `llm/prompts/x1-planejador-v1.md`, em inglês. Domínio e problema em PDDL; o plano pedido entre BEGIN PLAN e END PLAN, em sintaxe PDDL.
 - **Instâncias:** a p01 do Autoscale em 8 domínios: Blocks World, TPP, Floortile, Pipesworld sem tanques, Gripper, Logistics, Miconic e Rovers.
 - **Modelos e parâmetros:** os do X3 (raciocínio *medium*, `max_tokens` de 16.000); uma chamada por par.

@@ -1,6 +1,6 @@
 # Parecer editorial da primeira versão integral da dissertação
 
-Data: 28/09/2026. Versão examinada: commit `c5eac08`. Responsável: Codex (GPT-6), com orientações de revisão editorial e auditoria de fontes. Natureza: avaliação e proposta de revisão; nenhuma alteração aplicada aos capítulos nesta sessão.
+Data: 28/09/2026. Versão examinada: commit `cb3d0dd`. Responsável: Codex (GPT-6), com orientações de revisão editorial e auditoria de fontes. Natureza: avaliação e proposta de revisão; nenhuma alteração aplicada aos capítulos nesta sessão.
 
 ## 1. Diagnóstico
 

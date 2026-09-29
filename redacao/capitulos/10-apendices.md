@@ -53,7 +53,7 @@ Fonte: Autor.
 
 ## Apêndice C — Reprodutibilidade {.unnumbered}
 
-O repositório do projeto está em `https://github.com/mhaddad/mestrado-dominios-planejamento`. Na data desta versão, ele é privado; o acesso pode ser concedido pelo autor e o documento deve ser acompanhado dessa permissão ou de um pacote suplementar congelado quando for compartilhado. A versão dos artefatos científicos anterior aos ajustes finais de redação corresponde ao commit `bc9737d`. Os dados derivados, *scripts*, registros de execução e instruções de ambiente estão organizados no próprio repositório. O acervo de 2010 é preservado como somente leitura; os dados processados ficam em `data/`, a auditoria em `auditoria/`, os experimentos em `experimentos/` e as fontes bibliográficas em `literatura/`.
+O repositório do projeto está em `https://github.com/mhaddad/mestrado-dominios-planejamento`. Na data desta versão, ele é privado; o acesso pode ser concedido pelo autor e o documento deve ser acompanhado dessa permissão ou de um pacote suplementar congelado quando for compartilhado. A versão dos artefatos científicos anterior aos ajustes finais de redação corresponde ao commit `e39c804`. Os dados derivados, *scripts*, registros de execução e instruções de ambiente estão organizados no próprio repositório. O acervo de 2010 é preservado como somente leitura; os dados processados ficam em `data/`, a auditoria em `auditoria/`, os experimentos em `experimentos/` e as fontes bibliográficas em `literatura/`.
 
 O ambiente Python é criado com Python 3.12 e `uv`:
 

@@ -1,6 +1,6 @@
 # Avaliação geral da dissertação após a revisão editorial
 
-Data: 28/09/2026. Versão examinada: commit `bc9737d`, com o DOCX reconstruído nesta sessão. Natureza: auditoria transversal de coerência, argumentação, evidência, referências e prontidão editorial. Nenhuma alteração foi aplicada aos capítulos nesta avaliação.
+Data: 28/09/2026. Versão examinada: commit `e39c804`, com o DOCX reconstruído nesta sessão. Natureza: auditoria transversal de coerência, argumentação, evidência, referências e prontidão editorial. Nenhuma alteração foi aplicada aos capítulos nesta avaliação.
 
 ## 1. Parecer geral
 
@@ -137,7 +137,7 @@ Os ajustes de conteúdo e comunicação deste parecer foram aplicados ao manuscr
 |---|---|---|
 | A01 | Concluído | A resposta a Q3 separa o X1 — 28 de 32 planos válidos, ou 20 de 32 com nomes ofuscados — do X4 na p05 — 8 de 16 na primeira tentativa e 13 de 16 ao final do ciclo — e preserva a limitação causal. |
 | A02 | Concluído | A resposta a Q5 distingue previsão de resolução por família, discriminação da melhor alternativa e utilidade do seletor contra o SBS. |
-| A03 | Concluído para esta versão | Os apêndices informam URL, caráter privado, condição de acesso, versão de referência (`bc9737d`) e limites do material versionado. Antes do M3, o autor ainda precisa conceder acesso ou anexar um pacote congelado. |
+| A03 | Concluído para esta versão | Os apêndices informam URL, caráter privado, condição de acesso, versão de referência (`e39c804`) e limites do material versionado. Antes do M3, o autor ainda precisa conceder acesso ou anexar um pacote congelado. |
 | A04 | Concluído | O texto do X4 descreve a sequência observada sem atribuir causalidade suficiente às mensagens do VAL. |
 | A05 | Concluído | “Desenvolvimento de software apoiado por IA” foi adotado como termo canônico no manuscrito e nos documentos vivos do projeto. |
 | A06 | Concluído | O capítulo 2 foi reduzido de cerca de 6,2 mil para 5,1 mil palavras, e sua seção final passou a funcionar como transição para a parte empírica. |

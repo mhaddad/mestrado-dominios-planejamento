@@ -10,7 +10,7 @@
 
 ## Configuração
 
-- **Código:** `llm/x4-verificador/x4_verificador.py` (commit `af00406`, feito antes das chamadas). *Prompt* do X1 na primeira tentativa.
+- **Código:** `llm/x4-verificador/x4_verificador.py` (commit `c5691e8`, feito antes das chamadas). *Prompt* do X1 na primeira tentativa.
 - **Instâncias:** a p05 do Autoscale em Blocks World, TPP, Floortile e Pipesworld sem tanques, os 4 domínios em que uma técnica antiga é a melhor no Nível 4.
 - **Referência do LAMA (lama-first, 300 s):** 160, 106 e 48 passos. No Floortile p05, o LAMA não achou plano.
 - **Ciclo:** até 3 correções. Cada correção devolve ao modelo o motivo e os últimos 1.500 caracteres da saída do VAL.
