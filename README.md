@@ -8,13 +8,12 @@ A pergunta original: nenhum planejador é o melhor em todos os domínios, e cara
 
 **Documento de trabalho:** [plan/plano-revisao-dissertacao.md](plan/plano-revisao-dissertacao.md) — fases, perguntas de pesquisa, riscos, registros de decisão e de uso de IA.
 
-**Retomando o trabalho (pessoa ou agente):** comece por [MEMORY.md](MEMORY.md), que registra o estado da execução, as pendências e o log de sessões.
+**Retomando o trabalho (pessoa ou agente):** comece pelo plano de trabalho e pelo `git log`. A memória de execução (`MEMORY.md`) fica só na máquina do autor, fora do Git, desde 29/09/2026.
 
 ## Estrutura
 
 | Pasta | Fase | O que contém |
 |---|---|---|
-| [MEMORY.md](MEMORY.md) | — | Memória de execução: estado atual, pendências, log de sessões |
 | [plan/](plan/) | — | Plano de trabalho vivo (painel, decisões, registro de IA, changelog) |
 | [acervo-2010/](acervo-2010/) | 0 | Material original, **somente leitura**: dissertação, planejadores, domínios, resultados, modelos itSIMPLE |
 | [docs/](docs/) | 0 | Catálogo do acervo e notas de apoio |
